@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;line-height:1.7;padding-top:70px}
+a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
+.container{max-width:900px;margin:0 auto;padding:24px}
+h1{font-size:1.8em;margin-bottom:10px;color:var(--lil)}h2{font-size:1.4em;margin:28px 0 14px;color:var(--text);padding-bottom:6px;border-bottom:2px solid var(--lil-l)}
+p{margin-bottom:14px}ul,ol{margin:0 0 16px 20px}li{margin-bottom:6px}
+.box{background:var(--card);border-radius:8px;padding:16px;margin:20px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}
+.box-t{font-weight:700;margin-bottom:8px;display:block;color:var(--text)}
+table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--lil-d)}
+td{padding:10px 14px;border-bottom:1px solid var(--lil-l)}tr:hover td{background:var(--lil-l)}
+.nav-b{display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:1px solid var(--lil-d)}
+.btn-n{padding:10px 20px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none}
+.btn-n:hover{background:var(--lil-d);color:#fff}
+.tools{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:99}
+.t-btn{background:var(--card);border:2px solid var(--lil-d);padding:10px 14px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;color:var(--text);box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.t-btn:hover{transform:translateY(-2px)}
+.n-panel{position:fixed;bottom:70px;right:20px;width:280px;background:var(--card);border:2px solid var(--lil-d);border-radius:12px;padding:16px;display:none;box-shadow:0 5px 15px rgba(0,0,0,.15);z-index:100}
+.n-item{background:var(--lil-l);padding:10px;border-radius:6px;margin-bottom:8px;font-size:.9em}
+.n-in{width:100%;padding:8px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:8px}
+.b-sm{padding:6px 12px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em}
+@media(max-width:700px){.container{padding:16px}header{flex-direction:column;align-items:flex-start;gap:10px}}
+.box img {
+    width: 100%;        /* Força a imagem a ter a largura total da box */
+    height: auto;       /* Mantém a proporção para não achatar */
+    display: block;     /* Remove espaços vazios abaixo da imagem */
+    margin: 15px 0;     /* Dá um espaço entre o texto e a imagem */
+    border-radius: 4px; /* Arredonda levemente para combinar com o layout */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Um detalhe para dar profundidade */
+}
+</style>
+</head>
+<body>
+
+<header>
+        <a href="index.html" class="back">← Dashboard</a><div class="nav-t">Princípios Orçamentários</div>
+
+</header>
+
+<main class="container">
+    <h1>1. Orçamento Público: Conceitos e Princípios</h1>
+    <p>O orçamento público é o instrumento de planejamento que estima as receitas e fixa as despesas para um determinado período.</p>
+
+    <div class="box">
+        <span class="box-title">Visão Geral do Orçamento</span>
+        <img src="https://remnote-user-data.s3.amazonaws.com/StkVNZU0iPFSg1eCSVcZvnMGZg0KatjPfqiAXIIsqmJTXnU7nTPndZvQ-yV61rMKXSuA2kQB3ixZU8js8ehUMEz47YULHQsxThr97X9H7TBiowlFALiMsTn00B9xVNIC.png" />
+    </div>
+
+    <h2>Princípios Orçamentários</h2>
+    <p>São as premissas e linhas norteadoras que dão consistência ao orçamento público desde a sua concepção até a sua execução.</p>
+
+    <div class="box def">
+        <ul>
+            <li><b>Unidade (ou Totalidade):</b> O orçamento deve ser uno, ou seja, cada ente da Federação deve possuir apenas uma lei orçamentária anual (LOA). A existência de três orçamentos dentro da LOA (Fiscal, Seguridade Social e Investimentos) não fere este princípio, pois eles integram um único documento legal consolidado.</li>
+            <li><b>Universalidade:</b> A LOA deve incorporar todas as receitas e todas as despesas da administração pública, sem exceções, permitindo ao Poder Legislativo o controle do valor global.</li>
+            <li><b>Anualidade (ou Periodicidade):</b> O orçamento é elaborado e autorizado para um período determinado de um ano (exercício financeiro), que no Brasil coincide com o ano civil (1º de janeiro a 31 de dezembro).</li>
+            <li><b>Exclusividade (ou Pureza):</b> A lei orçamentária não conterá dispositivo estranho à previsão de receita e à fixação de despesa. Para não paralisar o governo, a Constituição permite duas exceções exclusivas:
+                <ul>
+                    <li>A autorização prévia para abertura de créditos suplementares.</li>
+                    <li>A contratação de operações de crédito (incluindo Antecipação de Receita Orçamentária - ARO).</li>
+                </ul>
+            </li>
+            <li><b>Orçamento Bruto:</b> Todas as parcelas de receitas e despesas devem aparecer na LOA em seus valores brutos, sem qualquer tipo de dedução.</li>
+            <li><b>Não Afetação (ou Não Vinculação) das Receitas:</b> É vedada a vinculação da receita de impostos a órgão, fundo ou despesa específica.</li>
+        </ul>
+    </div>
+
+    <h3>Quadro Resumo: Princípios e Significados</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Princípio</th>
+                <th>Significado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>Unidade / Totalidade</b></td>
+                <td>O orçamento deve ser um só (consolidação de todas as receitas e despesas).</td>
+            </tr>
+            <tr>
+                <td><b>Universalidade</b></td>
+                <td>Todas as receitas e todas as despesas devem estar na lei (nada "por fora").</td>
+            </tr>
+            <tr>
+                <td><b>Anualidade (Periodicidade)</b></td>
+                <td>O orçamento vale por um exercício financeiro (1º de Jan a 31 de Dez).</td>
+            </tr>
+            <tr>
+                <td><b>Exclusividade</b></td>
+                <td>A lei só trata de previsão de receita e fixação de despesa (evita as "caudas" ou "caronas" legislativas).</td>
+            </tr>
+            <tr>
+                <td><b>Não Vinculação (Afetação)</b></td>
+                <td>A receita de impostos não pode ser carimbada para órgãos específicos (exceto Saúde/Educação).</td>
+            </tr>
+            <tr>
+                <td><b>Orçamento Bruto</b></td>
+                <td>Todas as parcelas devem figurar pelo seu valor total, sem deduções.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Os Instrumentos de Planejamento (PPA, LDO e LOA)</h2>
+    <p>A iniciativa para a elaboração dessas três leis é exclusiva do Poder Executivo e elas são aprovadas como leis ordinárias.</p>
+
+    <div class="box ex">
+        <span class="box-title">1. Plano Plurianual (PPA) - O Estratégico (Médio Prazo)</span>
+        <p>O PPA orienta a visão de 4 anos do governo. Mnemônico: <span class="mnemonico">DOM</span> (Diretrizes, Objetivos e Metas).</p>
+        <ul>
+            <li><b>Escopo:</b> Despesas de capital, outras delas decorrentes e programas de duração continuada.</li>
+            <li><b>Regra de Ouro dos Investimentos:</b> Nenhum investimento que ultrapasse um ano pode ser iniciado sem estar no PPA ou autorizado em lei. Descumprir é crime de responsabilidade.</li>
+            <li><b>Vigência Descasada:</b> Elaborado no 1º ano de governo, vigora do 2º ano até o final do 1º ano do mandato seguinte.</li>
+            <li><b>Prazos:</b> Envio até 31/08 | Devolução até 22/12.</li>
+        </ul>
+    </div>
+
+    <div class="box warn">
+        <span class="box-title">2. Lei de Diretrizes Orçamentárias (LDO) - O Elo Tático</span>
+        <p>A LDO liga o PPA (médio prazo) à LOA (curto prazo).</p>
+        <ul>
+            <li><b>Conteúdo:</b> Metas e prioridades, diretrizes de política fiscal, orienta a elaboração da LOA, dispõe sobre alterações tributárias e agências de fomento.</li>
+            <li><b>EC 109/2021:</b> Deve estabelecer metas fiscais em consonância com a trajetória sustentável da dívida pública.</li>
+            <li><b>Anexo de Agregados Fiscais:</b> Previsão para o exercício e os 2 subsequentes (apenas orçamentos Fiscal e Seguridade).</li>
+            <li><b>Tributação:</b> A LDO "dispõe" sobre alterações, mas <span class="highlight-text">NÃO cria, não aumenta e não isenta tributos</span>.</li>
+            <li><b>Prazos:</b> Envio até 15/04 | Devolução até 17/07.</li>
+        </ul>
+        <p><mark style="background-color: green; color: white;">A LDO estabelece anualmente as metas para a garantia sustentável da dívida pública.</mark></p>
+    </div>
+
+    <div class="box">
+        <span class="box-title">3. Lei Orçamentária Anual (LOA) - O Operacional (Curto Prazo)</span>
+        <p>Estima receitas e fixa despesas. Divide-se em três orçamentos:</p>
+        <ul>
+            <li><b>I - Orçamento Fiscal:</b> Poderes da União, fundos, órgãos e entidades diretas/indiretas.</li>
+            <li><b>II - Orçamento de Investimento:</b> Empresas onde a União detenha a maioria do capital votante (<mark style="background-color: orange;">Estatais não dependentes</mark>).</li>
+            <li><b>III - Orçamento da Seguridade Social:</b> Saúde, Previdência e Assistência Social.</li>
+        </ul>
+        <hr style="margin: 15px 0; border: 0; border-top: 1px solid var(--border);">
+        <p><b>Redução de Desigualdades:</b> Função dada apenas aos orçamentos <mark style="background-color: orange;">Fiscal e de Investimento</mark>. O da <b class="highlight-text">Seguridade Social não tem essa função baseada em critério populacional</b> (baseia-se em necessidades assistenciais).</p>
+        <p><b>Natureza Jurídica:</b> <mark style="background-color: green; color: white;">Doutrinariamente é lei formal e de efeitos concretos, mas a CF/88 impõe o dever de execução das programações (Orçamento Impositivo).</mark></p>
+    </div>
+
+    <div class="box">
+        <img src="https://remnote-user-data.s3.amazonaws.com/bcqq6P3QMGhvLqu2XX8U3bxBUs41nCn_4_VPGhSm3DLOO5GPrgSOF8kcAQixwQ2u_MYRv-RscoNu3uoj2Ucc--Y_PIZ1Ij-sYKciAL9j1jEUDKSSXwZNns_rK-NTIgHo.png" />
+    </div>
+
+    <h2>Técnicas Orçamentárias</h2>
+    <div class="box ex">
+        <ul>
+            <li><b>Orçamento Tradicional (Clássico):</b> Foco exclusivo no <b>objeto de gasto</b>. Função de controle político para evitar expansão de gastos (Estado Liberal).</li>
+            <li><b>Orçamento de Desempenho (Funcional):</b> Foco no objeto de gasto + programa de trabalho. Ênfase no desempenho organizacional.</li>
+            <li><b>Orçamento-Programa (PPBS):</b> Integração entre <b>planejamento e orçamento</b>. Foco em metas, objetivos, custos e avaliação de resultados.</li>
+            <li><b>Orçamento Base-Zero:</b> Não há "direito adquirido" a gastos do ano anterior. Todos os programas devem ser justificados do zero em cada novo ciclo.</li>
+            <li><b>Orçamento Participativo:</b> Instrumento de democracia direta onde a sociedade debate a alocação de investimentos.</li>
+        </ul>
+    </div>
+
+    <h2>Ciclo Orçamentário</h2>
+    <div class="box def">
+        <p>O <b>Exercício</b> dura 1 ano. O <b>Ciclo</b> dura cerca de 6 anos (do PPA à prestação de contas).</p>
+        <ol>
+            <li><b>Elaboração:</b> Competência <b>exclusiva do Poder Executivo</b>.</li>
+            <li><b>Discussão, Votação e Aprovação:</b> Ocorre no <b>Poder Legislativo</b> (votação do projeto e emendas).</li>
+            <li><b>Execução:</b> Arrecadação de receitas e realização de despesas.</li>
+            <li><b>Controle e Avaliação:</b> Fiscalização da legalidade e eficiência dos gastos.</li>
+        </ol>
+    </div>
+</main>
+
+</body>
+</html>

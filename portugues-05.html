@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Português 05 | Reescrita e Semântica</title>
+<style>
+        :root { --bg: #faf9fc; --card: #fff; --text: #2d2a3a; --text-sec: #5a5568; --lilac: #8b78b0; --lilac-light: #ede7f6; --border: #d4c4e8; --def: #f0edf5; --warn: #fff8e1; --ex: #f0f7f1; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: var(--bg); color: var(--text); font-family: system-ui, sans-serif; line-height: 1.7; padding-top: 70px; }
+        a { color: var(--lilac); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        header { background: var(--lilac); color: white; padding: 14px 24px; position: fixed; top: 0; width: 100%; z-index: 100; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .back { color: white; font-weight: 500; display: flex; align-items: center; gap: 6px; }
+        .nav-title { font-weight: 700; font-size: 1.05em; }
+        .container { max-width: 900px; margin: 0 auto; padding: 24px; }
+        h1 { font-size: 1.8em; margin-bottom: 10px; color: var(--lilac); }
+        h2 { font-size: 1.4em; margin: 28px 0 14px; color: var(--text); padding-bottom: 6px; border-bottom: 2px solid var(--lilac-light); }
+        p { margin-bottom: 14px; color: var(--text); }
+        .box { background: var(--card); border-radius: 8px; padding: 16px; margin: 20px 0; border-left: 4px solid var(--lilac); box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+        .box.def { background: var(--def); border-color: var(--lilac); }
+        .box.warn { background: var(--warn); border-color: #f59e0b; }
+        .box.ex { background: var(--ex); border-color: #22c55e; }
+        .box-title { font-weight: 700; margin-bottom: 8px; display: block; color: var(--text); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; background: var(--card); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
+        th { background: var(--lilac-light); color: var(--text); font-weight: 600; text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--border); }
+        td { padding: 10px 14px; border-bottom: 1px solid var(--lilac-light); }
+        tr:hover td { background: var(--lilac-light); }
+        .nav-buttons { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); }
+        .btn-nav { padding: 10px 20px; background: var(--lilac-light); color: var(--lilac); border: none; border-radius: 8px; cursor: pointer; font-weight: 600; text-decoration: none; }
+        .btn-nav:hover { background: var(--border); }
+        .tools { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 99; }
+        .tool-btn { background: var(--card); border: 2px solid var(--border); padding: 10px 14px; border-radius: 24px; cursor: pointer; display: flex; align-items: center; gap: 8px; font-weight: 600; color: var(--text); box-shadow: 0 3px 10px rgba(0,0,0,0.1); transition: 0.2s; }
+        .tool-btn:hover { transform: translateY(-2px); }
+        .notes-panel { position: fixed; bottom: 70px; right: 20px; width: 280px; background: var(--card); border: 2px solid var(--border); border-radius: 12px; padding: 16px; display: none; box-shadow: 0 5px 15px rgba(0,0,0,0.15); z-index: 100; }
+        .note-item { background: var(--lilac-light); padding: 10px; border-radius: 6px; margin-bottom: 8px; font-size: 0.9em; }
+        .note-input { width: 100%; padding: 8px; border: 1px solid var(--border); border-radius: 6px; margin-bottom: 8px; }
+        .btn-sm { padding: 6px 12px; background: var(--lilac); color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.85em; }
+        @media(max-width:700px){ .container{padding:16px;} header{flex-direction:column; align-items:flex-start; gap:10px;} }
+    </style>
+</head><body>
+<header><a href="index.html" class="back">← Dashboard</a><div class="nav-title">Língua Portuguesa • Tópico 05</div></header>
+<div class="container">
+    <h1>6. Reescrita, Significação e Reorganização</h1>
+    <p>A banca cobra capacidade de reformular mantendo <strong>correção gramatical</strong> e <strong>sentido original</strong>. Cuidado com mudanças de relação lógica.</p>
+    <h2>🔄 Princípios da Reescrita</h2>
+    <ul style="margin: 0 0 20px 20px;">
+        <li><strong>Manter a relação lógica:</strong> Não troque causal por concessiva.</li>
+        <li><strong>Preservar a regência:</strong> Se o verbo pede preposição, ela deve permanecer ou ser adaptada corretamente.</li>
+        <li><strong>Evitar ambiguidade:</strong> Pronomes devem ter referente claro.</li>
+        <li><strong>Formalidade:</strong> A reescrita oficial exige norma-padrão. Evite coloquialismos.</li>
+    </ul>
+    <h2>📚 Relações Semânticas</h2>
+    <table>
+        <thead><tr><th>Tipo</th><th>Definição</th><th>Exemplo</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Sinonímia</strong></td><td>Sentido igual/próximo</td><td><em>Celebrar / Comemorar</em></td></tr>
+            <tr><td><strong>Antonímia</strong></td><td>Sentido oposto</td><td><em>Efêmero / Duradouro</em></td></tr>
+            <tr><td><strong>Paronímia</strong></td><td>Forma parecida, sentido diferente</td><td><em>Descrever / Discricionário; Emigrar / Imergir</em></td></tr>
+            <tr><td><strong>Homonímia</strong></td><td>Som/escrita iguais, sentidos diferentes</td><td><em>Cessão / Seção / Sessão</em></td></tr>
+        </tbody>
+    </table>
+    <div class="box ex"><span class="box-title">✅ Dica de Prova</span><p>Questões de "mantém o sentido e a correção" geralmente erram ao: (1) trocar tempo verbal; (2) suprimir preposição regida; (3) inverter ordem de orações condicionais.</p></div>
+    <div class="nav-buttons"><a href="portugues-04.html" class="btn-nav">← Anterior</a><a href="portugues-06.html" class="btn-nav">Próximo →</a></div>
+</div>
+<div class="tools"><button class="tool-btn" onclick="webSearch()">🌐 Web</button><button class="tool-btn" onclick="toggleNotes()">📝 Notas</button><button class="tool-btn" onclick="toggleHighlight()">✏️ Destaque</button></div>
+<div class="notes-panel" id="notesPanel"><div style="display:flex;justify-content:space-between;margin-bottom:10px;"><strong>Notas</strong><button onclick="toggleNotes()" style="background:none;border:none;cursor:pointer;">✕</button></div><div id="notesList" style="max-height:180px;overflow-y:auto;margin-bottom:10px;"></div><form onsubmit="addNote(event)"><input type="text" class="note-input" id="noteInput" placeholder="Anotação..." required><button type="submit" class="btn-sm">💾</button></form></div>
+<script>const STORAGE_KEY='port-05-notes';let highlightMode=false;function webSearch(){window.open(`https://duckduckgo.com/?q=${encodeURIComponent(window.getSelection().toString()||'Reescrita de frases concurso português')}`,'_blank');}function toggleNotes(){const p=document.getElementById('notesPanel');p.style.display=p.style.display==='none'?'block':'none';if(p.style.display==='block')loadNotes();}function loadNotes(){const n=JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]');document.getElementById('notesList').innerHTML=n.length?n.map((x,i)=>`<div class="note-item">${x.text}<br><small style="cursor:pointer;color:#666;" onclick="delNote(${i})">remover</small></div>`).join(''):'<p style="font-size:0.9em;color:#666;">Sem notas.</p>';}function addNote(e){e.preventDefault();const i=document.getElementById('noteInput'),n=JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]');n.push({text:i.value,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(STORAGE_KEY,JSON.stringify(n));i.value='';loadNotes();}function delNote(i){const n=JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]');n.splice(i,1);localStorage.setItem(STORAGE_KEY,JSON.stringify(n));loadNotes();}function toggleHighlight(){highlightMode=!highlightMode;document.body.style.cursor=highlightMode?'text':'auto';document.querySelectorAll('.tool-btn')[2].textContent=highlightMode?'✅ ON':'✏️ Destaque';highlightMode?document.addEventListener('mouseup',handleSelect):document.removeEventListener('mouseup',handleSelect);}function handleSelect(){const s=window.getSelection();if(s.toString().length>10){const n=JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]');n.push({text:`🔍 "${s.toString().substring(0,40)}..." - ${prompt('Nota:','')||'-'}`,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(STORAGE_KEY,JSON.stringify(n));alert('✅');s.removeAllRanges();}}document.addEventListener('DOMContentLoaded',loadNotes);</script>
+</body></html>

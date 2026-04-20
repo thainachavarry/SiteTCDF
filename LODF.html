@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lei Orgânica do Distrito Federal: Fundamentos, Organização, Tributação e Ordem Econômica</title>
+    <style>
+        :root {
+            /* Fundo e texto principal */
+            --bg-main: #faf9fc;
+            --bg-dark: #f0edf5;
+            --bg-darker: #e8e4f0;
+            --bg-section: #ffffff;
+            --bg-table-odd: #faf9fc;
+            --bg-table-even: #f5f2fa;
+            --bg-table-hover: #ede7f6;
+            --text-main: #2d2a3a;
+            --text-sec: #4a4559;
+            --text-muted: #6b667a;
+            
+            /* Cores de destaque - Lilás bem clarinho */
+            --lilac-lightest: #f8f5ff;
+            --lilac-lighter: #ede7f6;
+            --lilac-light: #d4c4e8;
+            --lilac-med: #b8a5d4;
+            --lilac-dark: #9b89c2;
+            --lilac-deep: #7e6ba8;
+            
+            /* Cores funcionais */
+            --gold: #c9a961;
+            --green: #2e7d32;
+            --green-light: #66bb6a;
+            --green-dark: #1b5e20;
+            
+            /* Boxes */
+            --def-bg: #f8f5ff;
+            --def-border: #b8a5d4;
+            --def-title: #7e6ba8;
+            --ex-bg: #f0f7f1;
+            --ex-border: #66bb6a;
+            --ex-title: #2e7d32;
+            --warn-bg: #fff8e1;
+            --warn-border: #ffd54f;
+            --warn-title: #f57f17;
+            --sum-bg: #f5f2fa;
+            --sum-border: #b8a5d4;
+            --sum-title: #7e6ba8;
+            
+            /* Código */
+            --code-bg: #2d2a3a;
+            --code-border: #b8a5d4;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.0;
+            font-size: 16px;
+        }
+        a { color: var(--lilac-deep); text-decoration: none; font-weight: 500; }
+        a:hover { color: var(--lilac-dark); text-decoration: underline; }
+        strong { color: var(--text-main); font-weight: 700; }
+        em { color: var(--text-sec); font-style: italic; }
+
+        /* Capa */
+        .capa {
+            background: linear-gradient(135deg, var(--lilac-lightest) 0%, var(--lilac-lighter) 50%, var(--lilac-light) 100%);
+            padding: 70px 40px;
+            text-align: center;
+            border-bottom: 3px solid var(--lilac-dark);
+            margin-bottom: 40px;
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 4px 12px rgba(126, 107, 168, 0.1);
+        }
+        .badge {
+            display: inline-block;
+            background: var(--lilac-dark);
+            color: #fff;
+            padding: 5px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .capa h1 {
+            font-size: 2.8em;
+            margin-bottom: 12px;
+            color: var(--text-main);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .capa h2 {
+            font-size: 1.6em;
+            color: var(--lilac-deep);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        .capa p {
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+            color: var(--text-sec);
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .meta {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: var(--lilac-deep);
+            font-weight: 500;
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            background: var(--lilac-dark);
+            border-bottom: 3px solid var(--lilac-deep);
+            padding: 12px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 4px 16px rgba(126, 107, 168, 0.2);
+        }
+        .brand { 
+            font-size: 1.3em; 
+            font-weight: 700; 
+            color: #fff; 
+            letter-spacing: 0.5px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+        nav ul { list-style: none; display: flex; gap: 18px; flex-wrap: wrap; }
+        nav a { 
+            color: #fff; 
+            font-size: 0.95em; 
+            transition: all 0.2s; 
+            font-weight: 500;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+        nav a:hover { 
+            background: rgba(255,255,255,0.15); 
+            text-decoration: none; 
+            color: var(--lilac-lightest);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 20px 30px;
+        }
+
+        /* TOC */
+        .toc {
+            background: var(--bg-section);
+            border: 2px solid var(--lilac-light);
+            border-radius: 10px;
+            padding: 28px;
+            margin-bottom: 45px;
+            box-shadow: 0 3px 10px rgba(126, 107, 168, 0.08);
+        }
+        .toc h3 { 
+            color: var(--lilac-deep); 
+            margin-bottom: 18px; 
+            font-size: 1.4em; 
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--lilac-light);
+        }
+        .toc ol { margin-left: 22px; list-style-type: decimal; }
+        .toc ol ol { margin-left: 28px; margin-top: 6px; list-style-type: lower-alpha; }
+        .toc a { color: var(--lilac-deep); font-weight: 500; }
+        .toc a:hover { color: var(--lilac-dark); text-decoration: none; }
+        .toc li { margin-bottom: 6px; }
+
+        /* Sections */
+        .section {
+            margin-bottom: 65px;
+            counter-increment: section;
+            background: var(--bg-section);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(126, 107, 168, 0.08);
+            border: 1px solid var(--lilac-lighter);
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 32px;
+            border-bottom: 2px solid var(--lilac-light);
+            padding-bottom: 18px;
+        }
+        .section-number {
+            background: var(--lilac-dark);
+            color: #fff;
+            font-size: 1.9em;
+            font-weight: 700;
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin-right: 22px;
+            min-width: 65px;
+            text-align: center;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+        }
+        .section-header h2 {
+            font-size: 1.9em;
+            color: var(--text-main);
+            font-weight: 700;
+        }
+
+        /* Headings */
+        h3 {
+            color: var(--lilac-deep);
+            font-size: 1.5em;
+            margin: 35px 0 20px 0;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--lilac-lighter);
+            font-weight: 700;
+        }
+
+        /* Paragraphs */
+        p {
+            margin-bottom: 16px;
+            color: var(--text-main);
+            line-height: 1.75;
+        }
+
+        /* Boxes */
+        .box {
+            border-radius: 10px;
+            padding: 22px 26px;
+            border-left: 5px solid;
+            margin: 28px 0;
+            background: var(--bg-dark);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .box-title {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 14px;
+            display: block;
+            font-size: 0.95em;
+            color: var(--text-main);
+        }
+        .box-def { background: var(--def-bg); border-color: var(--def-border); }
+        .box-def .box-title { color: var(--def-title); }
+        .box-ex { background: var(--ex-bg); border-color: var(--ex-border); }
+        .box-ex .box-title { color: var(--ex-title); }
+        .box-warn { background: var(--warn-bg); border-color: var(--warn-border); }
+        .box-warn .box-title { color: var(--warn-title); }
+        .box-summary { background: var(--sum-bg); border-color: var(--sum-border); }
+        .box-summary .box-title { color: var(--sum-title); }
+
+        /* Pre / Code */
+        pre {
+            background: var(--code-bg);
+            border: 1px solid var(--code-border);
+            border-radius: 8px;
+            padding: 22px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #e8e4f0;
+            overflow-x: auto;
+            margin: 24px 0;
+            line-height: 1.6;
+            font-size: 14px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .kw { color: #c5a5ff; font-weight: 600; }
+        .fn { color: #a5d6a7; }
+        .str { color: #ffcc80; }
+        .cm { color: #90a4ae; font-style: italic; }
+        .tp { color: #80deea; }
+        .nm { color: #ce93d8; font-weight: 500; }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 28px 0;
+            font-size: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(126, 107, 168, 0.08);
+        }
+        thead th {
+            background: var(--lilac-dark);
+            color: #fff;
+            padding: 14px 16px;
+            font-weight: 700;
+            text-align: left;
+            border-bottom: 2px solid var(--lilac-deep);
+        }
+        tbody td, tbody th {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--lilac-lighter);
+            vertical-align: top;
+            color: var(--text-main);
+        }
+        tbody tr:nth-child(odd) { background: var(--bg-table-odd); }
+        tbody tr:nth-child(even) { background: var(--bg-table-even); }
+        tbody tr:hover { background: var(--bg-table-hover); transition: background 0.2s; }
+        tbody tr:last-child td { border-bottom: none; }
+
+        /* Utils */
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+        .tag { 
+            background: var(--lilac-light); 
+            color: var(--lilac-deep); 
+            padding: 3px 10px; 
+            border-radius: 12px; 
+            font-size: 12px; 
+            font-weight: 600;
+            border: 1px solid var(--lilac-med);
+        }
+        .divider { 
+            border: 0; 
+            border-top: 2px solid var(--lilac-light); 
+            margin: 40px 0; 
+        }
+        ul, ol { margin-left: 28px; margin-bottom: 18px; }
+        li { margin-bottom: 7px; color: var(--text-main); }
+        li::marker { color: var(--lilac-deep); font-weight: 600; }
+
+        /* Footer */
+        .footer {
+            background: var(--lilac-lightest);
+            border-top: 3px solid var(--lilac-dark);
+            padding: 45px 30px;
+            margin-top: 70px;
+            text-align: center;
+            color: var(--text-sec);
+            font-size: 0.95em;
+            border-radius: 12px 12px 0 0;
+        }
+        .footer p { margin: 6px 0; line-height: 1.6; }
+        .footer strong { color: var(--lilac-deep); }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            header { flex-direction: column; align-items: flex-start; gap: 12px; padding: 15px 25px; }
+            nav ul { flex-wrap: wrap; gap: 10px; }
+            .two-col { grid-template-columns: 1fr; }
+            .capa h1 { font-size: 2.2em; }
+            .section-header { flex-direction: column; align-items: flex-start; gap: 18px; }
+            .section-number { width: 100%; text-align: left; margin-right: 0; }
+            .container { padding: 15px 20px; }
+            .section { padding: 25px 20px; }
+        }
+        @media (max-width: 700px) {
+            .capa { padding: 45px 25px; }
+            .toc { padding: 20px 18px; }
+            .section-number { font-size: 1.6em; padding: 10px 16px; }
+            .section-header h2 { font-size: 1.6em; }
+            h3 { font-size: 1.4em; }
+        }
+        
+        /* Melhorias de acessibilidade */
+        @media (prefers-reduced-motion: reduce) {
+            * { transition: none !important; animation: none !important; }
+        }
+        
+        /* Foco visível para navegação por teclado */
+        a:focus, button:focus {
+            outline: 3px solid var(--lilac-dark);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="brand">MATERIAL - LEI ORGÂNICA DO DF</div>
+    <nav>
+<ul style="
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center; 
+    gap: 20px; 
+    font-family: sans-serif;
+">
+    <li><a href="#s1">1. Fundamentos</a></li>
+    <li><a href="#s2">2. Organização do DF</a></li>
+    <li><a href="#s3">3. Poderes</a></li>
+    <li><a href="#s4">4. Tributação</a></li>
+    <li><a href="#s5">5. Ordem Econômica</a></li>
+    <li><a href="#s6">Resumo</a></li>
+</ul>
+    </nav>
+</header>
+
+<div class="capa">
+    <div class="badge">Nível: Analista / Especialista</div>
+    <h1>Lei Orgânica do Distrito Federal</h1>
+    <h2>Fundamentos, Organização, Tributação e Ordem Econômica</h2>
+</div>
+
+<div class="container">
+    <div class="toc" id="sumario">
+        <h3>Matéria Verticalizada</h3>
+        <ol>
+            <li><a href="#s1">Fundamentos da Organização dos Poderes e do DF</a>
+                <ol>
+                    <li><a href="#s1-1">Autonomia e Vedação à Divisão em Municípios</a></li>
+                    <li><a href="#s1-2">Valores Fundamentais e Soberania Popular</a></li>
+                    <li><a href="#s1-3">Princípios da Administração Pública</a></li>
+                </ol>
+            </li>
+            <li><a href="#s2">Da Organização do Distrito Federal</a>
+                <ol>
+                    <li><a href="#s2-1">Estrutura Territorial e Regiões Administrativas</a></li>
+                    <li><a href="#s2-2">Administração Regional e Desconcentração</a></li>
+                    <li><a href="#s2-3">Organização Administrativa e Entidades</a></li>
+                </ol>
+            </li>
+            <li><a href="#s3">Da Organização dos Poderes</a>
+                <ol>
+                    <li><a href="#s3-1">Poder Legislativo: Composição e Atribuições</a></li>
+                    <li><a href="#s3-2">Poder Executivo: Competências e Controle</a></li>
+                    <li><a href="#s3-3">Controle Externo e Tribunal de Contas</a></li>
+                </ol>
+            </li>
+            <li><a href="#s4">Da Tributação e do Orçamento do DF</a>
+                <ol>
+                    <li><a href="#s4-1">Sistema Tributário Local e Competência</a></li>
+                    <li><a href="#s4-2">Princípios Orçamentários e PPA/LDO/LOA</a></li>
+                    <li><a href="#s4-3">Restrições Orçamentárias e Regime Fiscal</a></li>
+                </ol>
+            </li>
+            <li><a href="#s5">Da Ordem Econômica do Distrito Federal</a>
+                <ol>
+                    <li><a href="#s5-1">Liberdade Econômica e Intervenção Estatal</a></li>
+                    <li><a href="#s5-2">Função Social da Propriedade e Política Urbana</a></li>
+                    <li><a href="#s5-3">Meio Ambiente e Desenvolvimento Sustentável</a></li>
+                </ol>
+            </li>
+            <li><a href="#s6">Resumo Consolidado Final</a></li>
+        </ol>
+    </div>
+
+    <!-- SEÇÃO 1 -->
+    <div class="section" id="s1">
+        <div class="section-header">
+            <div class="section-number">1</div>
+            <h2>Fundamentos da Organização dos Poderes e do Distrito Federal</h2>
+        </div>
+
+        <h3 id="s1-1">Autonomia e Vedação à Divisão em Municípios</h3>
+        <p>O Distrito Federal (DF) ocupa posição <strong>sui generis</strong> na estrutura federativa brasileira. Diferentemente dos Estados e Municípios, o DF é uma <strong>entidade federativa atípica</strong>, detentora de competências estaduais e municipais acumuladas, conforme expresso no art. 32 da Constituição Federal de 1988 (CF/88) e no art. 1º da Lei Orgânica do Distrito Federal (LODF). A autonomia distrital é política, administrativa e financeira, sendo a base para a regência por lei própria.</p>
+        
+        <div class="box box-def">
+            <span class="box-title">📘 Definição</span>
+            <p><strong>Autonomia Distrital</strong> é a capacidade jurídica de auto-organização, autogoverno, autoadministração e autolegislação exercida pelo Distrito Federal, delimitada pelo princípio da simetria federativa e pela vedação absoluta de divisão territorial em municípios.</p>
+        </div>
+
+        <p>A vedação à divisão em municípios não é meramente formal; é um pressuposto de existência da entidade. Caso o DF fosse dividido, a unidade federativa peculiar deixaria de existir, transformando-se em novos entes ou em estados/municípios, o que demandaria revisão constitucional. A LODF, em seu art. 1º, reforça que a autonomia é exercida no pleno respeito aos princípios constitucionais, consolidando um sistema de competências concorrentes e materiais.</p>
+
+        <div class="box box-warn">
+            <span class="box-title">⚠️ Ponto de Prova — Soberania vs. Autonomia</span>
+            <p>Nas provas de analista, é frequente a troca conceitual entre <strong>soberania</strong> (atributo exclusivo da União/República Federativa do Brasil no plano internacional e interno) e <strong>autonomia</strong> (capacidade dos entes federados de se autogerir). O DF jamais detém soberania. A LODF usa exclusivamente "autonomia política, administrativa e financeira".</p>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Dimensão</th>
+                    <th>Manifestação na LODF</th>
+                    <th>Limites Constitucionais</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Auto-organização</strong></td>
+                    <td>Elaboração da Lei Orgânica (art. 32, CF)</td>
+                    <td>Vedada divisão em municípios; respeito à CF</td>
+                </tr>
+                <tr>
+                    <td><strong>Autogoverno</strong></td>
+                    <td>Eleição do Governador e Deputados Distritais</td>
+                    <td>Regras eleitorais federais aplicáveis</td>
+                </tr>
+                <tr>
+                    <td><strong>Autoadministração</strong></td>
+                    <td>Criação de cargos, autarquias e secretarias</td>
+                    <td>Teto remuneratório e estrutura básica da CF</td>
+                </tr>
+                <tr>
+                    <td><strong>Autolegislação</strong></td>
+                    <td>Competência legislativa cumulativa (estadual + municipal)</td>
+                    <td>Matérias privativas da União (art. 22, CF)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <pre><code><span class="cm">// Procedimento de aprovação da Lei Orgânica do DF</span>
+<span class="kw">Artigo</span> <span class="nm">32</span>, <span class="fn">caput</span>, <span class="str">CF/88</span> <span class="cm">(incorporado ao art. 1º, §1º LODF)</span>
+
+<span class="kw">REQUISITOS_FORMAIS:</span>
+  <span class="tp">Turnos</span>: <span class="nm">2</span> (dois) turnos de votação
+  <span class="tp">Interstício</span>: mínimo de <span class="nm">10</span> dias entre turnos
+  <span class="tp">Quórum</span>: aprovação por <span class="nm">2/3</span> (dois terços) da Câmara Legislativa
+  <span class="tp">Promulgação</span>: realizada pela própria <span class="str">CLDF</span>
+
+<span class="cm">// Diferença crucial para Leis Complementares Ordinárias</span>
+<span class="fn">Observação</span>: <span class="str">Não se aplica</span> o rito da Emenda Constitucional (3/5 ou 2/3 do CN).
+<span class="fn">Competência</span>: <span class="kw">Exclusiva</span> da CLDF. O Congresso Nacional NÃO vota a LODF.</code></pre>
+
+        <pre><code><span class="cm">// Simulação de Hierarquia Normativa no DF</span>
+<span class="tp">1.</span> <span class="kw">Constituição Federal de 1988</span> (Parâmetro de validade)
+<span class="tp">2.</span> <span class="kw">Lei Orgânica do Distrito Federal</span> (Norma suprema local)
+<span class="tp">3.</span> <span class="kw">Leis Distritais</span> (Ordinárias, Complementares, Delegadas)
+<span class="tp">4.</span> <span class="kw">Decretos Distritais</span> (Atos administrativos normativos)
+<span class="tp">5.</span> <span class="kw">Portarias e Instruções Normativas</span> (Regulamentação infralegal)
+
+<span class="fn">Controle</span>: O <span class="kw">Tribunal de Justiça do DF</span> exerce o controle de 
+convencionalidade local. O <span class="kw">STF</span> exerce o controle de constitucionalidade.</code></pre>
+
+        <pre><code><span class="cm">// Fluxo de Intervenção Federal (Art. 34, CF c/c Art. 1º, §2º LODF)</span>
+<span class="kw">HIPÓTESES</span> <span class="fn">permitidas</span>:
+  <span class="nm">1.</span> Manter a integridade nacional
+  <span class="nm">2.</span> Repelir invasão estrangeira ou interestadual
+  <span class="nm">3.</span> Grave comprometimento da ordem pública
+  <span class="nm">4.</span> Garantir livre exercício dos Poderes locais
+  <span class="nm">5.</span> Reorganizar finanças distritais (Lei complementar federal)
+  <span class="nm">6.</span> Prover execução de lei federal, ordem ou decisão judicial
+  <span class="nm">7.</span> Assegurar observância de princípios sensíveis (art. 34, VII)
+
+<span class="fn">Procedimento</span>: <span class="kw">Decreto do Presidente da República</span> → Suspensão temporária de autonomia
+<span class="cm">NÃO cabe: intervenção da União por motivos administrativos corriqueiros.</span></code></pre>
+
+        <h3 id="s1-2">Valores Fundamentais e Soberania Popular</h3>
+        <p>O Título I da LODF estabelece os alicerces axiológicos da organização distrital. O art. 2º enumera cinco valores fundamentais, adaptando os fundamentos da República (art. 1º, CF) à realidade distrital. A soberania popular, por sua vez, é tratada no art. 5º como matriz de legitimação do poder, exercida direta ou indiretamente.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Mnemônico</th>
+                    <th>Valor Fundamental (Art. 2º)</th>
+                    <th>Correlação Constitucional</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>AU</strong></td><td>Autonomia como unidade federativa</td><td>Art. 32, CF</td></tr>
+                <tr><td><strong>CI</strong></td><td>Plena cidadania</td><td>Art. 1º, II, CF (diferença: "plena")</td></tr>
+                <tr><td><strong>DI</strong></td><td>Dignidade da pessoa humana</td><td>Art. 1º, III, CF</td></tr>
+                <tr><td><strong>VA</strong></td><td>Valores sociais do trabalho e livre iniciativa</td><td>Art. 1º, IV, CF</td></tr>
+                <tr><td><strong>PLU</strong></td><td>Pluralismo político</td><td>Art. 1º, V, CF</td></tr>
+            </tbody>
+        </table>
+
+        <div class="box box-ex">
+            <span class="box-title">✅ Exemplo</span>
+            <p>O Tribunal de Justiça do DF e dos Territórios (TJDFT) já reconheceu a aplicação do princípio da <strong>plena cidadania</strong> para garantir o acesso universal a serviços de saúde mental, vinculando a LODF ao dever de prestação positiva do Estado, com base no inciso II do art. 2º.</p>
+        </div>
+
+        <div class="box box-warn">
+            <span class="box-title">⚠️ Ponto de Prova — Formas de Soberania Popular</span>
+            <p>O art. 5º da LODF é taxativo ao elencar os instrumentos de participação direta: <strong>plebiscito, referendo e iniciativa popular</strong>. Audiências públicas, ouvidorias e conferências são mecanismos de participação popular (art. 14, CF/88, regulamentados por lei), mas <strong>não constituem exercício da soberania popular</strong> no sentido estrito da LODF. A banca frequentemente confunde os institutos.</p>
+        </div>
+
+        <pre><code><span class="cm">// Mecanismos de Participação Direta (Art. 5º, LODF)</span>
+<span class="tp">SOBERANIA_POPULAR</span> <span class="fn">exerce-se_por</span>:
+  <span class="kw">Plebiscito</span>     → Consulta prévia, vinculante ou não (depende da lei)
+  <span class="kw">Referendo</span>      → Ratificação ou rejeição posterior a ato normativo
+  <span class="kw">Iniciativa Popular</span> → Projeto de lei de interesse local
+                     <span class="fn">Requisito</span>: manifestação de, no mínimo, <span class="nm">1,5%</span> do eleitorado do DF
+                     <span class="cm">(O percentual é definido por lei distrital, não pela LODF)</span>
+
+<span class="fn">Nota</span>: O sufrágio é <span class="str">universal</span>, o voto é <span class="str">direto e secreto</span>, com valor igual para todos.</code></pre>
+
+        <pre><code><span class="cm">// Rol Não Exaustivo de Vedação à Discriminação (Art. 2º, PU, LODF)</span>
+<span class="kw">NINGUÉM</span> <span class="fn">será_discriminado_por_razão_de</span>:
+  <span class="nm">1.</span> Nascimento
+  <span class="nm">2.</span> Idade
+  <span class="nm">3.</span> Etnia / Raça / Cor
+  <span class="nm">4.</span> Sexo / Características genéticas
+  <span class="nm">5.</span> Estado civil
+  <span class="nm">6.</span> Trabalho rural ou urbano
+  <span class="nm">7.</span> Religião / Convicções políticas ou filosóficas
+  <span class="nm">8.</span> <span class="str">Orientação Sexual</span> (explicitamente prevista na LODF)
+  <span class="nm">9.</span> Deficiência (física, imunológica, sensorial ou mental)
+  <span class="nm">10.</span> Ter cumprido pena
+
+<span class="cm">Observação: O rol é exemplificativo, mas com nítida intenção exaustiva.</span></code></pre>
+
+        <h3 id="s1-3">Princípios Estruturantes da Administração Pública</h3>
+        <p>A Administração Pública distrital submete-se aos princípios expressos (LIMPE: Legalidade, Impessoalidade, Moralidade, Publicidade e Eficiência) e aos implícitos (Razoabilidade, Proporcionalidade, Motivação, Segurança Jurídica, Continuidade do Serviço Público, Autotutela, etc.). A LODF incorpora tais princípios ao exigir a observância aos ditames constitucionais, ampliando o escopo do controle administrativo e judicial.</p>
+
+        <div class="box box-def">
+            <span class="box-title">📘 Definição</span>
+            <p><strong>Princípio da Continuidade do Serviço Público</strong>: determina que a prestação de serviços essenciais não pode ser interrompida, salvo em hipóteses legalmente previstas (como falhas de pagamento em contratos de concessão, mediante prévio aviso), visando a satisfação da necessidade coletiva.</p>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Princípio</th>
+                    <th>Aplicação na LODF</th>
+                    <th>Controle Judicial</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Legalidade</strong></td>
+                    <td>Sujeição à lei e à LODF; vedação ao privilégio</td>
+                    <td>Anulação por desvio de finalidade ou excesso de poder</td>
+                </tr>
+                <tr>
+                    <td><strong>Impessoalidade</strong></td>
+                    <td>Vedação à promoção pessoal de agentes; foco no interesse público</td>
+                    <td>Improbidade administrativa e responsabilização civil</td>
+                </tr>
+                <tr>
+                    <td><strong>Moralidade</strong></td>
+                    <td>Ética administrativa; dever de probidade</td>
+                    <td>Responsabilização nas esferas administrativa, civil e penal</td>
+                </tr>
+                <tr>
+                    <td><strong>Publicidade</strong></td>
+                    <td>Transparência ativa e passiva; acesso à informação</td>
+                    <td>Controle social e judicial sobre sigilo indevido</td>
+                </tr>
+                <tr>
+                    <td><strong>Eficiência</strong></td>
+                    <td>Otimização de recursos; metas de desempenho</td>
+                    <td>Avaliação de políticas públicas e responsabilidade fiscal</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <pre><code><span class="cm">// Estrutura de Controle e Transparência (LODF)</span>
+<span class="tp">CONTROLE_INTERNO</span> <span class="fn">é_exercido_por</span>:
+  <span class="kw">Ouvidoria-Geral do DF</span> (Recebimento de denúncias)
+  <span class="kw">Corregedoria-Geral do DF</span> (Investigação disciplinar)
+  <span class="kw">Controladoria-Geral do DF</span> (Fiscalização contábil e de gestão)
+
+<span class="tp">CONTROLE_EXTERNO</span> <span class="fn">é_exercido_pela_CLDF_com_auxílio_do</span>:
+  <span class="kw">Tribunal de Contas do Distrito Federal (TCDF)</span>
+
+<span class="fn">Requisito</span>: Todos os órgãos de controle devem publicar relatórios
+<span class="str">acessíveis ao público</span>, garantindo o princípio da publicidade.</code></pre>
+
+        <div class="box box-summary">
+            <span class="box-title">📋 Resumo da Seção 1</span>
+            <ul>
+                <li>O DF detém autonomia política, administrativa e financeira, vedada a divisão em municípios.</li>
+                <li>Os valores fundamentais são: Autonomia, Plena cidadania, Dignidade, Valores sociais do trabalho e Pluralismo político (AUCIDIVAPLU).</li>
+                <li>A soberania popular exerce-se via plebiscito, referendo e iniciativa popular.</li>
+                <li>A LODF exige observância estrita aos princípios constitucionais da Administração Pública.</li>
+                <li>O controle de legalidade dos atos do Poder Público é objetivo prioritário do DF.</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SEÇÃO 2 -->
+    <div class="section" id="s2">
+        <div class="section-header">
+            <div class="section-number">2</div>
+            <h2>Da Organização do Distrito Federal</h2>
+        </div>
+
+        <h3 id="s2-1">Estrutura Territorial e Regiões Administrativas</h3>
+        <p>A organização territorial do DF é marcada pela existência de regiões administrativas (RAs), popularmente denominadas cidades-satélites. A LODF, em seu Título II, disciplina a organização do DF, prevendo a descentralização administrativa e a participação comunitária no planejamento e fiscalização das políticas públicas locais. O território não é dividido em municípios, mas a administração é fragmentada em unidades territoriais com personalidade jurídica própria ou com autonomia administrativa delegada.</p>
+
+        <div class="box box-def">
+            <span class="box-title">📘 Definição</span>
+            <p><strong>Região Administrativa (RA)</strong>: unidade territorial de gestão administrativa descentralizada, dotada de órgãos específicos (como administradores regionais), responsável pela prestação de serviços públicos locais, manutenção da ordem urbanística e articulação com a sociedade civil organizada.</p>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Unidade Territorial</th>
+                    <th>Natureza Jurídica</th>
+                    <th>Competência Típica</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Brasília (Plano Piloto)</strong></td>
+                    <td>Capital Federal e sede do Governo do DF</td>
+                    <td>Sede administrativa; preservação do tombamento urbanístico</td>
+                </tr>
+                <tr>
+                    <td><strong>Regiões Administrativas (RAs)</strong></td>
+                    <td>Entidades administrativas desconcentradas</td>
+                    <td>Gestão local; manutenção urbana; fiscalização; ouvidoria comunitária</td>
+                </tr>
+                <tr>
+                    <td><strong>Áreas de Proteção Ambiental</strong></td>
+                    <td>Unidades de conservação</td>
+                    <td>Preservação ambiental; restrição de uso do solo</td>
+                </tr>
+                <tr>
+                    <td><strong>Zonas de Interesse Social</strong></td>
+                    <td>Instrumento de política urbana</td>
+                    <td>Regularização fundiária; habitação de interesse social</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="box box-warn">
+            <span class="box-title">⚠️ Ponto de Prova — Brasília vs. Distrito Federal</span>
+            <p>Brasília é a <strong>capital federal</strong> e a sede do governo do DF. O DF é a <strong>entidade federativa</strong>. A confusão é recorrente. O tombamento do conjunto urbanístico de Brasília (IPHAN) aplica-se ao Plano Piloto, mas a LODF estende a preocupação com a preservação da memória e tradição a todo o território. Além disso, as RAs <strong>não possuem personalidade jurídica própria</strong>; são órgãos da administração indireta ou desconcentrada, dependendo da estrutura definida em lei distrital.</p>
+        </div>
+
+        <pre><code><span class="cm">// Hierarquia e Descentralização Administrativa (Art. 2º, LODF)</span>
+<span class="tp">GOVERNO_DO_DF</span> <span class="fn">estrutura-se_em</span>:
+  <span class="kw">Administração Direta</span>: Governador, Secretarias, Órgãos Executivos
+  <span class="kw">Administração Indireta</span>: Autarquias, Fundações, Empresas Públicas, Sociedades de Economia Mista
+  <span class="kw">Desconcentração Territorial</span>: Regiões Administrativas (RAs)
+  <span class="kw">Participação Comunitária</span>: Conselhos Comunitários e Conselhos de Desenvolvimento Local
+
+<span class="cm">Fluxo de Gestão:</span>
+  <span class="fn">Governador</span> → <span class="fn">Secretário de Planejamento</span> → <span class="fn">Administrador Regional</span> → <span class="fn">Conselho Comunitário</span></code></pre>
+
+        <pre><code><span class="cm">// Instrumentos de Planejamento Urbano na LODF</span>
+<span class="kw">PLANOS_OBRIGATÓRIOS</span> <span class="fn">devem_incluir</span>:
+  <span class="nm">1.</span> <span class="str">Plano Diretor de Ordenamento Territorial (PDOT)</span>
+  <span class="nm">2.</span> <span class="str">Plano de Uso e Ocupação do Solo (PUOS)</span>
+  <span class="nm">3.</span> <span class="str">Plano de Habitação</span>
+  <span class="nm">4.</span> <span class="str">Plano de Mobilidade Urbana</span>
+  <span class="nm">5.</span> <span class="str">Plano de Saneamento Básico</span>
+
+<span class="fn">Requisito</span>: Participação popular obrigatória em audiências públicas e consultas digitais.</code></pre>
+
+        <h3 id="s2-2">Administração Regional e Desconcentração</h3>
+        <p>A administração regional visa aproximar o Poder Executivo do cidadão, descentralizando a execução de políticas públicas. A LODF prevê a criação de Conselhos de Representantes Comunitários e a obrigatoriedade de orçamento participativo em nível regional. O Administrador Regional é cargo de livre nomeação e exoneração, subordinado diretamente ao Governador ou à Secretaria de Estado responsável, sem autonomia financeira própria, dependendo de repasses orçamentários específicos.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Aspecto</th>
+                    <th>Administração Central (Secretarias)</th>
+                    <th>Administração Regional (RAs)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Atribuição</strong></td>
+                    <td>Formulação de políticas setoriais</td>
+                    <td>Execução local e fiscalização</td>
+                </tr>
+                <tr>
+                    <td><strong>Autonomia</strong></td>
+                    <td>Autonomia administrativa e financeira setorial</td>
+                    <td>Desconcentrada; sem personalidade jurídica</td>
+                </tr>
+                <tr>
+                    <td><strong>Controle Social</strong></td>
+                    <td>Conselhos setoriais distritais</td>
+                    <td>Conselhos comunitários regionais</td>
+                </tr>
+                <tr>
+                    <td><strong>Orçamento</strong></td>
+                    <td>Dotação global e específica</td>
+                    <td>Repasse programático vinculado à RA</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="box box-ex">
+            <span class="box-title">✅ Exemplo</span>
+            <p>A RA de Taguatinga (RA III) mantém um <strong>Conselho de Desenvolvimento Local</strong> que avalia a alocação de verbas para pavimentação e iluminação pública. O Administrador Regional deve submeter o plano de obras à aprovação do Conselho, conforme previsto em lei distrital de descentralização administrativa.</p>
+        </div>
+
+        <div class="box box-warn">
+            <span class="box-title">⚠️ Ponto de Prova — Criação de Novas RAs</span>
+            <p>A criação de novas Regiões Administrativas não pode ser feita por <strong>decreto autônomo</strong> do Governador. Exige <strong>lei distrital</strong>, em razão do princípio da legalidade estrita e da necessidade de afetação de recursos orçamentários e de pessoal. A banca costuma afirmar que o Governador pode criar RAs para descentralizar a gestão, o que é ERRADO.</p>
+        </div>
+
+        <pre><code><span class="cm">// Requisitos para Criação de RA (Lei Distrital)</span>
+<span class="kw">LEI_DISTRIAL</span> <span class="fn">deverá_especificar</span>:
+  <span class="nm">1.</span> Denominação e delimitação geográfica
+  <span class="nm">2.</span> Sede administrativa
+  <span class="nm">3.</span> Estrutura organizacional (cargos, comissionados)
+  <span class="nm">4.</span> Dotação orçamentária inicial e fontes de receita
+  <span class="nm">5.</span> Prazo para instalação física e digital
+
+<span class="cm">NÃO se aplica: Medida Provisória para criação de RA (vedação constitucional).</span></code></pre>
+
+        <h3 id="s2-3">Organização Administrativa e Entidades</h3>
+        <p>A LODF autoriza a criação de entidades da administração indireta para a prestação de serviços públicos descentralizados, com ou sem personalidade jurídica própria, sob regime de concessão, permissão ou autorização. As empresas públicas e sociedades de economia mista atuam em atividades econômicas ou serviços de utilidade pública, submetendo-se ao regime jurídico próprio das empresas privadas, com as adaptações constitucionais e legais.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Entidade</th>
+                    <th>Personalidade</th>
+                    <th>Regime Jurídico</th>
+                    <th>Exemplo Distrital</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Autarquia</strong></td>
+                    <td>Direito Público</td>
+                    <td>Administrativo (serviço típico de Estado)</td>
+                    <td>Instituto de Defesa do Consumidor (Procon-DF)</td>
+                </tr>
+                <tr>
+                    <td><strong>Fundação Pública</strong></td>
+                    <td>Direito Público ou Privado</td>
+                    <td>Atividade social/educacional/cultural</td>
+                    <td>Fundação de Apoio ao Trabalhador (FAT)</td>
+                </tr>
+                <tr>
+                    <td><strong>Empresa Pública</strong></td>
+                    <td>Direito Privado</td>
+                    <td>Econômico ou utilidade pública (100% estatal)</td>
+                    <td>Companhia Energética de Brasília (CEB - parcialmente)</td>
+                </tr>
+                <tr>
+                    <td><strong>Sociedade de Economia Mista</strong></td>
+                    <td>Direito Privado</td>
+                    <td>Econômico (capital majoritário estatal)</td>
+                    <td>Companhia Urbanizadora da Nova Capital (Novacap)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="box box-summary">
+            <span class="box-title">📋 Resumo da Seção 2</span>
+            <ul>
+                <li>O DF é organizado territorialmente em Regiões Administrativas (RAs), desconcentradas e sem personalidade jurídica.</li>
+                <li>Brasília é a sede do governo e capital federal, com tombamento urbanístico protegido.</li>
+                <li>A descentralização administrativa exige participação comunitária e conselhos regionais.</li>
+                <li>A criação de RAs depende de lei distrital, não podendo ser feita por decreto ou MP.</li>
+                <li>As entidades da administração indireta atuam conforme seu tipo, com regimes jurídicos distintos.</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SEÇÃO 3 -->
+    <div class="section" id="s3">
+        <div class="section-header">
+            <div class="section-number">3</div>
+            <h2>Da Organização dos Poderes</h2>
+        </div>
+
+        <h3 id="s3-1">Poder Legislativo: Composição e Atribuições</h3>
+        <p>O Poder Legislativo do DF é exercido pela Câmara Legislativa do Distrito Federal (CLDF), composta por deputados distritais eleitos pelo voto direto e secreto. A CLDF detém competência legislativa cumulativa (estadual e municipal), competência fiscalizadora contábil, financeira, orçamentária e operacional, e funções de controle externo com o auxílio do TCDF. O processo legislativo segue as regras gerais da CF, com adaptações para a realidade distrital.</p>
+
+        <div class="box box-def">
+            <span class="box-title">📘 Definição</span>
+            <p><strong>Cláusula de Reserva de Plenário</strong>: exige a manifestação da maioria absoluta do tribunal ou do colegiado para declarar a inconstitucionalidade de lei ou ato normativo. A CLDF deve observar regras similares para aprovação de Leis Orgânicas e Emendas, exigindo quórum qualificado de 2/3.</p>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Atribuição</th>
+                    <th>Competência Legislativa</th>
+                    <th>Competência Fiscalizadora</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Legislativa</strong></td>
+                    <td>Dispor sobre matérias de competência estadual e municipal</td>
+                    <td>Avaliar contas do Governador e do TCDF</td>
+                </tr>
+                <tr>
+                    <td><strong>Administrativa</strong></td>
+                    <td>Organizar sua Secretaria e Regimento Interno</td>
+                    <td>Fiscalizar atos da Administração Direta e Indireta</td>
+                </tr>
+                <tr>
+                    <td><strong>Política</strong></td>
+                    <td>Autorizar referendo e convocar plebiscito</td>
+                    <td>Apreciar decretos legislativos e resoluções</td>
+                </tr>
+                <tr>
+                    <td><strong>Processo Legislativo</strong></td>
+                    <td>Iniciativa popular, projeto de lei do Executivo</td>
+                    <td>Comissões Parlamentares de Inquérito (CPIs)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="box box-warn">
+            <span class="box-title">⚠️ Ponto de Prova — Imunidades Parlamentares Distritais</span>
+            <p>Os deputados distritais gozam de <strong>imunidade material</strong> (inviolabilidade por opiniões, palavras e votos) e <strong>imunidade formal</strong> (não podem ser presos, salvo em flagrante de crime inafiançável, e o processo criminal depende de licença da CLDF para ser suspenso ou sustado). A banca frequentemente questiona se a imunidade formal impede a instauração do inquérito policial: <strong>ERRADO</strong>. O inquérito pode ser instaurado, mas a suspensão do processo depende da Casa.</p>
+        </div>
+
+        <pre><code><span class="cm">// Rito Legislativo Distrital (Simplificado)</span>
+<span class="kw">FASE_INICIATIVA</span>:
+  <span class="fn">Legítimos</span>: Mesa da CLDF, Deputados, Comissões, Governador, TCDF, Cidadãos (Iniciativa Popular)
+  
+<span class="kw">FASE_DELIBERATIVA</span>:
+  <span class="tp">Comissões</span>: Análise técnica, jurídica e orçamentária
+  <span class="tp">Plenário</span>: 1º turno → Discussão e votação
+  <span class="tp">Plenário</span>: 2º turno → Votação final (exige maioria absoluta para leis ordinárias, 2/3 para LC e LODF)
+  
+<span class="kw">FASE_SANÇÃO</span>:
+  <span class="fn">Governador</span> sanciona (promulga) ou veta (total ou parcial) no prazo de <span class="nm">15</span> dias úteis
+  <span class="cm">Veto tácito: se o Governador silencia, o projeto é promulgado pela Mesa da CLDF</span></code></pre>
+
+        <pre><code><span class="cm">// Imunidades Parlamentares (CF/88, Art. 27, §1º c/c Art. 53)</span>
+<span class="tp">IMUNIDADE_MATERIAL</span>:
+  <span class="kw">Alcance</span>: Opiniões, palavras e votos no exercício do mandato
+  <span class="fn">Efeito</span>: Irresponsabilidade civil, penal e administrativa absoluta
+
+<span class="tp">IMUNIDADE_FORMAL</span>:
+  <span class="kw">Prisão</span>: Só em flagrante de crime inafiançável (autuação e comunicação em <span class="nm">24h</span>)
+  <span class="kw">Processo</span>: Instauração normal, mas sustação depende da maioria dos pares
+  <span class="cm">A CLDF decide pela sustação ou não do processo (suspensão da prescrição)</span></code></pre>
+
+        <h3 id="s3-2">Poder Executivo: Competências e Controle</h3>
+        <p>O Poder Executivo é exercido pelo Governador do Distrito Federal, auxiliado pelos Secretários de Estado. A eleição ocorre pelo sistema majoritário (maioria absoluta no 1º turno ou maioria simples no 2º). O Governador detém competências típicas de Chefe de Estado (representação), Chefe de Governo (administração) e Chefe da Administração Pública (gestão). A LODF impõe limites rígidos à edição de medidas provisórias e decretos autônomos.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Tipo de Ato</th>
+                    <th>Competência do Governador</th>
+                    <th>Controle da CLDF</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Medida Provisória</strong></td>
+                    <td>Relevância e urgência (vedação em matéria penal, tributária, orçamentária, etc.)</td>
+                    <td>Deve ser apreciada em <strong>30 dias</strong>; se não votada, entra em regime de urgência</td>
+                </tr>
+                <tr>
+                    <td><strong>Decreto Legislativo</strong></td>
+                    <td>Competência exclusiva da CLDF (sustar atos normativos do Executivo)</td>
+                    <td>Apreciação direta, sem sanção do Governador</td>
+                </tr>
+                <tr>
+                    <td><strong>Decreto Regulamentar</strong></td>
+                    <td>Fiel execução da lei (não pode inovar na ordem jurídica)</td>
+                    <td>Controle de legalidade; possível sustação por decreto legislativo</td>
+                </tr>
+                <tr>
+                    <td><strong>Decreto Autônomo</strong></td>
+                    <td>Extinção de cargos vagos ou funções; organização administrativa interna</td>
+                    <td>Sujeito a controle judicial e fiscalização orçamentária</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="box box-ex">
+            <span class="box-title">✅ Exemplo</span>
+            <p>O Governador edita medida provisória para aumentar a gratificação de servidores. A CLDF analisa e conclui que a MP versa sobre matéria orçamentária, vedada pelo art. 32, §5º, da CF e pelo art. 65 da LODF. A CLDF <strong>susta a MP por decreto legislativo</strong> ou rejeita sua conversão em lei, mantendo o status quo ante.</p>
+        </div>
+
+        <div class="box box-warn">
+            <span class="box-title">⚠️ Ponto de Prova — Veto e Sustação</span>
+            <p>O veto governamental é <strong>político-jurídico</strong>. Só pode ser exercido por inconstitucionalidade ou contrariedade ao interesse público. A CLDF aprecia o veto em <strong>30 dias</strong>. Se não apreciado, o veto é colocado na ordem do dia da sessão imediata. A rejeição do veto depende de maioria absoluta. O veto parcial só alcança texto integral de artigo, parágrafo, inciso ou alínea.</p>
+        </div>
+
+        <pre><code><span class="cm">// Fluxo de Apreciação de Veto (Art. 32, CF c/c LODF)</span>
+<span class="tp">EXECUTIVO</span> <span class="fn">vetaprojeto_de_lei</span>(<span class="str">razão</span>, <span class="str">trecho</span>) → Comunica à CLDF em <span class="nm">48h</span>
+<span class="tp">LEGISLATIVO</span> <span class="fn">aprecia_veto</span>:
+  <span class="kw">Comissão Mista</span> → Parecer em até <span class="nm">5</span> dias
+  <span class="kw">Sessão Plenária</span> → Votação aberta, sem emenda
+  <span class="kw">Resultado</span>: Mantém o veto (maioria relativa) ou Rejeita (maioria absoluta)
+  <span class="cm">Se rejeitado: projeto é promulgado pelo Presidente da Mesa da CLDF</span></code></pre>
+
+        <h3 id="s3-3">Controle Externo e Tribunal de Contas</h3>
+        <p>O controle externo é exercido pela CLDF com o auxílio do Tribunal de Contas do Distrito Federal (TCDF). O TCDF é órgão auxiliar do Legislativo, dotado de autonomia administrativa, financeira e orçamentária. Sua composição segue a regra dos tribunais de contas estaduais: 7 conselheiros, nomeados pelo Governador e aprovados pela CLDF, com requisitos de idoneidade moral, notório saber e experiência profissional.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Atribuição do TCDF</th>
+                    <th>Natureza do Controle</th>
+                    <th>Efeito da Decisão</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Apreciação de contas do Governador e da CLDF</td>
+                    <td>Julgamento prévio (parecer) para o Legislativo</td>
+                    <td>Parecer técnico vinculante à CLDF (só derrubado por 2/3)</td>
+                </tr>
+                <tr>
+                    <td>Fiscalização contábil, financeira e orçamentária</td>
+                    <td>Auditoria e inspeção in loco</td>
+                    <td>Aplicação de multas e responsabilização</td>
+                </tr>
+                <tr>
+                    <td>Julgamento de contas de administradores</td>
+                    <td>Julgamento direto (natureza administrativa)</td>
+                    <td>Decisão com força de título executivo extrajudicial</td>
+                </tr>
+                <tr>
+                    <td>Apreciação de legalidade de aposentadorias e reformas</td>
+                    <td>Registro e fiscalização</td>
+                    <td>Cancelamento do registro se ilegal</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="box box-summary">
+            <span class="box-title">📋 Resumo da Seção 3</span>
+            <ul>
+                <li>A CLDF exerce o Poder Legislativo com competência estadual e municipal acumuladas.</li>
+                <li>Deputados distritais gozam de imunidade material e formal, com regras específicas de sustação processual.</li>
+                <li>O Governador detém competências executivas, podendo editar MPs (com vedações) e decretos.</li>
+                <li>O TCDF auxilia a CLDF no controle externo, com autonomia e composição de 7 membros.</li>
+                <li>As decisões do TCDF sobre contas de administradores têm força de título executivo.</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SEÇÃO 4 -->
+    <div class="section" id="s4">
+        <div class="section-header">
+            <div class="section-number">4</div>
+            <h2>Da Tributação e do Orçamento do Distrito Federal</h2>
+        </div>
+
+        <h3 id="s4-1">Sistema Tributário Local e Competência</h3>
+        <p>O DF detém competência tributária cumulativa, podendo instituir impostos estaduais (como ICMS e IPVA) e municipais (como ISS e IPTU), conforme disposto na CF e regulamentado na LODF. O sistema tributário distrital deve observar os princípios da legalidade, anterioridade, irretroatividade, capacidade contributiva e vedação ao confisco. A arrecadação é fundamental para a manutenção da máquina administrativa e a prestação de serviços públicos de saúde, educação e segurança.</p>
+
+        <div class="box box-def">
+            <span class="box-title">📘 Definição</span>
+            <p><strong>Competência Tributária Residual</strong>: faculdade conferida à União de instituir novos impostos mediante lei complementar. O DF <strong>não detém</strong> competência residual; apenas a União pode criar novos tributos via lei complementar, devendo o DF aguardar a delegação ou repartição de receitas.</p>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Tributo</th>
+                    <th>Esfera de Origem</th>
+                    <th>Base de Incidência</th>
+                    <th>Fato Gerador Típico</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>ICMS</strong></td><td>Estadual</td><td>Circulação de mercadorias e serviços</td><td>Operações comerciais interestaduais e internas</td></tr>
+                <tr><td><strong>IPVA</strong></td><td>Estadual</td><td>Propriedade de veículos automotores</td><td>Posse do veículo em 1º de janeiro</td></tr>
+                <tr><td><strong>ITCMD</strong></td><td>Estadual</td><td>Transmissão causa mortis e doação</td><td>Herança ou doação de bens móveis/imóveis</td></tr>
+                <tr><td><strong>ISS</strong></td><td>Municipal</td><td>Serviços de qualquer natureza</td><td>Prestação de serviços não abrangidos pelo ICMS</td></tr>
+                <tr><td><strong>IPTU</strong></td><td>Municipal</td><td>Propriedade predial e territorial urbana</td><td>Posse ou domínio de imóvel urbano</td></tr>
+            </tbody>
+        </table>
+
+        <div class="box box-warn">
+            <span class="box-title">⚠️ Ponto de Prova — Taxas e Contribuição de Melhoria</span>
+            <p>O DF pode instituir <strong>taxas</strong> em razão do exercício do poder de polícia ou pela prestação de serviços públicos específicos e divisíveis. A <strong>contribuição de melhoria</strong> decorre de obra pública que valorize imóveis. A banca frequentemente confunde taxas com tarifas (preço público). <strong>Tarifas</strong> (como água, energia, transporte) não são tributos, mas remuneração de serviços delegados, sujeitos a regulação, não ao regime tributário estrito.</p>
+        </div>
+
+        <pre><code><span class="cm">// Regime de Partilha de Receitas (CF/88 e LODF)</span>
+<span class="tp">COTA-PARTE</span> <span class="fn">é_repassada_ao_DF</span>:
+  <span class="nm">50%</span> da arrecadação do <span class="str">ITR</span> (Imposto Territorial Rural) dos imóveis do DF
+  <span class="nm">50%</span> da arrecadação do <span class="str">IOF</span> incidente sobre operações com ouro (definido em lei)
+  <span class="cm">O DF NÃO participa do FPE (Fundo de Participação dos Estados)</span>
+  <span class="cm">O DF NÃO participa do FPM (Fundo de Participação dos Municípios)</span>
+  
+<span class="fn">Observação</span>: O DF possui fundo próprio de manutenção e desenvolvimento do ensino e da saúde.</code></pre>
+
+        <pre><code><span class="cm">// Limites Orçamentários da LODF</span>
+<span class="kw">DESPESA_COM_PESSOAL</span> <span class="fn">não_pode_exceder</span>:
+  <span class="nm">50%</span> da Receita Corrente Líquida (RCL) → Limite Estadual
+  <span class="nm">60%</span> da RCL → Limite Municipal (não aplicável integralmente ao DF)
+  <span class="cm">O DF adota o teto de 50% para o Executivo, conforme Lei Complementar Federal 101/2000 (LRF)</span>
+  
+<span class="kw">VINCULAÇÕES_OBRIGATÓRIAS</span>:
+  <span class="nm">25%</span> → Manutenção e Desenvolvimento do Ensino
+  <span class="nm">15%</span> → Ações e Serviços Públicos de Saúde (mínimo constitucional)</code></pre>
+
+        <h3 id="s4-2">Princípios Orçamentários e PPA/LDO/LOA</h3>
+        <p>O orçamento do DF segue o sistema integrado de planejamento, compreendendo o Plano Plurianual (PPA), a Lei de Diretrizes Orçamentárias (LDO) e a Lei Orçamentária Anual (LOA). A LODF reforça a transparência, a participação social e o controle prévio das despesas. O ciclo orçamentário é anual, com vigência coincidente com o ano civil, e deve respeitar o princípio da universalidade, unidade e exclusividade.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Instrumento</th>
+                    <th>Prazo de Vigência</th>
+                    <th>Conteúdo Principal</th>
+                    <th>Objetivo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>PPA</strong></td>
+                    <td>4 anos (inicia no 2º ano do mandato)</td>
+                    <td>Diretrizes, objetivos e metas de médio prazo</td>
+                    <td>Planejamento estratégico de longo prazo</td>
+                </tr>
+                <tr>
+                    <td><strong>LDO</strong></td>
+                    <td>1 ano (anual, antecede a LOA)</td>
+                    <td>Metas fiscais, riscos, despesas de capital, pessoal</td>
+                    <td>Orientar a elaboração da LOA e disciplinar execução</td>
+                </tr>
+                <tr>
+                    <td><strong>LOA</strong></td>
+                    <td>1 ano (anual)</td>
+                    <td>Previsão de receitas e fixação de despesas</td>
+                    <td>Autorizar a execução orçamentária do exercício</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="box box-ex">
+            <span class="box-title">✅ Exemplo</span>
+            <p>A LOA de 2026 do DF previu R$ 85 bilhões em despesas, com destaque de 30% para saúde e 25% para educação. A LDO de 2026 estabeleceu a meta de superávit primário de 1,5% da RCL. O TCDF emitiu parecer apontando inconsistência na projeção de receitas de ICMS, obrigando o Governo a rever a LOA ou ajustar as metas de despesa, sob pena de infringir a LRF.</p>
+        </div>
+
+        <div class="box box-warn">
+            <span class="box-title">⚠️ Ponto de Prova — Créditos Adicionais</span>
+            <p>Os créditos adicionais são abertos por lei (suplementares e especiais) ou por decreto (extraordinários, em caso de urgência). O crédito extraordinário só pode ser aberto para despesas <strong>imprevisíveis e urgentes</strong> (guerra, calamidade). A reabertura de créditos depende de autorização legislativa específica e de existência de saldo. O DF deve indicar a fonte de recursos no ato de abertura.</p>
+        </div>
+
+        <pre><code><span class="cm">// Estrutura do Orçamento (LOA)</span>
+<span class="tp">ORÇAMENTO_FISCAL</span>: Poderes, fundos, órgãos da administração direta/indireta
+<span class="tp">ORÇAMENTO_INVESTIMENTO</span>: Empresas públicas e sociedades de economia mista (participação estatal)
+<span class="tp">ORÇAMENTO_SEGURIDADE</span>: Saúde, Previdência, Assistência Social
+
+<span class="kw">VEDAÇÕES_ORÇAMENTÁRIAS</span>:
+  <span class="cm">- Iniciar programas não previstos na LOA</span>
+  <span class="cm">- Realizar operação de crédito que exceda montante de despesas de capital</span>
+  <span class="cm">- Destinar recursos para fins não autorizados (desvio de finalidade)</span>
+  <span class="cm">- Conceder vantagem ou aumento remuneratório sem previsão na LOA e fonte de custeio</span></code></pre>
+
+        <h3 id="s4-3">Restrições Orçamentárias e Regime Fiscal</h3>
+        <p>A LODF incorpora as diretrizes da Lei de Responsabilidade Fiscal (LRF), impondo limites para endividamento, concessão de garantia e operações de crédito. O DF deve publicar Relatórios de Gestão Fiscal (RGF) e Relatórios Resumidos da Execução Orçamentária (RREO) bimestralmente, sob pena de crime de responsabilidade fiscal para o agente público omisso.</p>
+
+        <div class="box box-summary">
+            <span class="box-title">📋 Resumo da Seção 4</span>
+            <ul>
+                <li>O DF possui competência tributária cumulativa (estadual + municipal).</li>
+                <li>Princípios tributários: legalidade, anterioridade, capacidade contributiva.</li>
+                <li>O ciclo orçamentário segue PPA, LDO e LOA, com transparência e controle.</li>
+                <li>Limites de despesas com pessoal e vinculações mínimas para saúde e educação.</li>
+                <li>Créditos adicionais exigem autorização legal e indicação de fonte de recursos.</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SEÇÃO 5 -->
+    <div class="section" id="s5">
+        <div class="section-header">
+            <div class="section-number">5</div>
+            <h2>Da Ordem Econômica do Distrito Federal</h2>
+        </div>
+
+        <h3 id="s5-1">Liberdade Econômica e Intervenção Estatal</h3>
+        <p>A ordem econômica no DF funda-se na valorização do trabalho humano e na livre iniciativa, com função social da propriedade e defesa do consumidor. O Poder Público atua como agente normativo e regulador, podendo exercer fiscalização, incentivo e planejamento, sem prejuízo da livre concorrência. A LODF permite a intervenção estatal em atividades econômicas apenas por imperativo de segurança nacional ou relevante interesse coletivo.</p>
+
+        <div class="box box-def">
+            <span class="box-title">📘 Definição</span>
+            <p><strong>Função Social da Propriedade</strong>: a propriedade urbana ou rural deve atender, simultaneamente, às exigências fundamentais de ordenação da cidade expressas no plano diretor, ao bem-estar dos habitantes e à proteção ambiental, sob pena de aplicação de sanções como o parcelamento ou edificação compulsória, IPTU progressivo no tempo ou desapropriação.</p>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Tipo de Intervenção</th>
+                    <th>Instrumento Legal</th>
+                    <th>Objetivo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Monopólio/Concessão</strong></td><td>Lei distrital + licitação</td><td>Prestação de serviço público essencial</td></tr>
+                <tr><td><strong>Regulação de Preços</strong></td><td>Decreto + agência reguladora</td><td>Combate a abusos e proteção ao consumidor</td></tr>
+                <tr><td><strong>Desapropriação</strong></td><td>Decreto declaratório + indenização</td><td>Interesse público, utilidade pública ou necessidade pública</td></tr>
+                <tr><td><strong>Sanção Urbanística</strong></td><td>Edital + processo administrativo</td><td>Cumprimento da função social da propriedade</td></tr>
+            </tbody>
+        </table>
+
+        <div class="box box-warn">
+            <span class="box-title">⚠️ Ponto de Prova — Livre Iniciativa vs. Interesse Coletivo</span>
+            <p>A LODF não proíbe a atuação estatal no domínio econômico, mas exige que seja <strong>excepcional e motivada</strong>. O DF pode criar empresas públicas para exploração de atividade econômica, mas deve observar as regras de licitação e concorrência. A intervenção não pode criar privilégios regionais ou distorcer o mercado local.</p>
+        </div>
+
+        <pre><code><span class="cm">// Intervenção Estatal na Ordem Econômica (LODF)</span>
+<span class="tp">ESTADO_REGULADOR</span> <span class="fn">age_por</span>:
+  <span class="kw">Normatização</span>: Leis e decretos que definem padrões de qualidade e segurança
+  <span class="kw">Fiscalização</span>: Órgãos de controle (ANVISA local, Procon, IBRAM)
+  <span class="kw">Fomento</span>: Subsídios, crédito e incentivos fiscais para setores estratégicos
+  <span class="kw">Planejamento</span>: Planos setoriais de desenvolvimento econômico
+
+<span class="cm">VEDADO: intervenção direta sem previsão legal ou desvio de finalidade econômica.</span></code></pre>
+
+        <h3 id="s5-2">Função Social da Propriedade e Política Urbana</h3>
+        <p>A política urbana do DF visa ordenar o pleno desenvolvimento das funções sociais da cidade e garantir o bem-estar de seus habitantes. O Plano Diretor de Ordenamento Territorial (PDOT) é o instrumento básico, exigindo a regularização fundiária, a prevenção de assentamentos irregulares e a promoção de habitação de interesse social. A LODF impõe a obrigatoriedade de outorga onerosa do direito de construir, operações consorciadas e transferência do direito de construir como instrumentos de gestão do solo.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Instrumento Urbanístico</th>
+                    <th>Aplicação</th>
+                    <th>Base Legal Local</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Zoneamento</strong></td><td>Definição de usos e índices de ocupação</td><td>PUOS (Plano de Uso e Ocupação do Solo)</td></tr>
+                <tr><td><strong>Outorga Onerosa</strong></td><td>Permite construir além do coeficiente básico</td><td>PDOT e Lei de Parcelamento do Solo</td></tr>
+                <tr><td><strong>IPTU Progressivo</strong></td><td>Combate à especulação imobiliária</td><td>Código Tributário do DF</td></tr>
+                <tr><td><strong>Consórcio Imobiliário</strong></td><td>Parceria público-privada para revitalização</td><td>Lei de Parcerias e Concessões Distritais</td></tr>
+            </tbody>
+        </table>
+
+        <div class="box box-ex">
+            <span class="box-title">✅ Exemplo</span>
+            <p>O Governo do DF aplica o <strong>IPTU progressivo no tempo</strong> a um terreno ocioso na Asa Norte por 5 anos consecutivos, após notificação e edital. O proprietário não cumpriu a função social. Após o período legal, o DF pode promover a <strong>desapropriação com pagamento em títulos da dívida pública</strong>, resgatáveis em até 10 anos, conforme a LODF e o Estatuto da Cidade.</p>
+        </div>
+
+        <div class="box box-warn">
+            <span class="box-title">⚠️ Ponto de Prova — Regularização Fundiária</span>
+            <p>A regularização de assentamentos irregulares no DF exige <strong>lei específica</strong> e <strong>estudo de impacto ambiental e urbanístico</strong>. A LODF proíbe a regularização de áreas de proteção ambiental, mananciais ou risco geológico. A titulação só é concedida após a aprovação do projeto de regularização e a contrapartida dos beneficiários (quando houver capacidade de pagamento).</p>
+        </div>
+
+        <pre><code><span class="cm">// Fluxo de Regularização Fundiária (LODF)</span>
+<span class="tp">ETAPA_1</span> <span class="fn">Identificação_e_mapeamento</span>: Levantamento topográfico e socioeconômico
+<span class="tp">ETAPA_2</span> <span class="fn">Estudo_técnico</span>: Viabilidade ambiental, infraestrutura e riscos
+<span class="tp">ETAPA_3</span> <span class="fn">Projeto_de_regularização</span>: Definição de lotes, áreas públicas e contrapartidas
+<span class="tp">ETAPA_4</span> <span class="fn">Aprovação_legislativa</span>: Lei específica do Distrito Federal
+<span class="tp">ETAPA_5</span> <span class="fn">Titulação</span>: Emissão de Certidão de Regularização Fundiária (CRF) e matrícula
+
+<span class="cm">VEDADO: Regularização sem contrapartida ou em área de risco ambiental não mitigável.</span></code></pre>
+
+        <h3 id="s5-3">Meio Ambiente e Desenvolvimento Sustentável</h3>
+        <p>O DF possui regime especial de proteção ambiental em razão de sua localização no Bioma Cerrado e da importância hídrica. A LODF determina a preservação do meio ambiente equilibrado, impondo ao Poder Público e à coletividade o dever de defendê-lo. O licenciamento ambiental é obrigatório para atividades potencialmente poluidoras, e a supressão de vegetação nativa exige compensação e autorização do órgão competente (IBRAM).</p>
+
+        <div class="box box-summary">
+            <span class="box-title">📋 Resumo da Seção 5</span>
+            <ul>
+                <li>A ordem econômica baseia-se na livre iniciativa com função social e defesa do consumidor.</li>
+                <li>A intervenção estatal é excepcional, regulada por lei e sujeita ao interesse público.</li>
+                <li>A política urbana usa instrumentos como outorga onerosa, IPTU progressivo e zoneamento.</li>
+                <li>A regularização fundiária exige lei específica e viabilidade técnica-ambiental.</li>
+                <li>A proteção ambiental é mandatória, com licenciamento obrigatório e vedação a assentamentos em áreas de risco.</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- RESUMO CONSOLIDADO -->
+    <div class="section" id="s6">
+        <div class="section-header">
+            <div class="section-number">6</div>
+            <h2>Resumo Consolidado Final</h2>
+        </div>
+
+        <h3>Pontos-Chave por Subtópico</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Subtópico</th>
+                    <th>Conceito Nuclear</th>
+                    <th>Regra Principal</th>
+                    <th>Exceção / Vedação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Fundamentos</td>
+                    <td>Autonomia política, administrativa e financeira</td>
+                    <td>Vedação à divisão em municípios</td>
+                    <td>Soberania é exclusiva da União</td>
+                </tr>
+                <tr>
+                    <td>Valores</td>
+                    <td>AUCIDIVAPLU (Autonomia, Cidadania, Dignidade, Trabalho, Pluralismo)</td>
+                    <td>Plena cidadania e dignidade como base axiológica</td>
+                    <td>Vedação à discriminação é exemplificativa</td>
+                </tr>
+                <tr>
+                    <td>Soberania Popular</td>
+                    <td>Exercício direto e indireto</td>
+                    <td>Plebiscito, Referendo, Iniciativa Popular</td>
+                    <td>Audiência pública não é soberania direta</td>
+                </tr>
+                <tr>
+                    <td>Organização Territorial</td>
+                    <td>Regiões Administrativas (RAs)</td>
+                    <td>Desconcentração administrativa sem personalidade jurídica</td>
+                    <td>Criação exige lei, não decreto</td>
+                </tr>
+                <tr>
+                    <td>Poder Legislativo</td>
+                    <td>Câmara Legislativa (CLDF)</td>
+                    <td>Competência cumulativa (estadual + municipal)</td>
+                    <td>Imunidade formal não impede inquérito</td>
+                </tr>
+                <tr>
+                    <td>Poder Executivo</td>
+                    <td>Governador e Secretários</td>
+                    <td>Medidas Provisórias com relevância e urgência</td>
+                    <td>Vedação em matéria tributária/orçamentária</td>
+                </tr>
+                <tr>
+                    <td>Controle Externo</td>
+                    <td>TCDF como auxiliar da CLDF</td>
+                    <td>Julgamento de contas e fiscalização contábil</td>
+                    <td>Decisões sobre administradores são títulos executivos</td>
+                </tr>
+                <tr>
+                    <td>Tributação</td>
+                    <td>Competência cumulativa</td>
+                    <td>ICMS, IPVA, ISS, IPTU</td>
+                    <td>Sem competência residual (só União)</td>
+                </tr>
+                <tr>
+                    <td>Orçamento</td>
+                    <td>PPA, LDO, LOA</td>
+                    <td>Vinculações de 25% (educação) e 15% (saúde)</td>
+                    <td>Limite de 50% para despesa de pessoal (Executivo)</td>
+                </tr>
+                <tr>
+                    <td>Ordem Econômica</td>
+                    <td>Livre iniciativa e função social</td>
+                    <td>Intervenção estatal excepcional e motivada</td>
+                    <td>Vedação a monopólios sem lei e desvio de finalidade</td>
+                </tr>
+                <tr>
+                    <td>Política Urbana</td>
+                    <td>Plano Diretor e função social da propriedade</td>
+                    <td>Outorga onerosa, IPTU progressivo, regularização</td>
+                    <td>VEDADO regularizar área de risco ou proteção ambiental</td>
+                </tr>
+                <tr>
+                    <td>Meio Ambiente</td>
+                    <td>Preservação do Cerrado e recursos hídricos</td>
+                    <td>Licenciamento obrigatório e compensação</td>
+                    <td>Supressão de vegetação nativa só com autorização</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>✅ Checklist Final — Pontos Mais Cobrados em Provas</h3>
+        <div class="two-col">
+            <div class="box box-summary">
+                <ul>
+                    <li>✅ DF detém autonomia, NÃO soberania.</li>
+                    <li>✅ Vedada a divisão do DF em municípios.</li>
+                    <li>✅ Valores fundamentais: AU CI DI VA PLU.</li>
+                    <li>✅ Soberania popular: plebiscito, referendo, iniciativa popular.</li>
+                    <li>✅ CLDF aprova a LODF com quórum de 2/3.</li>
+                    <li>✅ RAs não têm personalidade jurídica; são desconcentradas.</li>
+                    <li>✅ Criação de RA exige LEI, não decreto.</li>
+                    <li>✅ Imunidade material: absoluta para opiniões/votos.</li>
+                </ul>
+            </div>
+            <div class="box box-summary">
+                <ul>
+                    <li>✅ Imunidade formal: sustação processual depende da maioria.</li>
+                    <li>✅ TCDF: 7 membros, auxiliar do Legislativo, autonomia própria.</li>
+                    <li>✅ Competência tributária cumulativa (estadual + municipal).</li>
+                    <li>✅ LOA: autorização de despesa; PPA: metas de 4 anos.</li>
+                    <li>✅ Vinculações: 25% ensino, 15% saúde (mínimo).</li>
+                    <li>✅ Ordem econômica: intervenção só por lei e interesse coletivo.</li>
+                    <li>✅ IPTU progressivo e outorga onerosa combatem especulação.</li>
+                    <li>✅ Regularização fundiária VEDADA em áreas de risco/ambientais.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <p><strong>📚 Lei Orgânica do Distrito Federal</strong> | Nível: Analista/Especialista | Atualização: 2026</p>
+    <p>Base Normativa: Constituição Federal de 1988 (Arts. 18 a 33) | Lei Orgânica do Distrito Federal (Títulos I a V)</p>
+    <p>Referências Doutrinárias: José Afonso da Silva, Diogo de Figueiredo Moreira Neto, Maria Sylvia Zanella Di Pietro, Hely Lopes Meirelles.</p>
+    <p style="margin-top: 12px; font-style: italic;">Material de uso exclusivamente didático e preparatório para concursos públicos.</p>
+</div>
+
+</body>
+</html>

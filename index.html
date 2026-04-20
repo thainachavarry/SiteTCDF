@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concurso TCDF</title>
+    <style>
+        :root { 
+            --bg: #faf9fc; --card: #fff; --text: #2d2a3a; --text-sec: #5a5568; 
+            --lilac: #8b78b0; --lilac-light: #ede7f6; --border: #d4c4e8; --hover: #f5f2fa; 
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.4; padding: 12px; }
+        
+        header { max-width: 1200px; margin: 0 auto 12px; text-align: center; }
+        h1 { font-size: 1.3em; font-weight: 700; color: var(--lilac); }
+        .sub { color: var(--text-sec); font-size: 0.85em; }
+
+        .search { max-width: 1200px; margin: 0 auto 16px; }
+        .search input { width: 100%; padding: 8px 12px; border: 2px solid var(--border); border-radius: 6px; background: var(--card); font-size: 0.9em; }
+        
+        .grid { 
+            display: grid; 
+            /* Cards menores para caberem mais por linha */
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); 
+            gap: 10px; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+        
+        .card { background: var(--card); border-radius: 8px; padding: 12px; border: 1px solid var(--border); }
+        .card-head { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+        .icon { font-size: 1.1em; background: var(--lilac-light); width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 6px; }
+        .title { font-size: 0.95em; font-weight: 700; }
+
+        .topics { list-style: none; display: flex; flex-direction: column; gap: 2px; }
+        .topics a { 
+            color: var(--lilac); text-decoration: none; font-size: 0.82em; font-weight: 500; 
+            padding: 4px 8px; border-radius: 4px; display: block; 
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis; /* Evita quebras de linha longas */
+        }
+        .topics a:hover { background: var(--hover); }
+
+        .single { display: inline-block; margin-top: 4px; padding: 6px 12px; background: var(--lilac); color: white; border-radius: 6px; text-decoration: none; font-size: 0.8em; font-weight: 600; }
+        
+        footer { text-align: center; margin-top: 20px; color: var(--text-sec); font-size: 0.75em; padding-bottom: 10px; }
+        
+        @media(max-width:500px){ .grid{grid-template-columns:1fr;} }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Estudos da Thatá - TCDF</h1>
+        <p class="sub">Materiais organizados por disciplina</p>
+    </header>
+    <div class="search">
+        <input type="text" id="search" placeholder="🔍 Buscar rápido...">
+    </div>
+    <div class="grid" id="grid"></div>
+    <footer>💡 Links locais e GitHub Pages.</footer>
+
+    <script>
+        const subjects = [
+            { name: "Língua Portuguesa", icon: "📖", topics: [
+                { t: "1 e 2: Interpretação/Gêneros", f: "portugues-01.html" },
+                { t: "3 e 4: Ortografia/Coesão", f: "portugues-02.html" },
+                { t: "5.1-5.4: Morfossintaxe/Pontuação", f: "portugues-03.html" },
+                { t: "5.5-5.8: Concord/Regên/Crase", f: "portugues-04.html" },
+                { t: "6: Reescrita e Significação", f: "portugues-05.html" },
+                { t: "7: Redação Oficial TCDF", f: "portugues-06.html" },
+            ]},
+            { name: "Lei Orgânica DF", icon: "🏛️", file: "lodf.html" },
+            { name: "LC 840/2011", icon: "⚖️", topics: [ 
+                { t: "Carreiras e Jornada", f: "lc840-01.html" },
+                { t: "Direitos", f: "lc840-02.html" },
+                { t: "Deveres", f: "lc840-03.html" },
+                { t: "Regime Disciplinar", f: "lc840-04.html" }
+            ]},
+            { name: "Conhecimentos DF", icon: "📍", file: "df-conhecimentos.html" },
+            { name: "Estatística", icon: "📊", file: "estatistica.html" },
+            { name: "Raciocínio Lógico", icon: "🧠", file: "raciocinio-logico.html" },
+            { name: "Controle Adm. Pública", icon: "🔍", topics: [  
+                { t: "Teoria Geral", f: "controle-01.html" },
+                { t: "LIA (Lei 8.429/92)", f: "controle-02.html" },
+                { t: "Lei Orgânica TCDF", f: "controle-03.html" },
+                { t: "Interno vs Externo", f: "controle-04.html" },
+            ]},
+            { name: "Dir. Previdenciário", icon: "🏥", file: "previdenciario.html" },
+            { name: "Mat. Financeira", icon: "💰", file: "mat-financeira.html" },
+            { name: "Análise de Dados", icon: "📈", file: "analise-dados.html" },
+            { name: "Dir. Constitucional", icon: "🇧🇷", topics: [
+                { t: "Princípios Fundamentais", f: "constitucional-01.html" },
+                { t: "Aplicabilidade Normas", f: "constitucional-02.html" },
+                { t: "Direitos Fundamentais", f: "constitucional-03.html" },
+                { t: "Organização Político-Adm", f: "constitucional-04.html" },
+                { t: "Adm. Pública", f: "constitucional-05.html" },
+                { t: "Executivo", f: "constitucional-06.html" },
+                { t: "Legislativo", f: "constitucional-07.html" },
+                { t: "LGPD", f: "constitucional-08.html" }
+            ]},
+            { name: "Dir. Administrativo", icon: "📋", topics: [
+                { t: "Estado e Governo", f: "administrativo-01.html" },
+                { t: "Atos Administrativos", f: "administrativo-03.html" },
+                { t: "Agentes Públicos", f: "administrativo-04.html" },
+                { t: "Poderes da Adm.", f: "administrativo-05.html" },
+                { t: "Responsabilidade Civil", f: "administrativo-07.html" },
+                { t: "Licitações/Contratos", f: "administrativo-12.html" },
+                { t: "Processo (9.784/99)", f: "administrativo-11.html" },
+            ]},
+            { name: "AFO", icon: "💵", topics: [
+                { t: "Orçamento Público", f: "afo-01.html" },
+                { t: "Receita e Despesa", f: "afo-04.html" },
+                { t: "LRF (LC 101/00)", f: "afo-06.html" },
+                { t: "Decreto 32.598/10", f: "afo-09.html" }
+            ]},
+            { name: "Adm. Geral", icon: "🏢", topics: [
+                { t: "Teorias e Processo", f: "adm-geral-01.html" },
+                { t: "Gestão de Pessoas", f: "adm-geral-03.html" },
+                { t: "Projetos e Processos", f: "adm-geral-05.html" }
+            ]},
+            { name: "Gestão Contratos", icon: "📝", topics: [
+                { t: "Legislação", f: "gestao-contratos-01.html" },
+                { t: "Fiscalização", f: "gestao-contratos-02.html" }
+            ]}
+        ];
+
+        const grid = document.getElementById('grid');
+        const render = q => {
+            grid.innerHTML = '';
+            const lq = q.toLowerCase();
+            subjects.forEach(s => {
+                if(lq && !s.name.toLowerCase().includes(lq)) return;
+                const card = document.createElement('div');
+                card.className = 'card';
+                let html = `<div class="card-head"><div class="icon">${s.icon}</div><div class="title">${s.name}</div></div>`;
+                if(s.topics) {
+                    html += '<ul class="topics">';
+                    s.topics.forEach(t => {
+                        if(!lq || t.t.toLowerCase().includes(lq)) html += `<li><a href="${t.f}" title="${t.t}">${t.t}</a></li>`;
+                    });
+                    html += '</ul>';
+                } else {
+                    html += `<a href="${s.file}" class="single">Acessar</a>`;
+                }
+                card.innerHTML = html;
+                grid.appendChild(card);
+            });
+            if(!grid.children.length) grid.innerHTML = '<div class="empty">Nada encontrado.</div>';
+        };
+
+        document.getElementById('search').addEventListener('input', e => render(e.target.value));
+        render('');
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Controle 01 | Teoria Geral do Controle Administrativo</title>
+<style>
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;line-height:1.7;padding-top:70px}
+a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
+.container{max-width:900px;margin:0 auto;padding:24px}
+h1{font-size:1.8em;margin-bottom:10px;color:var(--lil)}h2{font-size:1.4em;margin:28px 0 14px;color:var(--text);padding-bottom:6px;border-bottom:2px solid var(--lil-l)}
+p{margin-bottom:14px}ul,ol{margin:0 0 16px 20px}li{margin-bottom:6px}
+.box{background:var(--card);border-radius:8px;padding:16px;margin:20px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}
+.box-t{font-weight:700;margin-bottom:8px;display:block;color:var(--text)}
+table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--lil-d)}
+td{padding:10px 14px;border-bottom:1px solid var(--lil-l)}tr:hover td{background:var(--lil-l)}
+.nav-b{display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:1px solid var(--lil-d)}
+.btn-n{padding:10px 20px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none}
+.btn-n:hover{background:var(--lil-d);color:#fff}
+.tools{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:99}
+.t-btn{background:var(--card);border:2px solid var(--lil-d);padding:10px 14px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;color:var(--text);box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.t-btn:hover{transform:translateY(-2px)}
+.n-panel{position:fixed;bottom:70px;right:20px;width:280px;background:var(--card);border:2px solid var(--lil-d);border-radius:12px;padding:16px;display:none;box-shadow:0 5px 15px rgba(0,0,0,.15);z-index:100}
+.n-item{background:var(--lil-l);padding:10px;border-radius:6px;margin-bottom:8px;font-size:.9em}
+.n-in{width:100%;padding:8px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:8px}
+.b-sm{padding:6px 12px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em}
+@media(max-width:700px){.container{padding:16px}header{flex-direction:column;align-items:flex-start;gap:10px}}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="back">← Dashboard</a><div class="nav-t">Controle da Adm. Pública • 01</div></header>
+<div class="container">
+    <h1>1. Teoria Geral do Controle Administrativo</h1>
+    <p>O controle da Administração Pública é o conjunto de mecanismos, instrumentos e procedimentos destinados a verificar a conformidade dos atos, contratos e condutas dos agentes públicos com o ordenamento jurídico, os princípios administrativos e os objetivos de interesse público.</p>
+
+    <h2>📐 Classificação do Controle (Critérios)</h2>
+    <table>
+        <thead><tr><th>Critério</th><th>Tipos</th><th>Característica Principal</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Momento</strong></td><td>Prévio, Concomitante, Posterior</td><td>Quando o controle é exercido (antes, durante ou depois do ato)</td></tr>
+            <tr><td><strong>Natureza/Hierarquia</strong></td><td>Interno, Externo</td><td>Quem exerce: mesma estrutura ou outro Poder/Órgão</td></tr>
+            <tr><td><strong>Finalidade/Escopo</strong></td><td>Legalidade, Mérito (Oportunidade e Conveniência)</td><td>Verifica conformidade legal ou avaliação de conveniência política/administrativa</td></tr>
+            <tr><td><strong>Órgão/Agente</strong></td><td>Administrativo, Legislativo, Judicial, Social</td><td>Quem materializa o controle (Administração, Congresso, STF, Cidadão)</td></tr>
+        </tbody>
+    </table>
+
+    <div class="box def"><span class="box-t">📘 Conceito Chave</span>
+    <p><strong>Controle de Legalidade</strong>: Verifica se o ato está em conformidade com a lei, regulamentos e princípios constitucionais (art. 37, caput, CF). É obrigatório e abrange todos os atos.<br>
+    <strong>Controle de Mérito</strong>: Avalia conveniência e oportunidade. Só é possível nos atos discricionários. O controle externo (TC) e judicial <strong>não</strong> avaliam mérito, exceto para fins de anulação por desvio de finalidade ou excesso de poder.</p>
+    </div>
+
+    <h2>⚖️ Princípios Norteadores</h2>
+    <ul>
+        <li><strong>Legalidade estrita</strong>: O controle deve observar a lei e a Constituição.</li>
+        <li><strong>Finalidade pública</strong>: Visa proteger o patrimônio público e a eficiência da gestão.</li>
+        <li><strong>Proporcionalidade e razoabilidade</strong>: A sanção ou correção deve ser compatível com a gravidade da falha.</li>
+        <li><strong>Ampla defesa e contraditório</strong>: Obrigatórios em processos disciplinares e sancionatórios.</li>
+        <li><strong>Eficiência e economicidade</strong>: O controle deve ser ágil e evitar custos excessivos.</li>
+    </ul>
+
+    <h2>🛠️ Instrumentos e Mecanismos</h2>
+    <table>
+        <thead><tr><th>Mecanismo</th><th>Função</th><th>Base Legal</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Corregedoria</strong></td><td>Apuração de faltas disciplinares, fiscalização de conduta e hierarquia</td><td>LODF, Regimentos Internos</td></tr>
+            <tr><td><strong>Ouvidoria</strong></td><td>Recebimento de denúncias, sugestões e reclamações da sociedade</td><td>Lei 13.460/2017</td></tr>
+            <tr><td><strong>Auditoria</strong></td><td>Exame técnico de conformidade, desempenho e riscos</td><td>Lei 10.180/2001, LRF</td></tr>
+            <tr><td><strong>Sindicância/Processo Disciplinar</strong></td><td>Apuração formal de ilícitos administrativos</td><td>Lei 8.112/1990, LC 840/2011</td></tr>
+            <tr><td><strong>Autocontrole (Revisão/Anulação/Revogação)</strong></td><td>Correção pela própria Administração (Súmulas 346/473 STF)</td><td>Art. 53 Lei 9.784/1999</td></tr>
+        </tbody>
+    </table>
+
+    <div class="box warn"><span class="box-t">⚠️ Ponto de Prova</span>
+    <p>A Administração pode <strong>anular</strong> atos ilegais (efeito ex tunc) e <strong>revogar</strong> atos inconvenientes/inoportunos (efeito ex nunc). O Judiciário <strong>só pode anular</strong> por ilegalidade; nunca revogar. O TCDF tem competência para <strong>sustar</strong> atos/contratos ilegais se a autoridade não cumprir o prazo, mas não anula diretamente.</p>
+    </div>
+
+    <div class="nav-b">
+        <span></span>
+        <a href="controle-02.html" class="btn-n">Próximo →</a>
+    </div>
+</div>
+<div class="tools">
+    <button class="t-btn" onclick="webS()">🌐 Web</button>
+    <button class="t-btn" onclick="tN()">📝 Notas</button>
+    <button class="t-btn" onclick="tH()">✏️ Destaque</button>
+</div>
+<div class="n-panel" id="nP"><div style="display:flex;justify-content:space-between;margin-bottom:10px"><strong>Notas</strong><button onclick="tN()" style="background:none;border:none;cursor:pointer">✕</button></div><div id="nL" style="max-height:180px;overflow-y:auto;margin-bottom:10px"></div><form onsubmit="aN(event)"><input type="text" class="n-in" id="nI" placeholder="Anotação..." required><button type="submit" class="b-sm">💾 Salvar</button></form></div>
+<script>
+const SK='ctrl-admin-01';let hM=false;
+function webS(){const s=window.getSelection().toString();window.open(`https://duckduckgo.com/?q=${encodeURIComponent(s||'Teoria geral do controle administrativo concurso TCDF')}`,'_blank')}
+function tN(){const p=document.getElementById('nP');p.style.display=p.style.display==='none'?'block':'none';if(p.style.display==='block')lN()}
+function lN(){const n=JSON.parse(localStorage.getItem(SK)||'[]');document.getElementById('nL').innerHTML=n.length?n.map((x,i)=>`<div class="n-item">${x.text}<br><small style="cursor:pointer;color:#666" onclick="dN(${i})">remover</small></div>`).join(''):'<p style="font-size:.9em;color:#666">Sem notas.</p>'}
+function aN(e){e.preventDefault();const i=document.getElementById('nI'),n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:i.value,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));i.value='';lN()}
+function dN(i){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.splice(i,1);localStorage.setItem(SK,JSON.stringify(n));lN()}
+function tH(){hM=!hM;document.body.style.cursor=hM?'text':'auto';document.querySelectorAll('.t-btn')[2].textContent=hM?'✅ ON':'✏️ Destaque';hM?document.addEventListener('mouseup',hS):document.removeEventListener('mouseup',hS)}
+function hS(){const s=window.getSelection();if(s.toString().length>10){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:`🔍 "${s.toString().substring(0,40)}..." - ${prompt('Nota:','')||'-'}`,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));alert('✅');s.removeAllRanges()}}
+document.addEventListener('DOMContentLoaded',lN);
+</script>
+</body>
+</html>

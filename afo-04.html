@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;line-height:1.7;padding-top:70px}
+a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
+.container{max-width:900px;margin:0 auto;padding:24px}
+h1{font-size:1.8em;margin-bottom:10px;color:var(--lil)}h2{font-size:1.4em;margin:28px 0 14px;color:var(--text);padding-bottom:6px;border-bottom:2px solid var(--lil-l)}
+p{margin-bottom:14px}ul,ol{margin:0 0 16px 20px}li{margin-bottom:6px}
+.box{background:var(--card);border-radius:8px;padding:16px;margin:20px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}
+.box-t{font-weight:700;margin-bottom:8px;display:block;color:var(--text)}
+table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--lil-d)}
+td{padding:10px 14px;border-bottom:1px solid var(--lil-l)}tr:hover td{background:var(--lil-l)}
+.nav-b{display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:1px solid var(--lil-d)}
+.btn-n{padding:10px 20px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none}
+.btn-n:hover{background:var(--lil-d);color:#fff}
+.tools{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:99}
+.t-btn{background:var(--card);border:2px solid var(--lil-d);padding:10px 14px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;color:var(--text);box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.t-btn:hover{transform:translateY(-2px)}
+.n-panel{position:fixed;bottom:70px;right:20px;width:280px;background:var(--card);border:2px solid var(--lil-d);border-radius:12px;padding:16px;display:none;box-shadow:0 5px 15px rgba(0,0,0,.15);z-index:100}
+.n-item{background:var(--lil-l);padding:10px;border-radius:6px;margin-bottom:8px;font-size:.9em}
+.n-in{width:100%;padding:8px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:8px}
+.b-sm{padding:6px 12px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em}
+@media(max-width:700px){.container{padding:16px}header{flex-direction:column;align-items:flex-start;gap:10px}}
+.box img {
+    width: 100%;        /* Força a imagem a ter a largura total da box */
+    height: auto;       /* Mantém a proporção para não achatar */
+    display: block;     /* Remove espaços vazios abaixo da imagem */
+    margin: 15px 0;     /* Dá um espaço entre o texto e a imagem */
+    border-radius: 4px; /* Arredonda levemente para combinar com o layout */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Um detalhe para dar profundidade */
+}
+</style>
+</head>
+<body>
+
+<header>
+        <a href="index.html" class="back">← Dashboard</a><div class="nav-t">Receita</div>
+
+</header>
+
+<main class="container">
+    <h1>Receita Pública: Da Teoria à Prática de Prova</h1>
+
+    <section id="conceito">
+        <h2>1. O Conceito de Receita Pública: Amplo vs. Estrito</h2>
+        <p>Em Direito Financeiro e Orçamentário (AFO), o termo "receita" depende do sentido em que é empregado:</p>
+        
+        <div class="box def">
+            <ul>
+                <li><b>Sentido Amplo:</b> É qualquer ingresso de dinheiro nos cofres públicos. Se entrou na conta do Estado, é receita em sentido amplo, dividindo-se em Receitas Orçamentárias e Ingressos Extraorçamentários.</li>
+                <li><b>Sentido Estrito:</b> É a Receita Orçamentária propriamente dita. É o dinheiro que efetivamente pertence ao Estado.</li>
+            </ul>
+        </div>
+
+        <div class="box warn">
+            <span class="box-title">🔥 Pegadinha</span>
+            <p>A diferença entre Receita Orçamentária e Extraorçamentária não se é está ou não na LOA. O único critério correto é: <b>Este dinheiro pertence ao Poder Público?</b></p>
+            <ul>
+                <li><b>Ingressos Extraorçamentários:</b> O dinheiro NÃO pertence ao Estado. O Estado é mero depositário, o recurso tem caráter temporário e gera um passivo exigível (obrigação de devolver). Exemplos: Depósitos em caução, fianças, retenções na folha, restos a pagar inscritos no exercício e <span class="highlight-red">Operação de Crédito por ARO (Antecipação de Receita Orçamentária)</span>.</li>
+                <li><b>Receitas Orçamentárias:</b> São disponibilidades financeiras que pertencem ao Estado e integram seu patrimônio. Via de regra, estão na LOA, mas podem não estar (ex: doações surpresa).</li>
+            </ul>
+            <p><b>Nota:</b> Receitas Intraorçamentárias são remanejamentos dentro do mesmo ente para evitar a dupla contagem (entre Orçamento Fiscal e Seguridade).</p>
+        </div>
+    </section>
+
+    <section id="etapas">
+        <h2>2. As Etapas da Receita Pública (Mnemônico PLAR)</h2>
+        <p>A receita segue a ordem cronológica dos fenômenos econômicos em quatro estágios:</p>
+        
+        
+
+        <div class="box ex">
+            <ul>
+                <li><strong>P</strong>revisão:Planejamento e estimativa de arrecadação que constará na LOA.</li>
+                <li><strong>L</strong>ançamento:Ato administrativo que verifica a procedência do crédito fiscal, quem é o devedor e inscreve o débito. Válido para impostos e rendas com vencimento em lei/contrato (ex: aluguéis).</li>
+                <li><strong>A</strong>rrecadação: Momento em que o contribuinte entrega o dinheiro ao agente arrecadador (ex: banco). É aqui que a receita é reconhecida na contabilidade (<mark>regime de caixa</mark>).</li>
+                <li><strong>R</strong>colhimento:Transferência do banco para a Conta Única do Tesouro (Princípio da Unidade de Tesouraria).</li>
+            </ul>
+            <p><span class="alert-fire">O QUE MAIS CAI:</span> Nem todas as receitas passam por Previsão e Lançamento! <strong>Doações em espécie</strong> vão direto para a <strong>Arrecadação e Recolhimento.</strong></p>
+        </div>
+    </section>
+
+    <section id="natureza">
+        <h2>3. A Classificação por Natureza de Receita</h2>
+        <p>Essa é a classificação mais detalhista. Estrutura-se no código de 8 dígitos sob o mnemônico <strong>C O E DDDD T</strong>.</p>
+
+        <h3>C - Categoria Econômica (1º dígito)</h3>
+        <table>
+            <tr>
+                <th>Receitas Correntes (Código 1)</th>
+                <th>Receitas de Capital (Código 2)</th>
+            </tr>
+            <tr>
+                <td>Dinheiro para o dia a dia. Aumentam a disponibilidade financeira e o Patrimônio Líquido (efeito positivo).</td>
+                <td>Dinheiro para investimentos. Aumentam o caixa, mas NÃO alteram o Patrimônio Líquido (fato permutativo).</td>
+            </tr>
+        </table>
+
+        <h3>O - Origem (2º dígito)</h3>
+        <div class="box def">
+            <span class="box-title">Origens das Receitas CORRENTES: <span class="mnemonico">TRIBUTA CON PAISTO</span></span>
+            <ul>
+                <li><b>Tributa:</b> Impostos, Taxas e Contribuições de Melhoria.</li>
+                <li><b>Con:</b> Contribuições Sociais, CIDE e corporativas.</li>
+                <li><b>Patrimonial:</b> Aluguéis, royalties, dividendos, e a taxa de ocupação de imóveis.</li>
+                <li><b>Agropecuária / Industrial / Serviços.</b></li>
+                <li><b>Transferências Correntes / Outras receitas correntes (ex: multas).</b></li>
+            </ul>
+        </div>
+
+        <h3>E — Espécie (3º dígito)</h3>
+        <div class="box def">
+Vincula-se à Origem para detalhar ainda mais o tipo de ingresso (ex: se a origem é "Impostos", a espécie detalha se é sobre o "Patrimônio", sobre a "Renda", etc.).
+        </div>
+
+
+        <h3>DDDD — Desdobramentos (4º ao 7º dígito)</h3>
+        <div class="box def">
+            <span class="box-title">São quatro dígitos usados para identificar peculiaridades da receita. Eles permitem uma classificação extremamente específica exigida pelo controle contábil.
+            <ul>
+                <li><b>D1 (4º dígito):</b> Desdobramento para Identificação do Peculiaridade da Receita.</li>
+                <li><b>D2 (5º dígito):</b> Desdobramento para Identificação do Peculiaridade da Receita.</li>
+                <li><b>D3 (6º dígito):</b> Desdobramento para Identificação do Peculiaridade da Receita.</li>
+                <li><b>D4 (7º dígito):</b> Desdobramento para Identificação do Peculiaridade da Receita.</li>
+            </ul>
+        </div>
+
+
+        <h3>T — Tipo (8º dígito)</h3>
+        <div class="box def">
+            <span class="box-title">Indica como a receita está sendo arrecadada em relação à sua origem principal.
+            <ul>
+                <li><b>0</b> Natureza da Receita não valorizável (utilizado quando o código é genérico).</li>
+                <li><b>1</b> Receita Principal (o valor bruto arrecadado).</li>
+                <li><b>2</b> Multas e Juros de Mora da receita principal.</li>
+                <li><b>3</b> Dívida Ativa da receita principal.</li>
+                <li><b>4</b> Multas e Juros de Mora da Dívida Ativa.</li>
+            </ul>
+        </div>
+
+
+
+        <div class="box warn">
+            <span class="box-title">🔥 Pegadinha</span>
+            <ul>
+                <li><b>Alienação de bens:</b> Regra é Capital. Exceção: Venda de bens apreendidos é Receita Corrente (Origem "Outras").</li>
+                <li><b>Juros:</b> Recebimento de juros é SEMPRE Receita Corrente.</li>
+                <li><b>T - Tipo (8º dígito):</b> A Dívida Ativa acompanha a receita principal. Se for IRPF, a dívida ativa terá o dígito "3" no final.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="jurisprudencia">
+        <h2>4. Jurisprudências e Súmulas do STF Indispensáveis</h2>
+        
+        <div class="box juris">
+            <span class="juris-header">Súmula 545 STF | Taxa vs. Tarifa</span>
+            <ul>
+                <li><b>Taxa:</b> Receita derivada, regime público e compulsória. Exige autorização orçamentária. (Ex: Custas judiciais, emolumentos).</li>
+                <li><b>Tarifa/Preço Público:</b> Receita originária, regime privado e facultativa. (Ex: Pedágio).</li>
+            </ul>
+        </div>
+
+        <div class="box juris">
+            <span class="juris-header">Outros Entendimentos</span>
+            <p><b>Contribuição Sindical:</b> Após a reforma trabalhista, perdeu a natureza tributária; é voluntária.</p>
+            <p><b>Dívida Ativa:</b> Para o STF, empréstimos compulsórios são tributos. Contudo, para a <mark>literalidade da Lei 4.320/64</mark>, são inscritos como Dívida Ativa Não Tributária.</p>
+        </div>
+    </section>
+
+    <section id="outras-classificacoes">
+        <h2>5. Outras Classificações Cobradas</h2>
+        
+        <h3>A. Procedência ou Obrigatoriedade</h3>
+        <ul>
+            <li><b>Originárias:</b> Estado explorando seu patrimônio como particular (Aluguéis, tarifas).</li>
+            <li><b>Derivadas:</b> Estado usando seu poder de império. Mnemônico: <span class="mnemonico">DE CO</span> (Derivadas são Coercitivas). Ex: Impostos, multas.</li>
+        </ul>
+
+        <h3>B. Impacto Patrimonial (Efetiva vs. Não Efetiva)</h3>
+        <div class="box">
+            <ul>
+                <li><b>Efetiva:</b> Aumenta o Patrimônio Líquido. Regra: Receitas Correntes.</li>
+                <li><b>Não Efetiva:</b> Fato permutativo. Regra: Receitas de Capital.</li>
+            </ul>
+            <p><span class="alert-fire">EXCEÇÕES (Decore!):</span></p>
+            <ul>
+                <li><b>Corrente Não Efetiva:</b> Recebimento de Dívida Ativa e Venda de bens apreendidos.</li>
+                <li><b>Capital Efetiva:</b> Transferências de Capital, Remuneração do Tesouro e Resultado do Bacen.</li>
+            </ul>
+        </div>
+
+        <h3>C. Fonte / Destinação</h3>
+        <p>Papel duplo: indica para onde o dinheiro vai e de onde veio para financiar a despesa. Uso obrigatório por todos os entes (4 dígitos).</p>
+    </section>
+</main>
+
+</body>
+</html>

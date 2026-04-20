@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Controle 01 | Teoria Geral do Controle Administrativo</title>
+<style>
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;line-height:1.7;padding-top:70px}
+a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
+.container{max-width:900px;margin:0 auto;padding:24px}
+h1{font-size:1.8em;margin-bottom:10px;color:var(--lil)}h2{font-size:1.4em;margin:28px 0 14px;color:var(--text);padding-bottom:6px;border-bottom:2px solid var(--lil-l)}
+p{margin-bottom:14px}ul,ol{margin:0 0 16px 20px}li{margin-bottom:6px}
+.box{background:var(--card);border-radius:8px;padding:16px;margin:20px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}
+.box-t{font-weight:700;margin-bottom:8px;display:block;color:var(--text)}
+table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--lil-d)}
+td{padding:10px 14px;border-bottom:1px solid var(--lil-l)}tr:hover td{background:var(--lil-l)}
+.nav-b{display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:1px solid var(--lil-d)}
+.btn-n{padding:10px 20px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none}
+.btn-n:hover{background:var(--lil-d);color:#fff}
+.tools{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:99}
+.t-btn{background:var(--card);border:2px solid var(--lil-d);padding:10px 14px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;color:var(--text);box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.t-btn:hover{transform:translateY(-2px)}
+.n-panel{position:fixed;bottom:70px;right:20px;width:280px;background:var(--card);border:2px solid var(--lil-d);border-radius:12px;padding:16px;display:none;box-shadow:0 5px 15px rgba(0,0,0,.15);z-index:100}
+.n-item{background:var(--lil-l);padding:10px;border-radius:6px;margin-bottom:8px;font-size:.9em}
+.n-in{width:100%;padding:8px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:8px}
+.b-sm{padding:6px 12px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em}
+@media(max-width:700px){.container{padding:16px}header{flex-direction:column;align-items:flex-start;gap:10px}}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="back">← Dashboard</a><div class="nav-t">Princípios fundamentais & Teoria Geral</div></header>
+
+<main class="container">
+    <h1>Princípios fundamentais & Teoria Geral</h1>
+
+    <div class="box def">
+        <span class="box-title">Introdução</span>
+        <ul>
+            <li>1 Constituição. 1.1 Conceito, objeto, elementos e classificações. 1.2 Supremacia da Constituição</li>
+            <li>Os <b>princípios fundamentais</b> abrangem os <b>Art. 1º</b> (<i>Fundamentos</i>); <b>2º</b> (<i>Os três poderes da União</i>), <b>3º</b> (<i>Objetivos Fundamentais</i>) e <b>4º</b> (<i>Princípios das Relações Internacionais</i>) da <b>CF/88</b>.</li>
+        </ul>
+    </div>
+
+    <h2>Artigos da Constituição</h2>
+    <div class="box">
+        <p><b>Art. 1º</b> A República Federativa do Brasil... tem como <b>fundamentos:</b></p>
+        <ul>
+            <li>I - a soberania; II - a cidadania; III - a dignidade da pessoa humana;</li>
+            <li>IV - os valores sociais do trabalho e da livre iniciativa; <a href="https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2019/Lei/L13874.htm#art1">(Lei nº 13.874)</a></li>
+            <li>V - o pluralismo político.</li>
+            <li><i>Parágrafo único. Todo o poder emana do povo, que o exerce por meio de representantes eleitos ou diretamente, nos termos desta Constituição.
+                <li>Art. 2º São Poderes da União, independentes e harmônicos entre si, o Legislativo, o Executivo e o Judiciário.</li>
+                <li>Art. 3º Constituem objetivos fundamentais da República Federativa do Brasil:</li><strong>
+                I - construir uma sociedade livre, justa e solidária;
+                <br>II - garantir o desenvolvimento nacional;
+               <br> III - erradicar a pobreza e a marginalização e reduzir as desigualdades sociais e regionais;
+               <br> IV - promover o bem de todos, sem preconceitos de origem, raça, sexo, cor, idade e quaisquer outras formas de discriminação.
+               </strong>
+               <li> Art. 4º A República Federativa do Brasil rege-se nas suas relações internacionais pelos <strong>seguintes princípios:</li>
+               I - independência nacional;
+               <br> II - prevalência dos direitos humanos;
+                <br>III - autodeterminação dos povos;
+                <br>IV - não-intervenção;
+               <br> V - igualdade entre os Estados;
+               <br> VI - defesa da paz;
+                <br>VII - solução pacífica dos conflitos;
+                <br>VIII - repúdio ao terrorismo e ao racismo;
+               <br> IX - cooperação entre os povos para o progresso da humanidade;
+               <br> X - concessão de asilo político.
+                Parágrafo único. A República Federativa do Brasil buscará a integração econômica, política, social e cultural dos povos da América Latina, visando à formação de uma comunidade latino-americana de nações.</i></li>
+                </strong>
+        </ul>
+        <hr style="margin: 10px 0; border: 0; border-top: 1px solid var(--lilac-light);">
+        <p><b>Art. 2º</b> São Poderes da União... o Legislativo, o Executivo e o Judiciário.</p>
+        <p><b>Art. 3º</b> Constituem <b>objetivos fundamentais:</b> (I - Livre, justa e solidária; II - Desenv. nacional; III - Erradicar pobreza; IV - Bem de todos).</p>
+        <p><b>Art. 4º</b> Relações Internacionais: (I - Indep. nacional; II - Direitos humanos; VIII - Repúdio ao terrorismo/racismo; IX - Cooperação; X - Asilo político).</p>
+    </div>
+
+    <h2>Forma e Sistema de Governo</h2>
+    <div class="box">
+        <p><b>Forma de Governo (República):</b> Origem e titularidade do poder. Ligada à igualdade e ausência de privilégios.</p>
+        <img src="https://remnote-user-data.s3.amazonaws.com/khVe66kyh17lJzLd74yr4Ou3TuzRL_zk2a2fSRKTw5vexLEn_VD9KOkx8V5vXvwN1trFuehsxmfj8RnttU6OJf3zZsi2jj3kgu5FoLJOZ3PLdkZJGeLz0wyMrpk1oqIw.png" />
+        
+        <p><b>Sistema de Governo (Presidencialismo):</b> Como os poderes se relacionam. No Brasil, o Presidente é Chefe de Estado e de Governo.</p>
+        <img src="https://remnote-user-data.s3.amazonaws.com/x11adLoSA6IwYCLjVqmLMWuyjRdjf9rCPacHBws74lk3LJVBmTY9ZrKxfy8q0blYLZiP_aiuEnjFmxMfvPu2NcP5vt0iRZnn5ok-hNllcVnhA4PvpyjIlOPGhLBCahuW.png" />
+    </div>
+
+    <div class="box warn">
+        <span class="box-title">Cláusulas Pétreas (Mnemônico: VO SE FO DI)</span>
+        <ul>
+            <li><b>Vo</b> = Voto direto, secreto, universal e periódico</li>
+            <li><b>Se</b> = Separação dos poderes</li>
+            <li><b>Fo</b> = Forma federativa de Estado</li>
+            <li><b>Di</b> = Direitos e garantias individuais</li>
+            <li><i>Obs: República NÃO é cláusula pétrea. A Forma Federativa É.</i></li>
+        </ul>
+    </div>
+
+    <h2>Estrutura da Constituição</h2>
+    <div class="box def">
+        <p><b>Preâmbulo:</b> Não é norma constitucional (STF). Não serve de paradigma para inconstitucionalidade.</p>
+        <p><b>Parte Dogmática:</b> O texto propriamente dito (Art. 1º ao 250).</p>
+        <p><b>Parte Transitória (ADCT):</b> Integra a ordem antiga à nova. É formalmente constitucional.</p>
+    </div>
+
+    <h2>Sentidos e Classificação</h2>
+    <div class="box ex">
+        <p><b>Sentido Material:</b> Conteúdo (organização do Estado e direitos fundamentais).</p>
+        <p><b>Sentido Formal:</b> Tudo que está no texto rígido, independente do assunto.</p>
+        <p><b>Classificação da CF/88 (PEDRA):</b> Promulgada, Escrita, Dogmática, Rígida e Analítica.</p>
+        <img src="https://remnote-user-data.s3.amazonaws.com/5YFjOX7zssTLFMuODKLYHjyQrOZG6Vs8zXhrzjvHkU9EDfBj2cHGcCu7AAzX6DlXUwe2fQquF1-V7XXiQefD4RlCg_7te7hcEmGmIFz4iBEH-6BaFMcxn-nBnK5fl8Z9.png" />
+    </div>
+
+    <h2>Concepções Doutrinárias</h2>
+    <div class="box">
+        <ul>
+            <li><b>Sociológica (Lassale):</b> Fatores reais de poder. Se não houver correspondência, é só uma "folha de papel".</li>
+            <li><b>Política (Carl Schmitt):</b> Decisão política fundamental.</li>
+            <li><b>Jurídica (Kelsen):</b> Norma fundamental hipotética.</li>
+        </ul>
+    </div>
+
+    <h2>Tripartição de Poderes (Funções)</h2>
+    <table>
+        <tr><th>Órgão</th><th>Função Típica</th><th>Função Atípica</th></tr>
+        <tr><td>Legislativo</td><td>Legislar/Fiscalizar</td><td>Adm. RH / Julgar Presidente</td></tr>
+        <tr><td>Executivo</td><td>Adm./Chefia</td><td>Legislar (MP) / Julgar Adm.</td></tr>
+        <tr><td>Judiciário</td><td>Julgar</td><td>Adm. (Férias) / Legislar (Regimentos)</td></tr>
+    </table>
+
+    <div class="box warn">
+        <span class="box-title">Direitos Absolutos?</span>
+        <p>Em regra, não. Mas a doutrina aponta 3:</p>
+        <ul>
+            <li>Não ser torturado;</li>
+            <li>Não ser escravizado;</li>
+            <li>Não ser compulsoriamente associado.</li>
+        </ul>
+        <img src="https://remnote-user-data.s3.amazonaws.com/XBV3yT6EWGrewp7QRg6KGDn6jQQXc0rSXCel15YVO4QDQV79KVYeKAyKqx5sfEMbcpg15LisCmxMJfp-6dEQ_mdgIEJRyXBhGwLBxQin7QIrDWe9puGv3APGIOXzsX6u.png" />
+    </div>
+
+    <img src="https://remnote-user-data.s3.amazonaws.com/lo_DxeU5mMEx0tsL3Ri--uA8us8rHF-I5qgzGfPQtD1FAx8u5nqvv6hbh-wN8zx5iYRfgLhpGcNJxQu-8pFfNrkqY1hznGxTLLqL5g_CAdmfmP4SNE7sLWobsU3kvc9z.png" />
+ 
+ 
+    <h2>Classificação das Constituições</h2>
+
+<div class="box">
+    <table class="classificacao-table">
+        <thead>
+            <tr style="background: var(--lilac); color: white;">
+                <th colspan="2" style="text-align: center; padding: 15px; font-size: 1.1em;">CLASSIFICAÇÃO DAS CONSTITUIÇÕES</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background: var(--lilac-light); font-weight: bold; text-align: center;">
+                <td colspan="2" style="color: #b91c1c;">QUANTO À ORIGEM</td>
+            </tr>
+            <tr><td><b>Outorgadas</b></td><td>Impostas, surgem sem participação popular. Resultam de ato unilateral.</td></tr>
+            <tr><td><b>Democráticas</b></td><td>Nascem com participação popular (Promulgadas).</td></tr>
+            <tr><td><b>Cesaristas</b></td><td>Outorgadas, mas necessitam de referendo popular (ratificação).</td></tr>
+            <tr><td><b>Dualistas</b></td><td>Compromisso entre monarquia e burguesia.</td></tr>
+
+            <tr style="background: var(--lilac-light); font-weight: bold; text-align: center;">
+                <td colspan="2" style="color: #b91c1c;">QUANTO À FORMA</td>
+            </tr>
+            <tr><td><b>Escritas</b></td><td>Sistematizadas em documentos solenes.</td></tr>
+            <tr><td><b>Não Escritas</b></td><td>Normas em leis esparsas, jurisprudência e costumes.</td></tr>
+
+            <tr style="background: var(--lilac-light); font-weight: bold; text-align: center;">
+                <td colspan="2" style="color: #b91c1c;">QUANTO AO MODO DE ELABORAÇÃO</td>
+            </tr>
+            <tr><td><b>Dogmáticas</b></td><td>Elaboradas em um determinado momento, segundo dogmas em voga.</td></tr>
+            <tr><td><b>Históricas</b></td><td>Surgem lentamente a partir das tradições e valores históricos.</td></tr>
+
+            <tr style="background: var(--lilac-light); font-weight: bold; text-align: center;">
+                <td colspan="2" style="color: #b91c1c;">QUANTO À ESTABILIDADE</td>
+            </tr>
+            <tr><td><b>Imutáveis</b></td><td>Não podem ser modificadas.</td></tr>
+            <tr><td><b>Rígidas</b></td><td>Processo de alteração mais dificultoso que o das leis comuns.</td></tr>
+            <tr><td><b>Semirrígidas</b></td><td>Parte é rígida e parte é flexível (processo ordinário).</td></tr>
+
+            <tr style="background: var(--lilac-light); font-weight: bold; text-align: center;">
+                <td colspan="2" style="color: #b91c1c;">QUANTO AO CONTEÚDO</td>
+            </tr>
+            <tr><td><b>Materiais</b></td><td>Aspectos essenciais da vida estatal, mesmo fora do texto escrito.</td></tr>
+            <tr><td><b>Formais</b></td><td>Normas inseridas no texto rígido, independente do conteúdo.</td></tr>
+
+            <tr style="background: var(--lilac-light); font-weight: bold; text-align: center;">
+                <td colspan="2" style="color: #b91c1c;">QUANTO À EXTENSÃO</td>
+            </tr>
+            <tr><td><b>Analíticas</b></td><td>Conteúdo extenso. Contém normas apenas formalmente constitucionais.</td></tr>
+            <tr><td><b>Sintéticas</b></td><td>Restringem-se aos elementos materialmente constitucionais.</td></tr>
+
+            <tr style="background: var(--lilac-light); font-weight: bold; text-align: center;">
+                <td colspan="2" style="color: #b91c1c;">ONTOLÓGICA (Correspondência com a realidade)</td>
+            </tr>
+            <tr><td><b>Normativas</b></td><td>Limitam, de fato, o poder por corresponderem à realidade.</td></tr>
+            <tr><td><b>Nominativas</b></td><td>Não conseguem regular o processo político (objetivo falho).</td></tr>
+            <tr><td><b>Semânticas</b></td><td>Apenas formalizam a situação de poder existente (fachada).</td></tr>
+
+            <tr style="background: var(--lilac-light); font-weight: bold; text-align: center;">
+                <td colspan="2" style="color: #b91c1c;">QUANTO À FINALIDADE</td>
+            </tr>
+            <tr><td><b>Garantia</b></td><td>Proteger liberdades públicas contra arbitrariedade.</td></tr>
+            <tr><td><b>Dirigentes</b></td><td>Traçam diretrizes e normas programáticas para o Estado.</td></tr>
+            <tr><td><b>Balanço</b></td><td>Registram o estágio da sociedade em um dado momento histórico.</td></tr>
+
+            <tr style="background: var(--lilac-light); font-weight: bold; text-align: center;">
+                <td colspan="2" style="color: #b91c1c;">QUANTO AO CONTEÚDO IDEOLÓGICO</td>
+            </tr>
+            <tr><td><b>Liberais</b></td><td>Buscam limitar o poder estatal.</td></tr>
+            <tr><td><b>Sociais</b></td><td>Buscam igualdade material e efetivação de direitos sociais.</td></tr>
+        </tbody>
+    </table>
+</div>
+    </div>
+
+</main>
+
+
+
+</body>
+</html>

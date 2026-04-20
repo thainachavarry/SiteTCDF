@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Português 01 | Interpretação e Gêneros</title>
+    <style>
+        :root { --bg: #faf9fc; --card: #fff; --text: #2d2a3a; --text-sec: #5a5568; --lilac: #8b78b0; --lilac-light: #ede7f6; --border: #d4c4e8; --def: #f0edf5; --warn: #fff8e1; --ex: #f0f7f1; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: var(--bg); color: var(--text); font-family: system-ui, sans-serif; line-height: 1.7; padding-top: 70px; }
+        a { color: var(--lilac); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        header { background: var(--lilac); color: white; padding: 14px 24px; position: fixed; top: 0; width: 100%; z-index: 100; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .back { color: white; font-weight: 500; display: flex; align-items: center; gap: 6px; }
+        .nav-title { font-weight: 700; font-size: 1.05em; }
+        .container { max-width: 900px; margin: 0 auto; padding: 24px; }
+        h1 { font-size: 1.8em; margin-bottom: 10px; color: var(--lilac); }
+        h2 { font-size: 1.4em; margin: 28px 0 14px; color: var(--text); padding-bottom: 6px; border-bottom: 2px solid var(--lilac-light); }
+        p { margin-bottom: 14px; color: var(--text); }
+        .box { background: var(--card); border-radius: 8px; padding: 16px; margin: 20px 0; border-left: 4px solid var(--lilac); box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+        .box.def { background: var(--def); border-color: var(--lilac); }
+        .box.warn { background: var(--warn); border-color: #f59e0b; }
+        .box.ex { background: var(--ex); border-color: #22c55e; }
+        .box-title { font-weight: 700; margin-bottom: 8px; display: block; color: var(--text); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; background: var(--card); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
+        th { background: var(--lilac-light); color: var(--text); font-weight: 600; text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--border); }
+        td { padding: 10px 14px; border-bottom: 1px solid var(--lilac-light); }
+        tr:hover td { background: var(--lilac-light); }
+        .nav-buttons { display: flex; justify-content: space-between; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); }
+        .btn-nav { padding: 10px 20px; background: var(--lilac-light); color: var(--lilac); border: none; border-radius: 8px; cursor: pointer; font-weight: 600; text-decoration: none; }
+        .btn-nav:hover { background: var(--border); }
+        .tools { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 99; }
+        .tool-btn { background: var(--card); border: 2px solid var(--border); padding: 10px 14px; border-radius: 24px; cursor: pointer; display: flex; align-items: center; gap: 8px; font-weight: 600; color: var(--text); box-shadow: 0 3px 10px rgba(0,0,0,0.1); transition: 0.2s; }
+        .tool-btn:hover { transform: translateY(-2px); }
+        .notes-panel { position: fixed; bottom: 70px; right: 20px; width: 280px; background: var(--card); border: 2px solid var(--border); border-radius: 12px; padding: 16px; display: none; box-shadow: 0 5px 15px rgba(0,0,0,0.15); z-index: 100; }
+        .note-item { background: var(--lilac-light); padding: 10px; border-radius: 6px; margin-bottom: 8px; font-size: 0.9em; }
+        .note-input { width: 100%; padding: 8px; border: 1px solid var(--border); border-radius: 6px; margin-bottom: 8px; }
+        .btn-sm { padding: 6px 12px; background: var(--lilac); color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.85em; }
+        @media(max-width:700px){ .container{padding:16px;} header{flex-direction:column; align-items:flex-start; gap:10px;} }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back">← Dashboard</a>
+        <div class="nav-title">Língua Portuguesa • Tópico 01</div>
+    </header>
+    <div class="container">
+        <h1>1 & 2. Compreensão, Interpretação, Tipos e Gêneros</h1>
+        <p>Questões de prova frequentemente trocam <strong>compreensão</strong> (explicito no texto) por <strong>interpretação</strong> (inferência/implícito). Domine a diferença para não cair em armadilhas.</p>
+        
+        <h2>📖 Compreensão vs. Interpretação</h2>
+        <table>
+            <thead><tr><th>Aspecto</th><th>Compreensão</th><th>Interpretação</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Foco</strong></td><td>Informação explícita</td><td>Informação implícita/inferida</td></tr>
+                <tr><td><strong>Verbo-chave</strong></td><td>Segundo o texto, afirma-se que...</td><td>Infere-se, deduz-se, conclui-se que...</td></tr>
+                <tr><td><strong>Limite</strong></td><td>Não pode extrapolar o texto</td><td>Extrapolation = erro. Implicitude autorizada.</td></tr>
+                <tr><td><strong>Dica de prova</strong></td><td>Volte ao parágrafo exato</td><td>Procure pistas contextuais + lógica</td></tr>
+            </tbody>
+        </table>
+
+        <h2>🗂️ Tipos Textuais vs. Gêneros Textuais</h2>
+        <div class="box def">
+            <span class="box-title">📘 Definição</span>
+            <p><strong>Tipos</strong>: Estruturas linguísticas fixas (Narrar, Descrever, Dissertar, Expor, Injuntar).<br><strong>Gêneros</strong>: Realizações concretas e situadas dos tipos (Carta, Edital, Crônica, Art. de Opinião, Manual). São infinitos e evoluem com a sociedade.</p>
+        </div>
+        <table>
+            <thead><tr><th>Tipo</th><strong>Objetivo</strong><th>Marcas Linguísticas</th><th>Gêneros Comuns</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Narrativo</strong></td><td>Contar fatos</td><td>Pretérito, verbos de ação, personagens</td><td>Conto, novela, notícia</td></tr>
+                <tr><td><strong>Descritivo</strong></td><td>Retratar cenas</td><td>Adjetivos, verbos de estado, detalhes espaciais</td><td>Classificado, laudo, folheto turístico</td></tr>
+                <tr><td><strong>Dissertativo</strong></td><td>Argumentar/Opinar</td><td>Conectivos, opinião, tese + argumentos</td><td>Artigo de opinião, editorial, ensaio</td></tr>
+                <tr><td><strong>Expositivo</strong></td><td>Informar/Explicar</td><td>Linguagem objetiva, dados, definições</td><td>Verbete, reportagem, aula</td></tr>
+                <tr><td><strong>Injuntivo</strong></td><td>Orientar/Instruir</td><td>Verbos no imperativo, sequências numéricas</td><td>Manual, receita, edital, bula</td></tr>
+            </tbody>
+        </table>
+
+        <div class="box warn">
+            <span class="box-title">⚠️ Ponto de Prova</span>
+            <p>Um texto pode misturar tipos, mas terá um <strong>tipo dominante</strong>. A banca costuma afirmar que "gêneros são fixos" (ERRADO) ou que "texto injuntivo usa subjuntivo" (ERRADO → usa IMPERATIVO).</p>
+        </div>
+
+        <div class="nav-buttons">
+            <span></span>
+            <a href="portugues-02.html" class="btn-nav">Próximo →</a>
+        </div>
+    </div>
+    <div class="tools">
+        <button class="tool-btn" onclick="webSearch()">🌐 Web</button>
+        <button class="tool-btn" onclick="toggleNotes()">📝 Notas</button>
+        <button class="tool-btn" onclick="toggleHighlight()">✏️ Destaque</button>
+    </div>
+    <div class="notes-panel" id="notesPanel">
+        <div style="display:flex; justify-content:space-between; margin-bottom:10px;"><strong>Notas do Tópico</strong><button onclick="toggleNotes()" style="background:none; border:none; cursor:pointer;">✕</button></div>
+        <div id="notesList" style="max-height:180px; overflow-y:auto; margin-bottom:10px;"></div>
+        <form onsubmit="addNote(event)"><input type="text" class="note-input" id="noteInput" placeholder="Digite sua anotação..." required><button type="submit" class="btn-sm">💾 Salvar</button></form>
+    </div>
+    <script>
+        const STORAGE_KEY = 'port-01-notes'; let highlightMode = false;
+        function webSearch() { const sel = window.getSelection().toString(); const q = sel || 'Compreensão e interpretação textual concurso TCDF'; window.open(`https://duckduckgo.com/?q=${encodeURIComponent(q)}`, '_blank'); }
+        function toggleNotes() { const p = document.getElementById('notesPanel'); p.style.display = p.style.display === 'none' ? 'block' : 'none'; if(p.style.display === 'block') loadNotes(); }
+        function loadNotes() { const notes = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); document.getElementById('notesList').innerHTML = notes.length ? notes.map((n,i) => `<div class="note-item">${n.text} <br><small style="color:#666; cursor:pointer;" onclick="delNote(${i})">remover</small></div>`).join('') : '<p style="font-size:0.9em; color:#666;">Nenhuma nota ainda.</p>'; }
+        function addNote(e) { e.preventDefault(); const input = document.getElementById('noteInput'); const notes = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); notes.push({ text: input.value, date: new Date().toLocaleDateString('pt-BR') }); localStorage.setItem(STORAGE_KEY, JSON.stringify(notes)); input.value = ''; loadNotes(); }
+        function delNote(i) { const notes = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); notes.splice(i, 1); localStorage.setItem(STORAGE_KEY, JSON.stringify(notes)); loadNotes(); }
+        function toggleHighlight() { highlightMode = !highlightMode; document.body.style.cursor = highlightMode ? 'text' : 'auto'; document.querySelectorAll('.tool-btn')[2].textContent = highlightMode ? '✅ Destaque: ON' : '✏️ Destaque'; highlightMode ? document.addEventListener('mouseup', handleSelect) : document.removeEventListener('mouseup', handleSelect); }
+        function handleSelect() { const sel = window.getSelection(); if(sel.toString().length > 10) { const notes = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); notes.push({ text: `🔍 "${sel.toString().substring(0,40)}..." - ${prompt('Anotação rápida:','') || 'Sem anotação'}`, date: new Date().toLocaleDateString('pt-BR') }); localStorage.setItem(STORAGE_KEY, JSON.stringify(notes)); alert('✅ Destaque salvo!'); sel.removeAllRanges(); } }
+        document.addEventListener('DOMContentLoaded', loadNotes);
+    </script>
+</body>
+</html>

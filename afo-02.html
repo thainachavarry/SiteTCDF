@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;line-height:1.7;padding-top:70px}
+a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
+.container{max-width:900px;margin:0 auto;padding:24px}
+h1{font-size:1.8em;margin-bottom:10px;color:var(--lil)}h2{font-size:1.4em;margin:28px 0 14px;color:var(--text);padding-bottom:6px;border-bottom:2px solid var(--lil-l)}
+p{margin-bottom:14px}ul,ol{margin:0 0 16px 20px}li{margin-bottom:6px}
+.box{background:var(--card);border-radius:8px;padding:16px;margin:20px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}
+.box-t{font-weight:700;margin-bottom:8px;display:block;color:var(--text)}
+table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--lil-d)}
+td{padding:10px 14px;border-bottom:1px solid var(--lil-l)}tr:hover td{background:var(--lil-l)}
+.nav-b{display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:1px solid var(--lil-d)}
+.btn-n{padding:10px 20px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none}
+.btn-n:hover{background:var(--lil-d);color:#fff}
+.tools{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:99}
+.t-btn{background:var(--card);border:2px solid var(--lil-d);padding:10px 14px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;color:var(--text);box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.t-btn:hover{transform:translateY(-2px)}
+.n-panel{position:fixed;bottom:70px;right:20px;width:280px;background:var(--card);border:2px solid var(--lil-d);border-radius:12px;padding:16px;display:none;box-shadow:0 5px 15px rgba(0,0,0,.15);z-index:100}
+.n-item{background:var(--lil-l);padding:10px;border-radius:6px;margin-bottom:8px;font-size:.9em}
+.n-in{width:100%;padding:8px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:8px}
+.b-sm{padding:6px 12px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em}
+@media(max-width:700px){.container{padding:16px}header{flex-direction:column;align-items:flex-start;gap:10px}}
+.box img {
+    width: 100%;        /* Força a imagem a ter a largura total da box */
+    height: auto;       /* Mantém a proporção para não achatar */
+    display: block;     /* Remove espaços vazios abaixo da imagem */
+    margin: 15px 0;     /* Dá um espaço entre o texto e a imagem */
+    border-radius: 4px; /* Arredonda levemente para combinar com o layout */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Um detalhe para dar profundidade */
+}
+</style>
+</head>
+<body>
+
+<header>
+        <a href="index.html" class="back">← Dashboard</a><div class="nav-t">O orçamento público no Brasil</div>
+
+</header>
+
+<main class="container">
+    <h1>Administração Financeira e Orçamentária</h1>
+
+    <section id="conceitos">
+        <h2>1. O Orçamento Público no Brasil</h2>
+        <div class="box">
+            <p>O orçamento é um importante instrumento de planejamento que representa o fluxo previsto de ingressos e de aplicações de recursos em determinado período. No Brasil, ele é um <b>ato formal (uma lei)</b> pelo qual o Poder Executivo prevê as receitas e o Poder Legislativo autoriza a execução das despesas.</p>
+            <p><b>Natureza Jurídica:</b> Segundo o STF (2016), a Lei Orçamentária Anual (LOA) tem natureza de <b>lei formal e material</b>, sujeitando-se ao controle abstrato de constitucionalidade. Trata-se de uma lei ordinária (não exige quórum qualificado), temporal (obedece ao princípio da anualidade) e especial (possui processo legislativo mais célere e matéria específica).</p>
+            <p><b>Autorizativo vs. Impositivo:</b> Historicamente, o orçamento brasileiro é autorizativo (autoriza o Executivo a gastar, sem obrigá-lo). Contudo, vem ganhando fortes traços de <b>orçamento impositivo</b> (obrigação de executar) após diversas Emendas Constitucionais (como a EC 86/2015), tornando-se um modelo híbrido.</p>
+        </div>
+        <img src="https://remnote-user-data.s3.amazonaws.com/StkVNZU0iPFSg1eCSVcZvnMGZg0KatjPfqiAXIIsqmJTXnU7nTPndZvQ-yV61rMKXSuA2kQB3ixZU8js8ehUMEz47YULHQsxThr97X9H7TBiowlFALiMsTn00B9xVNIC.png" alt="Fluxo Orçamentário">
+    </section>
+
+    <section id="principios">
+        <h2>2. Princípios Orçamentários</h2>
+        <p>São as premissas e linhas norteadoras que dão consistência ao orçamento público desde a sua concepção até a sua execução.</p>
+        <div class="box def">
+            <ul>
+                <li><b>Unidade (ou Totalidade):</b> O orçamento deve ser uno, ou seja, cada ente da Federação deve possuir apenas uma lei orçamentária anual (LOA). A existência de três orçamentos dentro da LOA (Fiscal, Seguridade Social e Investimentos) não fere este princípio, pois eles integram um único documento legal consolidado.</li>
+                <li><b>Universalidade:</b> A LOA deve incorporar todas as receitas e todas as despesas da administração pública, sem exceções, permitindo ao Poder Legislativo o controle do valor global.</li>
+                <li><b>Anualidade (ou Periodicidade):</b> O orçamento é elaborado e autorizado para um período determinado de um ano (exercício financeiro), que no Brasil coincide com o ano civil (1º de janeiro a 31 de dezembro).</li>
+                <li><b>Exclusividade (ou Pureza):</b> A lei orçamentária não conterá dispositivo estranho à previsão de receita e à fixação de despesa. Exceções constitucionais: autorização para créditos suplementares e operações de crédito (incluindo ARO).</li>
+                <li><b>Orçamento Bruto:</b> Todas as parcelas de receitas e despesas devem aparecer na LOA em seus valores brutos, sem qualquer tipo de dedução.</li>
+                <li><b>Não Afetação (ou Não Vinculação):</b> É vedada a vinculação da receita de impostos a órgão, fundo ou despesa específica (salvo exceções para Saúde, Educação e garantias).</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="sistema-planejamento">
+        <h2>3. Sistema de Planejamento Federal: PPA, LDO e LOA</h2>
+        <p>A CF/88 criou um sistema orçamentário integrado, composto por três leis de iniciativa do Poder Executivo:</p>
+
+        <div class="box ex">
+            <span class="box-title">Plano Plurianual (PPA) - Médio Prazo</span>
+            <p>Instrumento que orienta a visão de 4 anos do governo. Contém o <span class="mnemonico">DOM</span>: <b>D</b>iretrizes, <b>O</b>bjetivos e <b>M</b>etas. Estabelece, de forma regionalizada, as diretrizes para despesas de capital e outras delas decorrentes e programas de duração continuada.</p>
+            <ul>
+                <li><b>Vigência:</b> Começa no 2º ano do mandato e termina no final do 1º ano do mandato seguinte.</li>
+                <li><b>Regra de Ouro:</b> Nenhum investimento que ultrapasse um ano pode ser iniciado sem estar no PPA ou em lei que autorize.</li>
+            </ul>
+        </div>
+
+        <div class="box warn">
+            <span class="box-title">Lei de Diretrizes Orçamentárias (LDO) - Elo Tático</span>
+            <p>Faz a ligação entre o PPA e a LOA. Compreende metas e prioridades, estabelece diretrizes de política fiscal (consonância com a dívida sustentável), orienta a elaboração da LOA e dispõe sobre alterações tributárias.</p>
+            <ul>
+                <li><b>Anexo de Agregados Fiscais (EC 109/2021):</b> Previsão para o exercício e os 2 subsequentes.</li>
+                <li><b>Tributário:</b> A LDO <i>dispõe</i> sobre alterações, mas <span class="alert-red">não cria e não aumenta tributos</span>.</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <span class="box-title">Lei Orçamentária Anual (LOA) - Curto Prazo</span>
+            <p>Estima receitas e fixa despesas para o ano civil. Compreende três esferas:</p>
+            <ul>
+                <li><b>Orçamento Fiscal:</b> Poderes, fundos, órgãos e entidades diretas e indiretas.</li>
+                <li><b>Orçamento de Investimento:</b> Empresas onde a União tenha a maioria do capital votante.</li>
+                <li><b>Orçamento da Seguridade Social:</b> Saúde, Previdência e Assistência Social.</li>
+            </ul>
+            <p><b>Atenção:</b> Apenas os Orçamentos Fiscal e de Investimento têm a função de reduzir desigualdades inter-regionais por critério populacional.</p>
+        </div>
+    </section>
+
+    <section id="tecnicas">
+        <h2>4. Sistemas e Técnicas Orçamentárias</h2>
+        <div class="box def">
+            <ul>
+                <li><b>Orçamento Tradicional (Clássico):</b> Mero instrumento contábil e jurídico. Foca no controle da legalidade e no objeto do gasto (meios), desvinculado do planejamento. Incrementalista.</li>
+                <li><b>Orçamento de Desempenho:</b> Foca no resultado (o que o governo faz), mas sem vinculação a um sistema central de planejamento.</li>
+                <li><b>Orçamento-Programa (Adotado no Brasil):</b> Integra planejamento, orçamento e gestão. O controle foca na eficácia, eficiência e efetividade.</li>
+                <li><b>Orçamento Base-Zero (OBZ):</b> Técnica onde não há direito adquirido. Todas as despesas são justificadas "do zero" a cada ciclo. Lento e caro, mas eficaz contra desperdícios.</li>
+                <li><b>Orçamento Participativo:</b> Parte dos recursos é decidida com participação direta da população (obrigatório nos municípios).</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="classificacoes">
+        <h2>5. Classificações e Estrutura Programática</h2>
+        <div class="box ex">
+            <p><b>Classificação Institucional:</b> Responde "quem" faz a despesa. Divide-se em Órgão Orçamentário e Unidade Orçamentária (UO).</p>
+            <p><b>Classificação Funcional-Programática:</b> Áreas de despesa (função) e tema da política pública (programa).</p>
+            <h3>Ações no Orçamento-Programa:</h3>
+            <ul>
+                <li><b>Projetos:</b> Operações limitadas no tempo; expandem a ação.</li>
+                <li><b>Atividades:</b> Operações contínuas e permanentes; manutenção da ação.</li>
+                <li><b>Operações Especiais:</b> Despesas sem contraprestação direta (ex: pagamento de dívidas).</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="creditos">
+        <h2>6. Créditos Ordinários e Adicionais</h2>
+        <p>Os créditos ordinários são os iniciais da LOA. Os adicionais retificam o orçamento durante a execução:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Espécie</th>
+                    <th>Finalidade</th>
+                    <th>Vigência / Reabertura</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>Suplementares</b></td>
+                    <td>Reforço de dotação já existente.</td>
+                    <td>Restrito ao exercício financeiro (ano).</td>
+                </tr>
+                <tr>
+                    <td><b>Especiais</b></td>
+                    <td>Despesas novas, sem dotação prévia.</td>
+                    <td>Se abertos nos últimos 4 meses, podem ser reabertos.</td>
+                </tr>
+                <tr>
+                    <td><b>Extraordinários</b></td>
+                    <td>Urgentes e imprevistos (guerra, calamidade).</td>
+                    <td>Abertos por MP. Podem ser reabertos se nos últimos 4 meses.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="box warn">
+            <span class="box-title">Fontes para Abertura (Mnemônico: "SF É O REI")</span>
+            <p>Exigidas para Suplementares e Especiais:</p>
+            <ul>
+                <li><span class="mnemonico">SF</span>: <b>S</b>uperávit <b>F</b>inanceiro (apurado no balanço do ano anterior).</li>
+                <li><span class="mnemonico">É</span>: <b>E</b>xcesso de arrecadação (acumulado mês a mês).</li>
+                <li><span class="mnemonico">O</span>: <b>O</b>perações de crédito autorizadas.</li>
+                <li><span class="mnemonico">REI</span>: <b>R</b>ecursos sem despesa correspondente, <b>E</b>storno/Anulação de dotação, <b>I</b>nteresse (Reserva de contingência).</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="jurisprudencia">
+        <h2>7. Jurisprudência Selecionada (STF)</h2>
+        
+        <div class="box juris">
+            <span class="juris-header">ADI 5449 | Natureza Jurídica</span>
+            <p>O STF consolidou que as leis orçamentárias (LOA/LDO) são leis em sentido <b>formal e material</b>. Como revelam contornos abstratos e autônomos, podem ser objeto de ADI. Isso supera o entendimento antigo de que eram apenas leis formais.</p>
+        </div>
+
+        <div class="box juris">
+            <span class="juris-header">ADI 2660 | Orçamento Participativo</span>
+            <p>O orçamento participativo tem caráter <b>meramente consultivo</b>. Normas que exijam execução obrigatória dessas deliberações são inconstitucionais, pois ferem a competência exclusiva do Chefe do Executivo.</p>
+        </div>
+
+        <div class="box juris">
+            <span class="juris-header">ADI 6308 | Orçamento Impositivo Estadual</span>
+            <p>Inconstitucionalidade de emendas parlamentares estaduais impositivas inseridas antes das ECs federais 86/2015 e 100/2019. Estados não podem instituir impositividade fora das hipóteses nacionais.</p>
+        </div>
+
+        <div class="box juris">
+            <span class="juris-header">ADI 5513 | Créditos Extraordinários</span>
+            <p>O STF verifica a imprevisibilidade e urgência. Barrou créditos extraordinários para publicidade nas Olimpíadas (MP 772/16), por ser despesa ordinária e previsível, sem caráter de calamidade.</p>
+        </div>
+    </section>
+
+    <section id="nota-final">
+        <div class="box warn">
+            <p><b>Nota sobre Organização do Estado:</b> As fontes recentes detalham o Marco Temporal de terras indígenas, dupla vacância de prefeitos e conflitos de competência entre União, Estados e Municípios, reforçando a complexidade do Federalismo brasileiro.</p>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>

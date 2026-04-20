@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;line-height:1.7;padding-top:70px}
+a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
+.container{max-width:900px;margin:0 auto;padding:24px}
+h1{font-size:1.8em;margin-bottom:10px;color:var(--lil)}h2{font-size:1.4em;margin:28px 0 14px;color:var(--text);padding-bottom:6px;border-bottom:2px solid var(--lil-l)}
+p{margin-bottom:14px}ul,ol{margin:0 0 16px 20px}li{margin-bottom:6px}
+.box{background:var(--card);border-radius:8px;padding:16px;margin:20px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}
+.box-t{font-weight:700;margin-bottom:8px;display:block;color:var(--text)}
+table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--lil-d)}
+td{padding:10px 14px;border-bottom:1px solid var(--lil-l)}tr:hover td{background:var(--lil-l)}
+.nav-b{display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:1px solid var(--lil-d)}
+.btn-n{padding:10px 20px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none}
+.btn-n:hover{background:var(--lil-d);color:#fff}
+.tools{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:99}
+.t-btn{background:var(--card);border:2px solid var(--lil-d);padding:10px 14px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;color:var(--text);box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.t-btn:hover{transform:translateY(-2px)}
+.n-panel{position:fixed;bottom:70px;right:20px;width:280px;background:var(--card);border:2px solid var(--lil-d);border-radius:12px;padding:16px;display:none;box-shadow:0 5px 15px rgba(0,0,0,.15);z-index:100}
+.n-item{background:var(--lil-l);padding:10px;border-radius:6px;margin-bottom:8px;font-size:.9em}
+.n-in{width:100%;padding:8px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:8px}
+.b-sm{padding:6px 12px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em}
+@media(max-width:700px){.container{padding:16px}header{flex-direction:column;align-items:flex-start;gap:10px}}
+.box img {
+    width: 100%;        /* Força a imagem a ter a largura total da box */
+    height: auto;       /* Mantém a proporção para não achatar */
+    display: block;     /* Remove espaços vazios abaixo da imagem */
+    margin: 15px 0;     /* Dá um espaço entre o texto e a imagem */
+    border-radius: 4px; /* Arredonda levemente para combinar com o layout */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Um detalhe para dar profundidade */
+}
+</style>
+</head>
+<body>
+
+<header>
+        <a href="index.html" class="back">← Dashboard</a><div class="nav-t">Programação e Execução Orçamentária e Financeira</div>
+
+</header>
+
+<main class="container">
+    <h1>3. Programação e Execução Orçamentária e Financeira</h1>
+    <p>A programação orçamentária e financeira é o mecanismo que compatibiliza o fluxo de pagamentos com o fluxo de recebimentos, garantindo que o governo não gaste mais do que arrecada.</p>
+
+    <div class="box warn">
+        <span class="box-title">Prazos e Instrumentos (LRF - Art. 8º)</span>
+        <ul>
+            <li><b>Cronograma Mensal:</b> O Poder Executivo estabelecerá a programação financeira e o cronograma de execução mensal de desembolso <span class="highlight-text">até 30 dias após a publicação dos orçamentos</span>.</li>
+            <li><b>Limitação de Empenho (Contingenciamento):</b> Se a arrecadação bimestral for insuficiente para as metas fiscais, os Poderes e o MP devem promover a limitação nos <b>30 dias subsequentes</b>.</li>
+        </ul>
+    </div>
+
+    <div class="box def">
+        <span class="box-title">O que cai nas questões? (Fique atento!)</span>
+        <ul>
+            <li><b>O prazo de 30 dias:</b> É sempre <i>até 30 dias após</i> a publicação. Bancas tentam dizer que é "sessenta dias".</li>
+            <li><b>Avaliação Bimestral:</b> O contingenciamento é baseado na avaliação bimestral da receita.</li>
+            <li><b>Independência dos Poderes:</b> <mark style="background-color: red; color: white;">É falso</mark> dizer que o Executivo impõe o contingenciamento aos outros. Cada Poder faz o seu por <b>ato próprio</b>.</li>
+        </ul>
+    </div>
+
+    <h2>3.1. Descentralização Orçamentária e Financeira</h2>
+    <p>Conceito chave: Crédito (Orçamento) vs. Recurso (Financeiro). Descentralizar é apenas a <mark style="background-color: green; color: white;">cessão do "poder de utilizar"</mark>.</p>
+
+    
+
+    <h3>Quadro Comparativo de Descentralização</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Tipo</th>
+                <th>Caminho</th>
+                <th>Orçamentária (CRÉDITO)</th>
+                <th>Financeira (RECURSO)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>Central</b></td>
+                <td>Órgão Central para Setorial</td>
+                <td><b style="color: purple;">Dotação</b></td>
+                <td><b style="color: purple;">Cota</b></td>
+            </tr>
+            <tr>
+                <td><b>Interna</b></td>
+                <td>Entre UGs do mesmo órgão</td>
+                <td><b style="color: orange;">Provisão</b></td>
+                <td><b style="color: orange;">Sub-repasse</b></td>
+            </tr>
+            <tr>
+                <td><b>Externa</b></td>
+                <td>Entre UGs de órgãos diferentes</td>
+                <td><b style="color: green;">Destaque</b></td>
+                <td><b style="color: green;">Repasse</b></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="box warn">
+        <span class="box-title">Pegadinhas de Descentralização</span>
+        <ul>
+            <li><b>Correlação Perfeita:</b> Quem recebe orçamento por <b style="color: purple;">Destaque</b> receberá financeiro por <b style="color: purple;">Repasse</b> (Externos). Quem recebe por <b style="color: orange;">Provisão</b> recebe por <b style="color: orange;">Sub-repasse</b> (Internos).</li>
+            <li><b>Finalidade:</b> <mark style="background-color: red; color: white;">É falso</mark> dizer que pode mudar o objetivo. As dotações devem seguir obrigatoriamente o programa de trabalho original.</li>
+            <li><b>Unidade Orçamentária:</b> A descentralização <span class="highlight-red">NÃO</span> altera a classificação institucional detentora do crédito. Só transfere o uso.</li>
+        </ul>
+    </div>
+
+    <h2>3.2. Acompanhamento da Execução</h2>
+    <p>Foco em transparência e cumprimento de metas através de relatórios específicos.</p>
+
+    <div class="box ex">
+        <table>
+            <tr>
+                <th>Relatório</th>
+                <th>Frequência</th>
+                <th>Prazo de Publicação</th>
+                <th>Foco Principal</th>
+            </tr>
+            <tr>
+                <td><b>RREO</b> (Resumido)</td>
+                <td>Bimestral</td>
+                <td>Até 30 dias após o bimestre</td>
+                <td>Execução Orçamentária (Art. 165, CF)</td>
+            </tr>
+            <tr>
+                <td><b>RGF</b> (Gestão Fiscal)</td>
+                <td>Quadrimestral</td>
+                <td>Conforme LRF</td>
+                <td>Limites de pessoal e endividamento</td>
+            </tr>
+        </table>
+        <p><b>Nota de prova:</b> Bancas trocam "bimestre" por "semestre" para o RREO. Além disso, a execução ocorre durante <span class="highlight-text">todo o exercício</span>, e não apenas no final do ano.</p>
+    </div>
+
+    <h2>3.3. Sistemas de Informações (SIAFI)</h2>
+    <p>Gerido pela <b>Secretaria do Tesouro Nacional (STN)</b>, é a base da execução federal.</p>
+
+    <div class="box def">
+        <ul>
+            <li><b>Uso Obrigatório:</b> Adm. Direta, Autarquias, Fundações e <span class="highlight-text">Estatais Dependentes</span>.</li>
+            <li><b>Exceção:</b> Estatais não dependentes não são obrigadas. Outros entes usam por convênio.</li>
+            <li><b>Mito do Engessamento:</b> <mark style="background-color: red; color: white;">É errado</mark> dizer que o SIAFI restringe a autonomia do ordenador. Ele padroniza, mas o controle permanece com o ordenador.</li>
+            <li><b>SIASG vs SIAFI:</b> O <b>SIASG</b> cuida de compras (SICAF). O <b>SIAFI</b> cuida de finanças e contabilidade.</li>
+        </ul>
+    </div>
+
+    <h2>3.4. Alterações Orçamentárias (Créditos Adicionais)</h2>
+    <p>Mecanismos para despesas não previstas ou insuficientes.</p>
+
+    <div class="box">
+        <span class="box-title">Fontes para Abertura de Créditos</span>
+        <ul>
+            <li><b>Superávit Financeiro:</b> Apurado no <span class="highlight-text">Balanço Patrimonial do exercício anterior</span>.</li>
+            <li><b>Excesso de Arrecadação:</b> Saldo positivo acumulado mês a mês (Previsto vs. Realizado).</li>
+        </ul>
+        <hr>
+        <span class="box-title">Vigência e Reabertura (O que cai!)</span>
+        <p>Apenas Créditos <b>Especiais</b> e <b>Extraordinários</b> abertos nos últimos 4 meses (Set, Out, Nov, Dez) podem ser reabertos no ano seguinte.</p>
+        <p><span class="highlight-red">Cuidado:</span> Crédito Suplementar <b>NUNCA</b> é reaberto. E se o dinheiro de um Extraordinário acabar, deve-se abrir um <b>novo</b> Extraordinário, não reforçá-lo com Suplementar.</p>
+    </div>
+
+</main>
+
+</body>
+</html>

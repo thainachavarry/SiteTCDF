@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Controle 01 | Teoria Geral do Controle Administrativo</title>
+<style>
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;line-height:1.7;padding-top:70px}
+a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
+.container{max-width:900px;margin:0 auto;padding:24px}
+h1{font-size:1.8em;margin-bottom:10px;color:var(--lil)}h2{font-size:1.4em;margin:28px 0 14px;color:var(--text);padding-bottom:6px;border-bottom:2px solid var(--lil-l)}
+p{margin-bottom:14px}ul,ol{margin:0 0 16px 20px}li{margin-bottom:6px}
+.box{background:var(--card);border-radius:8px;padding:16px;margin:20px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}
+.box-t{font-weight:700;margin-bottom:8px;display:block;color:var(--text)}
+table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--lil-d)}
+td{padding:10px 14px;border-bottom:1px solid var(--lil-l)}tr:hover td{background:var(--lil-l)}
+.nav-b{display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:1px solid var(--lil-d)}
+.btn-n{padding:10px 20px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none}
+.btn-n:hover{background:var(--lil-d);color:#fff}
+.tools{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:99}
+.t-btn{background:var(--card);border:2px solid var(--lil-d);padding:10px 14px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;color:var(--text);box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.t-btn:hover{transform:translateY(-2px)}
+.n-panel{position:fixed;bottom:70px;right:20px;width:280px;background:var(--card);border:2px solid var(--lil-d);border-radius:12px;padding:16px;display:none;box-shadow:0 5px 15px rgba(0,0,0,.15);z-index:100}
+.n-item{background:var(--lil-l);padding:10px;border-radius:6px;margin-bottom:8px;font-size:.9em}
+.n-in{width:100%;padding:8px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:8px}
+.b-sm{padding:6px 12px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em}
+@media(max-width:700px){.container{padding:16px}header{flex-direction:column;align-items:flex-start;gap:10px}}
+.box img {
+    width: 100%;        /* Força a imagem a ter a largura total da box */
+    height: auto;       /* Mantém a proporção para não achatar */
+    display: block;     /* Remove espaços vazios abaixo da imagem */
+    margin: 15px 0;     /* Dá um espaço entre o texto e a imagem */
+    border-radius: 4px; /* Arredonda levemente para combinar com o layout */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Um detalhe para dar profundidade */
+}
+</style>
+</head>
+<body>
+
+<header><a href="index.html" class="back">← Dashboard</a><div class="nav-t">Eficácia das Normas Constitucionais</div></header>
+
+
+<main class="container">
+    <h1>Eficácia das Normas Constitucionais</h1>
+
+    <div class="box def">
+        <span class="box-title">Classificação de José Afonso da Silva</span>
+        <p>Fundamental para entender o grau de aplicabilidade de cada norma no ordenamento jurídico.</p>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Eficácia</th>
+                <th>Aplicabilidade</th>
+                <th>Características</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>Plena</b></td>
+                <td>Direta, imediata e integral</td>
+                <td>Autoaplicável. Não restringível por lei. Produz efeitos desde o início.</td>
+            </tr>
+            <tr>
+                <td><b>Contida</b></td>
+                <td>Direta, imediata e não integral</td>
+                <td>Autoaplicável, mas <b>restringível</b> por lei ou conceitos jurídicos.</td>
+            </tr>
+            <tr>
+                <td><b>Limitada</b></td>
+                <td>Indireta, mediata e reduzida</td>
+                <td>Depende de regulamentação para produzir efeitos plenos. Eficácia mínima.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="box warn">
+        <span class="box-title">Pegadinha de Prova: Normas Limitadas</span>
+        <p>Mesmo sem lei, elas possuem <b>eficácia mínima</b>: revogam leis contrárias e permitem o ajuizamento de <b>Mandado de Injunção</b> em caso de omissão do poder público.</p>
+        <img src="https://remnote-user-data.s3.amazonaws.com/w-rhhkH_nVmd-FLTFpmmDgo2nkdRT9ZJr1Muw6PCwU3tg7k0KRTdXybXBblNRtRKemw0eOO3oYUD9tAXh7bmI5V0laxAD3Z86P04Ryh3irzdImUHqucW3vQHV64WPTQq.png" />
+    </div>
+
+    <h2>Poder Constituinte</h2>
+    
+    <div class="box">
+        <span class="box-title">Originário (O "Poder de Fato")</span>
+        <ul>
+            <li><span class="mnemonico">I-I-I-A-P</span>: <b>I</b>nicial, <b>I</b>limitado juridicamente, <b>I</b>ncondicionado, <b>A</b>utônomo e <b>P</b>ermanente.</li>
+            <li>Não há direito adquirido contra o Poder Constituinte Originário.</li>
+        </ul>
+    </div>
+
+    <div class="box ex">
+        <span class="box-title">Derivado (O "Poder Jurídico")</span>
+        <p>Fruto do originário, é <b>limitado</b> e <b>condicionado</b> pela própria Constituição.</p>
+        <ul>
+            <li><b>Reformador:</b> Emendas Constitucionais.</li>
+            <li><b>Decorrente:</b> Auto-organização dos Estados.</li>
+            <li><b>Revisor:</b> Procedimento simplificado (Eficácia exaurida).</li>
+        </ul>
+    </div>
+
+    <h2>Fundamentos da RFB (Art. 1º)</h2>
+    <div class="box warn">
+        <span class="box-title">Mnemônico Clássico: SO-CI-DI-VA-PLU</span>
+        <p>1. <b>So</b>berania | 2. <b>Ci</b>dadania | 3. <b>Di</b>gnidade da Pessoa Humana | 4. <b>Va</b>lores Sociais do Trabalho/Livre Iniciativa | 5. <b>Plu</b>ralismo Político.</p>
+    </div>
+
+    <h2>Formas, Sistemas e Regimes</h2>
+    <table>
+        <tr>
+            <th>Conceito</th>
+            <th>Tipo Brasileiro</th>
+            <th>Mnemônico / Dica</th>
+        </tr>
+        <tr>
+            <td><b>Forma de Estado</b></td>
+            <td>Federação</td>
+            <td>"Fogo na <b>FE</b>deração" (Vínculo indissolúvel)</td>
+        </tr>
+        <tr>
+            <td><b>Forma de Governo</b></td>
+            <td>República</td>
+            <td>"<b>FO</b>go na <b>RE</b>pública"</td>
+        </tr>
+        <tr>
+            <td><b>Sistema de Governo</b></td>
+            <td>Presidencialismo</td>
+            <td>Presidente é Chefe de Estado + Governo</td>
+        </tr>
+        <tr>
+            <td><b>Regime Político</b></td>
+            <td>Democracia</td>
+            <td>Semidireta (Participativa + Representativa)</td>
+        </tr>
+    </table>
+
+    <div class="box def">
+        <span class="box-title">Relações Internacionais (Art. 4º)</span>
+        <p>Foco no Parágrafo Único: A RFB buscará a integração da <b>América Latina</b> visando uma comunidade latino-americana de nações.</p>
+    </div>
+
+    <img src="https://remnote-user-data.s3.amazonaws.com/ewvLSd3VoFGS6EkG2aF2lxJwhtPC4ne-jh66wjpH-pfipOmeNHYkSao9n47HXvmC6kEym2y2v2a9KoG_-T1QkrwkZvGlU8pd9WqJYFEpFmCl3nFe4TbXMcJkMvSNxYTR.png" />
+
+</main>
+</body>
+</html>

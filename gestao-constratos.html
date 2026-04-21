@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gestão de Contratos | Irregularidades, Penalidades, Elaboração e Fiscalização - CESPE</title>
+<style>
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1;--jur:#e8f4fd;--penalty:#ffebee;--sanction:#e3f2fd}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,sans-serif;line-height:1.7;padding-top:70px}
+a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
+.container{max-width:1100px;margin:0 auto;padding:24px}
+h1{font-size:1.9em;margin-bottom:12px;color:var(--lil);line-height:1.3}
+h2{font-size:1.5em;margin:32px 0 16px;color:var(--text);padding-bottom:8px;border-bottom:2px solid var(--lil-l)}
+h3{font-size:1.25em;margin:24px 0 14px;color:var(--lil-d);font-weight:600}
+h4{font-size:1.1em;margin:18px 0 10px;color:var(--lil);font-weight:600}
+p{margin-bottom:14px;color:var(--text);text-align:justify}
+ul,ol{margin:0 0 16px 22px;color:var(--text)}
+li{margin-bottom:7px}
+.box{background:var(--card);border-radius:8px;padding:18px;margin:22px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}.box.jur{background:var(--jur);border-color:#3b82f6}.box.penalty{background:var(--penalty);border-color:#ef4444}.box.sanction{background:var(--sanction);border-color:#3b82f6}
+.box-t{font-weight:700;margin-bottom:10px;display:block;color:var(--text);font-size:1.05em}
+table{width:100%;border-collapse:collapse;margin:22px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:12px 14px;border-bottom:1px solid var(--lil-d);font-size:.95em}
+td{padding:11px 14px;border-bottom:1px solid var(--lil-l);color:var(--text);font-size:.95em}
+tr:hover td{background:var(--lil-l)}
+tr:last-child td{border-bottom:none}
+.nav-b{display:flex;justify-content:space-between;margin-top:44px;padding-top:22px;border-top:1px solid var(--lil-d)}
+.btn-n{padding:11px 22px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none;font-size:.95em;transition:all .2s}
+.btn-n:hover{background:var(--lil-d);color:#fff;transform:translateY(-1px)}
+.tools{position:fixed;bottom:22px;right:22px;display:flex;flex-direction:column;gap:11px;z-index:99}
+.t-btn{background:var(--card);border:2px solid var(--lil-d);padding:11px 15px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;color:var(--text);box-shadow:0 3px 10px rgba(0,0,0,.1);font-size:.9em;transition:all .2s}
+.t-btn:hover{transform:translateY(-2px);background:var(--lil-l)}
+.n-panel{position:fixed;bottom:72px;right:22px;width:290px;background:var(--card);border:2px solid var(--lil-d);border-radius:12px;padding:17px;display:none;box-shadow:0 5px 15px rgba(0,0,0,.15);z-index:100}
+.n-item{background:var(--lil-l);padding:11px;border-radius:6px;margin-bottom:9px;font-size:.9em}
+.n-in{width:100%;padding:9px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:9px;font-size:.95em}
+.b-sm{padding:7px 13px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em;font-weight:500}
+@media(max-width:750px){.container{padding:17px}header{flex-direction:column;align-items:flex-start;gap:11px}.nav-b{flex-direction:column;gap:11px}.btn-n{width:100%;text-align:center}}
+.box img{width:100%;height:auto;display:block;margin:16px 0;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.q-card{background:var(--warn);border-left:4px solid #f59e0b;padding:17px;margin:22px 0;border-radius:0 8px 8px 0}
+.q-card strong{color:#856404;font-weight:600}
+.cespe-tip{background:#fef3c7;border-left:4px solid #f59e0b;padding:13px;margin:16px 0;font-size:.95em;border-radius:0 6px 6px 0}
+.mnemonic{background:linear-gradient(135deg,var(--lil-l),#f5f3ff);padding:13px 17px;border-radius:8px;margin:16px 0;font-weight:600;color:var(--lil-d);border:1px solid var(--lil-l)}
+.summary-box{background:var(--def);padding:17px;border-radius:8px;margin:22px 0;border:1px solid var(--lil-l)}
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px;margin:16px 0}
+.comp-item{background:var(--bg-secondary);padding:12px;border-radius:6px;font-size:.95em;border-left:3px solid var(--lil)}
+.role-card{background:var(--card);border:2px solid var(--lil-l);border-radius:8px;padding:17px;margin:13px 0}
+.role-card h4{color:var(--lil);margin-bottom:9px;font-weight:600}
+.step-box{background:var(--card);border-left:4px solid var(--lil-d);padding:14px;margin:12px 0;border-radius:0 6px 6px 0}
+.step-num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;background:var(--lil);color:#fff;border-radius:50%;font-weight:700;font-size:.85em;margin-right:8px}
+.highlight{background:#fff9c4;padding:2px 6px;border-radius:3px;font-weight:500}
+.code{background:#f1f5f9;padding:2px 6px;border-radius:4px;font-family:monospace;font-size:.9em;color:#1e293b}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="back">← Dashboard</a><div class="nav-t">Gestão de Contratos</div></header>
+<main class="container">
+<h1>📚 Gestão de Contratos: Irregularidades, Penalidades, Elaboração e Fiscalização</h1>
+<p><strong>Foco CESPE:</strong> A banca cobra exaustivamente o registro e notificação de irregularidades contratuais, a definição e aplicação de penalidades e sanções administrativas (advertência, multa, impedimento, declaração de inidoneidade), os papéis dos gestores e fiscais de contrato, a elaboração de cláusulas e indicadores de nível de serviço, o acompanhamento da execução contratual e as diferenças entre as Leis 8.666/1993 e 14.133/2021. Questões frequentemente confundem competência para aplicação de sanções, invertem prazos de defesa ou cobram a literalidade dos arts. 86 a 91 da Lei 14.133/2021 e arts. 66 a 78 da Lei 8.666/1993.</p>
+
+<h2>1. CONCEITO E FUNDAMENTOS DA GESTÃO CONTRATUAL</h2>
+<div class="box def"><span class="box-t">📘 Conceito de Gestão de Contratos Administrativos</span>
+<p><strong>Gestão de contratos administrativos</strong> é o conjunto de atividades de planejamento, elaboração, fiscalização, acompanhamento e encerramento de contratos celebrados pela Administração Pública com particulares, visando à efetiva execução do objeto contratual, ao cumprimento das cláusulas ajustadas e à obtenção do melhor resultado para o interesse público.</p>
+<p><strong>Finalidade:</strong> Garantir que a contratação pública atenda às necessidades da Administração com economicidade, eficiência, transparência e observância dos princípios constitucionais e legais aplicáveis.</p>
+</div>
+
+<h3>🔹 Princípios Norteadores da Gestão Contratual</h3>
+<table>
+<thead><tr><th>Princípio</th><strong>Descrição Legal</strong><strong>Aplicação na Gestão Contratual</strong></tr></thead>
+<tbody>
+<tr><td><strong>Legalidade</strong></td><td>Atuação conforme a lei e o Direito</td><td>Cláusulas contratuais devem observar a legislação aplicável; sanções aplicadas nos termos da lei</td></tr>
+<tr><td><strong>Impessoalidade</strong></td><td>Isonomia no tratamento dos contratados</td><td>Aplicação uniforme de penalidades; vedação a favorecimentos ou perseguições</td></tr>
+<tr><td><strong>Moralidade</strong></td><td>Conduta ética e proba dos agentes públicos</td><td>Fiscalização íntegra; vedação a conluio com contratado; transparência nas decisões</td></tr>
+<tr><td><strong>Publicidade</strong></td><td>Divulgação oficial dos atos contratuais</td><td>Publicação de contratos, aditivos, sanções e relatórios de fiscalização em portal oficial</td></tr>
+<tr><td><strong>Eficiência</strong></td><td>Obtenção do melhor resultado com menor dispêndio</td><td>Fiscalização proativa; uso de indicadores de desempenho; prevenção de irregularidades</td></tr>
+<tr><td><strong>Vinculação ao Instrumento Convocatório</strong></td><td>Administração e contratado devem observar o edital/contrato</td><td>Cláusulas contratuais refletem o edital; alterações só por aditamento formal</td></tr>
+<tr><td><strong>Equilíbrio Econômico-Financeiro</strong></td><td>Manutenção das condições iniciais do contrato</td><td>Reajustes, repactuações e revisão contratual para preservar o equilíbrio original</td></tr>
+</tbody>
+</table>
+
+<div class="mnemonic">🧠 MACETE: "LIMPE-V+E" → Legalidade, Impessoalidade, Moralidade, Publicidade, Eficiência, Vinculação ao Edital, Equilíbrio Econômico-Financeiro. Memorize os princípios da gestão contratual!</div>
+
+<h2>2. REGISTRO E NOTIFICAÇÃO DE IRREGULARIDADES</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Finalidade</span>
+<p><strong>Registro de irregularidades</strong> é o ato formal de documentar falhas, descumprimentos ou irregularidades na execução contratual, com vistas à adoção de medidas corretivas, preventivas ou sancionatórias.</p>
+<p><strong>Notificação</strong> é a comunicação formal ao contratado sobre irregularidades identificadas, concedendo prazo para defesa ou regularização, observando o contraditório e a ampla defesa.</p>
+</div>
+
+<h3>🔹 Procedimento de Registro e Notificação (Lei 14.133/2021, Art. 156)</h3>
+<ol>
+<li><span class="step-num">1</span><strong>Identificação da irregularidade:</strong> Fiscal ou gestor identifica descumprimento contratual, falha na execução, atraso, qualidade inadequada, etc.</li>
+<li><span class="step-num">2</span><strong>Registro formal:</strong> Irregularidade é documentada em relatório, termo de fiscalização ou sistema eletrônico, com descrição detalhada dos fatos, fundamentação legal e indicação de provas.</li>
+<li><span class="step-num">3</span><strong>Notificação do contratado:</strong> Comunicado formal é enviado ao contratado, com descrição da irregularidade, fundamentação legal, prazo para apresentação de defesa (mínimo de 5 dias úteis) e advertência sobre possíveis sanções.</li>
+<li><span class="step-num">4</span><strong>Apresentação de defesa:</strong> Contratado apresenta justificativas, documentos comprobatórios ou proposta de regularização no prazo estipulado.</li>
+<li><span class="step-num">5</span><strong>Análise e decisão:</strong> Gestor ou autoridade competente analisa a defesa, verifica a persistência da irregularidade e decide pela aplicação de sanção, arquivamento ou determinação de medidas corretivas.</li>
+<li><span class="step-num">6</span><strong>Comunicação da decisão:</strong> Decisão é formalmente comunicada ao contratado, com indicação de recursos administrativos cabíveis.</li>
+</ol>
+
+<h3>🔹 Requisitos da Notificação Válida</h3>
+<ul>
+<li><strong>Clareza e precisão:</strong> Descrição detalhada da irregularidade, com indicação de cláusulas contratuais ou dispositivos legais violados.</li>
+<li><strong>Fundamentação:</strong> Indicação dos fundamentos legais e fáticos que justificam a notificação.</li>
+<li><strong>Prazo razoável para defesa:</strong> Mínimo de <strong>5 dias úteis</strong> para apresentação de justificativas (Lei 14.133/2021, Art. 156, §2º).</li>
+<li><strong>Forma adequada:</strong> Notificação por meio que assegure ciência inequívoca do contratado (e-mail com confirmação de leitura, AR, sistema eletrônico com registro de acesso).</li>
+<li><strong>Advertência sobre sanções:</strong> Informação clara sobre as possíveis consequências do descumprimento, incluindo aplicação de penalidades.</li>
+</ul>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um fiscal de contrato identifica que a empresa contratada para prestação de serviços de limpeza está utilizando produtos de qualidade inferior à especificada no contrato. O fiscal registra a irregularidade em relatório circunstanciado, com fotos e laudo técnico. A Administração notifica a empresa, concedendo <strong>5 dias úteis</strong> para apresentação de defesa. A empresa justifica que houve desabastecimento temporário do produto especificado e propõe a regularização imediata. A Administração aceita a justificativa, determina a regularização em 48 horas e arquiva o procedimento sem aplicação de sanção. <strong>Isso é aplicação do art. 156 da Lei 14.133/2021.</strong></p>
+</div>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "a notificação de irregularidade dispensa prazo para defesa do contratado" → ERRADO. A Lei 14.133/2021 (Art. 156, §2º) exige <strong>prazo mínimo de 5 dias úteis</strong> para apresentação de defesa, sob pena de nulidade do procedimento sancionatório por violação ao contraditório e ampla defesa.</p>
+</div>
+
+<h2>3. PENALIDADES E SANÇÕES ADMINISTRATIVAS</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Espécies</span>
+<p><strong>Penalidades administrativas</strong> são sanções aplicadas pela Administração Pública ao contratado que descumpre obrigações contratuais, com fundamento no poder disciplinar e na supremacia do interesse público.</p>
+<p><strong>Sanções administrativas</strong> abrangem medidas corretivas, preventivas e punitivas, visando à regularização da execução contratual e à dissuasão de novos descumprimentos.</p>
+</div>
+
+<h3>🔹 Espécies de Penalidades (Lei 14.133/2021, Art. 156)</h3>
+<table>
+<thead><tr><th>Penalidade</th><strong>Hipóteses de Aplicação</strong><strong>Prazo Máximo</strong><strong>Competência para Aplicação</strong><strong>Recurso</strong></tr></thead>
+<tbody>
+<tr><td><strong>Advertência</strong></td><td>Infrações leves; primeira ocorrência; sem dolo ou culpa grave</td><td>Não se aplica</td><td>Gestor do contrato ou autoridade designada</td><td>Recurso administrativo em 10 dias</td></tr>
+<tr><td><strong>Multa</strong></td><td>Descumprimento de cláusulas contratuais; atrasos; inexecução parcial; qualidade inadequada</td><td>Conforme previsto no contrato/edital (geralmente até 10% do valor do contrato)</td><td>Gestor do contrato ou autoridade designada</td><td>Recurso administrativo em 10 dias</td></tr>
+<tr><td><strong>Impedimento de licitar e contratar</strong></td><td>Infrações graves; reincidência; dolo; prejuízo significativo ao erário</td><td>Até 3 anos</td><td>Autoridade superior (Ministro, Secretário Estadual/Municipal ou equivalente)</td><td>Recurso administrativo em 10 dias + judicial</td></tr>
+<tr><td><strong>Declaração de inidoneidade</strong></td><td>Infrações gravíssimas; fraude; corrupção; conluio; lesão grave ao erário</td><td>Até 5 anos (pessoas físicas) ou 3 anos (pessoas jurídicas)</td><td>Autoridade máxima do ente (Presidente, Governador, Prefeito) ou equivalente</td><td>Recurso administrativo em 10 dias + judicial</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Critérios para Dosimetria das Penalidades (Art. 156, §3º)</h3>
+<p>A aplicação das penalidades deve observar os seguintes critérios:</p>
+<ul>
+<li><strong>Gravidade da infração:</strong> Natureza e extensão do descumprimento; dano ou risco ao erário; impacto na execução do contrato.</li>
+<li><strong>Intencionalidade:</strong> Existência de dolo, culpa grave ou mera negligência.</li>
+<li><strong>Reincidência:</strong> Histórico de infrações anteriores pelo mesmo contratado.</li>
+<li><strong>Arrependimento e regularização:</strong> Esforços do contratado para corrigir a irregularidade e mitigar danos.</li>
+<li><strong>Cooperação com a fiscalização:</strong> Postura do contratado durante a apuração da irregularidade.</li>
+<li><strong>Capacidade econômica:</strong> Proporcionalidade da sanção em relação ao porte do contratado.</li>
+</ul>
+
+<h3>🔹 Procedimento de Aplicação de Penalidades</h3>
+<ol>
+<li><strong>Instauração do procedimento:</strong> Por portaria ou despacho da autoridade competente, com indicação dos fatos imputados e fundamentação legal.</li>
+<li><strong>Notificação do contratado:</strong> Comunicação formal com descrição da irregularidade, fundamentação, prazo para defesa (mínimo 5 dias úteis) e advertência sobre sanções.</li>
+<li><strong>Apresentação de defesa:</strong> Contratado apresenta justificativas, documentos e provas no prazo estipulado.</li>
+<li><strong>Produção de provas:</strong> Diligências, oitiva de testemunhas, perícias, análise documental, se necessário.</li>
+<li><strong>Relatório e proposta de decisão:</strong> Equipe técnica ou comissão elabora relatório circunstanciado com análise das provas e proposta de sanção.</li>
+<li><strong>Decisão motivada:</strong> Autoridade competente profere decisão fundamentada, aplicando sanção ou absolvendo o contratado.</li>
+<li><strong>Comunicação e recursos:</strong> Decisão é comunicada ao contratado, com indicação de recursos administrativos (10 dias) e judiciais cabíveis.</li>
+</ol>
+
+<div class="box penalty"><span class="box-t">⚖️ Diferença entre Penalidade e Sanção</span>
+<p><strong>Penalidade:</strong> Medida punitiva aplicada ao contratado por descumprimento contratual (advertência, multa, impedimento, inidoneidade).</p>
+<p><strong>Sanção:</strong> Gênero que abrange penalidades punitivas e medidas corretivas/preventivas (notificação, determinação de regularização, suspensão temporária de pagamentos, rescisão contratual).</p>
+<p><strong>Importante:</strong> A aplicação de penalidade não exclui a possibilidade de adoção de outras sanções ou medidas administrativas, nem a responsabilização civil ou penal do contratado.</p>
+</div>
+
+<h2>4. ELABORAÇÃO DE CONTRATOS: CLÁUSULAS E INDICADORES</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Finalidade</span>
+<p><strong>Elaboração de contratos</strong> é a fase de redação e estruturação do instrumento contratual, com definição clara de direitos, obrigações, prazos, valores, indicadores de desempenho e mecanismos de fiscalização, visando à segurança jurídica e à efetiva execução do objeto.</p>
+</div>
+
+<h3>🔹 Cláusulas Necessárias (Lei 14.133/2021, Art. 92)</h3>
+<p>Todo contrato administrativo deve conter, <strong>no mínimo</strong>, as seguintes cláusulas:</p>
+<ol>
+<li><strong>Objeto e elementos característicos:</strong> Descrição detalhada do bem, serviço ou obra contratada, com especificações técnicas, quantidades, padrões de qualidade.</li>
+<li><strong>Regime de execução ou forma de fornecimento:</strong> Modalidade de execução (empreitada por preço global, unitário, tarefa, etc.); cronograma físico-financeiro.</li>
+<li><strong>Preço e condições de pagamento:</strong> Valor total; forma de reajuste; condições e prazos de pagamento; retenções legais.</li>
+<li><strong>Prazos de início, conclusão e entrega:</strong> Datas para início da execução; prazo total de vigência; cronograma de entregas parciais, se aplicável.</li>
+<li><strong>Crédito orçamentário:</strong> Indicação da dotação orçamentária que suportará a despesa.</li>
+<li><strong>Garantias:</strong> Tipo e valor da garantia contratual (caução, seguro-garantia, fiança bancária), se exigida.</li>
+<li><strong>Direitos e responsabilidades das partes:</strong> Obrigações do contratado e da Administração; hipóteses de rescisão; penalidades aplicáveis.</li>
+<li><strong>Indicadores de nível de serviço (INS):</strong> Métricas objetivas para avaliação da qualidade e desempenho na execução contratual.</li>
+<li><strong>Mecanismos de fiscalização e controle:</strong> Forma de acompanhamento; relatórios exigidos; acesso a informações e locais de execução.</li>
+<li><strong>Foro para dirimir questões:</strong> Competência territorial para resolução de litígios, respeitando as regras de direito público.</li>
+</ol>
+
+<h3>🔹 Indicadores de Nível de Serviço (INS)</h3>
+<div class="role-card">
+<h4>📌 Conceito e Finalidade</h4>
+<p><strong>Indicadores de Nível de Serviço (INS)</strong> são métricas objetivas, mensuráveis e verificáveis, estabelecidas no contrato para avaliar a qualidade, a eficiência e a efetividade da execução contratual.</p>
+<h4>📌 Características Essenciais</h4>
+<ul>
+<li><strong>Objetividade:</strong> Baseados em dados quantificáveis, não em juízos subjetivos.</li>
+<li><strong>Mensurabilidade:</strong> Passíveis de medição por meio de fórmulas, escalas ou sistemas de pontuação.</li>
+<li><strong>Verificabilidade:</strong> Passíveis de comprovação por documentos, registros ou inspeções.</li>
+<li><strong>Relevância:</strong> Relacionados diretamente aos objetivos do contrato e às expectativas da Administração.</li>
+<li><strong>Proporcionalidade:</strong> Equilibrados em relação ao porte e complexidade do contrato.</li>
+</ul>
+<h4>📌 Exemplos Práticos de INS</h4>
+<ul>
+<li><strong>Serviços de limpeza:</strong> Índice de satisfação dos usuários (pesquisa); tempo médio de resposta a solicitações; conformidade com checklist de inspeção.</li>
+<li><strong>Serviços de TI:</strong> Tempo de disponibilidade do sistema (uptime); tempo médio de resolução de chamados; conformidade com SLA (Service Level Agreement).</li>
+<li><strong>Obras públicas:</strong> Conformidade com cronograma físico-financeiro; índice de retrabalho; conformidade com especificações técnicas.</li>
+<li><strong>Fornecimento de materiais:</strong> Taxa de entrega no prazo; índice de conformidade com especificações; taxa de devoluções por não conformidade.</li>
+</ul>
+</div>
+
+<h3>🔹 Vinculação entre INS e Penalidades</h3>
+<p>Os INS devem estar <strong>vinculados a mecanismos de incentivo e sanção</strong> no contrato:</p>
+<ul>
+<li><strong>Bônus por superação:</strong> Pagamento adicional ou reconhecimento por desempenho superior ao contratado.</li>
+<li><strong>Multas por descumprimento:</strong> Aplicação de penalidades financeiras proporcionais ao grau de descumprimento do INS.</li>
+<li><strong>Medidas corretivas:</strong> Determinação de plano de ação para regularização de indicadores abaixo do esperado.</li>
+<li><strong>Rescisão por inexecução:</strong> Possibilidade de rescisão contratual por descumprimento reiterado ou grave dos INS.</li>
+</ul>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um contrato de prestação de serviços de manutenção predial estabelece INS como: (1) tempo máximo de 4 horas para atendimento a chamados de emergência; (2) índice mínimo de 95% de satisfação em pesquisa semestral com usuários; (3) conformidade com checklist de inspeção mensal. O contrato prevê multa de 1% do valor mensal por INS não atingido, com limite de 10% do valor total. Se a empresa não atingir o INS de tempo de resposta em 3 meses consecutivos, a Administração pode aplicar multa cumulativa e, se persistir, rescindir o contrato por inexecução. <strong>Isso é aplicação do art. 92, VIII, da Lei 14.133/2021.</strong></p>
+</div>
+
+<h2>5. PAPÉIS DOS GESTORES E FISCAIS DE CONTRATO</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Distinção de Funções</span>
+<p>A gestão contratual envolve múltiplos atores com responsabilidades complementares: <strong>gestor do contrato</strong> (coordenação estratégica), <strong>fiscal técnico</strong> (acompanhamento da execução técnica) e <strong>fiscal administrativo</strong> (acompanhamento documental e financeiro).</p>
+</div>
+
+<h3>🔹 Quadro Comparativo de Responsabilidades</h3>
+<table>
+<thead><tr><th>Critério</th><strong>Gestor do Contrato</strong><strong>Fiscal Técnico</strong><strong>Fiscal Administrativo</strong></tr></thead>
+<tbody>
+<tr><td><strong>Função principal</strong></td><td>Coordenação estratégica; consolidação de informações; tomada de decisões de alto nível</td><td>Acompanhamento técnico da execução; verificação de conformidade com especificações; emissão de pareceres técnicos</td><td>Acompanhamento documental e financeiro; verificação de conformidade com cláusulas administrativas; controle de pagamentos</td></tr>
+<tr><td><strong>Responsabilidades típicas</strong></td><td>• Consolidar relatórios dos fiscais<br>• Coordenar ações corretivas<br>• Tomar providências para aplicação de sanções<br>• Realizar recebimento definitivo do objeto<br>• Acompanhar manutenção de condições de habilitação do contratado</td><td>• Verificar conformidade técnica do objeto<br>• Emitir pareceres sobre qualidade e desempenho<br>• Registrar ocorrências técnicas<br>• Comunicar ao gestor situações que demandem decisão<br>• Acompanhar manutenção das condições técnicas do contratado</td><td>• Conferir documentos fiscais, folha de ponto, atestados<br>• Verificar conformidade com cláusulas administrativas e cronogramas<br>• Relatar ocorrências administrativas<br>• Verificar manutenção de condições de habilitação jurídica e fiscal<br>• Acompanhar regularidade de pagamentos</td></tr>
+<tr><td><strong>Competência decisória</strong></td><td>Decisões de médio e alto impacto; aplicação de sanções leves e médias; proposição de sanções graves</td><td>Pareceres técnicos vinculantes para decisões de natureza técnica; não aplica sanções diretamente</td><td>Pareceres administrativos para decisões de natureza documental/financeira; não aplica sanções diretamente</td></tr>
+<tr><td><strong>Relacionamento com o contratado</strong></td><td>Interface estratégica; negociação de aditivos; resolução de conflitos de alto nível</td><td>Interface técnica; orientação sobre especificações; verificação in loco da execução</td><td>Interface administrativa; solicitação de documentos; verificação de conformidade documental</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Princípio da Segregação de Funções</h3>
+<p>Em regra, o <strong>princípio da segregação de funções</strong> veda a designação do mesmo agente público para atuação simultânea em funções mais suscetíveis a riscos, de modo a reduzir a possibilidade de ocultação de erros e ocorrência de fraudes na contratação.</p>
+<ul>
+<li><strong>Exemplo de vedação:</strong> O mesmo servidor não pode ser, simultaneamente, gestor do contrato e fiscal técnico do mesmo contrato.</li>
+<li><strong>Exceções:</strong> Em contratos de pequeno valor ou baixa complexidade, a legislação pode permitir acumulação de funções, desde que justificada e observados controles compensatórios.</li>
+</ul>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "o fiscal técnico pode aplicar diretamente a penalidade de multa ao contratado" → ERRADO. A aplicação de penalidades é competência do <strong>gestor do contrato</strong> ou de autoridade superior, com base em pareceres dos fiscais. O fiscal registra irregularidades e emite pareceres, mas não aplica sanções diretamente.</p>
+</div>
+
+<h2>6. PAPEL DO PREPOSTO DA CONTRATADA</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Atribuições</span>
+<p><strong>Preposto</strong> é o representante legal do contratado junto à Administração, designado para acompanhar a execução contratual, receber notificações, prestar informações e adotar providências necessárias à regularização de irregularidades.</p>
+</div>
+
+<h3>🔹 Atribuições do Preposto (Lei 14.133/2021, Art. 92, §3º)</h3>
+<ul>
+<li><strong>Representação:</strong> Representar o contratado perante a Administração para todos os fins relacionados à execução contratual.</li>
+<li><strong>Recebimento de comunicações:</strong> Receber notificações, solicitações e decisões da Administração, com ciência inequívoca.</li>
+<li><strong>Prestação de informações:</strong> Fornecer dados, documentos e esclarecimentos solicitados pela fiscalização.</li>
+<li><strong>Adoção de providências:</strong> Determinar e acompanhar a regularização de irregularidades identificadas pela fiscalização.</li>
+<li><strong>Participação em reuniões:</strong> Comparecer a reuniões de acompanhamento, fiscalização e negociação contratual.</li>
+<li><strong>Comunicação de alterações:</strong> Informar à Administração sobre mudanças na estrutura, pessoal ou condições do contratado que possam impactar a execução contratual.</li>
+</ul>
+
+<h3>🔹 Requisitos para Designação do Preposto</h3>
+<ul>
+<li><strong>Designação formal:</strong> Nomeação por escrito, com identificação completa e poderes conferidos, juntada ao processo contratual.</li>
+<li><strong>Capacidade técnica e administrativa:</strong> Conhecimento suficiente do contrato e da atividade executada para representar adequadamente o contratado.</li>
+<li><strong>Disponibilidade:</strong> Capacidade de atender às demandas da Administração em tempo hábil.</li>
+<li><strong>Substituição:</strong> Em caso de impedimento, o preposto deve indicar substituto com os mesmos requisitos, mediante comunicação formal à Administração.</li>
+</ul>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Uma empresa contratada para prestação de serviços de vigilância designa, por instrumento formal, o Sr. João Silva como preposto. O Sr. João recebe notificação da fiscalização sobre atraso na chegada dos vigilantes. Ele comparece à reunião de acompanhamento, apresenta justificativa documental sobre problema de transporte e propõe plano de ação para regularização. A Administração aceita o plano e determina acompanhamento reforçado. O Sr. João comunica à empresa e acompanha a implementação das medidas. <strong>Isso é aplicação do art. 92, §3º, da Lei 14.133/2021.</strong></p>
+</div>
+
+<h2>7. ACOMPANHAMENTO DA EXECUÇÃO CONTRATUAL</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Instrumentos</span>
+<p><strong>Acompanhamento da execução contratual</strong> é o conjunto de atividades de monitoramento, verificação e registro do cumprimento das obrigações contratuais, visando à identificação tempestiva de irregularidades, à adoção de medidas corretivas e à garantia da obtenção do objeto contratado.</p>
+</div>
+
+<h3>🔹 Instrumentos de Acompanhamento</h3>
+<table>
+<thead><tr><th>Instrumento</th><strong>Finalidade</strong><strong>Periodicidade</strong><strong>Responsável</strong></tr></thead>
+<tbody>
+<tr><td><strong>Relatórios de fiscalização</strong></td><td>Registrar ocorrências, conformidades e não conformidades na execução</td><td>Mensal ou conforme previsto no contrato</td><td>Fiscal técnico e/ou administrativo</td></tr>
+<tr><td><strong>Reuniões de acompanhamento</strong></td><td>Alinhar expectativas, resolver pendências, negociar ajustes</td><td>Trimestral ou conforme necessidade</td><td>Gestor do contrato, fiscais e preposto</td></tr>
+<tr><td><strong>Checklists de inspeção</strong></td><td>Verificar conformidade com especificações técnicas e padrões de qualidade</td><td>Semanal, mensal ou conforme cronograma</td><td>Fiscal técnico</td></tr>
+<tr><td><strong>Indicadores de desempenho (INS)</strong></td><td>Avaliar objetivamente a qualidade e eficiência da execução</td><td>Contínuo, com apuração periódica</td><td>Fiscais, com consolidação pelo gestor</td></tr>
+<tr><td><strong>Sistema eletrônico de gestão</strong></td><td>Centralizar registros, notificações, decisões e relatórios</td><td>Contínuo</td><td>Todos os atores, com acesso diferenciado por perfil</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Recebimento Definitivo do Objeto (Lei 14.133/2021, Art. 140)</h3>
+<p>O <strong>recebimento definitivo</strong> é o ato formal de aceitação do objeto contratado pela Administração, após verificação de conformidade com as especificações contratuais.</p>
+<ul>
+<li><strong>Condições para recebimento:</strong> Execução completa do objeto; conformidade com especificações; apresentação de documentação exigida (garantias, manuais, certificados); inexistência de pendências ou irregularidades.</li>
+<li><strong>Procedimento:</strong> Vistoria técnica; emissão de termo de recebimento; registro no sistema de gestão; comunicação ao contratado.</li>
+<li><strong>Efeitos:</strong> Extinção das obrigações de execução do contratado (salvo garantias e responsabilidades por vícios ocultos); liberação de garantias; início do prazo de garantia contratual.</li>
+</ul>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "o recebimento provisório dispensa vistoria técnica" → ERRADO. Tanto o recebimento provisório quanto o definitivo exigem <strong>vistoria técnica</strong> para verificação de conformidade. O recebimento provisório ocorre durante a execução (para parcelas concluídas); o definitivo, ao final do contrato.</p>
+</div>
+
+<h2>8. DIFERENÇAS ENTRE LEI 8.666/1993 E LEI 14.133/2021</h2>
+<div class="box def"><span class="box-t">📘 Transição Normativa</span>
+<p>A Lei 14.133/2021 (Nova Lei de Licitações e Contratos) revogou expressamente a Lei 8.666/1993, mas contratos celebrados sob a vigência da lei anterior continuam regidos por ela até seu encerramento (Art. 191, Lei 14.133/2021).</p>
+</div>
+
+<h3>🔹 Principais Diferenças na Gestão Contratual</h3>
+<table>
+<thead><tr><th>Tema</th><strong>Lei 8.666/1993</strong><strong>Lei 14.133/2021</strong></tr></thead>
+<tbody>
+<tr><td><strong>Penalidades</strong></td><td>Advertência, multa, suspensão temporária, declaração de inidoneidade (Art. 87)</td><td>Advertência, multa, impedimento de licitar/contratar, declaração de inidoneidade (Art. 156)</td></tr>
+<tr><td><strong>Prazo para defesa</strong></td><td>Não especificado de forma genérica; variava conforme regulamento interno</td><td>Mínimo de <strong>5 dias úteis</strong> para apresentação de defesa (Art. 156, §2º)</td></tr>
+<tr><td><strong>Indicadores de nível de serviço</strong></td><td>Não previstos de forma expressa; prática administrativa</td><td>Cláusula necessária em todo contrato (Art. 92, VIII)</td></tr>
+<tr><td><strong>Segregação de funções</strong></td><td>Prevista de forma implícita em normas de controle interno</td><td>Expressamente prevista como princípio da gestão contratual (Art. 8º, IV)</td></tr>
+<tr><td><strong>Registro eletrônico</strong></td><td>Não previsto; prática administrativa</td><td>Obrigatório registro em sistema eletrônico oficial (Art. 91, §1º)</td></tr>
+<tr><td><strong>Publicidade</strong></td><td>Publicação em Diário Oficial; acesso físico aos contratos</td><td>Divulgação em Portal Nacional de Contratações Públicas (PNCP) + sítio eletrônico do ente (Art. 91)</td></tr>
+<tr><td><strong>Recebimento do objeto</strong></td><td>Recebimento provisório e definitivo (Art. 73)</td><td>Recebimento provisório e definitivo, com ênfase em indicadores de desempenho (Art. 140)</td></tr>
+</tbody>
+</table>
+
+<div class="cespe-tip">💡 DICA CESPE: Questões que cobram a Lei 8.666/1993 devem ser respondidas com base nela, mesmo após a vigência da Lei 14.133/2021, para contratos celebrados sob a lei anterior. Sempre verifique a data de celebração do contrato para identificar a legislação aplicável.</div>
+
+<h2>🎯 O QUE MAIS CAI NO CESPE (RANKING DE FREQUÊNCIA)</h2>
+<ol>
+<li><strong>Penalidades administrativas:</strong> Espécies (advertência, multa, impedimento, inidoneidade); hipóteses de aplicação; prazos máximos; competência para aplicação.</li>
+<li><strong>Procedimento de notificação e defesa:</strong> Prazo mínimo de 5 dias úteis para defesa (Lei 14.133/2021); requisitos da notificação válida; nulidade por violação do contraditório.</li>
+<li><strong>Papéis dos gestores e fiscais:</strong> Diferença entre gestor, fiscal técnico e fiscal administrativo; princípio da segregação de funções; vedação de acumulação de funções de risco.</li>
+<li><strong>Indicadores de Nível de Serviço (INS):</strong> Conceito, características (objetividade, mensurabilidade, verificabilidade); vinculação com penalidades e incentivos.</li>
+<li><strong>Cláusulas necessárias do contrato (Art. 92, Lei 14.133/2021):</strong> Objeto, regime de execução, preço, prazos, crédito orçamentário, garantias, INS, fiscalização, foro.</li>
+<li><strong>Recebimento definitivo do objeto:</strong> Condições, procedimento, efeitos; diferença entre recebimento provisório e definitivo.</li>
+<li><strong>Papel do preposto:</strong> Atribuições, requisitos para designação, substituição; representação legal do contratado.</li>
+<li><strong>Diferenças entre Lei 8.666/1993 e Lei 14.133/2021:</strong> Penalidades, prazos de defesa, INS, segregação de funções, registro eletrônico, publicidade.</li>
+<li><strong>Instrumentos de acompanhamento:</strong> Relatórios de fiscalização, reuniões, checklists, INS, sistema eletrônico; periodicidade e responsabilidades.</li>
+<li><strong>Jurisprudência do TCU/STF:</strong> Nulidade de sanções sem defesa prévia; vinculação entre INS e penalidades; segregação de funções como controle preventivo.</li>
+</ol>
+
+<h2>⚖️ JURISPRUDÊNCIA RELEVANTE (STF/STJ/TCU/TCDF sobre Gestão de Contratos)</h2>
+<div class="box jur">
+<strong>TCU - Acórdão 2.630/2019-Plenário</strong><br>
+Tese: A aplicação de penalidades administrativas sem observância do contraditório e da ampla defesa, incluindo prazo razoável para apresentação de defesa, configura nulidade do procedimento e violação a direitos fundamentais.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre penalidades devem mencionar que o prazo mínimo de 5 dias úteis para defesa é requisito de validade, não mera faculdade.
+</div>
+<div class="box jur">
+<strong>TCU - Acórdão 1.876/2018-Plenário</strong><br>
+Tese: A segregação de funções na gestão contratual é medida essencial de controle interno, visando à prevenção de fraudes e erros. A acumulação de funções de risco pelo mesmo agente, sem justificativa e controles compensatórios, configura irregularidade.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre papéis de gestores/fiscais devem mencionar a vedação de acumulação de funções suscetíveis a riscos.
+</div>
+<div class="box jur">
+<strong>STF - RE 599.362/DF (2013)</strong><br>
+Tese: A vinculação entre indicadores de desempenho e mecanismos de incentivo/sanção em contratos administrativos é medida legítima de gestão por resultados, desde que observada a proporcionalidade e a previsibilidade contratual.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre INS devem mencionar que a vinculação com penalidades é válida, desde que prevista no contrato e aplicada com proporcionalidade.
+</div>
+<div class="box jur">
+<strong>TCDF - Acórdão 456/2022-Plenário</strong><br>
+Tese: A notificação de irregularidades contratuais deve ser clara, fundamentada e conceder prazo razoável para defesa, sob pena de nulidade do procedimento sancionatório. A mera comunicação informal não substitui a notificação formal exigida pela lei.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre notificação devem mencionar que a formalidade e o prazo para defesa são requisitos de validade, não meras recomendações.
+</div>
+<div class="box jur">
+<strong>STJ - REsp 1.231.456/DF (2018)</strong><br>
+Tese: A aplicação do princípio da eficiência (art. 37, CF) não autoriza a supressão de garantias processuais ou de direitos fundamentais em nome da celeridade, inclusive na aplicação de penalidades contratuais.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre celeridade na aplicação de sanções devem mencionar que a eficiência não justifica supressão do contraditório e da ampla defesa.
+</div>
+<div class="box jur">
+<strong>TCU - Súmula 249</strong><br>
+Tese: "É ilegal a aplicação de penalidade de inidoneidade sem a devida motivação e sem observância do procedimento legal, incluindo notificação prévia e oportunidade de defesa."<br>
+<strong>Aplicação CESPE:</strong> Questões sobre declaração de inidoneidade devem mencionar que a motivação e o procedimento legal são requisitos de validade.
+</div>
+
+<h2>📝 QUESTÕES CESPE COMENTADAS</h2>
+<div class="q-card">
+<strong>(CESPE/CEBRASPE – TCDF – Analista Administrativo – 2023)</strong><br>
+Julgue: Na gestão de contratos administrativos regidos pela Lei 14.133/2021, a notificação de irregularidade ao contratado deve conceder prazo mínimo de 5 dias úteis para apresentação de defesa, sob pena de nulidade do procedimento sancionatório.
+<p><strong>Comentário:</strong> CORRETO. Essa é a literalidade do art. 156, §2º, da Lei 14.133/2021. O prazo mínimo de 5 dias úteis para defesa é requisito de validade do procedimento, não mera faculdade da Administração. A violação desse requisito configura nulidade por ofensa ao contraditório e à ampla defesa.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – SEFAZ DF – 2022)</strong><br>
+Julgue: O fiscal técnico de contrato administrativo tem competência para aplicar diretamente a penalidade de multa ao contratado, desde que a irregularidade esteja claramente documentada e fundamentada.
+<p><strong>Comentário:</strong> ERRADO. A aplicação de penalidades é competência do <strong>gestor do contrato</strong> ou de autoridade superior, com base em pareceres dos fiscais. O fiscal técnico registra irregularidades e emite pareceres, mas não aplica sanções diretamente. Essa distinção de papéis é essencial para a segregação de funções e o controle interno.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – CGDF – 2023)</strong><br>
+Julgue: Os Indicadores de Nível de Serviço (INS), previstos como cláusula necessária na Lei 14.133/2021, devem ser objetivos, mensuráveis e verificáveis, podendo estar vinculados a mecanismos de incentivo ou sanção no contrato.
+<p><strong>Comentário:</strong> CORRETO. Essa é a aplicação do art. 92, VIII, da Lei 14.133/2021. Os INS devem ser métricas objetivas para avaliação da execução contratual, e sua vinculação com incentivos/sanções é medida legítima de gestão por resultados, desde que prevista no contrato e aplicada com proporcionalidade.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – TCDF – 2024)</strong><br>
+Julgue: O princípio da segregação de funções na gestão contratual veda, em regra, a designação do mesmo agente público para atuar simultaneamente como gestor e fiscal do mesmo contrato, visando à prevenção de fraudes e erros.
+<p><strong>Comentário:</strong> CORRETO. Essa é a aplicação do art. 8º, IV, da Lei 14.133/2021. A segregação de funções é medida essencial de controle interno, e a acumulação de funções de risco pelo mesmo agente, sem justificativa e controles compensatórios, configura irregularidade.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – SEDES DF – 2023)</strong><br>
+Julgue: O recebimento definitivo do objeto contratual dispensa vistoria técnica, desde que o contratado apresente declaração de conformidade e a Administração confie na boa-fé do contratado.
+<p><strong>Comentário:</strong> ERRADO. Tanto o recebimento provisório quanto o definitivo exigem <strong>vistoria técnica</strong> para verificação de conformidade com as especificações contratuais. A mera declaração do contratado não substitui a verificação pela Administração, sob pena de responsabilização por aceitação de objeto não conforme.</p>
+</div>
+
+<h2>📋 CHECKLIST DE REVISÃO RÁPIDA</h2>
+<div class="summary-box">
+<strong>✅ Antes da Prova, Verifique se Você Domina:</strong><br><br>
+□ Penalidades: advertência (leve), multa (média), impedimento (grave, até 3 anos), inidoneidade (gravíssima, até 5 anos físicos/3 anos jurídicos)<br>
+□ Notificação: prazo mínimo de 5 dias úteis para defesa (Lei 14.133/2021); clareza, fundamentação, forma adequada; nulidade sem defesa<br>
+□ Papéis: gestor (coordenação, decisão), fiscal técnico (conformidade técnica), fiscal administrativo (documental/financeiro); segregação de funções<br>
+□ INS: objetivos, mensuráveis, verificáveis; vinculados a incentivos/sanções; cláusula necessária no contrato (Art. 92, VIII)<br>
+□ Cláusulas necessárias (Art. 92): objeto, regime de execução, preço, prazos, crédito orçamentário, garantias, INS, fiscalização, foro<br>
+□ Recebimento: provisório (durante execução) e definitivo (ao final); ambos exigem vistoria técnica; efeitos distintos<br>
+□ Preposto: representante legal do contratado; designação formal; atribuições de representação, recebimento de comunicações, adoção de providências<br>
+□ Acompanhamento: relatórios, reuniões, checklists, INS, sistema eletrônico; periodicidade e responsabilidades definidas<br>
+□ Lei 8.666 vs. 14.133: penalidades, prazos de defesa, INS, segregação de funções, registro eletrônico, publicidade<br>
+□ Jurisprudência: TCU exige defesa prévia para sanções; STF valida INS vinculados a incentivos; TCDF reforça formalidade da notificação
+</div>
+
+<div class="nav-b">
+<a href="afo-df-32598.html" class="btn-n">← Anterior</a>
+<span></span>
+</div>
+</main>
+
+<div class="n-panel" id="nP">
+<div style="display:flex;justify-content:space-between;margin-bottom:10px"><strong>Notas de Gestão de Contratos</strong><button onclick="tN()" style="background:none;border:none;cursor:pointer">✕</button></div>
+<div id="nL" style="max-height:180px;overflow-y:auto;margin-bottom:10px"></div>
+<form onsubmit="aN(event)"><input type="text" class="n-in" id="nI" placeholder="Anotação sobre penalidades, INS, fiscalização..." required><button type="submit" class="b-sm">💾 Salvar</button></form>
+</div>
+
+<script>
+const SK='contratos-gestao';let hM=false;
+function webS(){const s=window.getSelection().toString();window.open(`https://duckduckgo.com/?q=${encodeURIComponent(s||'Gestão de contratos irregularidades penalidades Lei 14.133 CESPE TCDF')}`,'_blank')}
+function tN(){const p=document.getElementById('nP');p.style.display=p.style.display==='none'?'block':'none';if(p.style.display==='block')lN()}
+function lN(){const n=JSON.parse(localStorage.getItem(SK)||'[]');document.getElementById('nL').innerHTML=n.length?n.map((x,i)=>`<div class="n-item">${x.text}<br><small style="cursor:pointer;color:#666" onclick="dN(${i})">remover</small></div>`).join(''):'<p style="font-size:.9em;color:#666">Sem notas.</p>'}
+function aN(e){e.preventDefault();const i=document.getElementById('nI'),n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:i.value,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));i.value='';lN()}
+function dN(i){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.splice(i,1);localStorage.setItem(SK,JSON.stringify(n));lN()}
+function tH(){hM=!hM;document.body.style.cursor=hM?'text':'auto';document.querySelectorAll('.t-btn')[2].textContent=hM?'✅ ON':'✏️ Destaque';hM?document.addEventListener('mouseup',hS):document.removeEventListener('mouseup',hS)}
+function hS(){const s=window.getSelection();if(s.toString().length>10){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:`🔍 "${s.toString().substring(0,40)}..." - ${prompt('Nota:','')||'-'}`,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));alert('✅ Destaque salvo!');s.removeAllRanges()}}
+document.addEventListener('DOMContentLoaded',lN);
+</script>
+</body>
+</html>

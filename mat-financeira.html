@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matemática Financeira | Juros, Taxas, Amortização e Cálculo Financeiro - CESPE</title>
+<style>
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1;--jur:#e8f4fd;--math:#e3f2fd;--finance:#fff3e0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,sans-serif;line-height:1.7;padding-top:70px}
+a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+h1{font-size:1.9em;margin-bottom:12px;color:var(--lil);line-height:1.3}
+h2{font-size:1.5em;margin:32px 0 16px;color:var(--text);padding-bottom:8px;border-bottom:2px solid var(--lil-l)}
+h3{font-size:1.25em;margin:24px 0 14px;color:var(--lil-d);font-weight:600}
+h4{font-size:1.1em;margin:18px 0 10px;color:var(--lil);font-weight:600}
+p{margin-bottom:14px;color:var(--text);text-align:justify}
+ul,ol{margin:0 0 16px 22px;color:var(--text)}
+li{margin-bottom:7px}
+.box{background:var(--card);border-radius:8px;padding:18px;margin:22px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}.box.jur{background:var(--jur);border-color:#3b82f6}.box.math{background:var(--math);border-color:#2196f3}.box.finance{background:var(--finance);border-color:#ff9800}
+.box-t{font-weight:700;margin-bottom:10px;display:block;color:var(--text);font-size:1.05em}
+table{width:100%;border-collapse:collapse;margin:22px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:12px 14px;border-bottom:1px solid var(--lil-d);font-size:.95em}
+td{padding:11px 14px;border-bottom:1px solid var(--lil-l);color:var(--text);font-size:.95em}
+tr:hover td{background:var(--lil-l)}
+tr:last-child td{border-bottom:none}
+.nav-b{display:flex;justify-content:space-between;margin-top:44px;padding-top:22px;border-top:1px solid var(--lil-d)}
+.btn-n{padding:11px 22px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none;font-size:.95em;transition:all .2s}
+.btn-n:hover{background:var(--lil-d);color:#fff;transform:translateY(-1px)}
+.tools{position:fixed;bottom:22px;right:22px;display:flex;flex-direction:column;gap:11px;z-index:99}
+.t-btn{background:var(--card);border:2px solid var(--lil-d);padding:11px 15px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;color:var(--text);box-shadow:0 3px 10px rgba(0,0,0,.1);font-size:.9em;transition:all .2s}
+.t-btn:hover{transform:translateY(-2px);background:var(--lil-l)}
+.n-panel{position:fixed;bottom:72px;right:22px;width:290px;background:var(--card);border:2px solid var(--lil-d);border-radius:12px;padding:17px;display:none;box-shadow:0 5px 15px rgba(0,0,0,.15);z-index:100}
+.n-item{background:var(--lil-l);padding:11px;border-radius:6px;margin-bottom:9px;font-size:.9em}
+.n-in{width:100%;padding:9px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:9px;font-size:.95em}
+.b-sm{padding:7px 13px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em;font-weight:500}
+@media(max-width:750px){.container{padding:17px}header{flex-direction:column;align-items:flex-start;gap:11px}.nav-b{flex-direction:column;gap:11px}.btn-n{width:100%;text-align:center}}
+.box img{width:100%;height:auto;display:block;margin:16px 0;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.q-card{background:var(--warn);border-left:4px solid #f59e0b;padding:17px;margin:22px 0;border-radius:0 8px 8px 0}
+.q-card strong{color:#856404;font-weight:600}
+.cespe-tip{background:#fef3c7;border-left:4px solid #f59e0b;padding:13px;margin:16px 0;font-size:.95em;border-radius:0 6px 6px 0}
+.mnemonic{background:linear-gradient(135deg,var(--lil-l),#f5f3ff);padding:13px 17px;border-radius:8px;margin:16px 0;font-weight:600;color:var(--lil-d);border:1px solid var(--lil-l)}
+.summary-box{background:var(--def);padding:17px;border-radius:8px;margin:22px 0;border:1px solid var(--lil-l)}
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px;margin:16px 0}
+.comp-item{background:var(--bg-secondary);padding:12px;border-radius:6px;font-size:.95em;border-left:3px solid var(--lil)}
+.formula-box{background:var(--card);border:2px solid var(--lil-d);border-radius:8px;padding:16px;margin:14px 0;font-family:monospace;font-size:1.05em;text-align:center;color:var(--lil-d);font-weight:600}
+.step-box{background:var(--card);border-left:4px solid var(--lil-d);padding:14px;margin:12px 0;border-radius:0 6px 6px 0}
+.step-num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;background:var(--lil);color:#fff;border-radius:50%;font-weight:700;font-size:.85em;margin-right:8px}
+.highlight{background:#fff9c4;padding:2px 6px;border-radius:3px;font-weight:500}
+.code{background:#f1f5f9;padding:2px 6px;border-radius:4px;font-family:monospace;font-size:.9em;color:#1e293b}
+.flow-diagram{background:var(--card);border:1px solid var(--lil-l);border-radius:8px;padding:16px;margin:14px 0;text-align:center}
+.flow-step{display:inline-block;padding:8px 16px;margin:5px;background:var(--lil-l);border-radius:20px;font-weight:500;color:var(--lil)}
+.flow-arrow{color:var(--lil-d);font-size:1.2em;margin:0 10px}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="back">← Dashboard</a><div class="nav-t">Matemática Financeira</div></header>
+<main class="container">
+<h1>Matemática Financeira: Juros, Taxas, Amortização e Cálculo Financeiro</h1>
+
+<h2>1. REGRA DE TRÊS SIMPLES E COMPOSTA</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Aplicação</span>
+<p><strong>Regra de três</strong> é um método prático para resolver problemas que envolvem grandezas proporcionais, permitindo encontrar um valor desconhecido a partir de três valores conhecidos.</p>
+</div>
+
+<h3>🔹 Regra de Três Simples</h3>
+<p>Envolve <strong>duas grandezas</strong> diretamente ou inversamente proporcionais.</p>
+
+<div class="formula-box">
+Diretamente proporcionais: a/b = c/x → x = (b × c) / a<br><br>
+Inversamente proporcionais: a × b = c × x → x = (a × b) / c
+</div>
+
+<table>
+<thead><tr><th>Tipo</th><th>Relação</th><th>Exemplo Prático</th><th>Fórmula</th></tr></thead>
+<tbody>
+<tr><td><strong>Direta</strong></td><td>Se uma grandeza aumenta, a outra também aumenta</td><td>Mais horas trabalhadas → Mais salário</td><td>x = (b × c) / a</td></tr>
+<tr><td><strong>Inversa</strong></td><td>Se uma grandeza aumenta, a outra diminui</td><td>Mais trabalhadores → Menos tempo para concluir obra</td><td>x = (a × b) / c</td></tr>
+</tbody>
+</table>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p><strong>Problema:</strong> Se 5 servidores analisam 100 processos em 8 dias, quantos processos 8 servidores analisarão em 10 dias?<br><br>
+<strong>Resolução:</strong><br>
+• Servidores: 5 → 8 (direta: mais servidores, mais processos)<br>
+• Dias: 8 → 10 (direta: mais dias, mais processos)<br><br>
+Montando a regra de três composta:<br>
+<div class="formula-box">
+100 / x = (5/8) × (8/10) → 100/x = 40/80 → 100/x = 1/2 → x = 200 processos
+</div>
+<strong>Resposta:</strong> 200 processos.</p>
+</div>
+
+<h3>🔹 Regra de Três Composta</h3>
+<p>Envolve <strong>três ou mais grandezas</strong>. O segredo é identificar a relação de proporcionalidade de cada grandeza com a incógnita.</p>
+
+<div class="step-box">
+<span class="step-num">1</span><strong>Identificar as grandezas</strong> e a incógnita<br>
+<span class="step-num">2</span><strong>Classificar cada relação</strong> como direta ou inversa em relação à incógnita<br>
+<span class="step-num">3</span><strong>Montar a proporção</strong>: grandezas diretas mantêm a fração; inversas invertem a fração<br>
+<span class="step-num">4</span><strong>Resolver a equação</strong> para encontrar a incógnita
+</div>
+
+<div class="mnemonic">🧠 MACETE: "Direta mantém, Inversa inverte" → Na montagem da proporção, grandezas diretamente proporcionais mantêm a fração original; inversamente proporcionais invertem a fração.</div>
+
+<h2>2. PORCENTAGENS</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Aplicações Financeiras</span>
+<p><strong>Porcentagem</strong> é uma razão centesimal (denominador 100) usada para expressar proporções, variações, descontos, acréscimos e taxas em contextos financeiros.</p>
+</div>
+
+<h3>🔹 Fórmulas Fundamentais</h3>
+<div class="formula-box">
+Porcentagem de um valor: P = (p% × V) / 100<br><br>
+Acréscimo percentual: V<sub>final</sub> = V<sub>inicial</sub> × (1 + i)<br><br>
+Desconto percentual: V<sub>final</sub> = V<sub>inicial</sub> × (1 - i)<br><br>
+Variação percentual: Δ% = [(V<sub>final</sub> - V<sub>inicial</sub>) / V<sub>inicial</sub>] × 100%
+</div>
+
+<h3>🔹 Aplicações Comuns em Concursos</h3>
+<table>
+<thead><tr><th>Situação</th><th>Fórmula</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Desconto sucessivo</strong></td><td>V<sub>f</sub> = V<sub>i</sub> × (1 - d₁) × (1 - d₂) × ...</td><td>Desconto de 20% + 10%: V<sub>f</sub> = V<sub>i</sub> × 0,8 × 0,9 = V<sub>i</sub> × 0,72 → desconto total de 28%</td></tr>
+<tr><td><strong>Acréscimo sucessivo</strong></td><td>V<sub>f</sub> = V<sub>i</sub> × (1 + a₁) × (1 + a₂) × ...</td><td>Aumento de 10% + 20%: V<sub>f</sub> = V<sub>i</sub> × 1,1 × 1,2 = V<sub>i</sub> × 1,32 → aumento total de 32%</td></tr>
+<tr><td><strong>Recuperação de perda</strong></td><td>Para recuperar perda de x%, precisa aumentar em: x/(100-x) × 100%</td><td>Perdeu 20% → precisa aumentar 20/80 = 25% para recuperar o valor original</td></tr>
+<tr><td><strong>Porcentagem sobre porcentagem</strong></td><td>(a% de b%) = (a × b) / 100 %</td><td>30% de 50% = (30 × 50)/100 = 15%</td></tr>
+</tbody>
+</table>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "dois descontos sucessivos de 20% e 10% equivalem a um desconto único de 30%" → ERRADO. Descontos sucessivos <strong>não se somam</strong>. O cálculo correto é: (1 - 0,20) × (1 - 0,10) = 0,8 × 0,9 = 0,72 → desconto total de 28%, não 30%.</p>
+</div>
+
+<h2>3. JUROS SIMPLES</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Características</span>
+<p><strong>Juros simples</strong> são calculados apenas sobre o capital inicial, sem incorporação dos juros ao principal. Os juros não geram novos juros ("juros sobre juros").</p>
+</div>
+
+<h3>🔹 Fórmulas Fundamentais</h3>
+<div class="formula-box">
+J = C × i × n<br><br>
+M = C + J = C × (1 + i × n)<br><br>
+Onde:<br>
+J = Juros; C = Capital inicial; i = taxa de juros (forma decimal); n = número de períodos; M = Montante
+</div>
+
+<h3>🔹 Conversão de Taxas e Prazos</h3>
+<p>Em juros simples, a conversão de taxas é <strong>linear (proporcional)</strong>:</p>
+<div class="formula-box">
+i<sub>anual</sub> / 12 = i<sub>mensal</sub> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; i<sub>anual</sub> / 360 = i<sub>diária</sub> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; i<sub>mensal</sub> / 30 = i<sub>diária</sub>
+</div>
+
+<h3>🔹 Convenções de Prazo</h3>
+<table>
+<thead><tr><th>Convenção</th><th>Dias no Mês</th><th>Dias no Ano</th><th>Aplicação</th></tr></thead>
+<tbody>
+<tr><td><strong>Comercial (ou bancária)</strong></td><td>30 dias</td><td>360 dias</td><td>Mais comum em concursos e operações financeiras</td></tr>
+<tr><td><strong>Exata (ou civil)</strong></td><td>Dias reais do mês</td><td>365 ou 366 dias</td><td>Usada em cálculos mais precisos; menos comum em provas</td></tr>
+</tbody>
+</table>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p><strong>Problema:</strong> Um capital de R$ 10.000,00 foi aplicado a juros simples de 2% ao mês por 5 meses. Qual o montante?<br><br>
+<strong>Resolução:</strong><br>
+• C = 10.000; i = 2% a.m. = 0,02; n = 5 meses<br>
+• M = C × (1 + i × n) = 10.000 × (1 + 0,02 × 5) = 10.000 × 1,10 = <strong>R$ 11.000,00</strong><br><br>
+<strong>Observação:</strong> Em juros simples, os juros totais são J = 10.000 × 0,02 × 5 = R$ 1.000,00.</p>
+</div>
+
+<h2>4. JUROS COMPOSTOS</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Características</span>
+<p><strong>Juros compostos</strong> são calculados sobre o capital inicial <strong>mais os juros acumulados</strong> de períodos anteriores. Há "juros sobre juros", caracterizando crescimento exponencial.</p>
+</div>
+
+<h3>🔹 Fórmulas Fundamentais</h3>
+<div class="formula-box">
+M = C × (1 + i)<sup>n</sup><br><br>
+J = M - C = C × [(1 + i)<sup>n</sup> - 1]<br><br>
+C = M / (1 + i)<sup>n</sup> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; i = (M/C)<sup>1/n</sup> - 1 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; n = log(M/C) / log(1 + i)
+</div>
+
+<h3>🔹 Diferenças Cruciais: Simples vs. Compostos</h3>
+<table>
+<thead><tr><th>Aspecto</th><th>Juros Simples</th><th>Juros Compostos</th></tr></thead>
+<tbody>
+<tr><td><strong>Cálculo dos juros</strong></td><td>Sempre sobre o capital inicial</td><td>Sobre o montante acumulado (capital + juros anteriores)</td></tr>
+<tr><td>Crescimento do montante</td><td>Linear (progressão aritmética)</td><td>Exponencial (progressão geométrica)</td></tr>
+<tr><td>Conversão de taxas</td><td>Proporcional (linear)</td><td>Equivalente (exponencial): (1 + i<sub>1</sub>)<sup>n1</sup> = (1 + i<sub>2</sub>)<sup>n2</sup></td></tr>
+<tr><td>Aplicação típica</td><td>Curto prazo, operações simples</td><td>Longo prazo, investimentos, financiamentos</td></tr>
+<tr><td>Fórmula do montante</td><td>M = C(1 + i×n)</td><td>M = C(1 + i)<sup>n</sup></td></tr>
+</tbody>
+</table>
+
+<div class="box math"><span class="box-t">📊 Comparação Numérica</span>
+<p>Capital: R$ 1.000,00 | Taxa: 10% a.m. | Prazo: 3 meses</p>
+<table>
+<thead><tr><th>Mês</th><th>Juros Simples</th><th>Montante Simples</th><th>Juros Compostos</th><th>Montante Composto</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>R$ 100,00</td><td>R$ 1.100,00</td><td>R$ 100,00</td><td>R$ 1.100,00</td></tr>
+<tr><td>2</td><td>R$ 100,00</td><td>R$ 1.200,00</td><td>R$ 110,00</td><td>R$ 1.210,00</td></tr>
+<tr><td>3</td><td>R$ 100,00</td><td>R$ 1.300,00</td><td>R$ 121,00</td><td>R$ 1.331,00</td></tr>
+<tr><td><strong>Total Juros</strong></td><td><strong>R$ 300,00</strong></td><td>-</td><td><strong>R$ 331,00</strong></td><td>-</td></tr>
+</tbody>
+</table>
+<p><strong>Conclusão:</strong> Em prazos maiores, juros compostos geram montantes significativamente maiores.</p>
+</div>
+
+<h3>🔹 Capitalização e Desconto em Juros Compostos</h3>
+<h4>🔸 Capitalização (Cálculo do Montante)</h4>
+<p>Já vimos: M = C × (1 + i)<sup>n</sup></p>
+
+<h4>🔸 Desconto Composto</h4>
+<p>Existem duas modalidades principais:</p>
+
+<table>
+<thead><tr><th>Tipo</th><th>Descrição</th><th>Fórmula</th><th>Aplicação</th></tr></thead>
+<tbody>
+<tr><td><strong>Desconto Racional Composto ("por dentro")</strong></td><td>Calculado sobre o valor atual (valor presente)</td><td>D<sub>r</sub> = M - C = M - [M / (1 + i)<sup>n</sup>]<br>ou<br>D<sub>r</sub> = M × [1 - 1/(1 + i)<sup>n</sup>]</td><td>Mais justo financeiramente; usado em operações de longo prazo</td></tr>
+<tr><td><strong>Desconto Comercial Composto ("por fora")</strong></td><td>Calculado sobre o valor nominal (valor de face)</td><td>D<sub>c</sub> = M × [1 - (1 - d)<sup>n</sup>]<br>onde d = taxa de desconto</td><td>Mais comum em operações bancárias de curto prazo; menos usado em provas</td></tr>
+</tbody>
+</table>
+
+<div class="formula-box">
+Valor Atual (Desconto Racional): A = M / (1 + i)<sup>n</sup><br><br>
+Valor Líquido (Desconto Comercial): A = M × (1 - d)<sup>n</sup>
+</div>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p><strong>Problema:</strong> Um título de valor nominal R$ 5.000,00 vence em 2 anos. Qual o valor atual, considerando desconto racional composto a 10% a.a.?<br><br>
+<strong>Resolução:</strong><br>
+• M = 5.000; i = 10% a.a. = 0,10; n = 2 anos<br>
+• A = M / (1 + i)<sup>n</sup> = 5.000 / (1,10)<sup>2</sup> = 5.000 / 1,21 ≈ <strong>R$ 4.132,23</strong><br><br>
+<strong>Desconto:</strong> D = M - A = 5.000 - 4.132,23 = R$ 867,77</p>
+</div>
+
+<h2>5. TAXAS DE JUROS: NOMINAL, EFETIVA E EQUIVALENTE</h2>
+<div class="box def"><span class="box-t">📘 Conceitos Fundamentais</span>
+<p>As taxas de juros podem ser expressas de diferentes formas, e a conversão entre elas é um dos tópicos mais cobrados pelo CESPE.</p>
+</div>
+
+<h3>🔹 Taxa Nominal</h3>
+<ul>
+<li><strong>Definição:</strong> Taxa anunciada, em que o período de capitalização <strong>não coincide</strong> com o período da taxa.</li>
+<li><strong>Exemplo:</strong> "24% ao ano com capitalização mensal" → taxa nominal anual, mas os juros são capitalizados mensalmente.</li>
+<li><strong>Cálculo da taxa efetiva do período de capitalização:</strong> i<sub>efetiva</sub> = i<sub>nominal</sub> / m, onde m = número de capitalizações por período da taxa nominal.</li>
+</ul>
+
+<div class="formula-box">
+Taxa efetiva por período de capitalização: i<sub>ef</sub> = i<sub>nom</sub> / m
+</div>
+
+<h3>🔹 Taxa Efetiva</h3>
+<ul>
+<li><strong>Definição:</strong> Taxa em que o período de capitalização <strong>coincide</strong> com o período da taxa. É a taxa realmente aplicada em cada período.</li>
+<li><strong>Exemplo:</strong> "2% ao mês com capitalização mensal" → taxa efetiva mensal.</li>
+<li><strong>Importância:</strong> É a taxa usada nas fórmulas de juros compostos.</li>
+</ul>
+
+<h3>🔹 Taxa Equivalente</h3>
+<ul>
+<li><strong>Definição:</strong> Duas taxas são equivalentes quando, aplicadas sobre o mesmo capital, no mesmo prazo, produzem o mesmo montante.</li>
+<li><strong>Fórmula de conversão (juros compostos):</strong></li>
+</ul>
+
+<div class="formula-box">
+(1 + i<sub>1</sub>)<sup>n1</sup> = (1 + i<sub>2</sub>)<sup>n2</sup><br><br>
+Exemplos:<br>
+• Taxa mensal para anual: i<sub>a</sub> = (1 + i<sub>m</sub>)<sup>12</sup> - 1<br>
+• Taxa anual para mensal: i<sub>m</sub> = (1 + i<sub>a</sub>)<sup>1/12</sup> - 1<br>
+• Taxa diária para mensal: i<sub>m</sub> = (1 + i<sub>d</sub>)<sup>30</sup> - 1
+</div>
+
+<h3>🔹 Tabela de Conversão de Taxas (Juros Compostos)</h3>
+<table>
+<thead><tr><th>De → Para</th><th>Fórmula</th><th>Exemplo Numérico</th></tr></thead>
+<tbody>
+<tr><td>Mensal → Anual</td><td>i<sub>a</sub> = (1 + i<sub>m</sub>)<sup>12</sup> - 1</td><td>2% a.m. → (1,02)<sup>12</sup> - 1 ≈ 26,82% a.a.</td></tr>
+<tr><td>Anual → Mensal</td><td>i<sub>m</sub> = (1 + i<sub>a</sub>)<sup>1/12</sup> - 1</td><td>26,82% a.a. → (1,2682)<sup>1/12</sup> - 1 ≈ 2% a.m.</td></tr>
+<tr><td>Diária → Mensal</td><td>i<sub>m</sub> = (1 + i<sub>d</sub>)<sup>30</sup> - 1</td><td>0,1% a.d. → (1,001)<sup>30</sup> - 1 ≈ 3,04% a.m.</td></tr>
+<tr><td>Trimestral → Semestral</td><td>i<sub>s</sub> = (1 + i<sub>t</sub>)<sup>2</sup> - 1</td><td>5% a.t. → (1,05)<sup>2</sup> - 1 = 10,25% a.s.</td></tr>
+<tr><td>Nominal anual (cap. mensal) → Efetiva mensal</td><td>i<sub>m</sub> = i<sub>nom</sub> / 12</td><td>24% a.a. nom. cap. mensal → 24%/12 = 2% a.m. efetiva</td></tr>
+<tr><td>Nominal anual (cap. mensal) → Efetiva anual</td><td>i<sub>a</sub> = (1 + i<sub>nom</sub>/12)<sup>12</sup> - 1</td><td>24% a.a. nom. cap. mensal → (1 + 0,24/12)<sup>12</sup> - 1 ≈ 26,82% a.a. efetiva</td></tr>
+</tbody>
+</table>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "para converter taxa anual para mensal em juros compostos, basta dividir por 12" → ERRADO. Essa é a regra dos <strong>juros simples</strong>. Em <strong>juros compostos</strong>, a conversão é exponencial: i<sub>m</sub> = (1 + i<sub>a</sub>)<sup>1/12</sup> - 1. Dividir por 12 só vale para juros simples ou para obter a taxa efetiva do período de capitalização a partir de uma taxa nominal.</p>
+</div>
+
+<div class="mnemonic">🧠 MACETE: "Nominal divide, Efetiva eleva, Equivalente iguala montante" → Taxa nominal: divide pelo número de capitalizações. Taxa efetiva: usa diretamente nas fórmulas. Taxas equivalentes: produzem o mesmo montante.</div>
+
+<h2>6. RENDAS UNIFORMES E VARIÁVEIS</h2>
+<div class="box def"><span class="box-t">📘 Conceito de Renda Financeira</span>
+<p><strong>Renda</strong> é uma sucessão de pagamentos ou recebimentos, geralmente periódicos, de valores iguais (uniformes) ou diferentes (variáveis).</p>
+</div>
+
+<h3>🔹 Rendas Uniformes (Séries Uniformes)</h3>
+<p>Caracterizam-se por <strong>parcelas de mesmo valor</strong>, vencidas em intervalos regulares.</p>
+
+<h4>🔸 Fórmulas Fundamentais</h4>
+<div class="formula-box">
+Valor Presente (VP) de uma série postecipada (1ª parcela no fim do 1º período):<br>
+VP = P × [(1 + i)<sup>n</sup> - 1] / [i × (1 + i)<sup>n</sup>]<br><br>
+Valor Futuro (VF) de uma série postecipada:<br>
+VF = P × [(1 + i)<sup>n</sup> - 1] / i<br><br>
+Onde: P = valor da parcela; i = taxa por período; n = número de parcelas
+</div>
+
+<h4>🔸 Tipos de Rendas Uniformes</h4>
+<table>
+<thead><tr><th>Tipo</th><th>Característica</th><th>Fórmula do VP</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Postecipada</strong></td><td>1ª parcela no fim do 1º período</td><td>VP = P × [(1+i)<sup>n</sup>-1] / [i×(1+i)<sup>n</sup>]</td><td>Financiamento com 1ª prestação em 30 dias</td></tr>
+<tr><td><strong>Antecipada</strong></td><td>1ª parcela no início (ato)</td><td>VP = P × [(1+i)<sup>n</sup>-1] / [i×(1+i)<sup>n</sup>] × (1+i)</td><td>Aluguel pago no início do mês</td></tr>
+<tr><td><strong>Diferida</strong></td><td>Carência: 1ª parcela após k períodos</td><td>VP = P × [(1+i)<sup>n</sup>-1] / [i×(1+i)<sup>n</sup>] × 1/(1+i)<sup>k</sup></td><td>Financiamento com carência de 3 meses</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Rendas Variáveis</h3>
+<p>Parcelas com <strong>valores diferentes</strong>. O cálculo do valor presente ou futuro é feito somando os valores atuais ou futuros de cada parcela individualmente.</p>
+
+<div class="formula-box">
+VP = Σ [P<sub>t</sub> / (1 + i)<sup>t</sup>] &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; VF = Σ [P<sub>t</sub> × (1 + i)<sup>n-t</sup>]
+</div>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p><strong>Problema:</strong> Qual o valor presente de uma série de 5 parcelas mensais de R$ 1.000,00, postecipadas, a 2% a.m.?<br><br>
+<strong>Resolução:</strong><br>
+• P = 1.000; i = 0,02; n = 5<br>
+• Fator de valor presente: [(1,02)<sup>5</sup> - 1] / [0,02 × (1,02)<sup>5</sup>] = (1,10408 - 1) / (0,02 × 1,10408) = 0,10408 / 0,0220816 ≈ 4,7135<br>
+• VP = 1.000 × 4,7135 = <strong>R$ 4.713,50</strong><br><br>
+<strong>Interpretação:</strong> Receber 5 parcelas de R$ 1.000,00 equivale, hoje, a receber R$ 4.713,50 à vista, considerando taxa de 2% a.m.</p>
+</div>
+
+<h2>7. SISTEMAS DE AMORTIZAÇÃO DE EMPRÉSTIMOS E FINANCIAMENTOS</h2>
+<div class="box def"><span class="box-t">📘 Conceito de Amortização</span>
+<p><strong>Amortização</strong> é a extinção gradual de uma dívida por meio de pagamentos periódicos. Cada prestação (PMT) é composta por: <strong>Amortização (A)</strong> + <strong>Juros (J)</strong>.</p>
+</div>
+
+<div class="formula-box">
+PMT = A + J
+</div>
+
+<h3>🔹 Sistema de Amortização Constante (SAC)</h3>
+<ul>
+<li><strong>Característica principal:</strong> A amortização é <strong>constante</strong> em todas as prestações.</li>
+<li><strong>Cálculo da amortização:</strong> A = SD<sub>inicial</sub> / n</li>
+<li><strong>Cálculo dos juros:</strong> J<sub>t</sub> = SD<sub>t-1</sub> × i (sobre o saldo devedor do período anterior)</li>
+<li><strong>Prestação:</strong> PMT<sub>t</sub> = A + J<sub>t</sub> → <strong>decrescente</strong>, pois os juros diminuem com o saldo devedor.</li>
+<li><strong>Aplicação típica:</strong> Financiamento imobiliário (SFH), empréstimos de longo prazo.</li>
+</ul>
+
+<div class="flow-diagram">
+<div class="flow-step">Saldo Devedor Inicial</div>
+<span class="flow-arrow">→</span>
+<div class="flow-step">A = SD/n (constante)</div>
+<span class="flow-arrow">→</span>
+<div class="flow-step">J = SD<sub>anterior</sub> × i</div>
+<span class="flow-arrow">→</span>
+<div class="flow-step">PMT = A + J (decrescente)</div>
+<span class="flow-arrow">→</span>
+<div class="flow-step">SD<sub>novo</sub> = SD<sub>anterior</sub> - A</div>
+</div>
+
+<h3>🔹 Sistema Price (ou Francês)</h3>
+<ul>
+<li><strong>Característica principal:</strong> A prestação (PMT) é <strong>constante</strong> em todos os períodos.</li>
+<li><strong>Cálculo da prestação:</strong> PMT = VP × [i × (1 + i)<sup>n</sup>] / [(1 + i)<sup>n</sup> - 1]</li>
+<li><strong>Cálculo dos juros:</strong> J<sub>t</sub> = SD<sub>t-1</sub> × i</li>
+<li><strong>Cálculo da amortização:</strong> A<sub>t</sub> = PMT - J<sub>t</sub> → <strong>crescente</strong>, pois os juros diminuem.</li>
+<li><strong>Aplicação típica:</strong> Financiamento de veículos, empréstimos pessoais, carnês.</li>
+</ul>
+
+<div class="formula-box">
+Fórmula da Prestação Price:<br>
+PMT = VP × [i(1+i)<sup>n</sup>] / [(1+i)<sup>n</sup> - 1]<br><br>
+Fator de Recuperação de Capital (FRC): [i(1+i)<sup>n</sup>] / [(1+i)<sup>n</sup> - 1]
+</div>
+
+<h3>🔹 Comparação SAC vs. Price</h3>
+<table>
+<thead><tr><th>Aspecto</th><th>SAC</th><th>Price</th></tr></thead>
+<tbody>
+<tr><td><strong>Amortização</strong></td><td>Constante</td><td>Crescente</td></tr>
+<tr><td><strong>Juros</strong></td><td>Decrescentes</td><td>Decrescentes</td></tr>
+<tr><td><strong>Prestação</strong></td><td>Decrescente</td><td>Constante</td></tr>
+<tr><td><strong>Saldo devedor</strong></td><td>Decresce linearmente</td><td>Decresce de forma exponencial (mais lento no início)</td></tr>
+<tr><td><strong>Total de juros pagos</strong></td><td>Menor</td><td>Maior</td></tr>
+<tr><td><strong>Esforço inicial</strong></td><td>Maior (1ª prestação mais alta)</td><td>Menor (prestação constante e menor que a 1ª do SAC)</td></tr>
+</tbody>
+</table>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Comparativo CESPE</span>
+<p><strong>Dados:</strong> Empréstimo de R$ 100.000,00, 10 meses, 2% a.m.</p>
+<table>
+<thead><tr><th>Mês</th><th>SAC: PMT</th><th>SAC: Juros</th><th>SAC: Amort.</th><th>Price: PMT</th><th>Price: Juros</th><th>Price: Amort.</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>R$ 12.000,00</td><td>R$ 2.000,00</td><td>R$ 10.000,00</td><td>R$ 11.132,00</td><td>R$ 2.000,00</td><td>R$ 9.132,00</td></tr>
+<tr><td>2</td><td>R$ 11.800,00</td><td>R$ 1.800,00</td><td>R$ 10.000,00</td><td>R$ 11.132,00</td><td>R$ 1.817,36</td><td>R$ 9.314,64</td></tr>
+<tr><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td></tr>
+<tr><td>10</td><td>R$ 10.200,00</td><td>R$ 200,00</td><td>R$ 10.000,00</td><td>R$ 11.132,00</td><td>R$ 218,27</td><td>R$ 10.913,73</td></tr>
+<tr><td><strong>Total Juros</strong></td><td><strong>R$ 11.000,00</strong></td><td colspan="2">-</td><td><strong>R$ 11.320,00</strong></td><td colspan="2">-</td></tr>
+</tbody>
+</table>
+<p><strong>Conclusão:</strong> SAC paga menos juros totais, mas exige maior esforço inicial. Price tem prestação constante, facilitando o planejamento familiar.</p>
+</div>
+
+<h2>8. CÁLCULO FINANCEIRO E CUSTO EFETIVO</h2>
+<div class="box def"><span class="box-t">📘 Conceito de Custo Efetivo Total (CET)</span>
+<p><strong>Custo Efetivo</strong> é a taxa de juros que realmente incide sobre uma operação financeira, considerando <strong>todos os encargos</strong>: juros, taxas, seguros, tarifas, IOF, etc. É a taxa que iguala o valor recebido (líquido) ao valor presente dos pagamentos futuros.</p>
+</div>
+
+<h3>🔹 Componentes do Custo Efetivo</h3>
+<ul>
+<li><strong>Taxa de juros contratada</strong> (nominal ou efetiva)</li>
+<li><strong>Tarifas administrativas</strong> (abertura de cadastro, emissão de boleto, etc.)</li>
+<li><strong>Seguros</strong> (MIP, DFI em financiamentos imobiliários)</li>
+<li><strong>IOF</strong> (Imposto sobre Operações Financeiras)</li>
+<li><strong>Outros encargos</strong> (taxa de avaliação, registro, etc.)</li>
+</ul>
+
+<h3>🔹 Cálculo do Custo Efetivo</h3>
+<p>O custo efetivo é encontrado resolvendo a equação de valor:</p>
+
+<div class="formula-box">
+Valor Líquido Recebido = Σ [PMT<sub>t</sub> / (1 + i<sub>ef</sub>)<sup>t</sup>]
+</div>
+
+<p>Onde i<sub>ef</sub> é a taxa efetiva que se deseja encontrar (geralmente por métodos numéricos ou calculadora financeira).</p>
+
+<h3>🔹 Exemplo Prático de Cálculo</h3>
+<div class="box ex"><span class="box-t">✅ Exemplo CESPE</span>
+<p><strong>Problema:</strong> Empréstimo de R$ 10.000,00, 12 meses, taxa contratada 2% a.m., tarifa de abertura R$ 200,00 (descontada no ato). Qual o custo efetivo mensal aproximado?<br><br>
+<strong>Resolução:</strong><br>
+• Valor recebido líquido: 10.000 - 200 = R$ 9.800,00<br>
+• Prestação pela Price (com taxa 2% a.m.): PMT = 10.000 × [0,02×(1,02)<sup>12</sup>]/[(1,02)<sup>12</sup>-1] ≈ R$ 945,60<br>
+• Equação do custo efetivo (i<sub>ef</sub>):<br>
+<div class="formula-box">
+9.800 = 945,60 × [(1+i<sub>ef</sub>)<sup>12</sup>-1] / [i<sub>ef</sub>×(1+i<sub>ef</sub>)<sup>12</sup>]
+</div>
+• Resolvendo numericamente (por tentativa ou calculadora): i<sub>ef</sub> ≈ <strong>2,24% a.m.</strong><br><br>
+<strong>Conclusão:</strong> A tarifa de R$ 200,00 elevou o custo efetivo de 2% para aproximadamente 2,24% a.m.</p>
+</div>
+
+<h3>🔹 Taxa Anual de Custo Efetivo (TACE) e CET</h3>
+<ul>
+<li><strong>TACE:</strong> Expressa o custo efetivo em base anual, facilitando a comparação entre operações.</li>
+<li><strong>Cálculo:</strong> TACE = (1 + i<sub>ef_mensal</sub>)<sup>12</sup> - 1</li>
+<li><strong>Exemplo:</strong> i<sub>ef</sub> = 2,24% a.m. → TACE = (1,0224)<sup>12</sup> - 1 ≈ 30,46% a.a.</li>
+</ul>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "o custo efetivo é sempre igual à taxa de juros contratada" → ERRADO. O custo efetivo <strong>sempre é maior ou igual</strong> à taxa contratada, pois incorpora todos os encargos adicionais. Só será igual se não houver nenhum encargo extra.</p>
+</div>
+
+<h2>🎯 O QUE MAIS CAI NO CESPE (RANKING DE FREQUÊNCIA)</h2>
+<ol>
+<li><strong>Conversão de taxas de juros:</strong> Nominal → Efetiva; Efetiva → Equivalente; confusão entre juros simples e compostos na conversão.</li>
+<li><strong>Juros simples vs. compostos:</strong> Identificar qual regime está sendo usado; cálculo do montante; comparação de resultados.</li>
+<li><strong>Desconto racional vs. comercial:</strong> Fórmulas, aplicação prática, diferença conceitual.</li>
+<li><strong>Sistemas de amortização:</strong> SAC vs. Price; cálculo de prestação, juros e amortização; comparação de custos totais.</li>
+<li><strong>Porcentagem:</strong> Descontos sucessivos, acréscimos, recuperação de perdas, porcentagem sobre porcentagem.</li>
+<li><strong>Regra de três composta:</strong> Identificação de grandezas diretas/inversas; montagem correta da proporção.</li>
+<li><strong>Rendas uniformes:</strong> Cálculo de valor presente ou futuro de séries postecipadas/antecipadas.</li>
+<li><strong>Custo efetivo:</strong> Conceito, componentes, cálculo aproximado, diferença para taxa nominal.</li>
+<li><strong>Interpretação de fluxo de caixa:</strong> Identificação de entradas/saídas, timing dos pagamentos, taxa adequada.</li>
+<li><strong>Armadilhas de cálculo:</strong> Confusão entre período da taxa e período de capitalização; uso de convenção comercial vs. exata.</li>
+</ol>
+
+<h2>⚖️ PADRÕES DE COBRANÇA DO CESPE EM MATEMÁTICA FINANCEIRA</h2>
+<div class="box jur">
+<strong>Padrão 1: Taxa nominal não é taxa efetiva</strong><br>
+Tese: O CESPE sistematicamente cobra que taxa nominal com capitalização diferente do período da taxa deve ser convertida para efetiva antes de usar nas fórmulas de juros compostos.<br>
+<strong>Aplicação:</strong> "24% a.a. com capitalização mensal" → taxa efetiva mensal = 24%/12 = 2% a.m. → usar 2% nas fórmulas.
+</div>
+<div class="box jur">
+<strong>Padrão 2: Descontos sucessivos não se somam</strong><br>
+Tese: Questões que afirmam "descontos de 20% e 10% equivalem a 30%" são ERRADAS. O cálculo correto é multiplicativo: (1-0,20)×(1-0,10) = 0,72 → 28% de desconto total.<br>
+<strong>Aplicação:</strong> Sempre calcular descontos sucessivos de forma multiplicativa, nunca aditiva.
+</div>
+<div class="box jur">
+<strong>Padrão 3: SAC paga menos juros totais que Price</strong><br>
+Tese: Para mesmo capital, prazo e taxa, o SAC sempre resulta em menor total de juros pagos, pois a amortização é constante e maior no início, reduzindo o saldo devedor mais rapidamente.<br>
+<strong>Aplicação:</strong> Questões comparativas entre SAC e Price devem considerar que SAC é mais vantajoso financeiramente, mas exige maior esforço inicial.
+</div>
+<div class="box jur">
+<strong>Padrão 4: Custo efetivo ≥ taxa contratada</strong><br>
+Tese: O custo efetivo de uma operação financeira nunca é menor que a taxa de juros contratada, pois incorpora todos os encargos adicionais.<br>
+<strong>Aplicação:</strong> Se a questão mencionar tarifas, seguros ou IOF, o custo efetivo será necessariamente maior que a taxa nominal.
+</div>
+<div class="box jur">
+<strong>Padrão 5: Juros simples: conversão linear; Juros compostos: conversão exponencial</strong><br>
+Tese: Em juros simples, taxas são proporcionais (divide/multiplica). Em juros compostos, taxas são equivalentes (eleva a potência/raiz).<br>
+<strong>Aplicação:</strong> Identificar primeiro o regime de juros antes de converter taxas.
+</div>
+
+<h2>📝 QUESTÕES CESPE COMENTADAS</h2>
+<div class="q-card">
+<strong>(CESPE/CEBRASPE – TCDF – 2021)</strong><br>
+Julgue: Se uma taxa de juros é de 24% ao ano com capitalização mensal, então a taxa efetiva mensal correspondente é de 2% ao mês.
+<p><strong>Comentário:</strong> CORRETO. Taxa nominal anual de 24% com capitalização mensal: a taxa efetiva do período de capitalização (mês) é obtida dividindo a nominal pelo número de capitalizações: 24% / 12 = 2% a.m. Essa é a taxa efetiva mensal a ser usada nas fórmulas de juros compostos.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – AFO – 2022)</strong><br>
+Julgue: No sistema de amortização constante (SAC), o valor da prestação é decrescente ao longo do tempo, enquanto no sistema Price o valor da prestação é constante.
+<p><strong>Comentário:</strong> CORRETO. Essa é a característica fundamental que diferencia os dois sistemas: SAC tem amortização constante → juros decrescentes → prestação decrescente; Price tem prestação constante → amortização crescente e juros decrescentes.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – Raciocínio Lógico – 2023)</strong><br>
+Julgue: Um produto que sofreu um desconto de 30% e, em seguida, um acréscimo de 30% sobre o novo preço, retorna ao seu preço original.
+<p><strong>Comentário:</strong> ERRADO. Seja P o preço original. Após desconto de 30%: P × 0,70. Após acréscimo de 30%: (P × 0,70) × 1,30 = P × 0,91. O preço final é 91% do original, ou seja, houve uma perda líquida de 9%. Descontos e acréscimos percentuais não são simétricos.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – Financeiro – 2024)</strong><br>
+Julgue: O desconto racional composto de um título é sempre maior que o desconto comercial composto, para mesma taxa e prazo.
+<p><strong>Comentário:</strong> ERRADO. O desconto racional é calculado sobre o valor atual (menor), enquanto o comercial é calculado sobre o valor nominal (maior). Portanto, para mesma taxa e prazo, o <strong>desconto comercial é maior</strong> que o racional. O racional é mais justo financeiramente, mas o comercial é mais comum em operações bancárias de curto prazo.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – TCDF – 2024)</strong><br>
+Julgue: Em uma aplicação a juros compostos, a taxa efetiva anual correspondente a 2% ao mês é superior a 24% ao ano.
+<p><strong>Comentário:</strong> CORRETO. Conversão de taxa mensal para anual em juros compostos: i<sub>a</sub> = (1 + 0,02)<sup>12</sup> - 1 = (1,02)<sup>12</sup> - 1 ≈ 1,2682 - 1 = 0,2682 = 26,82% a.a. De fato, 26,82% > 24%. Isso ocorre devido ao efeito dos "juros sobre juros".</p>
+</div>
+
+<h2>📋 CHECKLIST DE REVISÃO RÁPIDA</h2>
+<div class="summary-box">
+<strong>Domine:</strong><br>
+□ Regra de três: Direta (mantém fração) vs. Inversa (inverte fração); composta: classificar cada grandeza<br>
+□ Porcentagem: Descontos/acréscimos sucessivos são multiplicativos, não aditivos; recuperação de perda: x% de perda exige x/(100-x)% de ganho<br>
+□ Juros simples: J = C×i×n; M = C(1+i×n); conversão de taxas é linear (proporcional)<br>
+□ Juros compostos: M = C(1+i)<sup>n</sup>; conversão de taxas é exponencial: (1+i<sub>1</sub>)<sup>n1</sup> = (1+i<sub>2</sub>)<sup>n2</sup><br>
+□ Taxas: Nominal (divide por m para obter efetiva do período); Efetiva (usa direto); Equivalente (produz mesmo montante)<br>
+□ Desconto: Racional (sobre valor atual) vs. Comercial (sobre valor nominal); racional é mais justo<br>
+□ Rendas uniformes: VP = P×[(1+i)<sup>n</sup>-1]/[i(1+i)<sup>n</sup>] (postecipada); antecipada multiplica por (1+i)<br>
+□ SAC: Amortização constante, prestação decrescente, menor total de juros<br>
+□ Price: Prestação constante, amortização crescente, maior total de juros<br>
+□ Custo efetivo: Sempre ≥ taxa contratada; incorpora tarifas, seguros, IOF; calculado pela equação de valor<br>
+□ Padrões CESPE: Taxa nominal ≠ efetiva; descontos não se somam; SAC paga menos juros; custo efetivo ≥ taxa nominal; juros compostos: conversão exponencial
+</div>
+
+<div class="nav-b">
+<a href="estatistica-concursos.html" class="btn-n">← Anterior</a>
+<a href="index.html" class="btn-n">Voltar ao Dashboard</a>
+</div>
+</main>
+
+
+<div class="n-panel" id="nP">
+<div style="display:flex;justify-content:space-between;margin-bottom:10px"><strong>Notas de Matemática Financeira</strong><button onclick="tN()" style="background:none;border:none;cursor:pointer">✕</button></div>
+<div id="nL" style="max-height:180px;overflow-y:auto;margin-bottom:10px"></div>
+<form onsubmit="aN(event)"><input type="text" class="n-in" id="nI" placeholder="Anotação sobre juros, taxas, amortização..." required><button type="submit" class="b-sm">💾 Salvar</button></form>
+</div>
+
+<script>
+const SK='mat-fin-concursos';let hM=false;
+function webS(){const s=window.getSelection().toString();window.open(`https://duckduckgo.com/?q=${encodeURIComponent(s||'Matemática financeira juros compostos taxa equivalente SAC Price CESPE')}`,'_blank')}
+function tN(){const p=document.getElementById('nP');p.style.display=p.style.display==='none'?'block':'none';if(p.style.display==='block')lN()}
+function lN(){const n=JSON.parse(localStorage.getItem(SK)||'[]');document.getElementById('nL').innerHTML=n.length?n.map((x,i)=>`<div class="n-item">${x.text}<br><small style="cursor:pointer;color:#666" onclick="dN(${i})">remover</small></div>`).join(''):'<p style="font-size:.9em;color:#666">Sem notas.</p>'}
+function aN(e){e.preventDefault();const i=document.getElementById('nI'),n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:i.value,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));i.value='';lN()}
+function dN(i){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.splice(i,1);localStorage.setItem(SK,JSON.stringify(n));lN()}
+function tH(){hM=!hM;document.body.style.cursor=hM?'text':'auto';document.querySelectorAll('.t-btn')[2].textContent=hM?'✅ ON':'✏️ Destaque';hM?document.addEventListener('mouseup',hS):document.removeEventListener('mouseup',hS)}
+function hS(){const s=window.getSelection();if(s.toString().length>10){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:`🔍 "${s.toString().substring(0,40)}..." - ${prompt('Nota:','')||'-'}`,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));alert('✅ Destaque salvo!');s.removeAllRanges()}}
+document.addEventListener('DOMContentLoaded',lN);
+</script>
+</body>
+</html>

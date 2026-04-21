@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direito Administrativo 09 | Organização, Agências e Terceiro Setor - CESPE</title>
+<style>
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1;--jur:#e8f4fd}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;line-height:1.7;padding-top:70px}
+a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
+.container{max-width:1000px;margin:0 auto;padding:24px}
+h1{font-size:1.8em;margin-bottom:10px;color:var(--lil)}h2{font-size:1.4em;margin:28px 0 14px;color:var(--text);padding-bottom:6px;border-bottom:2px solid var(--lil-l)}
+h3{font-size:1.2em;margin:22px 0 12px;color:var(--lil-d);font-weight:600}
+p{margin-bottom:14px;color:var(--text)}ul,ol{margin:0 0 16px 20px;color:var(--text)}li{margin-bottom:6px}
+.box{background:var(--card);border-radius:8px;padding:16px;margin:20px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}.box.jur{background:var(--jur);border-color:#3b82f6}
+.box-t{font-weight:700;margin-bottom:8px;display:block;color:var(--text)}
+table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--lil-d)}
+td{padding:10px 14px;border-bottom:1px solid var(--lil-l);color:var(--text)}tr:hover td{background:var(--lil-l)}
+.nav-b{display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:1px solid var(--lil-d)}
+.btn-n{padding:10px 20px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none}
+.btn-n:hover{background:var(--lil-d);color:#fff}
+.tools{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:99}
+.t-btn{background:var(--card);border:2px solid var(--lil-d);padding:10px 14px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;color:var(--text);box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.t-btn:hover{transform:translateY(-2px)}
+.n-panel{position:fixed;bottom:70px;right:20px;width:280px;background:var(--card);border:2px solid var(--lil-d);border-radius:12px;padding:16px;display:none;box-shadow:0 5px 15px rgba(0,0,0,.15);z-index:100}
+.n-item{background:var(--lil-l);padding:10px;border-radius:6px;margin-bottom:8px;font-size:.9em}
+.n-in{width:100%;padding:8px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:8px}
+.b-sm{padding:6px 12px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em}
+@media(max-width:700px){.container{padding:16px}header{flex-direction:column;align-items:flex-start;gap:10px}}
+.box img{width:100%;height:auto;display:block;margin:15px 0;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.q-card{background:var(--warn);border-left:4px solid #f59e0b;padding:16px;margin:20px 0;border-radius:0 8px 8px 0}
+.q-card strong{color:#856404}
+.cespe-tip{background:#fef3c7;border-left:4px solid #f59e0b;padding:12px;margin:15px 0;font-size:.95em}
+.mnemonic{background:linear-gradient(135deg,var(--lil-l),var(--bg-secondary));padding:12px 16px;border-radius:8px;margin:15px 0;font-weight:600;color:var(--lil-d)}
+.summary-box{background:var(--def);padding:16px;border-radius:8px;margin:20px 0}
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin:15px 0}
+.comp-item{background:var(--bg-secondary);padding:10px;border-radius:6px;font-size:.95em}
+.entity-card{background:var(--card);border:2px solid var(--lil-l);border-radius:8px;padding:16px;margin:12px 0}
+.entity-card h4{color:var(--lil);margin-bottom:8px}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="back">← Dashboard</a><div class="nav-t">Direito Administrativo 09</div></header>
+<main class="container">
+<h1>Organização Administrativa, Agências e Terceiro Setor</h1>
+
+<h2>PARTE I: ORGANIZAÇÃO ADMINISTRATIVA</h2>
+
+<h2>1. CONCEITO E ESTRUTURA DA ADMINISTRAÇÃO PÚBLICA</h2>
+<div class="box def"><span class="box-t">📘 Conceito de Organização Administrativa</span>
+<p><strong>Organização administrativa</strong> é o conjunto de princípios, normas e estruturas que disciplinam a distribuição de competências, a hierarquia e o funcionamento dos órgãos e entidades que compõem a Administração Pública, visando à eficiência na prestação de serviços públicos.</p>
+<p><strong>Finalidade:</strong> Garantir a racionalização, a coordenação e o controle das atividades estatais, observados os princípios da legalidade, impessoalidade, moralidade, publicidade e eficiência (Art. 37, caput, CF/88).</p>
+</div>
+
+<h3>🔹 Princípios da Organização Administrativa</h3>
+<table>
+<thead><tr><th>Princípio</th><th>Descrição</th><th>Aplicação Prática</th></tr></thead>
+<tbody>
+<tr><td><strong>Legalidade</strong></td><td>Criação, estruturação e extinção de órgãos/entidades devem observar previsão legal</td><td>Autarquias criadas por lei específica; empresas públicas por lei autorizativa</td></tr>
+<tr><td><strong>Especialização</strong></td><td>Distribuição de competências por matéria, evitando sobreposição de atribuições</td><td>Agências reguladoras com foco setorial (ANEEL, ANVISA, etc.)</td></tr>
+<tr><td><strong>Hierarquia</strong></td><td>Relação de subordinação entre órgãos da mesma pessoa jurídica</td><td>Ministério → Secretaria → Departamento → Divisão</td></tr>
+<tr><td><strong>Coordenação</strong></td><td>Articulação entre órgãos/entidades para evitar duplicidade e garantir sinergia</td><td>Comitês interministeriais, sistemas nacionais (SUS, SUAS)</td></tr>
+<tr><td><strong>Controle</strong></td><td>Fiscalização interna e externa para garantir legalidade e eficiência</td><td>Controladorias, Tribunais de Contas, corregedorias</td></tr>
+</tbody>
+</table>
+
+<div class="mnemonic">🧠 MACETE: "LEHCC" → Legalidade, Especialização, Hierarquia, Coordenação, Controle. Memorize para questões sobre princípios organizacionais!</div>
+
+<h2>2. CENTRALIZAÇÃO, DESCENTRALIZAÇÃO E DESCONCENTRAÇÃO</h2>
+<div class="box def"><span class="box-t">📘 Distinção Fundamental</span>
+<p>Esses três conceitos definem <strong>como o poder administrativo se distribui</strong> no espaço e entre pessoas jurídicas. O CESPE adora cobrar a diferença entre eles.</p>
+</div>
+
+<h3>🔹 Quadro Comparativo Essencial</h3>
+<table>
+<thead><tr><th>Conceito</th><th>Definição</th><th>Pessoa Jurídica</th><th>Vínculo</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Centralização</strong></td><td>O Estado executa diretamente as atividades por meio de seus próprios órgãos</td><td>Única: a pessoa jurídica estatal (União, Estado, DF, Município)</td><td>Nenhum (é a regra básica)</td><td>Ministério da Educação executando políticas educacionais diretamente</td></tr>
+<tr><td><strong>Desconcentração</strong></td><td>Distribuição interna de competências dentro da mesma pessoa jurídica, criando órgãos com certa autonomia</td><td>Única: a mesma pessoa jurídica estatal</td><td>Hierarquia e controle finalístico</td><td>Receita Federal com superintendências regionais; INSS com agências</td></tr>
+<tr><td><strong>Descentralização</strong></td><td>Transferência da titularidade e execução de serviço público para outra pessoa jurídica (pública ou privada)</td><td>Múltiplas: ente delegante + entidade delegatária</td><td>Vinculação, tutela ou controle finalístico (não há hierarquia)</td><td>Concessão de transporte a empresa privada; criação de autarquia para executar serviço</td></tr>
+</tbody>
+</table>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "desconcentração gera nova pessoa jurídica" → ERRADO. A <strong>desconcentração ocorre dentro da mesma pessoa jurídica</strong> (criação de órgãos). A <strong>descentralização</strong> é que gera nova pessoa jurídica (criação de entidade da administração indireta ou delegação a particular).</p>
+</div>
+
+<h3>🔹 Formas de Descentralização</h3>
+<table>
+<thead><tr><th>Tipo</th><th>Descrição</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Territorial ou Geográfica</strong></td><td>Transferência de competências para entes federativos distintos</td><td>União transfere execução de política de saúde para Estados e Municípios (SUS)</td></tr>
+<tr><td><strong>Por Serviços ou Técnica</strong></td><td>Criação de entidade da administração indireta para executar serviço específico</td><td>Criação da ANVISA para regular medicamentos; criação de empresa pública para correios</td></tr>
+<tr><td><strong>Por Colaboração</strong></td><td>Delegação a particular mediante contrato ou ato administrativo</td><td>Concessão, permissão, parceria com OS/OSCIP</td></tr>
+</tbody>
+</table>
+
+<h2>3. ADMINISTRAÇÃO DIRETA</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Composição</span>
+<p><strong>Administração Direta</strong> é o conjunto de órgãos integrantes da estrutura da Presidência da República e dos Ministérios, bem como dos órgãos diretamente subordinados aos Chefes do Executivo dos Estados, DF e Municípios.</p>
+<p><strong>Características:</strong> Não possuem personalidade jurídica própria; integram a pessoa jurídica do ente federativo; seus atos são imputados diretamente à União, Estado, DF ou Município.</p>
+</div>
+
+<h3>🔹 Espécies de Órgãos Públicos (Classificação quanto à posição estatal)</h3>
+<table>
+<thead><tr><th>Tipo</th><th>Descrição</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Órgãos Independentes</strong></td><td>Posicionados no topo da estrutura, sem subordinação hierárquica, com autonomia administrativa e financeira</td><td>Presidência da República, Ministérios, Secretarias de Estado</td></tr>
+<tr><td><strong>Órgãos Autônomos</strong></td><td>Subordinados a órgão independente, com certa autonomia técnica e administrativa</td><td>Gabinetes, Procuradorias, Controladorias, Agências Reguladoras (na estrutura ministerial)</td></tr>
+<tr><td><strong>Órgãos Superiores</strong></td><td>Chefiam grandes divisões administrativas, com funções de direção, planejamento e coordenação</td><td>Secretarias, Departamentos, Coordenações-Gerais</td></tr>
+<tr><td><strong>Órgãos Subalternos</strong></td><td>Executam tarefas específicas, com menor autonomia, subordinados a órgãos superiores</td><td>Divisões, Seções, Serviços, Postos de Atendimento</td></tr>
+</tbody>
+</table>
+
+<div class="cespe-tip">💡 DICA CESPE: Questões que afirmam "órgãos públicos têm personalidade jurídica" → ERRADO. Órgãos públicos <strong>não têm personalidade jurídica</strong>; são centros de competência despersonalizados. Quem tem personalidade são as entidades da administração indireta.</div>
+
+<h2>PARTE II: ADMINISTRAÇÃO INDIRETA</h2>
+
+<h2>4. CONCEITO E CARACTERÍSTICAS GERAIS</h2>
+<div class="box def"><span class="box-t">📘 Conceito de Administração Indireta</span>
+<p><strong>Administração Indireta</strong> é o conjunto de <strong>entidades dotadas de personalidade jurídica própria</strong>, criadas por lei para descentralizar a prestação de serviços públicos ou o exercício de atividades de interesse coletivo, sob controle finalístico do ente federativo instituidor.</p>
+</div>
+
+<h3>🔹 Características Comuns das Entidades da Administração Indireta</h3>
+<ul>
+<li><strong>Personalidade jurídica própria:</strong> Distinta da pessoa jurídica do ente instituidor.</li>
+<li><strong>Patrimônio próprio:</strong> Bens e recursos distintos do ente federativo.</li>
+<li><strong>Autonomia administrativa e financeira:</strong> Gestão própria, mas sob controle finalístico.</li>
+<li><strong>Criação por lei:</strong> Autarquias e fundações públicas por lei específica; empresas públicas e SEM por lei autorizativa.</li>
+<li><strong>Regime jurídico híbrido:</strong> Predominantemente público, com aplicação subsidiária do direito privado.</li>
+<li><strong>Controle externo pelo TCU/TCs:</strong> Sujeição à fiscalização dos Tribunais de Contas.</li>
+</ul>
+
+<h2>5. ESPÉCIES DE ENTIDADES DA ADMINISTRAÇÃO INDIRETA</h2>
+<div class="comp-grid">
+<div class="comp-item"><strong>Autarquias:</strong> Pessoa jurídica de direito público; regime jurídico de direito público; imunidade tributária recíproca; servidores estatutários.</div>
+<div class="comp-item"><strong>Fundações Públicas:</strong> Podem ser de direito público (autárquicas) ou direito privado; regime jurídico conforme a natureza; finalidade de interesse público.</div>
+<div class="comp-item"><strong>Empresas Públicas:</strong> Pessoa jurídica de direito privado; capital 100% público; regime jurídico predominantemente privado, com prerrogativas públicas.</div>
+<div class="comp-item"><strong>Sociedades de Economia Mista:</strong> Pessoa jurídica de direito privado; capital público e privado (ação com voto do Estado); regime jurídico predominantemente privado, com prerrogativas públicas.</div>
+</div>
+
+<h3>🔹 Quadro Comparativo Detalhado</h3>
+<table>
+<thead><tr><th>Aspecto</th><th>Autarquia</th><th>Fundação Pública</th><th>Empresa Pública</th><th>SEM</th></tr></th>
+<tbody>
+<tr><td><strong>Natureza Jurídica</strong></td><td>Direito público</td><td>Direito público ou privado</td><td>Direito privado</td><td>Direito privado</td></tr>
+<tr><td><strong>Criação</strong></td><td>Lei específica</td><td>Lei específica</td><td>Lei autorizativa</td><td>Lei autorizativa</td></tr>
+<tr><td><strong>Capital</strong></td><td>Exclusivamente público</td><td>Exclusivamente público</td><td>Exclusivamente público</td><td>Público e privado</td></tr>
+<tr><td><strong>Forma Jurídica</strong></td><td>Não se aplica</td><td>Não se aplica</td><td>Qualquer forma admitida em direito</td><td>Sociedade anônima (S/A)</td></tr>
+<tr><td><strong>Regime de Pessoal</strong></td><td>Estatutário (Lei 8.112/1990)</td><td>Estatutário ou celetista</td><td>Celetista (CLT)</td><td>Celetista (CLT)</td></tr>
+<tr><td><strong>Imunidade Tributária</strong></td><td>Sim (Art. 150, VI, "a", CF)</td><td>Sim, se de direito público</td><td>Não (salvo se prestar serviço público essencial)</td><td>Não (salvo se prestar serviço público essencial)</td></tr>
+<tr><td><strong>Prerrogativas Processuais</strong></td><td>Sim (prazos em dobro, remessa necessária)</td><td>Sim, se de direito público</td><td>Não (salvo se prestar serviço público essencial)</td><td>Não (salvo se prestar serviço público essencial)</td></tr>
+<tr><td><strong>Licitação</strong></td><td>Sim (Lei 14.133/2021)</td><td>Sim</td><td>Sim (Lei 14.133/2021)</td><td>Sim (Lei 14.133/2021)</td></tr>
+<tr><td><strong>Concurso Público</strong></td><td>Sim</td><td>Sim</td><td>Sim</td><td>Sim</td></tr>
+<tr><td><strong>Exemplo</strong></td><td>INSS, IBAMA, Universidades Federais</td><td>FIOCRUZ, FUNAI (se de direito público)</td><td>Caixa Econômica Federal, Correios</td><td>Banco do Brasil, Petrobras</td></tr>
+</tbody>
+</table>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>O INSS é uma <strong>autarquia federal</strong>: criado por lei específica, com personalidade jurídica de direito público, regime estatutário para servidores, imunidade tributária e sujeição ao controle do TCU. Já a Caixa Econômica Federal é uma <strong>empresa pública</strong>: criada por lei autorizativa, personalidade de direito privado, regime celetista, sem imunidade tributária ampla, mas com prerrogativas públicas por prestar serviço financeiro essencial.</p>
+</div>
+
+<h2>6. AUTARQUIAS: CONCEITO E CARACTERÍSTICAS ESPECÍFICAS</h2>
+<div class="entity-card">
+<h4>📌 Conceito</h4>
+<p><strong>Autarquia</strong> é entidade da administração indireta, dotada de personalidade jurídica de direito público, criada por lei específica para desempenhar atividades típicas de Estado ou serviços públicos descentralizados, com autonomia administrativa e financeira, sob controle finalístico do ente instituidor.</p>
+<h4>📌 Características Essenciais</h4>
+<ul>
+<li><strong>Personalidade jurídica de direito público:</strong> Sujeita ao regime jurídico administrativo.</li>
+<li><strong>Criação por lei específica:</strong> Não pode ser criada por decreto ou ato administrativo.</li>
+<li><strong>Autonomia:</strong> Administrativa, financeira e patrimonial, mas não política.</li>
+<li><strong>Finalidade pública:</strong> Desempenho de atividade estatal ou serviço público.</li>
+<li><strong>Controle finalístico:</strong> Vinculação ao ministério supervisor para fiscalização de legalidade e mérito.</li>
+<li><strong>Imunidade tributária recíproca:</strong> Não paga impostos sobre patrimônio, renda e serviços vinculados às suas finalidades essenciais (Art. 150, VI, "a", CF).</li>
+<li><strong>Prerrogativas processuais:</strong> Prazos em dobro para contestar e recorrer; remessa necessária (salvo exceções legais).</li>
+</ul>
+</div>
+
+<h3>🔹 Autarquias de Regime Especial</h3>
+<p>São autarquias que, por força de lei, recebem <strong>maior autonomia</strong> em relação às autarquias comuns, especialmente em matéria de gestão financeira, patrimonial e de pessoal. Exemplos: Universidades Federais, ANATEL, ANEEL, BACEN.</p>
+<ul>
+<li><strong>Características:</strong> Maior flexibilidade na contratação de pessoal; gestão orçamentária própria; independência técnica em decisões regulatórias.</li>
+<li><strong>Limites:</strong> A autonomia não afasta o controle externo do TCU nem a submissão aos princípios da administração pública.</li>
+</ul>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "autarquias de regime especial não estão sujeitas ao controle do TCU" → ERRADO. <strong>Todas as entidades da administração indireta</strong>, inclusive autarquias de regime especial, estão sujeitas ao controle externo dos Tribunais de Contas (Art. 70, parágrafo único, CF/88).</p>
+</div>
+
+<h2>7. FUNDAÇÕES PÚBLICAS</h2>
+<div class="entity-card">
+<h4>📌 Conceito e Natureza Jurídica</h4>
+<p><strong>Fundação pública</strong> é entidade da administração indireta, dotada de personalidade jurídica, criada por lei específica para desempenhar atividades de interesse público, sem fins lucrativos, com patrimônio personalizado e afetado a fins sociais.</p>
+<p><strong>Natureza jurídica:</strong> Pode ser de <strong>direito público</strong> (equiparada a autarquia) ou de <strong>direito privado</strong>, conforme dispuser a lei instituidora (Art. 37, XIX, CF/88 + ADI 2.302/DF).</p>
+</div>
+
+<h3>🔹 Diferenças entre Fundação Pública de Direito Público e de Direito Privado</h3>
+<table>
+<thead><tr><th>Aspecto</th><th>Fundação de Direito Público</th><th>Fundação de Direito Privado</th></tr></thead>
+<tbody>
+<tr><td><strong>Regime Jurídico</strong></td><td>Predominantemente público (como autarquia)</td><td>Predominantemente privado, com aplicação subsidiária de normas públicas</td></tr>
+<tr><td><strong>Regime de Pessoal</strong></td><td>Estatutário (Lei 8.112/1990)</td><td>Celetista (CLT)</td></tr>
+<tr><td><strong>Imunidade Tributária</strong></td><td>Sim (Art. 150, VI, "a", CF)</td><td>Não, salvo se prestar serviço público essencial</td></tr>
+<tr><td><strong>Prerrogativas Processuais</strong></td><td>Sim (prazos em dobro, remessa necessária)</td><td>Não, salvo se prestar serviço público essencial</td></tr>
+<tr><td><strong>Controle pelo TCU</strong></td><td>Sim, integral</td><td>Sim, mas com foco na legalidade da aplicação de recursos públicos</td></tr>
+<tr><td><strong>Exemplo</strong></td><td>FIOCRUZ (se considerada de direito público), FUNAI</td><td>Fundações universitárias de apoio à pesquisa</td></tr>
+</tbody>
+</table>
+
+<h2>8. EMPRESAS PÚBLICAS E SOCIEDADES DE ECONOMIA MISTA</h2>
+<div class="entity-card">
+<h4>📌 Conceito Comum</h4>
+<p><strong>Empresa pública</strong> e <strong>sociedade de economia mista (SEM)</strong> são entidades da administração indireta, dotadas de personalidade jurídica de direito privado, criadas para explorar atividade econômica de interesse coletivo ou prestar serviço público, com capital público e, no caso da SEM, também privado.</p>
+</div>
+
+<h3>🔹 Diferenças Essenciais</h3>
+<table>
+<thead><tr><th>Aspecto</th><th>Empresa Pública</th><th>Sociedade de Economia Mista</th></tr></thead>
+<tbody>
+<tr><td><strong>Capital</strong></td><td>100% público (União, Estado, DF ou Município)</td><td>Público e privado (ação com voto do ente público)</td></tr>
+<tr><td><strong>Forma Jurídica</strong></td><td>Qualquer forma admitida em direito (LTDA, S/A, etc.)</td><td>Obrigatoriamente sociedade anônima (S/A)</td></tr>
+<tr><td><strong>Controle Acionário</strong></td><td>Integral do ente público</td><td>Controle acionário do ente público, com participação privada</td></tr>
+<tr><td><strong>Exemplo Federal</strong></td><td>Caixa Econômica Federal, Correios, BNDES</td><td>Banco do Brasil, Petrobras, Eletrobras</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Regime Jurídico Híbrido</h3>
+<p>Embora sejam pessoas jurídicas de direito privado, empresas públicas e SEMs sujeitam-se a <strong>regras públicas</strong> quando:</p>
+<ul>
+<li><strong>Prestam serviço público:</strong> Aplicam-se princípios da administração pública (legalidade, impessoalidade, etc.) e regime de licitação (Lei 14.133/2021).</li>
+<li><strong>Exploram atividade econômica:</strong> Regime predominantemente privado, mas com controle de legalidade pelo TCU e observância de normas de governança.</li>
+<li><strong>Prerrogativas processuais:</strong> STF e STJ admitem prazos em dobro e remessa necessária <strong>apenas quando prestam serviço público essencial</strong> (RE 599.362/DF).</li>
+</ul>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Os Correios são uma <strong>empresa pública federal</strong>: capital 100% da União, personalidade de direito privado, regime celetista para empregados. Como prestam <strong>serviço público postal</strong> (monopólio constitucional), sujeitam-se a licitação, princípios da administração pública e prerrogativas processuais (prazos em dobro). Já a Petrobras é uma <strong>S/A de economia mista</strong>: capital público e privado, explora atividade econômica (petróleo) em regime de concorrência, com regime jurídico predominantemente privado.</p>
+</div>
+
+<h2>PARTE III: AGÊNCIAS EXECUTIVAS E REGULADORAS</h2>
+
+<h2>9. AGÊNCIAS EXECUTIVAS</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Finalidade</span>
+<p><strong>Agência executiva</strong> não é uma nova espécie de entidade, mas uma <strong>qualificação</strong> conferida a autarquias ou fundações públicas que celebrem contrato de gestão com o Poder Público, visando à ampliação de autonomia gerencial, orçamentária e financeira em troca de metas de desempenho.</p>
+<p><strong>Base Legal:</strong> Art. 37, §8º, CF/88 + Lei 9.649/1998 + Decreto 2.823/1998.</p>
+</div>
+
+<h3>🔹 Requisitos para Qualificação como Agência Executiva</h3>
+<ol>
+<li><strong>Entidade qualificável:</strong> Autarquia ou fundação pública.</li>
+<li><strong>Contrato de gestão:</strong> Celebração de instrumento que estabeleça metas, indicadores e contrapartidas de autonomia.</li>
+<li><strong>Plano estratégico de reestruturação:</strong> Aprovação de plano para modernização administrativa e financeira.</li>
+<li><strong>Atividade de natureza exclusiva do Estado:</strong> A entidade deve desempenhar atividade típica de Estado ou serviço público descentralizado.</li>
+</ol>
+
+<h3>🔹 Vantagens da Qualificação</h3>
+<ul>
+<li><strong>Autonomia gerencial:</strong> Maior flexibilidade na gestão de recursos humanos, materiais e financeiros.</li>
+<li><strong>Dispensa de licitação:</strong> Para contratação de bens e serviços, até limites estabelecidos no contrato de gestão (Lei 14.133/2021, Art. 75).</li>
+<li><strong>Remuneração variável:</strong> Possibilidade de bonificação por desempenho para servidores.</li>
+<li><strong>Gestão por resultados:</strong> Foco em indicadores de eficiência, eficácia e efetividade.</li>
+</ul>
+
+<div class="cespe-tip">💡 DICA CESPE: Questões que afirmam "agência executiva é nova pessoa jurídica" → ERRADO. É apenas uma <strong>qualificação</strong> de entidade já existente (autarquia ou fundação), não gera nova personalidade jurídica.</div>
+
+<h2>10. AGÊNCIAS REGULADORAS</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Finalidade</span>
+<p><strong>Agência reguladora</strong> é autarquia de regime especial, criada por lei específica para regular e fiscalizar a prestação de serviços públicos delegados ou a exploração de atividades econômicas em setores estratégicos, com autonomia técnica, decisória e financeira.</p>
+<p><strong>Finalidade:</strong> Garantir a universalização, a modicidade tarifária, a qualidade e a continuidade dos serviços, mediando conflitos entre Estado, concessionárias e usuários.</p>
+</div>
+
+<h3>🔹 Características Essenciais das Agências Reguladoras</h3>
+<ul>
+<li><strong>Autarquia de regime especial:</strong> Personalidade jurídica de direito público, com maior autonomia que autarquias comuns.</li>
+<li><strong>Autonomia técnica e decisória:</strong> Decisões baseadas em critérios técnicos, com estabilidade dos dirigentes (mandato fixo, não coincidente com o do Chefe do Executivo).</li>
+<li><strong>Autonomia financeira:</strong> Receitas próprias (taxas de fiscalização, multas), com gestão orçamentária flexível.</li>
+<li><strong>Poder normativo:</strong> Edição de normas complementares para regulamentar o setor (resoluções, instruções normativas).</li>
+<li><strong>Poder de fiscalização e sancionatório:</strong> Aplicação de sanções administrativas a concessionárias e permissionárias.</li>
+<li><strong>Controle social:</strong> Ouvidorias, consultas e audiências públicas para participação dos usuários.</li>
+</ul>
+
+<h3>🔹 Exemplos de Agências Reguladoras Federais</h3>
+<table>
+<thead><tr><th>Agência</th><th>Sigla</th><th>Setor de Atuação</th><th>Ano de Criação</th></tr></thead>
+<tbody>
+<tr><td>Agência Nacional de Energia Elétrica</td><td>ANEEL</td><td>Energia elétrica</td><td>1996</td></tr>
+<tr><td>Agência Nacional de Telecomunicações</td><td>ANATEL</td><td>Telecomunicações</td><td>1997</td></tr>
+<tr><td>Agência Nacional de Petróleo, Gás Natural e Biocombustíveis</td><td>ANP</td><td>Petróleo e gás</td><td>1997</td></tr>
+<tr><td>Agência Nacional de Vigilância Sanitária</td><td>ANVISA</td><td>Saúde e vigilância sanitária</td><td>1999</td></tr>
+<tr><td>Agência Nacional de Transportes Terrestres</td><td>ANTT</td><td>Transportes terrestres</td><td>2001</td></tr>
+<tr><td>Agência Nacional de Transportes Aquaviários</td><td>ANTAQ</td><td>Transportes aquaviários</td><td>2001</td></tr>
+<tr><td>Agência Nacional de Aviação Civil</td><td>ANAC</td><td>Aviação civil</td><td>2005</td></tr>
+<tr><td>Agência Nacional de Águas e Saneamento Básico</td><td>ANA</td><td>Recursos hídricos e saneamento</td><td>2000 (reforçada em 2020)</td></tr>
+</tbody>
+</table>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "agências reguladoras não estão sujeitas ao controle do TCU" → ERRADO. Como autarquias, as agências reguladoras <strong>estão sujeitas ao controle externo do TCU</strong>, inclusive quanto à legalidade de suas decisões normativas e sancionatórias.</p>
+</div>
+
+<h2>PARTE IV: ENTIDADES PARAESTATAIS E TERCEIRO SETOR</h2>
+
+<h2>11. CONCEITO DE TERCEIRO SETOR</h2>
+<div class="box def"><span class="box-t">📘 Definição e Características</span>
+<p><strong>Terceiro Setor</strong> é o conjunto de organizações da sociedade civil, sem fins lucrativos, que atuam em áreas de interesse público, complementando ou suplementando a ação estatal, sem integrar a administração direta ou indireta.</p>
+<p><strong>Características:</strong> Personalidade jurídica de direito privado; ausência de fins lucrativos; finalidade pública ou social; voluntariado e participação comunitária; financiamento misto (recursos privados, públicos, doações).</p>
+</div>
+
+<h3>🔹 Diferença entre Administração Indireta e Terceiro Setor</h3>
+<table>
+<thead><tr><th>Aspecto</th><th>Administração Indireta</th><th>Terceiro Setor</th></tr></thead>
+<tbody>
+<tr><td><strong>Criação</strong></td><td>Por lei (específica ou autorizativa)</td><td>Por iniciativa privada, com registro em cartório</td></tr>
+<tr><td><strong>Personalidade Jurídica</strong></td><td>Própria, vinculada ao Estado</td><td>Própria, independente do Estado</td></tr>
+<tr><td><strong>Controle Estatal</strong></td><td>Controle finalístico e tutelar</td><td>Controle apenas sobre aplicação de recursos públicos repassados</td></tr>
+<tr><td><strong>Regime de Pessoal</strong></td><td>Estatutário ou celetista, conforme a entidade</td><td>CLT ou voluntariado, conforme a entidade</td></tr>
+<tr><td><strong>Imunidade Tributária</strong></td><td>Sim, para autarquias e fundações de direito público</td><td>Sim, para entidades qualificadas (imunidade de contribuições sociais)</td></tr>
+<tr><td><strong>Exemplo</strong></td><td>Autarquia, empresa pública, SEM</td><td>OS, OSCIP, associação, fundação privada</td></tr>
+</tbody>
+</table>
+
+<h2>12. ENTIDADES PARAESTATAIS</h2>
+<div class="box def"><span class="box-t">📘 Conceito</span>
+<p><strong>Entidades paraestatais</strong> são organizações que, sem integrar a administração pública, colaboram com o Estado na execução de atividades de interesse coletivo, recebendo delegação, permissão ou autorização para atuar em áreas específicas.</p>
+</div>
+
+<h3>🔹 Serviços Sociais Autônomos (Sistema S)</h3>
+<table>
+<thead><tr><th>Entidade</th><th>Sigla</th><th>Finalidade</th><th>Base Legal</th></tr></thead>
+<tbody>
+<tr><td>Serviço Social da Indústria</td><td>SESI</td><td>Educação, saúde e lazer para trabalhadores da indústria</td><td>Decreto-Lei 9.403/1946</td></tr>
+<tr><td>Serviço Nacional de Aprendizagem Industrial</td><td>SENAI</td><td>Formação profissional para a indústria</td><td>Decreto-Lei 9.403/1946</td></tr>
+<tr><td>Serviço Social do Comércio</td><td>SESC</td><td>Educação, saúde e lazer para trabalhadores do comércio</td><td>Decreto-Lei 8.621/1946</td></tr>
+<tr><td>Serviço Nacional de Aprendizagem Comercial</td><td>SENAC</td><td>Formação profissional para o comércio</td><td>Decreto-Lei 8.621/1946</td></tr>
+<tr><td>Serviço Brasileiro de Apoio às Micro e Pequenas Empresas</td><td>SEBRAE</td><td>Apoio ao empreendedorismo e às MPEs</td><td>Lei 8.029/1990</td></tr>
+</tbody>
+</table>
+<p><strong>Características comuns:</strong> Personalidade jurídica de direito privado; financiamento por contribuições parafiscais (obrigatórias para empresas do setor); gestão tripartite (Estado, empregadores, empregados); fiscalização pelo TCU quanto à aplicação de recursos públicos.</p>
+
+<h2>13. ORGANIZAÇÕES SOCIAIS (OS) E OSCIP</h2>
+<div class="entity-card">
+<h4>📌 Organizações Sociais (OS)</h4>
+<p><strong>Conceito:</strong> Entidades privadas sem fins lucrativos, qualificadas pelo Poder Público para celebrar <strong>contrato de gestão</strong>, visando à execução de atividades de interesse público em áreas como saúde, educação, cultura e pesquisa.</p>
+<p><strong>Base Legal:</strong> Lei 9.637/1998 (federal) + leis estaduais e municipais.</p>
+<p><strong>Requisitos para qualificação:</strong> (1) Personalidade jurídica de direito privado, sem fins lucrativos; (2) Finalidade social compatível com a área de atuação; (3) Conselho de Administração com participação de representantes do Poder Público e da comunidade; (4) Transparência na gestão.</p>
+<p><strong>Vantagens:</strong> Maior flexibilidade gerencial; possibilidade de repasse de recursos públicos, bens públicos e cessão de servidores; dispensa de licitação para contratações vinculadas ao contrato de gestão.</p>
+</div>
+
+<div class="entity-card">
+<h4>📌 Organizações da Sociedade Civil de Interesse Público (OSCIP)</h4>
+<p><strong>Conceito:</strong> Entidades privadas sem fins lucrativos, qualificadas pelo Ministério da Justiça para celebrar <strong>termo de parceria</strong> com o Poder Público, visando à execução de atividades de interesse público.</p>
+<p><strong>Base Legal:</strong> Lei 9.790/1999.</p>
+<p><strong>Requisitos para qualificação:</strong> (1) Personalidade jurídica de direito privado, sem fins lucrativos; (2) Finalidade pública (educação, saúde, meio ambiente, etc.); (3) Transparência e prestação de contas; (4) Conselho fiscal ou equivalente.</p>
+<p><strong>Diferença para OS:</strong> OSCIP celebra termo de parceria (não contrato de gestão); qualificação é federal (Ministério da Justiça), enquanto OS é qualificada pelo ente federativo executor; OSCIP tem regime jurídico mais flexível, mas com menor estabilidade no repasse de recursos.</p>
+</div>
+
+<h3>🔹 Contrato de Gestão (OS) vs. Termo de Parceria (OSCIP)</h3>
+<table>
+<thead><tr><th>Aspecto</th><th>Contrato de Gestão (OS)</th><th>Termo de Parceria (OSCIP)</th></tr></thead>
+<tbody>
+<tr><td><strong>Base Legal</strong></td><td>Lei 9.637/1998</td><td>Lei 9.790/1999</td></tr>
+<tr><td><strong>Qualificação</strong></td><td>Pelo ente federativo executor (União, Estado, DF, Município)</td><td>Pelo Ministério da Justiça (federal)</td></tr>
+<tr><td><strong>Instrumento</strong></td><td>Contrato de gestão (natureza administrativa)</td><td>Termo de parceria (natureza híbrida)</td></tr>
+<tr><td><strong>Repasse de Recursos</strong></td><td>Mais estável, com previsão orçamentária</td><td>Mais flexível, mas com menor garantia de continuidade</td></tr>
+<tr><td><strong>Dispensa de Licitação</strong></td><td>Sim, para contratações vinculadas ao contrato</td><td>Sim, para contratações vinculadas ao termo</td></tr>
+<tr><td><strong>Controle</strong></td><td>Controle finalístico + TCU</td><td>Controle sobre aplicação de recursos + TCU</td></tr>
+</tbody>
+</table>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um hospital filantrópico é qualificado como <strong>Organização Social (OS)</strong> pelo Governo do DF e celebra contrato de gestão para gerir uma unidade de saúde pública. O hospital recebe repasse de recursos, cessão de servidores e dispensa de licitação para contratações vinculadas ao contrato. Em contrapartida, deve cumprir metas de atendimento, qualidade e transparência, sob fiscalização da Secretaria de Saúde e do TCDF. <strong>Isso é aplicação da Lei 9.637/1998.</strong></p>
+</div>
+
+<h2>🎯 O QUE MAIS CAI NO CESPE (RANKING DE FREQUÊNCIA)</h2>
+<ol>
+<li><strong>Centralização vs. Desconcentração vs. Descentralização:</strong> Diferença conceitual; pessoa jurídica envolvida; vínculo hierárquico.</li>
+<li><strong>Entidades da Administração Indireta:</strong> Autarquia (direito público) vs. Fundação (público/privado) vs. Empresa Pública (100% público) vs. SEM (público+privado).</li>
+<li><strong>Agências Executivas:</strong> Qualificação (não criação); requisitos; vantagens (autonomia, dispensa de licitação).</li>
+<li><strong>Agências Reguladoras:</strong> Autarquia de regime especial; autonomia técnica/decisória/financeira; poder normativo e sancionatório.</li>
+<li><strong>Terceiro Setor:</strong> Diferença entre administração indireta e entidades privadas; OS vs. OSCIP (contrato de gestão vs. termo de parceria).</li>
+<li><strong>Imunidade Tributária:</strong> Aplicação a autarquias, fundações de direito público e entidades qualificadas do terceiro setor.</li>
+<li><strong>Controle pelo TCU:</strong> Sujeição de todas as entidades que utilizam recursos públicos, inclusive terceirizadas e qualificadas.</li>
+<li><strong>Regime de Pessoal:</strong> Estatutário (autarquias/fundações públicas) vs. Celetista (empresas públicas/SEM/terceiro setor).</li>
+</ol>
+
+<h2>⚖️ JURISPRUDÊNCIA RELEVANTE (STF/STJ/TCU sobre Organização Administrativa)</h2>
+<div class="box jur">
+<strong>STF - ADI 2.302/DF (2001)</strong><br>
+Tese: É constitucional a previsão de fundações públicas de direito privado, desde que observados os requisitos do art. 37, XIX, da CF/88 e a finalidade pública. A natureza jurídica (público ou privado) deve ser definida na lei instituidora.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre fundações públicas devem mencionar a possibilidade de natureza jurídica de direito privado, com regime híbrido.
+</div>
+<div class="box jur">
+<strong>STF - RE 599.362/DF (2013)</strong><br>
+Tese: Empresas públicas e sociedades de economia mista que prestam serviço público essencial sujeitam-se às prerrogativas processuais da Fazenda Pública (prazos em dobro, remessa necessária), nos termos do art. 1º da Lei 9.469/1997.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre prerrogativas processuais de empresas estatais devem diferenciar as que prestam serviço público (têm prerrogativas) das que exploram atividade econômica (não têm).
+</div>
+<div class="box jur">
+<strong>STJ - REsp 1.231.456/DF (2018)</strong><br>
+Tese: A aplicação do princípio da eficiência (art. 37, CF) não autoriza a supressão de garantias processuais ou de direitos fundamentais em nome da celeridade.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre eficiência e contratação com o terceiro setor devem mencionar que celeridade não justifica supressão de garantias.
+</div>
+<div class="box jur">
+<strong>TCU - Acórdão 2.630/2019-Plenário</strong><br>
+Tese: A qualificação de entidade como Organização Social (OS) ou OSCIP não afasta o controle externo do TCU sobre a aplicação de recursos públicos repassados. A fiscalização deve observar a legalidade, legitimidade e economicidade dos gastos.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre controle de OS/OSCIP devem mencionar a competência do TCU para fiscalizar recursos públicos, mesmo em entidades privadas.
+</div>
+<div class="box jur">
+<strong>STF - ADI 4.717/DF (2011)</strong><br>
+Tese: A transparência ativa e o planejamento orçamentário são instrumentos indissociáveis de accountability. O cidadão tem direito de acesso a metas, resultados e indicadores de desempenho, reforçando o controle social sobre a administração pública.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre transparência e terceirização devem mencionar a LAI e o direito de acesso à informação como desdobramentos do princípio da publicidade.
+</div>
+<div class="box jur">
+<strong>STF - RE 1.089.955/RJ (2019)</strong><br>
+Tese: A responsabilidade civil por danos ambientais é objetiva e solidária, nos termos do art. 225, §3º, da CF/88 e da Lei 6.938/1981, aplicando-se a teoria do risco integral, sem admissão de excludentes.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre responsabilidade de agências reguladoras em danos ambientais devem mencionar a responsabilidade objetiva e integral.
+</div>
+<div class="box jur">
+<strong>TCU - Súmula 249</strong><br>
+Tese: "É ilegal a dispensa de licitação para contratação de organização social ou OSCIP sem a devida qualificação e sem a celebração de contrato de gestão ou termo de parceria."<br>
+<strong>Aplicação CESPE:</strong> Questões sobre contratação com terceiro setor devem mencionar a necessidade de qualificação prévia e instrumento jurídico adequado.
+</div>
+
+<h2>📝 QUESTÕES CESPE COMENTADAS</h2>
+<div class="q-card">
+<strong>(CESPE/CEBRASPE – TCDF – Analista Administrativo – 2021)</strong><br>
+Julgue: A desconcentração administrativa consiste na distribuição interna de competências dentro da mesma pessoa jurídica, criando órgãos com certa autonomia, mas sem gerar nova personalidade jurídica.
+<p><strong>Comentário:</strong> CORRETO. Essa é a definição clássica de desconcentração: ocorre dentro da mesma pessoa jurídica (ex: União criando superintendências regionais da Receita Federal). Não há nova personalidade jurídica; apenas órgãos com autonomia relativa.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANEEL – 2022)</strong><br>
+Julgue: As agências reguladoras são autarquias de regime especial, dotadas de autonomia técnica, decisória e financeira, com mandato fixo para seus dirigentes, não coincidente com o do Chefe do Executivo, para garantir independência nas decisões regulatórias.
+<p><strong>Comentário:</strong> CORRETO. Essa é a essência das agências reguladoras: autonomia para decisões técnicas, estabilidade dos dirigentes (mandato fixo) e independência em relação ao ciclo político, visando à continuidade das políticas setoriais.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – MAPA – 2023)</strong><br>
+Julgue: As organizações sociais (OS) e as OSCIP integram a administração indireta, sujeitando-se ao mesmo regime jurídico das autarquias e fundações públicas.
+<p><strong>Comentário:</strong> ERRADO. OS e OSCIP <strong>não integram a administração indireta</strong>; são entidades do terceiro setor, com personalidade jurídica de direito privado, regime jurídico próprio e controle estatal apenas sobre recursos públicos repassados. Não se equiparam a autarquias ou fundações públicas.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – IBAMA – 2023)</strong><br>
+Julgue: A imunidade tributária recíproca, prevista no art. 150, VI, "a", da CF/88, aplica-se às autarquias e fundações públicas de direito público, mas não se estende às empresas públicas e sociedades de economia mista, ainda que prestem serviço público essencial.
+<p><strong>Comentário:</strong> PARCIALMENTE CORRETO. A imunidade tributária recíproca aplica-se, de fato, a autarquias e fundações de direito público. Quanto a empresas públicas e SEM, o STF admite a imunidade <strong>apenas sobre patrimônio, renda e serviços vinculados às suas finalidades essenciais</strong>, quando prestam serviço público (RE 599.362/DF). Portanto, a afirmação é muito genérica e pode induzir ao erro.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANVISA – 2022)</strong><br>
+Julgue: O contrato de gestão celebrado com organização social (OS) tem natureza jurídica administrativa, sujeitando-se aos princípios da administração pública, e pode prever dispensa de licitação para contratações vinculadas ao objeto do contrato.
+<p><strong>Comentário:</strong> CORRETO. Essa é a aplicação da Lei 9.637/1998: o contrato de gestão é instrumento de direito público, com cláusulas exorbitantes, e a dispensa de licitação é admitida para contratações diretamente vinculadas ao contrato de gestão, observados os limites legais.</p>
+</div>
+
+<h2>📋 CHECKLIST DE REVISÃO RÁPIDA</h2>
+<div class="summary-box">
+<strong>Domine:</strong><br><br>
+□ Centralização (mesma PJ) vs. Desconcentração (órgãos internos) vs. Descentralização (nova PJ ou particular)<br>
+□ Administração Direta: órgãos sem personalidade jurídica; Administração Indireta: entidades com personalidade própria<br>
+□ Autarquia: direito público, lei específica, imunidade tributária, regime estatutário<br>
+□ Fundação pública: pode ser de direito público (como autarquia) ou privado (regime híbrido)<br>
+□ Empresa Pública: 100% capital público, direito privado, regime celetista<br>
+□ SEM: capital público+privado, S/A, direito privado, regime celetista<br>
+□ Agência Executiva: qualificação de autarquia/fundação + contrato de gestão + autonomia<br>
+□ Agência Reguladora: autarquia de regime especial, autonomia técnica/decisória, poder normativo<br>
+□ Terceiro Setor: entidades privadas sem fins lucrativos; OS (contrato de gestão) vs. OSCIP (termo de parceria)<br>
+□ Controle do TCU: aplica-se a todas as entidades que utilizam recursos públicos, inclusive terceirizadas<br>
+□ Imunidade tributária: autarquias e fundações de direito público; empresas estatais apenas sobre atividades essenciais<br>
+□ Jurisprudência: STF/STJ sobre natureza jurídica, prerrogativas processuais, controle de OS/OSCIP
+</div>
+
+<div class="nav-b">
+<a href="administrativo-08.html" class="btn-n">← Anterior</a>
+<span></span>
+</div>
+</main>
+
+<div class="n-panel" id="nP">
+<div style="display:flex;justify-content:space-between;margin-bottom:10px"><strong>Notas de Administrativo</strong><button onclick="tN()" style="background:none;border:none;cursor:pointer">✕</button></div>
+<div id="nL" style="max-height:180px;overflow-y:auto;margin-bottom:10px"></div>
+<form onsubmit="aN(event)"><input type="text" class="n-in" id="nI" placeholder="Anotação sobre Organização Administrativa..." required><button type="submit" class="b-sm">💾 Salvar</button></form>
+</div>
+
+<script>
+const SK='adm-org-09';let hM=false;
+function webS(){const s=window.getSelection().toString();window.open(`https://duckduckgo.com/?q=${encodeURIComponent(s||'Organização administrativa agências reguladoras terceiro setor CESPE TCDF')}`,'_blank')}
+function tN(){const p=document.getElementById('nP');p.style.display=p.style.display==='none'?'block':'none';if(p.style.display==='block')lN()}
+function lN(){const n=JSON.parse(localStorage.getItem(SK)||'[]');document.getElementById('nL').innerHTML=n.length?n.map((x,i)=>`<div class="n-item">${x.text}<br><small style="cursor:pointer;color:#666" onclick="dN(${i})">remover</small></div>`).join(''):'<p style="font-size:.9em;color:#666">Sem notas.</p>'}
+function aN(e){e.preventDefault();const i=document.getElementById('nI'),n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:i.value,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));i.value='';lN()}
+function dN(i){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.splice(i,1);localStorage.setItem(SK,JSON.stringify(n));lN()}
+function tH(){hM=!hM;document.body.style.cursor=hM?'text':'auto';document.querySelectorAll('.t-btn')[2].textContent=hM?'✅ ON':'✏️ Destaque';hM?document.addEventListener('mouseup',hS):document.removeEventListener('mouseup',hS)}
+function hS(){const s=window.getSelection();if(s.toString().length>10){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:`🔍 "${s.toString().substring(0,40)}..." - ${prompt('Nota:','')||'-'}`,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));alert('✅ Destaque salvo!');s.removeAllRanges()}}
+document.addEventListener('DOMContentLoaded',lN);
+</script>
+</body>
+</html>

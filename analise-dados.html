@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Análise de Dados e Estatística | Fundamentos, Excel e Inferência - CESPE</title>
+<style>
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1;--jur:#e8f4fd;--data:#e3f2fd;--stat:#fff3e0;--excel:#e8f5e9}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,sans-serif;line-height:1.7;padding-top:70px}
+a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+h1{font-size:1.9em;margin-bottom:12px;color:var(--lil);line-height:1.3}
+h2{font-size:1.5em;margin:32px 0 16px;color:var(--text);padding-bottom:8px;border-bottom:2px solid var(--lil-l)}
+h3{font-size:1.25em;margin:24px 0 14px;color:var(--lil-d);font-weight:600}
+h4{font-size:1.1em;margin:18px 0 10px;color:var(--lil);font-weight:600}
+p{margin-bottom:14px;color:var(--text);text-align:justify}
+ul,ol{margin:0 0 16px 22px;color:var(--text)}
+li{margin-bottom:7px}
+.box{background:var(--card);border-radius:8px;padding:18px;margin:22px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}.box.jur{background:var(--jur);border-color:#3b82f6}.box.data{background:var(--data);border-color:#2196f3}.box.stat{background:var(--stat);border-color:#ff9800}.box.excel{background:var(--excel);border-color:#4caf50}
+.box-t{font-weight:700;margin-bottom:10px;display:block;color:var(--text);font-size:1.05em}
+table{width:100%;border-collapse:collapse;margin:22px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:12px 14px;border-bottom:1px solid var(--lil-d);font-size:.95em}
+td{padding:11px 14px;border-bottom:1px solid var(--lil-l);color:var(--text);font-size:.95em}
+tr:hover td{background:var(--lil-l)}
+tr:last-child td{border-bottom:none}
+.nav-b{display:flex;justify-content:space-between;margin-top:44px;padding-top:22px;border-top:1px solid var(--lil-d)}
+.btn-n{padding:11px 22px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none;font-size:.95em;transition:all .2s}
+.btn-n:hover{background:var(--lil-d);color:#fff;transform:translateY(-1px)}
+.tools{position:fixed;bottom:22px;right:22px;display:flex;flex-direction:column;gap:11px;z-index:99}
+.t-btn{background:var(--card);border:2px solid var(--lil-d);padding:11px 15px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;color:var(--text);box-shadow:0 3px 10px rgba(0,0,0,.1);font-size:.9em;transition:all .2s}
+.t-btn:hover{transform:translateY(-2px);background:var(--lil-l)}
+.n-panel{position:fixed;bottom:72px;right:22px;width:290px;background:var(--card);border:2px solid var(--lil-d);border-radius:12px;padding:17px;display:none;box-shadow:0 5px 15px rgba(0,0,0,.15);z-index:100}
+.n-item{background:var(--lil-l);padding:11px;border-radius:6px;margin-bottom:9px;font-size:.9em}
+.n-in{width:100%;padding:9px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:9px;font-size:.95em}
+.b-sm{padding:7px 13px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em;font-weight:500}
+@media(max-width:750px){.container{padding:17px}header{flex-direction:column;align-items:flex-start;gap:11px}.nav-b{flex-direction:column;gap:11px}.btn-n{width:100%;text-align:center}}
+.box img{width:100%;height:auto;display:block;margin:16px 0;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.q-card{background:var(--warn);border-left:4px solid #f59e0b;padding:17px;margin:22px 0;border-radius:0 8px 8px 0}
+.q-card strong{color:#856404;font-weight:600}
+.cespe-tip{background:#fef3c7;border-left:4px solid #f59e0b;padding:13px;margin:16px 0;font-size:.95em;border-radius:0 6px 6px 0}
+.mnemonic{background:linear-gradient(135deg,var(--lil-l),#f5f3ff);padding:13px 17px;border-radius:8px;margin:16px 0;font-weight:600;color:var(--lil-d);border:1px solid var(--lil-l)}
+.summary-box{background:var(--def);padding:17px;border-radius:8px;margin:22px 0;border:1px solid var(--lil-l)}
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px;margin:16px 0}
+.comp-item{background:var(--bg-secondary);padding:12px;border-radius:6px;font-size:.95em;border-left:3px solid var(--lil)}
+.formula-box{background:var(--card);border:2px solid var(--lil-d);border-radius:8px;padding:16px;margin:14px 0;font-family:monospace;font-size:1.05em;text-align:center;color:var(--lil-d);font-weight:600}
+.step-box{background:var(--card);border-left:4px solid var(--lil-d);padding:14px;margin:12px 0;border-radius:0 6px 6px 0}
+.step-num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;background:var(--lil);color:#fff;border-radius:50%;font-weight:700;font-size:.85em;margin-right:8px}
+.highlight{background:#fff9c4;padding:2px 6px;border-radius:3px;font-weight:500}
+.code{background:#f1f5f9;padding:2px 6px;border-radius:4px;font-family:monospace;font-size:.9em;color:#1e293b}
+.flow-diagram{background:var(--card);border:1px solid var(--lil-l);border-radius:8px;padding:16px;margin:14px 0;text-align:center}
+.flow-step{display:inline-block;padding:8px 16px;margin:5px;background:var(--lil-l);border-radius:20px;font-weight:500;color:var(--lil)}
+.flow-arrow{color:var(--lil-d);font-size:1.2em;margin:0 10px}
+.pyramid{display:flex;flex-direction:column;align-items:center;gap:4px;margin:16px 0}
+.pyramid-level{width:100%;max-width:400px;padding:10px;text-align:center;border-radius:4px;font-weight:600}
+.pyramid-intel{background:#9c27b0;color:#fff}.pyramid-know{background:#3f51b5;color:#fff}.pyramid-info{background:#2196f3;color:#fff}.pyramid-data{background:#607d8b;color:#fff}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="back">← Dashboard</a><div class="nav-t">Análise de Dados e Estatística</div></header>
+<main class="container">
+<h1>📊 Análise de Dados e Noções de Estatística: Fundamentos, Excel e Inferência</h1>
+<p><strong>Foco CESPE:</strong> A banca cobra exaustivamente a hierarquia DIKW (Dado → Informação → Conhecimento → Inteligência), a distinção entre dados estruturados e não estruturados, os princípios de dados abertos, o ciclo de vida dos dados (coleta, tratamento, armazenamento, integração, recuperação), os tipos de análise (descritiva, exploratória, explanatória, preditiva, prescritiva), funções do Excel (Power Query, tabelas dinâmicas, fórmulas lógicas/financeiras/texto, formatação condicional, gráficos, macros/VBA), e conceitos estatísticos (variáveis, distribuição de frequências, medidas de posição/dispersão, correlação, box-plot, outliers, distribuições binomial/normal, inferência estatística, intervalos de confiança, testes de hipóteses). Questões frequentemente confundem tipos de análise, invertem fórmulas estatísticas ou cobram a aplicação prática de funções do Excel em contextos de controle externo. O CESPE prefere questões de Certo/Errado com foco em <strong>interpretação conceitual</strong> e <strong>aplicação prática</strong>, não em cálculos manuais extensos.</p>
+
+<h2>1. HIERARQUIA DIKW: DADO, INFORMAÇÃO, CONHECIMENTO E INTELIGÊNCIA</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Evolução do Valor dos Dados</span>
+<p>A hierarquia <strong>DIKW</strong> (Data, Information, Knowledge, Wisdom/Intelligence) representa a transformação progressiva de elementos brutos em insights acionáveis para tomada de decisão.</p>
+</div>
+
+<div class="pyramid">
+<div class="pyramid-level pyramid-intel">🧠 Inteligência (Wisdom)</div>
+<div class="pyramid-level pyramid-know">💡 Conhecimento (Knowledge)</div>
+<div class="pyramid-level pyramid-info">📋 Informação (Information)</div>
+<div class="pyramid-level pyramid-data">🔢 Dado (Data)</div>
+</div>
+
+<h3>🔹 Definições e Características</h3>
+<table>
+<thead><tr><th>Nível</th><th>Descrição</th><th>Exemplo Prático (Contexto TCDF)</th><th>Características Principais</th></tr></thead>
+<tbody>
+<tr><td><strong>Dado</strong></td><td>Registro bruto, simbólico, sem contexto ou significado intrínseco. Representa fatos isolados.</td><td>"150", "2024", "R$ 5.000", "Servidor X"</td><td>• Atomicidade<br>• Neutralidade<br>• Requer interpretação<br>• Pode ser quantitativo ou qualitativo</td></tr>
+<tr><td><strong>Informação</strong></td><td>Dados processados, organizados e contextualizados, que respondem a perguntas básicas (quem, o quê, quando, onde).</td><td>"Servidor X recebeu R$ 5.000 em janeiro de 2024"</td><td>• Contextualização<br>• Relevância<br>• Responde a perguntas descritivas<br>• Base para análise</td></tr>
+<tr><td><strong>Conhecimento</strong></td><td>Informação combinada com experiência, regras e entendimento, permitindo responder "como" e "por quê".</td><td>"O salário de R$ 5.000 do Servidor X está dentro da faixa salarial do cargo Y, conforme a tabela de vencimentos do TCDF"</td><td>• Aplicação prática<br>• Baseado em experiência<br>• Permite tomada de decisão operacional<br>• Transferível entre pessoas</td></tr>
+<tr><td><strong>Inteligência</strong></td><td>Conhecimento aplicado estrategicamente para prever tendências, identificar padrões complexos e orientar decisões de alto impacto.</td><td>"A análise histórica indica que aumentos salariais acima de 10% em cargos de nível Z geram desequilíbrio na folha; recomenda-se revisão da política de progressão"</td><td>• Visão estratégica<br>• Capacidade preditiva<br>• Geração de valor organizacional<br>• Suporte a decisões complexas</td></tr>
+</tbody>
+</table>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p><strong>Cenário:</strong> Auditoria de despesas com diárias no TCDF.<br><br>
+• <strong>Dado:</strong> "R$ 1.200", "Brasília", "05/03/2024", "Servidor A"<br>
+• <strong>Informação:</strong> "Servidor A recebeu diária de R$ 1.200 para missão em Brasília em 05/03/2024"<br>
+• <strong>Conhecimento:</strong> "O valor de R$ 1.200 está acima do limite de R$ 800 para diárias nacionais, conforme Portaria TCDF nº XX/2023"<br>
+• <strong>Inteligência:</strong> "Padrão recorrente de diárias acima do limite no setor X indica necessidade de revisão dos controles internos e capacitação dos gestores"<br><br>
+<strong>Aplicação:</strong> O auditor transforma dados brutos em inteligência acionável para melhoria da gestão.</p>
+</div>
+
+<div class="mnemonic">🧠 MACETE: "D-I-K-I" → Dado (bruto), Informação (contexto), Conhecimento (como/porquê), Inteligência (estratégia/predição). Memorize a evolução do valor!</div>
+
+<h2>2. DADOS ESTRUTURADOS E NÃO ESTRUTURADOS</h2>
+<div class="box def"><span class="box-t">📘 Classificação pela Organização dos Dados</span>
+<p>A estruturação dos dados define como eles são armazenados, processados e analisados, impactando diretamente as ferramentas e técnicas aplicáveis.</p>
+</div>
+
+<h3>🔹 Comparação Detalhada</h3>
+<table>
+<thead><tr><th>Característica</th><th>Dados Estruturados</th><th>Dados Não Estruturados</th><th>Dados Semiestruturados</th></tr></thead>
+<tbody>
+<tr><td><strong>Definição</strong></td><td>Organizados em formato tabular, com schema predefinido (linhas e colunas)</td><td>Sem formato fixo; não seguem modelo de dados predefinido</td><td>Possuem alguma organização, mas não em formato tabular rígido</td></tr>
+<tr><td><strong>Exemplos</strong></td><td>Planilhas Excel, tabelas SQL, CSV, bancos de dados relacionais</td><td>E-mails, documentos PDF, imagens, vídeos, áudios, posts em redes sociais</td><td>JSON, XML, logs de sistema, e-mails com metadados</td></tr>
+<tr><td><strong>Armazenamento</strong></td><td>Bancos de dados relacionais (MySQL, PostgreSQL, SQL Server)</td><td>Data lakes, sistemas de arquivos, repositórios de documentos</td><td>Bancos NoSQL (MongoDB), sistemas híbridos</td></tr>
+<tr><td><strong>Processamento</strong></td><td>SQL, ferramentas de BI tradicionais, Excel</td><td>Processamento de linguagem natural, visão computacional, mineração de texto</td><td>Parsers específicos, APIs, ferramentas de ETL</td></tr>
+<tr><td><strong>Análise</strong></td><td>Estatística descritiva, modelagem preditiva, relatórios estruturados</td><td>Análise de sentimentos, reconhecimento de padrões, extração de entidades</td><td>Transformação para estruturado, análise híbrida</td></tr>
+<tr><td><strong>Volume típico</strong></td><td>10-20% dos dados corporativos</td><td>80-90% dos dados corporativos</td><td>Crescente com adoção de APIs e web services</td></tr>
+<tr><td><strong>Desafios</strong></td><td>Escalabilidade, integração entre sistemas</td><td>Extração de significado, qualidade, governança</td><td>Padronização, transformação, consistência</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Aplicação no Controle Externo (TCDF)</h3>
+<div class="comp-grid">
+<div class="comp-item"><strong>Dados Estruturados:</strong><br>• Planilhas de execução orçamentária<br>• Registros de empenho no SIAFEM<br>• Cadastro de servidores<br>• Resultados de licitações em banco de dados</div>
+<div class="comp-item"><strong>Dados Não Estruturados:</strong><br>• Pareceres técnicos em PDF<br>• E-mails de comunicação interna<br>• Gravações de sessões do TCDF<br>• Documentos digitalizados de processos</div>
+<div class="comp-item"><strong>Dados Semiestruturados:</strong><br>• Logs de acesso a sistemas<br>• Metadados de documentos<br>• APIs de integração entre sistemas<br>• Relatórios em XML/JSON</div>
+</div>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "dados em planilhas Excel são sempre estruturados" → PARCIALMENTE ERRADO. Embora planilhas tenham estrutura tabular, se contiverem células com texto livre, comentários, formatação inconsistente ou dados mesclados, podem apresentar características de dados <strong>semiestruturados</strong> ou até <strong>não estruturados</strong> para fins de análise automatizada.</p>
+</div>
+
+<h2>3. DADOS ABERTOS</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Princípios</span>
+<p><strong>Dados abertos</strong> são dados que podem ser livremente utilizados, reutilizados e redistribuídos por qualquer pessoa, sujeitos apenas, no máximo, à exigência de atribuição da fonte e compartilhamento pela mesma licença.</p>
+</div>
+
+<h3>🔹 Princípios dos Dados Abertos (Open Data Charter)</h3>
+<ol>
+<li><strong>Dados abertos por padrão:</strong> A abertura deve ser a regra; o sigilo, a exceção justificada.</li>
+<li><strong>Qualidade e quantidade:</strong> Dados devem ser completos, primários, atualizados, acessíveis e machine-readable.</li>
+<li><strong>Utilizáveis por todos:</strong> Sem discriminação de usuários ou finalidades.</li>
+<li><strong>Para melhorar a governança:</strong> Transparência, accountability e participação social.</li>
+<li><strong>Para inovação:</strong> Fomento ao desenvolvimento econômico e social.</li>
+</ol>
+
+<h3>🔹 Requisitos Técnicos para Dados Abertos</h3>
+<table>
+<thead><tr><th>Requisito</th><th>Descrição</th><th>Exemplo de Aplicação</th></tr></thead>
+<tbody>
+<tr><td><strong>Disponibilidade e acesso</strong></td><td>Dados disponíveis em formato digital, preferencialmente via internet, sem custo ou com custo marginal</td><td>Portal da Transparência do TCDF com download de datasets em CSV</td></tr>
+<tr><td><strong>Reutilização e redistribuição</strong></td><td>Licença que permita uso, modificação e compartilhamento, inclusive para fins comerciais</td><td>Licença Creative Commons CC-BY para datasets públicos</td></tr>
+<tr><td><strong>Participação universal</strong></td><td>Sem barreiras discriminatórias; acesso igualitário a todos os usuários</td><td>APIs públicas com autenticação simples e documentação aberta</td></tr>
+<tr><td><strong>Formato aberto e machine-readable</strong></td><td>Formatos não proprietários, legíveis por máquina (CSV, JSON, XML), com metadados descritivos</td><td>Exportação de dados de licitações em CSV com dicionário de dados</td></tr>
+<tr><td><strong>Granularidade e primariedade</strong></td><td>Dados no nível mais detalhado possível, na fonte original, sem agregações prévias</td><td>Registro de cada empenho individual, não apenas totais por órgão</td></tr>
+<tr><td><strong>Atualização e temporalidade</strong></td><td>Atualização frequente, com histórico e indicação de periodicidade</td><td>Atualização mensal da execução orçamentária com série histórica</td></tr>
+</tbody>
+</table>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p><strong>Cenário:</strong> Publicação de dados de contratos do TCDF como dados abertos.<br><br>
+<strong>Conformidade com princípios:</strong><br>
+• Formato: CSV (aberto, machine-readable) + JSON para API<br>
+• Licença: CC-BY 4.0 (permite reuso com atribuição)<br>
+• Granularidade: Registro por contrato, com campos: número, objeto, valor, fornecedor, datas, status<br>
+• Atualização: Mensal, com histórico desde 2020<br>
+• Acesso: Download direto + API REST com documentação Swagger<br><br>
+<strong>Benefícios:</strong> Jornalistas podem cruzar dados com outras fontes; pesquisadores podem analisar padrões de contratação; cidadãos podem monitorar gastos públicos.</p>
+</div>
+
+<h2>4. CICLO DE VIDA DOS DADOS: COLETA, TRATAMENTO, ARMAZENAMENTO, INTEGRAÇÃO E RECUPERAÇÃO</h2>
+<div class="box def"><span class="box-t">📘 Etapas do Gerenciamento de Dados</span>
+<p>O ciclo de vida dos dados compreende as fases pelas quais os dados passam, desde sua geração até o descarte, garantindo qualidade, segurança e valor ao longo do tempo.</p>
+</div>
+
+<h3>🔹 Detalhamento das Etapas</h3>
+<ol>
+<li><span class="step-num">1</span><strong>Coleta (Aquisição)</strong>
+<ul>
+<li><strong>Objetivo:</strong> Capturar dados relevantes de fontes internas e externas.</li>
+<li><strong>Técnicas:</strong> Formulários, sensores, APIs, web scraping, importação de arquivos, integração de sistemas.</li>
+<li><strong>Desafios:</strong> Qualidade na fonte, consentimento (LGPD), volume, variedade.</li>
+<li><strong>Exemplo TCDF:</strong> Importação automática de empenhos do SIAFEM via API; coleta de pareceres via formulário eletrônico.</li>
+</ul>
+</li>
+
+<li><span class="step-num">2</span><strong>Tratamento (Preparação/Limpeza)</strong>
+<ul>
+<li><strong>Objetivo:</strong> Transformar dados brutos em dados analiticamente úteis.</li>
+<li><strong>Atividades:</strong>
+<ul>
+<li>Limpeza: remoção de duplicatas, correção de erros, tratamento de missing values</li>
+<li>Padronização: formatos de data, moeda, codificação de categorias</li>
+<li>Enriquecimento: derivação de novas variáveis, junção com fontes externas</li>
+<li>Validação: regras de negócio, consistência lógica</li>
+</ul>
+</li>
+<li><strong>Ferramentas:</strong> Excel (Power Query), Python (pandas), R, ETL tools (Talend, Informatica).</li>
+<li><strong>Exemplo TCDF:</strong> Padronizar códigos de órgãos; tratar valores nulos em campos obrigatórios; validar se soma de parcelas = valor total do contrato.</li>
+</ul>
+</li>
+
+<li><span class="step-num">3</span><strong>Armazenamento</strong>
+<ul>
+<li><strong>Objetivo:</strong> Guardar dados de forma segura, escalável e acessível.</li>
+<li><strong>Tipos de repositórios:</strong>
+<ul>
+<li><strong>Bancos relacionais:</strong> Dados estruturados, transacionais (SQL Server, PostgreSQL)</li>
+<li><strong>Data warehouses:</strong> Dados históricos para análise (modelagem dimensional)</li>
+<li><strong>Data lakes:</strong> Dados brutos, estruturados e não estruturados (Hadoop, cloud storage)</li>
+<li><strong>Bancos NoSQL:</strong> Dados semiestruturados, alta escalabilidade (MongoDB, Cassandra)</li>
+</ul>
+</li>
+<li><strong>Considerações:</strong> Backup, recuperação de desastres, governança, conformidade (LGPD).</li>
+</ul>
+</li>
+
+<li><span class="step-num">4</span><strong>Integração</strong>
+<ul>
+<li><strong>Objetivo:</strong> Combinar dados de múltiplas fontes para visão unificada.</li>
+<li><strong>Desafios:</strong> Heterogeneidade de formatos, conflitos semânticos, qualidade inconsistente.</li>
+<li><strong>Técnicas:</strong>
+<ul>
+<li><strong>ETL (Extract, Transform, Load):</strong> Extração, transformação e carregamento em batch</li>
+<li><strong>ELT (Extract, Load, Transform):</strong> Carregamento primeiro, transformação depois (cloud-native)</li>
+<li><strong>APIs e web services:</strong> Integração em tempo real</li>
+<li><strong>Master Data Management (MDM):</strong> Gestão de dados mestres (ex: cadastro único de servidores)</li>
+</ul>
+</li>
+<li><strong>Exemplo TCDF:</strong> Integrar dados do SIAFEM (financeiro), SIGAD (processos) e RH (pessoas) para auditoria transversal.</li>
+</ul>
+</li>
+
+<li><span class="step-num">5</span><strong>Recuperação (Acesso e Disseminação)</strong>
+<ul>
+<li><strong>Objetivo:</strong> Disponibilizar dados para análise, relatórios e tomada de decisão.</li>
+<li><strong>Mecanismos:</strong>
+<ul>
+<li>Consultas SQL e linguagens de consulta</li>
+<li>Ferramentas de BI (Power BI, Tableau, Qlik)</li>
+<li>APIs para consumo externo</li>
+<li>Portais de dados abertos</li>
+</ul>
+</li>
+<li><strong>Controles:</strong> Autenticação, autorização, auditoria de acesso, máscara de dados sensíveis.</li>
+</ul>
+</li>
+</ol>
+
+<div class="flow-diagram">
+<div class="flow-step">Coleta</div>
+<span class="flow-arrow">→</span>
+<div class="flow-step">Tratamento</div>
+<span class="flow-arrow">→</span>
+<div class="flow-step">Armazenamento</div>
+<span class="flow-arrow">→</span>
+<div class="flow-step">Integração</div>
+<span class="flow-arrow">→</span>
+<div class="flow-step">Recuperação</div>
+<span class="flow-arrow">→</span>
+<div class="flow-step">Análise/Decisão</div>
+</div>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "a etapa de tratamento de dados ocorre apenas após o armazenamento" → ERRADO. Na prática moderna (especialmente com ELT e ferramentas como Power Query), o tratamento pode ocorrer <strong>durante a coleta</strong> (ex: validação na entrada) ou <strong>após o carregamento</strong> no data lake. O ciclo é iterativo, não estritamente linear.</p>
+</div>
+
+<h2>5. REPRESENTAÇÃO DE DADOS: NUMÉRICOS, TEXTUAIS E ESTRUTURADOS</h2>
+<div class="box def"><span class="box-t">📘 Formas de Codificação e Estruturação</span>
+<p>A representação dos dados define como eles são codificados para armazenamento e processamento, impactando a eficiência das análises e a precisão dos resultados.</p>
+</div>
+
+<h3>🔹 Tipos de Dados e Representações</h3>
+<table>
+<thead><tr><th>Tipo de Dado</th><th>Descrição</th><th>Exemplos</th><th>Representação Típica</th><th>Considerações para Análise</th></tr></thead>
+<tbody>
+<tr><td><strong>Números Inteiros</strong></td><td>Valores discretos sem parte decimal</td><td>Quantidade de servidores, número de processos, código de órgão</td><td>int, integer, BIGINT</td><td>Operações aritméticas exatas; cuidado com overflow</td></tr>
+<tr><td><strong>Números Reais (Ponto Flutuante)</strong></td><td>Valores contínuos com parte decimal</td><td>Valores monetários, percentuais, médias salariais</td><td>float, decimal, numeric</td><td>Preferir decimal para valores monetários (evita erros de arredondamento)</td></tr>
+<tr><td><strong>Texto (Strings)</strong></td><td>Sequências de caracteres alfanuméricos</td><td>Nomes, descrições de objetos, pareceres, justificativas</td><td>varchar, text, nvarchar</td><td>Normalização (maiúsculas/minúsculas), remoção de acentos, tokenização para NLP</td></tr>
+<tr><td><strong>Datas e Horários</strong></td><td>Instantes ou períodos no tempo</td><td>Data de empenho, prazo de contrato, timestamp de acesso</td><td>date, datetime, timestamp</td><td>Timezone, formato padrão (ISO 8601: YYYY-MM-DD), cálculos de intervalo</td></tr>
+<tr><td><strong>Booleanos</strong></td><td>Valores lógicos binários</td><td>Aprovado/reprovado, ativo/inativo, conforme/não conforme</td><td>boolean, bit, tinyint(1)</td><td>Consistência na codificação (0/1, TRUE/FALSE, S/N)</td></tr>
+<tr><td><strong>Categóricos (Qualitativos)</strong></td><td>Valores que representam categorias discretas</td><td>Tipo de licitação (pregão, concorrência), situação do contrato (vigente, encerrado)</td><td>enum, varchar com domínio restrito</td><td>One-hot encoding para modelos estatísticos; evitar ordenação arbitrária</td></tr>
+<tr><td><strong>Estruturados Complexos</strong></td><td>Dados com hierarquia ou aninhamento</td><td>JSON de metadados, XML de pareceres, array de itens de contrato</td><td>JSON, XML, arrays, structs</td><td>Flatten para análise tabular; manter estrutura para APIs</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Boas Práticas de Representação</h3>
+<ul>
+<li><strong>Consistência:</strong> Usar o mesmo formato para o mesmo tipo de dado em todo o sistema (ex: sempre "YYYY-MM-DD" para datas).</li>
+<li><strong>Documentação:</strong> Manter dicionário de dados com descrição, tipo, domínio e regras de cada campo.</li>
+<li><strong>Normalização:</strong> Para dados textuais: padronizar maiúsculas/minúsculas, remover espaços extras, tratar acentos.</li>
+<li><strong>Codificação de categorias:</strong> Usar códigos curtos e estáveis (ex: "PREG" para pregão) em vez de descrições longas.</li>
+<li><strong>Tratamento de missing values:</strong> Distinguir entre "não se aplica", "não informado" e "valor nulo"; documentar a convenção adotada.</li>
+<li><strong>Metadados:</strong> Incluir informações sobre fonte, data de coleta, responsável e qualidade dos dados.</li>
+</ul>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p><strong>Cenário:</strong> Representação de valores monetários em planilha de auditoria.<br><br>
+<strong>Representação inadequada:</strong><br>
+• "R$ 1.234,56" como texto → impede cálculos<br>
+• "1234.56" sem indicação de moeda → ambiguidade<br>
+• "1,234.56" (formato US) em sistema BR → erro de interpretação<br><br>
+<strong>Representação adequada:</strong><br>
+• Tipo: decimal(15,2)<br>
+• Valor: 1234.56 (ponto como separador decimal)<br>
+• Metadado: moeda = "BRL", precisão = 2 casas<br>
+• Formatação de exibição: "R$ 1.234,56" (apenas para visualização)<br><br>
+<strong>Benefício:</strong> Cálculos precisos, integração com sistemas financeiros, conformidade com padrões contábeis.</p>
+</div>
+
+<h2>6. TIPOS DE ANÁLISE DE DADOS</h2>
+<div class="box def"><span class="box-t">📘 Classificação por Objetivo e Complexidade</span>
+<p>As análises de dados podem ser categorizadas conforme o nível de insight gerado e a complexidade das técnicas empregadas, formando um continuum de valor analítico.</p>
+</div>
+
+<h3>🔹 Os Cinco Tipos de Análise (Gartner Analytics Ascend Model)</h3>
+<table>
+<thead><tr><th>Tipo de Análise</th><th>Pergunta Central</th><th>Técnicas Típicas</th><th>Exemplo no TCDF</th><th>Complexidade</th></tr></thead>
+<tbody>
+<tr><td><strong>Descritiva</strong></td><td>"O que aconteceu?"</td><td>Estatística descritiva, agregações, relatórios, dashboards</td><td>"Qual o total gasto com diárias por órgão em 2024?"</td><td>Baixa</td></tr>
+<tr><td><strong>Exploratória</strong></td><td>"Quais padrões ou anomalias existem?"</td><td>Análise de outliers, correlações, visualizações interativas, mineração de dados</td><td>"Existem órgãos com padrão atípico de despesas com viagens?"</td><td>Média</td></tr>
+<tr><td><strong>Explanatória (Diagnóstica)</strong></td><td>"Por que aconteceu?"</td><td>Análise de causa raiz, segmentação, testes de hipóteses, modelagem estatística</td><td>"Por que o órgão X teve aumento de 300% em diárias no último trimestre?"</td><td>Média-Alta</td></tr>
+<tr><td><strong>Preditiva</strong></td><td>"O que provavelmente acontecerá?"</td><td>Regressão, séries temporais, machine learning, simulações</td><td>"Qual a projeção de despesas com licitações para os próximos 6 meses?"</td><td>Alta</td></tr>
+<tr><td><strong>Prescritiva</strong></td><td>"O que devemos fazer?"</td><td>Otimização, simulação de cenários, sistemas de recomendação, IA generativa</td><td>"Qual a alocação ótima de auditores para maximizar a detecção de irregularidades?"</td><td>Muito Alta</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Características e Aplicações Práticas</h3>
+<div class="comp-grid">
+<div class="comp-item"><strong>Descritiva:</strong><br>• Foco: Resumo do passado<br>• Saída: Relatórios estáticos, KPIs<br>• Ferramentas: Excel, SQL, BI básico<br>• Valor: Monitoramento operacional</div>
+<div class="comp-item"><strong>Exploratória:</strong><br>• Foco: Descoberta de insights<br>• Saída: Hipóteses, visualizações<br>• Ferramentas: Python/R, Tableau, Power BI avançado<br>• Valor: Identificação de oportunidades/risco</div>
+<div class="comp-item"><strong>Explanatória:</strong><br>• Foco: Compreensão causal<br>• Saída: Modelos explicativos, fatores de influência<br>• Ferramentas: Estatística inferencial, regressão<br>• Valor: Fundamentação de decisões corretivas</div>
+<div class="comp-item"><strong>Preditiva:</strong><br>• Foco: Antecipação de eventos<br>• Saída: Probabilidades, cenários futuros<br>• Ferramentas: Machine learning, séries temporais<br>• Valor: Planejamento proativo, prevenção</div>
+<div class="comp-item"><strong>Prescritiva:</strong><br>• Foco: Otimização de ações<br>• Saída: Recomendações acionáveis, planos<br>• Ferramentas: Otimização, simulação, IA<br>• Valor: Maximização de resultados estratégicos</div>
+</div>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "análise preditiva e prescritiva são sinônimos" → ERRADO. A análise <strong>preditiva</strong> responde "o que provavelmente acontecerá" (foco em previsão). A análise <strong>prescritiva</strong> vai além, respondendo "o que devemos fazer" (foco em recomendação de ações). A prescritiva geralmente incorpora a preditiva como insumo.</p>
+</div>
+
+<h2>7. TOMADA DE DECISÃO BASEADA EM DADOS (Data-Driven Decision Making)</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Pilares</span>
+<p><strong>Tomada de decisão baseada em dados</strong> é o processo sistemático de coletar, analisar e interpretar dados para fundamentar escolhas estratégicas, táticas e operacionais, reduzindo a dependência de intuição ou viés cognitivo.</p>
+</div>
+
+<h3>🔹 Pilares da Decisão Data-Driven</h3>
+<ol>
+<li><strong>Qualidade dos dados:</strong> Dados precisos, completos, atualizados e relevantes são pré-requisito para decisões confiáveis.</li>
+<li><strong>Contexto organizacional:</strong> Dados devem ser interpretados à luz dos objetivos, restrições e cultura da organização.</li>
+<li><strong>Competência analítica:</strong> Capacidade da equipe de transformar dados em insights acionáveis.</li>
+<li><strong>Cultura data-driven:</strong> Valorização da evidência empírica sobre opinião ou hierarquia.</li>
+<li><strong>Ética e conformidade:</strong> Uso responsável dos dados, respeitando privacidade (LGPD) e transparência.</li>
+</ol>
+
+<h3>🔹 Processo de Decisão Baseada em Dados</h3>
+<div class="step-box">
+<span class="step-num">1</span><strong>Definir o problema decisório:</strong> Qual decisão precisa ser tomada? Quais são os critérios de sucesso?<br>
+<span class="step-num">2</span><strong>Identificar dados relevantes:</strong> Quais dados internos/externos podem informar a decisão?<br>
+<span class="step-num">3</span><strong>Coletar e preparar dados:</strong> Garantir qualidade, integridade e representatividade dos dados.<br>
+<span class="step-num">4</span><strong>Analisar e modelar:</strong> Aplicar técnicas estatísticas ou de machine learning para extrair padrões e insights.<br>
+<span class="step-num">5</span><strong>Interpretar resultados:</strong> Traduzir achados analíticos em implicações práticas para a decisão.<br>
+<span class="step-num">6</span><strong>Comunicar e decidir:</strong> Apresentar evidências de forma clara aos decisores; tomar a decisão com base nas evidências.<br>
+<span class="step-num">7</span><strong>Monitorar e ajustar:</strong> Acompanhar os resultados da decisão; usar feedback para refinar modelos futuros.
+</div>
+
+<h3>🔹 Armadilhas Comuns e Como Evitá-las</h3>
+<table>
+<thead><tr><th>Armadilha</th><th>Descrição</th><th>Estratégia de Mitigação</th></tr></thead>
+<tbody>
+<tr><td><strong>Correlação ≠ Causalidade</strong></td><td>Assumir que duas variáveis correlacionadas têm relação causal</td><td>Realizar testes de causalidade; considerar variáveis de confusão; usar experimentos controlados quando possível</td></tr>
+<tr><td><strong>Vieses de confirmação</strong></td><td>Buscar apenas dados que confirmem hipóteses pré-existentes</td><td>Definir hipóteses nulas; buscar ativamente evidências contrárias; envolver múltiplas perspectivas na análise</td></tr>
+<tr><td><strong>Overfitting</strong></td><td>Modelo muito complexo que se ajusta ao ruído dos dados de treino, perdendo capacidade de generalização</td><td>Validação cruzada; separação treino/teste; regularização; simplicidade (princípio da parcimônia)</td></tr>
+<tr><td><strong>Dados desatualizados</strong></td><td>Tomar decisões com base em dados que não refletem a realidade atual</td><td>Estabelecer SLAs de atualização; monitorar drift de dados; alertas para anomalias temporais</td></tr>
+<tr><td><strong>Falta de contexto</strong></td><td>Interpretar números isoladamente, sem considerar fatores qualitativos ou externos</td><td>Combinar análise quantitativa com pesquisa qualitativa; envolver especialistas de domínio na interpretação</td></tr>
+</tbody>
+</table>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p><strong>Cenário:</strong> Decisão sobre alocação de recursos para auditorias no TCDF.<br><br>
+<strong>Abordagem não data-driven:</strong> "Sempre auditamos os órgãos com maior orçamento."<br><br>
+<strong>Abordagem data-driven:</strong><br>
+1. <strong>Problema:</strong> Maximizar detecção de irregularidades com recursos limitados.<br>
+2. <strong>Dados:</strong> Histórico de auditorias (órgão, valor auditado, irregularidades encontradas, tipo de gasto).<br>
+3. <strong>Análise:</strong> Modelo de regressão identifica que "variação percentual de despesas no trimestre" e "número de fornecedores novos" são preditores significativos de irregularidades.<br>
+4. <strong>Insight:</strong> Órgãos com crescimento abrupto de despesas + alta rotatividade de fornecedores têm 3x mais chance de irregularidades.<br>
+5. <strong>Decisão:</strong> Alocar 70% dos recursos para auditorias em órgãos com esse perfil de risco.<br>
+6. <strong>Monitoramento:</strong> Acompanhar taxa de detecção pós-alocação; ajustar modelo trimestralmente.<br><br>
+<strong>Resultado:</strong> Aumento de 40% na detecção de irregularidades com os mesmos recursos.</p>
+</div>
+
+<h2>8. UTILIZAÇÃO DE EXCEL PARA ANÁLISE DE DADOS (MICROSOFT 365)</h2>
+<div class="box excel"><span class="box-t">📘 Excel como Ferramenta de Análise</span>
+<p>O Microsoft Excel (versão 365) evoluiu de planilha eletrônica para plataforma de análise de dados, integrando funcionalidades de ETL, modelagem, visualização e automação.</p>
+</div>
+
+<h3>🔹 8.1 Importação e Manipulação de Dados via Power Query</h3>
+<p><strong>Power Query</strong> é a ferramenta de ETL (Extract, Transform, Load) nativa do Excel, permitindo conectar, transformar e combinar dados de múltiplas fontes sem fórmulas complexas.</p>
+
+<h4>🔸 Fontes de Dados Suportadas</h4>
+<ul>
+<li><strong>Arquivos:</strong> Excel, CSV, TXT, XML, JSON, PDF (tabelas)</li>
+<li><strong>Bancos de dados:</strong> SQL Server, Access, Oracle, MySQL, PostgreSQL</li>
+<li><strong>Serviços online:</strong> SharePoint, Dynamics 365, Salesforce, APIs REST</li>
+<li><strong>Outros:</strong> Web scraping, pastas, OData, ODBC</li>
+</ul>
+
+<h4>🔸 Transformações Comuns no Power Query</h4>
+<table>
+<thead><tr><th>Transformação</th><th>Descrição</th><th>Exemplo de Aplicação</th></tr></thead>
+<tbody>
+<tr><td><strong>Remover duplicatas</strong></td><td>Elimina linhas idênticas com base em colunas selecionadas</td><td>Garantir unicidade de registros de empenho</td></tr>
+<tr><td><strong>Preencher valores ausentes</strong></td><td>Substitui nulls por valor fixo, média, ou propagação</td><td>Preencher "órgão" com valor do registro anterior na mesma licitação</td></tr>
+<tr><td><strong>Dividir colunas</strong></td><td>Separa texto por delimitador ou posição fixa</td><td>Separar "CPF/Nome" em duas colunas distintas</td></tr>
+<tr><td><strong>Unpivot (transformar colunas em linhas)</strong></td><td>Converte formato wide para long (tidy data)</td><td>Transformar meses (colunas) em linhas para análise temporal</td></tr>
+<tr><td><strong>Mesclar consultas (join)</strong></td><td>Combina tabelas por chave comum (inner, left, right, full)</td><td>Juntar tabela de empenhos com cadastro de fornecedores por CNPJ</td></tr>
+<tr><td><strong>Anexar consultas (union)</strong></td><td>Empilha tabelas com mesma estrutura</td><td>Consolidar planilhas mensais de despesas em uma única tabela</td></tr>
+<tr><td><strong>Adicionar coluna condicional</strong></td><td>Cria nova coluna baseada em lógica if-then-else</td><td>Classificar despesas como "Acima do limite" se valor > R$ 10.000</td></tr>
+<tr><td><strong>Agrupar por</strong></td><td>Agrega dados por categoria (soma, média, contagem, etc.)</td><td>Calcular total gasto por órgão e por tipo de despesa</td></tr>
+</tbody>
+</table>
+
+<div class="formula-box">
+Exemplo de M Code (Power Query) para filtrar e classificar:<br>
+let<br>
+&nbsp;&nbsp;Fonte = Excel.CurrentWorkbook(){[Name="Tabela_Empenhos"]}[Content],<br>
+&nbsp;&nbsp;Filtrado = Table.SelectRows(Fonte, each [Valor] > 10000),<br>
+&nbsp;&nbsp;Classificado = Table.AddColumn(Filtrado, "Faixa", each if [Valor] > 50000 then "Alto" else "Médio")<br>
+in<br>
+&nbsp;&nbsp;Classificado
+</div>
+
+<h3>🔹 8.2 Validação de Dados</h3>
+<p><strong>Validação de dados</strong> no Excel permite restringir o tipo ou intervalo de valores que podem ser inseridos em uma célula, prevenindo erros na entrada de dados.</p>
+
+<h4>🔸 Tipos de Validação</h4>
+<ul>
+<li><strong>Lista:</strong> Restringe entrada a valores de uma lista predefinida (dropdown).</li>
+<li><strong>Número inteiro/decimal:</strong> Define intervalo mínimo/máximo, ou comparação com outra célula.</li>
+<li><strong>Data:</strong> Restringe a um período específico (ex: datas do exercício atual).</li>
+<li><strong>Comprimento do texto:</strong> Limita número de caracteres (ex: CPF com 11 dígitos).</li>
+<li><strong>Personalizada:</strong> Usa fórmula para validação complexa (ex: validar formato de CNPJ).</li>
+</ul>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático: Validação de CPF no Excel</span>
+<p><strong>Objetivo:</strong> Garantir que a coluna "CPF" receba apenas valores com 11 dígitos numéricos.<br><br>
+<strong>Passos:</strong><br>
+1. Selecionar a coluna "CPF"<br>
+2. Dados → Validação de Dados<br>
+3. Permitir: "Personalizado"<br>
+4. Fórmula: <code>=E(NÚM.CARACT(A2)=11;É.NÚM(A2))</code><br>
+5. Mensagem de erro: "CPF deve ter exatamente 11 dígitos numéricos"<br><br>
+<strong>Resultado:</strong> Tentativas de inserir "123.456.789-00" ou "12345" serão bloqueadas, mantendo a integridade dos dados.</p>
+</div>
+
+<h3>🔹 8.3 Auditoria de Fórmulas</h3>
+<p><strong>Auditoria de fórmulas</strong> permite rastrear dependências, identificar erros e entender a lógica de cálculos complexos em planilhas.</p>
+
+<h4>🔸 Ferramentas de Auditoria</h4>
+<table>
+<thead><tr><th>Ferramenta</th><th>Atalho</th><th>Função</th><th>Aplicação Prática</th></tr></thead>
+<tbody>
+<tr><td><strong>Rastrear precedentes</strong></td><td>Ctrl + [</td><td>Mostra setas das células que alimentam a fórmula selecionada</td><td>Entender de onde vem o valor de uma célula de total</td></tr>
+<tr><td><strong>Rastrear dependentes</strong></td><td>Ctrl + ]</td><td>Mostra setas das células que dependem da fórmula selecionada</td><td>Verificar impacto de alterar uma célula de parâmetro</td></tr>
+<tr><td><strong>Remover setas</strong></td><td>Alt + M + A + A</td><td>Limpa as setas de rastreamento da planilha</td><td>Deixar a planilha visualmente limpa após auditoria</td></tr>
+<tr><td><strong>Avaliar fórmula</strong></td><td>Shift + F9</td><td>Executa a fórmula passo a passo, mostrando valores intermediários</td><td>Depurar fórmula complexa com múltiplas funções aninhadas</td></tr>
+<tr><td><strong>Verificação de erros</strong></td><td>Fórmulas → Verificação de Erros</td><td>Identifica erros comuns (#N/D, #VALOR!, referências circulares)</td><td>Localizar e corrigir células com problemas de cálculo</td></tr>
+<tr><td><strong>Mostrar fórmulas</strong></td><td>Ctrl + `</td><td>Exibe fórmulas em vez de resultados nas células</td><td>Revisar rapidamente a lógica de toda a planilha</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 8.4 Consolidação de Dados</h3>
+<p><strong>Consolidação</strong> permite combinar dados de múltiplas planilhas ou pastas de trabalho em um único resumo, usando funções de agregação (soma, média, contagem, etc.).</p>
+
+<h4>🔸 Métodos de Consolidação</h4>
+<ol>
+<li><strong>Por posição:</strong> Combina dados com base na localização idêntica nas planilhas de origem (ex: mesma célula A1 em 12 planilhas mensais).</li>
+<li><strong>Por categoria:</strong> Combina dados com base em rótulos de linha/coluna (ex: consolidar despesas por "órgão", mesmo que a ordem das linhas varie entre planilhas).</li>
+<li><strong>Com vínculos:</strong> Cria fórmulas que referenciam as células de origem, atualizando automaticamente quando os dados fonte mudam.</li>
+</ol>
+
+<div class="formula-box">
+Exemplo de consolidação por categoria (função SOMA.SE):<br>
+=SOMA.SE('Planilha1:Planilha12'!A:A; "Órgão X"; 'Planilha1:Planilha12'!B:B)<br><br>
+Exemplo com Power Query (mais robusto):<br>
+1. Importar todas as planilhas mensais<br>
+2. Anexar consultas (union)<br>
+3. Agrupar por "Órgão" → Soma de "Valor"
+</div>
+
+<h3>🔹 8.5 Tabelas Dinâmicas (PivotTables)</h3>
+<p><strong>Tabelas dinâmicas</strong> são a ferramenta mais poderosa do Excel para análise exploratória, permitindo resumir, cruzar e segmentar grandes volumes de dados com arrastar-e-soltar.</p>
+
+<h4>🔸 Componentes de uma Tabela Dinâmica</h4>
+<ul>
+<li><strong>Campos:</strong> Colunas da tabela fonte que podem ser usadas na análise.</li>
+<li><strong>Áreas:</strong>
+<ul>
+<li><strong>Filtros:</strong> Restringe os dados exibidos (ex: apenas exercício 2024)</li>
+<li><strong>Linhas:</strong> Define as categorias que aparecem nas linhas (ex: órgãos)</li>
+<li><strong>Colunas:</strong> Define as categorias que aparecem nas colunas (ex: meses)</li>
+<li><strong>Valores:</strong> Define as métricas a serem calculadas (ex: soma de valores, contagem de registros)</li>
+</ul>
+</li>
+<li><strong>Configurações de campo de valor:</strong> Define a função de agregação (soma, média, contagem, máximo, etc.) e formatação.</li>
+</ul>
+
+<h4>🔸 Técnicas Avançadas</h4>
+<ul>
+<li><strong>Agrupamento:</strong> Agrupar datas por mês/trimestre/ano; agrupar valores numéricos em faixas (ex: faixas salariais).</li>
+<li><strong>Campos calculados:</strong> Criar novas métricas com fórmulas (ex: "Ticket médio" = Soma de valor / Contagem de registros).</li>
+<li><strong>Segmentação de dados (Slicers):</strong> Filtros visuais interativos para dashboards.</li>
+<li><strong>Gráficos dinâmicos:</strong> Gráficos vinculados à tabela dinâmica, atualizando automaticamente com os filtros.</li>
+<li><strong>Atualização automática:</strong> Configurar para atualizar ao abrir o arquivo ou em intervalo definido.</li>
+</ul>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático: Auditoria de Despesas com Tabela Dinâmica</span>
+<p><strong>Objetivo:</strong> Identificar órgãos com despesas atípicas por tipo de gasto.<br><br>
+<strong>Passos:</strong><br>
+1. Selecionar a tabela de despesas<br>
+2. Inserir → Tabela Dinâmica<br>
+3. Arrastar:<br>
+&nbsp;&nbsp;• Linhas: "Órgão"<br>
+&nbsp;&nbsp;• Colunas: "Tipo de Despesa"<br>
+&nbsp;&nbsp;• Valores: "Valor" (Soma)<br>
+4. Aplicar filtro de valor: mostrar apenas órgãos com total > R$ 1 milhão<br>
+5. Adicionar formatação condicional: destacar células acima de 2 desvios-padrão da média por tipo<br>
+6. Inserir segmentação por "Mês" para análise temporal interativa<br><br>
+<strong>Resultado:</strong> Dashboard interativo que permite identificar rapidamente órgãos com padrões de gasto fora do esperado.</p>
+</div>
+
+<h3>🔹 8.6 Fórmulas Lógicas, Financeiras e de Texto</h3>
+<p>O Excel oferece centenas de funções organizadas por categoria. As mais relevantes para análise de dados em concursos:</p>
+
+<h4>🔸 Fórmulas Lógicas</h4>
+<table>
+<thead><tr><th>Função</th><th>Sintaxe</th><th>Descrição</th><th>Exemplo Prático</th></tr></thead>
+<tbody>
+<tr><td><strong>SE</strong></td><td><code>=SE(teste_lógico; valor_se_verdadeiro; valor_se_falso)</code></td><td>Retorna um valor se a condição for verdadeira, outro se falsa</td><td><code>=SE(Valor&gt;10000; "Alto"; "Baixo")</code></td></tr>
+<tr><td><strong>E / OU</strong></td><td><code>=E(cond1; cond2; ...)</code><br><code>=OU(cond1; cond2; ...)</code></td><td>Retorna VERDADEIRO se todas (E) ou alguma (OU) condição for verdadeira</td><td><code>=SE(E(Valor&gt;10000; Órgão="X"); "Prioritário"; "Normal")</code></td></tr>
+<tr><td><strong>NÃO</strong></td><td><code>=NÃO(valor_lógico)</code></td><td>Inverte o valor lógico (VERDADEIRO → FALSO)</td><td><code>=SE(NÃO(É.NÚM(Valor)); "Erro"; Valor)</code></td></tr>
+<tr><td><strong>SEERRO / SE.NÃO.DISP</strong></td><td><code>=SEERRO(valor; valor_se_erro)</code><br><code>=SE.NÃO.DISP(valor; valor_se_nao_disp)</code></td><td>Trata erros específicos (#N/D, #VALOR!, etc.)</td><td><code>=SEERRO(PROCV(...); "Não encontrado")</code></td></tr>
+<tr><td><strong>SWITCH</strong></td><td><code>=SWITCH(expressão; valor1; resultado1; valor2; resultado2; ...; padrão)</code></td><td>Alternativa mais legível a múltiplos SE aninhados</td><td><code>=SWITCH(Tipo; "A"; "Alto"; "B"; "Médio"; "Baixo")</code></td></tr>
+</tbody>
+</table>
+
+<h4>🔸 Fórmulas Financeiras</h4>
+<table>
+<thead><tr><th>Função</th><th>Sintaxe</th><th>Descrição</th><th>Exemplo Prático</th></tr></thead>
+<tbody>
+<tr><td><strong>VP / VF</strong></td><td><code>=VP(taxa; nper; pgto; [vf]; [tipo])</code><br><code>=VF(taxa; nper; pgto; [vp]; [tipo])</code></td><td>Calcula valor presente ou futuro de uma série de pagamentos</td><td><code>=VP(0,01; 12; -1000)</code> → Valor presente de 12 parcelas de R$ 1.000 a 1% a.m.</td></tr>
+<tr><td><strong>TAXA</strong></td><td><code>=TAXA(nper; pgto; vp; [vf]; [tipo]; [estimativa])</code></td><td>Calcula a taxa de juros por período de uma anuidade</td><td><code>=TAXA(12; -1000; 10000)</code> → Taxa mensal implícita em financiamento de R$ 10.000 em 12x R$ 1.000</td></tr>
+<tr><td><strong>NPER</strong></td><td><code>=NPER(taxa; pgto; vp; [vf]; [tipo])</code></td><td>Calcula o número de períodos para um investimento</td><td><code>=NPER(0,01; -1000; 10000)</code> → Quantos meses para quitar R$ 10.000 pagando R$ 1.000/mês a 1% a.m.</td></tr>
+<tr><td><strong>PGTO</strong></td><td><code>=PGTO(taxa; nper; vp; [vf]; [tipo])</code></td><td>Calcula o valor da prestação de um empréstimo</td><td><code>=PGTO(0,01; 12; 10000)</code> → Valor da prestação mensal para financiar R$ 10.000 em 12 meses a 1% a.m.</td></tr>
+<tr><td><strong>VPL / TIR</strong></td><td><code>=VPL(taxa; valor1; [valor2]; ...)</code><br><code>=TIR(valores; [estimativa])</code></td><td>Calcula valor presente líquido ou taxa interna de retorno de um fluxo de caixa</td><td><code>=VPL(0,1; -10000; 3000; 4000; 5000)</code> → VPL de projeto com investimento inicial e retornos anuais</td></tr>
+</tbody>
+</table>
+
+<h4>🔸 Fórmulas de Texto</h4>
+<table>
+<thead><tr><th>Função</th><th>Sintaxe</th><th>Descrição</th><th>Exemplo Prático</th></tr></thead>
+<tbody>
+<tr><td><strong>ESQUERDA / DIREITA / EXT.TEXTO</strong></td><td><code>=ESQUERDA(texto; [núm_caract])</code><br><code>=DIREITA(texto; [núm_caract])</code><br><code>=EXT.TEXTO(texto; posição_inicial; núm_caract)</code></td><td>Extrai substring do início, fim ou posição específica</td><td><code>=ESQUERDA(CPF; 3)</code> → Primeiros 3 dígitos do CPF</td></tr>
+<tr><td><strong>LOCALIZAR / PROCURAR</strong></td><td><code>=LOCALIZAR(texto_procurado; dentro_do_texto; [núm_inicial])</code></td><td>Retorna a posição de uma substring dentro de um texto (case-sensitive)</td><td><code>=LOCALIZAR("@"; Email)</code> → Posição do @ em um e-mail</td></tr>
+<tr><td><strong>SUBSTITUIR / MUDAR</strong></td><td><code>=SUBSTITUIR(texto_antigo; texto_antigo; texto_novo; [núm_da_ocorrência])</code></td><td>Substitui texto específico por outro</td><td><code>=SUBSTITUIR(CPF; "."; "")</code> → Remove pontos do CPF</td></tr>
+<tr><td><strong>CONCAT / CONCATENAR / &</strong></td><td><code>=CONCAT(texto1; [texto2]; ...)</code><br><code>=texto1 & texto2</code></td><td>Junta múltiplos textos em um só</td><td><code>=Nome & " - " & Órgão</code> → "João Silva - TCDF"</td></tr>
+<tr><td><strong>ARRUMAR / MAIÚSCULA / MINÚSCULA</strong></td><td><code>=ARRUMAR(texto)</code><br><code>=MAIÚSCULA(texto)</code><br><code>=MINÚSCULA(texto)</code></td><td>Remove espaços extras; converte caso do texto</td><td><code>=ARRUMAR(MAIÚSCULA(Nome))</code> → Padroniza nome em maiúsculas sem espaços extras</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 8.7 Formatação Condicional</h3>
+<p><strong>Formatação condicional</strong> aplica formatação visual (cores, ícones, barras de dados) a células com base em regras, facilitando a identificação de padrões e anomalias.</p>
+
+<h4>🔸 Tipos de Regras</h4>
+<ul>
+<li><strong>Destacar regras de células:</strong> Formatar se valor é maior/menor/igual a um limite, ou está entre valores, ou contém texto específico.</li>
+<li><strong>Regras de primeiros/últimos:</strong> Destacar os N maiores/menores valores, ou valores acima/abaixo da média.</li>
+<li><strong>Barras de dados / Escalas de cor / Conjuntos de ícones:</strong> Visualização in-cell para comparação rápida.</li>
+<li><strong>Fórmulas personalizadas:</strong> Usar qualquer fórmula lógica para definir a condição (ex: formatar se valor > média + 2*desvio-padrão).</li>
+</ul>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático: Identificar Outliers com Formatação Condicional</span>
+<p><strong>Objetivo:</strong> Destacar despesas com valor atípico (acima de 2 desvios-padrão da média).<br><br>
+<strong>Passos:</strong><br>
+1. Selecionar a coluna "Valor"<br>
+2. Página Inicial → Formatação Condicional → Nova Regra<br>
+3. Selecionar "Usar uma fórmula para determinar quais células formatar"<br>
+4. Inserir fórmula: <code>=B2&gt;MÉDIA($B$2:$B$1000)+2*DESVPAD($B$2:$B$1000)</code><br>
+5. Definir formatação: preenchimento vermelho, texto branco<br><br>
+<strong>Resultado:</strong> Células com valores atipicamente altos são destacadas visualmente, facilitando a auditoria.</p>
+</div>
+
+<h3>🔹 8.8 Gráficos</h3>
+<p><strong>Gráficos</strong> transformam dados numéricos em representações visuais, facilitando a comunicação de insights e a identificação de padrões.</p>
+
+<h4>🔸 Tipos de Gráficos e Aplicações</h4>
+<table>
+<thead><tr><th>Tipo de Gráfico</th><th>Melhor Para</th><th>Exemplo no TCDF</th><th>Dica de Uso</th></tr></thead>
+<tbody>
+<tr><td><strong>Colunas / Barras</strong></td><td>Comparar valores entre categorias discretas</td><td>Total gasto por órgão</td><td>Ordenar por valor para facilitar comparação; limitar número de categorias (<10)</td></tr>
+<tr><td><strong>Linhas</strong></td><td>Mostrar tendências ao longo do tempo (séries temporais)</td><td>Evolução mensal das despesas com diárias</td><td>Usar marcadores para pontos-chave; evitar muitas séries no mesmo gráfico</td></tr>
+<tr><td><strong>Pizza / Rosca</strong></td><td>Mostrar proporção de partes em um todo (máx. 5-6 categorias)</td><td>Distribuição percentual de despesas por tipo</td><td>Evitar se houver muitas fatias pequenas; preferir barras para comparações precisas</td></tr>
+<tr><td><strong>Dispersão (XY)</strong></td><td>Visualizar relação entre duas variáveis numéricas; identificar correlações</td><td>Relação entre valor do contrato e número de aditivos</td><td>Adicionar linha de tendência e R² para quantificar correlação</td></tr>
+<tr><td><strong>Combo (Colunas + Linhas)</strong></td><td>Comparar métricas com escalas diferentes no mesmo eixo temporal</td><td>Valor gasto (colunas) e número de contratos (linha) por mês</td><td>Usar eixo secundário para a série com escala muito diferente</td></tr>
+<tr><td><strong>Mapas</strong></td><td>Visualizar dados geográficos (ex: por região administrativa do DF)</td><td>Gastos por RA no DF</td><td>Requer dados com localização válida (CEP, coordenadas, nome de região)</td></tr>
+<tr><td><strong>Box-Plot (via suplemento)</strong></td><td>Visualizar distribuição, mediana, quartis e outliers</td><td>Distribuição de valores de empenho por órgão</td><td>Instalar suplemento "Análise de Dados" ou usar Power BI para box-plot nativo</td></tr>
+</tbody>
+</table>
+
+<h4>🔸 Boas Práticas de Visualização</h4>
+<ul>
+<li><strong>Simplicidade:</strong> Remover elementos desnecessários (grades excessivas, legendas redundantes).</li>
+<li><strong>Rótulos claros:</strong> Títulos descritivos, eixos nomeados, unidades de medida explícitas.</li>
+<li><strong>Cores estratégicas:</strong> Usar cores para destacar insights, não apenas para decorar; considerar daltonismo.</li>
+<li><strong>Consistência:</strong> Manter mesma escala, paleta de cores e estilo em gráficos comparáveis.</li>
+<li><strong>Contexto:</strong> Incluir benchmarks, metas ou valores de referência para interpretação.</li>
+</ul>
+
+<h3>🔹 8.9 Noções de Macro e VBA</h3>
+<p><strong>Macros</strong> são sequências de comandos do Excel gravadas ou programadas em VBA (Visual Basic for Applications) para automatizar tarefas repetitivas.</p>
+
+<h4>🔸 Quando Usar Macros</h4>
+<ul>
+<li><strong>Automação de processos:</strong> Tarefas manuais repetitivas (ex: formatar relatórios mensais).</li>
+<li><strong>Integração entre sistemas:</strong> Exportar dados do SIAFEM, transformar no Excel, importar para Power BI.</li>
+<li><strong>Validação complexa:</strong> Regras de negócio que exigem múltiplas condições e ações.</li>
+<li><strong>Interface com usuário:</strong> Criar formulários personalizados para entrada de dados.</li>
+</ul>
+
+<h4>🔸 Exemplo de Macro Simples (VBA)</h4>
+<div class="code">
+Sub FormatarRelatorio()<br>
+&nbsp;&nbsp;' Formata automaticamente um relatório de despesas<br>
+&nbsp;&nbsp;With Range("A1:D1")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;.Font.Bold = True<br>
+&nbsp;&nbsp;&nbsp;&nbsp;.Interior.Color = RGB(139, 120, 176) ' lilás<br>
+&nbsp;&nbsp;&nbsp;&nbsp;.Font.Color = vbWhite<br>
+&nbsp;&nbsp;End With<br>
+&nbsp;&nbsp;<br>
+&nbsp;&nbsp;Columns("B:D").NumberFormat = "R$ #.##0,00"<br>
+&nbsp;&nbsp;Columns("A:D").AutoFit<br>
+&nbsp;&nbsp;<br>
+&nbsp;&nbsp;MsgBox "Relatório formatado com sucesso!", vbInformation<br>
+End Sub
+</div>
+
+<h4>🔸 Considerações de Segurança</h4>
+<ul>
+<li><strong>Assinatura digital:</strong> Macros devem ser assinadas digitalmente para execução em ambientes corporativos.</li>
+<li><strong>Níveis de segurança:</strong> Configurar Excel para "Desabilitar todas as macros com notificação" (recomendado).</li>
+<li><strong>Documentação:</strong> Comentar código VBA para facilitar manutenção e auditoria.</li>
+<li><strong>Alternativas modernas:</strong> Para automações complexas, considerar Power Automate (cloud) ou Python (mais robusto e seguro).</li>
+</ul>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "macros em VBA são a única forma de automatizar tarefas no Excel" → ERRADO. O Excel 365 oferece alternativas mais modernas e seguras: <strong>Power Query</strong> para ETL, <strong>Power Pivot</strong> para modelagem, <strong>Power Automate</strong> para fluxos de trabalho e <strong>Python no Excel</strong> (em preview) para análise avançada. VBA ainda é válido, mas não é a única opção.</p>
+</div>
+
+<h2>9. METODOLOGIA E UTILIZAÇÃO DA ESTATÍSTICA</h2>
+<div class="box stat"><span class="box-t">📘 Papel da Estatística na Análise de Dados</span>
+<p>A estatística fornece o arcabouço teórico e as ferramentas práticas para coletar, organizar, analisar e interpretar dados, transformando incerteza em informação acionável.</p>
+</div>
+
+<h3>🔹 9.1 Variáveis Quantitativas e Qualitativas. Séries Estatísticas</h3>
+<h4>🔸 Classificação de Variáveis</h4>
+<table>
+<thead><tr><th>Tipo</th><th>Subtipo</th><th>Descrição</th><th>Exemplos</th><th>Medidas Aplicáveis</th></tr></thead>
+<tbody>
+<tr><td rowspan="2"><strong>Qualitativa (Categórica)</strong></td><td>Nominal</td><td>Categorias sem ordem intrínseca</td><td>Tipo de licitação (Pregão, Concorrência), Cor, Gênero</td><td>Moda, frequência, teste qui-quadrado</td></tr>
+<tr><td>Ordinal</td><td>Categorias com ordem, mas sem distância definida</td><td>Nível de escolaridade (Fundamental, Médio, Superior), Satisfação (Baixa, Média, Alta)</td><td>Mediana, percentis, teste de Mann-Whitney</td></tr>
+<tr><td rowspan="2"><strong>Quantitativa (Numérica)</strong></td><td>Discreta</td><td>Valores inteiros, contáveis</td><td>Número de servidores, quantidade de processos, número de irregularidades</td><td>Média, desvio-padrão, distribuição de Poisson</td></tr>
+<tr><td>Contínua</td><td>Valores reais, mensuráveis em escala contínua</td><td>Valor de contrato, tempo de tramitação, percentual de execução</td><td>Média, desvio-padrão, distribuição normal, regressão</td></tr>
+</tbody>
+</table>
+
+<h4>🔸 Séries Estatísticas</h4>
+<p>Conjunto de dados organizados segundo um critério de classificação:</p>
+<ul>
+<li><strong>Série temporal:</strong> Dados ordenados no tempo (ex: despesas mensais de 2020-2024).</li>
+<li><strong>Série geográfica:</strong> Dados distribuídos por localização (ex: gastos por Região Administrativa do DF).</li>
+<li><strong>Série categórica:</strong> Dados agrupados por categoria (ex: despesas por tipo de gasto).</li>
+<li><strong>Série mista:</strong> Combinação de critérios (ex: despesas por órgão e por mês).</li>
+</ul>
+
+<h3>🔹 9.2 Organização e Apresentação de Variáveis</h3>
+<h4>🔸 Tabelas de Frequência</h4>
+<table>
+<thead><tr><th>Tipo de Frequência</th><th>Fórmula</th><th>Interpretação</th><th>Aplicação</th></tr></thead>
+<tbody>
+<tr><td><strong>Absoluta (f<sub>i</sub>)</strong></td><td>Contagem de ocorrências da categoria i</td><td>Número bruto de vezes que um valor aparece</td><td>Contar quantos contratos têm valor > R$ 1 milhão</td></tr>
+<tr><td><strong>Relativa (fr<sub>i</sub>)</strong></td><td>fr<sub>i</sub> = f<sub>i</sub> / n</td><td>Proporção ou percentual da categoria no total</td><td>Qual % dos contratos são do tipo "Pregão"?</td></tr>
+<tr><td><strong>Acumulada (F<sub>i</sub>)</strong></td><td>F<sub>i</sub> = Σ f<sub>j</sub> para j ≤ i</td><td>Total de observações até a categoria i</td><td>Quantos contratos têm valor ≤ R$ 500 mil?</td></tr>
+<tr><td><strong>Acumulada Relativa (Fr<sub>i</sub>)</strong></td><td>Fr<sub>i</sub> = F<sub>i</sub> / n</td><td>Proporção acumulada até a categoria i</td><td>Qual % dos contratos têm valor ≤ R$ 500 mil?</td></tr>
+</tbody>
+</table>
+
+<h4>🔸 Representações Gráficas por Tipo de Variável</h4>
+<ul>
+<li><strong>Qualitativa nominal:</strong> Gráfico de barras, pizza (para poucas categorias).</li>
+<li><strong>Qualitativa ordinal:</strong> Gráfico de barras ordenadas, gráfico de Pareto.</li>
+<li><strong>Quantitativa discreta:</strong> Gráfico de colunas, histograma (se muitos valores).</li>
+<li><strong>Quantitativa contínua:</strong> Histograma, polígono de frequências, box-plot, gráfico de densidade.</li>
+</ul>
+
+<h3>🔹 9.3 Estatística Descritiva e Análise Exploratória de Dados</h3>
+<div class="box def"><span class="box-t">📊 Objetivos da Estatística Descritiva</span>
+<p>Resumir e descrever as características principais de um conjunto de dados, sem fazer inferências sobre uma população maior.</p>
+</div>
+
+<h4>🔸 9.3.1 Distribuição de Frequências</h4>
+<p>Já detalhada acima. Importante para identificar a forma da distribuição (simétrica, assimétrica, bimodal) antes de escolher medidas de posição/dispersão adequadas.</p>
+
+<h4>🔸 9.3.2 Medidas de Posição</h4>
+<div class="formula-box">
+<strong>Média Aritmética (x̄):</strong> x̄ = Σx<sub>i</sub> / n<br><br>
+<strong>Mediana (Md):</strong> Valor que divide a amostra ordenada ao meio<br>
+• n ímpar: posição (n+1)/2<br>
+• n par: média dos valores nas posições n/2 e n/2+1<br><br>
+<strong>Moda (Mo):</strong> Valor com maior frequência<br><br>
+<strong>Quartis (Q1, Q2=Mediana, Q3):</strong> Dividem a amostra em 4 partes iguais<br>
+• Q1 (25º percentil): 25% dos dados ≤ Q1<br>
+• Q3 (75º percentil): 75% dos dados ≤ Q3<br><br>
+<strong>Percentis (P<sub>k</sub>):</strong> Valor abaixo do qual caem k% dos dados
+</div>
+
+<table>
+<thead><tr><th>Medida</th><th>Vantagens</th><th>Limitações</th><th>Quando Preferir</th></tr></thead>
+<tbody>
+<tr><td><strong>Média</strong></td><td>• Utiliza todos os dados<br>• Base para inferência estatística<br>• Sensível a mudanças em qualquer valor</td><td>• Muito sensível a outliers<br>• Pode não representar bem distribuições assimétricas</td><td>Distribuições simétricas, sem outliers extremos</td></tr>
+<tr><td><strong>Mediana</strong></td><td>• Robusta a outliers<br>• Representa bem o "centro" de distribuições assimétricas<br>• Sempre existe e é única</td><td>• Não utiliza todos os dados<br>• Menos eficiente estatisticamente que a média</td><td>Distribuições assimétricas, presença de outliers, dados ordinais</td></tr>
+<tr><td><strong>Moda</strong></td><td>• Aplicável a dados qualitativos<br>• Fácil de entender e calcular<br>• Pode haver múltiplas modas (bimodal, multimodal)</td><td>• Pode não existir ou não ser única<br>• Não utiliza magnitude dos valores</td><td>Dados categóricos, identificação de valores mais frequentes</td></tr>
+</tbody>
+</table>
+
+<h4>🔸 9.3.3 Medidas de Dispersão</h4>
+<div class="formula-box">
+<strong>Amplitude:</strong> A = X<sub>máx</sub> - X<sub>mín</sub><br><br>
+<strong>Variância Amostral (s²):</strong> s² = Σ(x<sub>i</sub> - x̄)² / (n - 1)<br><br>
+<strong>Desvio-Padrão Amostral (s):</strong> s = √s²<br><br>
+<strong>Coeficiente de Variação (CV):</strong> CV = (s / x̄) × 100%<br><br>
+<strong>Intervalo Interquartil (IQR):</strong> IQR = Q3 - Q1
+</div>
+
+<table>
+<thead><tr><th>Medida</th><th>Interpretação</th><th>Unidade</th><th>Aplicação Prática</th></tr></thead>
+<tbody>
+<tr><td><strong>Amplitude</strong></td><td>Diferença entre maior e menor valor</td><td>Mesma dos dados</td><td>Visão rápida da extensão dos dados; sensível a outliers</td></tr>
+<tr><td><strong>Variância</strong></td><td>Média dos quadrados dos desvios em relação à média</td><td>Unidade² dos dados</td><td>Base para inferência; difícil interpretação direta devido à unidade ao quadrado</td></tr>
+<tr><td><strong>Desvio-Padrão</strong></td><td>Desvio médio dos dados em relação à média</td><td>Mesma dos dados</td><td>Medida mais intuitiva de dispersão; base para regra empírica (68-95-99.7)</td></tr>
+<tr><td><strong>CV</strong></td><td>Desvio-padrão como porcentagem da média</td><td>Adimensional (%)</td><td>Comparar dispersão entre conjuntos com unidades ou médias diferentes</td></tr>
+<tr><td><strong>IQR</strong></td><td>Amplitude dos 50% centrais dos dados</td><td>Mesma dos dados</td><td>Medida robusta de dispersão; base para identificação de outliers em box-plot</td></tr>
+</tbody>
+</table>
+
+<h4>🔸 9.3.4 Correlação</h4>
+<p>Mede a força e direção da relação linear entre duas variáveis quantitativas.</p>
+
+<div class="formula-box">
+<strong>Coeficiente de Correlação de Pearson (r):</strong><br>
+r = Σ[(x<sub>i</sub> - x̄)(y<sub>i</sub> - ȳ)] / √[Σ(x<sub>i</sub> - x̄)² × Σ(y<sub>i</sub> - ȳ)²]<br><br>
+<strong>Interpretação:</strong><br>
+• -1 ≤ r ≤ 1<br>
+• r ≈ 1: correlação positiva forte<br>
+• r ≈ -1: correlação negativa forte<br>
+• r ≈ 0: ausência de correlação linear<br><br>
+<strong>Atenção:</strong> Correlação ≠ causalidade!
+</div>
+
+<h4>🔸 9.3.5 Histogramas e Curvas de Frequência</h4>
+<ul>
+<li><strong>Histograma:</strong> Gráfico de barras que mostra a distribuição de frequências de uma variável contínua, com barras adjacentes representando intervalos (bins) de valores.</li>
+<li><strong>Curva de frequência:</strong> Linha suave que aproxima a forma do histograma, útil para visualizar a forma da distribuição (normal, assimétrica, bimodal).</li>
+<li><strong>Dica:</strong> Escolher número adequado de bins (regra de Sturges: k ≈ 1 + 3.322 × log<sub>10</sub>(n)) para equilibrar detalhe e clareza.</li>
+</ul>
+
+<h4>🔸 9.3.6 Diagrama Box-Plot</h4>
+<p>Representação gráfica que resume a distribuição de uma variável quantitativa através de cinco números-resumo: mínimo, Q1, mediana, Q3, máximo, além de outliers.</p>
+
+<div class="formula-box">
+<strong>Limites para outliers:</strong><br>
+Limite inferior = Q1 - 1,5 × IQR<br>
+Limite superior = Q3 + 1,5 × IQR<br><br>
+Valores fora desses limites são plotados como pontos individuais (outliers).
+</div>
+
+<h4>🔸 9.3.7 Avaliação de Outliers</h4>
+<p><strong>Outliers</strong> são observações que se afastam significativamente do padrão geral dos dados.</p>
+
+<h5>🔹 Métodos de Detecção</h5>
+<ol>
+<li><strong>Regra do IQR (box-plot):</strong> Valores < Q1 - 1,5×IQR ou > Q3 + 1,5×IQR.</li>
+<li><strong>Regra do desvio-padrão:</strong> Valores com |z-score| > 3 (ou > 2 para amostras pequenas), onde z = (x - x̄)/s.</li>
+<li><strong>Visual:</strong> Gráficos de dispersão, box-plot, histograma.</li>
+<li><strong>Modelagem:</strong> Resíduos de regressão, algoritmos de detecção (Isolation Forest, DBSCAN).</li>
+</ol>
+
+<h5>🔹 Abordagem para Tratamento</h5>
+<ul>
+<li><strong>Investigar causa:</strong> Erro de digitação? Evento legítimo mas raro? Mudança estrutural?</li>
+<li><strong>Decidir ação:</strong>
+<ul>
+<li>Corrigir: se for erro de entrada</li>
+<li>Manter: se for observação válida e relevante para a análise</li>
+<li>Transformar: aplicar log, raiz quadrada para reduzir assimetria</li>
+<li>Segmentar: analisar outliers separadamente</li>
+<li>Excluir: apenas se justificado e documentado (risco de viés)</li>
+</ul>
+</li>
+</ul>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "outliers devem sempre ser removidos da análise" → ERRADO. A remoção automática de outliers pode introduzir viés e mascarar fenômenos importantes. A decisão deve ser baseada em investigação da causa e justificativa analítica, documentada no relatório.</p>
+</div>
+
+<h3>🔹 9.4 Análise de Dados Categorizados</h3>
+<p>Técnicas para analisar relações entre variáveis qualitativas ou entre qualitativas e quantitativas.</p>
+
+<h4>🔸 Tabela de Contingência</h4>
+<p>Tabela de dupla entrada que mostra a distribuição conjunta de duas variáveis categóricas.</p>
+
+<div class="formula-box">
+<strong>Teste Qui-Quadrado de Independência:</strong><br>
+χ² = Σ [(O<sub>ij</sub> - E<sub>ij</sub>)² / E<sub>ij</sub>]<br><br>
+Onde:<br>
+• O<sub>ij</sub> = frequência observada na célula (i,j)<br>
+• E<sub>ij</sub> = frequência esperada sob independência = (Total linha i × Total coluna j) / Total geral<br><br>
+<strong>Hipóteses:</strong><br>
+• H<sub>0</sub>: As variáveis são independentes<br>
+• H<sub>1</sub>: As variáveis são associadas<br><br>
+<strong>Decisão:</strong> Rejeitar H<sub>0</sub> se p-valor < α (geralmente 0,05)
+</div>
+
+<h4>🔸 Medidas de Associação para Dados Categóricos</h4>
+<ul>
+<li><strong>Coeficiente Phi (φ):</strong> Para tabelas 2×2; varia de 0 (independência) a 1 (associação perfeita).</li>
+<li><strong>Coeficiente de Contingência (C):</strong> Para tabelas maiores que 2×2; ajustado pelo número de categorias.</li>
+<li><strong>V de Cramér:</strong> Generalização do Phi para tabelas r×c; varia de 0 a 1.</li>
+</ul>
+
+<h3>🔹 9.5 Distribuições de Probabilidade</h3>
+<div class="box stat"><span class="box-t">📊 Conceito de Distribuição de Probabilidade</span>
+<p>Função que descreve a probabilidade de cada possível resultado de uma variável aleatória. Fundamental para modelagem estatística e inferência.</p>
+</div>
+
+<h4>🔸 9.5.1 Distribuição Binomial</h4>
+<p>Modela o número de sucessos em <strong>n</strong> tentativas independentes, cada uma com probabilidade constante <strong>p</strong> de sucesso.</p>
+
+<div class="formula-box">
+<strong>Fórmula de Probabilidade:</strong><br>
+P(X = k) = C(n,k) × p<sup>k</sup> × (1-p)<sup>n-k</sup><br><br>
+Onde:<br>
+• C(n,k) = n! / [k!(n-k)!] (combinações)<br>
+• k = número de sucessos (0 ≤ k ≤ n)<br><br>
+<strong>Média e Variância:</strong><br>
+μ = n × p<br>
+σ² = n × p × (1-p)<br><br>
+<strong>Condições de Aplicação:</strong><br>
+1. Número fixo de tentativas (n)<br>
+2. Cada tentativa tem dois resultados: sucesso/fracasso<br>
+3. Probabilidade de sucesso (p) constante<br>
+4. Tentativas independentes
+</div>
+
+<h4>🔸 9.5.2 Distribuição Normal</h4>
+<p>Distribuição contínua simétrica em forma de sino, fundamental na estatística devido ao Teorema Central do Limite.</p>
+
+<div class="formula-box">
+<strong>Função Densidade de Probabilidade:</strong><br>
+f(x) = [1 / (σ√(2π))] × e<sup>-(x-μ)²/(2σ²)</sup><br><br>
+<strong>Propriedades:</strong><br>
+• Simétrica em torno da média (μ)<br>
+• Média = Mediana = Moda<br>
+• Definida por dois parâmetros: μ (localização) e σ (dispersão)<br><br>
+<strong>Regra Empírica (68-95-99.7):</strong><br>
+• ~68% dos dados estão em μ ± 1σ<br>
+• ~95% dos dados estão em μ ± 2σ<br>
+• ~99.7% dos dados estão em μ ± 3σ
+</div>
+
+<h4>🔸 Padronização (Escore Z)</h4>
+<p>Transforma qualquer distribuição normal em uma normal padrão (μ=0, σ=1), permitindo uso de tabelas ou funções padronizadas.</p>
+
+<div class="formula-box">
+<strong>Escore Z:</strong><br>
+z = (x - μ) / σ
+</div>
+
+<h3>🔹 9.6 Noções de Inferência Estatística</h3>
+<div class="box stat"><span class="box-t">📊 Conceito de Inferência Estatística</span>
+<p>Processo de tirar conclusões sobre uma população com base em informações de uma amostra, quantificando a incerteza por meio de probabilidades.</p>
+</div>
+
+<h4>🔸 9.6.1 Estimação de Parâmetros</h4>
+<h5>🔹 Estimação Pontual</h5>
+<p>Usa um único valor da amostra para estimar um parâmetro populacional.</p>
+<ul>
+<li><strong>Média amostral (x̄)</strong> estima a média populacional (μ)</li>
+<li><strong>Proporção amostral (p̂)</strong> estima a proporção populacional (p)</li>
+<li><strong>Variância amostral (s²)</strong> estima a variância populacional (σ²)</li>
+</ul>
+
+<h5>🔹 Estimação por Intervalo</h5>
+<p>Fornece um intervalo de valores plausíveis para o parâmetro, com um nível de confiança associado.</p>
+
+<div class="formula-box">
+<strong>Intervalo de Confiança para a Média (σ conhecido):</strong><br>
+IC(μ) = x̄ ± z<sub>α/2</sub> × (σ / √n)<br><br>
+<strong>Intervalo de Confiança para a Média (σ desconhecido):</strong><br>
+IC(μ) = x̄ ± t<sub>α/2, n-1</sub> × (s / √n)<br><br>
+<strong>Intervalo de Confiança para Proporção:</strong><br>
+IC(p) = p̂ ± z<sub>α/2</sub> × √[p̂(1-p̂) / n]<br><br>
+<strong>Nível de Confiança (1-α):</strong><br>
+• 90% → z = 1,645<br>
+• 95% → z = 1,96<br>
+• 99% → z = 2,576
+</div>
+
+<h4>🔸 9.6.2 Testes de Hipóteses</h4>
+<p>Procedimento para decidir entre duas hipóteses concorrentes sobre um parâmetro populacional, com base em evidência amostral.</p>
+
+<h5>🔹 Estrutura de um Teste</h5>
+<ol>
+<li><strong>Definir hipóteses:</strong>
+<ul>
+<li>H<sub>0</sub> (hipótese nula): Afirmação de "nenhum efeito" ou "igualdade"</li>
+<li>H<sub>1</sub> (hipótese alternativa): Afirmação que se deseja evidenciar</li>
+</ul>
+</li>
+<li><strong>Escolher nível de significância (α):</strong> Probabilidade máxima de rejeitar H<sub>0</sub> quando ela é verdadeira (erro Tipo I). Valores comuns: 0,05, 0,01.</li>
+<li><strong>Calcular estatística de teste:</strong> Valor padronizado que mede o afastamento da amostra em relação a H<sub>0</sub>.</li>
+<li><strong>Decidir:</strong>
+<ul>
+<li>Rejeitar H<sub>0</sub> se p-valor < α</li>
+<li>Não rejeitar H<sub>0</sub> se p-valor ≥ α</li>
+</ul>
+</li>
+<li><strong>Interpretar no contexto:</strong> Traduzir a decisão estatística para implicações práticas.</li>
+</ol>
+
+<h5>🔹 Tipos de Erros</h5>
+<table>
+<thead><tr><th>Decisão / Realidade</th><th>H<sub>0</sub> Verdadeira</th><th>H<sub>0</sub> Falsa</th></tr></thead>
+<tbody>
+<tr><td><strong>Rejeitar H<sub>0</sub></strong></td><td>Erro Tipo I (α)<br>"Falso positivo"</td><td>Decisão Correta<br>Poder do teste (1-β)</td></tr>
+<tr><td><strong>Não Rejeitar H<sub>0</sub></strong></td><td>Decisão Correta</td><td>Erro Tipo II (β)<br>"Falso negativo"</td></tr>
+</tbody>
+</table>
+
+<h4>🔸 9.6.4 Testes Paramétricos: Médias e Proporções</h4>
+<h5>🔹 Teste t para uma Amostra</h5>
+<p>Testa se a média populacional é igual a um valor especificado (μ<sub>0</sub>).</p>
+
+<div class="formula-box">
+<strong>Estatística de teste:</strong><br>
+t = (x̄ - μ<sub>0</sub>) / (s / √n)<br><br>
+<strong>Pressupostos:</strong><br>
+• Amostra aleatória<br>
+• Dados aproximadamente normais (ou n grande, pelo TCL)<br>
+• Observações independentes
+</div>
+
+<h5>🔹 Teste t para Duas Amostras Independentes</h5>
+<p>Testa se as médias de duas populações são iguais.</p>
+
+<div class="formula-box">
+<strong>Estatística de teste (variâncias iguais):</strong><br>
+t = (x̄<sub>1</sub> - x̄<sub>2</sub>) / [s<sub>p</sub> × √(1/n<sub>1</sub> + 1/n<sub>2</sub>)]<br><br>
+Onde s<sub>p</sub> = desvio-padrão combinado<br><br>
+<strong>Pressupostos adicionais:</strong><br>
+• Variâncias populacionais iguais (testar com F ou Levene)<br>
+• Amostras independentes
+</div>
+
+<h5>🔹 Teste Z para Proporção</h5>
+<p>Testa se a proporção populacional é igual a um valor especificado (p<sub>0</sub>).</p>
+
+<div class="formula-box">
+<strong>Estatística de teste:</strong><br>
+z = (p̂ - p<sub>0</sub>) / √[p<sub>0</sub>(1-p<sub>0</sub>) / n]<br><br>
+<strong>Pressupostos:</strong><br>
+• Amostra aleatória<br>
+• np<sub>0</sub> ≥ 5 e n(1-p<sub>0</sub>) ≥ 5 (aproximação normal válida)
+</div>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE: Teste de Hipótese para Média</span>
+<p><strong>Cenário:</strong> Auditoria quer testar se o valor médio de empenhos do órgão X é diferente de R$ 50.000.<br><br>
+<strong>Dados:</strong> Amostra de n=36 empenhos; x̄ = R$ 52.500; s = R$ 9.000; α = 0,05.<br><br>
+<strong>Passos:</strong><br>
+1. H<sub>0</sub>: μ = 50.000 vs. H<sub>1</sub>: μ ≠ 50.000 (teste bilateral)<br>
+2. Estatística: t = (52.500 - 50.000) / (9.000 / √36) = 2.500 / 1.500 = 1,667<br>
+3. Graus de liberdade: df = 35; valor crítico t<sub>0,025,35</sub> ≈ 2,030<br>
+4. Decisão: |1,667| < 2,030 → Não rejeitar H<sub>0</sub><br>
+5. Conclusão: Não há evidência estatística, ao nível de 5%, de que o valor médio difira de R$ 50.000.<br><br>
+<strong>Observação:</strong> O p-valor pode ser calculado: p ≈ 0,105 > 0,05 → mesma conclusão.</p>
+</div>
+
+<h2>🎯 O QUE MAIS CAI NO CESPE (RANKING DE FREQUÊNCIA)</h2>
+<ol>
+<li><strong>Hierarquia DIKW:</strong> Distinguir dado, informação, conhecimento e inteligência; exemplos práticos de cada nível.</li>
+<li><strong>Dados estruturados vs. não estruturados:</strong> Classificação, exemplos, implicações para análise.</li>
+<li><strong>Tipos de análise de dados:</strong> Descritiva, exploratória, explanatória, preditiva, prescritiva – perguntas centrais e técnicas associadas.</li>
+<li><strong>Medidas de posição e dispersão:</strong> Cálculo e interpretação de média, mediana, moda, desvio-padrão, CV; quando preferir cada uma.</li>
+<li><strong>Correlação vs. causalidade:</strong> Interpretação do coeficiente de Pearson; armadilhas de inferência causal.</li>
+<li><strong>Box-plot e outliers:</strong> Leitura do diagrama; cálculo de limites para outliers; abordagem para tratamento.</li>
+<li><strong>Distribuição normal e padronização:</strong> Regra empírica 68-95-99.7; cálculo de escore Z; uso de tabelas.</li>
+<li><strong>Intervalo de confiança:</strong> Interpretação correta ("95% de confiança" ≠ "95% de probabilidade"); fatores que afetam a amplitude (n, σ, nível de confiança).</li>
+<li><strong>Testes de hipóteses:</strong> Estrutura (H<sub>0</sub>/H<sub>1</sub>, α, p-valor); erros Tipo I e II; interpretação de resultados.</li>
+<li><strong>Funções do Excel:</strong> SE, PROCV, SOMASE, tabelas dinâmicas, formatação condicional; aplicação em contextos de auditoria.</li>
+<li><strong>Power Query:</strong> Conceito de ETL; transformações básicas (filtrar, agrupar, mesclar); vantagens sobre fórmulas tradicionais.</li>
+<li><strong>Dados abertos:</strong> Princípios (aberto por padrão, machine-readable, licença aberta); requisitos técnicos para conformidade.</li>
+</ol>
+
+<h2>⚖️ PADRÕES DE COBRANÇA DO CESPE EM ANÁLISE DE DADOS E ESTATÍSTICA</h2>
+<div class="box jur">
+<strong>Padrão 1: Interpretação conceitual sobre cálculo</strong><br>
+Tese: O CESPE raramente cobra cálculos manuais complexos. Prefere questões que testam a compreensão conceitual: "O que significa um CV de 30%?", "Quando usar mediana em vez de média?", "Qual a diferença entre análise preditiva e prescritiva?".<br>
+<strong>Aplicação:</strong> Foque em entender o "porquê" e o "quando", não apenas o "como calcular".
+</div>
+<div class="box jur">
+<strong>Padrão 2: Armadilhas de interpretação estatística</strong><br>
+Tese: Questões frequentemente exploram erros comuns: confundir correlação com causalidade, interpretar mal intervalos de confiança ("95% de confiança" ≠ "95% de chance de conter o parâmetro"), ou assumir que outliers devem sempre ser removidos.<br>
+<strong>Aplicação:</strong> Estude os vieses e limitações de cada técnica, não apenas suas fórmulas.
+</div>
+<div class="box jur">
+<strong>Padrão 3: Aplicação prática em contexto de controle externo</strong><br>
+Tese: Muitas questões contextualizam conceitos em situações de auditoria: "Como usar tabela dinâmica para identificar despesas atípicas?", "Qual análise estatística é mais adequada para comparar gastos entre órgãos?".<br>
+<strong>Aplicação:</strong> Relacione cada conceito estatístico a um caso prático de fiscalização do TCDF.
+</div>
+<div class="box jur">
+<strong>Padrão 4: Excel como ferramenta, não como fim</strong><br>
+Tese: O CESPE cobra o uso do Excel para análise de dados, mas sempre com foco na aplicação para tomada de decisão, não em decorar atalhos ou sintaxe de VBA.<br>
+<strong>Aplicação:</strong> Entenda o fluxo: importar dados (Power Query) → transformar → analisar (tabelas dinâmicas, fórmulas) → visualizar (gráficos) → decidir.
+</div>
+<div class="box jur">
+<strong>Padrão 5: Inferência com amostras</strong><br>
+Tese: Questões sobre testes de hipóteses e intervalos de confiança frequentemente testam a interpretação correta dos resultados, não o cálculo manual da estatística de teste.<br>
+<strong>Aplicação:</strong> Domine a lógica: "Se p-valor < α, rejeito H<sub>0</sub>"; "Um IC de 95% significa que, em 95% das amostras, o intervalo conteria o parâmetro verdadeiro".
+</div>
+
+<h2>📝 QUESTÕES CESPE COMENTADAS</h2>
+<div class="q-card">
+<strong>(CESPE/CEBRASPE – TCDF – Analista Administrativo – 2023)</strong><br>
+Julgue: Na hierarquia DIKW, a inteligência corresponde ao nível mais elevado, caracterizando-se pela capacidade de prever tendências e orientar decisões estratégicas com base na integração de conhecimento e contexto organizacional.
+<p><strong>Comentário:</strong> CORRETO. Essa é a definição precisa de inteligência no modelo DIKW: vai além do conhecimento operacional, incorporando visão estratégica, capacidade preditiva e geração de valor organizacional. É o nível que transforma insights em ação estratégica.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – SEFAZ DF – 2022)</strong><br>
+Julgue: A análise descritiva de dados tem como objetivo principal identificar padrões complexos e prever eventos futuros, utilizando técnicas de machine learning e modelagem preditiva.
+<p><strong>Comentário:</strong> ERRADO. A questão descreve a análise <strong>preditiva</strong>, não a descritiva. A análise <strong>descritiva</strong> responde "o que aconteceu?" e utiliza técnicas como estatística descritiva, agregações e visualizações básicas. A preditiva é que foca em prever o futuro com técnicas avançadas.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – CGDF – 2023)</strong><br>
+Julgue: Em uma distribuição assimétrica à direita, a média tende a ser maior que a mediana, pois os valores extremos à direita "puxam" a média para cima, enquanto a mediana é mais robusta a outliers.
+<p><strong>Comentário:</strong> CORRETO. Essa é uma propriedade fundamental das medidas de posição: em assimetria positiva (cauda à direita), a média > mediana > moda. A mediana é menos sensível a valores extremos, sendo preferível em distribuições assimétricas.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – TCDF – 2024)</strong><br>
+Julgue: Um intervalo de confiança de 95% para a média de despesas com diárias significa que há 95% de probabilidade de que a média populacional esteja contida no intervalo calculado a partir da amostra.
+<p><strong>Comentário:</strong> ERRADO. Essa é uma interpretação incorreta comum. O nível de confiança refere-se ao <strong>procedimento</strong>, não ao intervalo específico: "Se repetíssemos a amostragem muitas vezes, 95% dos intervalos construídos conteriam a média populacional verdadeira". O parâmetro é fixo; o intervalo é que varia entre amostras.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – SEDES DF – 2023)</strong><br>
+Julgue: No Power Query do Excel, a operação "Unpivot" transforma colunas em linhas, convertendo dados no formato "wide" para o formato "long", o que é essencial para análise em tabelas dinâmicas e modelagem estatística.
+<p><strong>Comentário:</strong> CORRETO. Essa é a definição exata da operação Unpivot (também chamada de "derreter" ou "tidy"). É fundamental para preparar dados para análise, pois a maioria das ferramentas estatísticas e de BI exige dados no formato longo (uma observação por linha).</p>
+</div>
+
+<h2>📋 CHECKLIST DE REVISÃO RÁPIDA</h2>
+<div class="summary-box">
+<strong>Domine:</strong><br>
+□ DIKW: Dado (bruto) → Informação (contexto) → Conhecimento (como/porquê) → Inteligência (estratégia/predição)<br>
+□ Dados estruturados (tabular) vs. não estruturados (texto, imagem) vs. semiestruturados (JSON, XML)<br>
+□ Dados abertos: princípios (aberto por padrão, machine-readable, licença aberta) e requisitos técnicos<br>
+□ Ciclo de vida: Coleta → Tratamento (limpeza, padronização) → Armazenamento → Integração (ETL/ELT) → Recuperação<br>
+□ Tipos de análise: Descritiva (o que?), Exploratória (padrões?), Explanatória (por quê?), Preditiva (o que acontecerá?), Prescritiva (o que fazer?)<br>
+□ Excel: Power Query (ETL), Tabelas Dinâmicas (análise exploratória), Fórmulas (SE, PROCV, SOMASE), Formatação Condicional (visualização de outliers)<br>
+□ Variáveis: Qualitativa (nominal/ordinal) vs. Quantitativa (discreta/contínua); medidas aplicáveis a cada tipo<br>
+□ Medidas de posição: Média (sensível a outliers), Mediana (robusta), Moda (categóricos); quando preferir cada uma<br>
+□ Medidas de dispersão: Desvio-padrão (unidade original), CV (comparação entre conjuntos), IQR (robusto, base para box-plot)<br>
+□ Correlação (Pearson): -1 a +1; força e direção da relação linear; NÃO implica causalidade<br>
+□ Box-plot: Cinco números-resumo; outliers definidos por Q1-1,5×IQR e Q3+1,5×IQR<br>
+□ Distribuição normal: Simétrica; regra 68-95-99.7; padronização com escore Z<br>
+□ Inferência: IC para média/proporção; testes de hipóteses (H<sub>0</sub>/H<sub>1</sub>, α, p-valor); erros Tipo I (α) e II (β)<br>
+□ Padrões CESPE: Interpretação conceitual > cálculo manual; contexto de auditoria; armadilhas de inferência
+</div>
+
+<div class="nav-b">
+<a href="mat-fin-concursos.html" class="btn-n">← Anterior</a>
+<a href="index.html" class="btn-n">Voltar ao Dashboard</a>
+</div>
+</main>
+
+<div class="n-panel" id="nP">
+<div style="display:flex;justify-content:space-between;margin-bottom:10px"><strong>Notas de Análise de Dados</strong><button onclick="tN()" style="background:none;border:none;cursor:pointer">✕</button></div>
+<div id="nL" style="max-height:180px;overflow-y:auto;margin-bottom:10px"></div>
+<form onsubmit="aN(event)"><input type="text" class="n-in" id="nI" placeholder="Anotação sobre estatística, Excel, inferência..." required><button type="submit" class="b-sm">💾 Salvar</button></form>
+</div>
+
+<script>
+const SK='analise-dados-estat';let hM=false;
+function webS(){const s=window.getSelection().toString();window.open(`https://duckduckgo.com/?q=${encodeURIComponent(s||'Análise de dados estatística Excel Power Query CESPE TCDF')}`,'_blank')}
+function tN(){const p=document.getElementById('nP');p.style.display=p.style.display==='none'?'block':'none';if(p.style.display==='block')lN()}
+function lN(){const n=JSON.parse(localStorage.getItem(SK)||'[]');document.getElementById('nL').innerHTML=n.length?n.map((x,i)=>`<div class="n-item">${x.text}<br><small style="cursor:pointer;color:#666" onclick="dN(${i})">remover</small></div>`).join(''):'<p style="font-size:.9em;color:#666">Sem notas.</p>'}
+function aN(e){e.preventDefault();const i=document.getElementById('nI'),n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:i.value,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));i.value='';lN()}
+function dN(i){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.splice(i,1);localStorage.setItem(SK,JSON.stringify(n));lN()}
+function tH(){hM=!hM;document.body.style.cursor=hM?'text':'auto';document.querySelectorAll('.t-btn')[2].textContent=hM?'✅ ON':'✏️ Destaque';hM?document.addEventListener('mouseup',hS):document.removeEventListener('mouseup',hS)}
+function hS(){const s=window.getSelection();if(s.toString().length>10){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:`🔍 "${s.toString().substring(0,40)}..." - ${prompt('Nota:','')||'-'}`,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));alert('✅ Destaque salvo!');s.removeAllRanges()}}
+document.addEventListener('DOMContentLoaded',lN);
+</script>
+</body>
+</html>

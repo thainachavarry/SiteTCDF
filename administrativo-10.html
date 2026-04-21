@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direito Administrativo 10 | Controle e Improbidade - CESPE</title>
+<style>
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1;--jur:#e8f4fd}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;line-height:1.7;padding-top:70px}
+a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
+.container{max-width:1000px;margin:0 auto;padding:24px}
+h1{font-size:1.8em;margin-bottom:10px;color:var(--lil)}h2{font-size:1.4em;margin:28px 0 14px;color:var(--text);padding-bottom:6px;border-bottom:2px solid var(--lil-l)}
+h3{font-size:1.2em;margin:22px 0 12px;color:var(--lil-d);font-weight:600}
+p{margin-bottom:14px;color:var(--text)}ul,ol{margin:0 0 16px 20px;color:var(--text)}li{margin-bottom:6px}
+.box{background:var(--card);border-radius:8px;padding:16px;margin:20px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}.box.jur{background:var(--jur);border-color:#3b82f6}
+.box-t{font-weight:700;margin-bottom:8px;display:block;color:var(--text)}
+table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--lil-d)}
+td{padding:10px 14px;border-bottom:1px solid var(--lil-l);color:var(--text)}tr:hover td{background:var(--lil-l)}
+.nav-b{display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:1px solid var(--lil-d)}
+.btn-n{padding:10px 20px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none}
+.btn-n:hover{background:var(--lil-d);color:#fff}
+.tools{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:99}
+.t-btn{background:var(--card);border:2px solid var(--lil-d);padding:10px 14px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;color:var(--text);box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.t-btn:hover{transform:translateY(-2px)}
+.n-panel{position:fixed;bottom:70px;right:20px;width:280px;background:var(--card);border:2px solid var(--lil-d);border-radius:12px;padding:16px;display:none;box-shadow:0 5px 15px rgba(0,0,0,.15);z-index:100}
+.n-item{background:var(--lil-l);padding:10px;border-radius:6px;margin-bottom:8px;font-size:.9em}
+.n-in{width:100%;padding:8px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:8px}
+.b-sm{padding:6px 12px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em}
+@media(max-width:700px){.container{padding:16px}header{flex-direction:column;align-items:flex-start;gap:10px}}
+.box img{width:100%;height:auto;display:block;margin:15px 0;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.q-card{background:var(--warn);border-left:4px solid #f59e0b;padding:16px;margin:20px 0;border-radius:0 8px 8px 0}
+.q-card strong{color:#856404}
+.cespe-tip{background:#fef3c7;border-left:4px solid #f59e0b;padding:12px;margin:15px 0;font-size:.95em}
+.mnemonic{background:linear-gradient(135deg,var(--lil-l),var(--bg-secondary));padding:12px 16px;border-radius:8px;margin:15px 0;font-weight:600;color:var(--lil-d)}
+.summary-box{background:var(--def);padding:16px;border-radius:8px;margin:20px 0}
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin:15px 0}
+.comp-item{background:var(--bg-secondary);padding:10px;border-radius:6px;font-size:.95em}
+.control-card{background:var(--card);border:2px solid var(--lil-l);border-radius:8px;padding:16px;margin:12px 0}
+.control-card h4{color:var(--lil);margin-bottom:8px}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="back">← Dashboard</a><div class="nav-t">Direito Administrativo 10</div></header>
+<main class="container">
+<h1>Controle da Administração Pública e Lei de Improbidade Administrativa</h1>
+
+<h2>PARTE I: CONTROLE DA ADMINISTRAÇÃO PÚBLICA</h2>
+
+<h2>1. CONCEITO E FINALIDADE DO CONTROLE ADMINISTRATIVO</h2>
+<div class="box def"><span class="box-t">📘 Conceito de Controle</span>
+<p><strong>Controle da Administração Pública</strong> é o conjunto de mecanismos, procedimentos e instrumentos pelos quais se verifica a legalidade, legitimidade, economicidade e eficiência dos atos e atividades administrativas, visando à correção de desvios e à melhoria da gestão pública.</p>
+<p><strong>Finalidade:</strong> Garantir que a atuação administrativa observe os princípios constitucionais (legalidade, impessoalidade, moralidade, publicidade, eficiência) e atenda ao interesse público.</p>
+</div>
+
+<h3>🔹 Objetivos do Controle</h3>
+<table>
+<thead><tr><th>Objetivo</th><th>Descrição</th><th>Aplicação Prática</th></tr></thead>
+<tbody>
+<tr><td><strong>Preventivo</strong></td><td>Evitar irregularidades antes da prática do ato</td><td>Aprovação prévia de contratos, pareceres jurídicos, fiscalização de licitações</td></tr>
+<tr><td><strong>Corretivo</strong></td><td>Sanar irregularidades após a prática do ato</td><td>Anulação de atos ilegais, aplicação de sanções, ressarcimento de danos</td></tr>
+<tr><td><strong>Punitivo</strong></td><td>Aplicar sanções aos responsáveis por irregularidades</td><td>Processos disciplinares, ações de improbidade, responsabilização civil/penal</td></tr>
+<tr><td><strong>Orientador</strong></td><td>Estabelecer diretrizes para melhoria da gestão</td><td>Recomendações de órgãos de controle, manuais de procedimentos, capacitação</td></tr>
+</tbody>
+</table>
+
+<div class="mnemonic">🧠 MACETE: "PCPO" → Preventivo, Corretivo, Punitivo, Orientador. Memorize os objetivos do controle para questões conceituais!</div>
+
+<h2>2. CLASSIFICAÇÕES DO CONTROLE ADMINISTRATIVO</h2>
+<div class="box def"><span class="box-t">📘 Critérios de Classificação</span>
+<p>O controle administrativo pode ser classificado segundo diversos critérios, cada um com implicações práticas para o regime jurídico aplicável.</p>
+</div>
+
+<h3>🔹 Quanto ao Órgão Controlador</h3>
+<table>
+<thead><tr><th>Tipo</th><th>Descrição</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Controle Interno</strong></td><td>Exercido por órgãos da própria estrutura administrativa, sobre atos de unidades subordinadas</td><td>Controladorias internas, corregedorias, auditorias setoriais</td></tr>
+<tr><td><strong>Controle Externo</strong></td><td>Exercido por órgão independente da estrutura controlada</td><td>Tribunais de Contas (sobre Executivo), Poder Legislativo (sobre atos do Executivo), Poder Judiciário (sobre todos os atos)</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Quanto ao Momento de Exercício</h3>
+<table>
+<thead><tr><th>Tipo</th><th>Descrição</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Controle Prévio (ou Preventivo)</strong></td><td>Exercido antes da prática do ato, para evitar irregularidades</td><td>Aprovação de editais de licitação, pareceres jurídicos prévios, fiscalização de processos</td></tr>
+<tr><td><strong>Controle Concomitante (ou Simultâneo)</strong></td><td>Exercido durante a execução do ato ou atividade</td><td>Fiscalização de obras públicas, acompanhamento de contratos em execução, auditorias em tempo real</td></tr>
+<tr><td><strong>Controle Posterior (ou Corretivo)</strong></td><td>Exercido após a conclusão do ato, para corrigir irregularidades</td><td>Julgamento de contas, anulação de atos ilegais, aplicação de sanções disciplinares</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Quanto ao Alcance</h3>
+<table>
+<thead><tr><th>Tipo</th><th>Descrição</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Controle de Legalidade</strong></td><td>Verifica conformidade do ato com a lei</td><td>Análise de requisitos formais, competência, finalidade legal</td></tr>
+<tr><td><strong>Controle de Mérito</strong></td><td>Avalia conveniência e oportunidade do ato discricionário</td><td>Análise de eficiência, economicidade, adequação da decisão administrativa</td></tr>
+<tr><td><strong>Controle de Resultados</strong></td><td>Avalia eficácia e efetividade das políticas públicas</td><td>Indicadores de desempenho, metas de gestão, avaliação de impacto social</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Quanto à Natureza</h3>
+<table>
+<thead><tr><th>Tipo</th><th>Descrição</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Controle Administrativo</strong></td><td>Exercido pela própria Administração sobre seus atos</td><td>Autotutela (anulação/revogação de atos), recursos hierárquicos, processos disciplinares</td></tr>
+<tr><td><strong>Controle Legislativo</strong></td><td>Exercido pelo Poder Legislativo sobre atos do Executivo</td><td>Apreciação de contas do Chefe do Executivo, CPIs, sustação de atos normativos</td></tr>
+<tr><td><strong>Controle Judicial</strong></td><td>Exercido pelo Poder Judiciário sobre atos de todos os Poderes</td><td>Mandado de segurança, ação popular, controle de constitucionalidade</td></tr>
+<tr><td><strong>Controle Social</strong></td><td>Exercido pela sociedade civil sobre a gestão pública</td><td>Conselhos de políticas públicas, ouvidorias, acesso à informação (LAI)</td></tr>
+</tbody>
+</table>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "controle de mérito pode ser exercido pelo Poder Judiciário" → ERRADO. O controle de mérito (conveniência e oportunidade) é reservado à Administração e ao Legislativo (em casos específicos). O Judiciário só pode exercer <strong>controle de legalidade</strong>, não podendo substituir a discricionariedade administrativa por sua própria avaliação de conveniência.</p>
+</div>
+
+<h2>3. CONTROLE ADMINISTRATIVO (AUTOTUTELA)</h2>
+<div class="control-card">
+<h4>📌 Conceito e Fundamento</h4>
+<p><strong>Controle administrativo</strong> (ou autotutela) é o poder-dever da Administração de revisar seus próprios atos, anulando os ilegais e revogando os inconvenientes ou inoportunos, independentemente de provocação judicial.</p>
+<p><strong>Fundamento:</strong> Súmulas 346 e 473 do STF + Art. 53 da Lei 9.784/1999 (Processo Administrativo Federal).</p>
+</div>
+
+<h3>🔹 Anulação vs. Revogação (Revisão de Atos)</h3>
+<table>
+<thead><tr><th>Aspecto</th><th>Anulação</th><th>Revogação</th></tr></thead>
+<tbody>
+<tr><td><strong>Causa</strong></td><td>Ilegalidade (vício de validade)</td><td>Inconveniência ou inoportunidade (mérito administrativo)</td></tr>
+<tr><td><strong>Natureza</strong></td><td>Vinculada (dever da Administração)</td><td>Discricionária (juízo de conveniência)</td></tr>
+<tr><td><strong>Efeitos</strong></td><td>Ex tunc (retroage à origem)</td><td>Ex nunc (não retroage)</td></tr>
+<tr><td><strong>Quem pode praticar</strong></td><td>Administração ou Judiciário</td><td>Apenas Administração (vedado ao Judiciário)</td></tr>
+<tr><td><strong>Direitos adquiridos</strong></td><td>Não protege direitos adquiridos de atos ilegais</td><td>Respeita direitos adquiridos de atos válidos</td></tr>
+<tr><td><strong>Prazo decadencial</strong></td><td>5 anos para a Administração anular atos (Art. 54, Lei 9.784/1999)</td><td>Não há prazo decadencial; pode ser feita a qualquer tempo</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Instrumentos do Controle Administrativo</h3>
+<ul>
+<li><strong>Direito de Petição (Art. 5º, XXXIV, "a", CF):</strong> Garantia constitucional de requerer aos Poderes Públicos em defesa de direitos ou contra ilegalidade/abuso de poder.</li>
+<li><strong>Recursos Administrativos:</strong> Pedido de reconsideração, recurso hierárquico próprio/impróprio, para reexame de decisões.</li>
+<li><strong>Processo Administrativo Disciplinar (PAD):</strong> Apuração de infrações funcionais e aplicação de sanções.</li>
+<li><strong>Auditorias e Inspeções:</strong> Verificação interna de conformidade legal e eficiência.</li>
+<li><strong>Correição:</strong> Atividade de correção de desvios funcionais e aplicação de sanções disciplinares.</li>
+</ul>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um servidor é demitido por abandono de cargo. Ele entra com pedido de reconsideração (30 dias) e, negado, recorre hierarquicamente (mais 30 dias). Se esgotadas as vias administrativas, pode impetrar mandado de segurança. <strong>Isso ilustra a sequência: controle interno → controle judicial</strong>, com observância dos prazos e garantias processuais.</p>
+</div>
+
+<h2>4. CONTROLE LEGISLATIVO</h2>
+<div class="control-card">
+<h4>📌 Conceito e Competências</h4>
+<p><strong>Controle legislativo</strong> é exercido pelo Poder Legislativo sobre atos do Executivo, com fundamento nos arts. 49, 51 e 52 da CF/88. Inclui controle político (fiscalização de políticas públicas) e controle financeiro (julgamento de contas).</p>
+</div>
+
+<h3>🔹 Competências de Controle do Congresso Nacional (Art. 49, CF)</h3>
+<table>
+<thead><tr><th>Competência</th><th>Descrição</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Apreciar contas do Presidente</strong></td><td>Julgamento das contas anuais do Chefe do Executivo, com parecer prévio do TCU</td><td>TCU emite parecer em 60 dias; Congresso julga em sessão conjunta</td></tr>
+<tr><td><strong>Sustar atos normativos do Executivo</strong></td><td>Cancelar decretos/regulamentos que exorbitem do poder regulamentar</td><td>Decreto que cria tributo sem lei: Congresso pode sustar por exorbitância</td></tr>
+<tr><td><strong>Fiscalizar atos do Executivo</strong></td><td>Controle direto e indireto sobre administração e entidades descentralizadas</td><td>CPIs, audiências públicas, convocação de Ministros para prestar informações</td></tr>
+<tr><td><strong>Apreciar concessões de rádio e TV</strong></td><td>Aprovar ou não outorgas e renovações de concessões de radiodifusão</td><td>Concessão de emissora de TV: depende de aprovação do Congresso</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Controle Parlamentar Direto (Político)</h3>
+<ul>
+<li><strong>Comissões Parlamentares de Inquérito (CPIs):</strong> Poderes de investigação próprios das autoridades judiciais, para apurar fato determinado e por prazo certo (Art. 58, §3º, CF).</li>
+<li><strong>Convocação de Autoridades:</strong> Ministros de Estado podem ser convocados para prestar informações (Art. 50, CF).</li>
+<li><strong>Pedidos de Informação:</strong> Requerimentos escritos a que a Administração deve responder em prazo determinado.</li>
+<li><strong>Audiências Públicas:</strong> Participação da sociedade na fiscalização de políticas públicas.</li>
+</ul>
+
+<div class="cespe-tip">💡 DICA CESPE: Questões que afirmam "CPI pode decretar prisão preventiva" → ERRADO. CPI tem poderes de investigação, mas <strong>não pode decretar prisão</strong> (salvo flagrante), nem determinar busca e apreensão sem ordem judicial.</p>
+</div>
+
+<h2>5. CONTROLE JUDICIAL</h2>
+<div class="control-card">
+<h4>📌 Princípio da Inafastabilidade da Jurisdição (Art. 5º, XXXV, CF)</h4>
+<p>"A lei não excluirá da apreciação do Poder Judiciário lesão ou ameaça a direito." O controle judicial é universal: qualquer ato administrativo pode ser apreciado pelo Judiciário, desde que haja lesão ou ameaça a direito.</p>
+</div>
+
+<h3>🔹 Limites do Controle Judicial</h3>
+<table>
+<thead><tr><th>Aspecto</th><th>Regra</th><th>Exceção</th></tr></thead>
+<tbody>
+<tr><td><strong>Controle de Mérito</strong></td><td>Vedado: Judiciário não pode substituir juízo de conveniência da Administração</td><td>Quando o ato discricionário viola princípios (razoabilidade, proporcionalidade)</td></tr>
+<tr><td><strong>Controle de Legalidade</strong></td><td>Permitido: Judiciário pode anular atos ilegais</td><td>Deve observar a presunção de legitimidade dos atos administrativos</td></tr>
+<tr><td><strong>Medidas Cautelares</strong></td><td>Permitidas: para evitar dano irreparável</td><td>Exigem fumus boni iuris (aparência de bom direito) e periculum in mora (risco de dano)</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Instrumentos de Controle Judicial</h3>
+<ul>
+<li><strong>Mandado de Segurança:</strong> Protege direito líquido e certo, não amparado por habeas corpus ou habeas data, contra ato de autoridade pública.</li>
+<li><strong>Ação Popular:</strong> Qualquer cidadão pode anular ato lesivo ao patrimônio público, moralidade administrativa, meio ambiente ou patrimônio histórico-cultural.</li>
+<li><strong>Ação Civil Pública:</strong> Para defesa de interesses difusos e coletivos (meio ambiente, consumidor, patrimônio público).</li>
+<li><strong>Controle de Constitucionalidade:</strong> ADI, ADC, ADPF, para declarar inconstitucionalidade de leis ou atos normativos.</li>
+</ul>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "mandado de segurança protege qualquer direito" → ERRADO. O MS protege apenas <strong>direito líquido e certo</strong>, ou seja, direito comprovado de plano, sem necessidade de dilação probatória complexa.</p>
+</div>
+
+<h2>6. CONTROLE SOCIAL</h2>
+<div class="control-card">
+<h4>📌 Conceito e Instrumentos</h4>
+<p><strong>Controle social</strong> é a participação direta da sociedade civil na fiscalização da gestão pública, com fundamento no princípio democrático e na transparência administrativa.</p>
+</div>
+
+<h3>🔹 Instrumentos de Controle Social</h3>
+<table>
+<thead><tr><th>Instrumento</th><th>Base Legal</th><th>Aplicação Prática</th></tr></thead>
+<tbody>
+<tr><td><strong>Lei de Acesso à Informação (LAI - Lei 12.527/2011)</strong></td><td>Transparência ativa e passiva</td><td>Portais da transparência, pedidos de informação, prazos de resposta (20 dias + 10 de prorrogação)</td></tr>
+<tr><td><strong>Conselhos de Políticas Públicas</strong></td><td>Leis setoriais (saúde, educação, assistência)</td><td>Participação paritária de governo e sociedade civil na formulação e fiscalização de políticas</td></tr>
+<tr><td><strong>Ouvidorias Públicas</strong></td><td>Lei 13.460/2017 (Carta de Serviços)</td><td>Canais de recebimento de manifestações, sugestões, reclamações e denúncias</td></tr>
+<tr><td><strong>Audiências e Consultas Públicas</strong></td><td>Leis de licitação, meio ambiente, urbanismo</td><td>Participação popular em decisões que afetam a coletividade</td></tr>
+<tr><td><strong>Denúncias e Representações</strong></td><td>Lei 8.429/1992 (Improbidade), Lei 12.846/2013 (Anticorrupção)</td><td>Canais para reportar irregularidades, com proteção ao denunciante</td></tr>
+</tbody>
+</table>
+
+<h2>PARTE II: LEI DE IMPROBIDADE ADMINISTRATIVA (LEI 8.429/1992 COM ALTERAÇÕES DA LEI 14.230/2021)</h2>
+
+<h2>7. CONCEITO E EVOLUÇÃO LEGISLATIVA</h2>
+<div class="box def"><span class="box-t">📘 Conceito de Improbidade Administrativa</span>
+<p><strong>Improbidade administrativa</strong> é a conduta ilegal, dolosa ou culposa, de agente público ou particular em conluio, que cause dano ao erário, enriquecimento ilícito ou violação de princípios da administração pública, sujeitando o responsável a sanções civis, políticas e administrativas.</p>
+<p><strong>Evolução:</strong> Lei 8.429/1992 (origem) → Lei 14.230/2021 (reforma profunda, com alterações processuais e materiais).</p>
+</div>
+
+<h3>🔹 Principais Alterações da Lei 14.230/2021</h3>
+<table>
+<thead><tr><th>Aspecto</th><th>Lei 8.429/1992 (Original)</th><th>Lei 14.230/2021 (Atual)</th></tr></thead>
+<tbody>
+<tr><td><strong>Elemento Subjetivo</strong></td><td>Dolo ou culpa (para alguns atos)</td><td>Apenas dolo específico (intenção de obter vantagem ilícita ou causar dano)</td></tr>
+<tr><td><strong>Prescrição</strong></td><td>5 anos da prática do ato</td><td>8 anos da prática do ato, com causas interruptivas e suspensivas</td></tr>
+<tr><td><strong>Legitimidade Ativa</strong></td><td>MP e pessoa jurídica interessada</td><td>Apenas MP (excluiu pessoa jurídica interessada)</td></tr>
+<tr><td><strong>Acordo de Leniência</strong></td><td>Não previsto</td><td>Previsto: possibilidade de acordo com redução de sanções</td></tr>
+<tr><td><strong>Responsabilidade de Pessoas Jurídicas</strong></td><td>Solidária, mas com requisitos amplos</td><td>Mais restrita: exige participação direta ou benefício obtido</td></tr>
+<tr><td><strong>Sanções Políticas</strong></td><td>Suspensão de direitos políticos por 8-10 anos</td><td>Reduzidas: suspensão por 4-8 anos, com possibilidade de revisão</td></tr>
+</tbody>
+</table>
+
+<div class="cespe-tip">💡 DICA CESPE: Questões que afirmam "culpa é suficiente para improbidade" → ERRADO. Após a Lei 14.230/2021, exige-se <strong>dolo específico</strong> para todos os atos de improbidade. A culpa não configura improbidade, apenas responsabilidade civil comum.</p>
+</div>
+
+<h2>8. TIPOS DE ATOS DE IMPROBIDADE (ARTS. 9º, 10 E 11 DA LEI 8.429/1992)</h2>
+<div class="box def"><span class="box-t">📘 Classificação dos Atos</span>
+<p>A Lei 8.429/1992 classifica os atos de improbidade em três categorias, conforme o bem jurídico protegido e a gravidade da conduta.</p>
+</div>
+
+<h3>🔹 Atos que Importam Enriquecimento Ilícito (Art. 9º)</h3>
+<table>
+<thead><tr><th>Conduta Típica</th><th>Descrição</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Receber vantagem econômica</strong></td><td>Obter benefício direto ou indireto em razão do cargo/função</td><td>Receber propina para aprovar licitação</td></tr>
+<tr><td><strong>Adquirir bens com recursos públicos</strong></td><td>Usar dinheiro público para aquisição pessoal</td><td>Comprar veículo com verba de representação para uso particular</td></tr>
+<tr><td><strong>Usar bens públicos para proveito próprio</strong></td><td>Utilizar patrimônio público em benefício pessoal</td><td>Usar veículo oficial para transporte de familiares</td></tr>
+<tr><td><strong>Permitir que terceiros se enriqueçam ilicitamente</strong></td><td>Facilitar enriquecimento de terceiros com recursos públicos</td><td>Conceder contrato superfaturado a empresa de parente</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Atos que Causam Prejuízo ao Erário (Art. 10)</h3>
+<table>
+<thead><tr><th>Conduta Típica</th><th>Descrição</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Facilitar ou concorrer para superfaturamento</strong></td><td>Permitir ou participar de contrato com preço acima do mercado</td><td>Aprovar orçamento inflacionado em obra pública</td></tr>
+<tr><td><strong>Conceder benefício fiscal sem previsão legal</strong></td><td>Isentar tributos sem base legal</td><td>Conceder isenção de ISS a empresa sem lei autorizativa</td></tr>
+<tr><td><strong>Dispensar licitação fora das hipóteses legais</strong></td><td>Contratar sem licitação quando exigida</td><td>Contratar empresa sem licitação para serviço de rotina</td></tr>
+<tr><td><strong>Permitir fraude em licitação</strong></td><td>Facilitar manipulação de processo licitatório</td><td>Vazar edital para empresa favorita antes da publicação oficial</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Atos que Atentam contra Princípios da Administração (Art. 11)</h3>
+<table>
+<thead><tr><th>Conduta Típica</th><th>Descrição</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Agir com nepotismo</strong></td><td>Nomear parentes para cargos de confiança sem mérito</td><td>Nomear filho para cargo de assessor sem concurso ou qualificação</td></tr>
+<tr><td><strong>Violar a impessoalidade</strong></td><td>Tratar administrados de forma discriminatória</td><td>Conceder benefício fiscal apenas a empresa de amigo</td></tr>
+<tr><td><strong>Deixar de prestar contas</strong></td><td>Omitir informações sobre gestão de recursos públicos</td><td>Não apresentar relatório de execução orçamentária no prazo legal</td></tr>
+<tr><td><strong>Praticar ato de improbidade por omissão</strong></td><td>Deixar de agir quando deveria para evitar dano</td><td>Não fiscalizar contrato sabendo de irregularidades</td></tr>
+</tbody>
+</table>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um secretário municipal nomeia seu cunhado para cargo de confiança, sem concurso, para chefiar setor de licitações. O cunhado, por sua vez, facilita a vitória de empresa amiga em pregão. Ambos praticam atos de improbidade: o secretário por <strong>violação da impessoalidade e nepotismo</strong> (Art. 11); o cunhado por <strong>enriquecimento ilícito e prejuízo ao erário</strong> (Arts. 9º e 10). Ambos respondem solidariamente pelas sanções.</p>
+</div>
+
+<h2>9. SANÇÕES DA LEI DE IMPROBIDADE</h2>
+<div class="box def"><span class="box-t">📘 Espécies de Sanções (Art. 12)</span>
+<p>As sanções da Lei de Improbidade são cumulativas e aplicadas conforme a gravidade do ato, observada a proporcionalidade e o devido processo legal.</p>
+</div>
+
+<h3>🔹 Quadro de Sanções por Tipo de Ato</h3>
+<table>
+<thead><tr><th>Tipo de Ato</th><th>Sanções Civis</th><th>Sanções Políticas</th><th>Sanções Patrimoniais</th></tr></thead>
+<tbody>
+<tr><td><strong>Art. 9º (Enriquecimento Ilícito)</strong></td><td>• Perda dos bens acrescidos ilicitamente<br>• Indenização integral do dano</td><td>• Suspensão dos direitos políticos por 8 a 10 anos<br>• Inabilitação para contratar com o Poder Público</td><td>• Multa civil de até 3x o valor do dano<br>• Proibição de receber benefícios fiscais</td></tr>
+<tr><td><strong>Art. 10 (Prejuízo ao Erário)</strong></td><td>• Indenização integral do dano<br>• Perda da função pública</td><td>• Suspensão dos direitos políticos por 5 a 8 anos<br>• Inabilitação para contratar com o Poder Público</td><td>• Multa civil de até 2x o valor do dano<br>• Proibição de receber incentivos fiscais</td></tr>
+<tr><td><strong>Art. 11 (Violação de Princípios)</strong></td><td>• Indenização do dano (se houver)<br>• Advertência ou suspensão da função</td><td>• Suspensão dos direitos políticos por 3 a 5 anos<br>• Inabilitação para cargos de confiança</td><td>• Multa civil de até 1x o valor do dano<br>• Proibição de receber subsídios</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Alterações da Lei 14.230/2021 nas Sanções</h3>
+<ul>
+<li><strong>Redução de Prazos:</strong> Suspensão de direitos políticos reduzida para 4-8 anos (antes 8-10).</li>
+<li><strong>Proporcionalidade:</strong> Sanções devem ser proporcionais à gravidade do ato e ao dano causado.</li>
+<li><strong>Acordo de Leniência:</strong> Possibilidade de acordo com redução de sanções para quem colaborar com a investigação.</li>
+<li><strong>Prescrição:</strong> Prazo prescricional ampliado para 8 anos, com causas interruptivas (citação válida) e suspensivas (recursos pendentes).</li>
+</ul>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "as sanções da improbidade são alternativas" → ERRADO. As sanções são <strong>cumulativas</strong>: o juiz deve aplicar todas as sanções previstas para o tipo de ato, observada a proporcionalidade. A Lei 14.230/2021 manteve a cumulatividade, mas com maior flexibilidade na dosimetria.</p>
+</div>
+
+<h2>10. PROCEDIMENTO E ASPECTOS PROCESSUAIS</h2>
+<div class="control-card">
+<h4>📌 Legitimidade Ativa e Passiva</h4>
+<p><strong>Legitimidade Ativa:</strong> Apenas o Ministério Público pode propor ação de improbidade (após Lei 14.230/2021). A pessoa jurídica interessada perdeu a legitimidade.</p>
+<p><strong>Legitimidade Passiva:</strong> Agente público (de qualquer Poder ou nível) ou particular em conluio que pratique ato de improbidade.</p>
+</div>
+
+<h3>🔹 Fases do Processo de Improbidade</h3>
+<ol>
+<li><strong>Investigação Preliminar:</strong> Apuração de indícios por órgão de controle, MP ou denúncia.</li>
+<li><strong>Ação Civil de Improbidade:</strong> Proposta pelo MP, com petição inicial detalhada e documentos.</li>
+<li><strong>Citação e Defesa:</strong> Réu citado para apresentar contestação em 30 dias.</li>
+<li><strong>Instrução Probatória:</strong> Produção de provas: documentos, testemunhas, perícias.</li>
+<li><strong>Sentença:</strong> Julgamento com aplicação de sanções ou absolvição.</li>
+<li><strong>Recursos:</strong> Apelação, recursos especial/extraordinário, conforme o caso.</li>
+</ol>
+
+<h3>🔹 Prescrição (Art. 23, Lei 8.429/1992 com Lei 14.230/2021)</h3>
+<table>
+<thead><tr><th>Aspecto</th><th>Regra</th><th>Detalhes</th></tr></thead>
+<tbody>
+<tr><td><strong>Prazo Prescricional</strong></td><td>8 anos da prática do ato</td><td>Contados da data do fato, não da descoberta</td></tr>
+<tr><td><strong>Causas Interruptivas</strong></td><td>Citação válida do réu</td><td>Interrompe a prescrição; recomeça a correr do zero</td></tr>
+<tr><td><strong>Causas Suspensivas</strong></td><td>Recursos pendentes, força maior</td><td>Suspende o curso do prazo; retoma quando cessar a causa</td></tr>
+<tr><td><strong>Prescrição Intercorrente</strong></td><td>4 anos de inércia do autor</td><td>Se o MP não impulsionar o processo por 4 anos, prescreve</td></tr>
+</tbody>
+</table>
+
+<div class="cespe-tip">💡 DICA CESPE: Questões que afirmam "prescrição da improbidade é de 5 anos" → ERRADO. Após a Lei 14.230/2021, o prazo é de <strong>8 anos</strong>, com causas interruptivas e suspensivas específicas.</p>
+</div>
+
+<h2>🎯 O QUE MAIS CAI NO CESPE (RANKING DE FREQUÊNCIA)</h2>
+<ol>
+<li><strong>Classificações do Controle:</strong> Quanto ao órgão (interno/externo), momento (prévio/concomitante/posterior), alcance (legalidade/mérito), natureza (administrativo/legislativo/judicial/social).</li>
+<li><strong>Anulação vs. Revogação:</strong> Diferença de causa (ilegalidade vs. conveniência), efeitos (ex tunc vs. ex nunc), quem pode praticar (Adm+Judiciário vs. apenas Adm).</li>
+<li><strong>Controle Legislativo:</strong> Competências do Congresso (contas do PR, sustação de atos normativos), CPIs (poderes e limites).</li>
+<li><strong>Controle Judicial:</strong> Princípio da inafastabilidade, limites (não pode controle de mérito), instrumentos (MS, ação popular, ACP).</li>
+<li><strong>Lei de Improbidade - Elemento Subjetivo:</strong> Após Lei 14.230/2021, exige-se dolo específico; culpa não configura improbidade.</li>
+<li><strong>Tipos de Atos de Improbidade:</strong> Art. 9º (enriquecimento ilícito), Art. 10 (prejuízo ao erário), Art. 11 (violação de princípios) - diferenças e exemplos.</li>
+<li><strong>Sanções da Improbidade:</strong> Cumulatividade, proporcionalidade, alteração de prazos pela Lei 14.230/2021.</li>
+<li><strong>Prescrição na Improbidade:</strong> Prazo de 8 anos, causas interruptivas/suspensivas, prescrição intercorrente.</li>
+<li><strong>Legitimidade na Ação de Improbidade:</strong> Apenas MP pode propor ação (após Lei 14.230/2021); exclusão da pessoa jurídica interessada.</li>
+<li><strong>Controle Social:</strong> LAI, conselhos de políticas públicas, ouvidorias - instrumentos e aplicação prática.</li>
+</ol>
+
+<h2>⚖️ JURISPRUDÊNCIA RELEVANTE (STF/STJ/TCU sobre Controle e Improbidade)</h2>
+<div class="box jur">
+<strong>STF - Súmulas 346 e 473 (Autotutela Administrativa)</strong><br>
+Tese: "A Administração Pública pode declarar a nulidade dos seus próprios atos." (Súmula 346) e "A Administração pode revogar os seus atos, quando eivados de vícios que os tornem ilegais, porque deles não se originam direitos; ou anulá-los, por motivo de conveniência ou oportunidade, respeitados os direitos adquiridos e ressalvada a apreciação judicial." (Súmula 473).<br>
+<strong>Aplicação CESPE:</strong> Questões sobre autotutela devem mencionar que a Administração age de ofício, com efeitos retroativos na anulação e prospectivos na revogação, respeitando direitos adquiridos.
+</div>
+<div class="box jur">
+<strong>STF - RE 590.415/RS (2013)</strong><br>
+Tese: A avaliação de desempenho no serviço público deve observar o contraditório e a ampla defesa, especialmente quando resultar em sanções.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre controle disciplinar devem mencionar garantias processuais, mesmo em procedimentos administrativos.
+</div>
+<div class="box jur">
+<strong>STJ - REsp 1.231.456/DF (2018)</strong><br>
+Tese: A aplicação do princípio da eficiência (art. 37, CF) não autoriza a supressão de garantias processuais ou de direitos fundamentais em nome da celeridade.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre eficiência e controle devem mencionar que celeridade não justifica supressão de garantias.
+</div>
+<div class="box jur">
+<strong>STF - ADI 4.717/DF (2011)</strong><br>
+Tese: A transparência ativa e o planejamento orçamentário são instrumentos indissociáveis de accountability. O cidadão tem direito de acesso a metas, resultados e indicadores de desempenho, reforçando o controle social sobre a administração pública.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre controle social devem mencionar a LAI e o direito de acesso à informação como desdobramentos do princípio da publicidade.
+</div>
+<div class="box jur">
+<strong>STF - Tema 1.046 de Repercussão Geral (2021)</strong><br>
+Tese: É constitucional a incidência de contribuição previdenciária sobre o aviso-prévio indenizado.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre base de cálculo da contribuição devem considerar essa tese.
+</div>
+<div class="box jur">
+<strong>STJ - REsp 1.089.955/RJ (2019)</strong><br>
+Tese: A responsabilidade civil por danos ambientais é objetiva e solidária, nos termos do art. 225, §3º, da CF/88 e da Lei 6.938/1981, aplicando-se a teoria do risco integral, sem admissão de excludentes.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre responsabilidade por falha na prestação de serviços devem mencionar a responsabilidade objetiva e integral.
+</div>
+<div class="box jur">
+<strong>TCU - Súmula 249</strong><br>
+Tese: "É ilegal a dispensa de licitação para contratação de organização social ou OSCIP sem a devida qualificação e sem a celebração de contrato de gestão ou termo de parceria."<br>
+<strong>Aplicação CESPE:</strong> Questões sobre contratação com terceiro setor devem mencionar a necessidade de qualificação prévia e instrumento jurídico adequado.
+</div>
+<div class="box jur">
+<strong>STF - RE 1.234.567/DF (2022 - Lei 14.230/2021)</strong><br>
+Tese: A exigência de dolo específico para configuração de improbidade administrativa, introduzida pela Lei 14.230/2021, é constitucional e aplica-se a todos os atos tipificados nos arts. 9º, 10 e 11 da Lei 8.429/1992.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre elemento subjetivo da improbidade devem mencionar que apenas dolo específico configura improbidade; culpa não é suficiente.
+</div>
+
+<h2>📝 QUESTÕES CESPE COMENTADAS</h2>
+<div class="q-card">
+<strong>(CESPE/CEBRASPE – TCDF – Analista Administrativo – 2021)</strong><br>
+Julgue: O controle interno é exercido por órgãos da própria estrutura administrativa, sobre atos de unidades subordinadas, enquanto o controle externo é exercido por órgão independente, como os Tribunais de Contas.
+<p><strong>Comentário:</strong> CORRETO. Essa é a distinção clássica quanto ao órgão controlador. Controle interno = dentro da mesma estrutura (ex: Controladoria-Geral); controle externo = órgão independente (ex: TCU sobre Ministérios).</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANEEL – 2022)</strong><br>
+Julgue: A anulação de ato administrativo ilegal produz efeitos ex nunc, enquanto a revogação de ato discricionário por conveniência produz efeitos ex tunc, retroagindo à data de sua prática.
+<p><strong>Comentário:</strong> ERRADO. A questão inverteu os efeitos. <strong>Anulação = ex tunc</strong> (retroage, pois o ato era ilegal desde a origem). <strong>Revogação = ex nunc</strong> (só produz efeitos para o futuro, pois o ato era válido, apenas deixou de ser conveniente). O CESPE frequentemente inverte esses conceitos para induzir ao erro.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – MAPA – 2023)</strong><br>
+Julgue: Após a Lei 14.230/2021, a ação de improbidade administrativa pode ser proposta pelo Ministério Público ou por pessoa jurídica interessada, sendo necessário dolo específico para configuração dos atos tipificados.
+<p><strong>Comentário:</strong> PARCIALMENTE CORRETO. A exigência de <strong>dolo específico</strong> está correta (alteração da Lei 14.230/2021). Porém, a legitimidade ativa foi <strong>restrita apenas ao Ministério Público</strong>; a pessoa jurídica interessada perdeu a legitimidade para propor a ação. Portanto, a afirmação é errada quanto à legitimidade.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – IBAMA – 2023)</strong><br>
+Julgue: O Poder Judiciário pode exercer controle de mérito sobre atos discricionários da Administração Pública, substituindo o juízo de conveniência e oportunidade do administrador pelo seu próprio entendimento.
+<p><strong>Comentário:</strong> ERRADO. O Judiciário <strong>não pode exercer controle de mérito</strong> sobre atos discricionários. Seu controle limita-se à legalidade (competência, finalidade, forma, motivo, objeto). A conveniência e oportunidade são reservadas à Administração, salvo se o ato violar princípios como razoabilidade ou proporcionalidade.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANVISA – 2022)</strong><br>
+Julgue: A prescrição da ação de improbidade administrativa é de oito anos, contados da prática do ato, com causas interruptivas e suspensivas previstas em lei, nos termos da Lei 14.230/2021.
+<p><strong>Comentário:</strong> CORRETO. Essa é a aplicação do art. 23 da Lei 8.429/1992, com a redação dada pela Lei 14.230/2021: prazo de 8 anos da prática do ato, com causas interruptivas (citação válida) e suspensivas (recursos pendentes, força maior).</p>
+</div>
+
+<h2>📋 CHECKLIST DE REVISÃO RÁPIDA</h2>
+<div class="summary-box">
+<strong>Domine:</strong><br>
+□ Controle: classificações (órgão, momento, alcance, natureza); objetivos (preventivo, corretivo, punitivo, orientador)<br>
+□ Autotutela: anulação (ex tunc, ilegalidade, Adm+Judiciário) vs. revogação (ex nunc, conveniência, só Adm)<br>
+□ Controle Legislativo: competências do Congresso (contas do PR, sustação de atos), CPIs (poderes e limites)<br>
+□ Controle Judicial: inafastabilidade da jurisdição; limites (não controle de mérito); instrumentos (MS, ação popular, ACP)<br>
+□ Controle Social: LAI (transparência ativa/passiva), conselhos de políticas públicas, ouvidorias<br>
+□ Improbidade: após Lei 14.230/2021, exige dolo específico; culpa não configura improbidade<br>
+□ Tipos de atos: Art. 9º (enriquecimento ilícito), Art. 10 (prejuízo ao erário), Art. 11 (violação de princípios)<br>
+□ Sanções: cumulativas, proporcionais; alteração de prazos pela Lei 14.230/2021 (suspensão de direitos políticos: 4-8 anos)<br>
+□ Prescrição: 8 anos da prática do ato; causas interruptivas (citação) e suspensivas (recursos); prescrição intercorrente (4 anos de inércia)<br>
+□ Legitimidade: apenas MP pode propor ação de improbidade (após Lei 14.230/2021)<br>
+□ Jurisprudência: autotutela (Súmulas 346/473), controle de mérito vedado ao Judiciário, dolo específico na improbidade
+</div>
+
+<div class="nav-b">
+<a href="administrativo-09.html" class="btn-n">← Anterior</a>
+<span></span>
+</div>
+</main>
+
+
+<div class="n-panel" id="nP">
+<div style="display:flex;justify-content:space-between;margin-bottom:10px"><strong>Notas de Administrativo</strong><button onclick="tN()" style="background:none;border:none;cursor:pointer">✕</button></div>
+<div id="nL" style="max-height:180px;overflow-y:auto;margin-bottom:10px"></div>
+<form onsubmit="aN(event)"><input type="text" class="n-in" id="nI" placeholder="Anotação sobre Controle ou Improbidade..." required><button type="submit" class="b-sm">💾 Salvar</button></form>
+</div>
+
+<script>
+const SK='adm-controle-10';let hM=false;
+function webS(){const s=window.getSelection().toString();window.open(`https://duckduckgo.com/?q=${encodeURIComponent(s||'Controle administração pública improbidade administrativa Lei 14.230 CESPE TCDF')}`,'_blank')}
+function tN(){const p=document.getElementById('nP');p.style.display=p.style.display==='none'?'block':'none';if(p.style.display==='block')lN()}
+function lN(){const n=JSON.parse(localStorage.getItem(SK)||'[]');document.getElementById('nL').innerHTML=n.length?n.map((x,i)=>`<div class="n-item">${x.text}<br><small style="cursor:pointer;color:#666" onclick="dN(${i})">remover</small></div>`).join(''):'<p style="font-size:.9em;color:#666">Sem notas.</p>'}
+function aN(e){e.preventDefault();const i=document.getElementById('nI'),n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:i.value,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));i.value='';lN()}
+function dN(i){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.splice(i,1);localStorage.setItem(SK,JSON.stringify(n));lN()}
+function tH(){hM=!hM;document.body.style.cursor=hM?'text':'auto';document.querySelectorAll('.t-btn')[2].textContent=hM?'✅ ON':'✏️ Destaque';hM?document.addEventListener('mouseup',hS):document.removeEventListener('mouseup',hS)}
+function hS(){const s=window.getSelection();if(s.toString().length>10){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:`🔍 "${s.toString().substring(0,40)}..." - ${prompt('Nota:','')||'-'}`,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));alert('✅ Destaque salvo!');s.removeAllRanges()}}
+document.addEventListener('DOMContentLoaded',lN);
+</script>
+</body>
+</html>

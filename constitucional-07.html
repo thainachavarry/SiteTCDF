@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direito Constitucional 07 | Poder Legislativo - CESPE</title>
+<style>
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1;--jur:#e8f4fd}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;line-height:1.7;padding-top:70px}
+a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
+.container{max-width:1000px;margin:0 auto;padding:24px}
+h1{font-size:1.8em;margin-bottom:10px;color:var(--lil)}h2{font-size:1.4em;margin:28px 0 14px;color:var(--text);padding-bottom:6px;border-bottom:2px solid var(--lil-l)}
+h3{font-size:1.2em;margin:22px 0 12px;color:var(--lil-d);font-weight:600}
+p{margin-bottom:14px;color:var(--text)}ul,ol{margin:0 0 16px 20px;color:var(--text)}li{margin-bottom:6px}
+.box{background:var(--card);border-radius:8px;padding:16px;margin:20px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}.box.jur{background:var(--jur);border-color:#3b82f6}
+.box-t{font-weight:700;margin-bottom:8px;display:block;color:var(--text)}
+table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--lil-d)}
+td{padding:10px 14px;border-bottom:1px solid var(--lil-l);color:var(--text)}tr:hover td{background:var(--lil-l)}
+.nav-b{display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:1px solid var(--lil-d)}
+.btn-n{padding:10px 20px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none}
+.btn-n:hover{background:var(--lil-d);color:#fff}
+.tools{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:99}
+.t-btn{background:var(--card);border:2px solid var(--lil-d);padding:10px 14px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;color:var(--text);box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.t-btn:hover{transform:translateY(-2px)}
+.n-panel{position:fixed;bottom:70px;right:20px;width:280px;background:var(--card);border:2px solid var(--lil-d);border-radius:12px;padding:16px;display:none;box-shadow:0 5px 15px rgba(0,0,0,.15);z-index:100}
+.n-item{background:var(--lil-l);padding:10px;border-radius:6px;margin-bottom:8px;font-size:.9em}
+.n-in{width:100%;padding:8px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:8px}
+.b-sm{padding:6px 12px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em}
+@media(max-width:700px){.container{padding:16px}header{flex-direction:column;align-items:flex-start;gap:10px}}
+.box img{width:100%;height:auto;display:block;margin:15px 0;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.q-card{background:var(--warn);border-left:4px solid #f59e0b;padding:16px;margin:20px 0;border-radius:0 8px 8px 0}
+.q-card strong{color:#856404}
+.cespe-tip{background:#fef3c7;border-left:4px solid #f59e0b;padding:12px;margin:15px 0;font-size:.95em}
+.mnemonic{background:linear-gradient(135deg,var(--lil-l),var(--bg-secondary));padding:12px 16px;border-radius:8px;margin:15px 0;font-weight:600;color:var(--lil-d)}
+.summary-box{background:var(--def);padding:16px;border-radius:8px;margin:20px 0}
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin:15px 0}
+.comp-item{background:var(--bg-secondary);padding:10px;border-radius:6px;font-size:.95em}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="back">← Dashboard</a><a href="index.html" class="home-btn" title="Voltar ao Dashboard">
+    🏠
+</a><div class="nav-t">Direito Constitucional 07</div></header>
+<main class="container">
+<h1>📚 Poder Legislativo na CF/88 (Arts. 44 a 75)</h1>
+<p><strong>Foco CESPE:</strong> A banca cobra exaustivamente as competências exclusivas e privativas das Casas Legislativas (Arts. 49, 51, 52), as imunidades parlamentares materiais e formais (Art. 53), os requisitos e poderes da CPI (Art. 58, §3º), as espécies normativas do processo legislativo (Art. 59) e a função fiscalizatória com controle externo/TCU (Arts. 70-75). Questões frequentemente confundem competências delegáveis/indelegáveis, quóruns de deliberação e limites das imunidades.</p>
+
+<h2>1. ESTRUTURA DO PODER LEGISLATIVO FEDERAL</h2>
+<div class="box def"><span class="box-t">📘 Sistema Bicameral (Art. 44, CF/88)</span>
+<p>O Poder Legislativo federal é exercido pelo <strong>Congresso Nacional</strong>, que se compõe da <strong>Câmara dos Deputados</strong> e do <strong>Senado Federal</strong>, integrados por representantes do povo e dos Estados/DF, respectivamente.</p>
+</div>
+
+<h3>🔹 Câmara dos Deputados vs. Senado Federal</h3>
+<table>
+<thead><tr><th>Aspecto</th><th>Câmara dos Deputados</th><th>Senado Federal</th></tr></thead>
+<tbody>
+<tr><td><strong>Representação</strong></td><td>Povo (representação proporcional)</td><td>Estados e DF (representação igualitária)</td></tr>
+<tr><td><strong>Número de Membros</strong></td><td>Mín. 8, Máx. 70 por Estado/DF (LC 14.043/2020)</td><td>3 por Estado e 3 pelo DF (total: 81)</td></tr>
+<tr><td><strong>Mandato</strong></td><td>4 anos (renovação integral)</td><td>8 anos (renovação alternada: 1/3 e 2/3 a cada 4 anos)</td></tr>
+<tr><td><strong>Idade Mínima</strong></td><td>21 anos</td><td>35 anos</td></tr>
+<tr><td><strong>Função Típica</strong></td><td>Legislar e fiscalizar</td><td>Legislar, fiscalizar e função de "Casa Revisora"</td></tr>
+<tr><td><strong>Competência Exclusiva Relevante</strong></td><td>Admissibilidade de acusação contra PR/VP; Tomada de contas do PR</td><td>Processar e julgar PR/VP, Ministros, próprios membros; Aprovar indicação de autoridades</td></tr>
+</tbody>
+</table>
+
+<div class="mnemonic">🧠 MACETE: "Câmara = Casa do Povo (21 anos, 4 anos) | Senado = Casa dos Estados (35 anos, 8 anos)" → Memorize idade e mandato para não errar!</div>
+
+<h2>2. COMPETÊNCIAS DAS CASAS LEGISLATIVAS</h2>
+<div class="box def"><span class="box-t">📘 Classificação das Competências</span>
+<p>A CF/88 distribui competências entre Congresso Nacional (Art. 49), Câmara dos Deputados (Art. 51) e Senado Federal (Art. 52). O CESPE adora cobrar a literalidade e a aplicação prática de cada inciso.</p>
+</div>
+
+<h3>🔹 Competências Exclusivas do Congresso Nacional (Art. 49, CF) - INDELEGÁVEIS</h3>
+<div class="comp-grid">
+<div class="comp-item">🔹 I - Resolver definitivamente sobre tratados, acordos ou atos internacionais que acarretem encargos ou compromissos gravosos ao patrimônio nacional</div>
+<div class="comp-item">🔹 II - Autorizar o Presidente a declarar guerra, celebrar paz, permitir que forças estrangeiras transitem ou permaneçam no território nacional</div>
+<div class="comp-item">🔹 III - Aprovar o estado de defesa, intervenção federal, estado de sítio e suspender sua execução</div>
+<div class="comp-item">🔹 IV - Sustar atos normativos do Poder Executivo que exorbitem do poder regulamentar ou dos limites de delegação legislativa</div>
+<div class="comp-item">🔹 V - Apreciar as contas prestadas anualmente pelo Presidente da República (parecer prévio do TCU em 60 dias)</div>
+<div class="comp-item">🔹 VI - Fiscalizar e controlar os atos do Poder Executivo, incluindo da administração indireta</div>
+<div class="comp-item">🔹 VII - Zelar pela preservação de sua competência legislativa em face da atribuição normativa dos outros Poderes</div>
+<div class="comp-item">🔹 VIII - Apreciar os atos de concessão e renovação de concessão de emissoras de rádio e TV</div>
+<div class="comp-item">🔹 IX - Escolher 2/3 dos membros do Conselho da República</div>
+<div class="comp-item">🔹 X - Exercer outras atribuições previstas na Constituição</div>
+</div>
+
+<div class="cespe-tip">💡 DICA CESPE: Questões que afirmam "o Congresso pode delegar suas competências exclusivas" → ERRADO. As competências do Art. 49 são <strong>indelegáveis</strong> e devem ser exercidas pelo Congresso em sessão conjunta.</div>
+
+<h3>🔹 Competências Privativas da Câmara dos Deputados (Art. 51, CF)</h3>
+<ul>
+<li><strong>I - Autorizar, por 2/3 de seus membros, a instauração de processo contra o Presidente e o Vice-Presidente da República e os Ministros de Estado</strong> → Quórum qualificado para admissibilidade de acusação.</li>
+<li><strong>II - Proceder à tomada de contas do Presidente da República, quando não apresentadas ao Congresso dentro de 60 dias após a abertura da sessão legislativa</strong> → Sanção por omissão do Chefe do Executivo.</li>
+<li><strong>III - Elaborar seu regimento interno</strong> → Autonomia regimental.</li>
+<li><strong>IV - Dispor sobre sua organização, funcionamento, polícia, criação, transformação ou extinção dos cargos, empregos e funções de seus serviços, e a iniciativa de lei para fixação da respectiva remuneração</strong> → Autonomia administrativa e financeira.</li>
+<li><strong>V - Eleger dois membros do Conselho da República</strong> → Participação em órgão de consulta presidencial.</li>
+</ul>
+
+<h3>🔹 Competências Privativas do Senado Federal (Art. 52, CF)</h3>
+<ul>
+<li><strong>I - Processar e julgar o Presidente e o Vice-Presidente da República nos crimes de responsabilidade, bem como os Ministros de Estado e os Comandantes das Forças Armadas nos crimes da mesma natureza conexos com aqueles</strong> → Função judicante do Senado (tribunal de impeachment).</li>
+<li><strong>II - Processar e julgar os Ministros do STF, o PGR e o AGU nos crimes de responsabilidade</strong> → Foro privilegiado para altas autoridades.</li>
+<li><strong>III - Aprovar previamente, por voto secreto, após arguição pública, a escolha de: a) Magistrados, nos casos estabelecidos nesta Constituição; b) Ministros do TCU indicados pelo Presidente da República; c) Governador de Território; d) Presidente e diretores do BACEN; e) PGR; f) demais cargos que a lei determinar</strong> → "Sabatina" e aprovação de autoridades estratégicas.</li>
+<li><strong>IV - Autorizar operações externas de natureza financeira, de interesse da União, dos Estados, do DF, dos Territórios e dos Municípios</strong> → Controle sobre endividamento externo.</li>
+<li><strong>V - Fixar, por proposta do Presidente da República, limites globais para o montante da dívida consolidada da União, dos Estados, do DF e dos Municípios</strong> → Controle macrofiscal.</li>
+<li><strong>VI - Suspender a execução, no todo ou em parte, de lei declarada inconstitucional por decisão definitiva do STF</strong> → Efeito erga omnes da decisão de inconstitucionalidade em controle concentrado.</li>
+<li><strong>VII a IX - Outras competências administrativas e de fiscalização</strong> → Regimento, organização interna, eleição de membros do Conselho da República.</li>
+</ul>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente confunde competências: afirma que "a Câmara processa e julga o Presidente em crime de responsabilidade" → ERRADO. A Câmara <strong>autoriza a instauração do processo</strong> (2/3); o Senado <strong>processa e julga</strong> (2/3 para condenação). Memorize: Câmara = admissibilidade; Senado = julgamento.</p>
+</div>
+
+<h2>3. ESTATUTO DOS CONGRESSISTAS: IMUNIDADES, INCOMPATIBILIDADES E PERDA DE MANDATO</h2>
+<h3>🔹 Imunidades Parlamentares (Art. 53, CF/88)</h3>
+<div class="box def"><span class="box-t">📘 Dupla Proteção Constitucional</span>
+<p>Deputados e Senadores gozam de duas espécies de imunidade: <strong>material (inviolabilidade)</strong> e <strong>formal (prerrogativa de foro)</strong>.</p>
+</div>
+
+<h4>Imunidade Material (Inviolabilidade - Art. 53, caput e §1º)</h4>
+<ul>
+<li><strong>Proteção:</strong> Inviolabilidade por opiniões, palavras e votos no exercício do mandato e na circunscrição do mandato.</li>
+<li><strong>Alcance:</strong> Absoluta e perpétua para atos funcionais; protege mesmo após o término do mandato.</li>
+<li><strong>Limites:</strong> Não protege atos estranhos ao exercício do mandato (crimes comuns, atos pessoais, opiniões fora da circunscrição funcional).</li>
+<li><strong>Jurisprudência STF:</strong> A imunidade material não se estende a discursos proferidos em redes sociais se desconexos da função parlamentar (RE 1.045.263/DF).</li>
+</ul>
+
+<h4>Imunidade Formal (Prerrogativa de Foro - Art. 53, §§2º a 5º)</h4>
+<table>
+<thead><tr><th>Aspecto</th><th>Regra Constitucional</th><th>Detalhes</th></tr></thead>
+<tbody>
+<tr><td><strong>Prisão</strong></td><td>Deputados e Senadores não podem ser presos, salvo em flagrante de crime inafiançável</td><td>Em 48h, os autos devem ser remetidos à Casa para que, pelo voto da maioria de seus membros, resolva sobre a prisão</td></tr>
+<tr><td><strong>Processo Criminal</strong></td><td>Recebida a denúncia, a Casa decide, por maioria de seus membros, se o processo prossegue</td><td>Decisão da Casa suspende a prescrição enquanto durar o mandato; não há imunidade para crimes anteriores à diplomação</td></tr>
+<tr><td><strong>Foro Privilegiado</strong></td><td>Deputados e Senadores são processados e julgados pelo STF</td><td>Aplica-se apenas a crimes comuns praticados durante o mandato; crimes de responsabilidade seguem rito próprio</td></tr>
+</tbody>
+</table>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um Deputado Federal é preso em flagrante por porte ilegal de armas (crime inafiançável). Em 48h, os autos são remetidos à Câmara dos Deputados. Se a Câmara, por maioria de seus membros, decidir pela manutenção da prisão, o Deputado permanecerá preso; se decidir pela liberdade, será solto. <strong>Isso é aplicação da imunidade formal (Art. 53, §2º, CF).</strong></p>
+</div>
+
+<h3>🔹 Incompatibilidades e Impedimentos (Art. 54 e 55, CF/88)</h3>
+<h4>Incompatibilidades (Art. 54) - Impedem a Posse ou Exigem Renúncia</h4>
+<ul>
+<li>Firmar ou manter contrato com pessoa jurídica de direito público, autarquia, empresa pública, sociedade de economia mista ou empresa concessionária de serviço público, salvo quando o contrato obedecer a cláusulas uniformes.</li>
+<li>Aceitar ou exercer cargo, função ou emprego remunerado, inclusive os de que sejam demissíveis "ad nutum", nas entidades acima.</li>
+<li>Ser titular de mais de um cargo ou mandato público eletivo.</li>
+<li>Ser proprietário, controlador ou diretor de empresa que goze de favor decorrente de contrato com pessoa jurídica de direito público, ou nela exercer função remunerada.</li>
+<li>Ocupar cargo ou função de que seja demissível "ad nutum" nas entidades acima.</li>
+<li>Patrocinar causa em que seja interessada qualquer das entidades acima.</li>
+<li>Ser titular de mais de um cargo ou mandato público eletivo.</li>
+</ul>
+
+<h4>Impedimentos (Art. 55, §1º) - Causam Perda do Mandato se Descumpridos</h4>
+<ul>
+<li>Proceder de modo incompatível com o decoro parlamentar.</li>
+<li>Utilizar o mandato para auferir vantagens pessoais ou para beneficiar interesses privados.</li>
+<li>Deixar de comparecer, em cada sessão legislativa, à terça parte das sessões ordinárias da Casa, salvo licença ou missão por esta autorizada.</li>
+<li>Perder ou tiver suspensos os direitos políticos.</li>
+<li>Quando o decretar a Justiça Eleitoral, nos casos previstos na Constituição.</li>
+<li>Condenação criminal em sentença transitada em julgado.</li>
+</ul>
+
+<h3>🔹 Perda do Mandato (Art. 55, CF/88)</h3>
+<p>O mandato será perdido por:</p>
+<ol>
+<li><strong>Infração das proibições do Art. 54</strong> → Incompatibilidades.</li>
+<li><strong>Procedimento incompatível com o decoro parlamentar</strong> → Julgado pela Casa respectiva, por maioria absoluta.</li>
+<li><strong>Condenação criminal transitada em julgado</strong> → Perda automática, mas a Casa pode declarar a perda por decisão motivada.</li>
+<li><strong>Quebra de decoro parlamentar</strong> → Processo interno na Casa, com ampla defesa.</li>
+<li><strong>Renúncia</strong> → Ato unilateral do parlamentar.</li>
+</ol>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "a perda do mandato por condenação criminal depende de decisão da Casa Legislativa" → ERRADO. A condenação criminal transitada em julgado gera <strong>perda automática</strong> do mandato (Art. 55, §2º, CF). A Casa apenas <strong>declara</strong> a perda, não a decide.</p>
+</div>
+
+<h2>4. COMISSÕES PARLAMENTARES E COMISSÃO PARLAMENTAR DE INQUÉRITO (CPI)</h2>
+<h3>🔹 Comissões Permanentes e Temporárias (Art. 58, CF/88)</h3>
+<p>O Congresso Nacional e suas Casas terão comissões permanentes e temporárias, constituídas na forma e com as atribuições previstas no respectivo regimento ou no ato de que resultar sua criação.</p>
+<ul>
+<li><strong>Comissões Permanentes:</strong> Temáticas (ex: CCJ, CFT, CDES), analisam proposições legislativas de sua área.</li>
+<li><strong>Comissões Temporárias:</strong> Específicas, criadas para fim determinado, extinguem-se com o cumprimento da missão.</li>
+<li><strong>Representação Partidária:</strong> As comissões devem refletir, tanto quanto possível, a proporcionalidade dos partidos ou blocos parlamentares na Casa.</li>
+</ul>
+
+<h3>🔹 Comissão Parlamentar de Inquérito - CPI (Art. 58, §3º, CF/88)</h3>
+<div class="box def"><span class="box-t">📘 Requisitos Constitucionais para Criação</span>
+<p>As CPIs terão <strong>poderes de investigação próprios das autoridades judiciais</strong>, além de outros previstos nos regimentos das respectivas Casas, e serão criadas pela Câmara dos Deputados e pelo Senado Federal, em conjunto ou separadamente, mediante requerimento de <strong>um terço de seus membros</strong>, para a apuração de <strong>fato determinado</strong> e por <strong>prazo certo</strong>, sendo suas conclusões, se for o caso, encaminhadas ao Ministério Público para que promova a responsabilidade civil ou criminal dos infratores.</p>
+</div>
+
+<h4>Elementos Essenciais da CPI</h4>
+<table>
+<thead><tr><th>Elemento</th><th>Regra Constitucional</th><th>Detalhes</th></tr></thead>
+<tbody>
+<tr><td><strong>Requerimento</strong></td><td>1/3 dos membros da Casa (Câmara: 171 deputados; Senado: 27 senadores)</td><td>Não é necessário partido único; pode ser coalizão de parlamentares</td></tr>
+<tr><td><strong>Objeto</strong></td><td>Fato determinado e certo</td><td>Não pode ser investigação genérica ou "pescaria"; deve haver delimitação clara</td></tr>
+<tr><td><strong>Prazo</strong></td><td>Certo e determinado</td><td>Não pode ser prorrogado indefinidamente; deve ter termo final</td></tr>
+<tr><td><strong>Poderes</strong></td><td>Investigação próprios das autoridades judiciais</td><td>Quebra de sigilo bancário/fiscal/telefônico (com fundamentação); oitiva de testemunhas; requisição de documentos</td></tr>
+<tr><td><strong>Limites</strong></td><td>Não pode decretar prisão (salvo flagrante), nem determinar busca e apreensão sem ordem judicial</td><td>Poderes de investigação, não de jurisdição</td></tr>
+</tbody>
+</table>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um grupo de 30 Senadores (mais de 1/3 do Senado) apresenta requerimento para criação de CPI destinada a apurar desvios de recursos públicos em contratos de merenda escolar no DF, com prazo de 120 dias. O requerimento preenche os requisitos constitucionais: <strong>1/3 dos membros</strong>, <strong>fato determinado</strong> (desvios na merenda), <strong>prazo certo</strong> (120 dias). A CPI pode, por exemplo, quebrar sigilo bancário dos investigados, mas não pode decretar prisão preventiva.</p>
+</div>
+
+<h4>Poderes de Investigação da CPI (Jurisprudência STF)</h4>
+<ul>
+<li><strong>Quebra de Sigilo:</strong> Bancário, fiscal e telefônico (dados) → Permitidos, desde que fundamentados e proporcionais (STF, MS 23.452/RJ).</li>
+<li><strong>Oitiva de Testemunhas:</strong> Poder de convocar e ouvir, sob pena de condução coercitiva (se autorizado pela Casa).</li>
+<li><strong>Requisição de Documentos:</strong> Pode requisitar documentos de órgãos públicos e privados, sob pena de crime de desobediência.</li>
+<li><strong>Busca e Apreensão:</strong> <strong>Não pode</strong> determinar diretamente; depende de ordem judicial.</li>
+<li><strong>Prisão:</strong> <strong>Não pode</strong> decretar prisão preventiva ou temporária; apenas em flagrante, com comunicação à Casa em 48h.</li>
+</ul>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "a CPI pode decretar busca e apreensão ou prisão preventiva" → ERRADO. A CPI tem <strong>poderes de investigação</strong>, não de jurisdição. Medidas coercitivas que restringem liberdade ou propriedade exigem ordem judicial, salvo flagrante delito.</p>
+</div>
+
+<h2>5. PROCESSO LEGISLATIVO (Arts. 59 a 69, CF/88)</h2>
+<div class="box def"><span class="box-t">📘 Espécies Normativas (Art. 59, CF/88)</span>
+<p>O processo legislativo compreende a elaboração de:</p>
+<ol>
+<li>Emendas à Constituição (PEC)</li>
+<li>Leis complementares</li>
+<li>Leis ordinárias</li>
+<li>Leis delegadas</li>
+<li>Medidas provisórias</li>
+<li>Decretos legislativos</li>
+<li>Resoluções</li>
+</ol>
+</div>
+
+<h3>🔹 Emenda à Constituição - PEC (Art. 60, CF/88)</h3>
+<table>
+<thead><tr><th>Aspecto</th><th>Regra Constitucional</th><th>Detalhes</th></tr></thead>
+<tbody>
+<tr><td><strong>Iniciativa</strong></td><td>1/3 da Câmara ou 1/3 do Senado; Presidente da República; mais da metade das Assembleias Legislativas (manifestação de cada uma pela maioria relativa)</td><td>Iniciativa concorrente; não há iniciativa popular para PEC</td></tr>
+<tr><td><strong>Quórum de Aprovação</strong></td><td>3/5 dos membros de cada Casa, em dois turnos de votação</td><td>Quórum qualificado; votação em turno único na Casa revisora se não houver emendas</td></tr>
+<tr><td><strong>Limites Materiais (Cláusulas Pétreas)</strong></td><td>Não pode ser objeto de deliberação a proposta de emenda tendente a abolir: forma federativa de Estado; voto direto, secreto, universal e periódico; separação dos Poderes; direitos e garantias individuais</td><td>STF: cláusulas pétreas protegem o núcleo essencial dos direitos, não impedem evolução normativa</td></tr>
+<tr><td><strong>Promulgação</strong></td><td>Pelas Mesas da Câmara e do Senado, com número de ordem</td><td>Não há sanção ou veto presidencial</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Lei Complementar vs. Lei Ordinária</h3>
+<table>
+<thead><tr><th>Aspecto</th><th>Lei Complementar</th><th>Lei Ordinária</th></tr></thead>
+<tbody>
+<tr><td><strong>Matéria</strong></td><td>Reservada pela CF (ex: normas gerais de direito tributário, estatuto da OAB, organização do MP)</td><td>Demais matérias de competência legislativa da União</td></tr>
+<tr><td><strong>Quórum de Aprovação</strong></td><td>Maioria absoluta (metade + 1) de cada Casa</td><td>Maioria simples (presentes, desde que quórum de deliberação)</td></tr>
+<tr><td><strong>Relação Hierárquica</strong></td><td>Não há hierarquia; são espécies distintas com âmbitos materiais próprios</td><td>Lei complementar não revoga lei ordinária e vice-versa, se invadirem competência alheia</td></tr>
+<tr><td><strong>Veto Presidential</strong></td><td>Aplica-se o mesmo regime da lei ordinária</td><td>Idem</td></tr>
+</tbody>
+</table>
+
+<div class="cespe-tip">💡 DICA CESPE: Questões que afirmam "lei complementar é hierarquicamente superior à lei ordinária" → ERRADO. São espécies normativas <strong>distintas</strong>, com âmbitos materiais próprios definidos pela CF. Não há relação de subordinação hierárquica.</div>
+
+<h3>🔹 Medida Provisória - MP (Art. 62, CF/88)</h3>
+<div class="box def"><span class="box-t">📘 Requisitos Constitucionais</span>
+<p>Em caso de <strong>relevância e urgência</strong>, o Presidente da República poderá adotar medidas provisórias, com força de lei, devendo submetê-las de imediato ao Congresso Nacional.</p>
+</div>
+
+<h4>Características e Limites da MP</h4>
+<ul>
+<li><strong>Força de Lei:</strong> Produz efeitos imediatos desde a publicação, mas depende de conversão em lei pelo Congresso.</li>
+<li><strong>Prazo de Vigência:</strong> 60 dias, prorrogável uma vez por igual período. Se não apreciada em 45 dias, entra em regime de urgência (trancamento de pauta).</li>
+<li><strong>Matérias Vedadas (Art. 62, §1º):</strong> Nacionalidade, cidadania, direitos políticos, partidos políticos, direito eleitoral, direito penal, processual penal e processual civil, organização do Judiciário e do MP, carreira e garantia de seus membros, PPA, LOA, LDO, créditos adicionais, matéria já disciplinada em projeto de lei aprovado pelo Congresso e pendente de sanção/veto.</li>
+<li><strong>Rejeição ou Perda de Eficácia:</strong> Se rejeitada ou se perder eficácia por decurso de prazo, o Congresso regula as relações jurídicas decorrentes por decreto legislativo.</li>
+</ul>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>O Presidente da República edita MP para criar novo tributo em caso de calamidade pública. A MP é publicada e produz efeitos imediatos. Se o Congresso não a apreciar em 120 dias (60+60), ela <strong>perde eficácia</strong>. As relações jurídicas constituídas e decorrentes durante sua vigência serão reguladas por decreto legislativo do Congresso. <strong>Isso é aplicação do Art. 62, §11, CF.</strong></p>
+</div>
+
+<h2>6. FUNÇÃO FISCALIZATÓRIA: CONTROLE EXTERNO E TCU</h2>
+<h3>🔹 Controle Externo (Arts. 70 a 75, CF/88)</h3>
+<div class="box def"><span class="box-t">📘 Sistema de Controle</span>
+<p>A fiscalização contábil, financeira, orçamentária, operacional e patrimonial da União e das entidades da administração direta e indireta, quanto à legalidade, legitimidade, economicidade, aplicação das subvenções e renúncia de receitas, será exercida pelo <strong>Congresso Nacional</strong>, mediante <strong>controle externo</strong>, e pelo <strong>sistema de controle interno</strong> de cada Poder.</p>
+</div>
+
+<h3>🔹 Tribunal de Contas da União - TCU (Art. 71, CF/88)</h3>
+<p>O TCU é órgão auxiliar do Congresso Nacional no exercício do controle externo, com competências para:</p>
+<ul>
+<li><strong>I - Apreciar as contas prestadas anualmente pelo Presidente da República</strong>, mediante parecer prévio que deverá ser elaborado em 60 dias a contar de seu recebimento.</li>
+<li><strong>II - Julgar as contas dos administradores e demais responsáveis por dinheiros, bens e valores públicos</strong>, e as contas daqueles que derem causa a perda, extravio ou outra irregularidade de que resulte prejuízo ao erário público.</li>
+<li><strong>III - Apreciar, para fins de registro, a legalidade dos atos de admissão de pessoal</strong>, a qualquer título, na administração direta e indireta, excetuadas as nomeações para cargo de provimento em comissão, bem como a das concessões de aposentadorias, reformas e pensões, ressalvadas as melhorias posteriores que não alterem o fundamento legal do ato concessório.</li>
+<li><strong>IV a XII - Outras competências de fiscalização, auditoria, aplicação de sanções, sustação de atos, representação por ilegalidade, etc.</strong></li>
+</ul>
+
+<h4>Natureza Jurídica e Autonomia do TCU</h4>
+<ul>
+<li><strong>Não integra nenhum dos Poderes</strong>: É órgão de controle externo com autonomia funcional, administrativa e financeira.</li>
+<li><strong>Composição</strong>: 9 Ministros, sendo 3 escolhidos pelo Presidente da República (com aprovação do Senado) e 6 pelo Congresso Nacional.</li>
+<li><strong>Quórum de Julgamento</strong>: Maioria absoluta dos Ministros para decisões ordinárias; 2/3 para decisões de grande relevância (ex: sustação de contrato).</li>
+<li><strong>Decisões com Eficácia de Título Executivo</strong>: As decisões do TCU de que resulte débito ou multa têm eficácia de título executivo (Art. 71, §3º, CF).</li>
+</ul>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "o TCU julga as contas do Presidente da República" → ERRADO. O TCU <strong>aprecia e emite parecer prévio</strong>; o <strong>julgamento definitivo</strong> cabe ao Congresso Nacional (Art. 49, V, c/c Art. 71, I, CF).</p>
+</div>
+
+<h2>🎯 O QUE MAIS CAI NO CESPE (RANKING DE FREQUÊNCIA)</h2>
+<ol>
+<li><strong>Competências das Casas (Arts. 49, 51, 52):</strong> Diferença entre exclusivas do Congresso, privativas da Câmara e do Senado; quóruns de deliberação.</li>
+<li><strong>Imunidades Parlamentares (Art. 53):</strong> Material (absoluta para atos funcionais) vs. Formal (prerrogativa de foro, decisão da Casa sobre prosseguimento do processo).</li>
+<li><strong>CPI (Art. 58, §3º):</strong> Requisitos de criação (1/3, fato determinado, prazo certo); poderes de investigação e limites (não pode prender, nem determinar busca e apreensão sem ordem judicial).</li>
+<li><strong>Processo Legislativo:</strong> Espécies normativas (PEC, LC, LO, MP, etc.); quóruns de aprovação; limites materiais das PECs (cláusulas pétreas).</li>
+<li><strong>Medida Provisória:</strong> Requisitos (relevância e urgência); prazo de vigência (60+60); matérias vedadas; efeitos da rejeição/perda de eficácia.</li>
+<li><strong>Controle Externo/TCU:</strong> Natureza jurídica (órgão auxiliar do Legislativo, não integra Poder); competências (apreciação de contas do PR ≠ julgamento); eficácia de título executivo das decisões.</li>
+<li><strong>Perda de Mandato (Art. 55):</strong> Diferença entre perda automática (condenação criminal) e perda por decisão da Casa (quebra de decoro).</li>
+<li><strong>Jurisprudência do STF:</strong> Imunidade material em redes sociais, poderes de CPI, cláusulas pétreas, MP e trancamento de pauta.</li>
+</ol>
+
+<h2>⚖️ JURISPRUDÊNCIA RELEVANTE (STF/STJ sobre Poder Legislativo)</h2>
+<div class="box jur">
+<strong>STF - ADI 4.717/DF (2011)</strong><br>
+Tese: A transparência ativa e o planejamento orçamentário são instrumentos indissociáveis de accountability. O cidadão tem direito de acesso a metas, resultados e indicadores de desempenho, reforçando o controle social sobre a administração pública.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre transparência e controle social devem mencionar a LAI e o direito de acesso à informação.
+</div>
+<div class="box jur">
+<strong>STF - RE 1.045.263/DF (2020)</strong><br>
+Tese: A imunidade parlamentar material (inviolabilidade) protege opiniões, palavras e votos proferidos no exercício do mandato e na circunscrição funcional. Discursos em redes sociais desconexos da função parlamentar não gozam de proteção absoluta.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre imunidade material devem diferenciar atos funcionais (protegidos) de atos pessoais (não protegidos).
+</div>
+<div class="box jur">
+<strong>STF - MS 23.452/RJ (2001)</strong><br>
+Tese: As Comissões Parlamentares de Inquérito têm poderes de investigação próprios das autoridades judiciais, incluindo a quebra de sigilo bancário, fiscal e telefônico, desde que fundamentada e proporcional ao objeto da investigação.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre poderes de CPI devem mencionar a possibilidade de quebra de sigilo, mas não de prisão ou busca e apreensão sem ordem judicial.
+</div>
+<div class="box jur">
+<strong>STF - ADI 4.029/DF (2014)</strong><br>
+Tese: É constitucional a edição de medida provisória pelo Presidente da República, desde que observados os requisitos de relevância e urgência (art. 62, CF). A apreciação pelo Congresso Nacional é condição de eficácia, não de validade.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre MP devem mencionar que a relevância e urgência são pressupostos constitucionais, e que o Congresso pode rejeitar ou modificar a MP.
+</div>
+<div class="box jur">
+<strong>STF - Tema 1.046 de Repercussão Geral (2021)</strong><br>
+Tese: É constitucional a incidência de contribuição previdenciária sobre o aviso-prévio indenizado.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre base de cálculo da contribuição devem considerar essa tese.
+</div>
+<div class="box jur">
+<strong>STF - ADI 2.010/DF (2011)</strong><br>
+Tese: É constitucional lei estadual que prevê isenção de taxa de inscrição em concurso público para candidatos de baixa renda, desde que observados critérios objetivos e razoáveis.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre isenção de taxa devem mencionar a possibilidade de previsão legal, com critérios objetivos.
+</div>
+
+<h2>📝 QUESTÕES CESPE COMENTADAS</h2>
+<div class="q-card">
+<strong>(CESPE/CEBRASPE – TCDF – Analista Administrativo – 2021)</strong><br>
+Julgue: Compete privativamente ao Senado Federal processar e julgar o Presidente da República nos crimes de responsabilidade, sendo a admissibilidade da acusação de competência da Câmara dos Deputados, que deve aprová-la por dois terços de seus membros.
+<p><strong>Comentário:</strong> CORRETO. Essa é a literalidade dos Arts. 51, I, e 52, I, da CF/88. A Câmara autoriza a instauração do processo (2/3); o Senado processa e julga (2/3 para condenação). O CESPE frequentemente cobra essa distribuição de competências.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANEEL – 2022)</strong><br>
+Julgue: A imunidade parlamentar material protege o deputado ou senador por opiniões, palavras e votos proferidos no exercício do mandato, sendo absoluta e perpétua, não se estendendo, contudo, a atos estranhos ao exercício da função parlamentar.
+<p><strong>Comentário:</strong> CORRETO. Essa é a essência da imunidade material (Art. 53, caput, CF). A proteção é absoluta para atos funcionais, mas não cobre crimes comuns, atos pessoais ou opiniões fora da circunscrição funcional.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – MAPA – 2023)</strong><br>
+Julgue: A Comissão Parlamentar de Inquérito (CPI) pode, no exercício de seus poderes de investigação, decretar a prisão preventiva de investigado, desde que fundamentada a decisão e presentes os requisitos legais.
+<p><strong>Comentário:</strong> ERRADO. A CPI tem <strong>poderes de investigação</strong>, não de jurisdição. Não pode decretar prisão preventiva, temporária ou determinar busca e apreensão sem ordem judicial. Apenas em caso de flagrante delito pode prender, com comunicação à Casa em 48h.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – IBAMA – 2023)</strong><br>
+Julgue: A medida provisória editada pelo Presidente da República produz efeitos imediatos desde sua publicação, mas depende de conversão em lei pelo Congresso Nacional no prazo de cento e vinte dias, sob pena de perda de eficácia.
+<p><strong>Comentário:</strong> CORRETO. Essa é a regra do Art. 62, CF/88: MP tem força de lei imediata, mas vigora por 60 dias, prorrogável uma vez por igual período (total: 120 dias). Se não convertida em lei nesse prazo, perde eficácia.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANVISA – 2022)</strong><br>
+Julgue: O Tribunal de Contas da União, no exercício de suas atribuições, pode apreciar a constitucionalidade das leis e dos atos do Poder Público, não podendo, contudo, declarar a inconstitucionalidade em tese, mas apenas deixar de aplicar a norma inconstitucional no caso concreto.
+<p><strong>Comentário:</strong> CORRETO. Essa é a aplicação da Súmula 347 do STF: "O Tribunal de Contas, no exercício de suas atribuições, pode apreciar a constitucionalidade das leis e dos atos do Poder Público". Trata-se de controle difuso (caso concreto), não abstrato.</p>
+</div>
+
+<h2>📋 CHECKLIST DE REVISÃO RÁPIDA</h2>
+<div class="summary-box">
+<strong>Domine:</strong><br>
+□ Estrutura do Legislativo: Câmara (povo, 21 anos, 4 anos) vs. Senado (Estados, 35 anos, 8 anos)<br>
+□ Competências: Congresso (Art. 49 - indelegáveis), Câmara (Art. 51 - admissibilidade de acusação), Senado (Art. 52 - julgamento de impeachment)<br>
+□ Imunidades: Material (absoluta para atos funcionais) vs. Formal (prerrogativa de foro, decisão da Casa sobre processo)<br>
+□ CPI: Requisitos (1/3, fato determinado, prazo certo); poderes (investigação, quebra de sigilo) e limites (não pode prender, nem busca sem ordem judicial)<br>
+□ Processo Legislativo: PEC (3/5, 2 turnos, cláusulas pétreas), LC (maioria absoluta), LO (maioria simples), MP (relevância/urgência, 60+60 dias)<br>
+□ Controle Externo: TCU é órgão auxiliar do Legislativo; aprecia contas do PR (parecer prévio), mas quem julga é o Congresso<br>
+□ Perda de Mandato: Automática por condenação criminal; por decisão da Casa por quebra de decoro<br>
+□ Jurisprudência: Imunidade em redes sociais, poderes de CPI, MP e trancamento de pauta, cláusulas pétreas<br>
+□ Quóruns: 1/3 (CPI), maioria simples (LO), maioria absoluta (LC), 3/5 (PEC), 2/3 (impeachment)
+</div>
+
+<div class="nav-b">
+<a href="constitucional-06.html" class="btn-n">← Anterior</a>
+<span></span>
+</div>
+</main>
+
+
+<div class="n-panel" id="nP">
+<div style="display:flex;justify-content:space-between;margin-bottom:10px"><strong>Notas de Constitucional</strong><button onclick="tN()" style="background:none;border:none;cursor:pointer">✕</button></div>
+<div id="nL" style="max-height:180px;overflow-y:auto;margin-bottom:10px"></div>
+<form onsubmit="aN(event)"><input type="text" class="n-in" id="nI" placeholder="Anotação sobre Poder Legislativo..." required><button type="submit" class="b-sm">💾 Salvar</button></form>
+</div>
+
+<script>
+const SK='const-legis-07';let hM=false;
+function webS(){const s=window.getSelection().toString();window.open(`https://duckduckgo.com/?q=${encodeURIComponent(s||'Poder Legislativo CF/88 competências imunidades CPI CESPE TCDF')}`,'_blank')}
+function tN(){const p=document.getElementById('nP');p.style.display=p.style.display==='none'?'block':'none';if(p.style.display==='block')lN()}
+function lN(){const n=JSON.parse(localStorage.getItem(SK)||'[]');document.getElementById('nL').innerHTML=n.length?n.map((x,i)=>`<div class="n-item">${x.text}<br><small style="cursor:pointer;color:#666" onclick="dN(${i})">remover</small></div>`).join(''):'<p style="font-size:.9em;color:#666">Sem notas.</p>'}
+function aN(e){e.preventDefault();const i=document.getElementById('nI'),n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:i.value,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));i.value='';lN()}
+function dN(i){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.splice(i,1);localStorage.setItem(SK,JSON.stringify(n));lN()}
+function tH(){hM=!hM;document.body.style.cursor=hM?'text':'auto';document.querySelectorAll('.t-btn')[2].textContent=hM?'✅ ON':'✏️ Destaque';hM?document.addEventListener('mouseup',hS):document.removeEventListener('mouseup',hS)}
+function hS(){const s=window.getSelection();if(s.toString().length>10){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:`🔍 "${s.toString().substring(0,40)}..." - ${prompt('Nota:','')||'-'}`,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));alert('✅ Destaque salvo!');s.removeAllRanges()}}
+document.addEventListener('DOMContentLoaded',lN);
+</script>
+</body>
+</html>

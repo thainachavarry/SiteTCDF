@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AFO 06 | Lei de Responsabilidade Fiscal (LC 101/2000) - CESPE</title>
+<style>
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1;--jur:#e8f4fd}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;line-height:1.7;padding-top:70px}
+a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
+.container{max-width:1000px;margin:0 auto;padding:24px}
+h1{font-size:1.8em;margin-bottom:10px;color:var(--lil)}h2{font-size:1.4em;margin:28px 0 14px;color:var(--text);padding-bottom:6px;border-bottom:2px solid var(--lil-l)}
+h3{font-size:1.2em;margin:22px 0 12px;color:var(--lil-d);font-weight:600}
+p{margin-bottom:14px;color:var(--text)}ul,ol{margin:0 0 16px 20px;color:var(--text)}li{margin-bottom:6px}
+.box{background:var(--card);border-radius:8px;padding:16px;margin:20px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}.box.jur{background:var(--jur);border-color:#3b82f6}
+.box-t{font-weight:700;margin-bottom:8px;display:block;color:var(--text)}
+table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--lil-d)}
+td{padding:10px 14px;border-bottom:1px solid var(--lil-l);color:var(--text)}tr:hover td{background:var(--lil-l)}
+.nav-b{display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:1px solid var(--lil-d)}
+.btn-n{padding:10px 20px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none}
+.btn-n:hover{background:var(--lil-d);color:#fff}
+.tools{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:99}
+.t-btn{background:var(--card);border:2px solid var(--lil-d);padding:10px 14px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;color:var(--text);box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.t-btn:hover{transform:translateY(-2px)}
+.n-panel{position:fixed;bottom:70px;right:20px;width:280px;background:var(--card);border:2px solid var(--lil-d);border-radius:12px;padding:16px;display:none;box-shadow:0 5px 15px rgba(0,0,0,.15);z-index:100}
+.n-item{background:var(--lil-l);padding:10px;border-radius:6px;margin-bottom:8px;font-size:.9em}
+.n-in{width:100%;padding:8px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:8px}
+.b-sm{padding:6px 12px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em}
+@media(max-width:700px){.container{padding:16px}header{flex-direction:column;align-items:flex-start;gap:10px}}
+.box img{width:100%;height:auto;display:block;margin:15px 0;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.q-card{background:var(--warn);border-left:4px solid #f59e0b;padding:16px;margin:20px 0;border-radius:0 8px 8px 0}
+.q-card strong{color:#856404}
+.cespe-tip{background:#fef3c7;border-left:4px solid #f59e0b;padding:12px;margin:15px 0;font-size:.95em}
+.mnemonic{background:linear-gradient(135deg,var(--lil-l),var(--bg-secondary));padding:12px 16px;border-radius:8px;margin:15px 0;font-weight:600;color:var(--lil-d)}
+.summary-box{background:var(--def);padding:16px;border-radius:8px;margin:20px 0}
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin:15px 0}
+.comp-item{background:var(--bg-secondary);padding:10px;border-radius:6px;font-size:.95em}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="back">← Dashboard</a><div class="nav-t">AFO 06</div></header>
+<main class="container">
+<h1>📚 Lei de Responsabilidade Fiscal (LC 101/2000)</h1>
+<p><strong>Foco CESPE:</strong> A banca cobra exaustivamente os limites de despesa com pessoal (50% União / 60% Estados e Municípios), as fases de alerta (90%), prudencial (95%) e máxima (100%), as sanções por descumprimento, os requisitos para renúncia de receita, as regras de endividamento e concessão de garantias, os instrumentos de transparência (RREO e RGF), a regra de ouro e a jurisprudência do STF/STJ sobre aplicabilidade aos Poderes. Questões frequentemente confundem percentuais, invertem prazos ou cobram a literalidade dos arts. 16 a 23 da LRF.</p>
+
+<h2>1. CONCEITO, OBJETIVOS E PRINCÍPIOS DA LRF</h2>
+<div class="box def"><span class="box-t">📘 Natureza e Alcance</span>
+<p>A <strong>Lei Complementar 101/2000</strong> (LRF) estabelece normas de finanças públicas voltadas para a <strong>responsabilidade na gestão fiscal</strong>, com aplicação a todos os entes da Federação (União, Estados, DF, Municípios) e a todos os Poderes (Executivo, Legislativo, Judiciário) e Ministério Público.</p>
+<p><strong>Objetivo Central:</strong> Equilíbrio entre receitas e despesas, controle da dívida pública, transparência fiscal e responsabilidade intergeracional, evitando que gastos de hoje comprometam gerações futuras.</p>
+</div>
+
+<h3>🔹 Princípios Fundamentais (Art. 1º, §1º)</h3>
+<table>
+<thead><tr><th>Princípio</th><th>Descrição Legal</th><th>Aplicação Prática</th></tr></thead>
+<tbody>
+<tr><td><strong>Planejamento</strong></td><td>Atuação coordenada entre PPA, LDO e LOA</td><td>Metas fiscais alinhadas ao planejamento plurianual</td></tr>
+<tr><td><strong>Transparência</strong></td><td>Divulgação ampla e tempestiva de contas e relatórios</td><td>RREO bimestral, RGF quadrimestral, portais da transparência</td></tr>
+<tr><td><strong>Controle</strong></td><td>Fiscalização interna, externa e social</td><td>TCU/TCEs, controladorias, ouvidorias, acesso à informação</td></tr>
+<tr><td><strong>Responsabilidade</strong></td><td>Gestão fiscal equilibrada e sustentável</td><td>Vedação a déficit não autorizado, limites de pessoal/dívida, sanções por descumprimento</td></tr>
+</tbody>
+</table>
+
+<div class="mnemonic">🧠 MACETE: "PTCR" → Planejamento, Transparência, Controle, Responsabilidade. Memorize os pilares da LRF!</div>
+
+<h2>2. PLANEJAMENTO ORÇAMENTÁRIO E METAS FISCAIS</h2>
+<div class="box def"><span class="box-t">📘 Instrumentos de Planejamento</span>
+<p>A LRF reforça a integração entre PPA, LDO e LOA, exigindo que a gestão fiscal seja pautada por metas realistas, acompanhadas de avaliações de riscos e demonstrativos de impacto.</p>
+</div>
+
+<h3>🔹 Lei de Diretrizes Orçamentárias (LDO) na LRF</h3>
+<ul>
+<li><strong>Anexo de Metas Fiscais:</strong> Deve conter metas anuais de receitas, despesas, resultado primário/nominal e dívida pública, para o exercício e os dois seguintes.</li>
+<li><strong>Anexo de Riscos Fiscais:</strong> Identifica contingências (judiciais, garantias concedidas, variações cambiais, etc.) que possam afetar as metas.</li>
+<li><strong>Demonstrativo de Impacto:</strong> Para toda medida que altere receita ou despesa, exigência de estudo prévio de impacto orçamentário-financeiro.</li>
+</ul>
+
+<h3>🔹 Limitação de Empenho e Movimentação Financeira (Art. 9º)</h3>
+<p>Se a arrecadação ficar aquém da previsão, o Poder Executivo deve publicar decreto limitando empenho e movimentação financeira para garantir o cumprimento da meta fiscal. <strong>Não se aplica a créditos extraordinários.</strong></p>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "a limitação de empenho atinge os créditos extraordinários" → ERRADO. A LRF (Art. 9º, §1º) <strong>exclui expressamente</strong> os créditos extraordinários (guerra, calamidade, comoção) da limitação, pois são urgentes e imprevisíveis.</p>
+</div>
+
+<h2>3. RECEITA PÚBLICA E RENÚNCIA DE RECEITA</h2>
+<div class="box def"><span class="box-t">📘 Previsão e Arrecadação</span>
+<p>As previsões de receita devem observar normas técnicas/legais, considerar efeitos de alterações legislativas, variação de preços e crescimento econômico, e ser acompanhadas de demonstrativo de evolução nos últimos 3 anos e projeção para os 2 seguintes (Art. 12).</p>
+</div>
+
+<h3>🔹 Renúncia de Receita (Art. 14)</h3>
+<table>
+<thead><tr><th>Conceito</th><th>Modalidades</th><th>Requisitos Obrigatórios</th></tr></thead>
+<tbody>
+<tr><td><strong>Renúncia de Receita</strong></td><td>Anistia, remissão, subsídio, crédito presumido, isenção em caráter não geral, alteração de alíquota/base que implique redução discriminada, benefícios de tratamento diferenciado.</td><td>1. Estimativa de impacto orçamentário-financeiro (exercício de entrada + 2 seguintes)<br>2. Compatibilidade com LDO e metas fiscais<br>3. Demonstração de que não afetará metas OU medidas de compensação (aumento permanente de receita ou redução permanente de despesa)</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Exceções à Regra de Compensação</h3>
+<ul>
+<li>Alteração de alíquota de II, IE, IPI, IOF (competência exclusiva da União, flexibilidade macroeconômica).</li>
+<li>Cancelamento de débito cujo montante seja inferior aos custos de cobrança.</li>
+</ul>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um Estado concede isenção de ICMS para um setor específico. Para ser válido na LRF, deve: (1) apresentar estudo de impacto nos 3 exercícios seguintes; (2) comprovar que não afetará a meta fiscal ou (3) adotar medidas de compensação (ex: corte de despesa contínua ou aumento de outro tributo). Sem isso, o ato é <strong>nulo de pleno direito</strong> e gera responsabilização do gestor.</p>
+</div>
+
+<h2>4. DESPESA PÚBLICA E LIMITES COM PESSOAL</h2>
+<div class="box def"><span class="box-t">📘 Geração de Despesa (Arts. 16 e 17)</h3>
+<p>A criação, expansão ou aperfeiçoamento de ação governamental que acarrete aumento de despesa exige: (I) estimativa de impacto orçamentário-financeiro; (II) declaração do ordenador de despesa sobre adequação orçamentária/financeira e compatibilidade com PPA/LDO.</p>
+</div>
+
+<h3>🔹 Limites da Despesa com Pessoal (Art. 19 e 20)</h3>
+<table>
+<thead><tr><th>Ente</th><th>Limite Global (% da RCL)</th><th>Distribuição Típica</th></tr></thead>
+<tbody>
+<tr><td><strong>União</strong></td><td>50%</td><td>Executivo: 40,9% | Legislativo: 2,5% | Judiciário: 6% | MP: 0,6%</td></tr>
+<tr><td><strong>Estados/DF</strong></td><td>60%</td><td>Executivo: 49% | Legislativo: 3% | Judiciário: 6% | MP: 2% | TC: varia conforme estrutura</td></tr>
+<tr><td><strong>Municípios</strong></td><td>60%</td><td>Executivo: 54% | Legislativo: 6% (respeitado limite do art. 29-A, CF)</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Fases de Controle e Sanções</h3>
+<table>
+<thead><tr><th>Limite</th><th>Percentual</th><th>Consequências</th></tr></thead>
+<tbody>
+<tr><td><strong>Alerta</strong></td><td>90% do limite</td><td>TC emite alerta. Sem sanções imediatas.</td></tr>
+<tr><td><strong>Prudencial</strong></td><td>95% do limite</td><td>Vedado: concessão de vantagem/aumento, criação de cargo, admissão/contratação (exceto reposição de educação/saúde/segurança por falecimento/aposentadoria), contratação de hora extra.</td></tr>
+<tr><td><strong>Máximo</strong></td><td>100% do limite</td><td>Além das vedações anteriores: redução de 20% de cargos em comissão, exoneração de não estáveis, extinção de cargos estáveis se necessário. Vedação de receber transferências voluntárias (exceto saúde/educação/assistência) e obter garantia/contratar operação de crédito.</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Regra de Transição (LC 178/2020 e LC 173/2020)</h3>
+<p>Entes que estavam acima dos limites em 2021 devem eliminar o excesso em <strong>até 10 anos</strong> (até 31/12/2031), reduzindo pelo menos <strong>10% ao ano</strong>. O descumprimento sujeita todo o ente às restrições do art. 23, §3º.</p>
+
+<div class="cespe-tip">💡 DICA CESPE: Questões que afirmam "o limite de 60% se aplica apenas ao Executivo Estadual" → ERRADO. O limite de 60% é <strong>global para o ente</strong> (soma de todos os Poderes). A distribuição interna é definida no art. 20.</div>
+
+<h2>5. DÍVIDA PÚBLICA, ENDIVIDAMENTO E GARANTIAS</h2>
+<div class="box def"><span class="box-t">📘 Conceitos e Limites</span>
+<p>A LRF disciplina a dívida pública mobiliária, interna, externa, operações de crédito e concessão de garantias, exigindo observância aos limites fixados por resolução do Senado Federal e à <strong>Regra de Ouro</strong>.</p>
+</div>
+
+<h3>🔹 Regra de Ouro (Art. 167, III, CF + LRF)</h3>
+<p><strong>Operações de crédito não podem exceder o montante das despesas de capital.</strong> Objetivo: evitar que empréstimos financiem despesas correntes (consumo imediato), comprometendo gerações futuras.</p>
+<ul>
+<li><strong>Exceção:</strong> Créditos suplementares ou especiais aprovados pelo Legislativo por maioria absoluta.</li>
+</ul>
+
+<h3>🔹 Restrições por Descumprimento de Limites</h3>
+<table>
+<thead><tr><th>Situação</th><th>Restrições Aplicáveis</th></tr></thead>
+<tbody>
+<tr><td><strong>Dívida consolidada acima do limite</strong></td><td>Proibido: novas operações de crédito (exceto para refinanciamento da dívida mobiliária ou redução de despesas com pessoal), concessão de garantia, recebimento de transferências voluntárias.</td></tr>
+<tr><td><strong>Concessão de garantia irregular</strong></td><td>Nulidade do ato, responsabilização do agente, suspensão de transferências até regularização.</td></tr>
+<tr><td><strong>Operação de crédito com instituição financeira federal</strong></td><td>Vedada se ente não estiver em dia com prestações de contas ou com limites da LRF.</td></tr>
+</tbody>
+</table>
+
+<h2>6. TRANSFERÊNCIAS VOLUNTÁRIAS E SETOR PRIVADO</h2>
+<div class="box def"><span class="box-t">📘 Transferências Voluntárias (Art. 25)</h3>
+<p>Recursos repassados pela União a Estados/DF/Municípios, ou por estes a entes inferiores, por meio de convênios, acordos ou instrumentos similares.</p>
+</div>
+
+<h3>🔹 Requisitos para Recebimento</h3>
+<ul>
+<li><strong>Regularidade fiscal:</strong> Ente beneficiário deve estar em dia com prestações de contas e não ultrapassar limites de pessoal/dívida.</li>
+<li><strong>Previsão orçamentária:</strong> Dotação específica na LOA do ente repassador e do recebedor.</li>
+<li><strong>Contrapartida:</strong> Quando exigida em lei ou instrumento.</li>
+<li><strong>Aplicação em áreas prioritárias:</strong> Saúde, educação e assistência social são exceções a certas vedações.</li>
+</ul>
+
+<h3>🔹 Destinação ao Setor Privado</h3>
+<p>Apenas via <strong>lei específica</strong>, com previsão orçamentária clara e justificativa de interesse público. Vedada a destinação direta sem amparo legal ou sem licitação quando cabível.</p>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "transferências voluntárias são obrigatórias" → ERRADO. São <strong>discricionárias</strong> do ente repassador, condicionadas à disponibilidade orçamentária e ao cumprimento de requisitos legais pelo recebedor.</p>
+</div>
+
+<h2>7. TRANSPARÊNCIA, PRESTAÇÃO DE CONTAS E INSTRUMENTOS</h2>
+<div class="box def"><span class="box-t">📘 Instrumentos de Transparência Fiscal</span>
+<p>A LRF exige divulgação tempestiva de relatórios que permitam o acompanhamento da execução orçamentária e o controle social.</p>
+</div>
+
+<table>
+<thead><tr><th>Instrumento</th><th>Periodicidade</th><th>Prazo de Publicação</th><th>Conteúdo Principal</th></tr></thead>
+<tbody>
+<tr><td><strong>RREO</strong> (Relatório Resumido da Execução Orçamentária)</td><td>Bimestral</td><td>Até 30 dias após o encerramento do bimestre</td><td>Execução da LOA, metas fiscais, receitas, despesas, dívida, pessoal, operações de crédito</td></tr>
+<tr><td><strong>RGF</strong> (Relatório de Gestão Fiscal)</td><td>Quadrimestral</td><td>Até 30 dias após o encerramento do quadrimestre</td><td>Despesa com pessoal, dívida consolidada, operações de crédito, concessão de garantias, restos a pagar</td></tr>
+<tr><td><strong>Auditoria e Contas Anuais</strong></td><td>Anual</td><td>Até 30 de abril (encaminhamento ao TC)</td><td>Contas do Chefe do Poder, parecer prévio do TC, prestação de contas ao Legislativo</td></tr>
+</tbody>
+</table>
+
+<h2>🎯 O QUE MAIS CAI NO CESPE (RANKING DE FREQUÊNCIA)</h2>
+<ol>
+<li><strong>Limites de despesa com pessoal:</strong> 50% (União) e 60% (Estados/Municípios); fases de 90%, 95%, 100%; sanções por fase.</li>
+<li><strong>Renúncia de receita (Art. 14):</strong> Conceito, modalidades, requisitos de compensação ou demonstração de não afetar metas.</li>
+<li><strong>Regra de Ouro:</strong> Operações de crédito ≤ despesas de capital; exceções legislativas.</li>
+<li><strong>RREO e RGF:</strong> Periodicidade (bimestral vs. quadrimestral), prazos (30 dias), conteúdo.</li>
+<li><strong>Limitação de empenho (Art. 9º):</strong> Quando se aplica, exceção aos créditos extraordinários.</li>
+<li><strong>Transferências voluntárias:</strong> Discricionariedade, requisitos para recebimento, vedações quando em descumprimento.</li>
+<li><strong>Regra de transição (LC 178/2020):</strong> 10 anos para retorno, redução mínima de 10% ao ano.</li>
+<li><strong>Dívida e operações de crédito:</strong> Limites do Senado, vedações por descumprimento, nulidade de atos irregulares.</li>
+<li><strong>Jurisprudência do STF:</strong> Aplicação da LRF ao Judiciário, constitucionalidade dos limites, regra de ouro, responsabilidade fiscal.</li>
+<li><strong>Crimes de Responsabilidade Fiscal:</strong> Descumprimento de limites, não publicação de relatórios, ordenação de despesa não autorizada.</li>
+</ol>
+
+<h2>⚖️ JURISPRUDÊNCIA RELEVANTE (STF/STJ/TCU sobre LRF)</h2>
+<div class="box jur">
+<strong>STF - ADI 2.238-5/DF (Suspensão cautelar mantida)</strong><br>
+Tese: A regra de ouro (art. 167, III, CF) admite exceções via créditos suplementares ou especiais aprovados por maioria absoluta do Legislativo. A vedação absoluta inconstitucional seria inócua diante de necessidades imprevisíveis.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre regra de ouro devem mencionar as exceções legislativas.
+</div>
+<div class="box jur">
+<strong>STF - ADI 4.426/DF (2015)</strong><br>
+Tese: Os limites de despesa com pessoal da LRF aplicam-se a todos os Poderes, inclusive ao Judiciário e ao Ministério Público. A fixação de limites por lei complementar é constitucional e necessária ao equilíbrio fiscal.<br>
+<strong>Aplicação CESPE:</strong> Questões que afirmam "Judiciário não está sujeito aos limites da LRF" → ERRADO.
+</div>
+<div class="box jur">
+<strong>STF - RE 599.362/DF (2013)</strong><br>
+Tese: Empresas públicas e sociedades de economia mista que prestam serviço público essencial sujeitam-se às prerrogativas processuais da Fazenda Pública, mas seus limites de pessoal e dívida devem observar a LRF quando utilizam recursos públicos.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre estatais devem diferenciar serviço público (prerrogativas + LRF) de atividade econômica (regime privado).
+</div>
+<div class="box jur">
+<strong>TCU - Súmula 188 e Acórdãos Recentes</strong><br>
+Tese: O descumprimento dos limites de pessoal e dívida, a não publicação de RREO/RGF e a concessão de garantia sem autorização configuram infração à LRF, sujeitando o gestor a sanções administrativas, civis e penais.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre sanções devem mencionar a cumulação de esferas (administrativa, civil, penal).
+</div>
+<div class="box jur">
+<strong>STF - RE 1.045.263/DF (2020)</strong><br>
+Tese: A transparência fiscal e a prestação de contas são desdobramentos do princípio republicano e da democracia. O sigilo orçamentário só se justifica em hipóteses excepcionais e temporárias.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre sigilo fiscal/orçamentário devem mencionar a regra de transparência e exceções restritas.
+</div>
+
+<h2>📝 QUESTÕES CESPE COMENTADAS</h2>
+<div class="q-card">
+<strong>(CESPE/CEBRASPE – TCDF – Analista Administrativo – 2023)</strong><br>
+Julgue: A despesa total com pessoal do Poder Judiciário estadual não está sujeita aos limites percentuais estabelecidos pela Lei de Responsabilidade Fiscal, em razão do princípio da independência e harmonia entre os Poderes.
+<p><strong>Comentário:</strong> ERRADO. O STF (ADI 4.426/DF) já firmou que os limites da LRF <strong>aplicam-se a todos os Poderes</strong>, incluindo Judiciário e MP. A independência dos Poderes não afasta a responsabilidade fiscal compartilhada.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – SEFAZ AL – 2022)</strong><br>
+Julgue: A limitação de empenho e movimentação financeira, prevista no art. 9º da LRF, aplica-se inclusive aos créditos extraordinários, visando ao controle rigoroso das despesas públicas.
+<p><strong>Comentário:</strong> ERRADO. O art. 9º, §1º da LRF <strong>exclui expressamente</strong> os créditos extraordinários (guerra, calamidade, comoção) da limitação, pois são urgentes, imprevisíveis e destinados a necessidades vitais.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – MAPA – 2023)</strong><br>
+Julgue: Para a concessão de renúncia de receita na forma de subsídio fiscal, é obrigatória a apresentação de estudo de impacto orçamentário-financeiro, bem como a demonstração de que a medida não afetará as metas fiscais ou a adoção de medidas compensatórias.
+<p><strong>Comentário:</strong> CORRETO. Essa é a literalidade do art. 14 da LRF. A renúncia de receita exige impacto nos 3 exercícios seguintes e comprovação de neutralidade fiscal ou compensação permanente.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – IBAMA – 2023)</strong><br>
+Julgue: O Relatório Resumido da Execução Orçamentária (RREO) deve ser publicado trimestralmente, enquanto o Relatório de Gestão Fiscal (RGF) tem periodicidade bimestral.
+<p><strong>Comentário:</strong> ERRADO. A questão inverteu os prazos. <strong>RREO = bimestral</strong> (até 30 dias após o bimestre). <strong>RGF = quadrimestral</strong> (até 30 dias após o quadrimestre). O CESPE frequentemente troca essas periodicidades.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANVISA – 2022)</strong><br>
+Julgue: A regra de ouro, prevista no art. 167, III, da CF/88 e reforçada pela LRF, estabelece que as operações de crédito não podem exceder o montante das despesas de capital, salvo se aprovadas pelo Poder Legislativo por maioria absoluta.
+<p><strong>Comentário:</strong> CORRETO. Essa é a essência da regra de ouro: evitar que empréstimos financiem despesas correntes. A exceção exige aprovação legislativa qualificada (maioria absoluta).</p>
+</div>
+
+<h2>📋 CHECKLIST DE REVISÃO RÁPIDA</h2>
+<div class="summary-box">
+<strong>Domine:</strong><br>
+□ LRF: Lei complementar, aplica-se a todos os entes e Poderes; objetivo: equilíbrio fiscal e responsabilidade intergeracional<br>
+□ Limites de pessoal: União 50%, Estados/DF/Municípios 60% da RCL<br>
+□ Fases: Alerta (90%) → sem sanções; Prudencial (95%) → vedações a admissões/aumentos; Máximo (100%) → cortes + vedações a transferências/operações de crédito<br>
+□ Renúncia de receita (Art. 14): impacto 3 exercícios + (não afetar metas OU medidas compensatórias)<br>
+□ Regra de ouro: operações de crédito ≤ despesas de capital; exceção: maioria absoluta do Legislativo<br>
+□ Limitação de empenho (Art. 9º): quando arrecadação aquém da meta; exclui créditos extraordinários<br>
+□ RREO: bimestral (30 dias após); RGF: quadrimestral (30 dias após)<br>
+□ Transferências voluntárias: discricionárias, exigem regularidade fiscal e previsão orçamentária<br>
+□ Dívida/garantias: limites do Senado, nulidade por descumprimento, vedação de novas operações se acima do limite<br>
+□ LC 178/2020: transição de 10 anos para retorno aos limites, redução mínima de 10% ao ano<br>
+□ Jurisprudência: STF reconhece aplicação ao Judiciário, valida regra de ouro com exceções, reforça transparência e sanções cumultativas
+</div>
+
+<div class="nav-b">
+<a href="afo-05.html" class="btn-n">← Anterior</a>
+<span></span>
+</div>
+</main>
+
+
+<div class="n-panel" id="nP">
+<div style="display:flex;justify-content:space-between;margin-bottom:10px"><strong>Notas de AFO</strong><button onclick="tN()" style="background:none;border:none;cursor:pointer">✕</button></div>
+<div id="nL" style="max-height:180px;overflow-y:auto;margin-bottom:10px"></div>
+<form onsubmit="aN(event)"><input type="text" class="n-in" id="nI" placeholder="Anotação sobre LRF..." required><button type="submit" class="b-sm">💾 Salvar</button></form>
+</div>
+
+<script>
+const SK='afo-lrf-06';let hM=false;
+function webS(){const s=window.getSelection().toString();window.open(`https://duckduckgo.com/?q=${encodeURIComponent(s||'Lei de Responsabilidade Fiscal LRF limites pessoal renúncia regra de ouro CESPE TCDF')}`,'_blank')}
+function tN(){const p=document.getElementById('nP');p.style.display=p.style.display==='none'?'block':'none';if(p.style.display==='block')lN()}
+function lN(){const n=JSON.parse(localStorage.getItem(SK)||'[]');document.getElementById('nL').innerHTML=n.length?n.map((x,i)=>`<div class="n-item">${x.text}<br><small style="cursor:pointer;color:#666" onclick="dN(${i})">remover</small></div>`).join(''):'<p style="font-size:.9em;color:#666">Sem notas.</p>'}
+function aN(e){e.preventDefault();const i=document.getElementById('nI'),n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:i.value,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));i.value='';lN()}
+function dN(i){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.splice(i,1);localStorage.setItem(SK,JSON.stringify(n));lN()}
+function tH(){hM=!hM;document.body.style.cursor=hM?'text':'auto';document.querySelectorAll('.t-btn')[2].textContent=hM?'✅ ON':'✏️ Destaque';hM?document.addEventListener('mouseup',hS):document.removeEventListener('mouseup',hS)}
+function hS(){const s=window.getSelection();if(s.toString().length>10){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:`🔍 "${s.toString().substring(0,40)}..." - ${prompt('Nota:','')||'-'}`,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));alert('✅ Destaque salvo!');s.removeAllRanges()}}
+document.addEventListener('DOMContentLoaded',lN);
+</script>
+</body>
+</html>

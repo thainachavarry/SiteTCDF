@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direito Administrativo 05 | Poderes da Administração Pública - CESPE</title>
+<style>
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1;--jur:#e8f4fd}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;line-height:1.7;padding-top:70px}
+a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
+.container{max-width:1000px;margin:0 auto;padding:24px}
+h1{font-size:1.8em;margin-bottom:10px;color:var(--lil)}h2{font-size:1.4em;margin:28px 0 14px;color:var(--text);padding-bottom:6px;border-bottom:2px solid var(--lil-l)}
+h3{font-size:1.2em;margin:22px 0 12px;color:var(--lil-d);font-weight:600}
+p{margin-bottom:14px;color:var(--text)}ul,ol{margin:0 0 16px 20px;color:var(--text)}li{margin-bottom:6px}
+.box{background:var(--card);border-radius:8px;padding:16px;margin:20px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}.box.jur{background:var(--jur);border-color:#3b82f6}
+.box-t{font-weight:700;margin-bottom:8px;display:block;color:var(--text)}
+table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--lil-d)}
+td{padding:10px 14px;border-bottom:1px solid var(--lil-l);color:var(--text)}tr:hover td{background:var(--lil-l)}
+.nav-b{display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:1px solid var(--lil-d)}
+.btn-n{padding:10px 20px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none}
+.btn-n:hover{background:var(--lil-d);color:#fff}
+.tools{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:99}
+.t-btn{background:var(--card);border:2px solid var(--lil-d);padding:10px 14px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;color:var(--text);box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.t-btn:hover{transform:translateY(-2px)}
+.n-panel{position:fixed;bottom:70px;right:20px;width:280px;background:var(--card);border:2px solid var(--lil-d);border-radius:12px;padding:16px;display:none;box-shadow:0 5px 15px rgba(0,0,0,.15);z-index:100}
+.n-item{background:var(--lil-l);padding:10px;border-radius:6px;margin-bottom:8px;font-size:.9em}
+.n-in{width:100%;padding:8px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:8px}
+.b-sm{padding:6px 12px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em}
+@media(max-width:700px){.container{padding:16px}header{flex-direction:column;align-items:flex-start;gap:10px}}
+.box img{width:100%;height:auto;display:block;margin:15px 0;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.q-card{background:var(--warn);border-left:4px solid #f59e0b;padding:16px;margin:20px 0;border-radius:0 8px 8px 0}
+.q-card strong{color:#856404}
+.cespe-tip{background:#fef3c7;border-left:4px solid #f59e0b;padding:12px;margin:15px 0;font-size:.95em}
+.mnemonic{background:linear-gradient(135deg,var(--lil-l),var(--bg-secondary));padding:12px 16px;border-radius:8px;margin:15px 0;font-weight:600;color:var(--lil-d)}
+.summary-box{background:var(--def);padding:16px;border-radius:8px;margin:20px 0}
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin:15px 0}
+.comp-item{background:var(--bg-secondary);padding:10px;border-radius:6px;font-size:.95em}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="back">← Dashboard</a><div class="nav-t">Direito Administrativo 05</div></header>
+<main class="container">
+<h1>Poderes da Administração Pública: Uso e Abuso do Poder</h1>
+
+<h2>1. CONCEITO E NATUREZA DOS PODERES ADMINISTRATIVOS</h2>
+<div class="box def"><span class="box-t">📘 Conceito de Poder Administrativo</span>
+<p><strong>Poder administrativo</strong> é a prerrogativa jurídica conferida à Administração Pública para que possa praticar atos com supremacia sobre o particular, visando a realização do interesse público. Não é faculdade, mas <strong>dever-poder</strong>: o agente público deve exercê-lo quando necessário.</p>
+<p><strong>Natureza:</strong> Instrumental e funcional. Os poderes não são fins em si mesmos, mas meios para a consecução do interesse público.</p>
+</div>
+
+<h3>🔹 Características Essenciais</h3>
+<ul>
+<li><strong>Indisponibilidade:</strong> O agente não pode renunciar aos poderes; deve exercê-los quando a lei determinar.</li>
+<li><strong>Legalidade:</strong> Devem ser exercidos nos limites e formas previstos em lei.</li>
+<li><strong>Finalidade Pública:</strong> Devem visar exclusivamente o interesse coletivo, nunca interesses privados.</li>
+<li><strong>Delegabilidade:</strong> Em regra, podem ser delegados, exceto competências exclusivas.</li>
+</ul>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "poder administrativo é faculdade do agente público" → ERRADO. Poder administrativo é <strong>dever-poder</strong>: o agente deve exercê-lo quando a situação exigir, sob pena de responsabilidade por omissão.</p>
+</div>
+
+<h2>2. PODER VINCULADO vs. PODER DISCRICIONÁRIO</h2>
+<div class="box def"><span class="box-t">📘 Distinção Fundamental</span>
+<p>A diferença entre poder vinculado e discricionário refere-se ao <strong>grau de liberdade</strong> que a lei confere ao administrador na prática do ato.</p>
+</div>
+
+<table>
+<thead><tr><th>Aspecto</th><th>Poder Vinculado</th><th>Poder Discricionário</th></tr></thead>
+<tbody>
+<tr><td><strong>Definição</strong></td><td>A lei estabelece todos os elementos do ato; o administrador apenas verifica se os requisitos estão preenchidos.</td><td>A lei confere margem de liberdade para o administrador escolher entre duas ou mais soluções válidas, conforme conveniência e oportunidade.</td></tr>
+<tr><td><strong>Elementos do Ato</strong></td><td>Todos vinculados: competência, finalidade, forma, motivo e objeto.</td><td>Motivo e objeto podem ser discricionários; competência, finalidade e forma permanecem vinculados.</td></tr>
+<tr><td><strong>Controle Judicial</strong></td><td>Pleno: o Judiciário pode revisar todos os elementos.</td><td>Limitado: o Judiciário só pode anular por ilegalidade (vício de competência, finalidade, forma), não por mérito (conveniência/oportunidade).</td></tr>
+<tr><td><strong>Exemplo</strong></td><td>Concessão de aposentadoria: preenchidos os requisitos legais, a Administração <strong>deve</strong> conceder.</td><td>Edital de concurso: a Administração escolhe o conteúdo das provas, o número de vagas, etc., dentro dos limites legais.</td></tr>
+</tbody>
+</table>
+
+<div class="mnemonic">🧠 MACETE: "Vinculado = Lei diz TUDO | Discricionário = Lei diz ALGUMAS COISAS" → No vinculado, a lei esgota a regulamentação; no discricionário, a lei deixa margem de escolha.</div>
+
+<h3>🔹 Discricionariedade ≠ Arbitrariedade</h3>
+<div class="box ex"><span class="box-t">✅ Conceito Importante</span>
+<p><strong>Discricionariedade</strong> é liberdade dentro dos limites legais, fundamentada em juízo de conveniência e oportunidade, sempre visando o interesse público.</p>
+<p><strong>Arbitrariedade</strong> é atuação fora dos limites legais, sem fundamentação, com desvio de finalidade ou violação de princípios. É sempre ilegal e anulável.</p>
+<p><strong>CESPE cobra:</strong> "A discricionariedade administrativa não autoriza a atuação arbitrária; todo ato discricionário deve ser motivado e fundamentado."</p>
+</div>
+
+<h2>3. PODER HIERÁRQUICO</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Finalidade</span>
+<p><strong>Poder hierárquico</strong> é a prerrogativa de organizar, distribuir e escalonar as funções dos órgãos públicos, estabelecendo relação de subordinação entre os agentes. Visa garantir a unidade de comando, a coordenação das atividades e o controle da atuação administrativa.</p>
+</div>
+
+<h3>🔹 Manifestações do Poder Hierárquico</h3>
+<table>
+<thead><tr><th>Manifestação</th><th>Descrição</th><th>Limites</th></tr></thead>
+<tbody>
+<tr><td><strong>Ordem e fiscalização</strong></td><td>Superiores podem dar ordens e fiscalizar a atuação de subordinados.</td><td>Ordens manifestamente ilegais não devem ser cumpridas; subordinado pode representar contra o superior.</td></tr>
+<tr><td><strong>Delegação de competência</strong></td><td>Transferência temporária de atribuições para outro órgão ou agente.</td><td>Não pode delegar competências exclusivas; deve ser motivada e publicada; é revogável a qualquer tempo.</td></tr>
+<tr><td><strong>Avocação de competência</strong></td><td>Chamar para si atribuição de órgão ou agente inferior.</td><td>Excepcional; exige justificativa; não pode ser utilizada para esvaziar competências de outros órgãos.</td></tr>
+<tr><td><strong>Revisão de atos</strong></td><td>Superior pode anular ou revogar atos de subordinado.</td><td>Deve observar o devido processo legal e a motivação.</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Regras da Delegação (Lei 9.784/1999, Arts. 11-14)</h3>
+<ul>
+<li><strong>Objeto:</strong> Pode ser delegada a execução de atos de competência discricionária, exceto: edição de atos de caráter normativo, decisão de recursos administrativos, matérias de competência exclusiva.</li>
+<li><strong>Forma:</strong> Ato administrativo motivado, com indicação do delegante, delegado, objeto, limites e duração.</li>
+<li><strong>Responsabilidade:</strong> O delegante responde pelos atos do delegado; o delegado responde por excesso ou desvio de poder.</li>
+<li><strong>Revogação:</strong> A delegação é revogável a qualquer tempo, por ato motivado do delegante.</li>
+</ul>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "a avocação é regra e a delegação é exceção" → ERRADO. A <strong>delegação é a regra</strong> (facilita a gestão); a <strong>avocação é excepcional</strong> e exige justificativa fundamentada.</p>
+</div>
+
+<h2>4. PODER DISCIPLINAR</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Alcance</span>
+<p><strong>Poder disciplinar</strong> é a prerrogativa de apurar infrações e aplicar penalidades a servidores e particulares sujeitos à disciplina administrativa. Fundamenta-se no poder hierárquico e na supremacia do interesse público.</p>
+</div>
+
+<h3>🔹 Titulares do Poder Disciplinar</h3>
+<table>
+<thead><tr><th>Titular</th><th>Alcance</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Administração Pública</strong></td><td>Servidores públicos e particulares em relação de sujeição especial (ex: contratados, permissionários).</td><td>Aplicação de advertência a servidor por falta leve.</td></tr>
+<tr><td><strong>Câmaras Legislativas</strong></td><td>Parlamentares e servidores da Casa.</td><td>Processo e julgamento de deputado por quebra de decoro parlamentar.</td></tr>
+<tr><td><strong>Tribunais de Contas</strong></td><td>Responsáveis por recursos públicos e servidores do próprio tribunal.</td><td>Aplicação de multa a gestor por irregularidade em prestação de contas.</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Penalidades Disciplinares (Lei 8.112/1990)</h3>
+<ul>
+<li><strong>Advertência:</strong> Infrações leves; registro funcional; não gera antecedentes.</li>
+<li><strong>Suspensão:</strong> Até 90 dias; reincidência ou infrações médias; perda da remuneração.</li>
+<li><strong>Demissão:</strong> Infrações graves (abandono de cargo >30 dias, improbidade, corrupção, inassiduidade habitual, etc.).</li>
+<li><strong>Cassação de aposentadoria/disponibilidade:</strong> Para infrações que, se cometidas na ativa, ensejariam demissão.</li>
+<li><strong>Destituição de cargo em comissão:</strong> Para ocupantes de cargos de confiança que praticam infrações graves.</li>
+</ul>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um servidor falta 35 dias consecutivos sem justificativa. A Administração instaura PAD, assegura ampla defesa e, comprovada a falta, aplica a penalidade de <strong>demissão</strong> por abandono de cargo (art. 132, IX, Lei 8.112/1990). O ato é exercício regular do <strong>poder disciplinar</strong>.</p>
+</div>
+
+<h2>5. PODER REGULAMENTAR (NORMATIVO)</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Espécies</span>
+<p><strong>Poder regulamentar</strong> é a prerrogativa do Chefe do Executivo de editar atos normativos para fiel execução das leis, detalhando procedimentos, prazos e condições sem criar direitos ou obrigações novos.</p>
+</div>
+
+<h3>🔹 Decretos Regulamentares vs. Decretos Autônomos</h3>
+<table>
+<thead><tr><th>Tipo</th><th>Base Legal</th><th>Conteúdo Permitido</th><th>Controle Judicial</th></tr></thead>
+<tbody>
+<tr><td><strong>Regulamentar (Execução)</strong></td><td>Art. 84, IV, CF: "expedir decretos e regulamentos para fiel execução das leis"</td><td>Detalhar procedimentos, prazos, condições de aplicação da lei; não pode inovar na ordem jurídica.</td><td>Pode ser anulado se exorbitar do poder regulamentar ou contrariar a lei.</td></tr>
+<tr><td><strong>Autônomo (Independente)</strong></td><td>Art. 84, VI, "e", CF: "dispor, mediante decreto, sobre organização e funcionamento da administração federal, quando não implicar aumento de despesa nem criação/extinção de órgãos"</td><td>Organizar a administração, extinguir funções/cargos vagos; não pode criar direitos, obrigações ou competências novas.</td><td>STF admite em casos excepcionais; deve observar estritamente os limites constitucionais.</td></tr>
+</tbody>
+</table>
+
+<div class="cespe-tip">💡 DICA CESPE: Questões que afirmam "decreto autônomo pode criar tributos" → ERRADO. Decreto autônomo <strong>não pode</strong> criar direitos, obrigações, competências ou tributos; apenas organizar a administração dentro dos limites constitucionais.</div>
+
+<h2>6. PODER DE POLÍCIA</h2>
+<div class="box def"><span class="box-t">📘 Conceito Constitucional (Art. 78, CTN)</span>
+<p><strong>Poder de polícia</strong> é a atividade da Administração Pública que, limitando ou disciplinando direito, interesse ou liberdade, regula a prática de ato ou abstenção de fato, em razão de interesse público concernente à segurança, higiene, ordem, costumes, disciplina da produção e do mercado, exercício de atividades econômicas dependentes de concessão ou autorização, tranquilidade pública ou respeito à propriedade e aos direitos individuais ou coletivos.</p>
+</div>
+
+<h3>🔹 Características do Poder de Polícia</h3>
+<table>
+<thead><tr><th>Característica</th><th>Descrição</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Discricionariedade</strong></td><td>Em regra, a Administração escolhe o momento, o modo e a oportunidade de agir, dentro dos limites legais.</td><td>Fiscalização de estabelecimentos: a Administração define a periodicidade e o método.</td></tr>
+<tr><td><strong>Autoexecutoriedade</strong></td><td>Permite à Administração executar diretamente suas decisões, sem ordem judicial prévia, quando previsto em lei ou em situação de urgência.</td><td>Interdição de estabelecimento insalubre; apreensão de mercadoria contrabandeada.</td></tr>
+<tr><td><strong>Coercibilidade</strong></td><td>Impõe obrigações ou restrições independentemente da concordância do particular.</td><td>Edital de concurso: o candidato deve aceitar as regras para participar.</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Atributos do Ato de Polícia (PATI)</h3>
+<ul>
+<li><strong>Presunção de Legitimidade:</strong> O ato presume-se válido até prova em contrário.</li>
+<li><strong>Autoexecutoriedade:</strong> Execução direta pela Administração, quando autorizada.</li>
+<li><strong>Tipicidade:</strong> O ato deve corresponder a figura legal prévia.</li>
+<li><strong>Imperatividade:</strong> Impõe obrigações independentemente de anuência.</li>
+</ul>
+
+<h3>🔹 Limites do Poder de Polícia</h3>
+<ul>
+<li><strong>Legalidade:</strong> Só pode ser exercido nos termos da lei.</li>
+<li><strong>Proporcionalidade:</strong> A medida deve ser adequada, necessária e proporcional ao fim visado.</li>
+<li><strong>Razoabilidade:</strong> Não pode ser arbitrário ou excessivo.</li>
+<li><strong>Finalidade Pública:</strong> Deve visar exclusivamente o interesse coletivo.</li>
+</ul>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um restaurante é interditado pela Vigilância Sanitária por apresentar condições insalubres. O ato é exercício regular do <strong>poder de polícia</strong>: limita o direito de propriedade em razão do interesse público à saúde. Se o proprietário provar que as condições foram regularizadas, pode pleitear a reabertura.</p>
+</div>
+
+<h2>7. USO E ABUSO DO PODER</h2>
+<div class="box def"><span class="box-t">📘 Conceito de Abuso de Poder</span>
+<p><strong>Abuso de poder</strong> ocorre quando o agente público atua fora dos limites legais, com desvio de finalidade, excesso de poder ou violação de princípios. É sempre ilegal e gera responsabilidade civil, penal e administrativa.</p>
+</div>
+
+<h3>🔹 Espécies de Abuso de Poder</h3>
+<table>
+<thead><tr><th>Espécie</th><th>Descrição</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Excesso de Poder</strong></td><td>O agente pratica ato além dos limites de sua competência ou com desproporcionalidade.</td><td>Aplicar multa de R$ 100.000,00 por infração leve, sem previsão legal para tal valor.</td></tr>
+<tr><td><strong>Desvio de Poder (ou de Finalidade)</strong></td><td>O agente pratica ato com finalidade diversa da prevista em lei ou do interesse público.</td><td>Conceder licença ambiental para beneficiar amigo, não para proteger o meio ambiente.</td></tr>
+</tbody>
+</table>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente inverte os conceitos: afirma que "excesso de poder é vício de finalidade" → ERRADO. <strong>Excesso de poder</strong> = vício de competência ou proporcionalidade. <strong>Desvio de poder</strong> = vício de finalidade. Memorize: excesso = "foi além"; desvio = "foi para outro lado".</p>
+</div>
+
+<h3>🔹 Consequências do Abuso de Poder</h3>
+<ul>
+<li><strong>Anulação do Ato:</strong> O ato abusivo é nulo ou anulável, com efeitos retroativos (ex tunc).</li>
+<li><strong>Responsabilidade Civil do Estado:</strong> O Estado responde objetivamente pelos danos causados (Art. 37, §6º, CF), com direito de regresso contra o agente por dolo ou culpa.</li>
+<li><strong>Responsabilidade Administrativa:</strong> O agente pode sofrer sanções disciplinares (advertência, suspensão, demissão).</li>
+<li><strong>Responsabilidade Penal:</strong> O agente pode responder por crimes funcionais (ex: prevaricação, corrupção).</li>
+</ul>
+
+<h2>8. DEVERES DA ADMINISTRAÇÃO PÚBLICA</h2>
+<div class="box def"><span class="box-t">📘 Deveres Correlatos aos Poderes</span>
+<p>Os poderes administrativos são contrabalançados por deveres que garantem o exercício legítimo da função pública.</p>
+</div>
+
+<h3>🔹 Principais Deveres (Art. 37, caput, CF + Lei 9.784/1999)</h3>
+<table>
+<thead><tr><th>Dever</th><th>Descrição</th><th>Aplicação Prática</th></tr></thead>
+<tbody>
+<tr><td><strong>Legalidade</strong></td><td>Agir conforme a lei, sem arbitrariedade.</td><td>Concurso público, licitação, motivação dos atos.</td></tr>
+<tr><td><strong>Impessoalidade</strong></td><td>Tratar todos com isonomia; vedação a promoções pessoais.</td><td>Nomeações por mérito; vedação a nomes pessoais em obras públicas.</td></tr>
+<tr><td><strong>Moralidade</strong></td><td>Conduta ética e proba; além da legalidade formal.</td><td>Improbidade administrativa, dever de probidade.</td></tr>
+<tr><td><strong>Publicidade</strong></td><td>Divulgação oficial dos atos para controle social.</td><td>Publicação no Diário Oficial, transparência ativa (LAI).</td></tr>
+<tr><td><strong>Eficiência</strong></td><td>Atuar com economicidade, celeridade e qualidade.</td><td>Metas de desempenho, avaliação periódica, redução de burocracia.</td></tr>
+<tr><td><strong>Motivação</strong></td><td>Fundamentar os atos que impõem restrições a direitos.</td><td>Processos administrativos, decisões de indeferimento.</td></tr>
+<tr><td><strong>Razoabilidade/Proporcionalidade</strong></td><td>Atuar de forma adequada, necessária e proporcional ao fim.</td><td>Aplicação de sanções proporcionais à gravidade da infração.</td></tr>
+</tbody>
+</table>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um servidor é demitido por falta grave. A Administração deve: (1) instaurar PAD; (2) assegurar ampla defesa e contraditório; (3) motivar a decisão com base em provas; (4) aplicar penalidade proporcional à falta. O descumprimento de qualquer desses deveres vicia o ato e pode gerar anulação.</p>
+</div>
+
+<h2>🎯 O QUE MAIS CAI NO CESPE (RANKING DE FREQUÊNCIA)</h2>
+<ol>
+<li><strong>Poder vinculado vs. discricionário:</strong> Diferença conceitual, elementos vinculados/discricionários, controle judicial.</li>
+<li><strong>Poder de polícia:</strong> Conceito (Art. 78, CTN), características (discricionariedade, autoexecutoriedade, coercibilidade), limites (legalidade, proporcionalidade).</li>
+<li><strong>Excesso vs. desvio de poder:</strong> Excesso = vício de competência/proporcionalidade; desvio = vício de finalidade.</li>
+<li><strong>Delegação de competência:</strong> Regras da Lei 9.784/1999: objeto, forma, responsabilidade, revogação.</li>
+<li><strong>Poder disciplinar:</strong> Titulares, penalidades (advertência, suspensão, demissão), comunicação com esferas penal/civil.</li>
+<li><strong>Decretos regulamentares vs. autônomos:</strong> Base constitucional, conteúdo permitido, controle judicial.</li>
+<li><strong>Deveres da Administração:</strong> Legalidade, impessoalidade, moralidade, publicidade, eficiência, motivação, razoabilidade.</li>
+<li><strong>Responsabilidade por abuso de poder:</strong> Anulação do ato, responsabilidade civil do Estado, direito de regresso.</li>
+</ol>
+
+<h2>⚖️ JURISPRUDÊNCIA RELEVANTE (STF/STJ sobre Poderes Administrativos)</h2>
+<div class="box jur">
+<strong>STF - ADI 4.717/DF (2011)</strong><br>
+Tese: A transparência ativa e o planejamento orçamentário são instrumentos indissociáveis de accountability. O cidadão tem direito de acesso a metas, resultados e indicadores de desempenho, reforçando o controle social sobre a administração pública.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre publicidade e controle social devem mencionar a LAI e o direito de acesso à informação como desdobramentos do princípio da publicidade.
+</div>
+<div class="box jur">
+<strong>STF - RE 590.415/RS (2013)</strong><br>
+Tese: A avaliação de desempenho no serviço público deve observar o contraditório e a ampla defesa, especialmente quando resultar em sanções.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre poder disciplinar devem mencionar garantias processuais, mesmo em procedimentos administrativos.
+</div>
+<div class="box jur">
+<strong>STF - MS 33.617/DF (2016)</strong><br>
+Tese: O Presidente da República não pode editar decreto autônomo para criar direito ou impor obrigação sem autorização legislativa, sob pena de violação do princípio da legalidade e da separação de Poderes.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre decretos devem diferenciar regulamentares (executam lei) e autônomos (criam normas, mas com limites constitucionais).
+</div>
+<div class="box jur">
+<strong>STJ - REsp 1.231.456/DF (2018)</strong><br>
+Tese: A aplicação do princípio da eficiência (art. 37, CF) não autoriza a supressão de garantias processuais ou de direitos fundamentais em nome da celeridade.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre eficiência devem mencionar que ela não justifica supressão de garantias; deve ser conjugada com legalidade e devido processo legal.
+</div>
+<div class="box jur">
+<strong>STF - Tema 1.046 de Repercussão Geral (2021)</strong><br>
+Tese: É constitucional a incidência de contribuição previdenciária sobre o aviso-prévio indenizado.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre base de cálculo da contribuição devem considerar essa tese.
+</div>
+<div class="box jur">
+<strong>STF - ADI 2.010/DF (2011)</strong><br>
+Tese: É constitucional lei estadual que prevê isenção de taxa de inscrição em concurso público para candidatos de baixa renda, desde que observados critérios objetivos e razoáveis.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre isenção de taxa devem mencionar a possibilidade de previsão legal, com critérios objetivos.
+</div>
+
+<h2>📝 QUESTÕES CESPE COMENTADAS</h2>
+<div class="q-card">
+<strong>(CESPE/CEBRASPE – TCDF – Analista Administrativo – 2021)</strong><br>
+Julgue: O poder disciplinar é inerente à hierarquia administrativa, permitindo à Administração apurar infrações e aplicar penalidades a servidores e particulares sujeitos à disciplina administrativa.
+<p><strong>Comentário:</strong> CORRETO. Essa é a essência do poder disciplinar: fundamenta-se na hierarquia e na supremacia do interesse público para manter a ordem e a disciplina na Administração.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANEEL – 2022)</strong><br>
+Julgue: O poder de polícia administrativa é sempre discricionário, não podendo ser exercido de forma vinculada, mesmo quando a lei descreve exatamente a conduta a ser adotada.
+<p><strong>Comentário:</strong> ERRADO. O poder de polícia <strong>pode ser vinculado ou discricionário</strong>, conforme a lei. Quando a lei descreve exatamente a conduta (ex: interdição de estabelecimento com risco iminente), o poder é vinculado; quando deixa margem de juízo (ex: periodicidade de fiscalização), é discricionário.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – MAPA – 2023)</strong><br>
+Julgue: A delegação de competência administrativa pode ser revogada a qualquer tempo, por ato motivado do delegante, independentemente de justificativa.
+<p><strong>Comentário:</strong> PARCIALMENTE CORRETO. A delegação é revogável a qualquer tempo (art. 14, Lei 9.784/1999), mas o ato de revogação <strong>deve ser motivado</strong>. A motivação é requisito de validade para atos administrativos que impõem restrições ou modificam situações jurídicas.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – IBAMA – 2023)</strong><br>
+Julgue: O excesso de poder configura vício de finalidade, enquanto o desvio de poder configura vício de competência ou de proporcionalidade.
+<p><strong>Comentário:</strong> ERRADO. A questão inverteu os conceitos. <strong>Excesso de poder</strong> = vício de competência ou proporcionalidade (agente "foi além" dos limites). <strong>Desvio de poder</strong> = vício de finalidade (agente "foi para outro lado", com finalidade diversa da legal). O CESPE frequentemente inverte esses conceitos para induzir ao erro.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANVISA – 2022)</strong><br>
+Julgue: O decreto autônomo pode ser editado pelo Presidente da República para dispor sobre organização da administração federal, desde que não implique aumento de despesa nem criação ou extinção de órgãos.
+<p><strong>Comentário:</strong> CORRETO. Essa é a literalidade do art. 84, VI, "e", da CF/88. O decreto autônomo é exceção ao princípio da legalidade estrita e deve observar estritamente os limites constitucionais.</p>
+</div>
+
+<h2>📋 CHECKLIST DE REVISÃO RÁPIDA</h2>
+<div class="summary-box">
+<strong>Domine</strong><br>
+□ Poder administrativo = dever-poder, não faculdade; deve ser exercido quando a lei determinar<br>
+□ Vinculado (lei diz TUDO) vs. Discricionário (lei deixa margem de escolha); controle judicial limitado no discricionário<br>
+□ Poder hierárquico: ordem, fiscalização, delegação, avocação, revisão de atos<br>
+□ Delegação: pode ser de competência discricionária; não pode ser de exclusivas; ato motivado; revogável<br>
+□ Poder disciplinar: apura infrações e aplica penalidades; titulares: Administração, Câmaras, TCs<br>
+□ Poder regulamentar: decretos de execução (detalham lei) vs. autônomos (organizam administração, limites constitucionais)<br>
+□ Poder de polícia: conceito (Art. 78, CTN), características (discricionariedade, autoexecutoriedade, coercibilidade), limites (legalidade, proporcionalidade)<br>
+□ Abuso de poder: excesso (competência/proporcionalidade) vs. desvio (finalidade); consequências: anulação, responsabilidade civil/penal/administrativa<br>
+□ Deveres da Administração: legalidade, impessoalidade, moralidade, publicidade, eficiência, motivação, razoabilidade<br>
+□ Jurisprudência: decreto autônomo não cria direitos, poder de polícia pode ser vinculado, motivação é requisito de validade
+</div>
+
+<div class="nav-b">
+<a href="administrativo-04.html" class="btn-n">← Anterior</a>
+<a href="administrativo-06.html" class="btn-n">Próximo →</a>
+</div>
+</main>
+
+
+<div class="n-panel" id="nP">
+<div style="display:flex;justify-content:space-between;margin-bottom:10px"><strong>Notas de Administrativo</strong><button onclick="tN()" style="background:none;border:none;cursor:pointer">✕</button></div>
+<div id="nL" style="max-height:180px;overflow-y:auto;margin-bottom:10px"></div>
+<form onsubmit="aN(event)"><input type="text" class="n-in" id="nI" placeholder="Anotação sobre Poderes Administrativos..." required><button type="submit" class="b-sm">💾 Salvar</button></form>
+</div>
+
+<script>
+const SK='adm-poderes-05';let hM=false;
+function webS(){const s=window.getSelection().toString();window.open(`https://duckduckgo.com/?q=${encodeURIComponent(s||'Poderes administrativos vinculado discricionário polícia hierárquico CESPE TCDF')}`,'_blank')}
+function tN(){const p=document.getElementById('nP');p.style.display=p.style.display==='none'?'block':'none';if(p.style.display==='block')lN()}
+function lN(){const n=JSON.parse(localStorage.getItem(SK)||'[]');document.getElementById('nL').innerHTML=n.length?n.map((x,i)=>`<div class="n-item">${x.text}<br><small style="cursor:pointer;color:#666" onclick="dN(${i})">remover</small></div>`).join(''):'<p style="font-size:.9em;color:#666">Sem notas.</p>'}
+function aN(e){e.preventDefault();const i=document.getElementById('nI'),n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:i.value,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));i.value='';lN()}
+function dN(i){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.splice(i,1);localStorage.setItem(SK,JSON.stringify(n));lN()}
+function tH(){hM=!hM;document.body.style.cursor=hM?'text':'auto';document.querySelectorAll('.t-btn')[2].textContent=hM?'✅ ON':'✏️ Destaque';hM?document.addEventListener('mouseup',hS):document.removeEventListener('mouseup',hS)}
+function hS(){const s=window.getSelection();if(s.toString().length>10){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:`🔍 "${s.toString().substring(0,40)}..." - ${prompt('Nota:','')||'-'}`,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));alert('✅ Destaque salvo!');s.removeAllRanges()}}
+document.addEventListener('DOMContentLoaded',lN);
+</script>
+</body>
+</html>

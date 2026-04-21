@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direito Administrativo 11 | Processo Administrativo - Lei 9.784/1999 - CESPE</title>
+<style>
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1;--jur:#e8f4fd}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;line-height:1.7;padding-top:70px}
+a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
+.container{max-width:1000px;margin:0 auto;padding:24px}
+h1{font-size:1.8em;margin-bottom:10px;color:var(--lil)}h2{font-size:1.4em;margin:28px 0 14px;color:var(--text);padding-bottom:6px;border-bottom:2px solid var(--lil-l)}
+h3{font-size:1.2em;margin:22px 0 12px;color:var(--lil-d);font-weight:600}
+p{margin-bottom:14px;color:var(--text)}ul,ol{margin:0 0 16px 20px;color:var(--text)}li{margin-bottom:6px}
+.box{background:var(--card);border-radius:8px;padding:16px;margin:20px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}.box.jur{background:var(--jur);border-color:#3b82f6}
+.box-t{font-weight:700;margin-bottom:8px;display:block;color:var(--text)}
+table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--lil-d)}
+td{padding:10px 14px;border-bottom:1px solid var(--lil-l);color:var(--text)}tr:hover td{background:var(--lil-l)}
+.nav-b{display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:1px solid var(--lil-d)}
+.btn-n{padding:10px 20px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none}
+.btn-n:hover{background:var(--lil-d);color:#fff}
+.tools{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:99}
+.t-btn{background:var(--card);border:2px solid var(--lil-d);padding:10px 14px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;color:var(--text);box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.t-btn:hover{transform:translateY(-2px)}
+.n-panel{position:fixed;bottom:70px;right:20px;width:280px;background:var(--card);border:2px solid var(--lil-d);border-radius:12px;padding:16px;display:none;box-shadow:0 5px 15px rgba(0,0,0,.15);z-index:100}
+.n-item{background:var(--lil-l);padding:10px;border-radius:6px;margin-bottom:8px;font-size:.9em}
+.n-in{width:100%;padding:8px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:8px}
+.b-sm{padding:6px 12px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em}
+@media(max-width:700px){.container{padding:16px}header{flex-direction:column;align-items:flex-start;gap:10px}}
+.box img{width:100%;height:auto;display:block;margin:15px 0;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.q-card{background:var(--warn);border-left:4px solid #f59e0b;padding:16px;margin:20px 0;border-radius:0 8px 8px 0}
+.q-card strong{color:#856404}
+.cespe-tip{background:#fef3c7;border-left:4px solid #f59e0b;padding:12px;margin:15px 0;font-size:.95em}
+.mnemonic{background:linear-gradient(135deg,var(--lil-l),var(--bg-secondary));padding:12px 16px;border-radius:8px;margin:15px 0;font-weight:600;color:var(--lil-d)}
+.summary-box{background:var(--def);padding:16px;border-radius:8px;margin:20px 0}
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin:15px 0}
+.comp-item{background:var(--bg-secondary);padding:10px;border-radius:6px;font-size:.95em}
+.principle-card{background:var(--card);border:2px solid var(--lil-l);border-radius:8px;padding:16px;margin:12px 0}
+.principle-card h4{color:var(--lil);margin-bottom:8px}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="back">← Dashboard</a><div class="nav-t">Direito Administrativo 11</div></header>
+<main class="container">
+<h1>Processo Administrativo Federal (Lei 9.784/1999)</h1>
+
+<h2>1. CONCEITO E FINALIDADE DO PROCESSO ADMINISTRATIVO</h2>
+<div class="box def"><span class="box-t">📘 Conceito de Processo Administrativo</span>
+<p><strong>Processo administrativo</strong> é o instrumento formal e ordenado por meio do qual a Administração Pública pratica seus atos, assegura direitos aos administrados e decide sobre interesses públicos, observando os princípios da legalidade, finalidade, motivação, razoabilidade, proporcionalidade, moralidade, ampla defesa, contraditório, interesse público, publicidade e eficiência (Art. 2º, Lei 9.784/1999).</p>
+<p><strong>Finalidade:</strong> Garantir a atuação administrativa com observância dos direitos dos administrados, assegurando a produção de atos válidos, legítimos e eficazes.</p>
+</div>
+
+<h3>🔹 Diferença entre Procedimento e Processo Administrativo</h3>
+<table>
+<thead><tr><th>Conceito</th><th>Descrição</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Procedimento Administrativo</strong></td><td>Sequência ordenada de atos para a prática de um ato administrativo final</td><td>Trâmite de um pedido de licença: protocolo → análise → parecer → decisão</td></tr>
+<tr><td><strong>Processo Administrativo</strong></td><td>Procedimento + garantia de direitos fundamentais (contraditório, ampla defesa, motivação)</td><td>Processo disciplinar com notificação, defesa, produção de provas e decisão motivada</td></tr>
+</tbody>
+</table>
+
+<div class="mnemonic">🧠 MACETE: "Procedimento = Caminho | Processo = Caminho + Direitos" → Todo processo é procedimento, mas nem todo procedimento é processo (falta garantias).</div>
+
+<h2>2. ÂMBITO DE APLICAÇÃO DA LEI 9.784/1999</h2>
+<div class="box def"><span class="box-t">📘 Aplicação da Lei Federal</span>
+<p>A Lei 9.784/1999 regula o processo administrativo no âmbito da <strong>Administração Pública Federal</strong> (Art. 1º), mas seus princípios aplicam-se subsidiariamente aos processos administrativos estaduais, distritais e municipais, na ausência de legislação específica.</p>
+</div>
+
+<h3>🔹 Entidades Sujeitas à Lei 9.784/1999</h3>
+<ul>
+<li><strong>Administração Direta Federal:</strong> Presidência, Ministérios, órgãos diretamente subordinados.</li>
+<li><strong>Administração Indireta Federal:</strong> Autarquias, fundações públicas, empresas públicas, sociedades de economia mista.</li>
+<li><strong>Entidades privadas delegatárias:</strong> Quando exercem função pública delegada (concessionárias, permissionárias, OS, OSCIP).</li>
+</ul>
+
+<div class="cespe-tip">💡 DICA CESPE: Questões que afirmam "a Lei 9.784/1999 não se aplica a empresas públicas" → ERRADO. A lei aplica-se à Administração Indireta Federal, incluindo empresas públicas e SEM, especialmente quando praticam atos administrativos.</div>
+
+<h2>3. PRINCÍPIOS DO PROCESSO ADMINISTRATIVO (ART. 2º, LEI 9.784/1999)</h2>
+<div class="box def"><span class="box-t">📘 Princípios Expressos na Lei</span>
+<p>O art. 2º da Lei 9.784/1999 enumera os princípios que regem o processo administrativo federal. Muitos coincidem com os do art. 37, caput, da CF/88, mas há especificidades processuais.</p>
+</div>
+
+<table>
+<thead><tr><th>Princípio</th><th>Descrição Legal</th><th>Aplicação Prática</th></tr></thead>
+<tbody>
+<tr><td><strong>Legalidade</strong></td><td>Atuação conforme a lei e o Direito</td><td>Atos sem fundamento legal são nulos; observância de procedimentos previstos em norma</td></tr>
+<tr><td><strong>Finalidade</strong></td><td>Atendimento a fins de interesse geral, vedada motivação política</td><td>Decisões devem visar o interesse público, não interesses pessoais ou políticos</td></tr>
+<tr><td><strong>Motivação</strong></td><td>Exposição dos fatos e fundamentos jurídicos da decisão</td><td>Decisões devem ser fundamentadas; motivação aparente ou genérica é insuficiente</td></tr>
+<tr><td><strong>Razoabilidade</strong></td><td>Compatibilidade entre meios e fins, vedada imposição excessiva</td><td>Sanções proporcionais à infração; medidas não podem ser desproporcionais ao objetivo</td></tr>
+<tr><td><strong>Proporcionalidade</strong></td><td>Equilíbrio entre ônus e benefícios da decisão</td><td>Restrições a direitos devem ser estritamente necessárias e adequadas ao fim</td></tr>
+<tr><td><strong>Moralidade</strong></td><td>Atuação conforme a ética e a probidade administrativa</td><td>Vedação a atos imorais, mesmo que formalmente legais; dever de probidade</td></tr>
+<tr><td><strong>Ampla Defesa</strong></td><td>Garantia de meios e recursos para a defesa</td><td>Direito de apresentar provas, alegações, recursos; assistência jurídica quando necessário</td></tr>
+<tr><td><strong>Contraditório</strong></td><td>Direito de conhecer e se manifestar sobre atos e provas</td><td>Notificação prévia; acesso aos autos; oportunidade de impugnação</td></tr>
+<tr><td><strong>Interesse Público</strong></td><td>Primado do interesse coletivo sobre o individual</td><td>Decisões devem privilegiar o bem comum, sem desconsiderar direitos individuais</td></tr>
+<tr><td><strong>Publicidade</strong></td><td>Divulgação oficial dos atos, salvo sigilo legal</td><td>Publicação de editais, decisões, contratos; transparência ativa e passiva</td></tr>
+<tr><td><strong>Eficiência</strong></td><td>Atuação com presteza, perfeição e rendimento funcional</td><td>Prazos razoáveis; redução de burocracia; qualidade na prestação do serviço</td></tr>
+</tbody>
+</table>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "os princípios do processo administrativo são os mesmos do art. 37, caput, da CF" → PARCIALMENTE ERRADO. Há coincidência, mas a Lei 9.784/1999 acrescenta princípios processuais específicos, como <strong>razoabilidade, proporcionalidade, interesse público</strong>, que não estão expressos no caput do art. 37.</p>
+</div>
+
+<h2>4. DIREITOS E DEVERES DOS ADMINISTRADOS (ARTS. 3º A 5º)</h2>
+<div class="box def"><span class="box-t">📘 Direitos dos Administrados (Art. 3º)</span>
+<p>São direitos dos administrados no processo administrativo federal:</p>
+</div>
+
+<h3>🔹 Enumeração dos Direitos (Art. 3º, Lei 9.784/1999)</h3>
+<ol>
+<li><strong>Ser tratado com respeito</strong> pelas autoridades e servidores, facilitando a defesa de direitos.</li>
+<li><strong>Ter ciência da tramitação</strong> dos processos, podendo vista dos autos e obter cópias.</li>
+<li><strong>Apresentar alegações finais</strong> antes da decisão, em processo que possa resultar em sanção.</li>
+<li><strong>Assistência jurídica gratuita</strong>, quando necessário e na forma da lei.</li>
+<li><strong>Comunicar-se em português</strong>, com tradução quando necessário.</li>
+<li><strong>Obter resposta formal</strong> a requerimentos, representações ou reclamações.</li>
+<li><strong>Recorrer das decisões</strong> administrativas, na forma e prazos previstos.</li>
+</ol>
+
+<h3>🔹 Deveres dos Administrados (Art. 4º)</h3>
+<ul>
+<li><strong>Expor os fatos conforme a verdade</strong> (vedação à falsidade ideológica).</li>
+<li><strong>Proceder com lealdade, urbanidade e boa-fé</strong> na relação com a Administração.</li>
+<li><strong>Não se opor injustificadamente</strong> ao andamento do processo.</li>
+<li><strong>Requerer o que for de seu direito</strong> de forma adequada e fundamentada.</li>
+</ul>
+
+<h3>🔹 Deveres da Administração (Art. 5º)</h3>
+<ul>
+<li><strong>Decidir em prazo razoável</strong>, evitando procrastinação.</li>
+<li><strong>Informar o interessado</strong> sobre atos que o afetem, com indicação de recursos.</li>
+<li><strong>Utilizar critérios objetivos</strong> na interpretação da norma legal.</li>
+<li><strong>Proibir a imposição de obrigações</strong> não previstas em lei.</li>
+</ul>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um servidor é notificado de processo disciplinar. Ele tem direito a: (1) vista dos autos; (2) apresentar defesa escrita em 10 dias; (3) produzir provas; (4) recorrer da decisão. A Administração tem o dever de: (1) decidir em prazo razoável; (2) motivar a decisão; (3) informar sobre recursos. <strong>Isso é aplicação dos arts. 3º a 5º da Lei 9.784/1999.</strong></p>
+</div>
+
+<h2>5. COMPETÊNCIA: DELEGAÇÃO E AVOCAÇÃO (ARTS. 11 A 18)</h2>
+<div class="box def"><span class="box-t">📘 Conceito de Competência</span>
+<p><strong>Competência</strong> é o poder-dever legalmente atribuído a um órgão ou agente para praticar atos administrativos. É <strong>irrenunciável</strong>, mas pode ser delegada ou avocada, nos termos da lei.</p>
+</div>
+
+<h3>🔹 Delegação de Competência (Arts. 11 a 14)</h3>
+<table>
+<thead><tr><th>Aspecto</th><th>Regra Legal</th><th>Limites</th></tr></thead>
+<tbody>
+<tr><td><strong>Objeto</strong></td><td>Pode ser delegada a execução de atos de competência discricionária</td><td>Não pode delegar: edição de atos normativos, decisão de recursos, matérias de competência exclusiva</td></tr>
+<tr><td><strong>Forma</strong></td><td>Ato administrativo motivado, publicado, com indicação de delegante, delegado, objeto, limites e duração</td><td>Deve ser expressa; não se presume</td></tr>
+<tr><td><strong>Responsabilidade</strong></td><td>O delegante responde pelos atos do delegado; o delegado responde por excesso ou desvio</td><td>Responsabilidade solidária em caso de dano</td></tr>
+<tr><td><strong>Revogação</strong></td><td>A delegação é revogável a qualquer tempo, por ato motivado do delegante</td><td>Deve observar o devido processo legal se afetar direitos</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Avocação de Competência (Arts. 15 a 17)</h3>
+<table>
+<thead><tr><th>Aspecto</th><th>Regra Legal</th><th>Limites</th></tr></thead>
+<tbody>
+<tr><td><strong>Conceito</strong></td><td>Chamar para si atribuição de órgão ou agente inferior</td><td>Excepcional; exige justificativa fundamentada</td></tr>
+<tr><td><strong>Objeto</strong></td><td>Apenas atos de competência discricionária</td><td>Não pode avocar atos vinculados ou de competência exclusiva</td></tr>
+<tr><td><strong>Forma</strong></td><td>Ato motivado, publicado, com indicação de razões</td><td>Deve ser expressa; não se presume</td></tr>
+<tr><td><strong>Duração</strong></td><td>Temporária; cessa com a prática do ato ou por revogação</td><td>Não pode ser permanente</td></tr>
+</tbody>
+</table>
+
+<div class="cespe-tip">💡 DICA CESPE: Questões que afirmam "a avocação é regra e a delegação é exceção" → ERRADO. A <strong>delegação é a regra</strong> (facilita a gestão); a <strong>avocação é excepcional</strong> e exige justificativa fundamentada.</div>
+
+<h2>6. FORMALIDADES DO PROCESSO: FORMA, TEMPO, LUGAR (ARTS. 22 A 26)</h2>
+<div class="box def"><span class="box-t">📘 Princípio da Formalidade Moderada</span>
+<p>O processo administrativo deve observar formalidades essenciais à garantia dos direitos, mas sem excesso de burocracia que impeça a eficiência (Art. 22).</p>
+</div>
+
+<h3>🔹 Forma dos Atos (Art. 22)</h3>
+<ul>
+<li><strong>Regra:</strong> Forma escrita, para garantir prova e controle.</li>
+<li><strong>Exceções:</strong> Atos verbais, sonoros, gestuais, quando a lei permitir ou em situações de urgência.</li>
+<li><strong>Validade:</strong> O ato não é nulo por vício de forma, salvo se a forma for essencial à sua validade ou se o vício causar prejuízo.</li>
+</ul>
+
+<h3>🔹 Prazos Processuais (Arts. 24 e 66)</h3>
+<table>
+<thead><tr><th>Tipo de Prazo</th><th>Regra</th><th>Prorrogação</th></tr></thead>
+<tbody>
+<tr><td><strong>Prazo para decisão</strong></td><td>30 dias, prorrogável por igual período, mediante justificativa</td><td>Uma vez, por igual período</td></tr>
+<tr><td><strong>Prazo para defesa</strong></td><td>10 dias, prorrogável por mais 10, se justificado</td><td>Uma vez, por igual período</td></tr>
+<tr><td><strong>Prazo para recurso</strong></td><td>10 dias da ciência da decisão</td><td>Não se prorroga; é decadencial</td></tr>
+<tr><td><strong>Prazo para interposição de recurso hierárquico</strong></td><td>10 dias da decisão do pedido de reconsideração</td><td>Não se prorroga</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Lugar da Prática dos Atos (Art. 26)</h3>
+<ul>
+<li><strong>Regra:</strong> Atos praticados na sede do órgão ou entidade.</li>
+<li><strong>Exceções:</strong> Atos podem ser praticados em outro lugar, por motivo de interesse público ou conveniência da Administração.</li>
+<li><strong>Comunicação:</strong> O interessado deve ser informado do local da prática do ato, quando relevante.</li>
+</ul>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um processo administrativo é instaurado contra um servidor. Ele é notificado para apresentar defesa em <strong>10 dias</strong> (Art. 24). Se justificar, pode prorrogar por <strong>mais 10 dias</strong>. A Administração deve decidir em <strong>30 dias</strong>, prorrogáveis por <strong>mais 30</strong>, sob pena de responsabilidade funcional. <strong>Isso é aplicação dos arts. 24 e 66 da Lei 9.784/1999.</strong></p>
+</div>
+
+<h2>7. MOTIVAÇÃO DOS ATOS ADMINISTRATIVOS (ART. 50)</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Finalidade</span>
+<p><strong>Motivação</strong> é a exposição dos fatos e fundamentos jurídicos que justificam a decisão administrativa. É requisito de validade dos atos que impõem obrigações, aplicam sanções ou decidem recursos (Art. 50).</p>
+</div>
+
+<h3>🔹 Hipóteses de Motivação Obrigatória (Art. 50)</h3>
+<ol>
+<li><strong>Atos que neguem, limitem ou afetem direitos ou interesses</strong> (ex: indeferimento de pedido, aplicação de sanção).</li>
+<li><strong>Atos que imponham ou agravem deveres, encargos ou sanções</strong> (ex: multa, suspensão).</li>
+<li><strong>Decisões de processos administrativos de concurso ou seleção pública</strong> (ex: resultado de concurso, classificação).</li>
+<li><strong>Atos que dispensem ou declarem a inexigibilidade de licitação</strong> (ex: dispensa por emergência).</li>
+<li><strong>Decisões de recursos administrativos</strong> (ex: julgamento de recurso hierárquico).</li>
+<li><strong>Atos decorrentes de reexame de ofício</strong> (ex: revisão de ato por vício).</li>
+<li><strong>Atos que deixem de aplicar jurisprudência firmada ou discrepem de pareceres, laudos, propostas e relatórios oficiais</strong> (ex: decisão contrária a parecer jurídico).</li>
+<li><strong>Atos que importem anulação, revogação, suspensão ou convalidação de ato administrativo</strong> (ex: anulação de licença).</li>
+</ol>
+
+<h3>🔹 Requisitos da Motivação</h3>
+<ul>
+<li><strong>Clareza:</strong> A motivação deve ser compreensível ao administrado.</li>
+<li><strong>Suficiência:</strong> Deve expor fatos e fundamentos jurídicos suficientes para justificar a decisão.</li>
+<li><strong>Conexão lógica:</strong> Deve haver nexo entre os fatos, os fundamentos e a decisão.</li>
+<li><strong>Proibição de motivação aparente:</strong> Não basta citar dispositivo legal; deve explicar sua aplicação ao caso concreto.</li>
+</ul>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "a motivação é exigida apenas para atos vinculados" → ERRADO. A motivação é exigida para <strong>atos discricionários que afetem direitos</strong> (Art. 50). A discricionariedade não dispensa a motivação; apenas afasta o controle de mérito pelo Judiciário.</p>
+</div>
+
+<h2>8. ANULAÇÃO, REVOGAÇÃO E CONVALIDAÇÃO (ARTS. 53 A 55)</h2>
+<div class="box def"><span class="box-t">📘 Revisão de Atos Administrativos</span>
+<p>A Lei 9.784/1999 disciplina a revisão de atos administrativos pela própria Administração (autotutela), distinguindo anulação, revogação e convalidação.</p>
+</div>
+
+<h3>🔹 Anulação de Atos Ilegais (Art. 53)</h3>
+<table>
+<thead><tr><th>Aspecto</th><th>Regra Legal</th><th>Detalhes</th></tr></thead>
+<tbody>
+<tr><td><strong>Causa</strong></td><td>Ilegalidade (vício de validade)</td><td>Vício de competência, finalidade, forma, motivo ou objeto</td></tr>
+<tr><td><strong>Natureza</strong></td><td>Vinculada (dever da Administração)</td><td>A Administração <strong>deve</strong> anular atos ilegais</td></tr>
+<tr><td><strong>Efeitos</strong></td><td>Ex tunc (retroage à origem)</td><td>Desfaz o ato desde sua prática; restitui ao estado anterior</td></tr>
+<tr><td><strong>Quem pode praticar</strong></td><td>Administração ou Judiciário</td><td>Autotutela ou controle judicial</td></tr>
+<tr><td><strong>Direitos adquiridos</strong></td><td>Não protege direitos adquiridos de atos ilegais</td><td>Atos ilegais não geram direitos; mas pode haver proteção à confiança legítima</td></tr>
+<tr><td><strong>Prazo decadencial</strong></td><td>5 anos da prática do ato (Art. 54)</td><td>Contados da data do ato; interrompe-se com a notificação do interessado</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Revogação de Atos Discricionários (Art. 53)</h3>
+<table>
+<thead><tr><th>Aspecto</th><th>Regra Legal</th><th>Detalhes</th></tr></thead>
+<tbody>
+<tr><td><strong>Causa</strong></td><td>Inconveniência ou inoportunidade (mérito administrativo)</td><td>Atos válidos, mas que deixaram de ser convenientes ao interesse público</td></tr>
+<tr><td><strong>Natureza</strong></td><td>Discricionária (juízo de conveniência)</td><td>A Administração <strong>pode</strong> revogar, mas não é obrigada</td></tr>
+<tr><td><strong>Efeitos</strong></td><td>Ex nunc (não retroage)</td><td>Produz efeitos apenas para o futuro; preserva atos praticados sob o ato revogado</td></tr>
+<tr><td><strong>Quem pode praticar</strong></td><td>Apenas Administração (vedado ao Judiciário)</td><td>Controle de mérito é reservado à Administração</td></tr>
+<tr><td><strong>Direitos adquiridos</strong></td><td>Respeita direitos adquiridos de atos válidos</td><td>Não pode revogar ato que gerou direito adquirido</td></tr>
+<tr><td><strong>Prazo</strong></td><td>Não há prazo decadencial</td><td>Pode ser feita a qualquer tempo, enquanto o ato produzir efeitos</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Convalidação de Atos com Vícios Sanáveis (Art. 55)</h3>
+<table>
+<thead><tr><th>Aspecto</th><th>Regra Legal</th><th>Detalhes</th></tr></thead>
+<tbody>
+<tr><td><strong>Objeto</strong></td><td>Apenas vícios de competência e forma</td><td>Não convalida vícios de finalidade, motivo ou objeto</td></tr>
+<tr><td><strong>Condições</strong></td><td>Não pode causar lesão ao interesse público ou prejuízo a terceiros</td><td>Deve preservar direitos de terceiros e o interesse público</td></tr>
+<tr><td><strong>Efeitos</strong></td><td>Ex tunc (retroage à origem)</td><td>O ato convalidado produz efeitos desde sua prática</td></tr>
+<tr><td><strong>Forma</strong></td><td>Decisão motivada da Administração</td><td>Deve justificar expressamente a convalidação</td></tr>
+<tr><td><strong>Prazo</strong></td><td>5 anos da prática do ato (Art. 54)</td><td>Após 5 anos, a Administração deve anular ou manter o ato por segurança jurídica</td></tr>
+</tbody>
+</table>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um servidor é nomeado por autoridade incompetente (vício de competência). A autoridade competente pode <strong>convalidar</strong> o ato, desde que não cause prejuízo a terceiros e o servidor preencha os requisitos legais. Se houver vício de finalidade (ex: nomeação para beneficiar amigo), não há convalidação possível; o ato deve ser <strong>anulado</strong>. <strong>Isso é aplicação dos arts. 53 a 55 da Lei 9.784/1999.</strong></p>
+</div>
+
+<h2>9. RECURSOS ADMINISTRATIVOS (ARTS. 56 A 65)</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Finalidade</span>
+<p><strong>Recurso administrativo</strong> é o meio pelo qual o administrado impugna decisão administrativa, buscando seu reexame por autoridade superior ou pela mesma autoridade, observando o contraditório e a ampla defesa.</p>
+</div>
+
+<h3>🔹 Espécies de Recursos (Arts. 56 a 60)</h3>
+<table>
+<thead><tr><th>Tipo</th><th>Objeto</th><th>Prazo</th><th>Órgão Julgador</th></tr></thead>
+<tbody>
+<tr><td><strong>Pedido de Reconsideração</strong></td><td>Reexame da decisão pela mesma autoridade que a proferiu</td><td>10 dias da ciência da decisão</td><td>Autoridade que decidiu</td></tr>
+<tr><td><strong>Recurso Hierárquico Próprio</strong></td><td>Reexame da decisão pela autoridade hierarquicamente superior</td><td>10 dias da decisão do pedido de reconsideração</td><td>Autoridade superior na mesma estrutura</td></tr>
+<tr><td><strong>Recurso Hierárquico Impróprio</strong></td><td>Reexame por autoridade de estrutura diversa (ex: Ministro sobre ato de autarquia)</td><td>10 dias da decisão do pedido de reconsideração</td><td>Autoridade de estrutura diversa, quando previsto em lei</td></tr>
+<tr><td><strong>Recurso para o Ministro de Estado</strong></td><td>Decisões de autoridades subordinadas ao Ministro</td><td>10 dias da decisão</td><td>Ministro de Estado</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Efeitos dos Recursos</h3>
+<ul>
+<li><strong>Efeito Suspensivo:</strong> Em regra, os recursos administrativos <strong>não têm</strong> efeito suspensivo automático. A penalidade pode ser executada enquanto pendente o recurso, salvo decisão expressa da autoridade competente, que deve considerar o <em>periculum in mora</em> e o <em>fumus boni iuris</em>.</li>
+<li><strong>Reformatio in Pejus:</strong> É vedado ao órgão julgador piorar a situação do recorrente, salvo se houver recurso da autoridade que aplicou a penalidade ou se a pioria decorrer de nova apreciação de fatos ou provas.</li>
+<li><strong>Decisão:</strong> O recurso deve ser decidido em prazo razoável, com motivação expressa, sob pena de responsabilidade funcional.</li>
+</ul>
+
+<div class="cespe-tip">💡 DICA CESPE: Questões que afirmam "o recurso administrativo tem efeito suspensivo automático" → ERRADO. O efeito suspensivo <strong>não é automático</strong>; depende de decisão expressa da autoridade competente, que deve fundamentar a concessão ou denegação.</div>
+
+<h2>10. PRESCRIÇÃO E DECADÊNCIA (ARTS. 66 E 54)</h2>
+<div class="box def"><span class="box-t">📘 Distinção Conceitual</span>
+<p><strong>Prescrição:</strong> Perda do direito de ação pelo decurso do tempo, sem exercício.</p>
+<p><strong>Decadência:</strong> Perda do direito material pelo decurso do tempo, sem exercício.</p>
+</div>
+
+<h3>🔹 Prazos na Lei 9.784/1999</h3>
+<table>
+<thead><tr><th>Instituto</th><th>Prazo</th><th>Aplicação</th><th>Interrupção/Suspensão</th></tr></thead>
+<tbody>
+<tr><td><strong>Prescrição da Ação Disciplinar</strong></td><td>5 anos da prática do fato (Art. 66)</td><td>Infrações disciplinares de servidores</td><td>Interrompe-se com a instauração do PAD; suspende-se com recursos pendentes</td></tr>
+<tr><td><strong>Decadência para Anular Ato</strong></td><td>5 anos da prática do ato (Art. 54)</td><td>Anulação de atos ilegais pela Administração</td><td>Interrompe-se com a notificação do interessado; não se suspende</td></tr>
+<tr><td><strong>Prazo para Decisão</strong></td><td>30 dias, prorrogável por 30 (Art. 24)</td><td>Decisão de processos administrativos</td><td>Prorrogação única, mediante justificativa</td></tr>
+<tr><td><strong>Prazo para Defesa</strong></td><td>10 dias, prorrogável por 10 (Art. 24)</td><td>Apresentação de defesa pelo administrado</td><td>Prorrogação única, se justificado</td></tr>
+<tr><td><strong>Prazo para Recurso</strong></td><td>10 dias da ciência da decisão (Art. 59)</td><td>Interposição de recursos administrativos</td><td>Decadencial; não se prorroga nem se suspende</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Causas de Interrupção e Suspensão</h3>
+<ul>
+<li><strong>Interrupção:</strong> Faz o prazo recomeçar do zero. Ex: notificação do interessado (para decadência), instauração do PAD (para prescrição disciplinar).</li>
+<li><strong>Suspensão:</strong> Faz o prazo parar de correr, retomando quando cessar a causa. Ex: recursos pendentes, força maior, caso fortuito.</li>
+<li><strong>Prescrição Intercorrente:</strong> Se a Administração não impulsionar o processo por 4 anos, prescreve a pretensão punitiva (Art. 66, §2º).</li>
+</ul>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um servidor comete falta grave em 01/01/2020. A Administração instaura PAD em 01/06/2020 (interrompe a prescrição). O processo fica parado por 3 anos sem impulso oficial. Em 01/06/2023, a Administração retoma o processo. Como não houve impulso por mais de 4 anos (de 01/06/2020 a 01/06/2024), ocorre <strong>prescrição intercorrente</strong> e a pretensão punitiva extingue-se. <strong>Isso é aplicação do art. 66, §2º, da Lei 9.784/1999.</strong></p>
+</div>
+
+<h2>🎯 O QUE MAIS CAI NO CESPE (RANKING DE FREQUÊNCIA)</h2>
+<ol>
+<li><strong>Princípios do Processo Administrativo (Art. 2º):</strong> Literalidade e aplicação prática; diferença para os princípios do art. 37, caput, da CF.</li>
+<li><strong>Delegação vs. Avocação:</strong> Regras, limites, responsabilidades; delegação é regra, avocação é exceção.</li>
+<li><strong>Anulação vs. Revogação vs. Convalidação:</strong> Causas, efeitos (ex tunc/ex nunc), quem pode praticar, prazos decadenciais.</li>
+<li><strong>Motivação dos Atos (Art. 50):</strong> Hipóteses de obrigatoriedade; requisitos da motivação; proibição de motivação aparente.</li>
+<li><strong>Prazos Processuais:</strong> Defesa (10+10 dias), decisão (30+30 dias), recurso (10 dias decadenciais), prescrição disciplinar (5 anos).</li>
+<li><strong>Recursos Administrativos:</strong> Espécies (pedido de reconsideração, recurso hierárquico próprio/impróprio); efeitos (suspensivo não automático, reformatio in pejus vedado).</li>
+<li><strong>Direitos e Deveres dos Administrados (Arts. 3º a 5º):</strong> Enumeração legal; aplicação prática em processos disciplinares.</li>
+<li><strong>Formalidade Moderada (Art. 22):</strong> Vício de forma não anula o ato, salvo se essencial ou se causar prejuízo.</li>
+<li><strong>Prescrição Intercorrente (Art. 66, §2º):</strong> 4 anos de inércia da Administração extingue a pretensão punitiva.</li>
+<li><strong>Âmbito de Aplicação da Lei 9.784/1999:</strong> Administração Federal direta e indireta; aplicação subsidiária a estados e municípios.</li>
+</ol>
+
+<h2>⚖️ JURISPRUDÊNCIA RELEVANTE (STF/STJ sobre Processo Administrativo)</h2>
+<div class="box jur">
+<strong>STF - RE 590.415/RS (2013)</strong><br>
+Tese: A avaliação de desempenho no serviço público deve observar o contraditório e a ampla defesa, especialmente quando resultar em sanções.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre processo administrativo disciplinar devem mencionar garantias processuais, mesmo em procedimentos administrativos.
+</div>
+<div class="box jur">
+<strong>STJ - REsp 1.231.456/DF (2018)</strong><br>
+Tese: A aplicação do princípio da eficiência (art. 37, CF) não autoriza a supressão de garantias processuais ou de direitos fundamentais em nome da celeridade.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre eficiência e processo administrativo devem mencionar que celeridade não justifica supressão de garantias.
+</div>
+<div class="box jur">
+<strong>STF - ADI 4.717/DF (2011)</strong><br>
+Tese: A transparência ativa e o planejamento orçamentário são instrumentos indissociáveis de accountability. O cidadão tem direito de acesso a metas, resultados e indicadores de desempenho, reforçando o controle social sobre a administração pública.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre publicidade e processo administrativo devem mencionar a LAI e o direito de acesso à informação como desdobramentos do princípio da publicidade.
+</div>
+<div class="box jur">
+<strong>STF - RE 518.894/SP (2011)</strong><br>
+Tese: O direito de regresso do Estado contra o agente público exige a comprovação de dolo ou culpa do servidor, sendo a responsabilidade deste de natureza subjetiva.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre responsabilidade no processo administrativo devem mencionar que a responsabilidade do agente é subjetiva, exigindo dolo ou culpa.
+</div>
+<div class="box jur">
+<strong>STJ - REsp 816.209/RS (2014)</strong><br>
+Tese: A responsabilidade do Estado por omissão na prestação de serviços públicos é subjetiva, exigindo a comprovação de culpa do serviço (falta, falha ou insuficiência do serviço público).<br>
+<strong>Aplicação CESPE:</strong> Questões sobre responsabilidade por falha na prestação de serviços devem mencionar a exigência de culpa do serviço.
+</div>
+<div class="box jur">
+<strong>TCU - Súmula 249</strong><br>
+Tese: "É ilegal a dispensa de licitação para contratação de organização social ou OSCIP sem a devida qualificação e sem a celebração de contrato de gestão ou termo de parceria."<br>
+<strong>Aplicação CESPE:</strong> Questões sobre processo administrativo de contratação devem mencionar a necessidade de qualificação prévia e instrumento jurídico adequado.
+</div>
+<div class="box jur">
+<strong>STF - RE 1.089.955/RJ (2019)</strong><br>
+Tese: A responsabilidade civil por danos ambientais é objetiva e solidária, nos termos do art. 225, §3º, da CF/88 e da Lei 6.938/1981, aplicando-se a teoria do risco integral, sem admissão de excludentes.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre processo administrativo ambiental devem mencionar a responsabilidade objetiva e integral.
+</div>
+
+<h2>📝 QUESTÕES CESPE COMENTADAS</h2>
+<div class="q-card">
+<strong>(CESPE/CEBRASPE – TCDF – Analista Administrativo – 2021)</strong><br>
+Julgue: A motivação dos atos administrativos é exigida apenas para os atos vinculados, sendo dispensada para os atos discricionários, em razão da margem de liberdade conferida ao administrador.
+<p><strong>Comentário:</strong> ERRADO. A motivação é exigida para <strong>atos discricionários que afetem direitos ou imponham obrigações</strong> (Art. 50, Lei 9.784/1999). A discricionariedade não dispensa a motivação; apenas afasta o controle de mérito pelo Judiciário. O CESPE frequentemente inverte esse conceito para induzir ao erro.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANEEL – 2022)</strong><br>
+Julgue: A delegação de competência administrativa pode ser feita para atos de competência exclusiva, desde que motivada e publicada, sendo revogável a qualquer tempo pelo delegante.
+<p><strong>Comentário:</strong> ERRADO. A delegação <strong>não pode</strong> ser feita para atos de competência exclusiva (Art. 12, Lei 9.784/1999). A delegação é permitida apenas para atos de competência discricionária, exceto edição de atos normativos, decisão de recursos e matérias de competência exclusiva. A assertiva está errada quanto ao objeto da delegação.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – MAPA – 2023)</strong><br>
+Julgue: O prazo para interposição de recurso administrativo contra decisão que aplica penalidade disciplinar é de 10 dias, contados da ciência da decisão, sendo esse prazo decadencial e não se prorroga.
+<p><strong>Comentário:</strong> CORRETO. Essa é a literalidade do art. 59 da Lei 9.784/1999: prazo de 10 dias para recurso, decadencial, não se prorroga nem se suspende. O CESPE frequentemente cobra a literalidade dos prazos processuais.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – IBAMA – 2023)</strong><br>
+Julgue: A convalidação de ato administrativo com vício de forma produz efeitos ex nunc, não retroagindo à data de sua prática, para preservar a segurança jurídica.
+<p><strong>Comentário:</strong> ERRADO. A convalidação produz efeitos <strong>ex tunc</strong> (retroage à origem), nos termos do art. 55 da Lei 9.784/1999. A assertiva inverte os efeitos da convalidação com os da revogação (que é ex nunc). O CESPE frequentemente inverte esses conceitos para induzir ao erro.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANVISA – 2022)</strong><br>
+Julgue: O princípio da formalidade moderada, previsto no art. 22 da Lei 9.784/1999, estabelece que o vício de forma não anula o ato administrativo, salvo se a forma for essencial à sua validade ou se o vício causar prejuízo ao administrado.
+<p><strong>Comentário:</strong> CORRETO. Essa é a aplicação do art. 22 da Lei 9.784/1999: o vício de forma não é causa automática de nulidade; só anula se a forma for essencial ou se causar prejuízo. O princípio busca equilibrar legalidade e eficiência, evitando burocracia excessiva.</p>
+</div>
+
+<h2>📋 CHECKLIST DE REVISÃO RÁPIDA</h2>
+<div class="summary-box">
+<strong>Domine:</strong><br>
+□ Princípios do processo administrativo (Art. 2º): legalidade, finalidade, motivação, razoabilidade, proporcionalidade, moralidade, ampla defesa, contraditório, interesse público, publicidade, eficiência<br>
+□ Delegação (regra) vs. Avocação (exceção): objeto, forma, responsabilidade, revogação<br>
+□ Anulação (ex tunc, ilegalidade, 5 anos) vs. Revogação (ex nunc, conveniência, sem prazo) vs. Convalidação (ex tunc, vícios de competência/forma, 5 anos)<br>
+□ Motivação obrigatória (Art. 50): atos que afetam direitos, impõem sanções, decidem recursos, dispensam licitação, etc.<br>
+□ Prazos: defesa (10+10 dias), decisão (30+30 dias), recurso (10 dias decadenciais), prescrição disciplinar (5 anos), prescrição intercorrente (4 anos de inércia)<br>
+□ Recursos: pedido de reconsideração (mesma autoridade), recurso hierárquico próprio/impróprio (autoridade superior); efeito suspensivo não automático<br>
+□ Direitos dos administrados (Art. 3º): vista dos autos, defesa, assistência jurídica, recurso; Deveres (Art. 4º): verdade, lealdade, não obstrução<br>
+□ Formalidade moderada (Art. 22): vício de forma não anula, salvo se essencial ou causar prejuízo<br>
+□ Âmbito de aplicação: Administração Federal direta e indireta; aplicação subsidiária a estados/municípios<br>
+□ Jurisprudência: motivação de atos discricionários, efeitos da anulação/revogação, prazos decadenciais, prescrição intercorrente
+</div>
+
+<div class="nav-b">
+<a href="administrativo-10.html" class="btn-n">← Anterior</a>
+<span></span>
+</div>
+</main>
+
+
+<div class="n-panel" id="nP">
+<div style="display:flex;justify-content:space-between;margin-bottom:10px"><strong>Notas de Administrativo</strong><button onclick="tN()" style="background:none;border:none;cursor:pointer">✕</button></div>
+<div id="nL" style="max-height:180px;overflow-y:auto;margin-bottom:10px"></div>
+<form onsubmit="aN(event)"><input type="text" class="n-in" id="nI" placeholder="Anotação sobre Processo Administrativo..." required><button type="submit" class="b-sm">💾 Salvar</button></form>
+</div>
+
+<script>
+const SK='adm-proc-11';let hM=false;
+function webS(){const s=window.getSelection().toString();window.open(`https://duckduckgo.com/?q=${encodeURIComponent(s||'Processo administrativo Lei 9.784/1999 delegação anulação revogação CESPE TCDF')}`,'_blank')}
+function tN(){const p=document.getElementById('nP');p.style.display=p.style.display==='none'?'block':'none';if(p.style.display==='block')lN()}
+function lN(){const n=JSON.parse(localStorage.getItem(SK)||'[]');document.getElementById('nL').innerHTML=n.length?n.map((x,i)=>`<div class="n-item">${x.text}<br><small style="cursor:pointer;color:#666" onclick="dN(${i})">remover</small></div>`).join(''):'<p style="font-size:.9em;color:#666">Sem notas.</p>'}
+function aN(e){e.preventDefault();const i=document.getElementById('nI'),n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:i.value,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));i.value='';lN()}
+function dN(i){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.splice(i,1);localStorage.setItem(SK,JSON.stringify(n));lN()}
+function tH(){hM=!hM;document.body.style.cursor=hM?'text':'auto';document.querySelectorAll('.t-btn')[2].textContent=hM?'✅ ON':'✏️ Destaque';hM?document.addEventListener('mouseup',hS):document.removeEventListener('mouseup',hS)}
+function hS(){const s=window.getSelection();if(s.toString().length>10){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:`🔍 "${s.toString().substring(0,40)}..." - ${prompt('Nota:','')||'-'}`,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));alert('✅ Destaque salvo!');s.removeAllRanges()}}
+document.addEventListener('DOMContentLoaded',lN);
+</script>
+</body>
+</html>

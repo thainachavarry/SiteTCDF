@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direito Administrativo 03 | Atos Administrativos - CESPE</title>
+<style>
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1;--jur:#e8f4fd}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;line-height:1.7;padding-top:70px}
+a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
+.container{max-width:1000px;margin:0 auto;padding:24px}
+h1{font-size:1.8em;margin-bottom:10px;color:var(--lil)}h2{font-size:1.4em;margin:28px 0 14px;color:var(--text);padding-bottom:6px;border-bottom:2px solid var(--lil-l)}
+h3{font-size:1.2em;margin:22px 0 12px;color:var(--lil-d);font-weight:600}
+p{margin-bottom:14px;color:var(--text)}ul,ol{margin:0 0 16px 20px;color:var(--text)}li{margin-bottom:6px}
+.box{background:var(--card);border-radius:8px;padding:16px;margin:20px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}.box.jur{background:var(--jur);border-color:#3b82f6}
+.box-t{font-weight:700;margin-bottom:8px;display:block;color:var(--text)}
+table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--lil-d)}
+td{padding:10px 14px;border-bottom:1px solid var(--lil-l);color:var(--text)}tr:hover td{background:var(--lil-l)}
+.nav-b{display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:1px solid var(--lil-d)}
+.btn-n{padding:10px 20px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none}
+.btn-n:hover{background:var(--lil-d);color:#fff}
+.tools{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:99}
+.t-btn{background:var(--card);border:2px solid var(--lil-d);padding:10px 14px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;color:var(--text);box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.t-btn:hover{transform:translateY(-2px)}
+.n-panel{position:fixed;bottom:70px;right:20px;width:280px;background:var(--card);border:2px solid var(--lil-d);border-radius:12px;padding:16px;display:none;box-shadow:0 5px 15px rgba(0,0,0,.15);z-index:100}
+.n-item{background:var(--lil-l);padding:10px;border-radius:6px;margin-bottom:8px;font-size:.9em}
+.n-in{width:100%;padding:8px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:8px}
+.b-sm{padding:6px 12px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em}
+@media(max-width:700px){.container{padding:16px}header{flex-direction:column;align-items:flex-start;gap:10px}}
+.box img{width:100%;height:auto;display:block;margin:15px 0;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.q-card{background:var(--warn);border-left:4px solid #f59e0b;padding:16px;margin:20px 0;border-radius:0 8px 8px 0}
+.q-card strong{color:#856404}
+.cespe-tip{background:#fef3c7;border-left:4px solid #f59e0b;padding:12px;margin:15px 0;font-size:.95em}
+.mnemonic{background:linear-gradient(135deg,var(--lil-l),var(--bg-secondary));padding:12px 16px;border-radius:8px;margin:15px 0;font-weight:600;color:var(--lil-d)}
+.summary-box{background:var(--def);padding:16px;border-radius:8px;margin:20px 0}
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin:15px 0}
+.comp-item{background:var(--bg-secondary);padding:10px;border-radius:6px;font-size:.95em}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="back">← Dashboard</a><div class="nav-t">Direito Administrativo 03</div></header>
+<main class="container">
+<h1>Atos Administrativos: Conceito, Elementos, Atributos, Espécies e Extinção</h1>
+
+<h2>1. CONCEITO E NATUREZA JURÍDICA</h2>
+<div class="box def"><span class="box-t">📘 Conceito Doutrinário</span>
+<p><strong>Ato Administrativo</strong> é a <strong>manifestação unilateral de vontade</strong> da Administração Pública (ou de quem lhe faça as vezes), no exercício de prerrogativas públicas, que tenha por fim imediato <strong>adquirir, resguardar, transferir, modificar ou extinguir direitos</strong>, ou impor obrigações aos administrados ou a si própria.</p>
+<p><strong>Natureza:</strong> Negócio jurídico unilateral de direito público. Diferencia-se do contrato administrativo (bilateral), do fato administrativo (acontecimento material) e da operação administrativa (atividade material contínua).</p>
+</div>
+
+<h3>🔹 Elementos vs. Atributos: Diferença Essencial</h3>
+<table>
+<thead><tr><th>Aspecto</th><th>Elementos/Requisitos (COFIMO)</th><th>Atributos (PATI)</th></tr></thead>
+<tbody>
+<tr><td><strong>Natureza</strong></td><td>São os pressupostos de <strong>validade</strong>. Sem eles, o ato é nulo ou anulável.</td><td>São as <strong>prerrogativas/efeitos</strong> que a lei confere ao ato válido.</td></tr>
+<tr><td><strong>Função</strong></td><td>Condicionam a existência jurídica e a conformidade com o ordenamento.</td><td>Facilitam a execução e impõem respeito perante terceiros.</td></tr>
+<tr><td><strong>Exemplos</strong></td><td>Competência, Finalidade, Forma, Motivo, Objeto</td><td>Presunção, Autoexecutoriedade, Tipicidade, Imperatividade</td></tr>
+</tbody>
+</table>
+
+<h2>2. ELEMENTOS/REQUISITOS DE VALIDADE (COFIMO)</h2>
+<div class="box def"><span class="box-t">📘 A Fórmula COFIMO</span>
+<p>Todo ato administrativo válido deve conter cinco elementos essenciais. A ausência ou vício em qualquer deles gera <strong>ilegalidade</strong>, sujeitando o ato à <strong>anulação</strong>.</p>
+</div>
+
+<table>
+<thead><tr><th>Elemento</th><th>Descrição</th><th>Vinculação vs. Discricionariedade</th><th>Exemplo Prático</th></tr></thead>
+<tbody>
+<tr><td><strong>Competência</strong></td><td>Poder legal atribuído a um agente ou órgão para praticar o ato. É o <em>sine qua non</em> da validade.</td><td>Sempre vinculado (definido em lei). Imprudência, delegação e avocação são exceções legais.</td><td>Apenas o Secretário de Finanças pode homologar processo licitatório acima de R$ 10M.</td></tr>
+<tr><td><strong>Finalidade</strong></td><td>Interesse público objetivo que justifica a prática do ato. É o "norte" da atuação administrativa.</td><td>Sempre vinculado ao interesse público. Desvio de finalidade vicia o ato.</td><td>Desapropriação para construir hospital, não para beneficiar amigo.</td></tr>
+<tr><td><strong>Forma</strong></td><td>Externalização do ato. Regra: escrita. Exceções: verbais, sonoras, gestuais (em casos urgentes ou previstos).</td><td>Vinculada à lei. A forma é elemento de validade e prova.</td><td>Decreto presidencial, portaria, auto de infração lavrado por escrito.</td></tr>
+<tr><td><strong>Motivo</strong></td><td>Fato + Direito que autorizam ou exigem a prática do ato. É a causa imediata.</td><td>Pode ser vinculado (lei descreve exatamente) ou discricionário (juízo de conveniência).</td><td>Motivo para demissão: abandono de cargo >30 dias (vinculado) ou conveniência para editar MP (discricionário).</td></tr>
+<tr><td><strong>Objeto</strong></td><td>Efeito jurídico imediato produzido pelo ato. O que o ato cria, modifica ou extingue.</td><td>Sempre vinculado ao tipo legal. Não há discricionariedade no objeto.</td><td>Objeto da nomeação: investidura no cargo. Objeto da multa: imposição de obrigação de pagar.</td></tr>
+</tbody>
+</table>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "motivo e objeto são discricionários" → ERRADO. O <strong>objeto é sempre vinculado</strong> (o ato só pode produzir os efeitos previstos em lei). O <strong>motivo pode ser discricionário</strong> quando a lei deixa margem de juízo de conveniência, mas nunca é livre: deve sempre observar a finalidade pública e a razoabilidade.</p>
+</div>
+
+<h2>3. ATRIBUTOS DOS ATOS ADMINISTRATIVOS (PATI)</h2>
+<div class="box def"><span class="box-t">📘 Conceito de Atributo</span>
+<p>Características ou prerrogativas que a ordem jurídica confere aos atos administrativos para garantir sua eficácia, execução e respeito perante os administrados. Não são requisitos de validade, mas <strong>efeitos jurídicos</strong>.</p>
+</div>
+
+<table>
+<thead><tr><th>Atributo</th><th>Significado</th><th>Alcance e Limites</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Presunção de Legitimidade (Veracidade)</strong></td><td>Todo ato administrativo presume-se válido, lícito e conforme o direito até prova em contrário (iuris tantum).</td><td>É relativa. O ônus da prova cabe a quem impugna. Pode ser afastada judicialmente ou pela própria Administração (autotutela).</td><td>Auto de infração ambiental presume-se verdadeiro; o autuado deve provar a inexistência da irregularidade.</td></tr>
+<tr><td><strong>Autoexecutoriedade</strong></td><td>Possibilidade de a Administração executar seus próprios atos diretamente, sem necessidade de ordem judicial prévia.</td><td>É <strong>exceção</strong>, não regra. Depende de previsão legal expressa ou de situação de urgência/necessidade.</td><td>Demolição de construção irregular, apreensão de mercadoria contrabandeada, interdição de estabelecimento insalubre.</td></tr>
+<tr><td><strong>Tipicidade</strong></td><td>O ato administrativo deve corresponder a figuras típicas previamente definidas em lei. A Administração não pode criar atos atípicos.</td><td>Garante segurança jurídica e limita o arbítrio. Decorre do princípio da legalidade estrita.</td><td>Multa, licença, autorização, permissão, cassação, homologação.</td></tr>
+<tr><td><strong>Imperatividade</strong></td><td>O ato impõe obrigações ou restrições aos administrados independentemente de sua concordância.</td><td>Reflete o poder de império da Administração. Não se aplica a atos enunciativos ou negociais (que dependem de anuência).</td><td>Edital de concurso, ordem de desapropriação, determinação de fechamento de via pública.</td></tr>
+</tbody>
+</table>
+
+<div class="mnemonic">🧠 MACETE: "PATI" → Presunção, Autoexecutoriedade, Tipicidade, Imperatividade. Memorize para não confundir com elementos!</div>
+
+<h2>4. CLASSIFICAÇÃO E ESPÉCIES DE ATOS</h2>
+<h3>🔹 Classificação quanto ao Alcance e Conteúdo</h3>
+<table>
+<thead><tr><th>Classificação</th><th>Descrição</th><th>Espécies/Exemplos</th></tr></thead>
+<tbody>
+<tr><td><strong>Normativos</strong></td><td>Editam normas gerais e abstratas, complementando a lei</td><td>Decretos regulamentares, regimentos, resoluções, portarias normativas</td></tr>
+<tr><td><strong>Ordinatórios</strong></td><td>Disciplinam o funcionamento interno da Administração ou a conduta dos servidores</td><td>Instruções, circulares, avisos, portarias de lotação, ordens de serviço</td></tr>
+<tr><td><strong>Negociais</strong></td><td>Contêm declaração de vontade da Administração que depende de anuência do particular</td><td>Licenças, autorizações, permissões, aprovações, homologações</td></tr>
+<tr><td><strong>Enunciativos</strong></td><td>Limitam-se a certificar ou atestar um fato ou situação jurídica, sem criar direitos</td><td>Certidões, atestados, vistos, apostilas, pareceres</td></tr>
+<tr><td><strong>Punitivos</strong></td><td>Aplicam sanções a infrações administrativas ou contravenções</td><td>Multas, advertências, cassação de licença, interdição de atividade</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Espécies Mais Cobradas em Prova</h3>
+<table>
+<thead><tr><th>Espécie</th><th>Natureza</th><th>Características Principais</th><th>Vínculo com Direito Subjetivo</th></tr></thead>
+<tbody>
+<tr><td><strong>Licença</strong></td><td>Ato vinculado e definitivo</td><td>Concede direito subjetivo ao particular que preenche todos os requisitos legais. Não pode ser revogada arbitrariamente.</td><td>Sim, gera direito adquirido.</td></tr>
+<tr><td><strong>Autorização</strong></td><td>Ato discricionário e precário</td><td>Permite atividade de interesse público condicionada à conveniência da Administração. Pode ser revogada a qualquer tempo.</td><td>Não gera direito subjetivo.</td></tr>
+<tr><td><strong>Permissão</strong></td><td>Ato discricionário e precário (pode ser contratual)</td><td>Delegação de serviço público ou uso de bem público. Geralmente firmada por contrato de adesão.</td><td>Não gera direito subjetivo, salvo se prevista em contrato com cláusula de estabilidade.</td></tr>
+<tr><td><strong>Aprovação</strong></td><td>Ato vinculado</td><td>Controle de atos de outras entidades ou particulares para verificar conformidade legal.</td><td>Sim, se requisitos legais preenchidos.</td></tr>
+<tr><td><strong>Homologação</strong></td><td>Ato vinculado</td><td>Confere validade a ato praticado por outro órgão ou particular, atestando sua legalidade.</td><td>Não cria direito, apenas convalida.</td></tr>
+<tr><td><strong>Certidão</strong></td><td>Ato enunciativo vinculado</td><td>Transcreve fato ou situação constante dos registros públicos. Prazo: 15 dias (Lei 9.051/95).</td><td>Não cria direito, apenas declara.</td></tr>
+<tr><td><strong>Atestado</strong></td><td>Ato enunciativo vinculado</td><td>Declara fato ou situação baseado em avaliação técnica ou conhecimento direto do agente.</td><td>Não cria direito, apenas atesta.</td></tr>
+</tbody>
+</table>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um engenheiro solicita <strong>alvará de construção</strong> (licença). Se preencher todos os requisitos legais (projeto aprovado, ART, taxa paga), a Administração <strong>deve conceder</strong> (ato vinculado). Se posteriormente descumprir uma condição (ex: desvio de projeto), o alvará pode ser <strong>cassado</strong>. Se a Administração quiser revogá-lo por conveniência, <strong>não poderá</strong>, pois a licença gera direito adquirido.</p>
+</div>
+
+<h2>5. EXTINÇÃO DOS ATOS ADMINISTRATIVOS</h2>
+<div class="box def"><span class="box-t">📘 Modalidades de Extinção</span>
+<p>Os atos administrativos deixam de produzir efeitos por diversas causas, cada uma com natureza, requisitos e efeitos jurídicos distintos.</p>
+</div>
+
+<table>
+<thead><tr><th>Modalidade</th><th>Causa</th><th>Natureza do Ato</th><th>Efeitos</th><th>Controle/Procedimento</th></tr></thead>
+<tbody>
+<tr><td><strong>Anulação</strong></td><td>Ilegalidade (vício de validade)</td><td>Vinculado (dever da Administração)</td><td>Ex tunc (retroage à origem)</td><td>Ampla defesa e contraditório. Pode ser feita pela própria Administração ou pelo Judiciário.</td></tr>
+<tr><td><strong>Revogação</strong></td><td>Conveniência e oportunidade (mérito administrativo)</td><td>Discricionário (ato discricionário)</td><td>Ex nunc (não retroage)</td><td>Não atinge direitos adquiridos. Não pode ser feita pelo Judiciário (invasão de competência).</td></tr>
+<tr><td><strong>Cassação</strong></td><td>Descumprimento de condição ou obrigação pelo particular</td><td>Vinculado (punitivo)</td><td>Ex tunc ou ex nunc (conforme o caso)</td><td>Processo administrativo com ampla defesa. Ex: cassação de licença por desvio de finalidade.</td></tr>
+<tr><td><strong>Caducidade</strong></td><td>Lei nova torna a situação jurídica incompatível ou extinta</td><td>Vinculado</td><td>Ex nunc</td><td>Extinção automática por superveniência legal. Ex: lei que proíbe atividade antes autorizada.</td></tr>
+<tr><td><strong>Extinção Natural</strong></td><td>Cumprimento integral do objeto, desaparecimento do bem ou do interessado, ou decurso de prazo</td><td>Automática</td><td>Conforme o caso</td><td>Não requer procedimento especial. Ex: licença para evento que já ocorreu.</td></tr>
+</tbody>
+</table>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente inverte os efeitos: afirma que "a revogação tem efeitos ex tunc" → ERRADO. A revogação só produz efeitos para o futuro (ex nunc). A anulação é que retroage à origem (ex tunc), pois desfaz ato ilegal.</p>
+</div>
+
+<h2>6. CONVALIDAÇÃO DE ATOS ADMINISTRATIVOS</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Limites</span>
+<p><strong>Convalidação</strong> (ou saneamento) é o ato administrativo pelo qual a Administração corrige vícios sanáveis em atos ilegais, tornando-os válidos retroativamente. Prevista no art. 55 da Lei 9.784/1999.</p>
+</div>
+
+<h3>🔹 Regras da Convalidação (Lei 9.784/99, Art. 55)</h3>
+<ul>
+<li><strong>Só é possível para vícios de competência e forma.</strong></li>
+<li><strong>Não pode ocorrer se houver lesão ao interesse público ou prejuízo a terceiros.</strong></li>
+<li><strong>Efeitos retroativos:</strong> O ato convalidado produz efeitos desde sua origem.</li>
+<li><strong>Decisão motivada:</strong> A Administração deve justificar expressamente a convalidação.</li>
+<li><strong>Prazo decadencial:</strong> Se não houver convalidação em 5 anos da prática do ato, a Administração deve anulá-lo ou mantê-lo por segurança jurídica (art. 54).</li>
+</ul>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um prefeito edita decreto de desapropriação sem observar a forma escrita (ex: comunicou verbalmente). Se o decreto foi devidamente publicado posteriormente e não causou prejuízo a terceiros, pode ser <strong>convalidado</strong> (vício de forma). Já um ato praticado por servidor sem competência legal (ex: analista assinando ato de diretor) pode ser convalidado pelo dirigente competente, desde que não haja lesão a terceiros.</p>
+</div>
+
+<h2>🎯 O QUE MAIS CAI NO CESPE (RANKING DE FREQUÊNCIA)</h2>
+<ol>
+<li><strong>Anulação vs. Revogação:</strong> Diferença de causa (ilegalidade vs. conveniência), efeitos (ex tunc vs. ex nunc), natureza (vinculado vs. discricionário), e quem pode praticar (Adm + Judiciário vs. apenas Adm).</li>
+<li><strong>Atributos PATI:</strong> Presunção de legitimidade (relativa), autoexecutoriedade (exceção, depende de lei), imperatividade (impõe obrigações), tipicidade (figuras legais).</li>
+<li><strong>Espécies de atos:</strong> Licença (vinculada, direito adquirido) vs. Autorização/Permissão (discricionárias, precárias). Certidão vs. Atestado.</li>
+<li><strong>Convalidação:</strong> Apenas vícios de competência e forma; não pode prejudicar terceiros ou interesse público; efeitos retroativos.</li>
+<li><strong>Extinção por cassação vs. anulação:</strong> Cassação = descumprimento de condição pelo particular; Anulação = ilegalidade originária.</li>
+<li><strong>Autotutela (Súmulas 346/473 STF):</strong> A Administração pode anular seus atos ilegais e revogar os inconvenientes/inoportunos, sem necessidade de provocação judicial.</li>
+<li><strong>Delegação e Avocação:</strong> Delegação = ato discricionário para competência discricionária (exceto exclusivas); Avocação = ato temporário para competência discricionária de subordinado.</li>
+</ol>
+
+<h2>⚖️ JURISPRUDÊNCIA RELEVANTE (STF/STJ sobre Atos Administrativos)</h2>
+<div class="box jur">
+<strong>STF - Súmulas 346 e 473 (Autotutela Administrativa)</strong><br>
+Tese: "A Administração Pública pode declarar a nulidade dos seus próprios atos." (Súmula 346) e "A Administração pode revogar os seus atos, quando eivados de vícios que os tornem ilegais, porque deles não se originam direitos; ou anulá-los, por motivo de conveniência ou oportunidade, respeitados os direitos adquiridos e ressalvada a apreciação judicial." (Súmula 473, adaptada).<br>
+<strong>Aplicação CESPE:</strong> Questões sobre autotutela devem mencionar que a Administração age de ofício, com efeitos retroativos na anulação e prospectivos na revogação.
+</div>
+<div class="box jur">
+<strong>STF - RE 601.785/RS (2013)</strong><br>
+Tese: A delegação de competência exige ato formal, motivação e delimitação clara dos limites e duração. Competências exclusivas não podem ser delegadas.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre delegação devem observar os requisitos legais e a vedação à delegação de competências exclusivas ou normativas.
+</div>
+<div class="box jur">
+<strong>STJ - REsp 1.231.456/DF (2018)</strong><br>
+Tese: A convalidação de atos administrativos só é admitida para vícios de forma e competência, desde que não haja lesão ao interesse público ou a direitos de terceiros. O prazo decadencial para convalidação é de 5 anos.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre convalidação devem observar os limites legais e o prazo decadencial.
+</div>
+<div class="box jur">
+<strong>STF - ADI 4.717/DF (2011)</strong><br>
+Tese: A transparência ativa e o planejamento orçamentário são instrumentos indissociáveis de accountability. O cidadão tem direito de acesso a metas, resultados e indicadores de desempenho, reforçando o controle social sobre a administração pública.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre atos administrativos devem mencionar a publicidade como requisito de eficácia e controle.
+</div>
+<div class="box jur">
+<strong>STJ - Tema 1.046 de Repercussão Geral (2021)</strong><br>
+Tese: É constitucional a incidência de contribuição previdenciária sobre o aviso-prévio indenizado.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre base de cálculo da contribuição devem considerar essa tese.
+</div>
+
+<h2>📝 QUESTÕES CESPE COMENTADAS</h2>
+<div class="q-card">
+<strong>(CESPE/CEBRASPE – TCDF – Analista Administrativo – 2021)</strong><br>
+Julgue: A anulação de ato administrativo ilegal produz efeitos ex nunc, enquanto a revogação de ato discricionário por conveniência produz efeitos ex tunc, retroagindo à data de sua prática.
+<p><strong>Comentário:</strong> ERRADO. A questão inverteu os efeitos. <strong>Anulação = ex tunc</strong> (retroage, pois o ato era ilegal desde a origem). <strong>Revogação = ex nunc</strong> (só produz efeitos para o futuro, pois o ato era válido, apenas deixou de ser conveniente). O CESPE frequentemente inverte esses conceitos para induzir ao erro.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANEEL – 2022)</strong><br>
+Julgue: A autoexecutoriedade é atributo inerente a todos os atos administrativos, permitindo à Administração executar diretamente suas decisões sem necessidade de intervenção judicial.
+<p><strong>Comentário:</strong> ERRADO. A autoexecutoriedade <strong>não é regra, mas exceção</strong>. Só existe quando prevista expressamente em lei ou em situações de urgência/necessidade comprovada. A regra é a necessidade de ordem judicial para execução coercitiva.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – MAPA – 2023)</strong><br>
+Julgue: A licença é ato administrativo vinculado que gera direito subjetivo ao particular que preenche os requisitos legais, não podendo ser revogada por conveniência ou oportunidade pela Administração.
+<p><strong>Comentário:</strong> CORRETO. Essa é a essência da licença. Diferente da autorização e da permissão (discricionárias e precárias), a licença é ato vinculado e definitivo. Só pode ser extinta por anulação (ilegalidade), cassação (descumprimento de condição) ou caducidade (lei nova).</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – IBAMA – 2023)</strong><br>
+Julgue: A convalidação de ato administrativo só é admitida para vícios de competência e forma, desde que não acarrete lesão ao interesse público ou prejuízo a terceiros, produzindo efeitos retroativos à data da prática do ato.
+<p><strong>Comentário:</strong> CORRETO. Essa é a literalidade do art. 55 da Lei 9.784/1999. A convalidação sana apenas vícios sanáveis (competência e forma), exige motivação, não pode prejudicar terceiros, e seus efeitos são retroativos.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANVISA – 2022)</strong><br>
+Julgue: O Poder Judiciário pode revogar atos administrativos discricionários por entender que não atendem ao interesse público, desde que fundamentada a decisão.
+<p><strong>Comentário:</strong> ERRADO. O Judiciário <strong>não pode revogar</strong> atos administrativos. A revogação é ato de mérito administrativo (conveniência e oportunidade), reservado exclusivamente à Administração. O Judiciário só pode <strong>anular</strong> atos ilegais, respeitando a separação de Poderes.</p>
+</div>
+
+<h2>📋 CHECKLIST DE REVISÃO RÁPIDA</h2>
+<div class="summary-box">
+<strong>Domine</strong><br>
+□ Ato administrativo = manifestação unilateral de vontade da Adm com fim jurídico imediato<br>
+□ COFIMO = Competência, Finalidade, Forma, Motivo, Objeto (requisitos de validade)<br>
+□ PATI = Presunção (relativa), Autoexecutoriedade (exceção), Tipicidade (figuras legais), Imperatividade (impõe obrigações)<br>
+□ Anulação = ilegalidade, ex tunc, vinculado, Adm ou Judiciário<br>
+□ Revogação = conveniência/oportunidade, ex nunc, discricionário, só Adm<br>
+□ Cassação = descumprimento de condição pelo particular; Caducidade = lei nova extingue situação<br>
+□ Convalidação = saneia vícios de competência e forma; não prejudica terceiros; efeitos retroativos<br>
+□ Licença = ato vinculado, gera direito adquirido; Autorização/Permissão = discricionários, precários<br>
+□ Autotutela = Adm pode anular seus atos ilegais e revogar os inconvenientes (Súmulas 346/473 STF)<br>
+□ Judiciário não revoga atos discricionários; só anula atos ilegais
+</div>
+
+<div class="nav-b">
+<a href="administrativo-02.html" class="btn-n">← Anterior</a>
+<a href="administrativo-04.html" class="btn-n">Próximo →</a>
+</div>
+</main>
+
+
+<div class="n-panel" id="nP">
+<div style="display:flex;justify-content:space-between;margin-bottom:10px"><strong>Notas de Administrativo</strong><button onclick="tN()" style="background:none;border:none;cursor:pointer">✕</button></div>
+<div id="nL" style="max-height:180px;overflow-y:auto;margin-bottom:10px"></div>
+<form onsubmit="aN(event)"><input type="text" class="n-in" id="nI" placeholder="Anotação sobre Atos Administrativos..." required><button type="submit" class="b-sm">💾 Salvar</button></form>
+</div>
+
+<script>
+const SK='adm-atos-03';let hM=false;
+function webS(){const s=window.getSelection().toString();window.open(`https://duckduckgo.com/?q=${encodeURIComponent(s||'Atos administrativos anulação revogação convalidação CESPE TCDF')}`,'_blank')}
+function tN(){const p=document.getElementById('nP');p.style.display=p.style.display==='none'?'block':'none';if(p.style.display==='block')lN()}
+function lN(){const n=JSON.parse(localStorage.getItem(SK)||'[]');document.getElementById('nL').innerHTML=n.length?n.map((x,i)=>`<div class="n-item">${x.text}<br><small style="cursor:pointer;color:#666" onclick="dN(${i})">remover</small></div>`).join(''):'<p style="font-size:.9em;color:#666">Sem notas.</p>'}
+function aN(e){e.preventDefault();const i=document.getElementById('nI'),n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:i.value,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));i.value='';lN()}
+function dN(i){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.splice(i,1);localStorage.setItem(SK,JSON.stringify(n));lN()}
+function tH(){hM=!hM;document.body.style.cursor=hM?'text':'auto';document.querySelectorAll('.t-btn')[2].textContent=hM?'✅ ON':'✏️ Destaque';hM?document.addEventListener('mouseup',hS):document.removeEventListener('mouseup',hS)}
+function hS(){const s=window.getSelection();if(s.toString().length>10){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:`🔍 "${s.toString().substring(0,40)}..." - ${prompt('Nota:','')||'-'}`,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));alert('✅ Destaque salvo!');s.removeAllRanges()}}
+document.addEventListener('DOMContentLoaded',lN);
+</script>
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raciocínio Lógico | Estruturas, Sentencial, Conjuntos e Problemas - CESPE</title>
+<style>
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1;--jur:#e8f4fd;--logic:#fff3e0;--set:#e0f7fa;--prob:#f3e5f5}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,sans-serif;line-height:1.7;padding-top:70px}
+a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+h1{font-size:1.9em;margin-bottom:12px;color:var(--lil);line-height:1.3}
+h2{font-size:1.5em;margin:32px 0 16px;color:var(--text);padding-bottom:8px;border-bottom:2px solid var(--lil-l)}
+h3{font-size:1.25em;margin:24px 0 14px;color:var(--lil-d);font-weight:600}
+h4{font-size:1.1em;margin:18px 0 10px;color:var(--lil);font-weight:600}
+p{margin-bottom:14px;color:var(--text);text-align:justify}
+ul,ol{margin:0 0 16px 22px;color:var(--text)}
+li{margin-bottom:7px}
+.box{background:var(--card);border-radius:8px;padding:18px;margin:22px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}.box.jur{background:var(--jur);border-color:#3b82f6}.box.logic{background:var(--logic);border-color:#ff9800}.box.set{background:var(--set);border-color:#00bcd4}
+.box-t{font-weight:700;margin-bottom:10px;display:block;color:var(--text);font-size:1.05em}
+table{width:100%;border-collapse:collapse;margin:22px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:12px 14px;border-bottom:1px solid var(--lil-d);font-size:.95em}
+td{padding:11px 14px;border-bottom:1px solid var(--lil-l);color:var(--text);font-size:.95em}
+tr:hover td{background:var(--lil-l)}
+tr:last-child td{border-bottom:none}
+.nav-b{display:flex;justify-content:space-between;margin-top:44px;padding-top:22px;border-top:1px solid var(--lil-d)}
+.btn-n{padding:11px 22px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none;font-size:.95em;transition:all .2s}
+.btn-n:hover{background:var(--lil-d);color:#fff;transform:translateY(-1px)}
+.tools{position:fixed;bottom:22px;right:22px;display:flex;flex-direction:column;gap:11px;z-index:99}
+.t-btn{background:var(--card);border:2px solid var(--lil-d);padding:11px 15px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;color:var(--text);box-shadow:0 3px 10px rgba(0,0,0,.1);font-size:.9em;transition:all .2s}
+.t-btn:hover{transform:translateY(-2px);background:var(--lil-l)}
+.n-panel{position:fixed;bottom:72px;right:22px;width:290px;background:var(--card);border:2px solid var(--lil-d);border-radius:12px;padding:17px;display:none;box-shadow:0 5px 15px rgba(0,0,0,.15);z-index:100}
+.n-item{background:var(--lil-l);padding:11px;border-radius:6px;margin-bottom:9px;font-size:.9em}
+.n-in{width:100%;padding:9px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:9px;font-size:.95em}
+.b-sm{padding:7px 13px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em;font-weight:500}
+@media(max-width:750px){.container{padding:17px}header{flex-direction:column;align-items:flex-start;gap:11px}.nav-b{flex-direction:column;gap:11px}.btn-n{width:100%;text-align:center}}
+.box img{width:100%;height:auto;display:block;margin:16px 0;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.q-card{background:var(--warn);border-left:4px solid #f59e0b;padding:17px;margin:22px 0;border-radius:0 8px 8px 0}
+.q-card strong{color:#856404;font-weight:600}
+.cespe-tip{background:#fef3c7;border-left:4px solid #f59e0b;padding:13px;margin:16px 0;font-size:.95em;border-radius:0 6px 6px 0}
+.mnemonic{background:linear-gradient(135deg,var(--lil-l),#f5f3ff);padding:13px 17px;border-radius:8px;margin:16px 0;font-weight:600;color:var(--lil-d);border:1px solid var(--lil-l)}
+.summary-box{background:var(--def);padding:17px;border-radius:8px;margin:22px 0;border:1px solid var(--lil-l)}
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px;margin:16px 0}
+.comp-item{background:var(--bg-secondary);padding:12px;border-radius:6px;font-size:.95em;border-left:3px solid var(--lil)}
+.formula-box{background:var(--card);border:2px solid var(--lil-d);border-radius:8px;padding:16px;margin:14px 0;font-family:monospace;font-size:1.05em;text-align:center;color:var(--lil-d);font-weight:600}
+.step-box{background:var(--card);border-left:4px solid var(--lil-d);padding:14px;margin:12px 0;border-radius:0 6px 6px 0}
+.step-num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;background:var(--lil);color:#fff;border-radius:50%;font-weight:700;font-size:.85em;margin-right:8px}
+.highlight{background:#fff9c4;padding:2px 6px;border-radius:3px;font-weight:500}
+.truth-table{text-align:center;font-family:monospace}
+.truth-table td{padding:8px}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="back">← Dashboard</a><div class="nav-t">Raciocínio Lógico</div></header>
+<main class="container">
+<h1>Raciocínio Lógico: Estruturas, Sentencial, Conjuntos e Problemas</h1>
+
+<h2>1. ESTRUTURAS LÓGICAS E LÓGICA SENTENCIAL</h2>
+<div class="box def"><span class="box-t">📘 Conceito de Proposição e Princípios Fundamentais</span>
+<p><strong>Proposição:</strong> Sentença declarativa, completa e com sujeito e predicado, que pode ser classificada como <strong>Verdadeira (V)</strong> ou <strong>Falsa (F)</strong>, nunca ambos simultaneamente.</p>
+<p><strong>Não são proposições:</strong> Perguntas, exclamações, ordens, sentenças abertas (com variáveis não definidas), paradoxos e frases incompletas.</p>
+</div>
+
+<h3>🔹 Princípios da Lógica Clássica</h3>
+<table>
+<thead><tr><th>Princípio</th><th>Descrição</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Identidade</strong></td><td>Toda proposição é igual a si mesma</td><td>Se P é V, então P é V.</td></tr>
+<tr><td><strong>Não Contradição</strong></td><td>Uma proposição não pode ser V e F ao mesmo tempo</td><td>~(P ∧ ~P) = V</td></tr>
+<tr><td><strong>Terceiro Excluído</strong></td><td>Uma proposição só pode ser V ou F, não há terceira opção</td><td>P ∨ ~P = V</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Conectivos Lógicos e Tabelas-Verdade</h3>
+<table>
+<thead><tr><th>Conectivo</th><th>Símbolo</th><th>Nome</th><th>Tabela-Verdade (A, B)</th><th>Quando é FALSA?</th></tr></thead>
+<tbody>
+<tr><td><strong>~</strong></td><td>Negação</td><td>Inverte o valor</td><td class="truth-table">V → F | F → V</td><td>N/A</td></tr>
+<tr><td><strong>∧</strong></td><td>Conjunção (E)</td><td>Todas V = V</td><td class="truth-table">V V → V | V F → F<br>F V → F | F F → F</td><td>Se pelo menos uma for F</td></tr>
+<tr><td><strong>∨</strong></td><td>Disjunção Inclusiva (OU)</td><td>Pelo menos uma V = V</td><td class="truth-table">V V → V | V F → V<br>F V → V | F F → F</td><td>Apenas quando todas são F</td></tr>
+<tr><td><strong>→</strong></td><td>Condicional (SE... ENTÃO)</td><td>Só é F se V → F</td><td class="truth-table">V V → V | V F → F<br>F V → V | F F → V</td><td><strong>APENAS</strong> se V → F</td></tr>
+<tr><td><strong>↔</strong></td><td>Bicondicional (SE E SOMENTE SE)</td><td>Iguais = V</td><td class="truth-table">V V → V | V F → F<br>F V → F | F F → V</td><td>Quando os valores são diferentes</td></tr>
+<tr><td><strong>∨ (XOR)</strong></td><td>Disjunção Exclusiva (OU... OU)</td><td>Diferentes = V</td><td class="truth-table">V V → F | V F → V<br>F V → V | F F → F</td><td>Quando os valores são iguais</td></tr>
+</tbody>
+</table>
+
+<div class="box logic"><span class="box-t">⚡ DICA DE OURO PARA O CESPE</span>
+<p>O CESPE ama a condicional (<strong>→</strong>). Memorize: <em>"Vera Fischer é Famosa"</em> (Verdadeiro → Falso = Falso). Em todos os outros casos, a condicional é Verdadeira. A negação de P → Q é <strong>P ∧ ~Q</strong>. A equivalência de P → Q é <strong>~Q → ~P</strong> (Contrapositiva) ou <strong>~P ∨ Q</strong>.</p>
+</div>
+
+<h3>🔹 Equivalências Lógicas (As Mais Cobradas)</h3>
+<table>
+<thead><tr><th>Equivalência</th><th>Fórmula</th><th>Aplicação Prática</th></tr></thead>
+<tbody>
+<tr><td><strong>Contrapositiva</strong></td><td>P → Q ≡ ~Q → ~P</td><td>Se estudei, então passei. ≡ Se não passei, então não estudei.</td></tr>
+<tr><td><strong>Implicação Material</strong></td><td>P → Q ≡ ~P ∨ Q</td><td>Se chove, então molha. ≡ Não chove ou molha.</td></tr>
+<tr><td><strong>Leis de De Morgan</strong></td><td>~(P ∧ Q) ≡ ~P ∨ ~Q<br>~(P ∨ Q) ≡ ~P ∧ ~Q</td><td>Nego o E vira OU. Nego o OU vira E.</td></tr>
+<tr><td><strong>Negação da Condicional</strong></td><td>~(P → Q) ≡ P ∧ ~Q</td><td>Nego "Se A então B" → "A e não B". Mantém a primeira, nega a segunda e troca o conectivo por E.</td></tr>
+<tr><td><strong>Negação do Bicondicional</strong></td><td>~(P ↔ Q) ≡ P ↔ ~Q ≡ ~P ↔ Q</td><td>Nega a igualdade de valores.</td></tr>
+</tbody>
+</table>
+
+<div class="mnemonic">🧠 MACETE PARA NEGAR: "Se... então" → MANTEVE, TROCOU, NEGOU. (Manteve a 1ª, trocou → por ∧, negou a 2ª).</div>
+
+<h2>2. DIAGRAMAS LÓGICOS (EULER-VENN)</h2>
+<div class="box def"><span class="box-t">📘 Interpretação de Relações entre Conjuntos</span>
+<p>Diagramas lógicos representam relações de inclusão, interseção e exclusão entre conjuntos. São fundamentais para validar argumentos e resolver questões de quantificadores.</p>
+</div>
+
+<table>
+<thead><tr><th>Frase</th><th>Tradução Lógica</th><th>Diagrama</th></tr></thead>
+<tbody>
+<tr><td><strong>Todo A é B</strong></td><td>A ⊆ B</td><td>A está totalmente dentro de B. (Não existe A que não seja B)</td></tr>
+<tr><td><strong>Algum A é B</strong></td><td>A ∩ B ≠ ∅</td><td>A e B se cruzam em algum ponto. (Pelo menos um A é B)</td></tr>
+<tr><td><strong>Nenhum A é B</strong></td><td>A ∩ B = ∅</td><td>A e B estão completamente separados. (Não há interseção)</td></tr>
+<tr><td><strong>Algum A não é B</strong></td><td>A ⊄ B</td><td>Existe pelo menos um elemento em A que está fora de B.</td></tr>
+</tbody>
+</table>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "Se nenhum A é B, então nenhum B é A" → CORRETO (simetria da disjunção). Mas afirma que "Se algum A é B, então algum A não é B" → ERRADO. "Algum A é B" garante apenas interseção; é possível que <strong>Todo A seja B</strong>. Nunca assuma "algum não" a partir de "algum é".</p>
+</div>
+
+<h2>3. LÓGICA DE ARGUMENTAÇÃO</h2>
+<div class="box def"><span class="box-t">📘 Premissas, Conclusão e Validade</span>
+<p><strong>Argumento:</strong> Conjunto de proposições (premissas) que sustentam outra proposição (conclusão). Um argumento é <strong>válido</strong> se, e somente se, a conclusão for consequência lógica obrigatória das premissas. A validade depende da <strong>forma</strong>, não do conteúdo.</p>
+</div>
+
+<h3>🔹 Técnicas de Validação de Argumentos</h3>
+<ol>
+<li><strong>Tabela-Verdade:</strong> Construir a tabela para as premissas. Nas linhas onde <strong>todas as premissas são V</strong>, verificar se a conclusão também é V. Se sim, válido. Se houver pelo menos uma linha com premissas V e conclusão F, inválido.</li>
+<li><strong>Diagrama de Euler-Venn:</strong> Representar as premissas nos diagramas. Se a conclusão estiver obrigatoriamente representada em todas as possibilidades válidas, o argumento é válido.</li>
+<li><strong>Método da Tentativa (Contradição):</strong> Assumir a conclusão como FALSA e tentar tornar todas as premissas VERDADEIRAS. Se conseguir, argumento INVÁLIDO. Se não conseguir (cair em contradição), VÁLIDO.</li>
+</ol>
+
+<h3>🔹 Formas Válidas Clássicas (Modus Ponens e Tollens)</h3>
+<div class="comp-grid">
+<div class="comp-item"><strong>Modus Ponens:</strong><br>P → Q<br>P<br>∴ Q</div>
+<div class="comp-item"><strong>Modus Tollens:</strong><br>P → Q<br>~Q<br>∴ ~P</div>
+<div class="comp-item"><strong>Silogismo Hipotético:</strong><br>P → Q<br>Q → R<br>∴ P → R</div>
+<div class="comp-item"><strong>Silogismo Categórico:</strong><br>Todo A é B<br>Todo B é C<br>∴ Todo A é C</div>
+</div>
+
+<h2>4. LÓGICA DE PRIMEIRA ORDEM (PREDICADOS E QUANTIFICADORES)</h2>
+<div class="box def"><span class="box-t">📘 Quantificadores e Negação</span>
+<p>A lógica de primeira ordem estuda sentenças com variáveis e quantificadores: <strong>Universal (∀)</strong> e <strong>Existencial (∃)</strong>.</p>
+</div>
+
+<h3>🔹 Regras de Negação dos Quantificadores</h3>
+<table>
+<thead><tr><th>Afirmação</th><th>Negação Correta</th><th>Explicação</th></tr></thead>
+<tbody>
+<tr><td><strong>Todo A é B</strong> (∀x, A(x)→B(x))</td><td><strong>Algum A não é B</strong> (∃x, A(x) ∧ ~B(x))</td><td>Basta um contraexemplo para refutar o universal.</td></tr>
+<tr><td><strong>Nenhum A é B</strong> (∀x, A(x)→~B(x))</td><td><strong>Algum A é B</strong> (∃x, A(x) ∧ B(x))</td><td>Encontrar interseção refuta a separação total.</td></tr>
+<tr><td><strong>Algum A é B</strong> (∃x, A(x) ∧ B(x))</td><td><strong>Nenhum A é B</strong> (∀x, A(x)→~B(x))</td><td>Negar a existência exige separação completa.</td></tr>
+<tr><td><strong>Algum A não é B</strong> (∃x, A(x) ∧ ~B(x))</td><td><strong>Todo A é B</strong> (∀x, A(x)→B(x))</td><td>Afirmar a universalidade refuta a exceção.</td></tr>
+</tbody>
+</table>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Afirmação: "Todo servidor público é concursado."<br>
+<strong>Negação CESPE:</strong> "Algum servidor público não é concursado." (ou "Existe pelo menos um servidor público que não é concursado").<br>
+<strong>ERRADO negar como:</strong> "Todo servidor público não é concursado" ou "Nenhum servidor público é concursado". A negação do "Todo" nunca é o "Nenhum".</p>
+</div>
+
+<h2>5. CONJUNTOS E OPERAÇÕES</h2>
+<div class="box set"><span class="box-t">📘 Operações Fundamentais</span>
+<p>Sejam A e B conjuntos em um universo U:</p>
+<ul>
+<li><strong>União (A ∪ B):</strong> Elementos que pertencem a A ou a B ou a ambos. |A ∪ B| = |A| + |B| - |A ∩ B|</li>
+<li><strong>Interseção (A ∩ B):</strong> Elementos comuns a A e B.</li>
+<li><strong>Diferença (A - B):</strong> Elementos de A que não estão em B. (Não é comutativa! A - B ≠ B - A)</li>
+<li><strong>Complementar (Aᶜ):</strong> Elementos de U que não estão em A. |Aᶜ| = |U| - |A|</li>
+</ul>
+</div>
+
+<h3>🔹 Lei de De Morgan para Conjuntos</h3>
+<div class="formula-box">
+(A ∪ B)ᶜ = Aᶜ ∩ Bᶜ &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; (A ∩ B)ᶜ = Aᶜ ∪ Bᶜ
+</div>
+<p>O complementar da união é a interseção dos complementares. O complementar da interseção é a união dos complementares.</p>
+
+<h2>6. PRINCÍPIOS DE CONTAGEM E PROBABILIDADE</h2>
+<div class="box prob"><span class="box-t">📘 Princípio Fundamental da Contagem (PFC)</h3>
+<p>Se um evento ocorre em <strong>n</strong> etapas, e a etapa 1 tem <strong>k₁</strong> possibilidades, a etapa 2 tem <strong>k₂</strong>, etc., o total de possibilidades é <strong>k₁ × k₂ × ... × kₙ</strong>.</p>
+</div>
+
+<h3>🔹 Análise Combinatória: Quando Usar O Quê?</h3>
+<table>
+<thead><tr><th>Tipo</th><th>A ordem importa?</th><th>Fórmula</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Arranjo (A)</strong></td><td>SIM</td><td>A(n,p) = n! / (n-p)!</td><td>Senha, pódio, fila, cargos distintos</td></tr>
+<tr><td><strong>Combinação (C)</strong></td><td>NÃO</td><td>C(n,p) = n! / [p!(n-p)!]</td><td>Comissões, times, conjuntos, sorteios</td></tr>
+<tr><td><strong>Permutação (P)</strong></td><td>SIM (todos os elementos)</td><td>P(n) = n! ou P = n! / (n₁!n₂!...)</td><td>Fila de n pessoas, anagramas</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Probabilidade</h3>
+<div class="formula-box">
+P(E) = nº de casos favoráveis / nº de casos possíveis
+</div>
+<ul>
+<li><strong>Probabilidade da União:</strong> P(A ∪ B) = P(A) + P(B) - P(A ∩ B)</li>
+<li><strong>Eventos Mutuamente Exclusivos:</strong> P(A ∩ B) = 0 → P(A ∪ B) = P(A) + P(B)</li>
+<li><strong>Eventos Independentes:</strong> P(A ∩ B) = P(A) × P(B)</li>
+<li><strong>Probabilidade Condicional:</strong> P(A|B) = P(A ∩ B) / P(B)</li>
+</ul>
+
+<div class="cespe-tip">💡 DICA CESPE: Questões de probabilidade no CESPE raramente exigem cálculos complexos de combinatória. Foque em <strong>interpretação do espaço amostral</strong> e em eventos complementares: P(~E) = 1 - P(E). Se a banca perguntar a chance de "pelo menos um", calcule 1 - P(nenhum).</div>
+
+<h2>7. PROBLEMAS ARITMÉTICOS, GEOMÉTRICOS E MATRICIAIS</h2>
+<div class="box def"><span class="box-t">📘 Padrões Lógicos do CESPE</h3>
+<p>O CESPE cobra raciocínio lógico aplicado a sequências, matrizes e problemas geométricos, focando na <strong>identificação do padrão</strong> e na <strong>extensão lógica</strong>.</p>
+</div>
+
+<h3>🔹 Sequências Numéricas e Figuras</h3>
+<ul>
+<li><strong>PA/PG:</strong> Diferença constante (PA) ou razão constante (PG).</li>
+<li><strong>Recursivas:</strong> Cada termo depende dos anteriores (ex: Fibonacci: 1, 1, 2, 3, 5, 8...).</li>
+<li><strong>Operações alternadas:</strong> +2, ×3, -5, ÷2, etc.</li>
+</ul>
+
+<h3>🔹 Matrizes e Lógica de Posição</h3>
+<ul>
+<li>Identificar operações por linha, coluna ou diagonal.</li>
+<li>Atenção a rotação, reflexão e simetria em figuras.</li>
+<li>Contagem de elementos em padrões geométricos (triângulos, quadrados em grades).</li>
+</ul>
+
+<div class="box ex"><span class="box-t">✅ Exemplo de Matriz CESPE</span>
+<p>[2 | 4 | 8]<br>
+[3 | 6 | 12]<br>
+[5 | 10 | ?]<br>
+<strong>Padrão:</strong> Linha × 2, depois × 2. Ou Coluna 2 = Coluna 1 × 2; Coluna 3 = Coluna 1 × 4.<br>
+<strong>Resposta:</strong> 5 × 4 = <strong>20</strong>.</p>
+</div>
+
+<h2>🎯 O QUE MAIS CAI NO CESPE (RANKING DE FREQUÊNCIA)</h2>
+<ol>
+<li><strong>Negação e Equivalência da Condicional:</strong> ~ (P → Q) ≡ P ∧ ~Q. P → Q ≡ ~Q → ~P. Cobrado em ~40% das questões.</li>
+<li><strong>Validade de Argumentos:</strong> Modus Ponens, Modus Tollens, uso de diagramas para validar/invalidar silogismos.</li>
+<li><strong>Leis de De Morgan e Negação de Quantificadores:</strong> ~(A ∧ B) ≡ ~A ∨ ~B. "Todo" → negação "Algum não".</li>
+<li><strong>Probabilidade Condicional e Complementar:</strong> P(A|B) = P(A∩B)/P(B). "Pelo menos um" = 1 - P(nenhum).</li>
+<li><strong>Operações com Conjuntos:</strong> União, interseção, diferença. Resolução de problemas com diagramas de Venn.</li>
+<li><strong>Contagem (Arranjo vs Combinação):</strong> Diferenciar quando a ordem importa. CESPE foca em interpretação, não em cálculo pesado.</li>
+<li><strong>Sequências e Padrões:</strong> Identificar a regra de formação de séries numéricas ou figuras.</li>
+<li><strong>Lógica de Primeira Ordem:</strong> Traduzir sentenças do português para símbolos e negar quantificadores.</li>
+<li><strong>Diagramas Lógicos:</strong> Traduzir "Todo", "Algum", "Nenhum" para regiões do diagrama.</li>
+<li><strong>Equivalências Clássicas:</strong> P ∨ Q ≡ ~P → Q; P ↔ Q ≡ (P→Q)∧(Q→P).</li>
+</ol>
+
+<h2>⚖️ JURISPRUDÊNCIA DAS BANCAS (PADRÕES CESPE)</h2>
+<div class="box jur">
+<strong>Padrão 1: Negação da Condicional é SEMPRE "Mantém a 1ª, E nega a 2ª"</strong><br>
+Tese: O CESPE sistematicamente cobra a negação de "Se A então B" como "A e não B". Alternativas que usam "Se não A então não B" ou "Se não B então A" são incorretas.<br>
+<strong>Aplicação CESPE:</strong> Nunca confunda equivalência com negação. A equivalência inverte e nega ambas (contrapositiva). A negação troca o conectivo por E e nega apenas a segunda.
+</div>
+<div class="box jur">
+<strong>Padrão 2: "Algum" NÃO implica "Algum não"</strong><br>
+Tese: A banca frequentemente afirma que "Se alguns X são Y, então alguns X não são Y". Isso é ERRADO. "Algum" significa interseção ≥ 1. Não exclui a possibilidade de "Todo X é Y".<br>
+<strong>Aplicação CESPE:</strong> Em questões com diagramas, "Algum A é B" só garante sobreposição. Não marque opções que assumem separação parcial ou total.
+</div>
+<div class="box jur">
+<strong>Padrão 3: Validade de Argumentos independe da verdade do conteúdo</strong><br>
+Tese: Um argumento pode ter premissas falsas e conclusão verdadeira, mas ser VÁLIDO se a conclusão for consequência lógica das premissas. O CESPE cobra forma, não fato.<br>
+<strong>Aplicação CESPE:</strong> Não use conhecimento de mundo para validar argumentos. Use apenas a estrutura lógica.
+</div>
+<div class="box jur">
+<strong>Padrão 4: Probabilidade de "Pelo menos um"</strong><br>
+Tese: Questões que perguntam a probabilidade de ocorrer pelo menos um evento devem ser resolvidas pelo complementar: 1 - P(nenhum).<br>
+<strong>Aplicação CESPE:</strong> Evite somar probabilidades de cenários complexos. Use o complementar para ganhar tempo e evitar erros.
+</div>
+
+<h2>📝 QUESTÕES CESPE COMENTADAS</h2>
+<div class="q-card">
+<strong>(CESPE/CEBRASPE – TCDF – 2021)</strong><br>
+Julgue: A negação da proposição "Se o servidor é estável, então ele não cometeu improbidade" é equivalente a "O servidor é estável e cometeu improbidade".
+<p><strong>Comentário:</strong> CORRETO. Aplicação direta da negação da condicional: ~(P → Q) ≡ P ∧ ~Q. P = estável; Q = não cometeu. ~Q = cometeu. Resultado: "Estável E cometeu".</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – AFO – 2022)</strong><br>
+Julgue: Se todo auditor é concursado e algum concursado é aprovado em prova de títulos, então, necessariamente, algum auditor é aprovado em prova de títulos.
+<p><strong>Comentário:</strong> ERRADO. Argumento inválido. O conjunto de "aprovados" pode interceptar apenas "concursados que NÃO são auditores". Diagrama: Auditores ⊂ Concursados. Aprovados ∩ Concursados ≠ ∅. Não há garantia de interseção com Auditores.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – Raciocínio Lógico – 2023)</strong><br>
+Julgue: A probabilidade de sair pelo menos um número par no lançamento de dois dados é superior a 70%.
+<p><strong>Comentário:</strong> CORRETO. Cálculo pelo complementar: P(pelo menos 1 par) = 1 - P(nenhum par). P(ímpar em 1 dado) = 3/6 = 1/2. P(2 ímpares) = 1/4. 1 - 1/4 = 3/4 = 75%. 75% > 70%.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – Lógica – 2024)</strong><br>
+Julgue: A proposição "Não é verdade que se estudou então passou" é logicamente equivalente a "Estudou e não passou".
+<p><strong>Comentário:</strong> CORRETO. "Não é verdade que" = negação externa. ~(P → Q) ≡ P ∧ ~Q. "Estudou e não passou". Exatamente a regra de negação da condicional.</p>
+</div>
+
+<h2>📋 CHECKLIST DE REVISÃO RÁPIDA</h2>
+<div class="summary-box">
+<strong>Domine</strong><br>
+□ Negação da Condicional: Manteve a 1ª, trocou → por ∧, negou a 2ª<br>
+□ Equivalência da Condicional: ~Q → ~P (Contrapositiva) ou ~P ∨ Q<br>
+□ De Morgan: ~(A ∧ B) → ~A ∨ ~B | ~(A ∨ B) → ~A ∧ ~B<br>
+□ Negação de Quantificadores: Todo → Algum não | Algum → Nenhum | Nenhum → Algum<br>
+□ Validade de Argumentos: Modus Ponens, Modus Tollens, Diagramas, Tabela-Verdade<br>
+□ Conjuntos: |A∪B| = |A| + |B| - |A∩B|; Diferença não é comutativa<br>
+□ Contagem: Ordem importa? Sim → Arranjo. Não → Combinação.<br>
+□ Probabilidade: P(A∪B) = P(A)+P(B)-P(A∩B); "Pelo menos 1" = 1 - P(nenhum)<br>
+□ Condicional: Só é FALSA se V → F. Nos outros 3 casos, VERDADEIRA<br>
+□ Jurisprudência CESPE: "Algum" não implica "algum não"; validade é formal, não factual; use complementar para "pelo menos um"
+</div>
+
+<div class="nav-b">
+<a href="administrativo-14.html" class="btn-n">← Anterior</a>
+<a href="index.html" class="btn-n">Voltar ao Dashboard</a>
+</div>
+</main>
+
+<div class="n-panel" id="nP">
+<div style="display:flex;justify-content:space-between;margin-bottom:10px"><strong>Notas de Raciocínio Lógico</strong><button onclick="tN()" style="background:none;border:none;cursor:pointer">✕</button></div>
+<div id="nL" style="max-height:180px;overflow-y:auto;margin-bottom:10px"></div>
+<form onsubmit="aN(event)"><input type="text" class="n-in" id="nI" placeholder="Anotação sobre lógica, conjuntos, probabilidade..." required><button type="submit" class="b-sm">💾 Salvar</button></form>
+</div>
+
+<script>
+const SK='rl-estruturas';let hM=false;
+function webS(){const s=window.getSelection().toString();window.open(`https://duckduckgo.com/?q=${encodeURIComponent(s||'Raciocínio lógico equivalências probabilidade CESPE TCDF')}`,'_blank')}
+function tN(){const p=document.getElementById('nP');p.style.display=p.style.display==='none'?'block':'none';if(p.style.display==='block')lN()}
+function lN(){const n=JSON.parse(localStorage.getItem(SK)||'[]');document.getElementById('nL').innerHTML=n.length?n.map((x,i)=>`<div class="n-item">${x.text}<br><small style="cursor:pointer;color:#666" onclick="dN(${i})">remover</small></div>`).join(''):'<p style="font-size:.9em;color:#666">Sem notas.</p>'}
+function aN(e){e.preventDefault();const i=document.getElementById('nI'),n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:i.value,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));i.value='';lN()}
+function dN(i){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.splice(i,1);localStorage.setItem(SK,JSON.stringify(n));lN()}
+function tH(){hM=!hM;document.body.style.cursor=hM?'text':'auto';document.querySelectorAll('.t-btn')[2].textContent=hM?'✅ ON':'✏️ Destaque';hM?document.addEventListener('mouseup',hS):document.removeEventListener('mouseup',hS)}
+function hS(){const s=window.getSelection();if(s.toString().length>10){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:`🔍 "${s.toString().substring(0,40)}..." - ${prompt('Nota:','')||'-'}`,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));alert('✅ Destaque salvo!');s.removeAllRanges()}}
+document.addEventListener('DOMContentLoaded',lN);
+</script>
+</body>
+</html>

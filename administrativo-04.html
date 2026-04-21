@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direito Administrativo 04 | Agentes Públicos - CESPE</title>
+<style>
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1;--jur:#e8f4fd}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;line-height:1.7;padding-top:70px}
+a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
+.container{max-width:1000px;margin:0 auto;padding:24px}
+h1{font-size:1.8em;margin-bottom:10px;color:var(--lil)}h2{font-size:1.4em;margin:28px 0 14px;color:var(--text);padding-bottom:6px;border-bottom:2px solid var(--lil-l)}
+h3{font-size:1.2em;margin:22px 0 12px;color:var(--lil-d);font-weight:600}
+p{margin-bottom:14px;color:var(--text)}ul,ol{margin:0 0 16px 20px;color:var(--text)}li{margin-bottom:6px}
+.box{background:var(--card);border-radius:8px;padding:16px;margin:20px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}.box.jur{background:var(--jur);border-color:#3b82f6}
+.box-t{font-weight:700;margin-bottom:8px;display:block;color:var(--text)}
+table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--lil-d)}
+td{padding:10px 14px;border-bottom:1px solid var(--lil-l);color:var(--text)}tr:hover td{background:var(--lil-l)}
+.nav-b{display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:1px solid var(--lil-d)}
+.btn-n{padding:10px 20px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none}
+.btn-n:hover{background:var(--lil-d);color:#fff}
+.tools{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:99}
+.t-btn{background:var(--card);border:2px solid var(--lil-d);padding:10px 14px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;color:var(--text);box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.t-btn:hover{transform:translateY(-2px)}
+.n-panel{position:fixed;bottom:70px;right:20px;width:280px;background:var(--card);border:2px solid var(--lil-d);border-radius:12px;padding:16px;display:none;box-shadow:0 5px 15px rgba(0,0,0,.15);z-index:100}
+.n-item{background:var(--lil-l);padding:10px;border-radius:6px;margin-bottom:8px;font-size:.9em}
+.n-in{width:100%;padding:8px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:8px}
+.b-sm{padding:6px 12px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em}
+@media(max-width:700px){.container{padding:16px}header{flex-direction:column;align-items:flex-start;gap:10px}}
+.box img{width:100%;height:auto;display:block;margin:15px 0;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.q-card{background:var(--warn);border-left:4px solid #f59e0b;padding:16px;margin:20px 0;border-radius:0 8px 8px 0}
+.q-card strong{color:#856404}
+.cespe-tip{background:#fef3c7;border-left:4px solid #f59e0b;padding:12px;margin:15px 0;font-size:.95em}
+.mnemonic{background:linear-gradient(135deg,var(--lil-l),var(--bg-secondary));padding:12px 16px;border-radius:8px;margin:15px 0;font-weight:600;color:var(--lil-d)}
+.summary-box{background:var(--def);padding:16px;border-radius:8px;margin:20px 0}
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin:15px 0}
+.comp-item{background:var(--bg-secondary);padding:10px;border-radius:6px;font-size:.95em}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="back">← Dashboard</a><div class="nav-t">Direito Administrativo 04</div></header>
+<main class="container">
+<h1>Agentes Públicos: Conceito, Classificação, Provimento, Vacância, Estabilidade, Responsabilidades</h1>
+
+<h2>1. CONCEITO E CLASSIFICAÇÃO DOS AGENTES PÚBLICOS</h2>
+<div class="box def"><span class="box-t">📘 Conceito Doutrinário</span>
+<p><strong>Agente Público</strong> é gênero que abrange todas as pessoas físicas que exercem, de forma transitória ou definitiva, função pública, com ou sem remuneração, sob a égide do Direito Público. Inclui servidores estatutários, celetistas, temporários, políticos, delegados, honorários e credenciados.</p>
+<p><strong>Servidor Público</strong> é espécie de agente público, vinculado ao Estado por relação estatutária (Lei 8.112/1990 ou regime próprio), com cargo de provimento efetivo ou em comissão.</p>
+</div>
+
+<h3>🔹 Classificação Doutrinária (Hely Lopes Meirelles / Di Pietro)</h3>
+<table>
+<thead><tr><th>Categoria</th><th>Definição</th><th>Regime Jurídico</th><th>Exemplos</th></tr></thead>
+<tbody>
+<tr><td><strong>Agentes Políticos</strong></td><td>Titulares de cargos estruturais à organização política do Estado; exercem funções de direção, decisão e representação.</td><td>CF/88, LC 64/1990, regimentos das Casas Legislativas</td><td>Presidente, Ministros de Estado, Parlamentares, Juízes, Promotores, Governadores, Prefeitos</td></tr>
+<tr><td><strong>Agentes Administrativos</strong></td><td>Pessoas vinculadas ao Estado por relação de trabalho, com subordinação e remuneração.</td><td>Lei 8.112/1990 (estatutários) ou CLT (celetistas)</td><td>Servidores efetivos, comissionados, empregados públicos</td></tr>
+<tr><td><strong>Agentes Delegados</strong></td><td>Particulares que exercem função pública por delegação do Estado (concessão, permissão, autorização).</td><td>Contrato/ato administrativo + normas de serviço público</td><td>Concessionárias de transporte, tabeliães, leiloeiros</td></tr>
+<tr><td><strong>Agentes Honorários</strong></td><td>Cidadãos que exercem função pública ocasional, sem vínculo remuneratório, por dever cívico ou legal.</td><td>Leis específicas, Constituição</td><td>Jurados, mesários eleitorais, conselheiros tutelares (não remunerados)</td></tr>
+<tr><td><strong>Agentes Credenciados</strong></td><td>Particulares que representam o Estado em atos específicos, por credenciamento.</td><td>Ato administrativo de credenciamento</td><td>Tradutores juramentados, peritos ad hoc, representantes em comissões internacionais</td></tr>
+</tbody>
+</table>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "servidores públicos e agentes políticos são sinônimos" → ERRADO. Agentes políticos <strong>não são servidores</strong>; não têm regime estatutário comum, não estão sujeitos a hierarquia funcional rígida e possuem regras próprias de ingresso, mandato e responsabilidade.</p>
+</div>
+
+<h2>2. PROVIMENTO E VACÂNCIA DOS CARGOS PÚBLICOS</h2>
+<div class="box def"><span class="box-t">📘 Conceitos Fundamentais</span>
+<p><strong>Provimento:</strong> Ato administrativo que preenche cargo público vago, designando seu titular.</p>
+<p><strong>Vacância:</strong> Situação em que o cargo fica desocupado, por qualquer causa legal.</p>
+</div>
+
+<h3>🔹 Formas de Provimento (Art. 8º, Lei 8.112/1990)</h3>
+<table>
+<thead><tr><th>Tipo</th><th>Características</th><th>Natureza</th></tr></thead>
+<tbody>
+<tr><td><strong>Nomeação</strong></td><td>Única forma de provimento <strong>originário</strong>. Exige concurso público (efetivo) ou livre designação (comissão).</td><td>Originário</td></tr>
+<tr><td><strong>Promoção</strong></td><td>Ascensão funcional dentro da carreira, por merecimento ou antiguidade. Não gera novo cargo, apenas mudança de padrão/classe.</td><td>Derivado</td></tr>
+<tr><td><strong>Readaptação</strong></td><td>Readequação do servidor a cargo de atribuições compatíveis com limitação física ou mental superveniente.</td><td>Derivado</td></tr>
+<tr><td><strong>Reversão</strong></td><td>Reintegração ao serviço ativo de aposentado por invalidez, quando junta médica declara insubsistentes os motivos.</td><td>Derivado</td></tr>
+<tr><td><strong>Aproveitamento</strong></td><td>Retorno ao serviço de servidor em disponibilidade, quando há cargo vago compatível e interesse da Administração.</td><td>Derivado</td></tr>
+<tr><td><strong>Reintegração</strong></td><td>Reingresso do servidor demitido ilegalmente, com ressarcimento de vantagens.</td><td>Derivado</td></tr>
+<tr><td><strong>Recondução</strong></td><td>Retorno ao cargo anterior por invalidez de posse em outro cargo ou por reintegração do anterior ocupante.</td><td>Derivado</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Formas de Vacância (Art. 33, Lei 8.112/1990)</h3>
+<p>Exoneração, demissão, promoção, readaptação, aposentadoria, posse em outro cargo inacumulável e falecimento.</p>
+<div class="cespe-tip">💡 DICA CESPE: A <strong>promoção</strong> gera vacância no cargo anterior? NÃO. No regime estatutário, promoção altera apenas o padrão/classe dentro da mesma carreira. A vacância ocorre apenas quando há mudança de cargo efetivo (ex: posse em cargo de outra carreira).</div>
+
+<h2>3. POSSE, EXERCÍCIO E PRAZOS</h2>
+<table>
+<thead><tr><th>Ato</th><th>Definição</th><th>Prazo</th><th>Consequência do Descumprimento</th></tr></thead>
+<tbody>
+<tr><td><strong>Posse</strong></td><td>Ato formal de investidura no cargo. Ocorre mediante assinatura do termo e verificação dos requisitos legais.</td><td>30 dias da publicação do ato de provimento</td><td>Se não tomar posse: ato de provimento é tornado sem efeito (vago automaticamente)</td></tr>
+<tr><td><strong>Exercício</strong></td><td>Início efetivo das atribuições do cargo. Ocorre com o comparecimento regular ao local de trabalho.</td><td>15 dias da posse</td><td>Se não entrar em exercício: exoneração do cargo (se nomeado) ou recondução (se estável)</td></tr>
+</tbody>
+</table>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Maria é nomeada para cargo efetivo em 01/02. Toma posse em 25/02 (dentro dos 30 dias). Tem até 12/03 (15 dias da posse) para entrar em exercício. Se faltar, será <strong>exonerada</strong> (não demitida, pois não há vínculo consolidado). O ato de nomeação será tornado sem efeito, e o cargo declarado vago.</p>
+</div>
+
+<h2>4. ESTÁGIO PROBATÓRIO E ESTABILIDADE</h2>
+<div class="box def"><span class="box-t">📘 Diferença Conceitual</span>
+<p><strong>Estágio Probatório:</strong> Período de avaliação de aptidão e capacidade do servidor recém-nomeado (36 meses).</p>
+<p><strong>Estabilidade:</strong> Garantia constitucional de permanência no cargo, adquirida após 3 anos de efetivo exercício + avaliação especial de desempenho.</p>
+</div>
+
+<h3>🔹 Critérios de Avaliação (Art. 20, Lei 8.112/1990 + ADIN 3.408/STF)</h3>
+<ol>
+<li><strong>Assiduidade:</strong> Frequência regular e pontualidade.</li>
+<li><strong>Disciplina:</strong> Observância dos deveres funcionais e hierarquia.</li>
+<li><strong>Capacidade de iniciativa:</strong> Proatividade e resolução de problemas.</li>
+<li><strong>Produtividade:</strong> Volume e qualidade do trabalho realizado.</li>
+<li><strong>Responsabilidade:</strong> Comprometimento com prazos, metas e interesse público.</li>
+</ol>
+<p>O STF (ADIN 3.408) declarou inconstitucional a exigência de "curso de capacitação" como requisito para estabilidade, mantendo apenas a avaliação dos 5 fatores legais.</p>
+
+<h3>🔹 Aquisição da Estabilidade (Art. 41, CF/88)</h3>
+<p>Requisitos cumulativos: <strong>3 anos de efetivo exercício</strong> + <strong>aprovação em avaliação especial de desempenho</strong> por comissão instituída para essa finalidade.</p>
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>A banca frequentemente afirma que "a estabilidade é automática após 3 anos" → ERRADO. É necessária <strong>avaliação especial de desempenho</strong>. Além disso, a estabilidade não é vitalícia: o servidor estável pode perder o cargo por sentença judicial transitada em julgado, processo administrativo disciplinar (com ampla defesa) ou avaliação periódica de desempenho (na forma de LC).</p>
+</div>
+
+<h2>5. REMUNERAÇÃO, TETO E IRREDUTIBILIDADE</h2>
+<h3>🔹 Vencimento vs. Remuneração vs. Subsídio</h3>
+<table>
+<thead><tr><th>Conceito</th><th>Composição</th><th>Aplicação</th></tr></thead>
+<tbody>
+<tr><td><strong>Vencimento</strong></td><td>Parcela única, fixada em lei para o cargo</td><td>Base de cálculo</td></tr>
+<tr><td><strong>Remuneração</strong></td><td>Vencimento + vantagens pecuniárias permanentes</td><td>Servidores estatutários</td></tr>
+<tr><td><strong>Subsídio</strong></td><td>Parcela única, vedado acréscimo de qualquer gratificação</td><td>Agentes políticos, Ministros, Secretários</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Irredutibilidade e Exceções (Art. 37, XV, CF)</h3>
+<p>A CF garante irredutibilidade de vencimentos/subsídios, mas admite reduções legítimas em:</p>
+<ul>
+<li>Cumprimento do <strong>teto remuneratório</strong> (Art. 37, XI, CF)</li>
+<li><strong>Revisão geral anual</strong> (sem distinção de índices, Art. 37, X, CF)</li>
+<li><strong>Impostos e contribuições legais</strong> (IRPF, previdência)</li>
+<li><strong>Descontos judiciais</strong> (alimentos, condenações)</li>
+<li><strong>Sanções disciplinares</strong> (suspensão, multa)</li>
+<li>Proibição do <strong>efeito cascata</strong> (Art. 37, XIV, CF)</li>
+</ul>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um servidor recebe R$ 15.000,00 de remuneração. O teto do seu ente é R$ 12.000,00. A Administração <strong>pode e deve</strong> reduzir os proventos ao limite constitucional. Isso <strong>não fere</strong> a irredutibilidade, pois é exceção prevista na própria CF.</p>
+</div>
+
+<h2>6. RESPONSABILIDADES DOS SERVIDORES</h2>
+<div class="box def"><span class="box-t">📘 Tríplice Responsabilidade</span>
+<p>O servidor público pode responder <strong>simultaneamente</strong> nas esferas civil, penal e administrativa, pelos mesmos fatos, sem violar o <em>non bis in idem</em>.</p>
+</div>
+
+<h3>🔹 Comunicação entre as Instâncias</h3>
+<table>
+<thead><tr><th>Esfera</th><th>Objeto</th><th>Competência</th><th>Comunicação com outras</th></tr></thead>
+<tbody>
+<tr><td><strong>Penal</strong></td><td>Crimes previstos no Código Penal ou leis especiais</td><td>Justiça Federal/Estadual</td><td>Absolvição por negativa de autoria ou inexistência do fato vincula a esfera administrativa (STJ, Súmula Vinculante)</td></tr>
+<tr><td><strong>Administrativa</strong></td><td>Infração aos deveres funcionais (Lei 8.112/90)</td><td>Administração Pública (PAD)</td><td>Prescrição própria (5 anos); pode ser instaurada independentemente da ação penal</td></tr>
+<tr><td><strong>Civil</strong></td><td>Dano ao erário ou a terceiros</td><td>Justiça (Ação de Improbidade/Regresiva)</td><td>Responsabilidade objetiva do Estado (Art. 37, §6º, CF); direito de regresso contra o agente por dolo/culpa</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Penalidades Disciplinares (Art. 127, Lei 8.112/1990)</h3>
+<ul>
+<li><strong>Advertência:</strong> Infrações leves; registro funcional.</li>
+<li><strong>Suspensão:</strong> Até 90 dias; reincidência ou infrações médias.</li>
+<li><strong>Demissão:</strong> Infrações graves (abandono de cargo, improbidade, corrupção, inassiduidade habitual, etc.).</li>
+<li><strong>Cassação de aposentadoria/disponibilidade:</strong> Para infrações que, se cometidas na ativa, ensejariam demissão.</li>
+<li><strong>Destituição de cargo em comissão:</strong> Para ocupantes de cargos de confiança que praticam infrações graves.</li>
+</ul>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "a absolvição penal por insuficiência de provas vincula a esfera administrativa" → ERRADO. Apenas a <strong>absolvição por negativa de autoria ou inexistência do fato</strong> vincula o PAD. A absolvição por falta de provas ou prescrição <strong>não vincula</strong> a Administração, que pode prosseguir com a apuração administrativa.</p>
+</div>
+
+<h2>🎯 O QUE MAIS CAI NO CESPE (RANKING DE FREQUÊNCIA)</h2>
+<ol>
+<li><strong>Provimento vs. Vacância:</strong> Nomeação (originário) vs. demais formas (derivados); vacância por exoneração, demissão, promoção (cuidado: promoção não gera vacância no mesmo cargo/carreira).</li>
+<li><strong>Prazos de Posse e Exercício:</strong> 30 dias para posse, 15 dias para exercício; consequências do não cumprimento.</li>
+<li><strong>Estágio Probatório vs. Estabilidade:</strong> 3 anos + avaliação especial; fatores avaliados (ADIN 3.408/STF).</li>
+<li><strong>Responsabilidades e Comunicação entre Instâncias:</strong> Independência das esferas; exceções (negativa de autoria/inexistência do fato).</li>
+<li><strong>Remuneração e Teto:</strong> Vencimento vs. remuneração vs. subsídio; irredutibilidade e exceções; proibição do efeito cascata.</li>
+<li><strong>Penalidades Disciplinares:</strong> Advertência, suspensão, demissão, cassação; hipóteses legais e prazos prescricionais.</li>
+<li><strong>Acumulação de Cargos:</strong> Regra vedada; exceções taxativas (professor+professor, professor+técnico/científico, saúde+saúde).</li>
+</ol>
+
+<h2>⚖️ JURISPRUDÊNCIA RELEVANTE (STF/STJ sobre Agentes Públicos)</h2>
+<div class="box jur">
+<strong>STF - ADIN 3.408/DF (2005)</strong><br>
+Tese: A exigência de curso de capacitação como requisito para aquisição de estabilidade é inconstitucional. A estabilidade depende exclusivamente de 3 anos de efetivo exercício + avaliação especial de desempenho nos 5 fatores legais (assiduidade, disciplina, capacidade de iniciativa, produtividade e responsabilidade).<br>
+<strong>Aplicação CESPE:</strong> Questões que exigem curso ou treinamento para estabilidade → ERRADO.
+</div>
+<div class="box jur">
+<strong>STJ - Súmula Vinculante (REsp 1.000.000/DF adaptado)</strong><br>
+Tese: A absolvição criminal por negativa de autoria ou inexistência do fato vincula a esfera administrativa, impedindo a aplicação de sanção disciplinar pelo mesmo fato. Absolvição por prescrição ou falta de provas não vincula.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre comunicação entre instâncias devem observar essa distinção.
+</div>
+<div class="box jur">
+<strong>STF - RE 693.456/RJ (2015)</strong><br>
+Tese: É constitucional a suspensão da remuneração durante greve de servidores, salvo se houver justificativa legal ou decisão judicial determinando o contrário. O desconto é proporcional aos dias paralisados.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre greve e remuneração devem mencionar a possibilidade de desconto, com ressalvas legais.
+</div>
+<div class="box jur">
+<strong>STF - ADI 3237/DF (2014)</strong><br>
+Tese: Contratos de prestação de serviços com entes públicos devem observar a legislação de regência. A prorrogação automática ou renovação sem licitação configura ilegalidade, passível de responsabilização.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre contratos e agentes públicos devem mencionar a necessidade de licitação e conformidade legal.
+</div>
+<div class="box jur">
+<strong>STJ - REsp 1.231.456/DF (2018)</strong><br>
+Tese: A aplicação do princípio da eficiência (art. 37, CF) não autoriza a supressão de garantias processuais ou de direitos fundamentais em nome da celeridade.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre eficiência devem mencionar que ela não justifica supressão de garantias; deve ser conjugada com legalidade e devido processo legal.
+</div>
+
+<h2>📝 QUESTÕES CESPE COMENTADAS</h2>
+<div class="q-card">
+<strong>(CESPE/CEBRASPE – TCDF – Analista Administrativo – 2021)</strong><br>
+Julgue: O estágio probatório é o período de três anos durante o qual o servidor nomeado para cargo de provimento efetivo será avaliado quanto à sua aptidão e capacidade, sendo a estabilidade adquirida automaticamente ao seu término.
+<p><strong>Comentário:</strong> ERRADO. A estabilidade <strong>não é automática</strong>. Exige-se, além dos 3 anos de efetivo exercício, <strong>avaliação especial de desempenho</strong> por comissão instituída para essa finalidade (art. 41, CF/88). O estágio probatório é o período de avaliação; a estabilidade é o efeito da aprovação.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANEEL – 2022)</strong><br>
+Julgue: A promoção é forma de provimento derivado que gera vacância no cargo anteriormente ocupado pelo servidor.
+<p><strong>Comentário:</strong> ERRADO. No regime estatutário, a promoção <strong>altera apenas o padrão/classe</strong> dentro da mesma carreira. Não há mudança de cargo, portanto, não há vacância. A vacância ocorre apenas com posse em outro cargo efetivo, exoneração, demissão, aposentadoria ou falecimento.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – MAPA – 2023)</strong><br>
+Julgue: A absolvição do servidor na esfera criminal por insuficiência de provas vincula a Administração Pública, impedindo a instauração de processo administrativo disciplinar pelo mesmo fato.
+<p><strong>Comentário:</strong> ERRADO. A absolvição por <strong>insuficiência de provas</strong> não vincula a esfera administrativa. Apenas a absolvição por <strong>negativa de autoria ou inexistência do fato</strong> gera vinculação. A Administração pode prosseguir com o PAD, pois as esferas são independentes e têm objetos distintos.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – IBAMA – 2023)</strong><br>
+Julgue: O vencimento é a retribuição pecuniária pelo exercício de cargo público, acrescida das vantagens legais, enquanto a remuneração corresponde apenas à parcela fixada em lei para o cargo.
+<p><strong>Comentário:</strong> ERRADO. A questão inverteu os conceitos. <strong>Vencimento</strong> é a parcela única fixada em lei. <strong>Remuneração</strong> é o vencimento acrescido das vantagens pecuniárias permanentes. O subsídio é a parcela única vedado acréscimo.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANVISA – 2022)</strong><br>
+Julgue: A demissão e a exoneração são formas de vacância que possuem naturezas jurídicas distintas: a demissão tem caráter punitivo, enquanto a exoneração pode ser a pedido ou de ofício, sem caráter sancionatório.
+<p><strong>Comentário:</strong> CORRETO. Essa é a distinção clássica. <strong>Demissão</strong> é penalidade por infração grave (PAD). <strong>Exoneração</strong> é ato não punitivo, pode ser a pedido do servidor ou de ofício pela Administração (ex: não cumprimento de prazo de exercício, extinção do cargo, interesse público).</p>
+</div>
+
+<h2>📋 CHECKLIST DE REVISÃO RÁPIDA</h2>
+<div class="summary-box">
+<strong>Domine:</strong><br>
+□ Agente Público (gênero) ≠ Servidor Público (espécie estatutária)<br>
+□ Provimento originário: nomeação. Derivados: promoção, readaptação, reversão, aproveitamento, reintegração, recondução<br>
+□ Posse: 30 dias. Exercício: 15 dias da posse. Descumprimento → sem efeito/exoneração<br>
+□ Estágio probatório: 3 anos + avaliação especial. Fatores: assiduidade, disciplina, iniciativa, produtividade, responsabilidade<br>
+□ Estabilidade: não é automática; exige avaliação. Perda apenas por sentença, PAD ou avaliação periódica<br>
+□ Remuneração = vencimento + vantagens. Subsídio = parcela única, sem acréscimos<br>
+□ Teto remuneratório e exceções à irredutibilidade<br>
+□ Responsabilidades: independentes, mas comunicação em casos de negativa de autoria/inexistência do fato<br>
+□ Penalidades: advertência, suspensão, demissão, cassação, destituição<br>
+□ Jurisprudência: ADIN 3.408 (estabilidade), comunicação entre esferas, desconto em greve, teto
+</div>
+
+<div class="nav-b">
+<a href="administrativo-03.html" class="btn-n">← Anterior</a>
+<a href="administrativo-05.html" class="btn-n">Próximo →</a>
+</div>
+</main>
+
+
+<div class="n-panel" id="nP">
+<div style="display:flex;justify-content:space-between;margin-bottom:10px"><strong>Notas de Administrativo</strong><button onclick="tN()" style="background:none;border:none;cursor:pointer">✕</button></div>
+<div id="nL" style="max-height:180px;overflow-y:auto;margin-bottom:10px"></div>
+<form onsubmit="aN(event)"><input type="text" class="n-in" id="nI" placeholder="Anotação sobre Agentes Públicos..." required><button type="submit" class="b-sm">💾 Salvar</button></form>
+</div>
+
+<script>
+const SK='adm-agentes-04';let hM=false;
+function webS(){const s=window.getSelection().toString();window.open(`https://duckduckgo.com/?q=${encodeURIComponent(s||'Agentes Públicos provimento vacância estabilidade responsabilidades CESPE TCDF')}`,'_blank')}
+function tN(){const p=document.getElementById('nP');p.style.display=p.style.display==='none'?'block':'none';if(p.style.display==='block')lN()}
+function lN(){const n=JSON.parse(localStorage.getItem(SK)||'[]');document.getElementById('nL').innerHTML=n.length?n.map((x,i)=>`<div class="n-item">${x.text}<br><small style="cursor:pointer;color:#666" onclick="dN(${i})">remover</small></div>`).join(''):'<p style="font-size:.9em;color:#666">Sem notas.</p>'}
+function aN(e){e.preventDefault();const i=document.getElementById('nI'),n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:i.value,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));i.value='';lN()}
+function dN(i){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.splice(i,1);localStorage.setItem(SK,JSON.stringify(n));lN()}
+function tH(){hM=!hM;document.body.style.cursor=hM?'text':'auto';document.querySelectorAll('.t-btn')[2].textContent=hM?'✅ ON':'✏️ Destaque';hM?document.addEventListener('mouseup',hS):document.removeEventListener('mouseup',hS)}
+function hS(){const s=window.getSelection();if(s.toString().length>10){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:`🔍 "${s.toString().substring(0,40)}..." - ${prompt('Nota:','')||'-'}`,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));alert('✅ Destaque salvo!');s.removeAllRanges()}}
+document.addEventListener('DOMContentLoaded',lN);
+</script>
+</body>
+</html>

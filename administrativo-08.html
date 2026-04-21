@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direito Administrativo 08 | Serviços Públicos e Lei 8.112/1990 - CESPE</title>
+<style>
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1;--jur:#e8f4fd}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;line-height:1.7;padding-top:70px}
+a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
+.container{max-width:1000px;margin:0 auto;padding:24px}
+h1{font-size:1.8em;margin-bottom:10px;color:var(--lil)}h2{font-size:1.4em;margin:28px 0 14px;color:var(--text);padding-bottom:6px;border-bottom:2px solid var(--lil-l)}
+h3{font-size:1.2em;margin:22px 0 12px;color:var(--lil-d);font-weight:600}
+p{margin-bottom:14px;color:var(--text)}ul,ol{margin:0 0 16px 20px;color:var(--text)}li{margin-bottom:6px}
+.box{background:var(--card);border-radius:8px;padding:16px;margin:20px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}.box.jur{background:var(--jur);border-color:#3b82f6}
+.box-t{font-weight:700;margin-bottom:8px;display:block;color:var(--text)}
+table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--lil-d)}
+td{padding:10px 14px;border-bottom:1px solid var(--lil-l);color:var(--text)}tr:hover td{background:var(--lil-l)}
+.nav-b{display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:1px solid var(--lil-d)}
+.btn-n{padding:10px 20px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none}
+.btn-n:hover{background:var(--lil-d);color:#fff}
+.tools{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:99}
+.t-btn{background:var(--card);border:2px solid var(--lil-d);padding:10px 14px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;color:var(--text);box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.t-btn:hover{transform:translateY(-2px)}
+.n-panel{position:fixed;bottom:70px;right:20px;width:280px;background:var(--card);border:2px solid var(--lil-d);border-radius:12px;padding:16px;display:none;box-shadow:0 5px 15px rgba(0,0,0,.15);z-index:100}
+.n-item{background:var(--lil-l);padding:10px;border-radius:6px;margin-bottom:8px;font-size:.9em}
+.n-in{width:100%;padding:8px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:8px}
+.b-sm{padding:6px 12px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em}
+@media(max-width:700px){.container{padding:16px}header{flex-direction:column;align-items:flex-start;gap:10px}}
+.box img{width:100%;height:auto;display:block;margin:15px 0;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.q-card{background:var(--warn);border-left:4px solid #f59e0b;padding:16px;margin:20px 0;border-radius:0 8px 8px 0}
+.q-card strong{color:#856404}
+.cespe-tip{background:#fef3c7;border-left:4px solid #f59e0b;padding:12px;margin:15px 0;font-size:.95em}
+.mnemonic{background:linear-gradient(135deg,var(--lil-l),var(--bg-secondary));padding:12px 16px;border-radius:8px;margin:15px 0;font-weight:600;color:var(--lil-d)}
+.summary-box{background:var(--def);padding:16px;border-radius:8px;margin:20px 0}
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin:15px 0}
+.comp-item{background:var(--bg-secondary);padding:10px;border-radius:6px;font-size:.95em}
+.service-card{background:var(--card);border:2px solid var(--lil-l);border-radius:8px;padding:16px;margin:12px 0}
+.service-card h4{color:var(--lil);margin-bottom:8px}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="back">← Dashboard</a><div class="nav-t">Direito Administrativo 08</div></header>
+<main class="container">
+<h1>Serviços Públicos e Lei 8.112/1990 (Regime Disciplinar)</h1>
+
+<h2>PARTE I: SERVIÇOS PÚBLICOS</h2>
+
+<h2>1. CONCEITO E ELEMENTOS DEFINIDORES</h2>
+<div class="box def"><span class="box-t">📘 Conceito de Serviço Público</span>
+<p><strong>Serviço público</strong> é toda atividade material ou abstrata que a Administração Pública executa, direta ou indiretamente, sob regime jurídico predominante de direito público, para satisfazer necessidades essenciais ou secundárias da coletividade, com fins de interesse geral.</p>
+<p><strong>Elementos da definição:</strong> (1) Titularidade estatal; (2) Finalidade de interesse público; (3) Regime jurídico de direito público; (4) Satisfação de necessidades coletivas.</p>
+</div>
+
+<h3>🔹 Diferença entre Serviço Público e Atividade Econômica</h3>
+<table>
+<thead><tr><th>Aspecto</th><th>Serviço Público</th><th>Atividade Econômica</th></tr></thead>
+<tbody>
+<tr><td><strong>Finalidade</strong></td><td>Interesse público, satisfação de necessidades coletivas</td><td>Lucro, exploração de mercado</td></tr>
+<tr><td><strong>Regime Jurídico</strong></td><td>Preponderantemente direito público</td><td>Direito privado, com intervenção estatal pontual</td></tr>
+<tr><td><strong>Prestação</strong></td><td>Estado ou delegatário sob controle estatal</td><td>Particulares em regime de concorrência</td></tr>
+<tr><td><strong>Tarifa/Preço</strong></td><td>Tarifa (contraprestação pelo serviço), não lucro</td><td>Preço de mercado, com margem de lucro</td></tr>
+<tr><td><strong>Continuidade</strong></td><td>Princípio da continuidade: serviço essencial não pode ser interrompido</td><td>Pode ser interrompido por decisão empresarial</td></tr>
+</tbody>
+</table>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>O fornecimento de energia elétrica é <strong>serviço público</strong> quando prestado por concessionária sob regime de concessão (Lei 8.987/1995): há titularidade estatal, finalidade pública, regime de direito público e tarifa regulada. Já a venda de eletrodomésticos é <strong>atividade econômica</strong>: finalidade lucrativa, regime privado, preço de mercado.</p>
+</div>
+
+<h2>2. CLASSIFICAÇÃO DOS SERVIÇOS PÚBLICOS</h2>
+<div class="box def"><span class="box-t">📘 Critérios de Classificação</span>
+<p>Os serviços públicos podem ser classificados segundo diversos critérios, cada um com implicações práticas para o regime jurídico aplicável.</p>
+</div>
+
+<h3>🔹 Quanto à Essencialidade</h3>
+<table>
+<thead><tr><th>Tipo</th><th>Descrição</th><th>Exemplo</th><th>Regime Especial</th></tr></thead>
+<tbody>
+<tr><td><strong>Serviços Públicos Próprios (ou "uti universi")</strong></td><td>Indispensáveis à coletividade; prestados de forma geral e abstrata</td><td>Segurança pública, defesa nacional, justiça</td><td>Prestação direta pelo Estado; não delegáveis</td></tr>
+<tr><td><strong>Serviços Públicos Impróprios (ou "uti singuli")</strong></td><td>Utilizados individualmente pelos administrados; podem ser delegados</td><td>Energia elétrica, água, transporte coletivo, telecomunicações</td><td>Prestação direta ou delegada (concessão, permissão, PPP)</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Quanto à Forma de Prestação</h3>
+<table>
+<thead><tr><th>Tipo</th><th>Descrição</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Serviços Administrativos</strong></td><td>Prestados pela Administração para seu funcionamento interno</td><td>Impressão de documentos, manutenção de prédios públicos</td></tr>
+<tr><td><strong>Serviços Industriais</strong></td><td>Produção de bens ou serviços com característica industrial</td><td>Fabricação de vacinas, produção de energia</td></tr>
+<tr><td><strong>Serviços Sociais</strong></td><td>Visam ao bem-estar social e à inclusão</td><td>Educação, saúde, assistência social</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Quanto ao Destinatário</h3>
+<ul>
+<li><strong>Gerais:</strong> Prestados à coletividade indistintamente (ex: iluminação pública, policiamento).</li>
+<li><strong>Individuais:</strong> Prestados a usuários determinados, mediante contraprestação (ex: água, energia, transporte).</li>
+</ul>
+
+<div class="mnemonic">🧠 MACETE: "Próprio = Estado faz | Impróprio = Pode delegar" → Serviços próprios (uti universi) não podem ser delegados; impróprios (uti singuli) podem ser concedidos/permitidos.</div>
+
+<h2>3. DELEGAÇÃO DE SERVIÇOS PÚBLICOS</h2>
+<div class="box def"><span class="box-t">📘 Conceito de Delegação</span>
+<p>A delegação é o ato pelo qual o Estado transfere a execução de serviço público a particular, mantendo a titularidade e o controle. Fundamenta-se no art. 175 da CF/88: "Incumbe ao Poder Público, na forma da lei, diretamente ou sob regime de concessão ou permissão, sempre através de licitação, a prestação de serviços públicos."</p>
+</div>
+
+<h3>🔹 Modalidades de Delegação</h3>
+<table>
+<thead><tr><th>Modalidade</th><th>Base Legal</th><th>Características</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Concessão</strong></td><td>Lei 8.987/1995 (Lei das Concessões)</td><td>• Contrato administrativo<br>• Prazo determinado<br>• Remuneração via tarifa<br>• Risco do concessionário<br>• Fiscalização estatal rigorosa</td><td>Concessão de rodovia, energia elétrica, saneamento</td></tr>
+<tr><td><strong>Permissão</strong></td><td>Lei 8.987/1995 + Lei 11.079/2004</td><td>• Ato administrativo precário<br>• Prazo determinado ou indeterminado<br>• Remuneração via tarifa ou subsídio<br>• Menor complexidade que concessão</td><td>Permissão de transporte coletivo urbano, coleta de lixo</td></tr>
+<tr><td><strong>Autorização</strong></td><td>Lei 8.987/1995, art. 40</td><td>• Ato discricionário e precário<br>• Sem licitação (em regra)<br>• Serviço de pequena escala ou experimental<br>• Revogável a qualquer tempo</td><td>Autorização de táxi, bancas de jornal, food trucks</td></tr>
+<tr><td><strong>Parceria Público-Privada (PPP)</strong></td><td>Lei 11.079/2004</td><td>• Contrato administrativo de longo prazo (5-35 anos)<br>• Contraprestação pública + tarifa<br>• Repartição objetiva de riscos<br>• Valor mínimo de R$ 10 milhões ou 50% do investimento</td><td>Hospital, presídio, sistema de transporte integrado</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Concessão vs. Permissão: Diferenças Essenciais</h3>
+<div class="comp-grid">
+<div class="comp-item"><strong>Concessão:</strong> Contrato administrativo; exige licitação; prazo máximo 35 anos (prorrogável); estabilidade contratual; direito a indenização em caso de rescisão imotivada.</div>
+<div class="comp-item"><strong>Permissão:</strong> Ato administrativo; pode dispensar licitação em casos legais; prazo indeterminado ou determinado; precariedade (revogável por conveniência); indenização apenas se houver investimento não amortizado.</div>
+</div>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "permissão e concessão são sinônimos" → ERRADO. São institutos distintos: concessão é contrato com maior estabilidade; permissão é ato precário, mais flexível. A precariedade da permissão significa que pode ser revogada por conveniência, mas não arbitrariamente: deve haver motivação e, se houver investimento, indenização.</p>
+</div>
+
+<h3>🔹 Parcerias Público-Privadas (Lei 11.079/2004)</h3>
+<div class="service-card">
+<h4>📌 Conceito e Requisitos</h4>
+<p><strong>PPP</strong> é contrato administrativo de concessão, na modalidade patrocinada ou administrativa, com os seguintes requisitos cumulativos:</p>
+<ul>
+<li><strong>Prazo:</strong> Entre 5 e 35 anos.</li>
+<li><strong>Valor:</strong> Mínimo de R$ 10 milhões ou 50% do valor do investimento.</li>
+<li><strong>Contraprestação:</strong> Pública (subsídio) + tarifa do usuário (na patrocinada) ou apenas pública (na administrativa).</li>
+<li><strong>Repartição de riscos:</strong> Objetiva, com cláusulas expressas no contrato.</li>
+<li><strong>Vedação:</strong> Não pode ter como objeto único o fornecimento de mão de obra, instalação de equipamentos ou execução de obra.</li>
+</ul>
+<h4>📌 Modalidades</h4>
+<ul>
+<li><strong>Patrocinada:</strong> Concessão comum + contraprestação pecuniária do parceiro público ao parceiro privado.</li>
+<li><strong>Administrativa:</strong> Contrato de prestação de serviços em que a Administração Pública é a usuária direta ou indireta, ainda que envolva execução de obra ou fornecimento de bens.</li>
+</ul>
+</div>
+
+<h2>4. PRINCÍPIOS DA PRESTAÇÃO DE SERVIÇOS PÚBLICOS</h2>
+<div class="box def"><span class="box-t">📘 Princípios Constitucionais e Legais</span>
+<p>A prestação de serviços públicos deve observar princípios expressos na CF/88 e na legislação infraconstitucional, especialmente na Lei 8.987/1995.</p>
+</div>
+
+<table>
+<thead><tr><th>Princípio</th><th>Fonte Legal</th><th>Aplicação Prática</th></tr></thead>
+<tbody>
+<tr><td><strong>Continuidade</strong></td><td>Art. 6º, Lei 8.987/1995</td><td>Serviço essencial não pode ser interrompido arbitrariamente; suspensão apenas por inadimplência do usuário, após aviso prévio</td></tr>
+<tr><td><strong>Modicidade Tarifária</strong></td><td>Art. 6º, §1º, Lei 8.987/1995</td><td>Tarifas devem ser justas e acessíveis; reajustes e revisões observam critérios técnicos e participação social</td></tr>
+<tr><td><strong>Universalização</strong></td><td>Art. 6º, §2º, Lei 8.987/1995</td><td>Expansão do serviço para atingir toda a população; metas de cobertura em contratos de concessão</td></tr>
+<tr><td><strong>Cortesia</strong></td><td>Art. 6º, §3º, Lei 8.987/1995</td><td>Atendimento adequado ao usuário; canais de reclamação; tratamento respeitoso</td></tr>
+<tr><td><strong>Segurança</strong></td><td>Art. 6º, §4º, Lei 8.987/1995</td><td>Qualidade técnica do serviço; prevenção de acidentes; planos de contingência</td></tr>
+<tr><td><strong>Atualidade</strong></td><td>Art. 6º, §5º, Lei 8.987/1995</td><td>Modernização tecnológica; adaptação a novas demandas; inovação na prestação</td></tr>
+</tbody>
+</table>
+
+<div class="cespe-tip">💡 DICA CESPE: Questões que afirmam "o princípio da continuidade autoriza a interrupção do serviço por inadimplência do usuário sem aviso prévio" → ERRADO. A Lei 8.987/1995 exige <strong>aviso prévio</strong> e <strong>proporcionalidade</strong> na suspensão por inadimplência.</div>
+
+<h2>5. EXTINÇÃO DA DELEGAÇÃO</h2>
+<h3>🔹 Causas de Extinção da Concessão/Permissão</h3>
+<ol>
+<li><strong>Advento do termo:</strong> Expiração do prazo contratual.</li>
+<li><strong>Encampação:</strong> Retomada do serviço pelo poder concedente, por motivo de interesse público, mediante lei autorizativa específica e prévia indenização.</li>
+<li><strong>Caducidade:</strong> Rescisão por inadimplemento do concessionário/permissionário (ex: descumprimento contratual, paralisação do serviço).</li>
+<li><strong>Anulação:</strong> Por ilegalidade na licitação ou no contrato.</li>
+<li><strong>Falência, extinção da empresa, morte ou incapacidade do titular:</strong> Quando pessoa física; para pessoa jurídica, dissolução ou liquidação.</li>
+</ol>
+
+<h3>🔹 Encampação vs. Caducidade</h3>
+<table>
+<thead><tr><th>Aspecto</th><th>Encampação</th><th>Caducidade</th></tr></thead>
+<tbody>
+<tr><td><strong>Causa</strong></td><td>Interesse público (motivo de conveniência)</td><td>Inadimplemento do concessionário/permissionário</td></tr>
+<tr><td><strong>Indenização</strong></td><td>Prévia e justa, incluindo bens reversíveis e investimentos não amortizados</td><td>Apenas bens reversíveis e investimentos não amortizados; pode haver retenção por multas</td></tr>
+<tr><td><strong>Procedimento</strong></td><td>Lei autorizativa específica + processo administrativo</td><td>Processo administrativo com ampla defesa</td></tr>
+<tr><td><strong>Efeitos</strong></td><td>Extinção do contrato com continuidade do serviço pelo Estado</td><td>Extinção do contrato com possibilidade de nova delegação</td></tr>
+</tbody>
+</table>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Uma concessionária de transporte coletivo deixa de operar 30% das linhas por falta de manutenção da frota. O Município instaura processo administrativo, assegura ampla defesa e, comprovada a falha, declara a <strong>caducidade</strong> da concessão. O serviço é assumido temporariamente pela Administração até nova licitação. <strong>Isso é aplicação da Lei 8.987/1995, art. 38.</strong></p>
+</div>
+
+<h2>PARTE II: LEI 8.112/1990 - REGIME DISCIPLINAR</h2>
+
+<h2>6. DEVERES, PROIBIÇÕES E RESPONSABILIDADES DO SERVIDOR</h2>
+<div class="box def"><span class="box-t">📘 Deveres do Servidor (Art. 116, Lei 8.112/1990)</span>
+<p>São deveres do servidor público federal, entre outros:</p>
+<ul>
+<li>Exercer com zelo e dedicação as atribuições do cargo;</li>
+<li>Ser leal às instituições a que servir;</li>
+<li>Observar as normas legais e regulamentares;</li>
+<li>Cumprir as ordens superiores, exceto quando manifestamente ilegais;</li>
+<li>Atender com presteza ao público em geral, prestando as informações requeridas;</li>
+<li>Tratar com urbanidade as pessoas;</li>
+<li>Representar contra ilegalidade, omissão ou abuso de poder;</li>
+<li>Levar ao conhecimento da autoridade superior as irregularidades de que tiver ciência;</li>
+<li>Zelar pela economia do material e conservação do patrimônio público;</li>
+<li>Manter conduta compatível com a moralidade administrativa.</li>
+</ul>
+</div>
+
+<h3>🔹 Proibições do Servidor (Art. 117, Lei 8.112/1990)</h3>
+<table>
+<thead><tr><th>Proibição</th><th>Descrição</th><th>Penalidade Típica</th></tr></thead>
+<tbody>
+<tr><td><strong>Ausentar-se do serviço</strong></td><td>Sem prévia autorização do chefe imediato</td><td>Advertência ou suspensão</td></tr>
+<tr><td><strong>Retirar documento ou objeto</strong></td><td>Da repartição, sem autorização legal</td><td>Suspensão ou demissão</td></tr>
+<tr><td><strong>Recusar fé a documento público</strong></td><td>Negar validade a documento público sem fundamento</td><td>Advertência ou suspensão</td></tr>
+<tr><td><strong>Opor resistência injustificada</strong></td><td>Ao andamento de documento, processo ou execução de serviço</td><td>Suspensão ou demissão</td></tr>
+<tr><td><strong>Promover manifestação de apreço ou desapreço</strong></td><td>No recinto da repartição</td><td>Advertência</td></tr>
+<tr><td><strong>Cometer a pessoa estranha à repartição</strong></td><td>Atribuições fora dos casos previstos em lei</td><td>Advertência ou suspensão</td></tr>
+<tr><td><strong>Utilizar recursos da repartição</strong></td><td>Para atividades estranhas ao serviço</td><td>Suspensão ou demissão</td></tr>
+<tr><td><strong>Participar de gerência ou administração</strong></td><td>De sociedade privada, pessoa jurídica ou exercer comércio, salvo exceções legais</td><td>Demissão</td></tr>
+<tr><td><strong>Proceder de forma desidiosa</strong></td><td>Negligência, lentidão ou omissão no serviço</td><td>Advertência, suspensão ou demissão</td></tr>
+<tr><td><strong>Usar prerrogativas funcionais</strong></td><td>Para obter vantagem pessoal ou para outrem</td><td>Demissão</td></tr>
+</tbody>
+</table>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "o servidor pode ser demitido por qualquer violação de dever" → ERRADO. A penalidade deve ser <strong>proporcional</strong> à gravidade da infração. A demissão só é cabível para infrações graves (art. 132, Lei 8.112/1990), como improbidade, abandono de cargo, inassiduidade habitual, etc.</p>
+</div>
+
+<h2>7. PENALIDADES DISCIPLINARES (ART. 127, LEI 8.112/1990)</h2>
+<div class="box def"><span class="box-t">📘 Espécies de Penalidades</span>
+<p>As penalidades disciplinares previstas na Lei 8.112/1990 são aplicadas conforme a gravidade da infração, observada a proporcionalidade e o devido processo legal.</p>
+</div>
+
+<table>
+<thead><tr><th>Penalidade</th><th>Hipóteses de Aplicação</th><th>Prazo de Prescrição</th><th>Recurso</th></tr></thead>
+<tbody>
+<tr><td><strong>Advertência</strong></td><td>Infrações leves; primeira ocorrência; sem dolo</td><td>180 dias (art. 142, I)</td><td>Recurso hierárquico</td></tr>
+<tr><td><strong>Suspensão</strong></td><td>Infrações médias; reincidência; dolo leve</td><td>2 anos (art. 142, II)</td><td>Recurso hierárquico</td></tr>
+<tr><td><strong>Demissão</strong></td><td>Infrações graves: improbidade, abandono de cargo (>30 dias), inassiduidade habitual, corrupção, etc.</td><td>5 anos (art. 142, III)</td><td>Recurso hierárquico + judicial</td></tr>
+<tr><td><strong>Cassação de aposentadoria/disponibilidade</strong></td><td>Infração que, se cometida na ativa, ensejaria demissão</td><td>5 anos</td><td>Recurso hierárquico + judicial</td></tr>
+<tr><td><strong>Destituição de cargo em comissão</strong></td><td>Ocupante de cargo de confiança que pratica infração grave</td><td>5 anos</td><td>Recurso hierárquico + judicial</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Abandono de Cargo vs. Inassiduidade Habitual</h3>
+<div class="service-card">
+<h4>📌 Abandono de Cargo (Art. 132, IX)</h4>
+<ul>
+<li><strong>Definição:</strong> Ausência intencional do servidor ao serviço por mais de 30 dias consecutivos.</li>
+<li><strong>Elementos:</strong> (1) Ausência física; (2) Intencionalidade (dolo); (3) Prazo >30 dias consecutivos.</li>
+<li><strong>Procedimento:</strong> PAD com ampla defesa; notificação pessoal para justificativa.</li>
+</ul>
+<h4>📌 Inassiduidade Habitual (Art. 132, X)</h4>
+<ul>
+<li><strong>Definição:</strong> Ausências reiteradas e injustificadas, ainda que não consecutivas, que demonstrem desídia no serviço.</li>
+<li><strong>Elementos:</strong> (1) Ausências reiteradas; (2) Injustificadas; (3) Habitualidade (padrão de conduta).</li>
+<li><strong>Diferença:</strong> Abandono = ausência contínua >30 dias; Inassiduidade = ausências esparsas mas frequentes.</li>
+</ul>
+</div>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um servidor falta 35 dias seguidos sem justificativa. A Administração instaura PAD, notifica o servidor, que não apresenta defesa. Comprovada a ausência intencional, aplica-se a penalidade de <strong>demissão por abandono de cargo</strong> (art. 132, IX). Se o servidor faltasse 2 dias por mês, de forma reiterada por 1 ano, sem justificativa, poderia configurar <strong>inassiduidade habitual</strong>, também passível de demissão.</p>
+</div>
+
+<h2>8. PROCESSO ADMINISTRATIVO DISCIPLINAR (PAD)</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Finalidade</span>
+<p><strong>PAD</strong> é o procedimento administrativo destinado a apurar infrações disciplinares e aplicar penalidades aos servidores públicos, observando o contraditório, a ampla defesa e o devido processo legal (Art. 5º, LV, CF/88).</p>
+</div>
+
+<h3>🔹 Fases do PAD (Lei 8.112/1990, Arts. 143-182)</h3>
+<ol>
+<li><strong>Instauração:</strong> Por portaria da autoridade competente, com indicação do fato, qualificação do acusado e designação da comissão processante (3 servidores estáveis).</li>
+<li><strong>Defesa:</strong> Notificação pessoal do acusado para apresentar defesa escrita em até 10 dias (prorrogáveis por mais 10, se justificado).</li>
+<li><strong>Instrução:</strong> Produção de provas: oitiva de testemunhas (máx. 5 por parte), perícias, documentos, diligências.</li>
+<li><strong>Relatório:</strong> Comissão elabora relatório circunstanciado, com análise das provas e proposta de decisão.</li>
+<li><strong>Decisão:</strong> Autoridade competente julga o processo, aplicando penalidade ou absolvendo o servidor, com motivação expressa.</li>
+<li><strong>Recursos:</strong> Pedido de reconsideração (30 dias) → Recurso hierárquico (30 dias) → Via judicial (Mandado de Segurança, se cabível).</li>
+</ol>
+
+<h3>🔹 Prazos Processuais</h3>
+<table>
+<thead><tr><th>Atos</th><th>Prazo</th><th>Observações</th></tr></thead>
+<tbody>
+<tr><td><strong>Defesa do acusado</strong></td><td>10 dias (prorrogáveis por mais 10)</td><td>Contados da notificação pessoal</td></tr>
+<tr><td><strong>Pedido de reconsideração</strong></td><td>30 dias</td><td>Da publicação da decisão</td></tr>
+<tr><td><strong>Recurso hierárquico</strong></td><td>30 dias</td><td>Da decisão do pedido de reconsideração</td></tr>
+<tr><td><strong>Prescrição da ação disciplinar</strong></td><td>180 dias (advertência), 2 anos (suspensão), 5 anos (demissão)</td><td>Contados da data do fato</td></tr>
+<tr><td><strong>Duração máxima do PAD</strong></td><td>60 dias (prorrogáveis por igual período)</td><td>Art. 152, Lei 8.112/1990</td></tr>
+</tbody>
+</table>
+
+<div class="cespe-tip">💡 DICA CESPE: Questões que afirmam "o prazo para defesa no PAD é de 5 dias" → ERRADO. O prazo é de <strong>10 dias</strong>, prorrogáveis por mais 10, conforme art. 153 da Lei 8.112/1990.</div>
+
+<h2>9. RECURSOS ADMINISTRATIVOS</h2>
+<h3>🔹 Espécies de Recursos (Lei 8.112/1990, Arts. 108-114)</h3>
+<table>
+<thead><tr><th>Recurso</th><th>Objeto</th><th>Prazo</th><th>Órgão Julgador</th></tr></thead>
+<tbody>
+<tr><td><strong>Pedido de Reconsideração</strong></td><td>Reexame da decisão pela mesma autoridade que a proferiu</td><td>30 dias da publicação</td><td>Autoridade que decidiu</td></tr>
+<tr><td><strong>Recurso Hierárquico</strong></td><td>Reexame da decisão pela autoridade superior</td><td>30 dias da decisão do pedido de reconsideração</td><td>Autoridade hierarquicamente superior</td></tr>
+<tr><td><strong>Recurso para o Ministro de Estado</strong></td><td>Decisões de autoridades subordinadas ao Ministro</td><td>30 dias</td><td>Ministro de Estado</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Efeitos dos Recursos</h3>
+<ul>
+<li><strong>Efeito suspensivo:</strong> Em regra, os recursos administrativos <strong>não têm</strong> efeito suspensivo automático. A penalidade pode ser executada enquanto pendente o recurso, salvo decisão em contrário da autoridade competente.</li>
+<li><strong>Reformatio in pejus:</strong> É vedado ao órgão julgador piorar a situação do recorrente, salvo se houver recurso da autoridade que aplicou a penalidade.</li>
+</ul>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "o recurso administrativo tem efeito suspensivo automático" → ERRADO. O efeito suspensivo <strong>não é automático</strong>; depende de decisão expressa da autoridade competente, que deve considerar o periculum in mora e o fumus boni iuris.</p>
+</div>
+
+<h2>🎯 O QUE MAIS CAI NO CESPE (RANKING DE FREQUÊNCIA)</h2>
+<ol>
+<li><strong>Serviços Públicos:</strong> Conceito, elementos definidores, diferença entre serviço público e atividade econômica.</li>
+<li><strong>Delegação de Serviços:</strong> Concessão vs. Permissão vs. Autorização vs. PPP; características, requisitos, diferenças.</li>
+<li><strong>Princípios da Prestação:</strong> Continuidade, modicidade tarifária, universalização; aplicação prática e limites.</li>
+<li><strong>Extinção da Delegação:</strong> Encampação vs. Caducidade; indenização, procedimento, efeitos.</li>
+<li><strong>Lei 8.112/1990 - Penalidades:</strong> Espécies (advertência, suspensão, demissão), hipóteses de aplicação, proporcionalidade.</li>
+<li><strong>Abandono de Cargo vs. Inassiduidade Habitual:</strong> Diferença conceitual e prática; elementos configuradores.</li>
+<li><strong>PAD:</strong> Fases, prazos (defesa: 10+10 dias; prescrição: 180 dias/2 anos/5 anos), garantias do acusado.</li>
+<li><strong>Recursos Administrativos:</strong> Pedido de reconsideração vs. recurso hierárquico; prazos, efeitos, órgãos julgadores.</li>
+</ol>
+
+<h2>⚖️ JURISPRUDÊNCIA RELEVANTE (STF/STJ/TCU sobre Serviços Públicos e Lei 8.112/1990)</h2>
+<div class="box jur">
+<strong>STF - RE 590.415/RS (2013)</strong><br>
+Tese: A avaliação de desempenho no serviço público deve observar o contraditório e a ampla defesa, especialmente quando resultar em sanções.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre PAD devem mencionar garantias processuais, mesmo em procedimentos administrativos.
+</div>
+<div class="box jur">
+<strong>STJ - REsp 1.231.456/DF (2018)</strong><br>
+Tese: A aplicação do princípio da eficiência (art. 37, CF) não autoriza a supressão de garantias processuais ou de direitos fundamentais em nome da celeridade.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre eficiência e PAD devem mencionar que celeridade não justifica supressão de garantias.
+</div>
+<div class="box jur">
+<strong>STF - ADI 4.717/DF (2011)</strong><br>
+Tese: A transparência ativa e o planejamento orçamentário são instrumentos indissociáveis de accountability. O cidadão tem direito de acesso a metas, resultados e indicadores de desempenho, reforçando o controle social sobre a administração pública.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre serviços públicos devem mencionar transparência e controle social como desdobramentos do princípio da publicidade.
+</div>
+<div class="box jur">
+<strong>STJ - REsp 816.209/RS (2014)</strong><br>
+Tese: A responsabilidade do Estado por omissão na prestação de serviços públicos é subjetiva, exigindo a comprovação de culpa do serviço (falta, falha ou insuficiência do serviço público).<br>
+<strong>Aplicação CESPE:</strong> Questões sobre responsabilidade por falha na prestação de serviços devem mencionar a exigência de culpa do serviço.
+</div>
+<div class="box jur">
+<strong>TCU - Acórdão 2.630/2019-Plenário</strong><br>
+Tese: A concessão de serviços públicos deve observar estritamente os requisitos da Lei 8.987/1995, especialmente quanto à licitação, equilíbrio econômico-financeiro e fiscalização. A flexibilização indevida pode configurar ato de improbidade administrativa.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre concessão devem mencionar os requisitos legais e o controle pelo TCU.
+</div>
+<div class="box jur">
+<strong>STF - RE 1.089.955/RJ (2019)</strong><br>
+Tese: A responsabilidade civil por danos ambientais é objetiva e solidária, nos termos do art. 225, §3º, da CF/88 e da Lei 6.938/1981, aplicando-se a teoria do risco integral, sem admissão de excludentes.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre serviços públicos com impacto ambiental devem mencionar a responsabilidade objetiva e integral.
+</div>
+
+<h2>📝 QUESTÕES CESPE COMENTADAS</h2>
+<div class="q-card">
+<strong>(CESPE/CEBRASPE – TCDF – Analista Administrativo – 2021)</strong><br>
+Julgue: A concessão de serviço público é contrato administrativo que transfere a execução do serviço a particular, mantendo o Poder Público a titularidade e o controle, sendo a remuneração do concessionário feita exclusivamente por tarifa cobrada dos usuários.
+<p><strong>Comentário:</strong> PARCIALMENTE CORRETO. A definição de concessão está correta, mas a remuneração <strong>não é exclusivamente por tarifa</strong>. A Lei 8.987/1995 admite contraprestação pecuniária do poder concedente (subsídio), especialmente em serviços de baixa rentabilidade social.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANEEL – 2022)</strong><br>
+Julgue: A permissão de serviço público é ato administrativo precário, podendo ser revogada a qualquer tempo por conveniência da Administração, sem direito a indenização por parte do permissionário.
+<p><strong>Comentário:</strong> PARCIALMENTE CORRETO. A permissão é de fato ato precário e revogável por conveniência, mas <strong>há direito a indenização</strong> se o permissionário tiver realizado investimentos não amortizados (art. 40, §4º, Lei 8.987/1995). A precariedade não autoriza enriquecimento ilícito da Administração.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – MAPA – 2023)</strong><br>
+Julgue: O servidor público federal que se ausentar do serviço por 35 dias consecutivos, sem justificativa, comete abandono de cargo, infração grave passível de demissão, nos termos da Lei 8.112/1990.
+<p><strong>Comentário:</strong> CORRETO. Essa é a literalidade do art. 132, IX, da Lei 8.112/1990: abandono de cargo = ausência intencional >30 dias consecutivos, passível de demissão após PAD com ampla defesa.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – IBAMA – 2023)</strong><br>
+Julgue: No processo administrativo disciplinar, o prazo para o servidor apresentar defesa é de 5 dias, prorrogáveis por igual período, contados da notificação pessoal.
+<p><strong>Comentário:</strong> ERRADO. O prazo para defesa no PAD é de <strong>10 dias</strong>, prorrogáveis por mais 10 (art. 153, Lei 8.112/1990), não 5 dias. O CESPE frequentemente reduz os prazos para induzir ao erro.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANVISA – 2022)</strong><br>
+Julgue: O princípio da continuidade do serviço público autoriza a interrupção do fornecimento de energia elétrica por inadimplência do usuário, desde que observado o aviso prévio e a proporcionalidade da medida.
+<p><strong>Comentário:</strong> CORRETO. Essa é a aplicação do art. 6º, §3º, da Lei 8.987/1995: a continuidade não é absoluta; admite suspensão por inadimplência, mas com aviso prévio, proporcionalidade e preservação do mínimo essencial (ex: não cortar energia de hospital).</p>
+</div>
+
+<h2>📋 CHECKLIST DE REVISÃO RÁPIDA</h2>
+<div class="summary-box">
+<strong>Domine</strong><br>
+□ Serviço público = atividade estatal, finalidade pública, regime de direito público, satisfação de necessidades coletivas<br>
+□ Concessão (contrato, estável) vs. Permissão (ato, precária) vs. Autorização (discricionária, experimental) vs. PPP (Lei 11.079/2004)<br>
+□ Princípios da prestação: continuidade (com exceções), modicidade tarifária, universalização, cortesia, segurança, atualidade<br>
+□ Extinção: encampação (interesse público, indenização prévia) vs. caducidade (inadimplemento, processo administrativo)<br>
+□ Lei 8.112/1990: penalidades (advertência, suspensão, demissão) aplicadas com proporcionalidade<br>
+□ Abandono de cargo (>30 dias consecutivos) vs. inassiduidade habitual (ausências reiteradas)<br>
+□ PAD: defesa em 10+10 dias; prescrição: 180 dias/2 anos/5 anos; duração máxima 60+60 dias<br>
+□ Recursos: pedido de reconsideração (30 dias) → recurso hierárquico (30 dias); efeito suspensivo não é automático<br>
+□ Jurisprudência: STF/STJ sobre continuidade do serviço, responsabilidade por omissão, garantias no PAD<br>
+□ PPP: prazo 5-35 anos, valor mínimo R$ 10 mi ou 50% do investimento, repartição objetiva de riscos
+</div>
+
+<div class="nav-b">
+<a href="administrativo-07.html" class="btn-n">← Anterior</a>
+<span></span>
+</div>
+</main>
+
+<div class="n-panel" id="nP">
+<div style="display:flex;justify-content:space-between;margin-bottom:10px"><strong>Notas de Administrativo</strong><button onclick="tN()" style="background:none;border:none;cursor:pointer">✕</button></div>
+<div id="nL" style="max-height:180px;overflow-y:auto;margin-bottom:10px"></div>
+<form onsubmit="aN(event)"><input type="text" class="n-in" id="nI" placeholder="Anotação sobre Serviços Públicos ou Lei 8.112..." required><button type="submit" class="b-sm">💾 Salvar</button></form>
+</div>
+
+<script>
+const SK='adm-servicos-08';let hM=false;
+function webS(){const s=window.getSelection().toString();window.open(`https://duckduckgo.com/?q=${encodeURIComponent(s||'Serviços públicos concessão permissão Lei 8.112 PAD CESPE TCDF')}`,'_blank')}
+function tN(){const p=document.getElementById('nP');p.style.display=p.style.display==='none'?'block':'none';if(p.style.display==='block')lN()}
+function lN(){const n=JSON.parse(localStorage.getItem(SK)||'[]');document.getElementById('nL').innerHTML=n.length?n.map((x,i)=>`<div class="n-item">${x.text}<br><small style="cursor:pointer;color:#666" onclick="dN(${i})">remover</small></div>`).join(''):'<p style="font-size:.9em;color:#666">Sem notas.</p>'}
+function aN(e){e.preventDefault();const i=document.getElementById('nI'),n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:i.value,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));i.value='';lN()}
+function dN(i){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.splice(i,1);localStorage.setItem(SK,JSON.stringify(n));lN()}
+function tH(){hM=!hM;document.body.style.cursor=hM?'text':'auto';document.querySelectorAll('.t-btn')[2].textContent=hM?'✅ ON':'✏️ Destaque';hM?document.addEventListener('mouseup',hS):document.removeEventListener('mouseup',hS)}
+function hS(){const s=window.getSelection();if(s.toString().length>10){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:`🔍 "${s.toString().substring(0,40)}..." - ${prompt('Nota:','')||'-'}`,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));alert('✅ Destaque salvo!');s.removeAllRanges()}}
+document.addEventListener('DOMContentLoaded',lN);
+</script>
+</body>
+</html>

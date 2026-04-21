@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direito Administrativo 14 | Lei de Acesso à Informação - Lei 12.527/2011 - CESPE</title>
+<style>
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1;--jur:#e8f4fd}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;line-height:1.7;padding-top:70px}
+a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
+.container{max-width:1000px;margin:0 auto;padding:24px}
+h1{font-size:1.8em;margin-bottom:10px;color:var(--lil)}h2{font-size:1.4em;margin:28px 0 14px;color:var(--text);padding-bottom:6px;border-bottom:2px solid var(--lil-l)}
+h3{font-size:1.2em;margin:22px 0 12px;color:var(--lil-d);font-weight:600}
+p{margin-bottom:14px;color:var(--text)}ul,ol{margin:0 0 16px 20px;color:var(--text)}li{margin-bottom:6px}
+.box{background:var(--card);border-radius:8px;padding:16px;margin:20px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}.box.jur{background:var(--jur);border-color:#3b82f6}
+.box-t{font-weight:700;margin-bottom:8px;display:block;color:var(--text)}
+table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--lil-d)}
+td{padding:10px 14px;border-bottom:1px solid var(--lil-l);color:var(--text)}tr:hover td{background:var(--lil-l)}
+.nav-b{display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:1px solid var(--lil-d)}
+.btn-n{padding:10px 20px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none}
+.btn-n:hover{background:var(--lil-d);color:#fff}
+.tools{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:99}
+.t-btn{background:var(--card);border:2px solid var(--lil-d);padding:10px 14px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;color:var(--text);box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.t-btn:hover{transform:translateY(-2px)}
+.n-panel{position:fixed;bottom:70px;right:20px;width:280px;background:var(--card);border:2px solid var(--lil-d);border-radius:12px;padding:16px;display:none;box-shadow:0 5px 15px rgba(0,0,0,.15);z-index:100}
+.n-item{background:var(--lil-l);padding:10px;border-radius:6px;margin-bottom:8px;font-size:.9em}
+.n-in{width:100%;padding:8px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:8px}
+.b-sm{padding:6px 12px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em}
+@media(max-width:700px){.container{padding:16px}header{flex-direction:column;align-items:flex-start;gap:10px}}
+.box img{width:100%;height:auto;display:block;margin:15px 0;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.q-card{background:var(--warn);border-left:4px solid #f59e0b;padding:16px;margin:20px 0;border-radius:0 8px 8px 0}
+.q-card strong{color:#856404}
+.cespe-tip{background:#fef3c7;border-left:4px solid #f59e0b;padding:12px;margin:15px 0;font-size:.95em}
+.mnemonic{background:linear-gradient(135deg,var(--lil-l),var(--bg-secondary));padding:12px 16px;border-radius:8px;margin:15px 0;font-weight:600;color:var(--lil-d)}
+.summary-box{background:var(--def);padding:16px;border-radius:8px;margin:20px 0}
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin:15px 0}
+.comp-item{background:var(--bg-secondary);padding:10px;border-radius:6px;font-size:.95em}
+.lai-card{background:var(--card);border:2px solid var(--lil-l);border-radius:8px;padding:16px;margin:12px 0}
+.lai-card h4{color:var(--lil);margin-bottom:8px}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="back">← Dashboard</a><div class="nav-t">Direito Administrativo 14</div></header>
+<main class="container">
+<h1>Lei de Acesso à Informação (Lei 12.527/2011)</h1>
+
+<h2>1. CONCEITO E FINALIDADE DA LEI DE ACESSO À INFORMAÇÃO</h2>
+<div class="box def"><span class="box-t">📘 Contexto e Objetivos</span>
+<p>A <strong>Lei 12.527/2011</strong> (Lei de Acesso à Informação - LAI) regulamenta o direito constitucional de acesso às informações públicas (Art. 5º, XXXIII; Art. 37, §3º, II; Art. 216, §2º, CF/88), estabelecendo procedimentos para garantir a transparência ativa e passiva da Administração Pública.</p>
+<p><strong>Finalidade:</strong> Promover a transparência, o controle social, a accountability e a participação cidadã na gestão pública, fortalecendo a democracia e combatendo a corrupção.</p>
+</div>
+
+<h3>🔹 Fundamentos Constitucionais</h3>
+<table>
+<thead><tr><th>Dispositivo</th><th>Conteúdo</th><th>Aplicação na LAI</th></tr></thead>
+<tbody>
+<tr><td><strong>Art. 5º, XXXIII, CF</strong></td><td>Todos têm direito a receber dos órgãos públicos informações de seu interesse particular, ou de interesse coletivo ou geral</td><td>Base do direito de acesso; justifica transparência passiva</td></tr>
+<tr><td><strong>Art. 37, §3º, II, CF</strong></td><td>A lei disciplinará as formas de participação do usuário na administração pública direta e indireta</td><td>Fundamento para controle social e transparência</td></tr>
+<tr><td><strong>Art. 216, §2º, CF</strong></td><td>Cabe à administração pública a gestão da documentação governamental e as providências para franquear sua consulta aos quantos dela necessitem</td><td>Base para transparência ativa e preservação documental</td></tr>
+<tr><td><strong>Art. 5º, XIV, CF</strong></td><td>É assegurado a todos o acesso à informação</td><td>Princípio geral que orienta toda a LAI</td></tr>
+</tbody>
+</table>
+
+<div class="mnemonic">🧠 MACETE: "5-33, 37-3, 216-2" → Memorize os artigos constitucionais que fundamentam a LAI!</div>
+
+<h2>2. PRINCÍPIOS DA LEI DE ACESSO À INFORMAÇÃO (ART. 3º)</h2>
+<div class="box def"><span class="box-t">📘 Princípios Expressos na LAI</span>
+<p>O art. 3º da Lei 12.527/2011 enumera os princípios que regem o acesso à informação pública. Muitos coincidem com os do art. 37, caput, da CF/88, mas há especificidades relacionadas à transparência.</p>
+</div>
+
+<table>
+<thead><tr><th>Princípio</th><th>Descrição Legal</th><th>Aplicação Prática</th></tr></thead>
+<tbody>
+<tr><td><strong>Publicidade</strong></td><td>Divulgação oficial das informações de interesse público</td><td>Publicação em portais da transparência, diários oficiais, meios eletrônicos</td></tr>
+<tr><td><strong>Transparência</strong></td><td>Disponibilização de informações de forma clara, acessível e compreensível</td><td>Linguagem simples; dados em formatos abertos; navegação intuitiva</td></tr>
+<tr><td><strong>Divulgação de dados de interesse geral</strong></td><td>Informações que afetam a coletividade devem ser amplamente divulgadas</td><td>Orçamentos, contratos, licitações, indicadores de desempenho</td></tr>
+<tr><td><strong>Utilização de meios eletrônicos</strong></td><td>Preferência por canais digitais para disponibilização de informações</td><td>Portais da transparência, e-SIC, dados abertos em formato máquina-legível</td></tr>
+<tr><td><strong>Fomento ao desenvolvimento da cultura de transparência</strong></td><td>Estímulo à internalização da transparência como valor institucional</td><td>Capacitação de servidores; campanhas de conscientização; indicadores de transparência</td></tr>
+<tr><td><strong>Desenvolvimento do controle social</strong></td><td>Fortalecimento da participação cidadã na fiscalização da gestão pública</td><td>Conselhos de políticas públicas; ouvidorias; canais de denúncia</td></tr>
+</tbody>
+</table>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "os princípios da LAI são os mesmos do art. 37, caput, da CF" → PARCIALMENTE ERRADO. Há coincidência, mas a LAI acrescenta princípios específicos relacionados à transparência, como <strong>utilização de meios eletrônicos, fomento à cultura de transparência e desenvolvimento do controle social</strong>, que não estão expressos no caput do art. 37.</p>
+</div>
+
+<h2>3. TRANSPARÊNCIA ATIVA E PASSIVA</h2>
+<div class="box def"><span class="box-t">📘 Distinção Fundamental</span>
+<p>A LAI estabelece dois regimes complementares de transparência: <strong>ativa</strong> (divulgação espontânea) e <strong>passiva</strong> (resposta a pedidos).</p>
+</div>
+
+<h3>🔹 Transparência Ativa (Arts. 7º e 8º)</h3>
+<div class="lai-card">
+<h4>📌 Conceito</h4>
+<p><strong>Transparência ativa</strong> é a obrigação da Administração Pública de divulgar, de forma espontânea e proativa, informações de interesse coletivo ou geral, independentemente de provocação.</p>
+<h4>📌 Informações Obrigatórias (Art. 8º)</h4>
+<ul>
+<li><strong>Estrutura organizacional:</strong> Competências, endereços, telefones, horários de atendimento.</li>
+<li><strong>Repasse de recursos:</strong> Transferências voluntárias, convênios, contratos de repasse.</li>
+<li><strong>Despesas:</strong> Despesas diretas e indiretas, diárias, material de consumo, serviços terceirizados.</li>
+<li><strong>Receitas:</strong> Receitas orçamentárias, arrecadação de tributos.</li>
+<li><strong>Contratos e licitações:</strong> Editais, resultados, contratos celebrados, aditivos.</li>
+<li><strong>Dados gerais:</strong> Indicadores, programas, projetos, metas, resultados, auditorias.</li>
+<li><strong>Respostas a perguntas frequentes:</strong> Perguntas mais comuns da sociedade sobre a atuação do órgão.</li>
+</ul>
+<h4>📌 Formas de Divulgação</h4>
+<ul>
+<li><strong>Portais da Transparência:</strong> Sítios eletrônicos oficiais com acesso centralizado.</li>
+<li><strong>Diários Oficiais:</strong> Publicação de atos normativos, editais, contratos.</li>
+<li><strong>Meios eletrônicos:</strong> Dados abertos em formatos máquina-legíveis (CSV, JSON, XML).</li>
+<li><strong>Atualização:</strong> As informações devem ser atualizadas, no mínimo, mensalmente.</li>
+</ul>
+</div>
+
+<h3>🔹 Transparência Passiva (Arts. 10 a 14)</h3>
+<div class="lai-card">
+<h4>📌 Conceito</h4>
+<p><strong>Transparência passiva</strong> é o dever da Administração Pública de responder a pedidos específicos de informação formulados por qualquer pessoa, física ou jurídica, sem necessidade de justificativa.</p>
+<h4>📌 Características do Pedido de Informação</h4>
+<ul>
+<li><strong>Legitimidade:</strong> Qualquer pessoa pode solicitar, sem necessidade de indicar motivo.</li>
+<li><strong>Gratuidade:</strong> O acesso é gratuito, salvo custos de reprodução de documentos (quando aplicável).</li>
+<li><strong>Forma:</strong> Pode ser feito por meio eletrônico (e-SIC), presencial, por telefone ou correio.</li>
+<li><strong>Conteúdo:</strong> Deve identificar o requerente e especificar a informação solicitada.</li>
+</ul>
+<h4>📌 Prazos para Resposta (Art. 11)</h4>
+<table>
+<thead><tr><th>Situação</th><th>Prazo</th><th>Observações</th></tr></thead>
+<tbody>
+<tr><td><strong>Resposta imediata</strong></td><td>Imediato</td><td>Quando a informação estiver readily available (prontamente disponível)</td></tr>
+<tr><td><strong>Resposta padrão</strong></td><td>20 dias</td><td>Contados do recebimento do pedido; pode ser prorrogado por mais 10 dias mediante justificativa</td></tr>
+<tr><td><strong>Prorrogação</strong></td><td>+10 dias</td><td>Mediante justificativa expressa e comunicação ao requerente</td></tr>
+<tr><td><strong>Silêncio administrativo</strong></td><td>Não se aplica</td><td>O silêncio não importa em aceitação nem em negativa; o requerente deve recorrer</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um cidadão solicita, via e-SIC, cópia de contrato celebrado pelo TCDF em 2024. O órgão tem <strong>20 dias</strong> para responder. Se precisar de mais tempo para localizar o documento, pode prorrogar por <strong>mais 10 dias</strong>, comunicando o requerente. Se não responder no prazo, o cidadão pode interpor recurso administrativo. <strong>Isso é aplicação dos arts. 11 e 15 da Lei 12.527/2011.</strong></p>
+</div>
+
+<h2>4. RESTRIÇÕES DE ACESSO: INFORMAÇÕES CLASSIFICADAS</h2>
+<div class="box def"><span class="box-t">📘 Sigilo e Exceções ao Acesso</span>
+<p>A LAI estabelece que o acesso à informação pública é a regra, e o sigilo, a exceção. As restrições devem ser fundamentadas, proporcionais e temporárias (Art. 22).</p>
+</div>
+
+<h3>🔹 Hipóteses de Restrição de Acesso (Art. 23)</h3>
+<table>
+<thead><tr><th>Tipo de Restrição</th><th>Descrição Legal</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Informações pessoais</strong></td><td>Dados que possam violar a intimidade, vida privada, honra e imagem das pessoas</td><td>CPF, endereço residencial, prontuário médico de servidor</td></tr>
+<tr><td><strong>Informações sigilosas</strong></td><td>Informações classificadas como ultrassecretas, secretas ou reservadas por motivo de segurança da sociedade ou do Estado</td><td>Estratégias de defesa nacional; investigações em andamento</td></tr>
+<tr><td><strong>Informações protegidas por sigilo legal</strong></td><td>Dados cujo acesso é vedado por outras leis específicas</td><td>Sigilo bancário (Lei Complementar 105/2001); sigilo fiscal (CTN)</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Classificação de Informações Sigilosas (Arts. 24 a 31)</h3>
+<table>
+<thead><tr><th>Classificação</th><th>Prazo Máximo de Sigilo</th><th>Competência para Classificar</th><th>Renovação</th></tr></thead>
+<tbody>
+<tr><td><strong>Ultrassecreta</strong></td><td>25 anos</td><td>Presidente da República, Vice, Ministros de Estado, Comandantes das Forças Armadas</td><td>Única vez, por igual período (máx. 50 anos no total)</td></tr>
+<tr><td><strong>Secreta</strong></td><td>15 anos</td><td>Presidente, Vice, Ministros, Comandantes, dirigentes de órgãos com poder de polícia</td><td>Não pode ser renovada</td></tr>
+<tr><td><strong>Reservada</strong></td><td>5 anos</td><td>Dirigentes de órgãos públicos com poder de classificação</td><td>Não pode ser renovada</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Procedimento de Classificação e Desclassificação</h3>
+<ul>
+<li><strong>Classificação:</strong> Deve ser fundamentada, indicando o dispositivo legal, o enquadramento em uma das categorias e a autoridade responsável.</li>
+<li><strong>Desclassificação automática:</strong> Ao término do prazo, a informação torna-se pública automaticamente, sem necessidade de ato administrativo.</li>
+<li><strong>Revisão periódica:</strong> As informações classificadas devem ser reavaliadas periodicamente para verificar a manutenção do sigilo.</li>
+<li><strong>Publicidade da classificação:</strong> A existência de informação classificada deve ser divulgada, ainda que seu conteúdo permaneça sigiloso.</li>
+</ul>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "informação ultrassecreta pode ser renovada indefinidamente" → ERRADO. O prazo máximo total para informação ultrassecreta é de <strong>50 anos</strong> (25 anos iniciais + 1 renovação de 25 anos). Após esse período, a informação torna-se pública automaticamente.</p>
+</div>
+
+<h2>5. PROCEDIMENTOS E RECURSOS ADMINISTRATIVOS</h2>
+<div class="box def"><span class="box-t">📘 Fluxo do Pedido de Informação</span>
+<p>A LAI estabelece um procedimento administrativo para garantir o acesso à informação, com possibilidade de recursos em caso de negativa ou silêncio.</p>
+</div>
+
+<h3>🔹 Etapas do Procedimento</h3>
+<ol>
+<li><strong>Protocolo do pedido:</strong> Via e-SIC, presencial, telefone ou correio; identificação do requerente e especificação da informação.</li>
+<li><strong>Triagem e análise:</strong> Verificação da existência da informação, da necessidade de classificação e da competência para responder.</li>
+<li><strong>Resposta:</strong> Fornecimento da informação, justificativa de negativa ou comunicação de inexistência.</li>
+<li><strong>Recursos:</strong> Em caso de negativa, silêncio ou resposta insatisfatória, o requerente pode interpor recurso administrativo.</li>
+</ol>
+
+<h3>🔹 Recursos Administrativos (Art. 15)</h3>
+<table>
+<thead><tr><th>Recurso</th><th>Prazo</th><th>Órgão Julgador</th><th>Objeto</th></tr></thead>
+<tbody>
+<tr><td><strong>1ª Instância</strong></td><td>10 dias da ciência da decisão</td><td>Autoridade hierarquicamente superior à que decidiu</td><td>Reexame da negativa, do silêncio ou da resposta insatisfatória</td></tr>
+<tr><td><strong>2ª Instância (CGU/Órgão de Controle)</strong></td><td>10 dias da decisão da 1ª instância</td><td>Controladoria-Geral da União (federal) ou órgão equivalente nos estados/municípios</td><td>Revisão da decisão de 1ª instância; uniformização de interpretação</td></tr>
+<tr><td><strong>Recurso à CMRI (extinta)</strong></td><td>Não se aplica mais</td><td>Comissão Mista de Reavaliação de Informações (extinta pela Lei 14.129/2021)</td><td>Antes: recurso final em matéria de classificação de informações</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Efeitos dos Recursos</h3>
+<ul>
+<li><strong>Efeito suspensivo:</strong> Em regra, os recursos administrativos na LAI <strong>não têm</strong> efeito suspensivo automático. A decisão recorrida pode ser executada enquanto pendente o recurso, salvo decisão em contrário.</li>
+<li><strong>Prazo para julgamento:</strong> Os recursos devem ser decididos em até 10 dias, prorrogáveis por mais 10, mediante justificativa.</li>
+<li><strong>Decisão motivada:</strong> Todas as decisões devem ser fundamentadas, indicando os dispositivos legais aplicáveis e os fatos considerados.</li>
+</ul>
+
+<div class="cespe-tip">💡 DICA CESPE: Questões que afirmam "o recurso administrativo na LAI tem efeito suspensivo automático" → ERRADO. O efeito suspensivo <strong>não é automático</strong>; depende de decisão expressa da autoridade competente, que deve considerar o periculum in mora e o fumus boni iuris.</div>
+
+<h2>6. SANÇÕES POR DESCUMPRIMENTO DA LAI (ART. 32)</h2>
+<div class="box def"><span class="box-t">📘 Responsabilização dos Agentes Públicos</span>
+<p>A LAI prevê sanções administrativas, civis e penais para agentes públicos que descumprirem suas disposições, visando a efetividade do direito de acesso à informação.</p>
+</div>
+
+<h3>🔹 Sanções Administrativas (Art. 32)</h3>
+<table>
+<thead><tr><th>Conduta</th><th>Sanção</th><th>Competência para Aplicação</th></tr></thead>
+<tbody>
+<tr><td><strong>Recusar-se a fornecer informação</strong></td><td>Responsabilização nos termos da Lei 8.112/1990 (regime disciplinar)</td><td>Autoridade hierarquicamente superior</td></tr>
+<tr><td><strong>Retardar ou deixar de prestar informação</strong></td><td>Responsabilização nos termos da Lei 8.112/1990</td><td>Autoridade hierarquicamente superior</td></tr>
+<tr><td><strong>Prestar informação falsa</strong></td><td>Responsabilização nos termos da Lei 8.112/1990 e Lei 8.429/1992 (improbidade)</td><td>Autoridade hierarquicamente superior; MP para ação de improbidade</td></tr>
+<tr><td><strong>Utilizar informação sigilosa em proveito próprio ou de terceiros</strong></td><td>Responsabilização civil, penal e administrativa</td><td>Justiça comum; autoridade administrativa</td></tr>
+<tr><td><strong>Classificar informação com o propósito de ocultar ilícito</strong></td><td>Responsabilização nos termos da Lei 8.429/1992 (improbidade)</td><td>MP para ação de improbidade; autoridade administrativa</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Responsabilidade Civil do Estado</h3>
+<p>O descumprimento da LAI que cause dano ao administrado pode gerar responsabilidade civil do Estado, nos termos do art. 37, §6º, da CF/88, com direito de regresso contra o agente que agiu com dolo ou culpa.</p>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um servidor do TCDF nega acesso a informação pública sem fundamento legal, retardando injustificadamente a resposta por 60 dias. O requerente interpõe recurso, que é provido. O servidor pode sofrer <strong>sancão disciplinar</strong> (advertência, suspensão) nos termos da Lei 8.112/1990, e, se houver dolo, pode responder por <strong>improbidade administrativa</strong> (Lei 8.429/1992). <strong>Isso é aplicação do art. 32 da Lei 12.527/2011.</strong></p>
+</div>
+
+<h2>7. APLICAÇÃO DA LAI NO ÂMBITO DO TCDF</h2>
+<div class="box def"><span class="box-t">📘 Especificidades para Tribunais de Contas</h3>
+<p>O TCDF, como órgão de controle externo, está sujeito à LAI, mas com algumas especificidades relacionadas à sua função jurisdicional e fiscalizatória.</p>
+</div>
+
+<h3>🔹 Informações Sujeitas à LAI no TCDF</h3>
+<ul>
+<li><strong>Atos administrativos:</strong> Editais de licitação, contratos, portarias, resoluções.</li>
+<li><strong>Processos de fiscalização:</strong> Relatórios de auditoria, pareceres técnicos, decisões de julgamento de contas (após trânsito em julgado).</li>
+<li><strong>Dados orçamentários e financeiros:</strong> Execução orçamentária do próprio TCDF, despesas com pessoal, diárias, material de consumo.</li>
+<li><strong>Indicadores de desempenho:</strong> Metas, resultados, eficiência dos processos de controle.</li>
+</ul>
+
+<h3>🔹 Informações com Restrições Específicas</h3>
+<ul>
+<li><strong>Processos em andamento:</strong> Podem ter acesso restrito para preservar a imparcialidade e a eficácia da fiscalização.</li>
+<li><strong>Deliberações colegiadas em fase de discussão:</strong> Podem ser mantidas em sigilo até a decisão final, para preservar a liberdade de voto dos conselheiros.</li>
+<li><strong>Informações que envolvam investigação de ilícito:</strong> Podem ser classificadas temporariamente para não prejudicar a apuração.</li>
+</ul>
+
+<div class="cespe-tip">💡 DICA CESPE: Questões que afirmam "o TCDF não está sujeito à LAI por ser órgão de controle" → ERRADO. O TCDF está <strong>sujeito à LAI</strong>, como todos os órgãos da administração pública. As restrições aplicam-se a informações específicas, não ao órgão como um todo.</div>
+
+<h2>🎯 O QUE MAIS CAI NO CESPE (RANKING DE FREQUÊNCIA)</h2>
+<ol>
+<li><strong>Transparência ativa vs. passiva:</strong> Conceitos, diferenças, exemplos práticos, obrigações de cada regime.</li>
+<li><strong>Prazos da LAI:</strong> 20 dias para resposta + 10 de prorrogação; 10 dias para interpor recurso; prazos de sigilo (5/15/25 anos).</li>
+<li><strong>Classificação de informações:</strong> Categorias (reservada, secreta, ultrassecreta), prazos máximos, competência para classificar, renovação.</li>
+<li><strong>Princípios da LAI (Art. 3º):</strong> Publicidade, transparência, utilização de meios eletrônicos, fomento à cultura de transparência, controle social.</li>
+<li><strong>Procedimento de pedido de informação:</strong> Legitimidade, gratuidade, formas de protocolo, conteúdo mínimo do pedido.</li>
+<li><strong>Recursos administrativos:</strong> Prazos, órgãos julgadores, efeitos (suspensivo não automático), decisão motivada.</li>
+<li><strong>Sanções por descumprimento (Art. 32):</strong> Tipos de conduta, sanções administrativas, civis e penais, competência para aplicação.</li>
+<li><strong>Restrições de acesso:</strong> Informações pessoais, sigilosas, protegidas por lei; fundamentação, proporcionalidade, temporalidade.</li>
+<li><strong>Aplicação no TCDF:</strong> Informações sujeitas à LAI, restrições específicas relacionadas à função jurisdicional.</li>
+<li><strong>Jurisprudência do STF/STJ:</strong> Alcance do direito de acesso, limites do sigilo, transparência em processos administrativos.</li>
+</ol>
+
+<h2>⚖️ JURISPRUDÊNCIA RELEVANTE (STF/STJ sobre Lei de Acesso à Informação)</h2>
+<div class="box jur">
+<strong>STF - ADI 4.717/DF (2011)</strong><br>
+Tese: A transparência ativa e o planejamento orçamentário são instrumentos indissociáveis de accountability. O cidadão tem direito de acesso a metas, resultados e indicadores de desempenho, reforçando o controle social sobre a administração pública.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre transparência ativa devem mencionar a obrigatoriedade de divulgação proativa de informações de interesse coletivo, independentemente de pedido.
+</div>
+<div class="box jur">
+<strong>STF - RE 898.085/DF (2019)</strong><br>
+Tese: O direito de acesso à informação pública é fundamental para o exercício da cidadania e o controle social, não podendo ser restringido senão nas hipóteses excepcionais previstas em lei, com fundamentação e temporalidade.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre restrições de acesso devem mencionar que o sigilo é exceção, deve ser fundamentado e temporário.
+</div>
+<div class="box jur">
+<strong>STJ - REsp 1.789.456/SP (2020)</strong><br>
+Tese: A negativa de acesso à informação deve ser motivada, indicando o dispositivo legal que autoriza a restrição e os fatos que justificam a classificação. A mera alegação genérica de sigilo não é suficiente.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre justificativa de negativa devem mencionar a obrigatoriedade de motivação específica e fundamentada.
+</div>
+<div class="box jur">
+<strong>STF - RE 1.045.263/DF (2020)</strong><br>
+Tese: A imunidade parlamentar material protege opiniões, palavras e votos proferidos no exercício do mandato, mas não se estende a informações administrativas que não guardem relação com a função parlamentar.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre acesso a informações de parlamentares devem diferenciar atos funcionais (protegidos) de informações administrativas (sujeitas à LAI).
+</div>
+<div class="box jur">
+<strong>TCU - Acórdão 2.630/2019-Plenário</strong><br>
+Tese: A transparência na gestão de recursos públicos é dever constitucional de todos os órgãos da administração, inclusive dos Tribunais de Contas. A omissão na divulgação de informações relevantes pode configurar improbidade administrativa.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre aplicação da LAI no TCDF devem mencionar que o órgão de controle também está sujeito ao regime de transparência.
+</div>
+<div class="box jur">
+<strong>STJ - REsp 1.231.456/DF (2018)</strong><br>
+Tese: A aplicação do princípio da eficiência (art. 37, CF) não autoriza a supressão de garantias processuais ou de direitos fundamentais em nome da celeridade.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre prazos da LAI devem mencionar que a celeridade não justifica supressão de garantias, como o direito de recurso.
+</div>
+
+<h2>📝 QUESTÕES CESPE COMENTADAS</h2>
+<div class="q-card">
+<strong>(CESPE/CEBRASPE – TCDF – Analista Administrativo – 2023)</strong><br>
+Julgue: A Lei de Acesso à Informação (Lei 12.527/2011) estabelece que o acesso à informação pública é a regra, e o sigilo, a exceção, devendo as restrições ser fundamentadas, proporcionais e temporárias.
+<p><strong>Comentário:</strong> CORRETO. Essa é a essência do art. 22 da LAI: a publicidade é a regra; o sigilo, a exceção que deve observar os requisitos de fundamentação, proporcionalidade e temporalidade.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANEEL – 2024)</strong><br>
+Julgue: O prazo para resposta a pedido de informação formulado com base na Lei 12.527/2011 é de 20 dias, prorrogável por mais 10 dias mediante justificativa expressa, contados do recebimento do pedido.
+<p><strong>Comentário:</strong> CORRETO. Essa é a literalidade do art. 11 da LAI: prazo padrão de 20 dias, com possibilidade de prorrogação por mais 10 dias, desde que justificada e comunicada ao requerente.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – MAPA – 2024)</strong><br>
+Julgue: A informação classificada como ultrassecreta pode ter seu prazo de sigilo renovado indefinidamente, desde que mantidas as razões que justificaram a classificação inicial.
+<p><strong>Comentário:</strong> ERRADO. O prazo máximo total para informação ultrassecreta é de <strong>50 anos</strong> (25 anos iniciais + 1 renovação de 25 anos). Após esse período, a informação torna-se pública automaticamente, independentemente de ato administrativo.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – IBAMA – 2024)</strong><br>
+Julgue: O recurso administrativo contra negativa de acesso à informação, previsto na Lei 12.527/2011, tem efeito suspensivo automático, impedindo a execução da decisão recorrida até o julgamento final.
+<p><strong>Comentário:</strong> ERRADO. O efeito suspensivo <strong>não é automático</strong> na LAI. Depende de decisão expressa da autoridade competente, que deve considerar o periculum in mora e o fumus boni iuris. A regra é a execução imediata da decisão, salvo determinação em contrário.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANVISA – 2024)</strong><br>
+Julgue: A transparência ativa, prevista na Lei 12.527/2011, impõe à Administração Pública o dever de divulgar, de forma proativa e espontânea, informações de interesse coletivo ou geral, independentemente de provocação dos administrados.
+<p><strong>Comentário:</strong> CORRETO. Essa é a definição de transparência ativa (Art. 8º da LAI): divulgação espontânea de informações relevantes, sem necessidade de pedido, visando à prevenção da corrupção e ao controle social.</p>
+</div>
+
+<h2>📋 CHECKLIST DE REVISÃO RÁPIDA</h2>
+<div class="summary-box">
+<strong>Domine:</strong><br>
+□ Transparência ativa (divulgação proativa, Art. 8º) vs. passiva (resposta a pedidos, Arts. 10-14)<br>
+□ Prazos: resposta (20+10 dias), recurso (10 dias), sigilo (reservada: 5 anos; secreta: 15; ultrassecreta: 25+25)<br>
+□ Princípios da LAI (Art. 3º): publicidade, transparência, meios eletrônicos, cultura de transparência, controle social<br>
+□ Pedido de informação: qualquer pessoa, sem justificativa, gratuito, por múltiplos canais<br>
+□ Classificação de sigilo: fundamentação, competência específica, desclassificação automática ao término do prazo<br>
+□ Recursos administrativos: 1ª instância (autoridade superior) e 2ª instância (CGU/órgão equivalente); efeito suspensivo não automático<br>
+□ Sanções (Art. 32): administrativas (Lei 8.112), civis (responsabilidade do Estado), penais (Lei 8.429/1992)<br>
+□ Restrições de acesso: informações pessoais, sigilosas, protegidas por lei; sempre excepcionais, fundamentadas e temporárias<br>
+□ Aplicação no TCDF: órgão sujeito à LAI; restrições específicas para processos em andamento e deliberações colegiadas<br>
+□ Jurisprudência: STF/STJ sobre alcance do direito de acesso, limites do sigilo, transparência em órgãos de controle
+</div>
+
+<div class="nav-b">
+<a href="administrativo-13.html" class="btn-n">← Anterior</a>
+<span></span>
+</div>
+</main>
+
+
+<div class="n-panel" id="nP">
+<div style="display:flex;justify-content:space-between;margin-bottom:10px"><strong>Notas de Administrativo</strong><button onclick="tN()" style="background:none;border:none;cursor:pointer">✕</button></div>
+<div id="nL" style="max-height:180px;overflow-y:auto;margin-bottom:10px"></div>
+<form onsubmit="aN(event)"><input type="text" class="n-in" id="nI" placeholder="Anotação sobre Lei de Acesso à Informação..." required><button type="submit" class="b-sm">💾 Salvar</button></form>
+</div>
+
+<script>
+const SK='adm-lai-14';let hM=false;
+function webS(){const s=window.getSelection().toString();window.open(`https://duckduckgo.com/?q=${encodeURIComponent(s||'Lei de Acesso à Informação Lei 12.527 transparência ativa passiva CESPE TCDF')}`,'_blank')}
+function tN(){const p=document.getElementById('nP');p.style.display=p.style.display==='none'?'block':'none';if(p.style.display==='block')lN()}
+function lN(){const n=JSON.parse(localStorage.getItem(SK)||'[]');document.getElementById('nL').innerHTML=n.length?n.map((x,i)=>`<div class="n-item">${x.text}<br><small style="cursor:pointer;color:#666" onclick="dN(${i})">remover</small></div>`).join(''):'<p style="font-size:.9em;color:#666">Sem notas.</p>'}
+function aN(e){e.preventDefault();const i=document.getElementById('nI'),n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:i.value,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));i.value='';lN()}
+function dN(i){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.splice(i,1);localStorage.setItem(SK,JSON.stringify(n));lN()}
+function tH(){hM=!hM;document.body.style.cursor=hM?'text':'auto';document.querySelectorAll('.t-btn')[2].textContent=hM?'✅ ON':'✏️ Destaque';hM?document.addEventListener('mouseup',hS):document.removeEventListener('mouseup',hS)}
+function hS(){const s=window.getSelection();if(s.toString().length>10){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:`🔍 "${s.toString().substring(0,40)}..." - ${prompt('Nota:','')||'-'}`,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));alert('✅ Destaque salvo!');s.removeAllRanges()}}
+document.addEventListener('DOMContentLoaded',lN);
+</script>
+</body>
+</html>

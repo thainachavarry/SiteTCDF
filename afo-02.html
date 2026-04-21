@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AFO 02 | PPA, LDO, LOA e Créditos Adicionais - CESPE</title>
 <style>
-:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1}
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1;--jur:#e8f4fd}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;line-height:1.7;padding-top:70px}
 a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
 header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
 .back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
-.container{max-width:900px;margin:0 auto;padding:24px}
+.container{max-width:1000px;margin:0 auto;padding:24px}
 h1{font-size:1.8em;margin-bottom:10px;color:var(--lil)}h2{font-size:1.4em;margin:28px 0 14px;color:var(--text);padding-bottom:6px;border-bottom:2px solid var(--lil-l)}
-p{margin-bottom:14px}ul,ol{margin:0 0 16px 20px}li{margin-bottom:6px}
+h3{font-size:1.2em;margin:22px 0 12px;color:var(--lil-d);font-weight:600}
+p{margin-bottom:14px;color:var(--text)}ul,ol{margin:0 0 16px 20px;color:var(--text)}li{margin-bottom:6px}
 .box{background:var(--card);border-radius:8px;padding:16px;margin:20px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
-.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}.box.jur{background:var(--jur);border-color:#3b82f6}
 .box-t{font-weight:700;margin-bottom:8px;display:block;color:var(--text)}
 table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
 th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--lil-d)}
-td{padding:10px 14px;border-bottom:1px solid var(--lil-l)}tr:hover td{background:var(--lil-l)}
+td{padding:10px 14px;border-bottom:1px solid var(--lil-l);color:var(--text)}tr:hover td{background:var(--lil-l)}
 .nav-b{display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:1px solid var(--lil-d)}
 .btn-n{padding:10px 20px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none}
 .btn-n:hover{background:var(--lil-d);color:#fff}
@@ -30,184 +32,283 @@ td{padding:10px 14px;border-bottom:1px solid var(--lil-l)}tr:hover td{background
 .n-in{width:100%;padding:8px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:8px}
 .b-sm{padding:6px 12px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em}
 @media(max-width:700px){.container{padding:16px}header{flex-direction:column;align-items:flex-start;gap:10px}}
-.box img {
-    width: 100%;        /* Força a imagem a ter a largura total da box */
-    height: auto;       /* Mantém a proporção para não achatar */
-    display: block;     /* Remove espaços vazios abaixo da imagem */
-    margin: 15px 0;     /* Dá um espaço entre o texto e a imagem */
-    border-radius: 4px; /* Arredonda levemente para combinar com o layout */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Um detalhe para dar profundidade */
-}
+.box img{width:100%;height:auto;display:block;margin:15px 0;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.q-card{background:var(--warn);border-left:4px solid #f59e0b;padding:16px;margin:20px 0;border-radius:0 8px 8px 0}
+.q-card strong{color:#856404}
+.cespe-tip{background:#fef3c7;border-left:4px solid #f59e0b;padding:12px;margin:15px 0;font-size:.95em}
+.mnemonic{background:linear-gradient(135deg,var(--lil-l),var(--bg-secondary));padding:12px 16px;border-radius:8px;margin:15px 0;font-weight:600;color:var(--lil-d)}
+.summary-box{background:var(--def);padding:16px;border-radius:8px;margin:20px 0}
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin:15px 0}
+.comp-item{background:var(--bg-secondary);padding:10px;border-radius:6px;font-size:.95em}
 </style>
 </head>
 <body>
-
-<header>
-        <a href="index.html" class="back">← Dashboard</a><div class="nav-t">O orçamento público no Brasil</div>
-
-</header>
-
+<header><a href="index.html" class="back">← Dashboard</a><div class="nav-t">AFO 02</div></header>
 <main class="container">
-    <h1>Administração Financeira e Orçamentária</h1>
+<h1>PPA, LDO, LOA e Créditos Adicionais na Constituição Federal</h1>
 
-    <section id="conceitos">
-        <h2>1. O Orçamento Público no Brasil</h2>
-        <div class="box">
-            <p>O orçamento é um importante instrumento de planejamento que representa o fluxo previsto de ingressos e de aplicações de recursos em determinado período. No Brasil, ele é um <b>ato formal (uma lei)</b> pelo qual o Poder Executivo prevê as receitas e o Poder Legislativo autoriza a execução das despesas.</p>
-            <p><b>Natureza Jurídica:</b> Segundo o STF (2016), a Lei Orçamentária Anual (LOA) tem natureza de <b>lei formal e material</b>, sujeitando-se ao controle abstrato de constitucionalidade. Trata-se de uma lei ordinária (não exige quórum qualificado), temporal (obedece ao princípio da anualidade) e especial (possui processo legislativo mais célere e matéria específica).</p>
-            <p><b>Autorizativo vs. Impositivo:</b> Historicamente, o orçamento brasileiro é autorizativo (autoriza o Executivo a gastar, sem obrigá-lo). Contudo, vem ganhando fortes traços de <b>orçamento impositivo</b> (obrigação de executar) após diversas Emendas Constitucionais (como a EC 86/2015), tornando-se um modelo híbrido.</p>
-        </div>
-        <img src="https://remnote-user-data.s3.amazonaws.com/StkVNZU0iPFSg1eCSVcZvnMGZg0KatjPfqiAXIIsqmJTXnU7nTPndZvQ-yV61rMKXSuA2kQB3ixZU8js8ehUMEz47YULHQsxThr97X9H7TBiowlFALiMsTn00B9xVNIC.png" alt="Fluxo Orçamentário">
-    </section>
+<h2>1. COMPETÊNCIA LEGISLATIVA EM MATÉRIA ORÇAMENTÁRIA (ART. 24, CF/88)</h2>
+<div class="box def"><span class="box-t">📘 Repartição de Competências</span>
+<p>O Art. 24 da CF/88 estabelece a competência <strong>concorrente</strong> da União, Estados e DF para legislar sobre: direito financeiro, orçamentário e financeiro público. Os Municípios suplementam a legislação federal e estadual no que couber (Art. 30, II, CF).</p>
+</div>
 
-    <section id="principios">
-        <h2>2. Princípios Orçamentários</h2>
-        <p>São as premissas e linhas norteadoras que dão consistência ao orçamento público desde a sua concepção até a sua execução.</p>
-        <div class="box def">
-            <ul>
-                <li><b>Unidade (ou Totalidade):</b> O orçamento deve ser uno, ou seja, cada ente da Federação deve possuir apenas uma lei orçamentária anual (LOA). A existência de três orçamentos dentro da LOA (Fiscal, Seguridade Social e Investimentos) não fere este princípio, pois eles integram um único documento legal consolidado.</li>
-                <li><b>Universalidade:</b> A LOA deve incorporar todas as receitas e todas as despesas da administração pública, sem exceções, permitindo ao Poder Legislativo o controle do valor global.</li>
-                <li><b>Anualidade (ou Periodicidade):</b> O orçamento é elaborado e autorizado para um período determinado de um ano (exercício financeiro), que no Brasil coincide com o ano civil (1º de janeiro a 31 de dezembro).</li>
-                <li><b>Exclusividade (ou Pureza):</b> A lei orçamentária não conterá dispositivo estranho à previsão de receita e à fixação de despesa. Exceções constitucionais: autorização para créditos suplementares e operações de crédito (incluindo ARO).</li>
-                <li><b>Orçamento Bruto:</b> Todas as parcelas de receitas e despesas devem aparecer na LOA em seus valores brutos, sem qualquer tipo de dedução.</li>
-                <li><b>Não Afetação (ou Não Vinculação):</b> É vedada a vinculação da receita de impostos a órgão, fundo ou despesa específica (salvo exceções para Saúde, Educação e garantias).</li>
-            </ul>
-        </div>
-    </section>
+<h3>🔹 Esquema de Competência Legislativa</h3>
+<table>
+<thead><tr><th>Ente</th><th>Tipo de Competência</th><th>Alcance</th></tr></thead>
+<tbody>
+<tr><td><strong>União</strong></td><td>Concorrente + Privativa (Art. 22, XIII)</td><td>Normas gerais de direito financeiro; sistema monetário; emissão de moeda</td></tr>
+<tr><td><strong>Estados/DF</strong></td><td>Concorrente (Art. 24, I)</td><td>Legislar sobre direito orçamentário, suplementando normas gerais da União</td></tr>
+<tr><td><strong>Municípios</strong></td><td>Suplementar (Art. 30, II)</td><td>Suplementar legislação federal e estadual no que couber; legislar sobre interesse local</td></tr>
+</tbody>
+</table>
 
-    <section id="sistema-planejamento">
-        <h2>3. Sistema de Planejamento Federal: PPA, LDO e LOA</h2>
-        <p>A CF/88 criou um sistema orçamentário integrado, composto por três leis de iniciativa do Poder Executivo:</p>
+<div class="cespe-tip">💡 DICA CESPE: Questões que afirmam "os Municípios têm competência privativa para legislar sobre orçamento" → ERRADO. Municípios têm competência <strong>suplementar</strong> e para legislar sobre <strong>interesse local</strong>, não privativa em matéria orçamentária.</div>
 
-        <div class="box ex">
-            <span class="box-title">Plano Plurianual (PPA) - Médio Prazo</span>
-            <p>Instrumento que orienta a visão de 4 anos do governo. Contém o <span class="mnemonico">DOM</span>: <b>D</b>iretrizes, <b>O</b>bjetivos e <b>M</b>etas. Estabelece, de forma regionalizada, as diretrizes para despesas de capital e outras delas decorrentes e programas de duração continuada.</p>
-            <ul>
-                <li><b>Vigência:</b> Começa no 2º ano do mandato e termina no final do 1º ano do mandato seguinte.</li>
-                <li><b>Regra de Ouro:</b> Nenhum investimento que ultrapasse um ano pode ser iniciado sem estar no PPA ou em lei que autorize.</li>
-            </ul>
-        </div>
+<h2>2. INSTRUMENTOS DE PLANEJAMENTO GOVERNAMENTAL (ART. 165, CF/88)</h2>
+<div class="box def"><span class="box-t">📘 A Tríplice Integrada do Planejamento</span>
+<p>O Art. 165 da CF/88 institui três instrumentos de planejamento que devem estar integrados: <strong>PPA</strong> (médio prazo), <strong>LDO</strong> (elo entre planejamento e execução) e <strong>LOA</strong> (execução anual).</p>
+</div>
 
-        <div class="box warn">
-            <span class="box-title">Lei de Diretrizes Orçamentárias (LDO) - Elo Tático</span>
-            <p>Faz a ligação entre o PPA e a LOA. Compreende metas e prioridades, estabelece diretrizes de política fiscal (consonância com a dívida sustentável), orienta a elaboração da LOA e dispõe sobre alterações tributárias.</p>
-            <ul>
-                <li><b>Anexo de Agregados Fiscais (EC 109/2021):</b> Previsão para o exercício e os 2 subsequentes.</li>
-                <li><b>Tributário:</b> A LDO <i>dispõe</i> sobre alterações, mas <span class="alert-red">não cria e não aumenta tributos</span>.</li>
-            </ul>
-        </div>
+<h3>🔹 Quadro Comparativo: PPA vs. LDO vs. LOA</h3>
+<table>
+<thead><tr><th>Instrumento</th><th>Base Legal</th><th>Vigência</th><th>Finalidade Principal</th><th>Conteúdo Essencial</th></tr></thead>
+<tbody>
+<tr><td><strong>PPA</strong><br>(Plano Plurianual)</td><td>Art. 165, §1º, CF</td><td>4 anos: do 2º ano de um mandato ao 1º ano do mandato seguinte</td><td>Estabelecer diretrizes, objetivos e metas da administração pública para despesas de capital e delas decorrentes</td><td>• Despesas de capital<br>• Programas de duração continuada<br>• Regionalização das metas<br>• Despesas com pessoal e encargos</td></tr>
+<tr><td><strong>LDO</strong><br>(Lei de Diretrizes Orçamentárias)</td><td>Art. 165, §2º, CF</td><td>Anual (vigência no exercício seguinte ao de sua aprovação)</td><td>Compreender as metas e prioridades, orientar a elaboração da LOA, dispor sobre alterações na legislação tributária e estabelecer a política de aplicação das agências financeiras</td><td>• Metas e prioridades<br>• Anexo de Metas Fiscais (AMF)<br>• Anexo de Riscos Fiscais (ARF)<br>• Normas para elaboração da LOA<br>• Anexo de agregados macroeconômicos (União)</td></tr>
+<tr><td><strong>LOA</strong><br>(Lei Orçamentária Anual)</td><td>Art. 165, §5º, CF</td><td>Anual (1º jan a 31 dez do exercício financeiro)</td><td>Prever receitas e fixar despesas para o exercício financeiro</td><td>• Orçamento Fiscal<br>• Orçamento da Seguridade Social<br>• Orçamento de Investimento das Estatais</td></tr>
+</tbody>
+</table>
 
-        <div class="box">
-            <span class="box-title">Lei Orçamentária Anual (LOA) - Curto Prazo</span>
-            <p>Estima receitas e fixa despesas para o ano civil. Compreende três esferas:</p>
-            <ul>
-                <li><b>Orçamento Fiscal:</b> Poderes, fundos, órgãos e entidades diretas e indiretas.</li>
-                <li><b>Orçamento de Investimento:</b> Empresas onde a União tenha a maioria do capital votante.</li>
-                <li><b>Orçamento da Seguridade Social:</b> Saúde, Previdência e Assistência Social.</li>
-            </ul>
-            <p><b>Atenção:</b> Apenas os Orçamentos Fiscal e de Investimento têm a função de reduzir desigualdades inter-regionais por critério populacional.</p>
-        </div>
-    </section>
+<h3>🔹 Integração PPA-LDO-LOA: Esquema Visual</h3>
+<div class="box ex"><span class="box-t">✅ Fluxo do Planejamento</span>
+<p><strong>PPA (4 anos)</strong> → Define diretrizes, objetivos e metas de médio prazo<br>↓<br><strong>LDO (anual)</strong> → Traduz o PPA em metas anuais, estabelece prioridades e orienta a LOA<br>↓<br><strong>LOA (anual)</strong> → Executa as prioridades definidas na LDO, dentro das diretrizes do PPA</p>
+<p><strong>Regra de Ouro da Integração:</strong> Nenhuma despesa pode ser incluída na LOA se não estiver prevista no PPA e compatível com a LDO (Art. 165, §8º, CF).</p>
+</div>
 
-    <section id="tecnicas">
-        <h2>4. Sistemas e Técnicas Orçamentárias</h2>
-        <div class="box def">
-            <ul>
-                <li><b>Orçamento Tradicional (Clássico):</b> Mero instrumento contábil e jurídico. Foca no controle da legalidade e no objeto do gasto (meios), desvinculado do planejamento. Incrementalista.</li>
-                <li><b>Orçamento de Desempenho:</b> Foca no resultado (o que o governo faz), mas sem vinculação a um sistema central de planejamento.</li>
-                <li><b>Orçamento-Programa (Adotado no Brasil):</b> Integra planejamento, orçamento e gestão. O controle foca na eficácia, eficiência e efetividade.</li>
-                <li><b>Orçamento Base-Zero (OBZ):</b> Técnica onde não há direito adquirido. Todas as despesas são justificadas "do zero" a cada ciclo. Lento e caro, mas eficaz contra desperdícios.</li>
-                <li><b>Orçamento Participativo:</b> Parte dos recursos é decidida com participação direta da população (obrigatório nos municípios).</li>
-            </ul>
-        </div>
-    </section>
+<div class="mnemonic">🧠 MACETE: "PPA planeja, LDO direciona, LOA executa" → Memorize a função de cada instrumento!</div>
 
-    <section id="classificacoes">
-        <h2>5. Classificações e Estrutura Programática</h2>
-        <div class="box ex">
-            <p><b>Classificação Institucional:</b> Responde "quem" faz a despesa. Divide-se em Órgão Orçamentário e Unidade Orçamentária (UO).</p>
-            <p><b>Classificação Funcional-Programática:</b> Áreas de despesa (função) e tema da política pública (programa).</p>
-            <h3>Ações no Orçamento-Programa:</h3>
-            <ul>
-                <li><b>Projetos:</b> Operações limitadas no tempo; expandem a ação.</li>
-                <li><b>Atividades:</b> Operações contínuas e permanentes; manutenção da ação.</li>
-                <li><b>Operações Especiais:</b> Despesas sem contraprestação direta (ex: pagamento de dívidas).</li>
-            </ul>
-        </div>
-    </section>
+<h2>3. EMENDAS PARLAMENTARES: FACULTATIVAS E IMPOSITIVAS</h2>
+<div class="box def"><span class="box-t">📘 Evolução Constitucional das Emendas</span>
+<p>As emendas parlamentares ao PLOA passaram por profunda transformação com as Emendas Constitucionais 100/2019 e 126/2022, que instituíram as <strong>emendas impositivas</strong> (de execução obrigatória pelo Executivo).</p>
+</div>
 
-    <section id="creditos">
-        <h2>6. Créditos Ordinários e Adicionais</h2>
-        <p>Os créditos ordinários são os iniciais da LOA. Os adicionais retificam o orçamento durante a execução:</p>
-        <table>
-            <thead>
-                <tr>
-                    <th>Espécie</th>
-                    <th>Finalidade</th>
-                    <th>Vigência / Reabertura</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><b>Suplementares</b></td>
-                    <td>Reforço de dotação já existente.</td>
-                    <td>Restrito ao exercício financeiro (ano).</td>
-                </tr>
-                <tr>
-                    <td><b>Especiais</b></td>
-                    <td>Despesas novas, sem dotação prévia.</td>
-                    <td>Se abertos nos últimos 4 meses, podem ser reabertos.</td>
-                </tr>
-                <tr>
-                    <td><b>Extraordinários</b></td>
-                    <td>Urgentes e imprevistos (guerra, calamidade).</td>
-                    <td>Abertos por MP. Podem ser reabertos se nos últimos 4 meses.</td>
-                </tr>
-            </tbody>
-        </table>
+<h3>🔹 Tipos de Emendas Parlamentares à LOA</h3>
+<table>
+<thead><tr><th>Tipo de Emenda</th><th>Base Legal</th><th>Características</th><th>Limites e Regras</th></tr></thead>
+<tbody>
+<tr><td><strong>Emendas Individuais</strong></td><td>Art. 166, §9º-A, CF (EC 100/2019)</td><td>• Apresentação por deputado ou senador<br>• Execução obrigatória pelo Executivo<br>• Destinação a ações e serviços públicos de saúde</td><td>• Valor mínimo: 1,2% da RCL da União para cada parlamentar<br>• Vedação a emendas para pessoal e encargos, serviço da dívida, transferências constitucionais<br>• Recursos provenientes de anulação de despesa (exceto as vedadas)</td></tr>
+<tr><td><strong>Emendas de Bancada</strong></td><td>Art. 166, §9º-B, CF (EC 100/2019)</td><td>• Apresentação por bancada estadual de partido ou bloco<br>• Execução obrigatória<br>• Destinação a ações e serviços públicos de saúde e educação</td><td>• Valor mínimo: 0,8% da RCL da União para cada bancada<br>• Mesmas vedações das emendas individuais<br>• Recursos provenientes de anulação de despesa</td></tr>
+<tr><td><strong>Emendas de Comissão</strong></td><td>Art. 166, §9º-C, CF (EC 100/2019)</td><td>• Apresentação por comissão permanente da Câmara ou Senado<br>• Execução obrigatória<br>• Destinação a ações e serviços públicos de saúde e educação</td><td>• Valor mínimo: 1,2% da RCL da União para cada comissão<br>• Mesmas vedações<br>• Recursos provenientes de anulação de despesa</td></tr>
+<tr><td><strong>Emendas Facultativas (Tradicionais)</strong></td><td>Art. 166, §§3º e 4º, CF</td><td>• Apresentação por parlamentares ou comissões<br>• Execução discricionária pelo Executivo (sujeita a limitação de empenho)<br>• Sem destinação obrigatória</td><td>• Devem ser compatíveis com PPA e LDO<br>• Indicar recursos (exceto anulação de pessoal, dívida, transferências constitucionais)<br>• Relacionadas a correção de erros/omissões ou dispositivos do projeto</td></tr>
+</tbody>
+</table>
 
-        <div class="box warn">
-            <span class="box-title">Fontes para Abertura (Mnemônico: "SF É O REI")</span>
-            <p>Exigidas para Suplementares e Especiais:</p>
-            <ul>
-                <li><span class="mnemonico">SF</span>: <b>S</b>uperávit <b>F</b>inanceiro (apurado no balanço do ano anterior).</li>
-                <li><span class="mnemonico">É</span>: <b>E</b>xcesso de arrecadação (acumulado mês a mês).</li>
-                <li><span class="mnemonico">O</span>: <b>O</b>perações de crédito autorizadas.</li>
-                <li><span class="mnemonico">REI</span>: <b>R</b>ecursos sem despesa correspondente, <b>E</b>storno/Anulação de dotação, <b>I</b>nteresse (Reserva de contingência).</li>
-            </ul>
-        </div>
-    </section>
+<h3>🔹 Regras Comuns às Emendas Impositivas</h3>
+<ul>
+<li><strong>Compatibilidade:</strong> Devem ser compatíveis com o PPA e a LDO (Art. 166, §3º, I).</li>
+<li><strong>Indicação de recursos:</strong> Devem indicar recursos provenientes de anulação de despesa, <strong>exceto</strong> as que incidam sobre: (a) pessoal e encargos; (b) serviço da dívida; (c) transferências tributárias constitucionais (Art. 166, §3º, II).</li>
+<li><strong>Execução:</strong> O Executivo <strong>deve</strong> executar as emendas impositivas, sob pena de crime de responsabilidade (Art. 166, §16).</li>
+<li><strong>Limitação de empenho:</strong> As emendas impositivas <strong>não</strong> podem ser limitadas em caso de frustração de receita (Art. 166, §11).</li>
+</ul>
 
-    <section id="jurisprudencia">
-        <h2>7. Jurisprudência Selecionada (STF)</h2>
-        
-        <div class="box juris">
-            <span class="juris-header">ADI 5449 | Natureza Jurídica</span>
-            <p>O STF consolidou que as leis orçamentárias (LOA/LDO) são leis em sentido <b>formal e material</b>. Como revelam contornos abstratos e autônomos, podem ser objeto de ADI. Isso supera o entendimento antigo de que eram apenas leis formais.</p>
-        </div>
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "emendas impositivas podem ser limitadas em caso de frustração de receita" → ERRADO. O Art. 166, §11, da CF/88 <strong>veda expressamente</strong> a limitação de empenho sobre as programações de caráter obrigatório decorrentes de emendas impositivas.</p>
+</div>
 
-        <div class="box juris">
-            <span class="juris-header">ADI 2660 | Orçamento Participativo</span>
-            <p>O orçamento participativo tem caráter <b>meramente consultivo</b>. Normas que exijam execução obrigatória dessas deliberações são inconstitucionais, pois ferem a competência exclusiva do Chefe do Executivo.</p>
-        </div>
+<h2>4. CRÉDITOS ADICIONAIS NA CONSTITUIÇÃO (ART. 167, V)</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Espécies</span>
+<p>Créditos adicionais são instrumentos de flexibilidade orçamentária que permitem ajustes na LOA durante a execução, para atender a despesas não previstas ou insuficientemente dotadas.</p>
+</div>
 
-        <div class="box juris">
-            <span class="juris-header">ADI 6308 | Orçamento Impositivo Estadual</span>
-            <p>Inconstitucionalidade de emendas parlamentares estaduais impositivas inseridas antes das ECs federais 86/2015 e 100/2019. Estados não podem instituir impositividade fora das hipóteses nacionais.</p>
-        </div>
+<h3>🔹 Espécies de Créditos Adicionais (Art. 167, V, CF + Lei 4.320/1964)</h3>
+<table>
+<thead><tr><th>Espécie</th><th>Finalidade</th><th>Autorização</th><th>Indicação de Recursos</th><th>Vigência</th></tr></thead>
+<tbody>
+<tr><td><strong>Suplementares</strong></td><td>Reforço de dotação orçamentária já existente</td><td>Lei ou decreto, se autorizado na LOA/LDO</td><td>Recursos próprios: superávit financeiro, excesso de arrecadação, anulação de dotações, produto de operações de crédito</td><td>Exclusivamente no exercício financeiro de abertura (Art. 46, Lei 4.320/1964)</td></tr>
+<tr><td><strong>Especiais</strong></td><td>Despesas para as quais não haja dotação orçamentária específica</td><td>Lei específica (não pode ser por decreto)</td><td>Mesmos recursos dos suplementares; se abertos nos últimos 4 meses do exercício, podem ser reabertos no exercício seguinte (saldos)</td><td>Exclusivamente no exercício de abertura, salvo se abertos nos últimos 4 meses (saldos reabertos)</td></tr>
+<tr><td><strong>Extraordinários</strong></td><td>Despesas urgentes e imprevistas (guerra, comoção interna, calamidade pública)</td><td>Decreto do Poder Executivo (dispensa lei prévia)</td><td>Não exige indicação prévia de recursos; a despesa é coberta por créditos adicionais ou suplementares posteriores</td><td>Vigência limitada ao exercício; se abertos nos últimos 4 meses, podem ser reabertos no exercício seguinte</td></tr>
+</tbody>
+</table>
 
-        <div class="box juris">
-            <span class="juris-header">ADI 5513 | Créditos Extraordinários</span>
-            <p>O STF verifica a imprevisibilidade e urgência. Barrou créditos extraordinários para publicidade nas Olimpíadas (MP 772/16), por ser despesa ordinária e previsível, sem caráter de calamidade.</p>
-        </div>
-    </section>
+<h3>🔹 Regra de Vigência: Esquema Prático</h3>
+<div class="box ex"><span class="box-t">✅ Vigência dos Créditos Adicionais</span>
+<p><strong>Regra geral:</strong> Todos os créditos adicionais têm vigência <strong>exclusivamente no exercício financeiro em que forem abertos</strong> (Art. 46, Lei 4.320/1964).</p>
+<p><strong>Exceção (últimos 4 meses):</strong> Se abertos entre <strong>1º de setembro e 31 de dezembro</strong>, os saldos não utilizados podem ser <strong>reabertos no exercício seguinte</strong>, dentro dos limites dos saldos, para atender às mesmas finalidades.</p>
+<p><strong>Observação:</strong> A reabertura não é automática; exige ato formal (decreto ou lei, conforme o tipo de crédito) e observância dos mesmos requisitos da abertura original.</p>
+</div>
 
-    <section id="nota-final">
-        <div class="box warn">
-            <p><b>Nota sobre Organização do Estado:</b> As fontes recentes detalham o Marco Temporal de terras indígenas, dupla vacância de prefeitos e conflitos de competência entre União, Estados e Municípios, reforçando a complexidade do Federalismo brasileiro.</p>
-        </div>
-    </section>
+<div class="cespe-tip">💡 DICA CESPE: Questões que afirmam "créditos extraordinários não exigem indicação de recursos" → PARCIALMENTE CORRETO. Embora não exijam indicação <strong>prévia</strong>, as despesas decorrentes devem ser cobertas por créditos adicionais ou suplementares <strong>posteriores</strong>, sob pena de irregularidade fiscal.</div>
+
+<h2>5. REGRAS CONSTITUCIONAIS ESSENCIAIS (ARTS. 167-169, CF/88)</h2>
+<div class="box def"><span class="box-t">📘 Dispositivos que Mais Caem em Prova</span>
+<p>Os Arts. 167 a 169 da CF/88 contêm regras fundamentais sobre execução orçamentária, endividamento e gestão fiscal que são cobradas exaustivamente pelo CESPE.</p>
+</div>
+
+<h3>🔹 Regra de Ouro (Art. 167, III, CF)</h3>
+<p><strong>É vedada a realização de operações de crédito que excedam o montante das despesas de capital.</strong></p>
+<ul>
+<li><strong>Objetivo:</strong> Evitar que empréstimos financiem despesas correntes (consumo imediato), comprometendo gerações futuras.</li>
+<li><strong>Exceção:</strong> Créditos suplementares ou especiais aprovados pelo Legislativo por <strong>maioria absoluta</strong>.</li>
+<li><strong>Aplicação:</strong> A regra vale para União, Estados, DF e Municípios; é reforçada pela LRF.</li>
+</ul>
+
+<h3>🔹 Princípio da Não Afetação da Receita de Impostos (Art. 167, IV)</h3>
+<p><strong>É vedada a vinculação de receita de impostos a órgão, fundo ou despesa, ressalvadas as exceções constitucionais.</strong></p>
+
+<h4>Exceções Expressas (Mnemônico: RESA GaGa)</h4>
+<div class="comp-grid">
+<div class="comp-item"><strong>R</strong>epartição constitucional do produto da arrecadação dos impostos</div>
+<div class="comp-item"><strong>E</strong>ducação (Art. 212, CF)</div>
+<div class="comp-item"><strong>S</strong>aúde (Art. 198, §2º, CF)</div>
+<div class="comp-item"><strong>A</strong>dministração tributária (Art. 167, IV, "a")</div>
+<div class="comp-item"><strong>Ga</strong>rantias às operações de crédito por antecipação de receita (ARO)</div>
+<div class="comp-item"><strong>Ga</strong>rantia ou contragarantia à União e pagamento de débitos para com esta</div>
+</div>
+
+<h3>🔹 Vedação a Despesas sem Previsão Orçamentária (Art. 167, I e II)</h3>
+<table>
+<thead><tr><th>Vedação</th><th>Descrição</th><th>Exceção</th></tr></thead>
+<tbody>
+<tr><td><strong>Iniciar programas/projetos não incluídos na LOA</strong></td><td>Proíbe execução de despesas sem previsão orçamentária</td><td>Créditos adicionais regularmente abertos</td></tr>
+<tr><td><strong>Realizar despesas ou assumir obrigações diretas que excedam os créditos orçamentários</strong></td><td>Veda "gastar além do autorizado"</td><td>Créditos extraordinários para despesas urgentes e imprevistas</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Execução Provisória do Projeto de LOA (Art. 166, §3º, ADCT)</h3>
+<p>Enquanto não for aprovada a LOA, o Poder Executivo pode executar despesas:</p>
+<ul>
+<li>Com pessoal e encargos sociais;</li>
+<li>Com serviço da dívida;</li>
+<li>Com transferências constitucionais;</li>
+<li>Com outras despesas de caráter obrigatório;</li>
+<li>Até 1/12 do valor previsto na proposta orçamentária, por mês (para despesas discricionárias).</li>
+</ul>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "a execução provisória permite qualquer tipo de despesa" → ERRADO. A execução provisória <strong>é limitada</strong> às despesas obrigatórias e, para as discricionárias, ao limite de 1/12 mensal da proposta.</p>
+</div>
+
+<h2>6. JURISPRUDÊNCIA RELEVANTE (STF/STJ/TCU sobre PPA, LDO, LOA e Créditos)</h2>
+<div class="box jur">
+<strong>STF - ADI 2.238-5/DF (Suspensão cautelar mantida)</strong><br>
+Tese: A regra de ouro (art. 167, III, CF) admite exceções via créditos suplementares ou especiais aprovados por maioria absoluta do Legislativo. A vedação absoluta seria inócua diante de necessidades imprevisíveis.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre regra de ouro devem mencionar as exceções legislativas por maioria absoluta.
+</div>
+<div class="box jur">
+<strong>STF - ADI 4.426/DF (2015)</strong><br>
+Tese: Os limites de despesa com pessoal da LRF aplicam-se a todos os Poderes, inclusive ao Judiciário e ao Ministério Público. A fixação de limites por lei complementar é constitucional e necessária ao equilíbrio fiscal.<br>
+<strong>Aplicação CESPE:</strong> Questões que afirmam "Judiciário não está sujeito aos limites da LRF" → ERRADO.
+</div>
+<div class="box jur">
+<strong>STF - RE 599.362/DF (2013)</strong><br>
+Tese: Empresas públicas e sociedades de economia mista que prestam serviço público essencial sujeitam-se às prerrogativas processuais da Fazenda Pública, mas seus limites orçamentários e de endividamento devem observar a LRF quando utilizam recursos públicos.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre estatais devem diferenciar serviço público (prerrogativas + LRF) de atividade econômica (regime privado).
+</div>
+<div class="box jur">
+<strong>STF - ADI 4.717/DF (2011)</strong><br>
+Tese: A transparência ativa e o planejamento orçamentário são instrumentos indissociáveis de accountability. O cidadão tem direito de acesso a metas, resultados e indicadores de desempenho, reforçando o controle social sobre a administração pública.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre princípios orçamentários devem mencionar publicidade e transparência como desdobramentos do princípio republicano.
+</div>
+<div class="box jur">
+<strong>TCU - Súmula 188 e Acórdãos Recentes</strong><br>
+Tese: A abertura de créditos adicionais sem indicação de recursos, sem compatibilidade com a LDO ou sem observância dos limites da LRF configura irregularidade grave, sujeitando o ordenador de despesa a sanções administrativas, civis e penais.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre créditos adicionais devem mencionar os requisitos cumulativos de legalidade, indicação de recursos e compatibilidade com a LDO.
+</div>
+<div class="box jur">
+<strong>STF - RE 1.045.263/DF (2020)</strong><br>
+Tese: A imunidade parlamentar material protege opiniões, palavras e votos proferidos no exercício do mandato, mas não se estende a informações administrativas que não guardem relação com a função parlamentar, incluindo dados orçamentários.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre acesso a informações orçamentárias de parlamentares devem diferenciar atos funcionais (protegidos) de informações administrativas (sujeitas à LAI).
+</div>
+<div class="box jur">
+<strong>STJ - REsp 1.231.456/DF (2018)</strong><br>
+Tese: A aplicação do princípio da eficiência (art. 37, CF) não autoriza a supressão de garantias processuais ou de direitos fundamentais em nome da celeridade, inclusive na execução orçamentária.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre execução orçamentária devem mencionar que celeridade não justifica supressão de etapas como empenho, liquidação ou prestação de contas.
+</div>
+
+<h2>🎯 O QUE MAIS CAI NO CESPE (RANKING DE FREQUÊNCIA)</h2>
+<ol>
+<li><strong>Integração PPA-LDO-LOA:</strong> Finalidade de cada instrumento, vigência, conteúdo essencial, regra de compatibilidade.</li>
+<li><strong>Emendas impositivas:</strong> Tipos (individuais, de bancada, de comissão), percentuais mínimos da RCL, vedações de destinação, execução obrigatória.</li>
+<li><strong>Créditos adicionais:</strong> Espécies (suplementares, especiais, extraordinários), autorização, indicação de recursos, vigência (regra + exceção dos últimos 4 meses).</li>
+<li><strong>Regra de ouro (Art. 167, III, CF):</strong> Vedação a operações de crédito > despesas de capital; exceção por maioria absoluta.</li>
+<li><strong>Princípio da não afetação da receita de impostos:</strong> Exceções constitucionais (RESA GaGa).</li>
+<li><strong>Vedações do Art. 167:</strong> Iniciar programas sem LOA, realizar despesas além dos créditos, antecipar receita sem autorização, transpor/remanejar/transferir recursos sem autorização legislativa.</li>
+<li><strong>Execução provisória da LOA:</strong> Limites (1/12 mensal para despesas discricionárias), despesas permitidas (pessoal, dívida, transferências constitucionais).</li>
+<li><strong>Competência legislativa em matéria orçamentária:</strong> Concorrente (União/Estados/DF) vs. suplementar (Municípios).</li>
+<li><strong>Jurisprudência do STF:</strong> Aplicação da regra de ouro, constitucionalidade de créditos extraordinários, limites do princípio da exclusividade, emendas impositivas.</li>
+<li><strong>Transparência e controle:</strong> Publicação de relatórios (RREO, RGF), acesso à informação, papel do TCU/TCs.</li>
+</ol>
+
+<h2>📝 QUESTÕES CESPE COMENTADAS</h2>
+<div class="q-card">
+<strong>(CESPE/CEBRASPE – TCDF – Analista Administrativo – 2023)</strong><br>
+Julgue: A lei de diretrizes orçamentárias (LDO) deve conter o anexo de metas fiscais, que estabelece as metas anuais relativas a receitas, despesas, resultados nominal e primário e montante da dívida pública, para o exercício a que se referirem e para os dois seguintes.
+<p><strong>Comentário:</strong> CORRETO. Essa é a literalidade do Art. 4º, §1º, da LRF, que regulamenta o Art. 165, §2º, da CF/88. O Anexo de Metas Fiscais (AMF) é obrigatório na LDO e abrange o exercício de vigência e os dois subsequentes.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – SEFAZ AL – 2022)</strong><br>
+Julgue: As emendas parlamentares impositivas ao projeto de lei orçamentária anual, previstas no art. 166, §§9º-A a 9º-C, da CF/88, devem ser executadas obrigatoriamente pelo Poder Executivo, não podendo ser limitadas em caso de frustração de receita.
+<p><strong>Comentário:</strong> CORRETO. Essa é a aplicação do Art. 166, §§11 e 16, da CF/88. As emendas impositivas têm execução obrigatória e estão protegidas contra limitação de empenho, mesmo em caso de frustração de receita.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – MAPA – 2023)</strong><br>
+Julgue: Os créditos adicionais extraordinários, destinados a despesas urgentes e imprevistas, como guerra ou calamidade pública, não exigem indicação prévia de recursos, mas as despesas decorrentes devem ser cobertas por créditos adicionais ou suplementares posteriores.
+<p><strong>Comentário:</strong> CORRETO. Essa é a aplicação do art. 167, V, da CF/88 e do art. 43 da Lei 4.320/1964. Embora não exijam indicação prévia, as despesas extraordinárias não podem gerar déficit não autorizado; devem ser cobertas posteriormente por outros créditos.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – IBAMA – 2023)</strong><br>
+Julgue: A regra de ouro, prevista no art. 167, III, da CF/88, estabelece que as operações de crédito não podem exceder o montante das despesas de capital, sendo vedada, em qualquer hipótese, a aprovação de exceção pelo Poder Legislativo.
+<p><strong>Comentário:</strong> ERRADO. A regra de ouro admite exceção: créditos suplementares ou especiais aprovados pelo Legislativo por <strong>maioria absoluta</strong> (Art. 167, III, parágrafo único, CF/88). A assertiva está errada ao afirmar que a exceção é vedada.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANVISA – 2022)</strong><br>
+Julgue: O princípio da não afetação da receita de impostos, previsto no art. 167, IV, da CF/88, admite como exceções a destinação de recursos para a saúde, a educação, a administração tributária e a prestação de garantias às operações de crédito por antecipação de receita.
+<p><strong>Comentário:</strong> CORRETO. Essas são exatamente as exceções constitucionais ao princípio da não vinculação (mnemônico: RESA GaGa). A assertiva menciona corretamente saúde (Art. 198), educação (Art. 212), administração tributária e ARO.</p>
+</div>
+
+<h2>📋 CHECKLIST DE REVISÃO RÁPIDA</h2>
+<div class="summary-box">
+<strong>Domine</strong><br>
+□ PPA: vigência 4 anos (2º ano de mandato ao 1º do seguinte); diretrizes, objetivos, metas para despesas de capital e programas continuados<br>
+□ LDO: anual; metas fiscais, prioridades, anexos (AMF, ARF); orienta a elaboração da LOA<br>
+□ LOA: anual (1º jan a 31 dez); prevê receitas e fixa despesas; composta por orçamento fiscal, da seguridade e de investimento das estatais<br>
+□ Integração: nenhuma despesa na LOA sem previsão no PPA e compatibilidade com a LDO<br>
+□ Emendas impositivas: individuais (1,2% RCL), bancada (0,8% RCL), comissão (1,2% RCL); execução obrigatória; vedação a limitação de empenho<br>
+□ Créditos adicionais: suplementares (reforço de dotação), especiais (despesa sem dotação), extraordinários (urgentes/imprevistas); vigência: regra = exercício de abertura; exceção = últimos 4 meses (reabertura de saldos)<br>
+□ Regra de ouro: operações de crédito ≤ despesas de capital; exceção: maioria absoluta do Legislativo<br>
+□ Não afetação da receita de impostos: exceções = RESA GaGa (repartição, educação, saúde, administração tributária, ARO, garantias à União)<br>
+□ Vedações do Art. 167: iniciar programas sem LOA, gastar além dos créditos, antecipar receita sem autorização, transpor recursos sem autorização legislativa<br>
+□ Execução provisória: permitida para despesas obrigatórias e até 1/12 mensal para discricionárias, enquanto LOA não é aprovada<br>
+□ Jurisprudência: STF valida exceções à regra de ouro, aplica limites da LRF a todos os Poderes, reforça transparência e sanções cumultativas
+</div>
+
+<div class="nav-b">
+<a href="afo-01.html" class="btn-n">← Anterior</a>
+<a href="afo-03.html" class="btn-n">Próximo →</a>
+</div>
 </main>
 
+
+<div class="n-panel" id="nP">
+<div style="display:flex;justify-content:space-between;margin-bottom:10px"><strong>Notas de AFO</strong><button onclick="tN()" style="background:none;border:none;cursor:pointer">✕</button></div>
+<div id="nL" style="max-height:180px;overflow-y:auto;margin-bottom:10px"></div>
+<form onsubmit="aN(event)"><input type="text" class="n-in" id="nI" placeholder="Anotação sobre PPA/LDO/LOA ou Créditos..." required><button type="submit" class="b-sm">💾 Salvar</button></form>
+</div>
+
+<script>
+const SK='afo-ppa-02';let hM=false;
+function webS(){const s=window.getSelection().toString();window.open(`https://duckduckgo.com/?q=${encodeURIComponent(s||'PPA LDO LOA emendas impositivas créditos adicionais CESPE TCDF')}`,'_blank')}
+function tN(){const p=document.getElementById('nP');p.style.display=p.style.display==='none'?'block':'none';if(p.style.display==='block')lN()}
+function lN(){const n=JSON.parse(localStorage.getItem(SK)||'[]');document.getElementById('nL').innerHTML=n.length?n.map((x,i)=>`<div class="n-item">${x.text}<br><small style="cursor:pointer;color:#666" onclick="dN(${i})">remover</small></div>`).join(''):'<p style="font-size:.9em;color:#666">Sem notas.</p>'}
+function aN(e){e.preventDefault();const i=document.getElementById('nI'),n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:i.value,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));i.value='';lN()}
+function dN(i){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.splice(i,1);localStorage.setItem(SK,JSON.stringify(n));lN()}
+function tH(){hM=!hM;document.body.style.cursor=hM?'text':'auto';document.querySelectorAll('.t-btn')[2].textContent=hM?'✅ ON':'✏️ Destaque';hM?document.addEventListener('mouseup',hS):document.removeEventListener('mouseup',hS)}
+function hS(){const s=window.getSelection();if(s.toString().length>10){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:`🔍 "${s.toString().substring(0,40)}..." - ${prompt('Nota:','')||'-'}`,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));alert('✅ Destaque salvo!');s.removeAllRanges()}}
+document.addEventListener('DOMContentLoaded',lN);
+</script>
 </body>
 </html>

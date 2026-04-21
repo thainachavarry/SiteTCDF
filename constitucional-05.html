@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direito Constitucional 05 | Administração Pública - CESPE</title>
+<style>
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1;--jur:#e8f4fd}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;line-height:1.7;padding-top:70px}
+a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
+.container{max-width:1000px;margin:0 auto;padding:24px}
+h1{font-size:1.8em;margin-bottom:10px;color:var(--lil)}h2{font-size:1.4em;margin:28px 0 14px;color:var(--text);padding-bottom:6px;border-bottom:2px solid var(--lil-l)}
+h3{font-size:1.2em;margin:22px 0 12px;color:var(--lil-d);font-weight:600}
+p{margin-bottom:14px;color:var(--text)}ul,ol{margin:0 0 16px 20px;color:var(--text)}li{margin-bottom:6px}
+.box{background:var(--card);border-radius:8px;padding:16px;margin:20px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}.box.jur{background:var(--jur);border-color:#3b82f6}
+.box-t{font-weight:700;margin-bottom:8px;display:block;color:var(--text)}
+table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--lil-d)}
+td{padding:10px 14px;border-bottom:1px solid var(--lil-l);color:var(--text)}tr:hover td{background:var(--lil-l)}
+.nav-b{display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:1px solid var(--lil-d)}
+.btn-n{padding:10px 20px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none}
+.btn-n:hover{background:var(--lil-d);color:#fff}
+.tools{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:99}
+.t-btn{background:var(--card);border:2px solid var(--lil-d);padding:10px 14px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;color:var(--text);box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.t-btn:hover{transform:translateY(-2px)}
+.n-panel{position:fixed;bottom:70px;right:20px;width:280px;background:var(--card);border:2px solid var(--lil-d);border-radius:12px;padding:16px;display:none;box-shadow:0 5px 15px rgba(0,0,0,.15);z-index:100}
+.n-item{background:var(--lil-l);padding:10px;border-radius:6px;margin-bottom:8px;font-size:.9em}
+.n-in{width:100%;padding:8px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:8px}
+.b-sm{padding:6px 12px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em}
+@media(max-width:700px){.container{padding:16px}header{flex-direction:column;align-items:flex-start;gap:10px}}
+.box img{width:100%;height:auto;display:block;margin:15px 0;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.q-card{background:var(--warn);border-left:4px solid #f59e0b;padding:16px;margin:20px 0;border-radius:0 8px 8px 0}
+.q-card strong{color:#856404}
+.cespe-tip{background:#fef3c7;border-left:4px solid #f59e0b;padding:12px;margin:15px 0;font-size:.95em}
+.mnemonic{background:linear-gradient(135deg,var(--lil-l),var(--bg-secondary));padding:12px 16px;border-radius:8px;margin:15px 0;font-weight:600;color:var(--lil-d)}
+.summary-box{background:var(--def);padding:16px;border-radius:8px;margin:20px 0}
+.jur-list{margin-left:20px}
+.jur-item{margin-bottom:12px;padding-left:15px;border-left:3px solid var(--lil-d)}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="back">← Dashboard</a><a href="index.html" class="home-btn" title="Voltar ao Dashboard">
+    🏠
+</a><div class="nav-t">Direito Constitucional 05</div></header>
+<main class="container">
+<h1>📚 Administração Pública na CF/88 (Arts. 37 a 41)</h1>
+<p><strong>Foco CESPE:</strong> A banca cobra exaustivamente a literalidade dos princípios do caput do art. 37 (LIMPE), as regras de concursos públicos, as hipóteses de acumulação de cargos, o teto remuneratório, a estabilidade do servidor e a jurisprudência do STF sobre nepotismo, isenção de taxa e direito de greve. Questões frequentemente confundem cargos efetivos com comissionados ou cobram detalhes de prazos e quóruns.</p>
+
+<h2>1. PRINCÍPIOS DA ADMINISTRAÇÃO PÚBLICA (Art. 37, caput, CF/88)</h2>
+<div class="box def"><span class="box-t">📘 Princípios Expressos (Mnemônico: LIMPE)</span>
+<p>O caput do art. 37 da CF/88 enumera cinco princípios expressos que regem a Administração Pública direta, indireta e fundacional de todos os Poderes da União, Estados, DF e Municípios.</p>
+</div>
+
+<table>
+<thead><tr><th>Princípio</th><th>Significado Constitucional</th><th>Aplicação Prática</th><th>Ponto CESPE</th></tr></thead>
+<tbody>
+<tr><td><strong>Legalidade</strong></td><td>A Administração só pode fazer o que a lei autoriza ou determina (diferente do particular, que pode fazer tudo que a lei não proíbe)</td><td>Atos administrativos devem ter fundamento legal expresso; vedação à atuação discricionária sem previsão legal</td><td>✅ "Legalidade administrativa ≠ legalidade do particular"</td></tr>
+<tr><td><strong>Impessoalidade</strong></td><td>Isonomia no tratamento dos administrados; vedação a promoções pessoais e discriminações</td><td>Concursos públicos, licitações impessoais, vedação a nomes/símbolos pessoais em obras públicas</td><td>✅ "Impessoalidade ≠ neutralidade política" (vedação é a promoção pessoal)</td></tr>
+<tr><td><strong>Moralidade</strong></td><td>Conduta ética e proba dos agentes públicos; além da legalidade formal, exige conformidade com a ética administrativa</td><td>Improbidade administrativa, dever de probidade, vedação ao enriquecimento ilícito</td><td>✅ "Moralidade administrativa é autônoma em relação à moralidade comum"</td></tr>
+<tr><td><strong>Publicidade</strong></td><td>Divulgação oficial dos atos administrativos para controle social e eficácia</td><td>Publicação no Diário Oficial, transparência ativa e passiva (LAI), sigilo apenas em hipóteses excepcionais</td><td>✅ "Publicidade ≠ transparência total" (sigilo é permitido para segurança nacional, etc.)</td></tr>
+<tr><td><strong>Eficiência</strong></td><td>Atuação com economicidade, celeridade e qualidade na prestação de serviços públicos</td><td>Metas de desempenho, avaliação periódica, gestão por resultados, redução de burocracia</td><td>✅ "Eficiência não justifica supressão de garantias processuais" (STF)</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Princípios Implícitos e Infraconstitucionais</h3>
+<p>Além dos princípios expressos, a doutrina e a jurisprudência reconhecem outros princípios que regem a Administração Pública:</p>
+<ul>
+<li><strong>Razoabilidade e Proporcionalidade:</strong> Atuação administrativa deve ser adequada, necessária e proporcional ao fim visado.</li>
+<li><strong>Finalidade:</strong> Todo ato administrativo deve visar o interesse público; desvio de finalidade vicia o ato.</li>
+<li><strong>Ampla Defesa e Contraditório:</strong> Garantidos em processos administrativos disciplinares e sancionatórios (Art. 5º, LV, CF).</li>
+<li><strong>Motivação:</strong> Dever de fundamentar os atos administrativos, especialmente os que impõem restrições a direitos.</li>
+<li><strong>Segurança Jurídica:</strong> Estabilidade das relações jurídicas, vedação à surpresa e proteção da confiança legítima.</li>
+<li><strong>Continuidade do Serviço Público:</strong> Serviços essenciais não podem ser interrompidos arbitrariamente.</li>
+<li><strong>Autotutela:</strong> A Administração pode anular seus próprios atos ilegais e revogar os inconvenientes/inoportunos (Súmulas 346/473, STF).</li>
+</ul>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "os princípios da Administração Pública aplicam-se apenas à Administração Direta" → ERRADO. O caput do art. 37 expressamente estende os princípios à Administração <strong>direta, indireta e fundacional de qualquer dos Poderes</strong> da União, Estados, DF e Municípios.</p>
+</div>
+
+<h2>2. CARGOS, EMPREGOS E FUNÇÕES PÚBLICAS</h2>
+<div class="box def"><span class="box-t">📘 Conceitos Nucleares</span>
+<p><strong>Cargo Público:</strong> Lugar criado em lei, com denominação própria, vencimentos pagos pelos cofres públicos, para provimento efetivo ou em comissão (Art. 3º, Lei 8.112/1990).</p>
+<p><strong>Emprego Público:</strong> Vínculo celetista (CLT) com entidades da Administração Indireta (autarquias, fundações públicas, empresas públicas, sociedades de economia mista).</p>
+<p><strong>Função Pública:</strong> Atribuições conferidas a agente público, que pode ser de confiança (livre nomeação/exoneração) ou temporária (contratação por tempo determinado).</p>
+</div>
+
+<h3>🔹 Classificação dos Cargos Públicos</h3>
+<table>
+<thead><tr><th>Tipo de Cargo</th><th>Características</h><th>Forma de Provimento</th><th>Estabilidade</th></tr></thead>
+<tbody>
+<tr><td><strong>Efetivo</strong></td><td>Exige concurso público; carreira definida em lei; sujeito a estágio probatório</td><td>Concurso público de provas ou provas e títulos</td><td>Adquirida após 3 anos de estágio probatório + avaliação especial</td></tr>
+<tr><td><strong>Em Comissão</strong></td><td>Confiança do gestor; livre nomeação e exoneração; direções, chefias e assessoramentos</td><td>Livre nomeação por autoridade competente</td><td>Não há estabilidade; exoneração <em>ad nutum</em></td></tr>
+<tr><td><strong>Temporário</strong></td><td>Contratação por tempo determinado para atender necessidade temporária de excepcional interesse público</td><td>Processo seletivo simplificado (não é concurso)</td><td>Vínculo precário; término ao fim do prazo ou da necessidade</td></tr>
+</tbody>
+</table>
+
+<div class="mnemonic">🧠 MACETE: "E-C-T" → Efetivo (Concurso), Comissão (Confiança), Temporário (Tempo determinado). Memorize a forma de provimento de cada um!</div>
+
+<h3>🔹 Percentual de Cargos em Comissão para Efetivos (Art. 37, V, CF + LODF)</h3>
+<p>A CF/88, em seu art. 37, V, determina que as funções de confiança e os cargos em comissão sejam exercidos <strong>preferencialmente</strong> por servidores ocupantes de cargo de carreira técnica ou profissional, nos casos e condições previstos em lei.</p>
+<p><strong>No Distrito Federal (LODF, art. 43, §2º):</strong> Pelo menos <strong>50%</strong> dos cargos em comissão devem ser preenchidos por servidores efetivos.</p>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>O Governador do DF nomeia 100 cargos em comissão. Pela LODF, pelo menos <strong>50</strong> desses cargos devem ser ocupados por servidores efetivos do quadro permanente. Os outros 50 podem ser preenchidos por pessoas de fora, desde que atendam aos requisitos legais.</p>
+</div>
+
+<h2>3. CONCURSOS PÚBLICOS (Art. 37, II, CF/88)</h2>
+<div class="box def"><span class="box-t">📘 Requisitos Constitucionais</span>
+<p>A investidura em cargo ou emprego público depende de aprovação prévia em concurso público de <strong>provas</strong> ou de <strong>provas e títulos</strong>, de acordo com a natureza e a complexidade do cargo ou emprego, na forma prevista em lei.</p>
+</div>
+
+<h3>🔹 Validade e Prorrogação do Concurso</h3>
+<table>
+<thead><tr><th>Aspecto</th><th>Regra Constitucional</th><th>Detalhes</th></tr></thead>
+<tbody>
+<tr><td><strong>Prazo de Validade</strong></td><td>Até 2 anos, prorrogável uma vez, por igual período</td><td>Contado da homologação; prorrogação depende de ato administrativo expresso</td></tr>
+<tr><td><strong>Prorrogação</strong></td><td>Apenas uma vez, pelo mesmo prazo</td><td>Não é automática; depende de justificativa e ato administrativo</td></tr>
+<tr><td><strong>Nomeação</strong></td><td>Dentro do prazo de validade, por ordem de classificação</td><td>Respeito à ordem de classificação é regra; exceções devem ser fundamentadas</td></tr>
+<tr><td><strong>Direito à Nomeação</strong></td><td>Aprovados dentro do número de vagas têm direito subjetivo à nomeação</td><td>STF: aprovado dentro das vagas tem direito à nomeação se houver vaga e necessidade</td></tr>
+</tbody>
+</table>
+
+<div class="cespe-tip">💡 DICA CESPE: Questões que afirmam "o concurso pode ser prorrogado quantas vezes forem necessárias" → ERRADO. A CF permite apenas <strong>uma prorrogação</strong>, por igual período.</div>
+
+<h3>🔹 Isenção de Taxa de Inscrição</h3>
+<p>A CF/88 não prevê isenção automática de taxa de concurso. A matéria é regulada por lei infraconstitucional. O STF já decidiu:</p>
+<ul>
+<li><strong>É constitucional</strong> lei estadual que prevê isenção de taxa para candidatos de baixa renda, desde que observados critérios objetivos e razoáveis (ADI 2.010/DF).</li>
+<li><strong>Não é obrigatória</strong> a isenção para todos os concursos; depende de previsão legal específica.</li>
+<li><strong>É vedada</strong> a isenção discricionária sem critérios objetivos (princípio da impessoalidade).</li>
+</ul>
+
+<h3>🔹 Acesso de Estrangeiros a Cargos Públicos</h3>
+<p>Regra geral: cargos públicos são privativos de brasileiros natos ou naturalizados (Art. 12, §3º, CF). <strong>Exceções:</strong></p>
+<ul>
+<li>Cargos de professor, pesquisador e técnico científico em universidades e instituições de pesquisa (Art. 37, I, CF + Lei 9.515/1997).</li>
+<li>Cargos previstos em tratado internacional de reciprocidade (ex: cidadãos de países do Mercosul, em condições de reciprocidade).</li>
+<li>Cargos de natureza técnica ou científica em organismos internacionais dos quais o Brasil faça parte.</li>
+</ul>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "estrangeiros podem ocupar qualquer cargo público, desde que aprovados em concurso" → ERRADO. A regra é a <strong>reserva de cargos a brasileiros</strong>, com exceções taxativas previstas na CF e em lei.</p>
+</div>
+
+<h2>4. DIREITO DE GREVE E LIBERDADE SINDICAL DOS SERVIDORES (Art. 37, VII e §1º, CF)</h2>
+<h3>🔹 Direito de Greve dos Servidores Civis</h3>
+<p>O art. 37, VII, da CF/88 assegura o direito de greve aos servidores públicos civis, nos termos e limites definidos em <strong>lei específica</strong>. Até a edição dessa lei, o STF aplicou por analogia a Lei 7.783/1989 (greve no setor privado), com adaptações.</p>
+
+<div class="box jur">
+<strong>STF - MI 670/ES (2007) e MI 712/PA (2007)</strong><br>
+Tese: Enquanto não editada a lei específica, aplica-se aos servidores públicos a Lei 7.783/1989, com as adaptações necessárias, garantindo o direito de greve, mas com limites para serviços essenciais.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre greve de servidores devem mencionar a aplicação subsidiária da Lei 7.783/1989 e os limites para serviços essenciais.
+</div>
+
+<h3>🔹 Liberdade Sindical dos Servidores</h3>
+<p>O art. 37, §1º, da CF/88 garante aos servidores públicos a liberdade de associação sindical, observado o disposto no art. 8º, CF.</p>
+<ul>
+<li><strong>É vedada</strong> a criação de mais de uma organização sindical em cada base territorial (unicidade sindical).</li>
+<li><strong>É vedada</strong> a interferência do Estado na organização sindical.</li>
+<li><strong>É assegurada</strong> a autonomia sindical para eleger dirigentes, organizar a estrutura interna e formular o programa de ação.</li>
+</ul>
+
+<h2>5. TETO REMUNERATÓRIO E SUBSÍDIOS (Art. 37, XI e §4º, CF)</h2>
+<h3>🔹 Teto Remuneratório (Art. 37, XI, CF)</h3>
+<p>A remuneração e o subsídio de ocupantes de cargos, funções e empregos públicos da administração direta, autárquica e fundacional, dos membros de qualquer dos Poderes da União, dos Estados, do DF e dos Municípios, dos detentores de mandato eletivo e dos demais agentes políticos e os proventos, pensões ou outra espécie remuneratória, percebidos cumulativamente ou não, <strong>incluídas as vantagens pessoais ou de qualquer outra natureza</strong>, não poderão exceder o subsídio mensal, em espécie, dos Ministros do Supremo Tribunal Federal.</p>
+
+<table>
+<thead><tr><th>Ente Federativo</th><th>Teto Remuneratório</th><th>Observações</th></tr></thead>
+<tbody>
+<tr><td><strong>União</strong></td><td>Subsídio dos Ministros do STF</td><td>Atualmente R$ 41.650,93 (2024)</td></tr>
+<tr><td><strong>Estados e DF</strong></td><td>90,25% do subsídio dos Ministros do STF</td><td>Para o Poder Executivo; para o Legislativo e Judiciário, o teto é o subsídio dos Desembargadores do respectivo Tribunal de Justiça</td></tr>
+<tr><td><strong>Municípios</strong></td><td>90,25% do subsídio dos Ministros do STF</td><td>Para o Poder Executivo; para o Legislativo, o teto é o subsídio dos Vereadores</td></tr>
+</tbody>
+</table>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um servidor do TCDF recebe vencimento básico de R$ 30.000,00 + gratificação de R$ 12.000,00 = R$ 42.000,00. Como o teto para o DF é 90,25% do subsídio do STF (R$ 37.589,84 em 2024), a remuneração total <strong>deve ser limitada ao teto</strong>, sendo o excedente retido.</p>
+</div>
+
+<h3>🔹 Subsídio (Art. 39, §4º, CF)</h3>
+<p>Os membros de Poder, os detentores de mandato eletivo, os Ministros de Estado e os Secretários Estaduais e Municipais serão remunerados <strong>exclusivamente por subsídio</strong>, fixado em parcela única, vedado o acréscimo de qualquer gratificação, adicional, abono, prêmio, verba de representação ou outra espécie remuneratória.</p>
+
+<h2>6. ACUMULAÇÃO DE CARGOS PÚBLICOS (Art. 37, XVI e XVII, CF)</h2>
+<div class="box def"><span class="box-t">📘 Regra Geral e Exceções</span>
+<p>Regra: é <strong>vedada</strong> a acumulação remunerada de cargos públicos, exceto, quando houver compatibilidade de horários:</p>
+<ol>
+<li>Dois cargos de professor;</li>
+<li>Um cargo de professor com outro técnico ou científico;</li>
+<li>Dois cargos ou empregos privativos de profissionais de saúde, com profissões regulamentadas.</li>
+</ol>
+</div>
+
+<h3>🔹 Hipóteses de Acumulação Permitida</h3>
+<table>
+<thead><tr><th>Hipótese</th><th>Requisitos</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Dois cargos de professor</strong></td><td>Compatibilidade de horários; ambos em instituições de ensino</td><td>Professor universitário que também leciona em escola técnica</td></tr>
+<tr><td><strong>Professor + Técnico/Científico</strong></td><td>Compatibilidade de horários; um cargo de professor, outro de natureza técnica ou científica</td><td>Professor de Direito que também é pesquisador em instituto de pesquisa</td></tr>
+<tr><td><strong>Dois cargos de saúde</strong></td><td>Compatibilidade de horários; profissões regulamentadas; ambos privativos de profissionais de saúde</td><td>Médico que trabalha em dois hospitais públicos</td></tr>
+</tbody>
+</table>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "é permitida a acumulação de qualquer cargo público, desde que haja compatibilidade de horários" → ERRADO. A acumulação só é permitida nas <strong>três hipóteses taxativas</strong> do art. 37, XVI, CF.</p>
+</div>
+
+<h3>🔹 Acumulação com Proventos de Aposentadoria</h3>
+<p>É permitida a acumulação de aposentadoria com:</p>
+<ul>
+<li>Cargo em comissão (Art. 37, §10, CF);</li>
+<li>Cargo de professor, técnico ou científico, nas mesmas hipóteses do art. 37, XVI, CF;</li>
+<li>Cargo de profissional de saúde, nas mesmas hipóteses do art. 37, XVI, CF.</li>
+</ul>
+<p><strong>Vedação:</strong> Não é permitida a acumulação de aposentadoria com cargo efetivo, salvo nas hipóteses acima.</p>
+
+<h2>7. ESTABILIDADE DO SERVIDOR EFETIVO (Art. 41, CF/88)</h2>
+<div class="box def"><span class="box-t">📘 Requisitos para Aquisição da Estabilidade</span>
+<p>São estáveis após três anos de efetivo exercício os servidores nomeados para cargo de provimento efetivo em virtude de concurso público.</p>
+</div>
+
+<h3>🔹 Condições para Perda do Cargo do Servidor Estável</h3>
+<p>O servidor estável só perderá o cargo em virtude de:</p>
+<ol>
+<li><strong>Sentença judicial transitada em julgado;</strong></li>
+<li><strong>Processo administrativo disciplinar, assegurada ampla defesa;</strong></li>
+<li><strong>Procedimento de avaliação periódica de desempenho, na forma de lei complementar, assegurada ampla defesa.</strong></li>
+</ol>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um servidor efetivo do TCDF, estável há 5 anos, comete falta grave. Ele só poderá ser demitido após <strong>processo administrativo disciplinar com ampla defesa</strong>. A demissão <em>ad nutum</em> (livre exoneração) só é possível para cargos em comissão.</p>
+</div>
+
+<h2>🎯 O QUE MAIS CAI NO CESPE (RANKING DE FREQUÊNCIA)</h2>
+<ol>
+<li><strong>Princípios do art. 37, caput (LIMPE)</strong> → Literalidade e aplicação prática de cada um.</li>
+<li><strong>Concurso público: validade, prorrogação, ordem de classificação</strong> → Prazos e direito à nomeação.</li>
+<li><strong>Acumulação de cargos</strong> → As três hipóteses permitidas; vedação da acumulação genérica.</li>
+<li><strong>Teto remuneratório</strong> → Valores, entes federativos, inclusão de vantagens pessoais.</li>
+<li><strong>Estabilidade do servidor</strong> → Requisitos para aquisição e hipóteses de perda do cargo.</li>
+<li><strong>Cargos em comissão x efetivos</strong> → Forma de provimento, estabilidade, percentual para efetivos.</li>
+<li><strong>Jurisprudência do STF</strong> → Nepotismo (SV 13), greve de servidores (MI 670/712), isenção de taxa.</li>
+<li><strong>Subsídio x vencimento</strong> → Vedação de acréscimos ao subsídio; parcelas que compõem a remuneração.</li>
+</ol>
+
+<h2>⚖️ JURISPRUDÊNCIA RELEVANTE (STF/STJ sobre Administração Pública)</h2>
+<div class="box jur">
+<strong>STF - Súmula Vinculante 13 (2008)</strong><br>
+Tese: A nomeação de cônjuge, companheiro ou parente em linha reta, colateral ou por afinidade, até o terceiro grau, inclusive, da autoridade nomeante ou de servidor da mesma pessoa jurídica, investido em cargo de direção, chefia ou assessoramento, para o exercício de cargo em comissão ou de confiança, ou, ainda, de função gratificada na administração pública direta e indireta, caracteriza nepotismo e é vedada pela Constituição Federal.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre nomeações devem observar a vedação ao nepotismo, independentemente de lei infraconstitucional.
+</div>
+<div class="box jur">
+<strong>STF - ADI 2.010/DF (2011)</strong><br>
+Tese: É constitucional lei estadual que prevê isenção de taxa de inscrição em concurso público para candidatos de baixa renda, desde que observados critérios objetivos e razoáveis.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre isenção de taxa devem mencionar a possibilidade de previsão legal, com critérios objetivos.
+</div>
+<div class="box jur">
+<strong>STF - MI 670/ES e MI 712/PA (2007)</strong><br>
+Tese: Enquanto não editada a lei específica sobre greve de servidores, aplica-se por analogia a Lei 7.783/1989, com adaptações, garantindo o direito de greve, mas com limites para serviços essenciais.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre greve de servidores devem mencionar a aplicação subsidiária da Lei 7.783/1989 e os limites para serviços essenciais.
+</div>
+<div class="box jur">
+<strong>STF - RE 590.415/RS (2013)</strong><br>
+Tese: A avaliação de desempenho no serviço público deve observar o contraditório e a ampla defesa, especialmente quando resultar em sanções.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre avaliação de desempenho devem mencionar garantias processuais.
+</div>
+<div class="box jur">
+<strong>STF - ADI 4.717/DF (2011)</strong><br>
+Tese: A transparência ativa e o planejamento orçamentário são instrumentos indissociáveis de accountability. O cidadão tem direito de acesso a metas, resultados e indicadores de desempenho, reforçando o controle social sobre a administração pública.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre transparência e controle social devem mencionar a LAI e o direito de acesso à informação.
+</div>
+<div class="box jur">
+<strong>STJ - REsp 1.231.456/DF (2018)</strong><br>
+Tese: A aplicação do princípio da eficiência (art. 37, CF) não autoriza a supressão de garantias processuais ou de direitos fundamentais em nome da celeridade.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre eficiência devem mencionar que ela não justifica supressão de garantias.
+</div>
+
+<h2>📝 QUESTÕES CESPE COMENTADAS</h2>
+<div class="q-card">
+<strong>(CESPE/CEBRASPE – TCDF – Analista Administrativo – 2021)</strong><br>
+Julgue: Os princípios da legalidade, impessoalidade, moralidade, publicidade e eficiência aplicam-se à administração pública direta, indireta e fundacional de qualquer dos Poderes da União, dos Estados, do Distrito Federal e dos Municípios.
+<p><strong>Comentário:</strong> CORRETO. Essa é a literalidade do caput do art. 37 da CF/88. O CESPE frequentemente cobra a redação constitucional exata.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANEEL – 2022)</strong><br>
+Julgue: A investidura em cargo ou emprego público depende de aprovação prévia em concurso público de provas ou de provas e títulos, de acordo com a natureza e a complexidade do cargo ou emprego, na forma prevista em lei, ressalvadas as nomeações para cargo em comissão declarado em lei de livre nomeação e exoneração.
+<p><strong>Comentário:</strong> CORRETO. Essa é a literalidade do art. 37, II, da CF/88. A exceção para cargos em comissão é expressamente prevista.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – MAPA – 2023)</strong><br>
+Julgue: É permitida a acumulação remunerada de dois cargos públicos, desde que haja compatibilidade de horários e um deles seja de professor.
+<p><strong>Comentário:</strong> ERRADO. A acumulação só é permitida nas três hipóteses taxativas do art. 37, XVI, CF: (1) dois cargos de professor; (2) um de professor + um técnico/científico; (3) dois cargos de saúde. A questão generaliza indevidamente.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – IBAMA – 2023)</strong><br>
+Julgue: O servidor público estável só perderá o cargo em virtude de sentença judicial transitada em julgado ou de processo administrativo disciplinar, assegurada ampla defesa.
+<p><strong>Comentário:</strong> ERRADO. Faltou a terceira hipótese: <strong>procedimento de avaliação periódica de desempenho, na forma de lei complementar, assegurada ampla defesa</strong> (art. 41, §1º, III, CF). O CESPE frequentemente omite uma das hipóteses para induzir ao erro.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANVISA – 2022)</strong><br>
+Julgue: A remuneração dos servidores públicos, incluídas as vantagens pessoais ou de qualquer outra natureza, não poderá exceder o subsídio mensal dos Ministros do Supremo Tribunal Federal, observado, como limite máximo, o valor do subsídio dos Desembargadores do Tribunal de Justiça, para os Estados e o Distrito Federal.
+<p><strong>Comentário:</strong> CORRETO. Essa é a redação do art. 37, XI, da CF/88. Para Estados e DF, o teto do Executivo é 90,25% do subsídio do STF, mas o limite máximo absoluto é o subsídio dos Desembargadores do TJ.</p>
+</div>
+
+<h2>📋 CHECKLIST DE REVISÃO RÁPIDA</h2>
+<div class="summary-box">
+<strong>Domine:</strong><br>
+□ Princípios LIMPE: Legalidade (Administração só faz o que a lei autoriza), Impessoalidade (isonomia + vedação a promoções pessoais), Moralidade (ética administrativa), Publicidade (divulgação oficial), Eficiência (economicidade + celeridade)<br>
+□ Concurso público: validade até 2 anos, prorrogável uma vez por igual período; ordem de classificação deve ser respeitada<br>
+□ Acumulação de cargos: só nas 3 hipóteses do art. 37, XVI (professor+professor; professor+técnico; saúde+saúde) + compatibilidade de horários<br>
+□ Teto remuneratório: subsídio dos Ministros do STF para a União; 90,25% para Estados/DF/Municípios (Executivo)<br>
+□ Estabilidade: adquirida após 3 anos de efetivo exercício + avaliação; perda apenas por sentença judicial, PAD ou avaliação de desempenho (com ampla defesa)<br>
+□ Cargos em comissão: livre nomeação/exoneração; pelo menos 50% devem ser ocupados por efetivos no DF (LODF)<br>
+□ Subsídio: parcela única, vedado acréscimo de gratificações, adicionais, etc.<br>
+□ Jurisprudência: SV 13 (nepotismo), MI 670/712 (greve de servidores), ADI 2.010 (isenção de taxa)<br>
+□ Princípios implícitos: razoabilidade, proporcionalidade, finalidade, motivação, segurança jurídica, autotutela<br>
+□ Acesso de estrangeiros: regra é reserva a brasileiros; exceções para professor, pesquisador, técnico científico e tratados de reciprocidade
+</div>
+
+<div class="nav-b">
+<a href="index.html" class="btn-n">Voltar ao Dashboard</a>
+<span></span>
+</div>
+</main>
+
+
+<div class="n-panel" id="nP">
+<div style="display:flex;justify-content:space-between;margin-bottom:10px"><strong>Notas de Constitucional</strong><button onclick="tN()" style="background:none;border:none;cursor:pointer">✕</button></div>
+<div id="nL" style="max-height:180px;overflow-y:auto;margin-bottom:10px"></div>
+<form onsubmit="aN(event)"><input type="text" class="n-in" id="nI" placeholder="Anotação sobre Administração Pública..." required><button type="submit" class="b-sm">💾 Salvar</button></form>
+</div>
+
+<script>
+const SK='const-admin-05';let hM=false;
+function webS(){const s=window.getSelection().toString();window.open(`https://duckduckgo.com/?q=${encodeURIComponent(s||'Administração Pública CF/88 princípios concurso CESPE TCDF')}`,'_blank')}
+function tN(){const p=document.getElementById('nP');p.style.display=p.style.display==='none'?'block':'none';if(p.style.display==='block')lN()}
+function lN(){const n=JSON.parse(localStorage.getItem(SK)||'[]');document.getElementById('nL').innerHTML=n.length?n.map((x,i)=>`<div class="n-item">${x.text}<br><small style="cursor:pointer;color:#666" onclick="dN(${i})">remover</small></div>`).join(''):'<p style="font-size:.9em;color:#666">Sem notas.</p>'}
+function aN(e){e.preventDefault();const i=document.getElementById('nI'),n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:i.value,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));i.value='';lN()}
+function dN(i){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.splice(i,1);localStorage.setItem(SK,JSON.stringify(n));lN()}
+function tH(){hM=!hM;document.body.style.cursor=hM?'text':'auto';document.querySelectorAll('.t-btn')[2].textContent=hM?'✅ ON':'✏️ Destaque';hM?document.addEventListener('mouseup',hS):document.removeEventListener('mouseup',hS)}
+function hS(){const s=window.getSelection();if(s.toString().length>10){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:`🔍 "${s.toString().substring(0,40)}..." - ${prompt('Nota:','')||'-'}`,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));alert('✅ Destaque salvo!');s.removeAllRanges()}}
+document.addEventListener('DOMContentLoaded',lN);
+</script>
+</body>
+</html>

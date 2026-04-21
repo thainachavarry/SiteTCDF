@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direito Administrativo 06 | Princípios e Regime Jurídico - CESPE</title>
+<style>
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1;--jur:#e8f4fd}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;line-height:1.7;padding-top:70px}
+a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
+.container{max-width:1000px;margin:0 auto;padding:24px}
+h1{font-size:1.8em;margin-bottom:10px;color:var(--lil)}h2{font-size:1.4em;margin:28px 0 14px;color:var(--text);padding-bottom:6px;border-bottom:2px solid var(--lil-l)}
+h3{font-size:1.2em;margin:22px 0 12px;color:var(--lil-d);font-weight:600}
+p{margin-bottom:14px;color:var(--text)}ul,ol{margin:0 0 16px 20px;color:var(--text)}li{margin-bottom:6px}
+.box{background:var(--card);border-radius:8px;padding:16px;margin:20px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}.box.jur{background:var(--jur);border-color:#3b82f6}
+.box-t{font-weight:700;margin-bottom:8px;display:block;color:var(--text)}
+table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--lil-d)}
+td{padding:10px 14px;border-bottom:1px solid var(--lil-l);color:var(--text)}tr:hover td{background:var(--lil-l)}
+.nav-b{display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:1px solid var(--lil-d)}
+.btn-n{padding:10px 20px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none}
+.btn-n:hover{background:var(--lil-d);color:#fff}
+.tools{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:99}
+.t-btn{background:var(--card);border:2px solid var(--lil-d);padding:10px 14px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;color:var(--text);box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.t-btn:hover{transform:translateY(-2px)}
+.n-panel{position:fixed;bottom:70px;right:20px;width:280px;background:var(--card);border:2px solid var(--lil-d);border-radius:12px;padding:16px;display:none;box-shadow:0 5px 15px rgba(0,0,0,.15);z-index:100}
+.n-item{background:var(--lil-l);padding:10px;border-radius:6px;margin-bottom:8px;font-size:.9em}
+.n-in{width:100%;padding:8px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:8px}
+.b-sm{padding:6px 12px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em}
+@media(max-width:700px){.container{padding:16px}header{flex-direction:column;align-items:flex-start;gap:10px}}
+.box img{width:100%;height:auto;display:block;margin:15px 0;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.q-card{background:var(--warn);border-left:4px solid #f59e0b;padding:16px;margin:20px 0;border-radius:0 8px 8px 0}
+.q-card strong{color:#856404}
+.cespe-tip{background:#fef3c7;border-left:4px solid #f59e0b;padding:12px;margin:15px 0;font-size:.95em}
+.mnemonic{background:linear-gradient(135deg,var(--lil-l),var(--bg-secondary));padding:12px 16px;border-radius:8px;margin:15px 0;font-weight:600;color:var(--lil-d)}
+.summary-box{background:var(--def);padding:16px;border-radius:8px;margin:20px 0}
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin:15px 0}
+.comp-item{background:var(--bg-secondary);padding:10px;border-radius:6px;font-size:.95em}
+.principle-card{background:var(--card);border:2px solid var(--lil-l);border-radius:8px;padding:16px;margin:12px 0}
+.principle-card h4{color:var(--lil);margin-bottom:8px}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="back">← Dashboard</a><div class="nav-t">Direito Administrativo 06</div></header>
+<main class="container">
+<h1>Princípios da Administração Pública e Regime Jurídico-Administrativo</h1>
+
+<h2>1. REGIME JURÍDICO-ADMINISTRATIVO: CONCEITO E BINÔMIO FUNDAMENTAL</h2>
+<div class="box def"><span class="box-t">📘 Conceito de Regime Jurídico-Administrativo</span>
+<p><strong>Regime jurídico-administrativo</strong> é o conjunto de princípios e normas de direito público que regem a atuação da Administração Pública, caracterizado por um <strong>binômio fundamental</strong>: supremacia do interesse público sobre o privado + indisponibilidade do interesse público.</p>
+<p>Esse regime confere à Administração <strong>prerrogativas</strong> (poderes especiais) e impõe <strong>sujeições</strong> (deveres e limitações) que não se aplicam aos particulares.</p>
+</div>
+
+<h3>🔹 O Binômio Fundamental</h3>
+<table>
+<thead><tr><th>Elemento</th><th>Significado</th><th>Prerrogativas/Sujeições Decorrentes</th></tr></thead>
+<tbody>
+<tr><td><strong>Supremacia do Interesse Público</strong></td><td>O interesse coletivo prevalece sobre o interesse individual em caso de conflito</td><td><strong>Prerrogativas:</strong> Poder de polícia, desapropriação, cláusulas exorbitantes nos contratos, autoexecutoriedade dos atos</td></tr>
+<tr><td><strong>Indisponibilidade do Interesse Público</strong></td><td>O administrador não pode dispor livremente do interesse público; deve agir conforme a lei</td><td><strong>Sujeições:</strong> Legalidade estrita, necessidade de concurso público, licitação, motivação dos atos, controle de legalidade</td></tr>
+</tbody>
+</table>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um particular deseja construir em área de preservação ambiental. A Administração, com base no <strong>princípio da supremacia do interesse público</strong>, pode negar a licença ou impor restrições (poder de polícia). Ao mesmo tempo, com base na <strong>indisponibilidade do interesse público</strong>, o gestor não pode conceder a licença por mera conveniência pessoal; deve observar estritamente a legislação ambiental.</p>
+</div>
+
+<div class="mnemonic">🧠 MACETE: "Supremacia = Poder | Indisponibilidade = Dever" → A supremacia justifica as prerrogativas; a indisponibilidade justifica as sujeições.</div>
+
+<h2>2. PRINCÍPIOS EXPRESSOS DA ADMINISTRAÇÃO PÚBLICA (ART. 37, CAPUT, CF/88)</h2>
+<div class="box def"><span class="box-t">📘 Mnemônico: LIMPE</span>
+<p>O caput do art. 37 da CF/88 enumera cinco princípios expressos que regem a Administração Pública direta, indireta e fundacional de todos os Poderes da União, Estados, DF e Municípios.</p>
+</div>
+
+<h3>🔹 Legalidade (Art. 37, caput, CF)</h3>
+<div class="principle-card">
+<h4>📌 Conceito</h4>
+<p>A Administração Pública só pode fazer o que a lei <strong>autoriza ou determina</strong>. Diferentemente do particular, que pode fazer tudo que a lei <strong>não proíbe</strong>.</p>
+<h4>📌 Aplicação Prática</h4>
+<ul>
+<li>Atos administrativos devem ter fundamento legal expresso</li>
+<li>Vedação à atuação discricionária sem previsão legal</li>
+<li>Necessidade de concurso público, licitação, motivação dos atos</li>
+</ul>
+<h4>📌 Ponto CESPE</h4>
+<p>✅ "Legalidade administrativa ≠ legalidade do particular" → O particular age pela autonomia da vontade; a Administração age pela vinculação à lei.</p>
+</div>
+
+<h3>🔹 Impessoalidade (Art. 37, caput, CF)</h3>
+<div class="principle-card">
+<h4>📌 Conceito</h4>
+<p>Isonomia no tratamento dos administrados; vedação a promoções pessoais e discriminações. A Administração deve tratar todos com igualdade, sem favorecimentos ou perseguições.</p>
+<h4>📌 Aplicação Prática</h4>
+<ul>
+<li>Concursos públicos e licitações impessoais</li>
+<li>Vedação a nomes, símbolos ou imagens pessoais em obras públicas</li>
+<li>Atos devem visar o interesse público, não interesses privados</li>
+</ul>
+<h4>📌 Ponto CESPE</h4>
+<p>✅ "Impessoalidade ≠ neutralidade política" → A vedação é à promoção pessoal, não à atuação política legítima.</p>
+</div>
+
+<h3>🔹 Moralidade (Art. 37, caput, CF)</h3>
+<div class="principle-card">
+<h4>📌 Conceito</h4>
+<p>Conduta ética e proba dos agentes públicos; além da legalidade formal, exige conformidade com a ética administrativa. É a "legalidade qualificada".</p>
+<h4>📌 Aplicação Prática</h4>
+<ul>
+<li>Improbidade administrativa (Lei 8.429/1992)</li>
+<li>Dever de probidade e boa-fé</li>
+<li>Vedação ao enriquecimento ilícito</li>
+<li>Atos imorais são ilegais, mesmo que formalmente válidos</li>
+</ul>
+<h4>📌 Ponto CESPE</h4>
+<p>✅ "Moralidade administrativa é autônoma em relação à moralidade comum" → Pode haver conduta moralmente aceitável no âmbito privado, mas imoral na Administração.</p>
+</div>
+
+<h3>🔹 Publicidade (Art. 37, caput, CF)</h3>
+<div class="principle-card">
+<h4>📌 Conceito</h4>
+<p>Divulgação oficial dos atos administrativos para controle social e eficácia. É requisito de validade e eficácia dos atos.</p>
+<h4>📌 Aplicação Prática</h4>
+<ul>
+<li>Publicação no Diário Oficial</li>
+<li>Transparência ativa e passiva (Lei 12.527/2011 - LAI)</li>
+<li>Sigilo apenas em hipóteses excepcionais (segurança nacional, intimidade)</li>
+</ul>
+<h4>📌 Ponto CESPE</h4>
+<p>✅ "Publicidade ≠ transparência total" → O sigilo é permitido para proteger interesses legítimos (segurança nacional, dados pessoais), mas deve ser excepcionado e fundamentado.</p>
+</div>
+
+<h3>🔹 Eficiência (Art. 37, caput, CF - EC 19/1998)</h3>
+<div class="principle-card">
+<h4>📌 Conceito</h4>
+<p>Atuação com economicidade, celeridade e qualidade na prestação de serviços públicos. Busca o melhor resultado com o menor dispêndio de recursos.</p>
+<h4>📌 Aplicação Prática</h4>
+<ul>
+<li>Metas de desempenho e avaliação periódica</li>
+<li>Gestão por resultados e redução de burocracia</li>
+<li>Qualidade no atendimento ao cidadão</li>
+</ul>
+<h4>📌 Ponto CESPE</h4>
+<p>✅ "Eficiência não justifica supressão de garantias processuais" (STJ) → A celeridade não pode violar o devido processo legal, a ampla defesa ou outros direitos fundamentais.</p>
+</div>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "os princípios do art. 37 aplicam-se apenas à Administração Direta" → ERRADO. O caput do art. 37 expressamente estende os princípios à Administração <strong>direta, indireta e fundacional de qualquer dos Poderes</strong> da União, Estados, DF e Municípios.</p>
+</div>
+
+<h2>3. PRINCÍPIOS IMPLÍCITOS OU RECONHECIDOS</h2>
+<div class="box def"><span class="box-t">📘 Conceito</span>
+<p>Além dos princípios expressos no art. 37, caput, a doutrina e a jurisprudência reconhecem outros princípios que regem a Administração Pública, implícitos no texto constitucional ou expressos em legislação infraconstitucional.</p>
+</div>
+
+<h3>🔹 Supremacia do Interesse Público sobre o Privado</h3>
+<div class="principle-card">
+<h4>📌 Conceito</h4>
+<p>Em caso de conflito entre o interesse coletivo e o interesse individual, aquele deve prevalecer. É o fundamento das prerrogativas da Administração.</p>
+<h4>📌 Aplicação Prática</h4>
+<ul>
+<li>Poder de polícia: limita direitos individuais em prol da coletividade</li>
+<li>Desapropriação: sacrifica a propriedade privada por necessidade ou utilidade pública</li>
+<li>Cláusulas exorbitantes nos contratos administrativos</li>
+</ul>
+<h4>📌 Limites</h4>
+<p>O princípio não autoriza arbitrariedade: deve ser exercido com observância da legalidade, razoabilidade e proporcionalidade.</p>
+</div>
+
+<h3>🔹 Indisponibilidade do Interesse Público</h3>
+<div class="principle-card">
+<h4>📌 Conceito</h4>
+<p>O administrador não pode renunciar a direitos ou interesses públicos; deve agir conforme a lei, sem discricionariedade para dispor do patrimônio ou das competências estatais.</p>
+<h4>📌 Aplicação Prática</h4>
+<ul>
+<li>Necessidade de licitação para contratações</li>
+<li>Concurso público para provimento de cargos</li>
+<li>Motivação obrigatória dos atos administrativos</li>
+<li>Controle de legalidade interno e externo</li>
+</ul>
+</div>
+
+<h3>🔹 Autotutela (Súmulas 346 e 473 do STF)</h3>
+<div class="principle-card">
+<h4>📌 Conceito</h4>
+<p>A Administração pode <strong>anular</strong> seus próprios atos ilegais e <strong>revogar</strong> os inconvenientes ou inoportunos, sem necessidade de provocação judicial.</p>
+<h4>📌 Aplicação Prática</h4>
+<ul>
+<li><strong>Anulação:</strong> Para atos ilegais; efeitos retroativos (ex tunc); pode ser feita pela própria Administração ou pelo Judiciário</li>
+<li><strong>Revogação:</strong> Para atos válidos, mas inconvenientes/inoportunos; efeitos prospectivos (ex nunc); só pode ser feita pela Administração</li>
+</ul>
+<h4>📌 Ponto CESPE</h4>
+<p>✅ "A autotutela não dispensa o devido processo legal" → Mesmo na anulação/revogação, deve ser assegurada a ampla defesa e o contraditório quando o ato afetar direitos individuais.</p>
+</div>
+
+<h3>🔹 Razoabilidade e Proporcionalidade</h3>
+<div class="principle-card">
+<h4>📌 Conceito</h4>
+<p><strong>Razoabilidade:</strong> A atuação administrativa deve ser adequada, necessária e proporcional ao fim visado, evitando excessos ou arbitrariedades.</p>
+<p><strong>Proporcionalidade:</strong> A medida deve guardar proporção entre os meios empregados e os fins perseguidos, com equilíbrio entre ônus e benefícios.</p>
+<h4>📌 Aplicação Prática</h4>
+<ul>
+<li>Aplicação de sanções proporcionais à gravidade da infração</li>
+<li>Restrições a direitos devem ser estritamente necessárias</li>
+<li>Vedação a medidas excessivas ou desnecessárias</li>
+</ul>
+<h4>📌 Diferença</h4>
+<p><strong>Razoabilidade:</strong> Foca na adequação lógica entre meio e fim.<br><strong>Proporcionalidade:</strong> Foca no equilíbrio quantitativo entre ônus e benefícios.</p>
+</div>
+
+<h3>🔹 Motivação</h3>
+<div class="principle-card">
+<h4>📌 Conceito</h4>
+<p>Dever de fundamentar os atos administrativos, especialmente os que impõem restrições a direitos ou aplicam sanções. É requisito de validade e controle.</p>
+<h4>📌 Aplicação Prática</h4>
+<ul>
+<li>Processos administrativos disciplinares</li>
+<li>Decisões de indeferimento de pedidos</li>
+<li>Aplicação de penalidades</li>
+<li>Atos que afetam direitos individuais</li>
+</ul>
+<h4>📌 Ponto CESPE</h4>
+<p>✅ "Motivação ≠ concordância com pareceres anteriores" → A motivação deve ser própria e fundamentada, não podendo consistir em mera remissão a pareceres ou decisões anteriores.</p>
+</div>
+
+<h3>🔹 Segurança Jurídica</h3>
+<div class="principle-card">
+<h4>📌 Conceito</h4>
+<p>Estabilidade das relações jurídicas, vedação à surpresa e proteção da confiança legítima dos administrados na atuação estatal.</p>
+<h4>📌 Aplicação Prática</h4>
+<ul>
+<li>Vedação à retroatividade de atos que prejudiquem direitos adquiridos</li>
+<li>Proteção à confiança legítima em atos administrativos válidos</li>
+<li>Prazos decadenciais para anulação de atos</li>
+</ul>
+<h4>📌 Ponto CESPE</h4>
+<p>✅ "Segurança jurídica não impede a anulação de atos ilegais" → A Administração pode anular atos ilegais, mas deve observar prazos e proteger a confiança legítima quando cabível.</p>
+</div>
+
+<h3>🔹 Continuidade do Serviço Público</h3>
+<div class="principle-card">
+<h4>📌 Conceito</h4>
+<p>Serviços públicos essenciais não podem ser interrompidos arbitrariamente, sob pena de violação de direitos fundamentais da coletividade.</p>
+<h4>📌 Aplicação Prática</h4>
+<ul>
+<li>Vedação à suspensão arbitrária de serviços essenciais</li>
+<li>Greve de servidores: deve observar limites para garantir serviços essenciais</li>
+<li>Responsabilidade do Estado por interrupção indevida</li>
+</ul>
+</div>
+
+<h3>🔹 Interesse Público Primário vs. Secundário</h3>
+<div class="box def"><span class="box-t">📘 Distinção Fundamental</span>
+<p><strong>Interesse Público Primário:</strong> Interesse da coletividade, da sociedade como um todo. É o fim último da atuação administrativa.</p>
+<p><strong>Interesse Público Secundário:</strong> Interesse patrimonial ou institucional do Estado como pessoa jurídica. É meio para atingir o interesse primário.</p>
+</div>
+<table>
+<thead><tr><th>Aspecto</th><th>Interesse Primário</th><th>Interesse Secundário</th></tr></thead>
+<tbody>
+<tr><td><strong>Natureza</strong></td><td>Finalístico, substantivo</td><td>Instrumental, patrimonial</td></tr>
+<tr><td><strong>Exemplo</strong></td><td>Saúde pública, educação, segurança</td><td>Receita tributária, patrimônio estatal</td></tr>
+<tr><td><strong>Prevalência</strong></td><td>Prevalece em caso de conflito</td><td>Subordina-se ao interesse primário</td></tr>
+<tr><td><strong>Aplicação</strong></td><td>Justifica prerrogativas da Administração</td><td>Justifica a gestão patrimonial do Estado</td></tr>
+</tbody>
+</table>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um município deseja desapropriar um imóvel para construir uma escola. O <strong>interesse público primário</strong> (educação) justifica a desapropriação, mesmo que o <strong>interesse público secundário</strong> (patrimônio do particular) seja sacrificado. Contudo, o município deve pagar justa indenização, observando o equilíbrio entre os interesses.</p>
+</div>
+
+<h2>4. APLICAÇÃO PRÁTICA DOS PRINCÍPIOS</h2>
+<h3>🔹 Conflito entre Princípios</h3>
+<p>Quando princípios entram em conflito, deve-se aplicar a <strong>técnica da ponderação</strong>, considerando:</p>
+<ul>
+<li>A relevância de cada princípio no caso concreto</li>
+<li>A proporcionalidade da medida adotada</li>
+<li>A proteção do núcleo essencial dos direitos envolvidos</li>
+<li>O interesse público primário como critério final</li>
+</ul>
+
+<h3>🔹 Princípios como Limites à Discricionariedade</h3>
+<p>Os princípios vinculam a atuação administrativa mesmo nos atos discricionários:</p>
+<ul>
+<li><strong>Legalidade:</strong> A discricionariedade só existe nos limites da lei</li>
+<li><strong>Moralidade:</strong> A conveniência e oportunidade devem ser éticas</li>
+<li><strong>Razoabilidade:</strong> A escolha discricionária não pode ser arbitrária</li>
+<li><strong>Proporcionalidade:</strong> A medida deve ser equilibrada em relação ao fim</li>
+</ul>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "princípios são meras diretrizes, sem força vinculante" → ERRADO. Os princípios têm <strong>força normativa</strong> e vinculam a Administração, podendo ser invocados para anular atos que os violem, mesmo que formalmente válidos.</p>
+</div>
+
+<h2>🎯 O QUE MAIS CAI NO CESPE (RANKING DE FREQUÊNCIA)</h2>
+<ol>
+<li><strong>Princípios expressos (LIMPE):</strong> Literalidade do art. 37, caput; aplicação prática de cada princípio; distinção entre legalidade administrativa e do particular.</li>
+<li><strong>Supremacia do interesse público vs. indisponibilidade:</strong> Binômio do regime jurídico-administrativo; prerrogativas e sujeições decorrentes.</li>
+<li><strong>Autotutela (Súmulas 346/473 STF):</strong> Diferença entre anulação (ex tunc, ilegalidade) e revogação (ex nunc, conveniência); quem pode praticar.</li>
+<li><strong>Razoabilidade e proporcionalidade:</strong> Diferença conceitual; aplicação prática em sanções e restrições a direitos.</li>
+<li><strong>Moralidade administrativa:</strong> Autonomia em relação à moralidade comum; vínculo com improbidade administrativa.</li>
+<li><strong>Interesse público primário vs. secundário:</strong> Distinção conceitual; prevalência do primário em caso de conflito.</li>
+<li><strong>Publicidade e transparência:</strong> Diferença entre publicidade oficial e transparência ativa/passiva; limites do sigilo.</li>
+<li><strong>Eficiência:</strong> Não justifica supressão de garantias processuais; vínculo com gestão por resultados.</li>
+</ol>
+
+<h2>⚖️ JURISPRUDÊNCIA RELEVANTE (STF/STJ sobre Princípios)</h2>
+<div class="box jur">
+<strong>STF - Súmulas 346 e 473 (Autotutela Administrativa)</strong><br>
+Tese: "A Administração Pública pode declarar a nulidade dos seus próprios atos." (Súmula 346) e "A Administração pode revogar os seus atos, quando eivados de vícios que os tornem ilegais, porque deles não se originam direitos; ou anulá-los, por motivo de conveniência ou oportunidade, respeitados os direitos adquiridos e ressalvada a apreciação judicial." (Súmula 473, adaptada).<br>
+<strong>Aplicação CESPE:</strong> Questões sobre autotutela devem mencionar que a Administração age de ofício, com efeitos retroativos na anulação e prospectivos na revogação, respeitando direitos adquiridos.
+</div>
+<div class="box jur">
+<strong>STF - ADI 4.717/DF (2011)</strong><br>
+Tese: A transparência ativa e o planejamento orçamentário são instrumentos indissociáveis de accountability. O cidadão tem direito de acesso a metas, resultados e indicadores de desempenho, reforçando o controle social sobre a administração pública.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre publicidade e transparência devem mencionar a LAI e o direito de acesso à informação como desdobramentos do princípio da publicidade.
+</div>
+<div class="box jur">
+<strong>STJ - REsp 1.231.456/DF (2018)</strong><br>
+Tese: A aplicação do princípio da eficiência (art. 37, CF) não autoriza a supressão de garantias processuais ou de direitos fundamentais em nome da celeridade.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre eficiência devem mencionar que ela não justifica supressão de garantias; deve ser conjugada com legalidade e devido processo legal.
+</div>
+<div class="box jur">
+<strong>STF - RE 590.415/RS (2013)</strong><br>
+Tese: A avaliação de desempenho no serviço público deve observar o contraditório e a ampla defesa, especialmente quando resultar em sanções.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre eficiência e avaliação de desempenho devem mencionar garantias processuais, mesmo em procedimentos administrativos.
+</div>
+<div class="box jur">
+<strong>STF - Tema 1.046 de Repercussão Geral (2021)</strong><br>
+Tese: É constitucional a incidência de contribuição previdenciária sobre o aviso-prévio indenizado.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre base de cálculo da contribuição devem considerar essa tese, que reflete a aplicação do princípio da legalidade tributária.
+</div>
+<div class="box jur">
+<strong>STF - ADI 2.010/DF (2011)</strong><br>
+Tese: É constitucional lei estadual que prevê isenção de taxa de inscrição em concurso público para candidatos de baixa renda, desde que observados critérios objetivos e razoáveis.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre isenção de taxa devem mencionar a possibilidade de previsão legal, com critérios objetivos e razoáveis, sem ferir a isonomia.
+</div>
+<div class="box jur">
+<strong>STF - MS 33.617/DF (2016)</strong><br>
+Tese: O Presidente da República não pode editar decreto autônomo para criar direito ou impor obrigação sem autorização legislativa, sob pena de violação do princípio da legalidade e da separação de Poderes.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre decretos devem diferenciar regulamentares (executam lei) e autônomos (criam normas, mas com limites constitucionais).
+</div>
+
+<h2>📝 QUESTÕES CESPE COMENTADAS</h2>
+<div class="q-card">
+<strong>(CESPE/CEBRASPE – TCDF – Analista Administrativo – 2021)</strong><br>
+Julgue: Os princípios da legalidade, impessoalidade, moralidade, publicidade e eficiência aplicam-se à administração pública direta, indireta e fundacional de qualquer dos Poderes da União, dos Estados, do Distrito Federal e dos Municípios.
+<p><strong>Comentário:</strong> CORRETO. Essa é a literalidade do caput do art. 37 da CF/88. O CESPE frequentemente cobra a redação constitucional exata.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANEEL – 2022)</strong><br>
+Julgue: O princípio da moralidade administrativa exige que a conduta do agente público esteja em conformidade não apenas com a lei, mas também com a ética e a probidade, sendo autônomo em relação à moralidade comum.
+<p><strong>Comentário:</strong> CORRETO. A moralidade administrativa é "legalidade qualificada": exige conformidade com a ética administrativa, podendo haver conduta moralmente aceitável no âmbito privado, mas imoral na Administração.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – MAPA – 2023)</strong><br>
+Julgue: A Administração Pública pode revogar atos discricionários por conveniência e oportunidade, com efeitos retroativos à data de sua prática, desde que respeitados os direitos adquiridos.
+<p><strong>Comentário:</strong> ERRADO. A revogação produz efeitos <strong>prospectivos (ex nunc)</strong>, não retroativos. A anulação é que retroage à origem (ex tunc), pois desfaz ato ilegal. O CESPE frequentemente inverte esses efeitos para induzir ao erro.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – IBAMA – 2023)</strong><br>
+Julgue: O princípio da eficiência, inserido no art. 37, caput, da CF/88 pela EC 19/1998, autoriza a Administração a suprimir garantias processuais em nome da celeridade, desde que justificada a medida.
+<p><strong>Comentário:</strong> ERRADO. O STJ já firmou entendimento de que a eficiência <strong>não justifica supressão de garantias processuais</strong> ou de direitos fundamentais. A celeridade deve ser conjugada com legalidade, ampla defesa e devido processo legal.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANVISA – 2022)</strong><br>
+Julgue: O interesse público primário, que representa o bem-estar da coletividade, prevalece sobre o interesse público secundário, que representa o patrimônio do Estado, em caso de conflito entre eles.
+<p><strong>Comentário:</strong> CORRETO. Essa é a essência da distinção: o interesse primário (coletivo) é o fim; o secundário (patrimonial) é o meio. Em caso de conflito, o primário prevalece, mas o secundário não pode ser sacrificado arbitrariamente.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – Sefaz/RS – 2022)</strong><br>
+Julgue: O princípio da razoabilidade exige que a atuação administrativa seja adequada, necessária e proporcional ao fim visado, vedando medidas excessivas ou desnecessárias.
+<p><strong>Comentário:</strong> CORRETO. Essa é a aplicação prática do princípio da razoabilidade, que vincula a discricionariedade administrativa e serve como limite ao arbítrio.</p>
+</div>
+
+<h2>📋 CHECKLIST DE REVISÃO RÁPIDA</h2>
+<div class="summary-box">
+<strong>Domine:</strong><br><br>
+□ Regime jurídico-administrativo = binômio: supremacia do interesse público (prerrogativas) + indisponibilidade do interesse público (sujeições)<br>
+□ Princípios expressos (LIMPE): Legalidade (Administração só faz o que a lei autoriza), Impessoalidade (isonomia + vedação a promoções pessoais), Moralidade (ética administrativa), Publicidade (divulgação oficial), Eficiência (economicidade + celeridade)<br>
+□ Autotutela: Anulação (ex tunc, ilegalidade, Adm ou Judiciário) vs. Revogação (ex nunc, conveniência, só Adm)<br>
+□ Razoabilidade (adequação lógica) vs. Proporcionalidade (equilíbrio quantitativo)<br>
+□ Interesse público primário (coletivo, finalístico) vs. secundário (patrimonial, instrumental)<br>
+□ Publicidade ≠ transparência total; sigilo é permitido para interesses legítimos, mas deve ser excepcionado e fundamentado<br>
+□ Eficiência não justifica supressão de garantias processuais (STJ)<br>
+□ Princípios têm força normativa e vinculam a Administração, podendo anular atos que os violem<br>
+□ Motivação deve ser própria e fundamentada, não mera remissão a pareceres anteriores<br>
+□ Segurança jurídica protege a confiança legítima, mas não impede anulação de atos ilegais
+</div>
+
+<div class="nav-b">
+<a href="administrativo-05.html" class="btn-n">← Anterior</a>
+<a href="administrativo-07.html" class="btn-n">Próximo →</a>
+</div>
+</main>
+
+
+<div class="n-panel" id="nP">
+<div style="display:flex;justify-content:space-between;margin-bottom:10px"><strong>Notas de Administrativo</strong><button onclick="tN()" style="background:none;border:none;cursor:pointer">✕</button></div>
+<div id="nL" style="max-height:180px;overflow-y:auto;margin-bottom:10px"></div>
+<form onsubmit="aN(event)"><input type="text" class="n-in" id="nI" placeholder="Anotação sobre Princípios..." required><button type="submit" class="b-sm">💾 Salvar</button></form>
+</div>
+
+<script>
+const SK='adm-principios-06';let hM=false;
+function webS(){const s=window.getSelection().toString();window.open(`https://duckduckgo.com/?q=${encodeURIComponent(s||'Princípios administração pública LIMPE regime jurídico CESPE TCDF')}`,'_blank')}
+function tN(){const p=document.getElementById('nP');p.style.display=p.style.display==='none'?'block':'none';if(p.style.display==='block')lN()}
+function lN(){const n=JSON.parse(localStorage.getItem(SK)||'[]');document.getElementById('nL').innerHTML=n.length?n.map((x,i)=>`<div class="n-item">${x.text}<br><small style="cursor:pointer;color:#666" onclick="dN(${i})">remover</small></div>`).join(''):'<p style="font-size:.9em;color:#666">Sem notas.</p>'}
+function aN(e){e.preventDefault();const i=document.getElementById('nI'),n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:i.value,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));i.value='';lN()}
+function dN(i){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.splice(i,1);localStorage.setItem(SK,JSON.stringify(n));lN()}
+function tH(){hM=!hM;document.body.style.cursor=hM?'text':'auto';document.querySelectorAll('.t-btn')[2].textContent=hM?'✅ ON':'✏️ Destaque';hM?document.addEventListener('mouseup',hS):document.removeEventListener('mouseup',hS)}
+function hS(){const s=window.getSelection();if(s.toString().length>10){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:`🔍 "${s.toString().substring(0,40)}..." - ${prompt('Nota:','')||'-'}`,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));alert('✅ Destaque salvo!');s.removeAllRanges()}}
+document.addEventListener('DOMContentLoaded',lN);
+</script>
+</body>
+</html>

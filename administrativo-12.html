@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direito Administrativo 12 | Licitações e Contratos - Lei 14.133/2021 - CESPE</title>
+<style>
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1;--jur:#e8f4fd}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;line-height:1.7;padding-top:70px}
+a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
+.container{max-width:1000px;margin:0 auto;padding:24px}
+h1{font-size:1.8em;margin-bottom:10px;color:var(--lil)}h2{font-size:1.4em;margin:28px 0 14px;color:var(--text);padding-bottom:6px;border-bottom:2px solid var(--lil-l)}
+h3{font-size:1.2em;margin:22px 0 12px;color:var(--lil-d);font-weight:600}
+p{margin-bottom:14px;color:var(--text)}ul,ol{margin:0 0 16px 20px;color:var(--text)}li{margin-bottom:6px}
+.box{background:var(--card);border-radius:8px;padding:16px;margin:20px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}.box.jur{background:var(--jur);border-color:#3b82f6}
+.box-t{font-weight:700;margin-bottom:8px;display:block;color:var(--text)}
+table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--lil-d)}
+td{padding:10px 14px;border-bottom:1px solid var(--lil-l);color:var(--text)}tr:hover td{background:var(--lil-l)}
+.nav-b{display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:1px solid var(--lil-d)}
+.btn-n{padding:10px 20px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none}
+.btn-n:hover{background:var(--lil-d);color:#fff}
+.tools{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:99}
+.t-btn{background:var(--card);border:2px solid var(--lil-d);padding:10px 14px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;color:var(--text);box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.t-btn:hover{transform:translateY(-2px)}
+.n-panel{position:fixed;bottom:70px;right:20px;width:280px;background:var(--card);border:2px solid var(--lil-d);border-radius:12px;padding:16px;display:none;box-shadow:0 5px 15px rgba(0,0,0,.15);z-index:100}
+.n-item{background:var(--lil-l);padding:10px;border-radius:6px;margin-bottom:8px;font-size:.9em}
+.n-in{width:100%;padding:8px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:8px}
+.b-sm{padding:6px 12px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em}
+@media(max-width:700px){.container{padding:16px}header{flex-direction:column;align-items:flex-start;gap:10px}}
+.box img{width:100%;height:auto;display:block;margin:15px 0;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.q-card{background:var(--warn);border-left:4px solid #f59e0b;padding:16px;margin:20px 0;border-radius:0 8px 8px 0}
+.q-card strong{color:#856404}
+.cespe-tip{background:#fef3c7;border-left:4px solid #f59e0b;padding:12px;margin:15px 0;font-size:.95em}
+.mnemonic{background:linear-gradient(135deg,var(--lil-l),var(--bg-secondary));padding:12px 16px;border-radius:8px;margin:15px 0;font-weight:600;color:var(--lil-d)}
+.summary-box{background:var(--def);padding:16px;border-radius:8px;margin:20px 0}
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin:15px 0}
+.comp-item{background:var(--bg-secondary);padding:10px;border-radius:6px;font-size:.95em}
+.principle-card{background:var(--card);border:2px solid var(--lil-l);border-radius:8px;padding:16px;margin:12px 0}
+.principle-card h4{color:var(--lil);margin-bottom:8px}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="back">← Dashboard</a><div class="nav-t">Direito Administrativo 12</div></header>
+<main class="container">
+<h1>Licitações e Contratos Administrativos (Lei 14.133/2021)</h1>
+
+<h2>1. INTRODUÇÃO À NOVA LEI DE LICITAÇÕES (LEI 14.133/2021)</h2>
+<div class="box def"><span class="box-t">📘 Contexto e Vigência</span>
+<p>A <strong>Lei 14.133/2021</strong> (Nova Lei de Licitações e Contratos Administrativos - NLLC) unificou as normas sobre licitações e contratos, revogando a Lei 8.666/1993, a Lei 10.520/2002 (Pregão) e dispositivos da Lei 12.462/2011 (RDC).</p>
+<p><strong>Vigência:</strong> Publicada em 01/04/2021, com vacatio legis de 2 anos. A partir de <strong>01/04/2023</strong>, aplica-se obrigatoriamente a todos os entes federativos.</p>
+</div>
+
+<h3>🔹 Objetivos da Nova Lei</h3>
+<table>
+<thead><tr><th>Objetivo</th><th>Descrição</th><th>Aplicação Prática</th></tr></thead>
+<tbody>
+<tr><td><strong>Unificação normativa</strong></td><td>Substituir múltiplas leis por um diploma único</td><td>Redução de conflitos normativos e simplificação do ordenamento</td></tr>
+<tr><td><strong>Modernização</strong></td><td>Adaptar as licitações à era digital e às boas práticas de gestão</td><td>Previsão de licitação eletrônica como regra; uso de inteligência artificial</td></tr>
+<tr><td><strong>Transparência</strong></td><td>Ampliar o acesso à informação e o controle social</td><td>Portal Nacional de Contratações Públicas (PNCP) como repositório oficial</td></tr>
+<tr><td><strong>Eficiência</strong></td><td>Otimizar processos e reduzir burocracia</td><td>Procedimentos mais ágeis; critérios de julgamento diversificados</td></tr>
+<tr><td><strong>Segurança jurídica</strong></td><td>Reduzir litígios e aumentar a previsibilidade</td><td>Regras mais claras; incentivos à solução consensual de conflitos</td></tr>
+</tbody>
+</table>
+
+<div class="mnemonic">🧠 MACETE: "UMTES" → Unificação, Modernização, Transparência, Eficiência, Segurança jurídica. Memorize os objetivos da Lei 14.133/2021!</div>
+
+<h2>2. PRINCÍPIOS DAS LICITAÇÕES (ART. 5º, LEI 14.133/2021)</h2>
+<div class="box def"><span class="box-t">📘 Princípios Expressos na Nova Lei</span>
+<p>O art. 5º da Lei 14.133/2021 enumera os princípios que regem as licitações e contratos administrativos. Alguns coincidem com os do art. 37, caput, da CF/88, mas há especificidades licitatórias.</p>
+</div>
+
+<table>
+<thead><tr><th>Princípio</th><th>Descrição Legal</th><th>Aplicação Prática</th></tr></thead>
+<tbody>
+<tr><td><strong>Isonomia</strong></td><td>Tratamento igualitário a todos os licitantes</td><td>Edital único; critérios objetivos; vedação a exigências desnecessárias</td></tr>
+<tr><td><strong>Legalidade</strong></td><td>Atuação conforme a lei e o Direito</td><td>Procedimentos previstos em norma; atos sem fundamento legal são nulos</td></tr>
+<tr><td><strong>Impessoalidade</strong></td><td>Decisões baseadas em critérios técnicos, não em preferências pessoais</td><td>Julgamento por comissão; vedação a favorecimentos</td></tr>
+<tr><td><strong>Moralidade</strong></td><td>Conduta ética e proba dos agentes públicos</td><td>Vedação a atos imorais, mesmo que formalmente legais</td></tr>
+<tr><td><strong>Igualdade</strong></td><td>Paridade de oportunidades entre licitantes</td><td>Acesso igualitário a informações; prazos razoáveis para preparação de propostas</td></tr>
+<tr><td><strong>Publicidade</strong></td><td>Divulgação oficial dos atos licitatórios</td><td>Publicação no PNCP; transparência ativa e passiva</td></tr>
+<tr><td><strong>Probidade Administrativa</strong></td><td>Integridade na condução do procedimento</td><td>Prevenção à corrupção; sanções a agentes ímprobos</td></tr>
+<tr><td><strong>Vinculação ao Instrumento Convocatório</strong></td><td>Administração e licitantes devem observar o edital</td><td>Edital é lei entre as partes; alterações só por aditamento formal</td></tr>
+<tr><td><strong>Julgamento Objetivo</strong></td><td>Decisões baseadas em critérios preestabelecidos</td><td>Matriz de julgamento no edital; vedação a subjetivismos</td></tr>
+<tr><td><strong>Desenvolvimento Nacional Sustentável</strong></td><td>Licitações como instrumento de política pública</td><td>Critérios ambientais, sociais e de inovação nas contratações</td></tr>
+<tr><td><strong>Segurança Jurídica</strong></td><td>Previsibilidade e estabilidade das relações</td><td>Regras claras; proteção à confiança legítima dos licitantes</td></tr>
+<tr><td><strong>Competitividade</strong></td><td>Estímulo à disputa saudável entre licitantes</td><td>Ampla participação; vedação a cláusulas restritivas indevidas</td></tr>
+<tr><td><strong>Eficiência</strong></td><td>Obtenção do melhor resultado com o menor dispêndio</td><td>Critérios de julgamento que considerem custo-benefício</td></tr>
+</tbody>
+</table>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "os princípios da licitação são os mesmos do art. 37, caput, da CF" → PARCIALMENTE ERRADO. Há coincidência, mas a Lei 14.133/2021 acrescenta princípios específicos, como <strong>vinculação ao instrumento convocatório, julgamento objetivo, desenvolvimento nacional sustentável, segurança jurídica e competitividade</strong>, que não estão expressos no caput do art. 37.</p>
+</div>
+
+<h2>3. MODALIDADES LICITATÓRIAS (ART. 28, LEI 14.133/2021)</h2>
+<div class="box def"><span class="box-t">📘 Modalidades Previstas na Nova Lei</span>
+<p>A Lei 14.133/2021 prevê cinco modalidades licitatórias, com critérios objetivos para sua aplicação.</p>
+</div>
+
+<h3>🔹 Quadro Comparativo das Modalidades</h3>
+<table>
+<thead><tr><th>Modalidade</th><th>Objeto Típico</th><th>Valor Estimado</th><th>Características Principais</th></tr></thead>
+<tbody>
+<tr><td><strong>Pregão</strong></td><td>Bens e serviços comuns</td><td>Qualquer valor</td><td>• Fase de lances em sessão pública<br>• Critério: menor preço ou maior desconto<br>• Preferencialmente eletrônico<br>• Inversão de fases (habilitação após julgamento)</td></tr>
+<tr><td><strong>Concorrência</strong></td><td>Bens e serviços especiais; obras e serviços de engenharia</td><td>Acima de R$ 1,4 mi (obras) ou R$ 750 mil (serviços/compras)</td><td>• Procedimento formal e detalhado<br>• Critérios diversificados de julgamento<br>• Habilitação antes ou após julgamento, conforme edital</td></tr>
+<tr><td><strong>Concurso</strong></td><td>Escolha de trabalho técnico, científico ou artístico</td><td>Qualquer valor</td><td>• Premiação ou remuneração aos vencedores<br>• Comissão especial de julgamento<br>• Anonimato das propostas na fase de avaliação</td></tr>
+<tr><td><strong>Leilão</strong></td><td>Alienação de bens móveis inservíveis ou legalmente apreendidos; bens imóveis</td><td>Qualquer valor</td><td>• Maior lance ou oferta<br>• Sessão pública presencial ou eletrônica<br>• Bens avaliados previamente</td></tr>
+<tr><td><strong>Diálogo Competitivo</strong></td><td>Inovação tecnológica ou técnica; objetos complexos</td><td>Qualquer valor</td><td>• Diálogo com licitantes para desenvolver soluções<br>• Fase competitiva após definição da solução<br>• Nova modalidade, inspirada no direito europeu</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Critérios para Escolha da Modalidade</h3>
+<ul>
+<li><strong>Natureza do objeto:</strong> Bens comuns → Pregão; Bens especiais/engenharia → Concorrência.</li>
+<li><strong>Valor estimado:</strong> Abaixo dos limites da concorrência → Pregão (para bens/serviços comuns).</li>
+<li><strong>Complexidade:</strong> Objetos complexos ou inovadores → Diálogo Competitivo.</li>
+<li><strong>Finalidade:</strong> Escolha de trabalho técnico/artístico → Concurso; Alienação de bens → Leilão.</li>
+</ul>
+
+<div class="cespe-tip">💡 DICA CESPE: Questões que afirmam "o pregão só pode ser usado para valores até R$ 750 mil" → ERRADO. O pregão pode ser usado para <strong>qualquer valor</strong>, desde que o objeto seja bem ou serviço comum. Os limites de valor servem para definir quando a concorrência é obrigatória para objetos especiais.</div>
+
+<h2>4. DISPENSA E INEXIGIBILIDADE DE LICITAÇÃO</h2>
+<div class="box def"><span class="box-t">📘 Conceitos Fundamentais</span>
+<p><strong>Dispensa de licitação:</strong> A Administração <strong>pode</strong> licitar, mas a lei autoriza não fazê-lo em situações específicas (art. 74, Lei 14.133/2021).</p>
+<p><strong>Inexigibilidade de licitação:</strong> A Administração <strong>não pode</strong> licitar, pois é inviável a competição (art. 75, Lei 14.133/2021).</p>
+</div>
+
+<h3>🔹 Hipóteses de Dispensa de Licitação (Art. 74, Lei 14.133/2021)</h3>
+<table>
+<thead><tr><th>Hipótese</th><th>Descrição</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Valor estimado</strong></td><td>Compras/serviços até R$ 100 mil; obras/engenharia até R$ 200 mil</td><td>Compra de material de escritório no valor de R$ 80 mil</td></tr>
+<tr><td><strong>Licitação deserta ou fracassada</strong></td><td>Não aparecem interessados ou propostas inaceitáveis; mantém-se as condições do edital</td><td>Concorrência para obra que não atraiu licitantes; dispensa para contratar o único interessado</td></tr>
+<tr><td><strong>Contratação de profissional do setor artístico</strong></td><td>Consagrado pela crítica ou opinião pública; contratação direta</td><td>Contratação de cantor famoso para evento oficial</td></tr>
+<tr><td><strong>Aquisição/locação de imóvel</strong></td><td>Cujas características de instalação e localização tornem necessária sua escolha</td><td>Locação de imóvel para embaixada em local estratégico</td></tr>
+<tr><td><strong>Contratação para pesquisa, desenvolvimento ou inovação</strong></td><td>Instituição científica, tecnológica ou de inovação</td><td>Contratação de universidade para projeto de P&D</td></tr>
+<tr><td><strong>Aquisição de bens/serviços em situação de emergência</strong></td><td>Calamidade pública, grave perturbação da ordem; prazo máximo de 1 ano</td><td>Compra de medicamentos durante pandemia</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Hipóteses de Inexigibilidade de Licitação (Art. 75, Lei 14.133/2021)</h3>
+<table>
+<thead><tr><th>Hipótese</th><th>Descrição</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Fornecedor exclusivo</strong></td><td>Produto/serviço só pode ser fornecido por produtor, empresa ou representante comercial exclusivo</td><td>Compra de peça de reposição original de equipamento com patente</td></tr>
+<tr><td><strong>Artista consagrado</strong></td><td>Contratação de profissional do setor artístico, diretamente ou através de empresário exclusivo</td><td>Contratação de banda famosa para show oficial</td></tr>
+<tr><td><strong>Serviços técnicos especializados</strong></td><td>De natureza predominantemente intelectual, com profissionais de notória especialização</td><td>Contratação de consultor renomado para parecer técnico</td></tr>
+<tr><td><strong>Credenciamento</strong></td><td>Para contratação de serviços de natureza técnica, quando houver credenciamento prévio</td><td>Credenciamento de laboratórios para exames médicos</td></tr>
+<tr><td><strong>Aquisição/locação de imóvel</strong></td><td>Cujas características de instalação e localização tornem necessária sua escolha</td><td>Locação de imóvel para embaixada em local estratégico</td></tr>
+</tbody>
+</table>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente confunde dispensa com inexigibilidade: afirma que "contratação de artista consagrado é dispensa de licitação" → ERRADO. É <strong>inexigibilidade</strong>, pois a competição é inviável (só aquele artista atende ao objeto). A <strong>dispensa</strong> ocorre quando a competição é possível, mas a lei autoriza não licitar (ex: valor baixo, emergência).</p>
+</div>
+
+<h2>5. FASES DO PROCEDIMENTO LICITATÓRIO (ART. 12, LEI 14.133/2021)</h2>
+<div class="box def"><span class="box-t">📘 Sequência do Procedimento</span>
+<p>A Lei 14.133/2021 estabelece uma sequência lógica para o procedimento licitatório, com possibilidade de inversão de fases no pregão.</p>
+</div>
+
+<h3>🔹 Fases Obrigatórias</h3>
+<ol>
+<li><strong>Preparatória:</strong> Definição do objeto, elaboração do termo de referência/projeto básico, estimativa de valor, definição da modalidade e critérios de julgamento.</li>
+<li><strong>Divulgação do Edital:</strong> Publicação no PNCP e outros meios oficiais; prazo mínimo para recebimento de propostas.</li>
+<li><strong>Apresentação de Propostas e Lances:</strong> Recebimento das propostas; realização de sessão de lances (no pregão).</li>
+<li><strong>Julgamento:</strong> Aplicação dos critérios do edital; classificação das propostas.</li>
+<li><strong>Habilitação:</strong> Verificação dos requisitos legais e editalícios dos licitantes classificados.</li>
+<li><strong>Recursal:</strong> Prazo para interposição de recursos contra atos do procedimento.</li>
+<li><strong>Homologação:</strong> Ato da autoridade competente que aprova o resultado e adjudica o objeto.</li>
+</ol>
+
+<h3>🔹 Inversão de Fases (Art. 12, §1º)</h3>
+<p>No <strong>pregão</strong>, a habilitação pode ocorrer <strong>após o julgamento</strong>, para agilizar o procedimento. Os licitantes classificados apresentam documentos de habilitação; se inabilitados, chama-se o próximo classificado.</p>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um órgão público realiza pregão eletrônico para compra de computadores. Após a fase de lances, são classificados os licitantes A, B e C. A Administração solicita a documentação de habilitação apenas do licitante A (vencedor). Se A estiver habilitado, é declarado vencedor; se não, chama-se B, e assim sucessivamente. <strong>Isso é aplicação da inversão de fases do art. 12, §1º, da Lei 14.133/2021.</strong></p>
+</div>
+
+<h2>6. CRITÉRIOS DE JULGAMENTO (ART. 45, LEI 14.133/2021)</h2>
+<div class="box def"><span class="box-t">📘 Critérios Previstos na Nova Lei</span>
+<p>A Lei 14.133/2021 diversifica os critérios de julgamento, permitindo maior adequação ao objeto e aos objetivos da contratação.</p>
+</div>
+
+<table>
+<thead><tr><th>Critério</th><th>Descrição</th><th>Aplicação Típica</th></tr></thead>
+<tbody>
+<tr><td><strong>Menor preço</strong></td><td>Vence a proposta de menor valor global</td><td>Compras de bens padronizados; serviços comuns</td></tr>
+<tr><td><strong>Maior desconto</strong></td><td>Vence a proposta que oferecer maior percentual de desconto sobre preço de referência</td><td>Aquisição de medicamentos; contratos com tabela de preços</td></tr>
+<tr><td><strong>Melhor técnica ou conteúdo artístico</strong></td><td>Vence a proposta com melhor qualidade técnica ou artística, independentemente do preço</td><td>Concurso para projeto arquitetônico; contratação de artista</td></tr>
+<tr><td><strong>Técnica e preço</strong></td><td>Combinação ponderada de qualidade técnica e preço</td><td>Serviços de engenharia; consultorias especializadas</td></tr>
+<tr><td><strong>Maior lance ou oferta</strong></td><td>Vence a proposta de maior valor (para alienação de bens)</td><td>Leilão de veículos apreendidos; venda de imóveis</td></tr>
+<tr><td><strong>Maior retorno econômico</strong></td><td>Vence a proposta que gerar maior economia ou receita para a Administração</td><td>Concessões; parcerias público-privadas</td></tr>
+<tr><td><strong>Melhor combinação de fatores</strong></td><td>Avaliação multicritério com pesos definidos no edital</td><td>Contratações complexas; inovação tecnológica</td></tr>
+</tbody>
+</table>
+
+<div class="cespe-tip">💡 DICA CESPE: Questões que afirmam "o critério de julgamento deve ser sempre menor preço" → ERRADO. A Lei 14.133/2021 permite <strong>múltiplos critérios</strong>, devendo o escolhido ser adequado ao objeto e justificado no edital.</div>
+
+<h2>7. SISTEMA DE REGISTRO DE PREÇOS (SRP) - DECRETO 7.892/2013</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Finalidade</span>
+<p><strong>Sistema de Registro de Preços (SRP)</strong> é o conjunto de procedimentos para registro formal de preços relativos a prestação de serviços e aquisição de bens, para contratações futuras (Decreto 7.892/2013, regulamentado pela Lei 14.133/2021).</p>
+</div>
+
+<h3>🔹 Características do SRP</h3>
+<ul>
+<li><strong>Não é contrato:</strong> É um registro de preços válidos por até 12 meses (prorrogável por igual período).</li>
+<li><strong>Adesão ("carona"):</strong> Órgãos não participantes da licitação podem aderir ao registro, observados limites quantitativos.</li>
+<li><strong>Flexibilidade:</strong> Permite contratações ágeis, sem nova licitação, dentro dos preços registrados.</li>
+<li><strong>Controle:</strong> Exige justificativa para cada contratação; fiscalização dos quantitativos e preços.</li>
+</ul>
+
+<h3>🔹 Limites para Adesão ("Carona")</h3>
+<table>
+<thead><tr><th>Tipo de Órgão</th><th>Limite Quantitativo</th><th>Observações</th></tr></thead>
+<tbody>
+<tr><td><strong>Órgão gerenciador</strong></td><td>Até 100% do quantitativo registrado</td><td>Quem realizou a licitação</td></tr>
+<tr><td><strong>Órgão participante</strong></td><td>Até 100% do quantitativo registrado</td><td>Quem participou da licitação</td></tr>
+<tr><td><strong>Órgão não participante ("carona")</strong></td><td>Até 50% do quantitativo registrado por órgão/entidade</td><td>Deve justificar a adesão; limite global de 100% para todas as "caronas"</td></tr>
+</tbody>
+</table>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "qualquer órgão pode aderir ao SRP sem limites" → ERRADO. A adesão por órgão não participante ("carona") tem <strong>limite de 50% do quantitativo registrado por órgão</strong>, e o total das adesões não pode ultrapassar 100% do registrado. Além disso, a adesão exige justificativa e observância das condições do edital.</p>
+</div>
+
+<h2>8. CONTRATOS ADMINISTRATIVOS (LEI 14.133/2021)</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Características</span>
+<p><strong>Contrato administrativo</strong> é o acordo de vontades entre a Administração e particular, para a realização de obra, serviço, compra ou alienação, regido por cláusulas exorbitantes que conferem prerrogativas à Administração.</p>
+</div>
+
+<h3>🔹 Cláusulas Exorbitantes (Prerrogativas da Administração)</h3>
+<table>
+<thead><tr><th>Cláusula</th><th>Descrição</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Alteração unilateral</strong></td><td>Administração pode modificar o contrato, dentro de limites, para melhor adequação ao interesse público</td><td>Aumento de até 25% do valor inicial para obras; até 50% para reformas</td></tr>
+<tr><td><strong>Rescisão unilateral</strong></td><td>Administração pode rescindir o contrato por motivos de interesse público ou inadimplemento do contratado</td><td>Rescisão por atraso injustificado na entrega de obra</td></tr>
+<tr><td><strong>Fiscalização</strong></td><td>Administração pode fiscalizar a execução do contrato, a qualquer tempo</td><td>Inspeção em canteiro de obras; auditoria em serviços terceirizados</td></tr>
+<tr><td><strong>Aplicação de sanções</strong></td><td>Administração pode aplicar penalidades por descumprimento contratual</td><td>Multa por atraso; suspensão temporária de participar de licitações</td></tr>
+<tr><td><strong>Equilíbrio econômico-financeiro</strong></td><td>Garantia de manutenção das condições iniciais do contrato</td><td>Reajuste por índices oficiais; repactuação por fatos imprevisíveis</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Duração dos Contratos (Art. 105, Lei 14.133/2021)</h3>
+<ul>
+<li><strong>Regra geral:</strong> Prazo determinado, compatível com o objeto.</li>
+<li><strong>Serviços contínuos:</strong> Podem ter prazo de até 5 anos, prorrogável por igual período.</li>
+<li><strong>Contratos de gestão com OS:</strong> Até 10 anos, com avaliação periódica de resultados.</li>
+<li><strong>Parcerias público-privadas:</strong> Até 35 anos, conforme lei específica.</li>
+</ul>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um município contrata empresa para coleta de lixo por 3 anos. No segundo ano, a Administração decide ampliar o serviço para incluir varrição de ruas. Pode alterar unilateralmente o contrato, desde que o acréscimo não ultrapasse <strong>25% do valor inicial atualizado</strong> e seja justificado pelo interesse público. <strong>Isso é aplicação da cláusula de alteração unilateral (art. 124, Lei 14.133/2021).</strong></p>
+</div>
+
+<h2>9. SANÇÕES ADMINISTRATIVAS (ART. 156, LEI 14.133/2021)</h2>
+<div class="box def"><span class="box-t">📘 Espécies de Sanções</span>
+<p>A Lei 14.133/2021 prevê sanções graduais e proporcionais, aplicáveis a licitantes e contratados que descumprirem obrigações.</p>
+</div>
+
+<h3>🔹 Quadro de Sanções</h3>
+<table>
+<thead><tr><th>Sanção</th><th>Hipóteses de Aplicação</th><th>Prazo Máximo</th><th>Órgão Competente</th></tr></thead>
+<tbody>
+<tr><td><strong>Advertência</strong></td><td>Infrações leves; primeira ocorrência</td><td>Não se aplica</td><td>Autoridade que aplicou a sanção</td></tr>
+<tr><td><strong>Multa</strong></td><td>Descumprimento de cláusulas contratuais; atrasos; inexecução parcial</td><td>Conforme edital/contrato</td><td>Autoridade contratante</td></tr>
+<tr><td><strong>Impedimento de licitar e contratar</strong></td><td>Infrações graves; reincidência; dolo</td><td>Até 3 anos</td><td>Ministro de Estado, Secretário Estadual/Municipal, ou autoridade equivalente</td></tr>
+<tr><td><strong>Declaração de inidoneidade</strong></td><td>Infrações gravíssimas; fraude; corrupção; conluio</td><td>Até 5 anos (para particulares); até 3 anos (para empresas)</td><td>Ministro de Estado, Secretário Estadual/Municipal, ou autoridade equivalente</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Procedimento de Aplicação de Sanções</h3>
+<ol>
+<li><strong>Notificação:</strong> Comunicação formal ao licitante/contratado sobre a infração imputada.</li>
+<li><strong>Defesa:</strong> Prazo de 15 dias para apresentação de justificativas e provas.</li>
+<li><strong>Decisão:</strong> Julgamento motivado pela autoridade competente.</li>
+<li><strong>Recursos:</strong> Possibilidade de recurso administrativo, sem efeito suspensivo automático.</li>
+<li><strong>Publicidade:</strong> Divulgação da sanção no PNCP e outros meios oficiais.</li>
+</ol>
+
+<div class="cespe-tip">💡 DICA CESPE: Questões que afirmam "a declaração de inidoneidade tem prazo de 10 anos" → ERRADO. O prazo máximo é de <strong>5 anos para particulares</strong> e <strong>3 anos para empresas</strong>, conforme art. 156, §4º, da Lei 14.133/2021.</div>
+
+<h2>🎯 O QUE MAIS CAI NO CESPE (RANKING DE FREQUÊNCIA)</h2>
+<ol>
+<li><strong>Modalidades licitatórias:</strong> Diferenças entre pregão, concorrência, concurso, leilão e diálogo competitivo; critérios de escolha.</li>
+<li><strong>Dispensa vs. Inexigibilidade:</strong> Conceitos, hipóteses legais, exemplos práticos; confusão entre os institutos.</li>
+<li><strong>Princípios da Lei 14.133/2021:</strong> Literalidade do art. 5º; aplicação prática de princípios específicos (vinculação ao edital, julgamento objetivo, desenvolvimento sustentável).</li>
+<li><strong>Sistema de Registro de Preços (SRP):</strong> Conceito, adesão ("carona"), limites quantitativos, prazo de vigência.</li>
+<li><strong>Fases do procedimento licitatório:</strong> Sequência lógica; inversão de fases no pregão; prazos processuais.</li>
+<li><strong>Critérios de julgamento:</strong> Menor preço, maior desconto, técnica e preço, melhor técnica; adequação ao objeto.</li>
+<li><strong>Cláusulas exorbitantes:</strong> Alteração unilateral, rescisão unilateral, fiscalização, aplicação de sanções, equilíbrio econômico-financeiro.</li>
+<li><strong>Sanções administrativas:</strong> Espécies, hipóteses de aplicação, prazos máximos, procedimento de aplicação.</li>
+<li><strong>Portal Nacional de Contratações Públicas (PNCP):</strong> Finalidade, obrigatoriedade de publicação, transparência.</li>
+<li><strong>Transição da Lei 8.666/1993 para a Lei 14.133/2021:</strong> Vigência, revogações, aplicação subsidiária.</li>
+</ol>
+
+<h2>⚖️ JURISPRUDÊNCIA RELEVANTE (STF/STJ/TCU sobre Licitações e Contratos)</h2>
+<div class="box jur">
+<strong>STF - ADI 4.717/DF (2011)</strong><br>
+Tese: A transparência ativa e o planejamento orçamentário são instrumentos indissociáveis de accountability. O cidadão tem direito de acesso a metas, resultados e indicadores de desempenho, reforçando o controle social sobre a administração pública.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre transparência em licitações devem mencionar a LAI e o direito de acesso à informação como desdobramentos do princípio da publicidade.
+</div>
+<div class="box jur">
+<strong>STJ - REsp 1.231.456/DF (2018)</strong><br>
+Tese: A aplicação do princípio da eficiência (art. 37, CF) não autoriza a supressão de garantias processuais ou de direitos fundamentais em nome da celeridade.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre eficiência em licitações devem mencionar que celeridade não justifica supressão de garantias; deve ser conjugada com legalidade e devido processo legal.
+</div>
+<div class="box jur">
+<strong>TCU - Acórdão 2.630/2019-Plenário</strong><br>
+Tese: A concessão de serviços públicos deve observar estritamente os requisitos da Lei 8.987/1995, especialmente quanto à licitação, equilíbrio econômico-financeiro e fiscalização. A flexibilização indevida pode configurar ato de improbidade administrativa.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre licitação para concessão devem mencionar os requisitos legais e o controle pelo TCU.
+</div>
+<div class="box jur">
+<strong>STF - RE 599.362/DF (2013)</strong><br>
+Tese: Empresas públicas e sociedades de economia mista que prestam serviço público essencial sujeitam-se às prerrogativas processuais da Fazenda Pública (prazos em dobro, remessa necessária), nos termos do art. 1º da Lei 9.469/1997.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre licitação envolvendo estatais devem diferenciar as que prestam serviço público (têm prerrogativas) das que exploram atividade econômica (não têm).
+</div>
+<div class="box jur">
+<strong>TCU - Súmula 249</strong><br>
+Tese: "É ilegal a dispensa de licitação para contratação de organização social ou OSCIP sem a devida qualificação e sem a celebração de contrato de gestão ou termo de parceria."<br>
+<strong>Aplicação CESPE:</strong> Questões sobre contratação com terceiro setor devem mencionar a necessidade de qualificação prévia e instrumento jurídico adequado.
+</div>
+<div class="box jur">
+<strong>STF - RE 1.089.955/RJ (2019)</strong><br>
+Tese: A responsabilidade civil por danos ambientais é objetiva e solidária, nos termos do art. 225, §3º, da CF/88 e da Lei 6.938/1981, aplicando-se a teoria do risco integral, sem admissão de excludentes.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre licitação com impacto ambiental devem mencionar a responsabilidade objetiva e integral do contratado.
+</div>
+<div class="box jur">
+<strong>STJ - REsp 816.209/RS (2014)</strong><br>
+Tese: A responsabilidade do Estado por omissão na fiscalização de contratos administrativos é subjetiva, exigindo a comprovação de culpa do serviço (falta, falha ou insuficiência da fiscalização).<br>
+<strong>Aplicação CESPE:</strong> Questões sobre responsabilidade por falha na execução contratual devem mencionar a exigência de culpa do serviço para a Administração.
+</div>
+
+<h2>📝 QUESTÕES CESPE COMENTADAS</h2>
+<div class="q-card">
+<strong>(CESPE/CEBRASPE – TCDF – Analista Administrativo – 2023)</strong><br>
+Julgue: A Lei 14.133/2021 prevê a modalidade "diálogo competitivo", destinada a contratações de objetos complexos ou inovadores, permitindo à Administração dialogar com licitantes para desenvolver soluções antes da fase competitiva.
+<p><strong>Comentário:</strong> CORRETO. Essa é uma inovação da Nova Lei de Licitações. O diálogo competitivo (art. 6º, XXXIII, e art. 32) permite à Administração discutir com licitantes pré-qualificados para desenvolver soluções técnicas, antes da apresentação de propostas finais. É inspirado no direito europeu e adequado a objetos de alta complexidade.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANEEL – 2024)</strong><br>
+Julgue: No Sistema de Registro de Preços, órgão não participante da licitação original ("carona") pode aderir ao registro, desde que justifique a adesão e observe o limite de 50% do quantitativo registrado por órgão, não podendo o total das adesões ultrapassar 100% do registrado.
+<p><strong>Comentário:</strong> CORRETO. Essa é a aplicação do Decreto 7.892/2013, regulamentado pela Lei 14.133/2021. A "carona" tem limites quantitativos rígidos para evitar distorções e garantir a competitividade original da licitação.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – MAPA – 2024)</strong><br>
+Julgue: A inexigibilidade de licitação ocorre quando a competição é inviável, como na contratação de artista consagrado pela crítica, enquanto a dispensa ocorre quando a competição é possível, mas a lei autoriza não licitar, como em compras de valor até R$ 100 mil.
+<p><strong>Comentário:</strong> CORRETO. Essa é a distinção fundamental entre os dois institutos. A <strong>inexigibilidade</strong> decorre da inviabilidade de competição (art. 75); a <strong>dispensa</strong> decorre de autorização legal para não licitar, mesmo com competição possível (art. 74).</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – IBAMA – 2024)</strong><br>
+Julgue: O critério de julgamento "menor preço" é obrigatório para todas as licitações de bens e serviços comuns, não sendo permitida a adoção de outros critérios, como "técnica e preço" ou "maior desconto".
+<p><strong>Comentário:</strong> ERRADO. A Lei 14.133/2021 (art. 45) prevê <strong>múltiplos critérios de julgamento</strong>, devendo o escolhido ser adequado ao objeto e justificado no edital. Para bens e serviços comuns, o pregão é a modalidade preferencial, mas o critério pode ser menor preço <strong>ou</strong> maior desconto, conforme o caso.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANVISA – 2024)</strong><br>
+Julgue: A declaração de inidoneidade para licitar ou contratar com a Administração Pública tem prazo máximo de 10 anos, contado da data da publicação do ato sancionador, podendo ser reavaliada a qualquer tempo mediante comprovação de reabilitação.
+<p><strong>Comentário:</strong> ERRADO. O prazo máximo da declaração de inidoneidade é de <strong>5 anos para particulares</strong> e <strong>3 anos para empresas</strong> (art. 156, §4º, Lei 14.133/2021). Além disso, a reavaliação só pode ocorrer após o decurso de, no mínimo, 2/3 do prazo da sanção, mediante comprovação de reabilitação.</p>
+</div>
+
+<h2>📋 CHECKLIST DE REVISÃO RÁPIDA</h2>
+<div class="summary-box">
+<strong>Domine:</strong><br>
+□ Princípios da Lei 14.133/2021: isonomia, legalidade, impessoalidade, moralidade, igualdade, publicidade, probidade, vinculação ao edital, julgamento objetivo, desenvolvimento sustentável, segurança jurídica, competitividade, eficiência<br>
+□ Modalidades: Pregão (bens/serviços comuns, qualquer valor), Concorrência (objetos especiais, acima de limites), Concurso (trabalho técnico/artístico), Leilão (alienação de bens), Diálogo Competitivo (objetos complexos/inovadores)<br>
+□ Dispensa (competição possível, mas lei autoriza não licitar) vs. Inexigibilidade (competição inviável)<br>
+□ SRP: registro de preços válidos por até 12+12 meses; adesão ("carona") com limite de 50% por órgão e 100% no total<br>
+□ Fases do procedimento: preparatória, divulgação, propostas/lances, julgamento, habilitação, recursal, homologação; inversão de fases no pregão<br>
+□ Critérios de julgamento: menor preço, maior desconto, melhor técnica, técnica e preço, maior lance, maior retorno econômico, melhor combinação de fatores<br>
+□ Cláusulas exorbitantes: alteração unilateral (até 25% para obras, 50% para reformas), rescisão unilateral, fiscalização, sanções, equilíbrio econômico-financeiro<br>
+□ Sanções: advertência, multa, impedimento de licitar (até 3 anos), declaração de inidoneidade (5 anos particulares, 3 anos empresas)<br>
+□ PNCP: portal obrigatório para publicação de editais, resultados e contratos; transparência ativa<br>
+□ Jurisprudência: transparência em licitações, eficiência sem supressão de garantias, responsabilidade por fiscalização, limites da "carona" no SRP
+</div>
+
+<div class="nav-b">
+<a href="administrativo-11.html" class="btn-n">← Anterior</a>
+<span></span>
+</div>
+</main>
+
+
+<div class="n-panel" id="nP">
+<div style="display:flex;justify-content:space-between;margin-bottom:10px"><strong>Notas de Administrativo</strong><button onclick="tN()" style="background:none;border:none;cursor:pointer">✕</button></div>
+<div id="nL" style="max-height:180px;overflow-y:auto;margin-bottom:10px"></div>
+<form onsubmit="aN(event)"><input type="text" class="n-in" id="nI" placeholder="Anotação sobre Licitações e Contratos..." required><button type="submit" class="b-sm">💾 Salvar</button></form>
+</div>
+
+<script>
+const SK='adm-licit-12';let hM=false;
+function webS(){const s=window.getSelection().toString();window.open(`https://duckduckgo.com/?q=${encodeURIComponent(s||'Licitações Lei 14.133/2021 modalidades dispensa inexigibilidade SRP CESPE TCDF')}`,'_blank')}
+function tN(){const p=document.getElementById('nP');p.style.display=p.style.display==='none'?'block':'none';if(p.style.display==='block')lN()}
+function lN(){const n=JSON.parse(localStorage.getItem(SK)||'[]');document.getElementById('nL').innerHTML=n.length?n.map((x,i)=>`<div class="n-item">${x.text}<br><small style="cursor:pointer;color:#666" onclick="dN(${i})">remover</small></div>`).join(''):'<p style="font-size:.9em;color:#666">Sem notas.</p>'}
+function aN(e){e.preventDefault();const i=document.getElementById('nI'),n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:i.value,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));i.value='';lN()}
+function dN(i){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.splice(i,1);localStorage.setItem(SK,JSON.stringify(n));lN()}
+function tH(){hM=!hM;document.body.style.cursor=hM?'text':'auto';document.querySelectorAll('.t-btn')[2].textContent=hM?'✅ ON':'✏️ Destaque';hM?document.addEventListener('mouseup',hS):document.removeEventListener('mouseup',hS)}
+function hS(){const s=window.getSelection();if(s.toString().length>10){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:`🔍 "${s.toString().substring(0,40)}..." - ${prompt('Nota:','')||'-'}`,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));alert('✅ Destaque salvo!');s.removeAllRanges()}}
+document.addEventListener('DOMContentLoaded',lN);
+</script>
+</body>
+</html>

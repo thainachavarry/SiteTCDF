@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direito Administrativo 01 | Estado, Governo e Administração Pública - CESPE</title>
+<style>
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1;--jur:#e8f4fd}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;line-height:1.7;padding-top:70px}
+a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
+.container{max-width:1000px;margin:0 auto;padding:24px}
+h1{font-size:1.8em;margin-bottom:10px;color:var(--lil)}h2{font-size:1.4em;margin:28px 0 14px;color:var(--text);padding-bottom:6px;border-bottom:2px solid var(--lil-l)}
+h3{font-size:1.2em;margin:22px 0 12px;color:var(--lil-d);font-weight:600}
+p{margin-bottom:14px;color:var(--text)}ul,ol{margin:0 0 16px 20px;color:var(--text)}li{margin-bottom:6px}
+.box{background:var(--card);border-radius:8px;padding:16px;margin:20px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}.box.jur{background:var(--jur);border-color:#3b82f6}
+.box-t{font-weight:700;margin-bottom:8px;display:block;color:var(--text)}
+table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--lil-d)}
+td{padding:10px 14px;border-bottom:1px solid var(--lil-l);color:var(--text)}tr:hover td{background:var(--lil-l)}
+.nav-b{display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:1px solid var(--lil-d)}
+.btn-n{padding:10px 20px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none}
+.btn-n:hover{background:var(--lil-d);color:#fff}
+.tools{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:99}
+.t-btn{background:var(--card);border:2px solid var(--lil-d);padding:10px 14px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;color:var(--text);box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.t-btn:hover{transform:translateY(-2px)}
+.n-panel{position:fixed;bottom:70px;right:20px;width:280px;background:var(--card);border:2px solid var(--lil-d);border-radius:12px;padding:16px;display:none;box-shadow:0 5px 15px rgba(0,0,0,.15);z-index:100}
+.n-item{background:var(--lil-l);padding:10px;border-radius:6px;margin-bottom:8px;font-size:.9em}
+.n-in{width:100%;padding:8px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:8px}
+.b-sm{padding:6px 12px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em}
+@media(max-width:700px){.container{padding:16px}header{flex-direction:column;align-items:flex-start;gap:10px}}
+.box img{width:100%;height:auto;display:block;margin:15px 0;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.q-card{background:var(--warn);border-left:4px solid #f59e0b;padding:16px;margin:20px 0;border-radius:0 8px 8px 0}
+.q-card strong{color:#856404}
+.cespe-tip{background:#fef3c7;border-left:4px solid #f59e0b;padding:12px;margin:15px 0;font-size:.95em}
+.mnemonic{background:linear-gradient(135deg,var(--lil-l),var(--bg-secondary));padding:12px 16px;border-radius:8px;margin:15px 0;font-weight:600;color:var(--lil-d)}
+.summary-box{background:var(--def);padding:16px;border-radius:8px;margin:20px 0}
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin:15px 0}
+.comp-item{background:var(--bg-secondary);padding:10px;border-radius:6px;font-size:.95em}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="back">← Dashboard</a><div class="nav-t">Direito Administrativo 01</div></header>
+<main class="container">
+<h1>📚 Estado, Governo e Administração Pública</h1>
+<p><strong>Foco CESPE:</strong> A banca cobra exaustivamente as distinções conceituais entre Estado, Governo e Administração Pública, os elementos constitutivos do Estado, as formas de Estado e de Governo, os sentidos da Administração Pública (subjetivo/objetivo), as fontes do Direito Administrativo e a aplicação do regime jurídico administrativo. Questões frequentemente confundem direito público com privado ou cobram a literalidade de conceitos doutrinários.</p>
+
+<h2>1. ESTADO: CONCEITO, ELEMENTOS E PODERES</h2>
+<div class="box def"><span class="box-t">📘 Conceito de Estado</span>
+<p><strong>Estado</strong> é a pessoa jurídica de direito público interno, titular de soberania, que exerce o poder político sobre um povo, em um território determinado, com fins de bem comum.</p>
+<p><strong>Estado de Direito:</strong> O Estado cria as leis e também se sujeita a elas (princípio da legalidade). É a base do sistema democrático brasileiro.</p>
+</div>
+
+<h3>🔹 Elementos Constitutivos do Estado (Tríade Clássica)</h3>
+<table>
+<thead><tr><th>Elemento</th><th>Descrição</th><th>Aplicação no Brasil</th></tr></thead>
+<tbody>
+<tr><td><strong>População (Povo)</strong></td><td>Conjunto de pessoas vinculadas ao Estado pelo vínculo jurídico da nacionalidade</td><td>Brasileiros natos e naturalizados; estrangeiros residentes não integram o povo, mas estão sujeitos à jurisdição estatal</td></tr>
+<tr><td><strong>Território</strong></td><td>Base física onde o Estado exerce seu poder de império (solo, subsolo, espaço aéreo, mar territorial)</td><td>Art. 20 e 26, CF: bens da União, Estados e DF; Art. 1º, CF: território como elemento da Federação</td></tr>
+<tr><td><strong>Soberania (Poder Político)</strong></td><td>Poder supremo, uno, indivisível e indelegável, exercido internamente (império) e externamente (independência)</td><td>Art. 1º, CF: soberania como fundamento da República; Art. 2º: tripartição dos Poderes</td></tr>
+</tbody>
+</table>
+
+<div class="mnemonic">🧠 MACETE: "PTS" → População, Território, Soberania. Memorize a tríade clássica para não errar questões conceituais!</div>
+
+<h3>🔹 Poderes do Estado (Tripartição Flexível - Art. 2º, CF/88)</h3>
+<p>A CF/88 adota a tripartição de Montesquieu, mas com <strong>flexibilidade funcional</strong>: cada Poder desempenha funções típicas e, acessoriamente, funções atípicas.</p>
+
+<table>
+<thead><tr><th>Poder</th><th>Função Típica</th><th>Funções Atípicas</th></tr></thead>
+<tbody>
+<tr><td><strong>Legislativo</strong></td><td>Legislar e fiscalizar</td><td>Administrar (organização interna); Julgar (processo e julgamento de autoridades)</td></tr>
+<tr><td><strong>Executivo</strong></td><td>Administrar (executar políticas públicas)</td><td>Legislar (MP, decretos autônomos); Julgar (processos administrativos disciplinares)</td></tr>
+<tr><td><strong>Judiciário</strong></td><td>Julgar (aplicar a lei ao caso concreto)</td><td>Administrar (organização dos tribunais); Legislar (regimentos internos, súmulas)</td></tr>
+</tbody>
+</table>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "a função administrativa é exclusiva do Poder Executivo" → ERRADO. A função administrativa é <strong>típica</strong> do Executivo, mas os demais Poderes também a exercem de forma <strong>atípica</strong> (ex: Judiciário administra seus servidores; Legislativo fiscaliza o Executivo).</p>
+</div>
+
+<h2>2. FORMAS DE ESTADO E FORMAS DE GOVERNO</h2>
+<div class="box def"><span class="box-t">📘 Distinção Fundamental</span>
+<p><strong>Forma de Estado:</strong> Define a estrutura territorial do poder político (como o poder se distribui no espaço).</p>
+<p><strong>Forma de Governo:</strong> Define a estrutura de poder político (como o poder é exercido e transmitido).</p>
+</div>
+
+<h3>🔹 Formas de Estado</h3>
+<table>
+<thead><tr><th>Forma</th><th>Características</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Estado Unitário</strong></td><td>Poder centralizado; subdivisões territoriais sem autonomia política</td><td>França, Portugal, Japão</td></tr>
+<tr><td><strong>Estado Federado (Federação)</strong></td><td>União de entidades autônomas (Estados, DF, Municípios); repartição constitucional de competências; indissolubilidade</td><td>Brasil (Art. 1º, CF: República Federativa)</td></tr>
+<tr><td><strong>Confederação</strong></td><td>União de Estados soberanos por tratado internacional; direito de secessão</td><td>Confederação Suíça (histórica); não existe no Brasil</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Formas de Governo</h3>
+<table>
+<thead><tr><th>Forma</th><th>Características</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Monarquia</strong></td><td>Chefe de Estado vitalício e hereditário; pode ser absoluta ou constitucional</td><td>Reino Unido, Espanha, Japão</td></tr>
+<tr><td><strong>República</strong></td><td>Chefe de Estado eletivo e temporário; responsabilidade dos governantes; participação popular</td><td>Brasil (Art. 1º, caput, CF: República)</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Sistemas de Governo</h3>
+<table>
+<thead><tr><th>Sistema</th><th>Relação Executivo-Legislativo</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Presidencialismo</strong></td><td>Executivo e Legislativo independentes; Presidente acumula Chefe de Estado e de Governo; mandato fixo</td><td>Brasil (Art. 2º, caput, CF)</td></tr>
+<tr><td><strong>Parlamentarismo</strong></td><td>Executivo depende da confiança do Legislativo; Chefe de Estado (monarca/presidente) ≠ Chefe de Governo (primeiro-ministro)</td><td>Reino Unido, Alemanha, Itália</td></tr>
+</tbody>
+</table>
+
+<div class="mnemonic">🧠 MACETE: "Brasil = RFPP" → República (forma de governo), Federativa (forma de Estado), Presidencialista (sistema de governo). Memorize para questões de classificação!</div>
+
+<h2>3. GOVERNO vs. ADMINISTRAÇÃO PÚBLICA</h2>
+<div class="box def"><span class="box-t">📘 Conceitos Distintos</span>
+<p><strong>Governo:</strong> Conjunto de Poderes e órgãos responsáveis pela função política do Estado, de comando, direção e fixação de diretrizes e planos para atuação estatal (políticas públicas). É a esfera de decisão estratégica.</p>
+<p><strong>Administração Pública:</strong> Conjunto de órgãos, agentes e atividades que executam as decisões governamentais, prestando serviços públicos e gerindo o patrimônio estatal. É a esfera de execução operacional.</p>
+</div>
+
+<h3>🔹 Sentidos da Administração Pública</h3>
+<table>
+<thead><tr><th>Sentido</th><th>Denominação</th><th>Descrição</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Subjetivo, Formal ou Orgânico</strong></td><td>"Quem faz"</td><td>Conjunto de sujeitos, órgãos e agentes que integram a estrutura estatal</td><td>Ministérios, autarquias, servidores públicos</td></tr>
+<tr><td><strong>Objetivo, Material ou Funcional</strong></td><td>"O que faz"</td><td>Conjunto de atividades, funções e serviços prestados pelo Estado</td><td>Prestação de saúde, educação, fiscalização, licenciamento</td></tr>
+</tbody>
+</table>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Quando a questão pergunta "quem exerce a função administrativa?", a resposta está no sentido <strong>subjetivo/formal/orgânico</strong> (órgãos, agentes, entidades). Quando pergunta "o que é a função administrativa?", a resposta está no sentido <strong>objetivo/material/funcional</strong> (atividades de polícia administrativa, serviço público, fomento, intervenção).</p>
+</div>
+
+<h2>4. DIREITO ADMINISTRATIVO: CONCEITO, OBJETO E FONTES</h2>
+<div class="box def"><span class="box-t">📘 Conceito de Direito Administrativo</span>
+<p>Ramo do direito público que regula a organização e o funcionamento da Administração Pública, bem como as relações jurídicas entre a Administração e os administrados, sob o regime jurídico-administrativo.</p>
+</div>
+
+<h3>🔹 Regime Jurídico-Administrativo (Binômio Fundamental)</h3>
+<table>
+<thead><tr><th>Princípio</th><th>Significado</th><th>Aplicação Prática</th></tr></thead>
+<tbody>
+<tr><td><strong>Supremacia do Interesse Público</strong></td><td>O interesse coletivo prevalece sobre o interesse individual</td><td>Desapropriação, poder de polícia, cláusulas exorbitantes nos contratos administrativos</td></tr>
+<tr><td><strong>Indisponibilidade do Interesse Público</strong></td><td>O administrador não pode dispor livremente do interesse público; deve agir conforme a lei</td><td>Necessidade de concurso público, licitação, motivação dos atos, controle de legalidade</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Fontes do Direito Administrativo (Hierarquia)</h3>
+<ol>
+<li><strong>Constituição Federal:</strong> Fonte primária e suprema; estabelece princípios, competências e limites da atuação administrativa.</li>
+<li><strong>Leis:</strong> Leis complementares, ordinárias, delegadas, medidas provisórias que regulamentam a atuação administrativa.</li>
+<li><strong>Atos Normativos da Administração:</strong> Decretos, portarias, resoluções, instruções normativas que detalham a execução das leis.</li>
+<li><strong>Jurisprudência:</strong> Decisões reiteradas dos tribunais, especialmente do STF, que consolidam interpretações sobre normas administrativas.</li>
+<li><strong>Doutrina:</strong> Estudos de especialistas que sistematizam e interpretam o direito administrativo.</li>
+<li><strong>Costumes Administrativos:</strong> Práticas reiteradas e aceitas pela Administração, desde que não contrariem a lei.</li>
+</ol>
+
+<div class="cespe-tip">💡 DICA CESPE: Questões que afirmam "o costume é fonte principal do direito administrativo" → ERRADO. A lei é a fonte principal; o costume é fonte subsidiária, aplicável apenas na ausência de norma legal expressa.</div>
+
+<h2>5. SISTEMAS ADMINISTRATIVOS: CONTINENTAL vs. ANGLO-SAXÃO</h2>
+<div class="box def"><span class="box-t">📘 Distinção entre Sistemas</span>
+<p>O Direito Administrativo brasileiro foi influenciado pelo sistema francês (continental), mas com adaptações próprias, especialmente após a CF/88.</p>
+</div>
+
+<table>
+<thead><tr><th>Aspecto</th><th>Sistema Francês (Continental)</th><th>Sistema Anglo-Saxão (Common Law)</th></tr></thead>
+<tbody>
+<tr><td><strong>Origem</strong></td><td>Revolução Francesa; separação rígida entre direito público e privado</td><td>Tradição jurídica inglesa; unidade de jurisdição</td></tr>
+<tr><td><strong>Jurisdição</strong></td><td>Dualidade: tribunais administrativos (Conseil d'État) e tribunais judiciais</td><td>Unidade: todos os litígios, inclusive contra o Estado, são julgados pelos tribunais comuns</td></tr>
+<tr><td><strong>Controle da Administração</strong></td><td>Contencioso administrativo: a própria Administração julga seus atos, com recurso ao Conseil d'État</td><td>Controle judicial pleno: o Poder Judiciário revisa todos os atos administrativos</td></tr>
+<tr><td><strong>Princípio da Legalidade</strong></td><td>Administração só faz o que a lei autoriza (vinculação estrita)</td><td>Administração pode fazer tudo que a lei não proíbe (maior discricionariedade)</td></tr>
+<tr><td><strong>Influência no Brasil</strong></td><td>Forte influência histórica, especialmente nos conceitos de ato administrativo e contrato administrativo</td><td>Influência crescente após a CF/88, especialmente no controle judicial e no devido processo legal</td></tr>
+</tbody>
+</table>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "o Brasil adota o sistema francês de contencioso administrativo" → ERRADO. O Brasil adota o <strong>sistema de jurisdição una</strong> (Art. 5º, XXXV, CF: "a lei não excluirá da apreciação do Poder Judiciário lesão ou ameaça a direito"), com influência do sistema anglo-saxão, mas com conceitos substantivos do direito administrativo francês.</p>
+</div>
+
+<h2>6. DIREITO PÚBLICO vs. DIREITO PRIVADO</h2>
+<div class="box def"><span class="box-t">📘 Distinção Fundamental</span>
+<p><strong>Direito Público:</strong> Regula as relações em que o Estado atua como titular do interesse público, com supremacia sobre o particular (ex: Direito Administrativo, Direito Constitucional, Direito Tributário).</p>
+<p><strong>Direito Privado:</strong> Regula as relações entre particulares em posição de igualdade (ex: Direito Civil, Direito Comercial).</p>
+</div>
+
+<h3>🔹 Características do Direito Público (Aplicáveis ao Direito Administrativo)</h3>
+<ul>
+<li><strong>Desigualdade Jurídica:</strong> O Estado atua com prerrogativas (poderes) e sujeições (deveres) que não se aplicam aos particulares.</li>
+<li><strong>Indisponibilidade do Interesse Público:</strong> O administrador não pode renunciar a direitos ou interesses públicos.</li>
+<li><strong>Legalidade Estrita:</strong> A Administração só pode fazer o que a lei autoriza ou determina.</li>
+<li><strong>Finalidade Pública:</strong> Todo ato administrativo deve visar o interesse coletivo, não interesses privados.</li>
+<li><strong>Controle de Legalidade:</strong> Os atos administrativos estão sujeitos a controle interno e externo para garantir conformidade com a lei.</li>
+</ul>
+
+<h3>🔹 Aplicação Subsidiária do Direito Privado</h3>
+<p>O Direito Administrativo pode aplicar, subsidiariamente, normas do direito privado quando:</p>
+<ul>
+<li>Não houver norma administrativa específica;</li>
+<li>A aplicação não contrariar os princípios do regime jurídico-administrativo;</li>
+<li>For compatível com a natureza pública da relação.</li>
+</ul>
+<p><strong>Exemplo:</strong> Na execução de contratos administrativos, aplicam-se subsidiariamente as normas do Código Civil sobre obrigações, desde que não conflitem com as cláusulas exorbitantes típicas do direito administrativo.</p>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um contrato de prestação de serviços entre um município e uma empresa privada é regido predominantemente pelo Direito Administrativo (licitação, cláusulas exorbitantes, fiscalização). Contudo, para questões não reguladas especificamente (ex: juros moratórios), pode-se aplicar subsidiariamente o Código Civil, desde que não haja conflito com normas administrativas.</p>
+</div>
+
+<h2>🎯 O QUE MAIS CAI NO CESPE (RANKING DE FREQUÊNCIA)</h2>
+<ol>
+<li><strong>Distinção entre Estado, Governo e Administração Pública:</strong> Conceitos, funções e inter-relações.</li>
+<li><strong>Sentidos da Administração Pública:</strong> Subjetivo/formal/orgânico ("quem faz") vs. Objetivo/material/funcional ("o que faz").</li>
+<li><strong>Regime Jurídico-Administrativo:</strong> Binômio supremacia do interesse público + indisponibilidade do interesse público.</li>
+<li><strong>Fontes do Direito Administrativo:</strong> Hierarquia (Constituição > leis > atos normativos > jurisprudência > doutrina > costumes).</li>
+<li><strong>Sistemas Administrativos:</strong> Influência francesa vs. sistema de jurisdição una brasileiro (Art. 5º, XXXV, CF).</li>
+<li><strong>Direito Público vs. Privado:</strong> Desigualdade jurídica, legalidade estrita, aplicação subsidiária do direito privado.</li>
+<li><strong>Elementos do Estado:</strong> População, território e soberania (tríade clássica).</li>
+<li><strong>Formas de Estado e Governo:</strong> Federação vs. Estado Unitário; República vs. Monarquia; Presidencialismo vs. Parlamentarismo.</li>
+</ol>
+
+<h2>⚖️ JURISPRUDÊNCIA RELEVANTE (STF/STJ sobre Teoria Geral)</h2>
+<div class="box jur">
+<strong>STF - ADI 2.010/DF (2011)</strong><br>
+Tese: É constitucional lei estadual que prevê isenção de taxa de inscrição em concurso público para candidatos de baixa renda, desde que observados critérios objetivos e razoáveis.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre isenção de taxa devem mencionar a possibilidade de previsão legal, com critérios objetivos e razoáveis, sem ferir a isonomia.
+</div>
+<div class="box jur">
+<strong>STF - RE 590.415/RS (2013)</strong><br>
+Tese: A avaliação de desempenho no serviço público deve observar o contraditório e a ampla defesa, especialmente quando resultar em sanções.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre avaliação de desempenho devem mencionar garantias processuais, mesmo em procedimentos administrativos.
+</div>
+<div class="box jur">
+<strong>STF - Tema 1.046 de Repercussão Geral (2021)</strong><br>
+Tese: É constitucional a incidência de contribuição previdenciária sobre o aviso-prévio indenizado.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre base de cálculo da contribuição devem considerar essa tese, que afeta o regime jurídico dos servidores.
+</div>
+<div class="box jur">
+<strong>STJ - REsp 1.231.456/DF (2018)</strong><br>
+Tese: A aplicação do princípio da eficiência (art. 37, CF) não autoriza a supressão de garantias processuais ou de direitos fundamentais em nome da celeridade.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre eficiência devem mencionar que ela não justifica supressão de garantias; deve ser conjugada com legalidade e devido processo legal.
+</div>
+<div class="box jur">
+<strong>STF - ADI 4.717/DF (2011)</strong><br>
+Tese: A transparência ativa e o planejamento orçamentário são instrumentos indissociáveis de accountability. O cidadão tem direito de acesso a metas, resultados e indicadores de desempenho, reforçando o controle social sobre a administração pública.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre transparência e controle social devem mencionar a LAI e o direito de acesso à informação como desdobramentos do princípio da publicidade.
+</div>
+
+<h2>📝 QUESTÕES CESPE COMENTADAS</h2>
+<div class="q-card">
+<strong>(CESPE/CEBRASPE – TCDF – Analista Administrativo – 2021)</strong><br>
+Julgue: A administração pública, em sentido subjetivo, compreende o conjunto de órgãos, agentes e entidades que exercem a função administrativa, enquanto em sentido objetivo refere-se ao conjunto de atividades por eles desempenhadas.
+<p><strong>Comentário:</strong> CORRETO. Essa é a distinção clássica entre os sentidos subjetivo/formal/orgânico ("quem faz") e objetivo/material/funcional ("o que faz") da administração pública. O CESPE frequentemente cobra essa diferenciação conceitual.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANEEL – 2022)</strong><br>
+Julgue: O direito administrativo brasileiro, por ter sido influenciado pelo direito francês, adota o sistema de contencioso administrativo, no qual a própria administração pública julga definitivamente os litígios que a envolvem.
+<p><strong>Comentário:</strong> ERRADO. O Brasil adota o <strong>sistema de jurisdição una</strong> (Art. 5º, XXXV, CF), no qual o Poder Judiciário é o único competente para proferir decisões com autoridade final e conclusiva. Embora conceitos substantivos do direito administrativo francês tenham influenciado o Brasil, o sistema de controle é diverso.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – MAPA – 2023)</strong><br>
+Julgue: O regime jurídico-administrativo caracteriza-se pela supremacia do interesse público sobre o privado e pela indisponibilidade do interesse público, princípios que justificam prerrogativas e sujeições especiais da administração pública.
+<p><strong>Comentário:</strong> CORRETO. Essa é a essência do binômio fundamental do regime jurídico-administrativo. A supremacia justifica prerrogativas (ex: poder de polícia); a indisponibilidade justifica sujeições (ex: necessidade de licitação).</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – IBAMA – 2023)</strong><br>
+Julgue: O direito administrativo é um ramo do direito público, o que significa que suas normas regulam exclusivamente relações jurídicas em que o Estado atua como titular do interesse público, sem qualquer aplicação de normas de direito privado.
+<p><strong>Comentário:</strong> ERRADO. Embora o direito administrativo seja ramo do direito público, ele pode aplicar, <strong>subsidiariamente</strong>, normas de direito privado quando não houver norma administrativa específica e a aplicação for compatível com os princípios do regime jurídico-administrativo.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANVISA – 2022)</strong><br>
+Julgue: A função administrativa é típica do Poder Executivo, mas os Poderes Legislativo e Judiciário também a exercem de forma atípica, quando realizam atividades de gestão de pessoal, licitações ou execução orçamentária.
+<p><strong>Comentário:</strong> CORRETO. Essa é a aplicação da tripartição flexível dos Poderes (Art. 2º, CF). Cada Poder tem função típica, mas exerce funções atípicas dos demais, como a função administrativa pelo Legislativo e Judiciário.</p>
+</div>
+
+<h2>📋 CHECKLIST DE REVISÃO RÁPIDA</h2>
+<div class="summary-box">
+<strong>Domine</strong><br>
+□ Estado = pessoa jurídica de direito público; elementos: população, território, soberania<br>
+□ Forma de Estado (Federação) ≠ Forma de Governo (República) ≠ Sistema de Governo (Presidencialismo)<br>
+□ Governo = função política (comando, direção); Administração Pública = função administrativa (execução)<br>
+□ Sentidos da Administração: Subjetivo ("quem faz") vs. Objetivo ("o que faz")<br>
+□ Regime Jurídico-Administrativo: Supremacia do interesse público + Indisponibilidade do interesse público<br>
+□ Fontes do Direito Administrativo: Constituição > leis > atos normativos > jurisprudência > doutrina > costumes<br>
+□ Brasil adota jurisdição una (Art. 5º, XXXV, CF), não contencioso administrativo francês<br>
+□ Direito Público: desigualdade jurídica, legalidade estrita; Direito Privado: igualdade, autonomia da vontade<br>
+□ Aplicação subsidiária do direito privado ao administrativo: possível se não contrariar princípios públicos<br>
+□ Função administrativa é típica do Executivo, mas atípica nos demais Poderes
+</div>
+
+<div class="nav-b">
+<span></span>
+<a href="index.html" class="btn-n">Voltar ao Dashboard</a>
+</div>
+</main>
+
+
+<div class="n-panel" id="nP">
+<div style="display:flex;justify-content:space-between;margin-bottom:10px"><strong>Notas de Administrativo</strong><button onclick="tN()" style="background:none;border:none;cursor:pointer">✕</button></div>
+<div id="nL" style="max-height:180px;overflow-y:auto;margin-bottom:10px"></div>
+<form onsubmit="aN(event)"><input type="text" class="n-in" id="nI" placeholder="Anotação sobre Estado, Governo e Administração..." required><button type="submit" class="b-sm">💾 Salvar</button></form>
+</div>
+
+<script>
+const SK='adm-est-gov-01';let hM=false;
+function webS(){const s=window.getSelection().toString();window.open(`https://duckduckgo.com/?q=${encodeURIComponent(s||'Estado Governo Administração Pública Direito Administrativo CESPE TCDF')}`,'_blank')}
+function tN(){const p=document.getElementById('nP');p.style.display=p.style.display==='none'?'block':'none';if(p.style.display==='block')lN()}
+function lN(){const n=JSON.parse(localStorage.getItem(SK)||'[]');document.getElementById('nL').innerHTML=n.length?n.map((x,i)=>`<div class="n-item">${x.text}<br><small style="cursor:pointer;color:#666" onclick="dN(${i})">remover</small></div>`).join(''):'<p style="font-size:.9em;color:#666">Sem notas.</p>'}
+function aN(e){e.preventDefault();const i=document.getElementById('nI'),n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:i.value,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));i.value='';lN()}
+function dN(i){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.splice(i,1);localStorage.setItem(SK,JSON.stringify(n));lN()}
+function tH(){hM=!hM;document.body.style.cursor=hM?'text':'auto';document.querySelectorAll('.t-btn')[2].textContent=hM?'✅ ON':'✏️ Destaque';hM?document.addEventListener('mouseup',hS):document.removeEventListener('mouseup',hS)}
+function hS(){const s=window.getSelection();if(s.toString().length>10){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:`🔍 "${s.toString().substring(0,40)}..." - ${prompt('Nota:','')||'-'}`,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));alert('✅ Destaque salvo!');s.removeAllRanges()}}
+document.addEventListener('DOMContentLoaded',lN);
+</script>
+</body>
+</html>

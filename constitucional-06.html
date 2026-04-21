@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direito Constitucional 06 | Poder Executivo - CESPE</title>
+<style>
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1;--jur:#e8f4fd}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;line-height:1.7;padding-top:70px}
+a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
+.container{max-width:1000px;margin:0 auto;padding:24px}
+h1{font-size:1.8em;margin-bottom:10px;color:var(--lil)}h2{font-size:1.4em;margin:28px 0 14px;color:var(--text);padding-bottom:6px;border-bottom:2px solid var(--lil-l)}
+h3{font-size:1.2em;margin:22px 0 12px;color:var(--lil-d);font-weight:600}
+p{margin-bottom:14px;color:var(--text)}ul,ol{margin:0 0 16px 20px;color:var(--text)}li{margin-bottom:6px}
+.box{background:var(--card);border-radius:8px;padding:16px;margin:20px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}.box.jur{background:var(--jur);border-color:#3b82f6}
+.box-t{font-weight:700;margin-bottom:8px;display:block;color:var(--text)}
+table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--lil-d)}
+td{padding:10px 14px;border-bottom:1px solid var(--lil-l);color:var(--text)}tr:hover td{background:var(--lil-l)}
+.nav-b{display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:1px solid var(--lil-d)}
+.btn-n{padding:10px 20px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none}
+.btn-n:hover{background:var(--lil-d);color:#fff}
+.tools{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:99}
+.t-btn{background:var(--card);border:2px solid var(--lil-d);padding:10px 14px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;color:var(--text);box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.t-btn:hover{transform:translateY(-2px)}
+.n-panel{position:fixed;bottom:70px;right:20px;width:280px;background:var(--card);border:2px solid var(--lil-d);border-radius:12px;padding:16px;display:none;box-shadow:0 5px 15px rgba(0,0,0,.15);z-index:100}
+.n-item{background:var(--lil-l);padding:10px;border-radius:6px;margin-bottom:8px;font-size:.9em}
+.n-in{width:100%;padding:8px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:8px}
+.b-sm{padding:6px 12px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em}
+@media(max-width:700px){.container{padding:16px}header{flex-direction:column;align-items:flex-start;gap:10px}}
+.box img{width:100%;height:auto;display:block;margin:15px 0;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.q-card{background:var(--warn);border-left:4px solid #f59e0b;padding:16px;margin:20px 0;border-radius:0 8px 8px 0}
+.q-card strong{color:#856404}
+.cespe-tip{background:#fef3c7;border-left:4px solid #f59e0b;padding:12px;margin:15px 0;font-size:.95em}
+.mnemonic{background:linear-gradient(135deg,var(--lil-l),var(--bg-secondary));padding:12px 16px;border-radius:8px;margin:15px 0;font-weight:600;color:var(--lil-d)}
+.summary-box{background:var(--def);padding:16px;border-radius:8px;margin:20px 0}
+.jur-list{margin-left:20px}
+.jur-item{margin-bottom:12px;padding-left:15px;border-left:3px solid var(--lil-d)}
+.attr-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin:15px 0}
+.attr-item{background:var(--bg-secondary);padding:10px;border-radius:6px;font-size:.95em}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="back">← Dashboard</a><a href="index.html" class="home-btn" title="Voltar ao Dashboard">
+    🏠
+</a><div class="nav-t">Direito Constitucional 06</div></header>
+<main class="container">
+<h1>📚 Poder Executivo na CF/88 (Arts. 76 a 91)</h1>
+<p><strong>Foco CESPE:</strong> A banca cobra exaustivamente as atribuições do Presidente da República (art. 84, CF), as hipóteses de delegação (parágrafo único), a distinção entre crimes comuns e de responsabilidade, o processo de impeachment, as imunidades presidenciais e a jurisprudência do STF sobre medidas provisórias e decretos autônomos. Questões frequentemente confundem competências privativas com delegáveis ou cobram detalhes de quóruns e prazos do processo de impedimento.</p>
+
+<h2>1. FORMA E SISTEMA DE GOVERNO NO BRASIL</h2>
+<div class="box def"><span class="box-t">📘 Conceitos Fundamentais</span>
+<p><strong>Forma de Governo:</strong> Define a estrutura de poder político. O Brasil adota a <strong>República</strong> (art. 1º, caput, CF), caracterizada por: eletividade, temporariedade, responsabilidade dos governantes e participação popular.</p>
+<p><strong>Sistema de Governo:</strong> Define a relação entre os Poderes. O Brasil adota o <strong>Presidencialismo</strong> (art. 2º, caput, CF), caracterizado por: separação rígida de Poderes, acumulação das funções de Chefe de Estado e Chefe de Governo pelo Presidente, e independência entre Executivo e Legislativo.</p>
+</div>
+
+<h3>🔹 Chefia de Estado vs. Chefia de Governo</h3>
+<table>
+<thead><tr><th>Tipo de Chefia</th><th>Funções Principais</th><th>Exemplos de Atribuições</th></tr></thead>
+<tbody>
+<tr><td><strong>Chefe de Estado</strong></td><td>Representação externa e interna do país; simboliza a unidade nacional</td><td>• Manter relações com Estados estrangeiros<br>• Celebrar tratados internacionais<br>• Decretar estado de defesa/sítio<br>• Comandar as Forças Armadas</td></tr>
+<tr><td><strong>Chefe de Governo</strong></td><td>Direção da administração pública; implementação de políticas públicas</td><td>• Nomear e exonerar Ministros de Estado<br>• Exercer a direção superior da administração federal<br>• Editar medidas provisórias e decretos<br>• Enviar projetos de lei ao Congresso</td></tr>
+</tbody>
+</table>
+
+<div class="mnemonic">🧠 MACETE: "Estado = Representação | Governo = Gestão" → Chefe de Estado representa o país; Chefe de Governo administra o país. No presidencialismo brasileiro, o Presidente acumula ambas as funções.</div>
+
+<h2>2. ELEIÇÃO, POSSE E VACÂNCIA DOS CARGOS DE PRESIDENTE E VICE</h2>
+<h3>🔹 Eleição (Art. 77, CF/88)</h3>
+<table>
+<thead><tr><th>Aspecto</th><th>Regra Constitucional</th><th>Detalhes</th></tr></thead>
+<tbody>
+<tr><td><strong>Sistema Eleitoral</strong></td><td>Majoritário de dois turnos</td><td>1º turno: maioria absoluta dos votos válidos; 2º turno: maioria simples entre os dois mais votados (se ninguém atingir 50%+1 no 1º turno)</td></tr>
+<tr><td><strong>Chapa</strong></td><td>Presidente e Vice eleitos em chapa única</td><td>Vice é eleito junto com o Presidente; não há eleição separada</td></tr>
+<tr><td><strong>Quem vota</strong></td><td>Eleitores aptos (voto facultativo para 16-17 anos, maiores de 70 e analfabetos)</td><td>Voto obrigatório para maiores de 18 e menores de 70 anos</td></tr>
+<tr><td><strong>Registro de candidatura</strong></td><td>Até 60 dias antes da eleição</td><td>Exigências: filiação partidária, domicílio eleitoral na circunscrição, quitação eleitoral</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Posse (Art. 78, CF/88)</h3>
+<p>O Presidente e o Vice-Presidente tomarão posse em sessão do Congresso Nacional, prestando o compromisso de <strong>manter, defender e cumprir a Constituição</strong>, observar as leis, promover o bem geral do povo brasileiro, sustentar a união, a integridade e a independência do Brasil.</p>
+<ul>
+<li><strong>Prazo:</strong> 1º de janeiro do ano subsequente à eleição.</li>
+<li><strong>Local:</strong> Sessão do Congresso Nacional.</li>
+<li><strong>Compromisso:</strong> Juramento de cumprir a Constituição e as leis.</li>
+<li><strong>Substituição na posse:</strong> Se o Presidente ou Vice não assumirem até 10 dias após a data marcada, os cargos serão declarados vagos (salvo motivo de força maior).</li>
+</ul>
+
+<h3>🔹 Vacância e Sucessão (Art. 79 e 80, CF/88)</h3>
+<table>
+<thead><tr><th>Hipótese de Vacância</th><th>Quem Assume</th><th>Observações</th></tr></thead>
+<tbody>
+<tr><td><strong>Vacância dos dois cargos</strong></td><td>Presidente da Câmara → Presidente do Senado → Presidente do STF</td><td>Nos primeiros 2 anos do mandato: eleição indireta pelo Congresso em 30 dias; nos últimos 2 anos: eleição direta em 90 dias</td></tr>
+<tr><td><strong>Impedimento temporário do Presidente</strong></td><td>Vice-Presidente</td><td>Impedimento = ausência temporária (viagem, licença médica, etc.)</td></tr>
+<tr><td><strong>Vacância da Presidência</strong></td><td>Vice-Presidente</td><td>Vacância = extinção definitiva do cargo (morte, renúncia, impeachment, etc.)</td></tr>
+<tr><td><strong>Impedimento ou vacância do Presidente e do Vice</strong></td><td>Presidente da Câmara → Presidente do Senado → Presidente do STF</td><td>Ordem sucessória constitucional; todos são substitutos eventuais, não sucessores definitivos</td></tr>
+</tbody>
+</table>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "o Presidente da Câmara é o sucessor constitucional do Presidente da República" → ERRADO. O Presidente da Câmara é <strong>substituto eventual</strong> na linha sucessória, mas não é <strong>sucessor definitivo</strong>. O sucessor definitivo do Presidente é o Vice-Presidente. Os demais (Presidente da Câmara, do Senado e do STF) apenas exercem o cargo temporariamente até a realização de nova eleição (se for o caso).</p>
+</div>
+
+<h2>3. ATRIBUIÇÕES DO PRESIDENTE DA REPÚBLICA (Art. 84, CF/88)</h2>
+<div class="box def"><span class="box-t">📘 Competências Privativas (Não Delegáveis)</span>
+<p>O art. 84 enumera as competências privativas do Presidente da República. Algumas são <strong>indelegáveis</strong> (parágrafo único do art. 84), ou seja, só podem ser exercidas pessoalmente pelo Presidente.</p>
+</div>
+
+<h3>🔹 Atribuições Indelegáveis (Lista CESPE)</h3>
+<div class="attr-grid">
+<div class="attr-item">🔹 I - Nomear e exonerar Ministros de Estado</div>
+<div class="attr-item">🔹 II - Exercer, com auxílio dos Ministros, a direção superior da administração federal</div>
+<div class="attr-item">🔹 III - Iniciar o processo legislativo (MP, projetos de lei)</div>
+<div class="attr-item">🔹 IV - Sancionar, promulgar e fazer publicar as leis; vetar projetos de lei</div>
+<div class="attr-item">🔹 V - Decretar e executar a intervenção federal</div>
+<div class="attr-item">🔹 VI - Decretar estado de defesa e estado de sítio</div>
+<div class="attr-item">🔹 VII - Comandar as Forças Armadas, nomear os Comandantes</div>
+<div class="attr-item">🔹 VIII - Manter relações com Estados estrangeiros e acreditar representantes diplomáticos</div>
+<div class="attr-item">🔹 IX - Celebrar tratados, convenções e atos internacionais (sujeitos a referendo do CN)</div>
+<div class="attr-item">🔹 X - Declarar guerra e celebrar a paz (com autorização do CN)</div>
+<div class="attr-item">🔹 XI - Conferir condecorações e distinções honoríficas</div>
+<div class="attr-item">🔹 XII - Permitir, nos casos previstos em LC, que forças estrangeiras transitem ou permaneçam no território nacional</div>
+<div class="attr-item">🔹 XIII - Enviar ao CN o plano plurianual, o projeto de lei de diretrizes orçamentárias e as propostas de orçamento</div>
+<div class="attr-item">🔹 XIV - Prestar, anualmente, ao CN, dentro de 60 dias após a abertura da sessão legislativa, as contas referentes ao exercício anterior</div>
+<div class="attr-item">🔹 XV - Prover e extinguir os cargos públicos federais, na forma da lei</div>
+<div class="attr-item">🔹 XVI - Editar medidas provisórias com força de lei (art. 62, CF)</div>
+<div class="attr-item">🔹 XVII - Exercer outras atribuições previstas na Constituição</div>
+</div>
+
+<h3>🔹 Atribuições Delegáveis (Parágrafo Único do Art. 84)</h3>
+<p>O Presidente pode delegar as seguintes atribuições aos Ministros de Estado, ao Procurador-Geral da República ou ao Advogado-Geral da União, que observarão os limites traçados nas respectivas delegações:</p>
+<ul>
+<li><strong>a)</strong> Conceder indulto e comutar penas, com audiência, se necessário, dos órgãos instituídos em lei;</li>
+<li><strong>b)</strong> Exercer o comando supremo das Forças Armadas;</li>
+<li><strong>c)</strong> Prover e extinguir os cargos públicos federais, na forma da lei;</li>
+<li><strong>d)</strong> Expedir decretos e regulamentos para fiel execução das leis;</li>
+<li><strong>e)</strong> Dispor, mediante decreto, sobre: organização e funcionamento da administração federal (sem aumento de despesa nem criação/extinção de órgãos); extinção de funções ou cargos públicos (quando vagos).</li>
+</ul>
+
+<div class="cespe-tip">💡 DICA CESPE: Questões que afirmam "o Presidente pode delegar a edição de medidas provisórias" → ERRADO. A edição de MP é competência <strong>indelegável</strong>, pois envolve exercício de função legislativa em caráter excepcional.</div>
+
+<h2>4. RESPONSABILIDADE DO PRESIDENTE: CRIMES COMUNS vs. CRIMES DE RESPONSABILIDADE</h2>
+<div class="box def"><span class="box-t">📘 Distinção Fundamental</span>
+<p>A CF/88 estabelece dois regimes distintos de responsabilidade para o Presidente da República:</p>
+</div>
+
+<table>
+<thead><tr><th>Aspecto</th><th>Crimes Comuns</th><th>Crimes de Responsabilidade</th></tr></thead>
+<tbody>
+<tr><td><strong>Natureza</strong></td><td>Infrações penais comuns (Código Penal, leis especiais)</td><td>Infrações político-administrativas (Lei 1.079/1950)</td></tr>
+<tr><td><strong>Exemplos</strong></td><td>Homicídio, corrupção, lavagem de dinheiro, etc.</td><td>Atentado contra a Constituição, o livre exercício dos Poderes, a probidade administrativa, etc.</td></tr>
+<tr><td><strong>Processo</strong></td><td>Denúncia do PGR ao STF; julgamento pelo STF</td><td>Denúncia de qualquer cidadão; admissibilidade pela Câmara; julgamento pelo Senado</td></tr>
+<tr><td><strong>Quórum de admissibilidade</strong></td><td>Não se aplica (denúncia do PGR)</td><td>2/3 dos membros da Câmara dos Deputados</td></tr>
+<tr><td><strong>Quórum de condenação</strong></td><td>Decisão colegiada do STF (maioria)</td><td>2/3 dos membros do Senado Federal</td></tr>
+<tr><td><strong>Sanção</strong></td><td>Penas do Código Penal (prisão, multa, etc.)</td><td>Perda do cargo + inabilitação por 8 anos para função pública</td></tr>
+<tr><td><strong>Imunidade</strong></td><td>Imunidade relativa: só pode ser processado após autorização da Câmara (para crimes cometidos durante o mandato)</td><td>Não há imunidade para crimes de responsabilidade; o processo pode ser iniciado a qualquer tempo</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Hipóteses de Crimes de Responsabilidade (Lei 1.079/1950, art. 4º)</h3>
+<ol>
+<li>Atentado contra a Constituição Federal, especialmente contra: existência da União, integridade do território nacional, independência dos Poderes, forma republicana federativa de governo.</li>
+<li>Impedimento do livre exercício dos Poderes Legislativo e Judiciário, do Ministério Público e dos direitos políticos dos cidadãos.</li>
+<li>Atentado contra a segurança interna do País.</li>
+<li>Atentado contra a probidade na administração.</li>
+<li>Atentado contra a lei orçamentária.</li>
+<li>Descumprimento das leis e das decisões judiciais.</li>
+</ol>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>O Presidente da República edita decreto que extingue órgão público criado por lei, sem autorização legislativa. Essa conduta pode configurar <strong>crime de responsabilidade</strong> por atentado contra a Constituição (violação do princípio da legalidade e da separação de Poderes). O processo de impeachment poderia ser iniciado na Câmara dos Deputados.</p>
+</div>
+
+<h2>5. PROCESSO DE IMPEDIMENTO (IMPEACHMENT)</h2>
+<h3>🔹 Fases do Processo (Lei 1.079/1950 + Regimento Interno do CN)</h3>
+<ol>
+<li><strong>Denúncia:</strong> Qualquer cidadão pode apresentar denúncia por crime de responsabilidade à Câmara dos Deputados.</li>
+<li><strong>Admissibilidade na Câmara:</strong> Presidente da Câmara analisa a denúncia; se aceita, forma-se comissão especial para emitir parecer. O parecer é votado em plenário; se aprovado por <strong>2/3 dos deputados</strong>, o processo segue para o Senado.</li>
+<li><strong>Instauração no Senado:</strong> Presidente do Senado recebe o processo e instaura o julgamento. O Presidente da República é <strong>afastado temporariamente</strong> por até 180 dias (art. 86, §1º, CF).</li>
+<li><strong>Julgamento:</strong> Senado funciona como tribunal de julgamento, presidido pelo Presidente do STF. O acusado tem direito à ampla defesa. A condenação exige <strong>2/3 dos senadores</strong>.</li>
+<li><strong>Sanção:</strong> Se condenado, o Presidente perde o cargo e fica inabilitado por 8 anos para exercer função pública, sem prejuízo das sanções judiciais cabíveis.</li>
+</ol>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "o afastamento do Presidente durante o julgamento de impeachment é automático" → ERRADO. O afastamento só ocorre após a <strong>instauração do processo pelo Senado</strong> (art. 86, §1º, CF). Antes disso, o Presidente permanece no cargo.</p>
+</div>
+
+<h2>6. IMUNIDADES DO PRESIDENTE DA REPÚBLICA</h2>
+<h3>🔹 Imunidade Material (Inviolabilidade)</h3>
+<p>O Presidente da República não pode ser responsabilizado por opiniões, palavras e escritos proferidos no exercício do cargo (art. 86, §4º, CF). Essa imunidade é <strong>absoluta</strong> e protege atos funcionais, não atos pessoais ou crimes comuns.</p>
+
+<h3>🔹 Imunidade Formal (Prerrogativa de Foro)</h3>
+<p>O Presidente da República só pode ser processado criminalmente por crimes comuns após <strong>autorização da Câmara dos Deputados</strong> (art. 86, §3º, CF). A autorização exige maioria simples (metade mais um) dos deputados.</p>
+<ul>
+<li><strong>Crimes cometidos antes da posse:</strong> Não há imunidade; o processo pode prosseguir normalmente.</li>
+<li><strong>Crimes cometidos durante o mandato:</strong> Exige autorização da Câmara para instauração do processo.</li>
+<li><strong>Crimes de responsabilidade:</strong> Não há imunidade; o processo de impeachment pode ser iniciado a qualquer tempo.</li>
+</ul>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um Presidente da República comete crime de corrupção durante o mandato. Para que o STF possa processá-lo, é necessária <strong>autorização da Câmara dos Deputados</strong> por maioria simples. Se o crime for de responsabilidade (ex.: violação da probidade administrativa), não há imunidade e o processo de impeachment pode ser iniciado diretamente.</p>
+</div>
+
+<h2>7. MINISTROS DE ESTADO (Arts. 87 e 88, CF/88)</h2>
+<div class="box def"><span class="box-t">📘 Requisitos e Atribuições</span>
+<p>Os Ministros de Estado são auxiliares diretos do Presidente da República, escolhidos entre brasileiros maiores de 21 anos e no exercício dos direitos políticos (art. 87, CF).</p>
+</div>
+
+<h3>🔹 Atribuições dos Ministros (Art. 87, parágrafo único)</h3>
+<ul>
+<li>Exercer orientação, coordenação e supervisão dos órgãos e entidades da administração federal na área de sua competência;</li>
+<li>Referendar os atos e decretos assinados pelo Presidente da República;</li>
+<li>Expedir instruções para a execução das leis, decretos e regulamentos;</li>
+<li>Apresentar ao Presidente da República relatório anual de sua gestão no Ministério;</li>
+<li>Praticar os atos pertinentes às atribuições que lhe forem outorgadas ou delegadas pelo Presidente.</li>
+</ul>
+
+<h3>🔹 Responsabilidade dos Ministros</h3>
+<p>Além das responsabilidades comuns a qualquer cidadão, os Ministros de Estado serão <strong>processados e julgados</strong> nos crimes conexos com os de responsabilidade do Presidente da República, e nos crimes comuns e de responsabilidade cometidos no exercício de suas funções (art. 89, CF).</p>
+<ul>
+<li><strong>Crimes conexos com o Presidente:</strong> Julgamento conjunto no Senado (se o Presidente for processado por crime de responsabilidade).</li>
+<li><strong>Crimes comuns:</strong> Julgamento pelo STF (foro por prerrogativa de função).</li>
+<li><strong>Crimes de responsabilidade:</strong> Julgamento pelo Senado, após admissibilidade pela Câmara.</li>
+</ul>
+
+<h2>8. CONSELHO DA REPÚBLICA E CONSELHO DE DEFESA NACIONAL</h2>
+<h3>🔹 Conselho da República (Arts. 89 e 90, CF/88)</h3>
+<p>Órgão superior de consulta do Presidente da República, com participação de representantes dos Poderes e da sociedade civil.</p>
+<table>
+<thead><tr><th>Composição</th><th>Forma de Indicação</th></tr></thead>
+<tbody>
+<tr><td>Vice-Presidente da República</td><td>Ex officio</td></tr>
+<tr><td>Presidente da Câmara dos Deputados</td><td>Ex officio</td></tr>
+<tr><td>Presidente do Senado Federal</td><td>Ex officio</td></tr>
+<tr><td>Líder da maioria na Câmara</td><td>Indicação da Câmara</td></tr>
+<tr><td>Líder da minoria na Câmara</td><td>Indicação da Câmara</td></tr>
+<tr><td>Líder da maioria no Senado</td><td>Indicação do Senado</td></tr>
+<tr><td>Líder da minoria no Senado</td><td>Indicação do Senado</td></tr>
+<tr><td>6 cidadãos brasileiros natos, com mais de 35 anos</td><td>Nomeação pelo Presidente (2 por indicação do STF, 2 pelo Senado, 2 pela Câmara)</td></tr>
+</tbody>
+</table>
+<p><strong>Atribuições:</strong> Opinar sobre: intervenção federal, estado de defesa, estado de sítio, questões relevantes para a estabilidade das instituições democráticas.</p>
+
+<h3>🔹 Conselho de Defesa Nacional (Arts. 91 e 92, CF/88)</h3>
+<p>Órgão de consulta do Presidente da República em assuntos relacionados à soberania nacional e à defesa do Estado democrático.</p>
+<table>
+<thead><tr><th>Composição</th><th>Forma de Indicação</th></tr></thead>
+<tbody>
+<tr><td>Vice-Presidente da República</td><td>Ex officio</td></tr>
+<tr><td>Presidente da Câmara dos Deputados</td><td>Ex officio</td></tr>
+<tr><td>Presidente do Senado Federal</td><td>Ex officio</td></tr>
+<tr><td>Ministro da Justiça</td><td>Ex officio</td></tr>
+<tr><td>Ministro de Estado da Defesa</td><td>Ex officio</td></tr>
+<tr><td>Ministro das Relações Exteriores</td><td>Ex officio</td></tr>
+<tr><td>Ministro do Planejamento</td><td>Ex officio</td></tr>
+<tr><td>Comandantes da Marinha, do Exército e da Aeronáutica</td><td>Ex officio</td></tr>
+</tbody>
+</table>
+<p><strong>Atribuições:</strong> Opinar sobre: declaração de guerra e celebração da paz, concessão de anistia, organização e preparação das Forças Armadas, questões relacionadas à soberania nacional.</p>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente confunde os dois Conselhos: afirma que "o Conselho da República opina sobre declaração de guerra" → ERRADO. Essa é atribuição do <strong>Conselho de Defesa Nacional</strong>. O Conselho da República opina sobre intervenção federal, estado de defesa e estado de sítio.</p>
+</div>
+
+<h2>🎯 O QUE MAIS CAI NO CESPE (RANKING DE FREQUÊNCIA)</h2>
+<ol>
+<li><strong>Atribuições do Presidente (art. 84):</strong> Diferença entre delegáveis e indelegáveis; questões literais sobre o rol de competências.</li>
+<li><strong>Crimes de responsabilidade vs. crimes comuns:</strong> Natureza, processo, quóruns, sanções.</li>
+<li><strong>Processo de impeachment:</strong> Fases, quórum de admissibilidade (2/3 da Câmara) e condenação (2/3 do Senado), afastamento temporário.</li>
+<li><strong>Imunidades presidenciais:</strong> Imunidade material (absoluta para atos funcionais) e formal (autorização da Câmara para crimes comuns).</li>
+<li><strong>Sucessão presidencial:</strong> Ordem sucessória (Vice → Presidente da Câmara → Presidente do Senado → Presidente do STF); diferença entre substituição e sucessão.</li>
+<li><strong>Ministros de Estado:</strong> Requisitos, atribuições, foro de julgamento.</li>
+<li><strong>Conselhos da República e de Defesa Nacional:</strong> Composição, atribuições, diferenças entre eles.</li>
+<li><strong>Jurisprudência do STF:</strong> Medidas provisórias, decretos autônomos, imunidade parlamentar aplicada ao Presidente.</li>
+</ol>
+
+<h2>⚖️ JURISPRUDÊNCIA RELEVANTE (STF/STJ sobre Poder Executivo)</h2>
+<div class="box jur">
+<strong>STF - ADI 4.029/DF (2014)</strong><br>
+Tese: É constitucional a edição de medida provisória pelo Presidente da República, desde que observados os requisitos de relevância e urgência (art. 62, CF). A apreciação pelo Congresso Nacional é condição de eficácia, não de validade.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre MP devem mencionar que a relevância e urgência são pressupostos constitucionais, e que o Congresso pode rejeitar ou modificar a MP.
+</div>
+<div class="box jur">
+<strong>STF - ADI 4.717/DF (2011)</strong><br>
+Tese: A transparência ativa e o planejamento orçamentário são instrumentos indissociáveis de accountability. O cidadão tem direito de acesso a metas, resultados e indicadores de desempenho, reforçando o controle social sobre a administração pública.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre transparência e controle social devem mencionar a LAI e o direito de acesso à informação.
+</div>
+<div class="box jur">
+<strong>STF - RE 590.415/RS (2013)</strong><br>
+Tese: A avaliação de desempenho no serviço público deve observar o contraditório e a ampla defesa, especialmente quando resultar em sanções.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre avaliação de desempenho devem mencionar garantias processuais.
+</div>
+<div class="box jur">
+<strong>STF - MS 33.617/DF (2016)</strong><br>
+Tese: O Presidente da República não pode editar decreto autônomo para criar direito ou impor obrigação sem autorização legislativa, sob pena de violação do princípio da legalidade e da separação de Poderes.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre decretos devem diferenciar regulamentares (executam lei) e autônomos (criam normas, mas com limites constitucionais).
+</div>
+<div class="box jur">
+<strong>STF - ADI 2.010/DF (2011)</strong><br>
+Tese: É constitucional lei estadual que prevê isenção de taxa de inscrição em concurso público para candidatos de baixa renda, desde que observados critérios objetivos e razoáveis.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre isenção de taxa devem mencionar a possibilidade de previsão legal, com critérios objetivos.
+</div>
+<div class="box jur">
+<strong>STF - Tema 1.046 de Repercussão Geral (2021)</strong><br>
+Tese: É constitucional a incidência de contribuição previdenciária sobre o aviso-prévio indenizado.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre base de cálculo da contribuição devem considerar essa tese.
+</div>
+
+<h2>📝 QUESTÕES CESPE COMENTADAS</h2>
+<div class="q-card">
+<strong>(CESPE/CEBRASPE – TCDF – Analista Administrativo – 2021)</strong><br>
+Julgue: Compete privativamente ao Presidente da República exercer o comando supremo das Forças Armadas, sendo vedada a delegação dessa atribuição a qualquer autoridade.
+<p><strong>Comentário:</strong> ERRADO. O comando supremo das Forças Armadas está entre as atribuições <strong>delegáveis</strong> do Presidente (art. 84, parágrafo único, b, CF). O Presidente pode delegar essa função aos Ministros de Estado, ao PGR ou ao AGU.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANEEL – 2022)</strong><br>
+Julgue: O processo de impeachment do Presidente da República exige, para sua admissibilidade na Câmara dos Deputados, o voto favorável de dois terços dos seus membros, e, para a condenação no Senado Federal, o voto favorável da maioria absoluta dos senadores.
+<p><strong>Comentário:</strong> ERRADO. A admissibilidade na Câmara exige <strong>2/3 dos deputados</strong> (correto), mas a condenação no Senado também exige <strong>2/3 dos senadores</strong> (não maioria absoluta). O CESPE frequentemente troca os quóruns para induzir ao erro.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – MAPA – 2023)</strong><br>
+Julgue: O Conselho da República é órgão de consulta do Presidente da República, composto por representantes dos Poderes Legislativo, Judiciário e da sociedade civil, competindo-lhe opinar sobre declaração de guerra e celebração da paz.
+<p><strong>Comentário:</strong> ERRADO. A atribuição de opinar sobre declaração de guerra e celebração da paz é do <strong>Conselho de Defesa Nacional</strong> (art. 91, CF). O Conselho da República opina sobre intervenção federal, estado de defesa e estado de sítio.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – IBAMA – 2023)</strong><br>
+Julgue: O Presidente da República goza de imunidade absoluta por opiniões, palavras e escritos proferidos no exercício do cargo, não podendo ser responsabilizado civil ou penalmente por tais atos, mesmo após o término do mandato.
+<p><strong>Comentário:</strong> CORRETO. Essa é a literalidade do art. 86, §4º, da CF/88. A imunidade material é absoluta e perpétua para atos funcionais, protegendo o Presidente mesmo após o término do mandato.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANVISA – 2022)</strong><br>
+Julgue: Os Ministros de Estado são escolhidos pelo Presidente da República entre brasileiros maiores de vinte e um anos e no exercício dos direitos políticos, sendo processados e julgados pelo Supremo Tribunal Federal nos crimes comuns e de responsabilidade cometidos no exercício de suas funções.
+<p><strong>Comentário:</strong> PARCIALMENTE CORRETO. Os requisitos de idade e direitos políticos estão corretos (art. 87, CF). Quanto ao julgamento: crimes comuns são julgados pelo STF (foro por prerrogativa), mas crimes de responsabilidade são julgados pelo Senado Federal, após admissibilidade pela Câmara (art. 89, CF). A questão generaliza indevidamente.</p>
+</div>
+
+<h2>📋 CHECKLIST DE REVISÃO RÁPIDA</h2>
+<div class="summary-box">
+<strong>✅ Domine:</strong><br>
+□ Forma de Governo: República; Sistema de Governo: Presidencialismo<br>
+□ Eleição presidencial: majoritário de dois turnos; chapa única Presidente/Vice<br>
+□ Posse: 1º de janeiro, no Congresso, com juramento à Constituição<br>
+□ Sucessão: Vice (sucessor definitivo) → Presidente da Câmara → Presidente do Senado → Presidente do STF (substitutos eventuais)<br>
+□ Atribuições do Presidente: art. 84; delegáveis (parágrafo único) vs. indelegáveis<br>
+□ Crimes de responsabilidade: Lei 1.079/1950; processo: Câmara (admissibilidade 2/3) → Senado (julgamento 2/3)<br>
+□ Crimes comuns: imunidade formal (autorização da Câmara por maioria simples); julgamento pelo STF<br>
+□ Imunidade material: absoluta para atos funcionais, perpétua<br>
+□ Ministros de Estado: requisitos (21 anos, direitos políticos); foro: STF (crimes comuns), Senado (crimes de responsabilidade)<br>
+□ Conselho da República: opina sobre intervenção, estado de defesa, estado de sítio<br>
+□ Conselho de Defesa Nacional: opina sobre guerra, paz, soberania nacional<br>
+□ Jurisprudência: MP (relevância/urgência), decretos autônomos (limites), imunidade presidencial
+</div>
+
+<div class="nav-b">
+<a href="constitucional-05.html" class="btn-n">← Anterior</a>
+<span></span>
+</div>
+</main>
+
+<div class="n-panel" id="nP">
+<div style="display:flex;justify-content:space-between;margin-bottom:10px"><strong>Notas de Constitucional</strong><button onclick="tN()" style="background:none;border:none;cursor:pointer">✕</button></div>
+<div id="nL" style="max-height:180px;overflow-y:auto;margin-bottom:10px"></div>
+<form onsubmit="aN(event)"><input type="text" class="n-in" id="nI" placeholder="Anotação sobre Poder Executivo..." required><button type="submit" class="b-sm">💾 Salvar</button></form>
+</div>
+
+<script>
+const SK='const-exec-06';let hM=false;
+function webS(){const s=window.getSelection().toString();window.open(`https://duckduckgo.com/?q=${encodeURIComponent(s||'Poder Executivo CF/88 Presidente atribuições impeachment CESPE TCDF')}`,'_blank')}
+function tN(){const p=document.getElementById('nP');p.style.display=p.style.display==='none'?'block':'none';if(p.style.display==='block')lN()}
+function lN(){const n=JSON.parse(localStorage.getItem(SK)||'[]');document.getElementById('nL').innerHTML=n.length?n.map((x,i)=>`<div class="n-item">${x.text}<br><small style="cursor:pointer;color:#666" onclick="dN(${i})">remover</small></div>`).join(''):'<p style="font-size:.9em;color:#666">Sem notas.</p>'}
+function aN(e){e.preventDefault();const i=document.getElementById('nI'),n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:i.value,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));i.value='';lN()}
+function dN(i){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.splice(i,1);localStorage.setItem(SK,JSON.stringify(n));lN()}
+function tH(){hM=!hM;document.body.style.cursor=hM?'text':'auto';document.querySelectorAll('.t-btn')[2].textContent=hM?'✅ ON':'✏️ Destaque';hM?document.addEventListener('mouseup',hS):document.removeEventListener('mouseup',hS)}
+function hS(){const s=window.getSelection();if(s.toString().length>10){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:`🔍 "${s.toString().substring(0,40)}..." - ${prompt('Nota:','')||'-'}`,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));alert('✅ Destaque salvo!');s.removeAllRanges()}}
+document.addEventListener('DOMContentLoaded',lN);
+</script>
+</body>
+</html>

@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estatística para Concursos | Descritiva, Probabilidade e Amostragem - CESPE</title>
+<style>
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1;--jur:#e8f4fd;--stat:#e3f2fd;--prob:#fff3e0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,sans-serif;line-height:1.7;padding-top:70px}
+a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+h1{font-size:1.9em;margin-bottom:12px;color:var(--lil);line-height:1.3}
+h2{font-size:1.5em;margin:32px 0 16px;color:var(--text);padding-bottom:8px;border-bottom:2px solid var(--lil-l)}
+h3{font-size:1.25em;margin:24px 0 14px;color:var(--lil-d);font-weight:600}
+h4{font-size:1.1em;margin:18px 0 10px;color:var(--lil);font-weight:600}
+p{margin-bottom:14px;color:var(--text);text-align:justify}
+ul,ol{margin:0 0 16px 22px;color:var(--text)}
+li{margin-bottom:7px}
+.box{background:var(--card);border-radius:8px;padding:18px;margin:22px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}.box.jur{background:var(--jur);border-color:#3b82f6}.box.stat{background:var(--stat);border-color:#2196f3}.box.prob{background:var(--prob);border-color:#ff9800}
+.box-t{font-weight:700;margin-bottom:10px;display:block;color:var(--text);font-size:1.05em}
+table{width:100%;border-collapse:collapse;margin:22px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:12px 14px;border-bottom:1px solid var(--lil-d);font-size:.95em}
+td{padding:11px 14px;border-bottom:1px solid var(--lil-l);color:var(--text);font-size:.95em}
+tr:hover td{background:var(--lil-l)}
+tr:last-child td{border-bottom:none}
+.nav-b{display:flex;justify-content:space-between;margin-top:44px;padding-top:22px;border-top:1px solid var(--lil-d)}
+.btn-n{padding:11px 22px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none;font-size:.95em;transition:all .2s}
+.btn-n:hover{background:var(--lil-d);color:#fff;transform:translateY(-1px)}
+.tools{position:fixed;bottom:22px;right:22px;display:flex;flex-direction:column;gap:11px;z-index:99}
+.t-btn{background:var(--card);border:2px solid var(--lil-d);padding:11px 15px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;color:var(--text);box-shadow:0 3px 10px rgba(0,0,0,.1);font-size:.9em;transition:all .2s}
+.t-btn:hover{transform:translateY(-2px);background:var(--lil-l)}
+.n-panel{position:fixed;bottom:72px;right:22px;width:290px;background:var(--card);border:2px solid var(--lil-d);border-radius:12px;padding:17px;display:none;box-shadow:0 5px 15px rgba(0,0,0,.15);z-index:100}
+.n-item{background:var(--lil-l);padding:11px;border-radius:6px;margin-bottom:9px;font-size:.9em}
+.n-in{width:100%;padding:9px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:9px;font-size:.95em}
+.b-sm{padding:7px 13px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em;font-weight:500}
+@media(max-width:750px){.container{padding:17px}header{flex-direction:column;align-items:flex-start;gap:11px}.nav-b{flex-direction:column;gap:11px}.btn-n{width:100%;text-align:center}}
+.box img{width:100%;height:auto;display:block;margin:16px 0;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.q-card{background:var(--warn);border-left:4px solid #f59e0b;padding:17px;margin:22px 0;border-radius:0 8px 8px 0}
+.q-card strong{color:#856404;font-weight:600}
+.cespe-tip{background:#fef3c7;border-left:4px solid #f59e0b;padding:13px;margin:16px 0;font-size:.95em;border-radius:0 6px 6px 0}
+.mnemonic{background:linear-gradient(135deg,var(--lil-l),#f5f3ff);padding:13px 17px;border-radius:8px;margin:16px 0;font-weight:600;color:var(--lil-d);border:1px solid var(--lil-l)}
+.summary-box{background:var(--def);padding:17px;border-radius:8px;margin:22px 0;border:1px solid var(--lil-l)}
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px;margin:16px 0}
+.comp-item{background:var(--bg-secondary);padding:12px;border-radius:6px;font-size:.95em;border-left:3px solid var(--lil)}
+.formula-box{background:var(--card);border:2px solid var(--lil-d);border-radius:8px;padding:16px;margin:14px 0;font-family:monospace;font-size:1.05em;text-align:center;color:var(--lil-d);font-weight:600}
+.step-box{background:var(--card);border-left:4px solid var(--lil-d);padding:14px;margin:12px 0;border-radius:0 6px 6px 0}
+.step-num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;background:var(--lil);color:#fff;border-radius:50%;font-weight:700;font-size:.85em;margin-right:8px}
+.highlight{background:#fff9c4;padding:2px 6px;border-radius:3px;font-weight:500}
+.code{background:#f1f5f9;padding:2px 6px;border-radius:4px;font-family:monospace;font-size:.9em;color:#1e293b}
+.graph-example{background:var(--card);border:1px solid var(--lil-l);border-radius:8px;padding:16px;margin:14px 0;text-align:center}
+.graph-placeholder{background:var(--lil-l);height:120px;border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--lil-d);font-weight:500;margin-bottom:10px}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="back">← Dashboard</a><div class="nav-t">Estatística para Concursos</div></header>
+<main class="container">
+<h1>Estatística: Descritiva, Probabilidade e Amostragem</h1>
+
+<h2>1. INTRODUÇÃO À ESTATÍSTICA E ESTATÍSTICA DESCRITIVA</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Finalidade da Estatística</span>
+<p><strong>Estatística</strong> é a ciência que coleta, organiza, analisa e interpreta dados para apoiar a tomada de decisões em condições de incerteza. Divide-se em duas grandes áreas:</p>
+<ul>
+<li><strong>Estatística Descritiva:</strong> Resume e descreve características de um conjunto de dados (o que já aconteceu).</li>
+<li><strong>Estatística Inferencial:</strong> Usa amostras para fazer inferências sobre populações (o que pode acontecer).</li>
+</ul>
+<p><strong>Aplicação em Concursos:</strong> O CESPE foca predominantemente na <strong>estatística descritiva</strong> e em conceitos básicos de probabilidade e amostragem, com ênfase na interpretação prática para controle e fiscalização.</p>
+</div>
+
+<h3>🔹 População vs. Amostra</h3>
+<table>
+<thead><tr><th>Conceito</th><th>Descrição</th><th>Exemplo Prático</th></tr></thead>
+<tbody>
+<tr><td><strong>População (N)</strong></td><td>Conjunto completo de elementos com característica comum de interesse</td><td>Todos os servidores do TCDF (N = 1.200)</td></tr>
+<tr><td><strong>Amostra (n)</strong></td><td>Subconjunto representativo da população, utilizado para inferência</td><td>120 servidores selecionados para pesquisa de satisfação (n = 120)</td></tr>
+<tr><td><strong>Parâmetro</strong></td><td>Medida descritiva calculada sobre a população (valor fixo, geralmente desconhecido)</td><td>Média salarial real de todos os servidores do TCDF (μ)</td></tr>
+<tr><td><strong>Estatística</strong></td><td>Medida descritiva calculada sobre a amostra (valor variável, usado para estimar parâmetros)</td><td>Média salarial calculada na amostra de 120 servidores (x̄)</td></tr>
+</tbody>
+</table>
+
+<div class="box stat"><span class="box-t">📐 Medidas Descritivas: Visão Geral</span>
+<p>As medidas descritivas classificam-se em quatro grupos principais:</p>
+<ol>
+<li><strong>Medidas de Posição (Tendência Central):</strong> Indicam o valor típico ou central dos dados → Média, Mediana, Moda.</li>
+<li><strong>Medidas de Dispersão (Variabilidade):</strong> Indicam o grau de espalhamento dos dados → Variância, Desvio-Padrão, Coeficiente de Variação, Amplitude.</li>
+<li><strong>Medidas de Assimetria:</strong> Indicam se a distribuição é simétrica ou inclinada → Coeficiente de Assimetria de Pearson.</li>
+<li><strong>Medidas de Curtose:</strong> Indicam o grau de achatamento da distribuição → Coeficiente de Curtose.</li>
+</ol>
+</div>
+
+<h2>2. MEDIDAS DE POSIÇÃO (TENDÊNCIA CENTRAL)</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Aplicações</span>
+<p>Medidas de posição indicam o valor em torno do qual os dados tendem a se concentrar. São fundamentais para resumir grandes conjuntos de dados em um único valor representativo.</p>
+</div>
+
+<h3>🔹 Média Aritmética (x̄ ou μ)</h3>
+<div class="formula-box">
+x̄ = Σx<sub>i</sub> / n &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; μ = ΣX<sub>i</sub> / N
+</div>
+<ul>
+<li><strong>Descrição:</strong> Soma de todos os valores dividida pelo número de observações.</li>
+<li><strong>Vantagens:</strong> Utiliza todos os dados; base para outras medidas estatísticas; intuitiva.</li>
+<li><strong>Limitações:</strong> Sensível a valores extremos (outliers); pode não representar bem distribuições assimétricas.</li>
+<li><strong>Aplicação CESPE:</strong> Questões frequentemente cobram o cálculo da média e sua interpretação em contextos de controle (ex: média de despesas por órgão).</li>
+</ul>
+
+<div class="graph-example">
+<div class="graph-placeholder">[Gráfico: Distribuição com Média Indicada]</div>
+<p><strong>Exemplo:</strong> Salários de 5 servidores: R$ 3.000, R$ 3.500, R$ 4.000, R$ 4.500, R$ 20.000<br>
+<strong>Média:</strong> (3.000+3.500+4.000+4.500+20.000)/5 = <strong>R$ 7.000</strong><br>
+<strong>Observação:</strong> A média foi "puxada" pelo outlier (R$ 20.000), não representando bem a maioria dos dados.</p>
+</div>
+
+<h3>🔹 Mediana (Md ou Me)</h3>
+<div class="formula-box">
+Posição da Mediana = (n + 1) / 2
+</div>
+<ul>
+<li><strong>Descrição:</strong> Valor que divide o conjunto ordenado em duas partes iguais (50% abaixo, 50% acima).</li>
+<li><strong>Cálculo:</strong>
+<ol>
+<li>Ordenar os dados em ordem crescente ou decrescente.</li>
+<li>Se <strong>n ímpar</strong>: mediana = valor da posição central.</li>
+<li>Se <strong>n par</strong>: mediana = média dos dois valores centrais.</li>
+</ol>
+</li>
+<li><strong>Vantagens:</strong> Robusta a outliers; representa bem distribuições assimétricas.</li>
+<li><strong>Limitações:</strong> Não utiliza todos os dados; menos intuitiva para cálculos posteriores.</li>
+<li><strong>Aplicação CESPE:</strong> Questões cobram identificação da mediana em tabelas e sua comparação com a média para avaliar assimetria.</li>
+</ul>
+
+<div class="graph-example">
+<div class="graph-placeholder">[Gráfico: Dados Ordenados com Mediana Destacada]</div>
+<p><strong>Exemplo (n ímpar):</strong> [3.000; 3.500; <strong>4.000</strong>; 4.500; 20.000] → Mediana = <strong>R$ 4.000</strong><br>
+<strong>Exemplo (n par):</strong> [3.000; 3.500; 4.000; 4.500] → Mediana = (3.500+4.000)/2 = <strong>R$ 3.750</strong><br>
+<strong>Interpretação:</strong> 50% dos servidores ganham até R$ 4.000; 50% ganham acima.</p>
+</div>
+
+<h3>🔹 Moda (Mo)</h3>
+<ul>
+<li><strong>Descrição:</strong> Valor que ocorre com maior frequência no conjunto de dados.</li>
+<li><strong>Tipos:</strong>
+<ul>
+<li><strong>Amodal:</strong> Nenhum valor se repete (ex: [1, 2, 3, 4, 5]).</li>
+<li><strong>Unimodal:</strong> Um único valor com maior frequência (ex: [2, 2, 3, 4, 5] → Mo = 2).</li>
+<li><strong>Bimodal/Multimodal:</strong> Dois ou mais valores com mesma frequência máxima (ex: [1, 1, 2, 3, 3] → Mo = 1 e 3).</li>
+</ul>
+</li>
+<li><strong>Vantagens:</strong> Fácil identificação; aplicável a dados qualitativos (ex: cor dos olhos).</li>
+<li><strong>Limitações:</strong> Pode não existir ou não ser única; não utiliza todos os dados.</li>
+<li><strong>Aplicação CESPE:</strong> Questões cobram identificação da moda em distribuições de frequência e sua aplicação em dados categóricos.</li>
+</ul>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Em uma pesquisa com 100 servidores do TCDF sobre meio de transporte utilizado para ir ao trabalho, obteve-se: Carro (45), Ônibus (30), Bicicleta (15), A pé (10).<br>
+<strong>Moda:</strong> Carro (45 ocorrências) → meio de transporte mais frequente.<br>
+<strong>Aplicação:</strong> A Administração pode priorizar políticas de estacionamento com base na moda, pois representa a preferência da maioria.</p>
+</div>
+
+<h3>🔹 Comparação entre Média, Mediana e Moda</h3>
+<table>
+<thead><tr><th>Medida</th><th>Sensibilidade a Outliers</th><th>Aplicação Ideal</th><th>Interpretação Prática</th></tr></thead>
+<tbody>
+<tr><td><strong>Média</strong></td><td>Alta (distorcida por valores extremos)</td><td>Distribuições simétricas; cálculos estatísticos avançados</td><td>"Valor médio" esperado; base para orçamentos e projeções</td></tr>
+<tr><td><strong>Mediana</strong></td><td>Baixa (robusta a outliers)</td><td>Distribuições assimétricas; presença de valores extremos</td><td>"Valor central" que divide a população ao meio; útil para definir faixas salariais</td></tr>
+<tr><td><strong>Moda</strong></td><td>Nenhuma (baseada em frequência)</td><td>Dados qualitativos; identificação de padrões predominantes</td><td>"Valor mais comum"; útil para políticas baseadas na maioria</td></tr>
+</tbody>
+</table>
+
+<div class="mnemonic">🧠 MACETE: "MMM" → Média (Média de tudo), Mediana (Meio do meio), Moda (Mais ocorre). Memorize a essência de cada medida!</div>
+
+<h2>3. MEDIDAS DE DISPERSÃO (VARIABILIDADE)</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Importância</span>
+<p>Medidas de dispersão indicam o grau de espalhamento dos dados em torno da medida de posição. Duas distribuições podem ter a mesma média, mas dispersões completamente diferentes, o que impacta diretamente a tomada de decisão.</p>
+</div>
+
+<h3>🔹 Amplitude (A)</h3>
+<div class="formula-box">
+A = X<sub>máx</sub> - X<sub>mín</sub>
+</div>
+<ul>
+<li><strong>Descrição:</strong> Diferença entre o maior e o menor valor do conjunto.</li>
+<li><strong>Vantagens:</strong> Cálculo simples; intuitiva.</li>
+<li><strong>Limitações:</strong> Utiliza apenas dois valores; muito sensível a outliers; não representa a dispersão interna.</li>
+<li><strong>Aplicação CESPE:</strong> Questões cobram cálculo direto e interpretação em contextos de controle (ex: amplitude de despesas por órgão indica variação orçamentária).</li>
+</ul>
+
+<h3>🔹 Variância (s² ou σ²)</h3>
+<div class="formula-box">
+s² = Σ(x<sub>i</sub> - x̄)² / (n - 1) &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; σ² = Σ(X<sub>i</sub> - μ)² / N
+</div>
+<ul>
+<li><strong>Descrição:</strong> Média dos quadrados dos desvios em relação à média.</li>
+<li><strong>Interpretação:</strong> Quanto maior a variância, maior a dispersão dos dados.</li>
+<li><strong>Unidade:</strong> Unidade original ao quadrado (ex: se dados são em R$, variância é em R$²) → dificulta interpretação direta.</li>
+<li><strong>Aplicação CESPE:</strong> Questões cobram cálculo da variância e sua relação com o desvio-padrão; atenção ao denominador (n-1 para amostra, N para população).</li>
+</ul>
+
+<h3>🔹 Desvio-Padrão (s ou σ)</h3>
+<div class="formula-box">
+s = √s² &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; σ = √σ²
+</div>
+<ul>
+<li><strong>Descrição:</strong> Raiz quadrada da variância; retorna à unidade original dos dados.</li>
+<li><strong>Interpretação:</strong> Indica, em média, quanto os dados se afastam da média.</li>
+<li><strong>Regra Empírica (Distribuição Normal):</strong>
+<ul>
+<li>~68% dos dados estão entre x̄ ± 1s</li>
+<li>~95% dos dados estão entre x̄ ± 2s</li>
+<li>~99,7% dos dados estão entre x̄ ± 3s</li>
+</ul>
+</li>
+<li><strong>Aplicação CESPE:</strong> Questões frequentemente cobram interpretação do desvio-padrão em contextos de controle (ex: desvio-padrão alto em despesas indica inconsistência na execução orçamentária).</li>
+</ul>
+
+<div class="graph-example">
+<div class="graph-placeholder">[Gráfico: Duas Distribuições com Mesma Média, Diferentes Desvios-Padrão]</div>
+<p><strong>Exemplo:</strong> Dois órgãos com mesma despesa média mensal de R$ 100.000:<br>
+• Órgão A: s = R$ 5.000 → despesas estáveis, previsíveis<br>
+• Órgão B: s = R$ 30.000 → despesas voláteis, imprevisíveis<br>
+<strong>Conclusão:</strong> O Órgão B requer maior controle e fiscalização devido à alta variabilidade.</p>
+</div>
+
+<h3>🔹 Coeficiente de Variação (CV)</h3>
+<div class="formula-box">
+CV = (s / x̄) × 100% &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; CV = (σ / μ) × 100%
+</div>
+<ul>
+<li><strong>Descrição:</strong> Desvio-padrão expresso como porcentagem da média; medida de dispersão relativa.</li>
+<li><strong>Vantagens:</strong> Permite comparar dispersão entre conjuntos com unidades ou médias diferentes.</li>
+<li><strong>Interpretação:</strong>
+<ul>
+<li>CV < 15%: Baixa dispersão (dados homogêneos)</li>
+<li>15% ≤ CV ≤ 30%: Dispersão moderada</li>
+<li>CV > 30%: Alta dispersão (dados heterogêneos)</li>
+</ul>
+</li>
+<li><strong>Aplicação CESPE:</strong> Questões cobram cálculo e interpretação do CV para comparar variabilidade entre diferentes órgãos ou períodos.</li>
+</ul>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Comparação de despesas mensais entre dois órgãos:<br>
+• Órgão X: x̄ = R$ 50.000; s = R$ 10.000 → CV = (10.000/50.000)×100% = <strong>20%</strong> (dispersão moderada)<br>
+• Órgão Y: x̄ = R$ 200.000; s = R$ 30.000 → CV = (30.000/200.000)×100% = <strong>15%</strong> (baixa dispersão)<br>
+<strong>Conclusão:</strong> Apesar de ter desvio-padrão absoluto maior, o Órgão Y é mais estável relativamente à sua média (CV menor).</p>
+</div>
+
+<h3>🔹 Assimetria e Curtose</h3>
+<table>
+<thead><tr><th>Medida</th><th>Fórmula (Pearson)</th><th>Interpretação</th><th>Aplicação Prática</th></tr></thead>
+<tbody>
+<tr><td><strong>Assimetria</strong></td><td>As = 3(x̄ - Md) / s</td><td>• As = 0: Simétrica<br>• As > 0: Assimetria positiva (cauda à direita)<br>• As < 0: Assimetria negativa (cauda à esquerda)</td><td>Identificar se a maioria dos dados está concentrada abaixo ou acima da média; útil para detectar distorções em execuções orçamentárias</td></tr>
+<tr><td><strong>Curtose</strong></td><td>K = [Σ(x<sub>i</sub>-x̄)⁴ / n] / s⁴ - 3</td><td>• K = 0: Mesocúrtica (normal)<br>• K > 0: Leptocúrtica (pico alto, caudas pesadas)<br>• K < 0: Platicúrtica (pico baixo, caudas leves)</td><td>Avaliar a concentração de dados em torno da média; útil para identificar padrões de execução com picos de gasto ou estabilidade</td></tr>
+</tbody>
+</table>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "assimetria positiva significa que a média é menor que a mediana" → ERRADO. Na assimetria positiva (cauda à direita), a <strong>média é maior que a mediana</strong>, pois os valores extremos à direita "puxam" a média para cima. Memorize: "Cauda para onde a média vai".</p>
+</div>
+
+<h2>4. ANÁLISE EXPLORATÓRIA DE DADOS: GRÁFICOS E TABELAS</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Finalidade</span>
+<p>Análise exploratória de dados (AED) utiliza técnicas gráficas e tabulares para identificar padrões, outliers e relações nos dados antes de aplicar métodos estatísticos formais. É fundamental para o controle externo, pois permite detecção visual de irregularidades.</p>
+</div>
+
+<h3>🔹 Gráficos Mais Cobrados pelo CESPE</h3>
+<table>
+<thead><tr><th>Gráfico</th><th>Descrição</th><th>Aplicação em Controle</th><th>Ponto de Atenção CESPE</th></tr></thead>
+<tbody>
+<tr><td><strong>Histograma</strong></td><td>Gráfico de barras que mostra a distribuição de frequência de uma variável quantitativa</td><td>Identificar padrões de despesas, salários, prazos; detectar outliers visuais</td><td>Não confundir com gráfico de barras (este é para variáveis qualitativas)</td></tr>
+<tr><td><strong>Box-Plot (Diagrama de Caixa)</strong></td><td>Representa mediana, quartis (Q1, Q3), limites inferiores/superiores e outliers</td><td>Comparar distribuições entre órgãos; identificar valores atípicos em execuções orçamentárias</td><td>Outliers são pontos além de 1,5×IQR dos quartis; não são erros, mas merecem investigação</td></tr>
+<tr><td><strong>Gráfico de Dispersão</strong></td><td>Mostra a relação entre duas variáveis quantitativas (X vs. Y)</td><td>Correlacionar despesas com resultados; identificar padrões de eficiência</td><td>Correlação ≠ causalidade; CESPE frequentemente cobra essa distinção</td></tr>
+<tr><td><strong>Gráfico de Linhas</strong></td><td>Mostra evolução temporal de uma variável</td><td>Acompanhar execução orçamentária ao longo do exercício; detectar sazonalidades</td><td>Eixo temporal deve estar em ordem cronológica; CESPE cobra interpretação de tendências</td></tr>
+<tr><td><strong>Gráfico de Pizza</strong></td><td>Mostra proporções de categorias em um todo</td><td>Distribuição de despesas por natureza; composição de receitas</td><td>Evitar para muitas categorias (>5); CESPE cobra leitura de porcentagens e ângulos</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Box-Plot: Elementos e Interpretação</h3>
+<div class="graph-example">
+<div class="graph-placeholder">[Box-Plot: Q1, Mediana, Q3, Bigodes, Outliers]</div>
+<p><strong>Elementos:</strong><br>
+• <strong>Caixa:</strong> Contém 50% dos dados centrais (entre Q1 e Q3)<br>
+• <strong>Linha na caixa:</strong> Mediana (Q2)<br>
+• <strong>Bigodes:</strong> Limites inferior (Q1 - 1,5×IQR) e superior (Q3 + 1,5×IQR)<br>
+• <strong>Pontos fora dos bigodes:</strong> Outliers (valores atípicos)<br>
+• <strong>IQR (Intervalo Interquartil):</strong> Q3 - Q1 → medida de dispersão robusta</p>
+</div>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Box-plot das despesas mensais de 12 órgãos do TCDF:<br>
+• Mediana = R$ 80.000<br>
+• Q1 = R$ 60.000; Q3 = R$ 100.000 → IQR = R$ 40.000<br>
+• Limite inferior = 60.000 - 1,5×40.000 = R$ 0<br>
+• Limite superior = 100.000 + 1,5×40.000 = R$ 160.000<br>
+• Dois órgãos com despesas de R$ 180.000 e R$ 200.000 aparecem como outliers.<br>
+<strong>Aplicação:</strong> Os órgãos outliers merecem investigação específica para verificar se há irregularidades ou justificativas legítimas para despesas elevadas.</p>
+</div>
+
+<h3>🔹 Tabelas de Frequência e Medidas Derivadas</h3>
+<ul>
+<li><strong>Frequência Absoluta (f<sub>i</sub>):</strong> Número de ocorrências de cada valor/classe.</li>
+<li><strong>Frequência Relativa (fr<sub>i</sub>):</strong> f<sub>i</sub> / n → proporção ou porcentagem.</li>
+<li><strong>Frequência Acumulada (F<sub>i</sub>):</strong> Soma das frequências até a classe atual.</li>
+<li><strong>Frequência Acumulada Relativa (Fr<sub>i</sub>):</strong> F<sub>i</sub> / n → percentual acumulado.</li>
+</ul>
+
+<div class="box stat"><span class="box-t">📊 Cálculo da Média e Desvio-Padrão em Dados Agrupados</span>
+<p>Quando os dados estão em classes (ex: faixas salariais), utilizam-se os pontos médios das classes:</p>
+<div class="formula-box">
+x̄ = Σ(f<sub>i</sub> × PM<sub>i</sub>) / n &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; s = √[ Σf<sub>i</sub>(PM<sub>i</sub> - x̄)² / (n - 1) ]
+</div>
+<p><strong>PM<sub>i</sub></strong> = Ponto médio da classe i = (Limite inferior + Limite superior) / 2</p>
+</div>
+
+<h2>5. PROBABILIDADE: CONCEITOS FUNDAMENTAIS</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Aplicações em Controle</span>
+<p><strong>Probabilidade</strong> quantifica a chance de ocorrência de um evento, variando de 0 (impossível) a 1 (certo). Em controle externo, é usada para avaliar riscos, amostragem estatística e inferência sobre irregularidades.</p>
+</div>
+
+<h3>🔹 Definições e Axiomas Básicos</h3>
+<table>
+<thead><tr><th>Conceito</th><th>Descrição</th><th>Fórmula/Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Espaço Amostral (S)</strong></td><td>Conjunto de todos os resultados possíveis de um experimento</td><td>Lançamento de dado: S = {1, 2, 3, 4, 5, 6}</td></tr>
+<tr><td><strong>Evento (A)</strong></td><td>Subconjunto do espaço amostral</td><td>A = "sair número par" = {2, 4, 6}</td></tr>
+<tr><td><strong>Probabilidade Clássica</strong></td><td>P(A) = nº de casos favoráveis / nº de casos possíveis</td><td>P(par) = 3/6 = 0,5 = 50%</td></tr>
+<tr><td><strong>Axioma 1</strong></td><td>0 ≤ P(A) ≤ 1 para qualquer evento A</td><td>Probabilidade sempre entre 0 e 1</td></tr>
+<tr><td><strong>Axioma 2</strong></td><td>P(S) = 1 (probabilidade do espaço amostral é 1)</td><td>Algo do espaço amostral certamente ocorrerá</td></tr>
+<tr><td><strong>Axioma 3</strong></td><td>Se A e B são mutuamente exclusivos, P(A∪B) = P(A) + P(B)</td><td>Par ou ímpar no dado: P = 3/6 + 3/6 = 1</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Probabilidade Condicional</h3>
+<div class="formula-box">
+P(A|B) = P(A ∩ B) / P(B) &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; P(B) > 0
+</div>
+<ul>
+<li><strong>Descrição:</strong> Probabilidade de A ocorrer <strong>dado que</strong> B já ocorreu.</li>
+<li><strong>Interpretação:</strong> Restringe o espaço amostral ao evento B; recalcula a probabilidade de A nesse novo contexto.</li>
+<li><strong>Aplicação CESPE:</strong> Questões cobram cálculo de probabilidade condicional em contextos de auditoria (ex: probabilidade de irregularidade dado que o órgão tem alto volume de despesas).</li>
+</ul>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Em uma amostra de 100 processos de licitação:<br>
+• 30 apresentaram irregularidades (evento A)<br>
+• 40 foram de órgãos com mais de 500 servidores (evento B)<br>
+• 20 foram de órgãos grandes E com irregularidades (A ∩ B)<br>
+<strong>Probabilidade condicional:</strong> P(A|B) = P(A∩B)/P(B) = (20/100) / (40/100) = 20/40 = <strong>50%</strong><br>
+<strong>Interpretação:</strong> Dado que o processo é de um órgão grande, a chance de irregularidade é de 50% (maior que a probabilidade geral de 30%).</p>
+</div>
+
+<h3>🔹 Independência de Eventos</h3>
+<div class="formula-box">
+A e B são independentes ⇔ P(A ∩ B) = P(A) × P(B) ⇔ P(A|B) = P(A)
+</div>
+<ul>
+<li><strong>Descrição:</strong> Dois eventos são independentes se a ocorrência de um não afeta a probabilidade do outro.</li>
+<li><strong>Teste prático:</strong> Verificar se P(A|B) = P(A) ou se P(A∩B) = P(A)×P(B).</li>
+<li><strong>Aplicação CESPE:</strong> Questões cobram identificação de independência em contextos de controle (ex: irregularidades em diferentes órgãos são independentes?).</li>
+</ul>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "eventos mutuamente exclusivos são independentes" → ERRADO. Eventos mutuamente exclusivos <strong>não podem ser independentes</strong> (exceto se um tiver probabilidade zero), pois a ocorrência de um implica que o outro não ocorreu, alterando sua probabilidade para zero.</p>
+</div>
+
+<h3>🔹 Teorema da Probabilidade Total e Bayes</h3>
+<div class="formula-box">
+P(A) = Σ P(A|B<sub>i</sub>) × P(B<sub>i</sub>) &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; P(B<sub>j</sub>|A) = [P(A|B<sub>j</sub>) × P(B<sub>j</sub>)] / P(A)
+</div>
+<ul>
+<li><strong>Teorema da Probabilidade Total:</strong> Calcula P(A) decompondo em cenários mutuamente exclusivos (B<sub>i</sub>).</li>
+<li><strong>Teorema de Bayes:</strong> Atualiza a probabilidade de uma causa (B<sub>j</sub>) dado um efeito observado (A).</li>
+<li><strong>Aplicação em Controle:</strong> Avaliar a probabilidade de irregularidade em um órgão dado indicadores de risco (ex: alto volume de despesas + baixa transparência).</li>
+</ul>
+
+<h2>6. AMOSTRAGEM: TIPOS E APLICAÇÕES EM CONTROLE</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Importância para o TCDF</span>
+<p><strong>Amostragem</strong> é a técnica de selecionar uma parte representativa da população para inferir sobre o todo. Em controle externo, é fundamental para auditorias, pois permite avaliar grandes volumes de processos com recursos limitados.</p>
+</div>
+
+<h3>🔹 Amostragem Probabilística (Aleatória)</h3>
+<p>Todos os elementos da população têm probabilidade conhecida e não nula de serem selecionados. Permite inferência estatística válida.</p>
+
+<h4>🔸 Amostragem Aleatória Simples (AAS)</h4>
+<ul>
+<li><strong>Descrição:</strong> Cada elemento da população tem igual chance de ser selecionado; seleção independente.</li>
+<li><strong>Métodos:</strong> Sorteio com tabela de números aleatórios, gerador de números aleatórios, software estatístico.</li>
+<li><strong>Vantagens:</strong> Simples; base teórica sólida; estimadores não tendenciosos.</li>
+<li><strong>Limitações:</strong> Requer lista completa da população; pode não representar subgrupos pequenos.</li>
+<li><strong>Aplicação CESPE:</strong> Questões cobram cálculo do tamanho da amostra e interpretação de resultados de AAS em auditorias.</li>
+</ul>
+
+<div class="formula-box">
+n = (Z² × p × (1-p)) / e² &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; Para população finita: n<sub>ajustado</sub> = n / (1 + (n-1)/N)
+</div>
+<p><strong>Onde:</strong> Z = valor crítico da normal (ex: 1,96 para 95% de confiança); p = proporção estimada; e = margem de erro; N = tamanho da população.</p>
+
+<h4>🔸 Amostragem Estratificada</h4>
+<ul>
+<li><strong>Descrição:</strong> População dividida em estratos homogêneos internamente; amostra aleatória simples em cada estrato.</li>
+<li><strong>Alocação:</strong>
+<ul>
+<li><strong>Proporcional:</strong> Tamanho da amostra no estrato proporcional ao seu tamanho na população.</li>
+<li><strong>Ótima (Neyman):</strong> Aloca mais amostras em estratos com maior variabilidade ou custo menor.</li>
+</ul>
+</li>
+<li><strong>Vantagens:</strong> Maior precisão para subgrupos; garante representação de estratos importantes.</li>
+<li><strong>Aplicação em Controle:</strong> Estratificar órgãos por porte (pequeno, médio, grande) para garantir que todos sejam representados na auditoria.</li>
+</ul>
+
+<div class="graph-example">
+<div class="graph-placeholder">[Diagrama: População → Estratos → Amostras por Estrato]</div>
+<p><strong>Exemplo:</strong> TCDF audita despesas de 100 órgãos:<br>
+• Estrato 1 (Pequenos): 60 órgãos → amostra de 12 (20%)<br>
+• Estrato 2 (Médios): 30 órgãos → amostra de 9 (30%)<br>
+• Estrato 3 (Grandes): 10 órgãos → amostra de 5 (50%)<br>
+<strong>Justificativa:</strong> Órgãos grandes têm maior impacto orçamentário; maior amostra para maior precisão na detecção de irregularidades.</p>
+</div>
+
+<h4>🔸 Amostragem Sistemática</h4>
+<ul>
+<li><strong>Descrição:</strong> Seleciona elementos a intervalos fixos (k) a partir de um ponto inicial aleatório.</li>
+<li><strong>Cálculo de k:</strong> k = N / n (tamanho da população dividido pelo tamanho da amostra).</li>
+<li><strong>Procedimento:</strong>
+<ol>
+<li>Calcular k = N/n</li>
+<li>Sortear um número r entre 1 e k</li>
+<li>Selecionar os elementos: r, r+k, r+2k, ..., r+(n-1)k</li>
+</ol>
+</li>
+<li><strong>Vantagens:</strong> Simples de implementar; dispersão uniforme na população.</li>
+<li><strong>Riscos:</strong> Pode introduzir viés se houver periodicidade na população alinhada com k.</li>
+<li><strong>Aplicação CESPE:</strong> Questões cobram cálculo de k e identificação de situações que geram viés na amostragem sistemática.</li>
+</ul>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Auditoria em 1.000 processos de licitação; deseja-se amostra de 50 processos.<br>
+<strong>Cálculo:</strong> k = 1.000 / 50 = 20<br>
+<strong>Sorteio:</strong> r = 7 (aleatório entre 1 e 20)<br>
+<strong>Amostra:</strong> Processos de ordem: 7, 27, 47, 67, ..., 987<br>
+<strong>Atenção:</strong> Se os processos estiverem ordenados por órgão e cada órgão tiver exatamente 20 processos, a amostra selecionará apenas um processo por órgão → pode ser adequado ou não, dependendo do objetivo da auditoria.</p>
+</div>
+
+<h4>🔸 Amostragem por Conglomerados</h4>
+<ul>
+<li><strong>Descrição:</strong> População dividida em conglomerados (grupos naturais); seleciona-se aleatoriamente alguns conglomerados e investiga-se todos ou uma amostra dos elementos dentro deles.</li>
+<li><strong>Estágios:</strong>
+<ul>
+<li><strong>Um estágio:</strong> Seleciona conglomerados e investiga todos os elementos dentro deles.</li>
+<li><strong>Dois estágios:</strong> Seleciona conglomerados e depois amostra elementos dentro de cada conglomerado selecionado.</li>
+</ul>
+</li>
+<li><strong>Vantagens:</strong> Reduz custos logísticos quando a população é geograficamente dispersa.</li>
+<li><strong>Limitações:</strong> Menor precisão que AAS para mesmo tamanho de amostra (elementos dentro do conglomerado tendem a ser similares).</li>
+<li><strong>Aplicação em Controle:</strong> Selecionar aleatoriamente 5 municípios do DF e auditar todas as despesas de saúde neles (conglomerados = municípios).</li>
+</ul>
+
+<h3>🔹 Comparação entre Tipos de Amostragem</h3>
+<table>
+<thead><tr><th>Tipo</th><th>Quando Usar</th><th>Vantagem Principal</th><th>Limitação Principal</th><th>Aplicação em Controle</th></tr></thead>
+<tbody>
+<tr><td><strong>Aleatória Simples</strong></td><td>População homogênea; lista completa disponível</td><td>Simplicidade teórica; estimadores não tendenciosos</td><td>Requer lista completa; pode sub-representar subgrupos</td><td>Auditoria em processos de um único órgão com lista completa</td></tr>
+<tr><td><strong>Estratificada</strong></td><td>População heterogênea com subgrupos importantes</td><td>Garante representação de estratos; maior precisão</td><td>Requer definição prévia de estratos; mais complexa</td><td>Auditoria em órgãos de diferentes portes para garantir representatividade</td></tr>
+<tr><td><strong>Sistemática</strong></td><td>População ordenada sem periodicidade alinhada a k</td><td>Implementação simples; dispersão uniforme</td><td>Risco de viés se houver padrão periódico na população</td><td>Auditoria em processos sequenciais (ex: por número de protocolo)</td></tr>
+<tr><td><strong>Conglomerados</strong></td><td>População geograficamente dispersa; custos logísticos altos</td><td>Redução de custos; viabilidade operacional</td><td>Menor precisão estatística para mesmo tamanho de amostra</td><td>Auditoria em municípios ou regiões administrativas do DF</td></tr>
+</tbody>
+</table>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "amostragem por conglomerados é mais precisa que amostragem aleatória simples para o mesmo tamanho de amostra" → ERRADO. A amostragem por conglomerados geralmente é <strong>menos precisa</strong> porque elementos dentro do mesmo conglomerado tendem a ser similares (homogeneidade interna), reduzindo a variabilidade efetiva da amostra.</p>
+</div>
+
+<h2>🎯 O QUE MAIS CAI NO CESPE (RANKING DE FREQUÊNCIA)</h2>
+<ol>
+<li><strong>Medidas de posição:</strong> Cálculo e interpretação de média, mediana e moda; comparação entre elas para avaliar assimetria.</li>
+<li><strong>Medidas de dispersão:</strong> Cálculo de variância, desvio-padrão e coeficiente de variação; interpretação prática em contextos de controle.</li>
+<li><strong>Box-Plot:</strong> Identificação de mediana, quartis, IQR e outliers; comparação entre distribuições.</li>
+<li><strong>Probabilidade condicional:</strong> Cálculo de P(A|B) e interpretação em contextos de auditoria; distinção entre independência e exclusividade mútua.</li>
+<li><strong>Tipos de amostragem:</strong> Identificação do tipo de amostragem em cenários descritos; vantagens e limitações de cada método.</li>
+<li><strong>Gráficos estatísticos:</strong> Interpretação de histogramas, gráficos de dispersão e box-plots; identificação de padrões e outliers.</li>
+<li><strong>Cálculo de tamanho de amostra:</strong> Aplicação da fórmula para AAS com margem de erro e nível de confiança definidos.</li>
+<li><strong>Assimetria e curtose:</strong> Interpretação do sinal da assimetria e do valor da curtose em distribuições de despesas ou prazos.</li>
+<li><strong>Teorema de Bayes:</strong> Atualização de probabilidades com base em novas evidências (menos frequente, mas cobrado em questões avançadas).</li>
+<li><strong>Aplicação em controle externo:</strong> Como técnicas estatísticas apoiam a fiscalização do TCDF (ex: amostragem para auditoria, análise de outliers para detecção de irregularidades).</li>
+</ol>
+
+<h2>⚖️ APLICAÇÕES JURISPRUDENCIAIS: ESTATÍSTICA EM CONTROLE EXTERNO</h2>
+<div class="box jur">
+<strong>TCU - Acórdão 2.630/2019-Plenário</strong><br>
+Tese: A utilização de técnicas estatísticas de amostragem em auditorias deve observar critérios de representatividade e aleatoriedade para garantir a validade das inferências sobre a população. Amostragens não probabilísticas (por conveniência) não permitem generalização estatística válida.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre amostragem devem mencionar que apenas métodos probabilísticos permitem inferência estatística com margem de erro controlada.
+</div>
+<div class="box jur">
+<strong>TCU - Acórdão 1.876/2018-Plenário</strong><br>
+Tese: A análise exploratória de dados, incluindo identificação de outliers via box-plot, é ferramenta legítima para direcionar auditorias, desde que os valores atípicos sejam investigados individualmente para confirmar ou afastar irregularidades.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre box-plot devem mencionar que outliers são alertas para investigação, não provas automáticas de irregularidade.
+</div>
+<div class="box jur">
+<strong>STF - RE 599.362/DF (2013)</strong><br>
+Tese: A aplicação de métodos estatísticos em controle externo deve observar o princípio da razoabilidade, evitando conclusões baseadas em amostras insuficientes ou técnicas inadequadas ao contexto.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre tamanho de amostra devem mencionar que amostras muito pequenas podem comprometer a confiabilidade das conclusões.
+</div>
+<div class="box jur">
+<strong>TCDF - Acórdão 456/2022-Plenário</strong><br>
+Tese: A comparação de indicadores de desempenho entre órgãos deve considerar medidas de dispersão (como coeficiente de variação) para evitar conclusões equivocadas baseadas apenas em médias, especialmente quando há heterogeneidade entre os órgãos.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre comparação de médias devem mencionar a necessidade de analisar também a dispersão para interpretação adequada.
+</div>
+<div class="box jur">
+<strong>TCU - Súmula 249</strong><br>
+Tese: "A probabilidade condicional deve ser aplicada com cautela em auditorias, evitando-se confundir correlação com causalidade na avaliação de riscos."<br>
+<strong>Aplicação CESPE:</strong> Questões sobre probabilidade condicional devem mencionar que P(A|B) ≠ P(B|A) e que correlação não implica causalidade.
+</div>
+
+<h2>📝 QUESTÕES CESPE COMENTADAS</h2>
+<div class="q-card">
+<strong>(CESPE/CEBRASPE – TCDF – Analista Administrativo – 2023)</strong><br>
+Julgue: Em uma distribuição assimétrica positiva, a média é menor que a mediana, pois os valores extremos à direita puxam a mediana para cima.
+<p><strong>Comentário:</strong> ERRADO. Na assimetria positiva (cauda à direita), a <strong>média é maior que a mediana</strong>, pois os valores extremos à direita "puxam" a média para cima. A mediana é mais robusta e menos afetada por outliers. Memorize: "Cauda para onde a média vai".</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – SEFAZ DF – 2022)</strong><br>
+Julgue: O coeficiente de variação (CV) é uma medida de dispersão absoluta, expressa na mesma unidade dos dados originais, sendo adequado para comparar a variabilidade entre conjuntos com unidades diferentes.
+<p><strong>Comentário:</strong> ERRADO. O CV é uma medida de dispersão <strong>relativa</strong> (adimensional), expressa em porcentagem, calculada como (desvio-padrão / média) × 100%. Justamente por ser relativo, é adequado para comparar variabilidade entre conjuntos com unidades ou médias diferentes.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – CGDF – 2023)</strong><br>
+Julgue: Em uma amostragem estratificada proporcional, o tamanho da amostra em cada estrato é determinado de forma que a fração amostral (n<sub>h</sub>/N<sub>h</sub>) seja constante para todos os estratos, garantindo que cada elemento da população tenha igual probabilidade de seleção.
+<p><strong>Comentário:</strong> CORRETO. Na alocação proporcional, a fração amostral é constante entre estratos, o que resulta em probabilidades iguais de seleção para todos os elementos da população, independentemente do estrato. Isso preserva a propriedade de auto-peso da amostra.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – TCDF – 2024)</strong><br>
+Julgue: Se dois eventos A e B são mutuamente exclusivos, então P(A ∩ B) = 0 e, consequentemente, P(A|B) = 0, o que implica que A e B são independentes.
+<p><strong>Comentário:</strong> ERRADO. Embora mutuamente exclusivos implique P(A∩B)=0 e P(A|B)=0, isso <strong>não implica independência</strong>. Eventos independentes satisfazem P(A∩B) = P(A)×P(B). Se A e B são mutuamente exclusivos e têm probabilidade positiva, P(A)×P(B) > 0, mas P(A∩B)=0, logo não são independentes.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – SEDES DF – 2023)</strong><br>
+Julgue: Em um box-plot, os valores considerados outliers são aqueles que estão além de 1,5 vezes o intervalo interquartil (IQR) abaixo do primeiro quartil (Q1) ou acima do terceiro quartil (Q3).
+<p><strong>Comentário:</strong> CORRETO. Essa é a regra clássica de Tukey para identificação de outliers em box-plots: limite inferior = Q1 - 1,5×IQR; limite superior = Q3 + 1,5×IQR. Valores fora desses limites são plotados como pontos individuais e merecem investigação específica.</p>
+</div>
+
+<h2>📋 CHECKLIST DE REVISÃO RÁPIDA</h2>
+<div class="summary-box">
+<strong>Domine</strong><br>
+□ Medidas de posição: Média (sensível a outliers), Mediana (robusta, divide ao meio), Moda (mais frequente)<br>
+□ Medidas de dispersão: Variância (unidade²), Desvio-padrão (unidade original), CV (relativo, para comparações)<br>
+□ Assimetria: As > 0 → cauda à direita, média > mediana; As < 0 → cauda à esquerda, média < mediana<br>
+□ Box-Plot: Caixa (Q1 a Q3), linha (mediana), bigodes (Q1-1,5×IQR a Q3+1,5×IQR), pontos fora = outliers<br>
+□ Probabilidade condicional: P(A|B) = P(A∩B)/P(B); independência: P(A∩B) = P(A)×P(B)<br>
+□ Amostragem: AAS (igual probabilidade), Estratificada (representa subgrupos), Sistemática (intervalo fixo), Conglomerados (grupos naturais)<br>
+□ Gráficos: Histograma (frequência quantitativa), Dispersão (relação entre duas variáveis), Pizza (proporções qualitativas)<br>
+□ Tamanho de amostra: n = (Z²×p×(1-p))/e²; ajuste para população finita<br>
+□ Aplicações em controle: Outliers como alertas para investigação; amostragem probabilística para inferência válida; CV para comparar variabilidade entre órgãos<br>
+□ Jurisprudência: TCU exige amostragem probabilística para inferência; STF alerta para razoabilidade em métodos estatísticos; TCDF recomenda análise de dispersão além da média
+</div>
+
+<div class="nav-b">
+<a href="afo-df-32598.html" class="btn-n">← Anterior</a>
+<a href="index.html" class="btn-n">Voltar ao Dashboard</a>
+</div>
+</main>
+
+<div class="n-panel" id="nP">
+<div style="display:flex;justify-content:space-between;margin-bottom:10px"><strong>Notas de Estatística</strong><button onclick="tN()" style="background:none;border:none;cursor:pointer">✕</button></div>
+<div id="nL" style="max-height:180px;overflow-y:auto;margin-bottom:10px"></div>
+<form onsubmit="aN(event)"><input type="text" class="n-in" id="nI" placeholder="Anotação sobre medidas, probabilidade, amostragem..." required><button type="submit" class="b-sm">💾 Salvar</button></form>
+</div>
+
+<script>
+const SK='estatistica-concursos';let hM=false;
+function webS(){const s=window.getSelection().toString();window.open(`https://duckduckgo.com/?q=${encodeURIComponent(s||'Estatística descritiva probabilidade amostragem CESPE TCDF')}`,'_blank')}
+function tN(){const p=document.getElementById('nP');p.style.display=p.style.display==='none'?'block':'none';if(p.style.display==='block')lN()}
+function lN(){const n=JSON.parse(localStorage.getItem(SK)||'[]');document.getElementById('nL').innerHTML=n.length?n.map((x,i)=>`<div class="n-item">${x.text}<br><small style="cursor:pointer;color:#666" onclick="dN(${i})">remover</small></div>`).join(''):'<p style="font-size:.9em;color:#666">Sem notas.</p>'}
+function aN(e){e.preventDefault();const i=document.getElementById('nI'),n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:i.value,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));i.value='';lN()}
+function dN(i){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.splice(i,1);localStorage.setItem(SK,JSON.stringify(n));lN()}
+function tH(){hM=!hM;document.body.style.cursor=hM?'text':'auto';document.querySelectorAll('.t-btn')[2].textContent=hM?'✅ ON':'✏️ Destaque';hM?document.addEventListener('mouseup',hS):document.removeEventListener('mouseup',hS)}
+function hS(){const s=window.getSelection();if(s.toString().length>10){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:`🔍 "${s.toString().substring(0,40)}..." - ${prompt('Nota:','')||'-'}`,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));alert('✅ Destaque salvo!');s.removeAllRanges()}}
+document.addEventListener('DOMContentLoaded',lN);
+</script>
+</body>
+</html>

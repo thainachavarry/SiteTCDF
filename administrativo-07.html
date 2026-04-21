@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direito Administrativo 07 | Responsabilidade Civil do Estado - CESPE</title>
+<style>
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1;--jur:#e8f4fd}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;line-height:1.7;padding-top:70px}
+a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
+.container{max-width:1000px;margin:0 auto;padding:24px}
+h1{font-size:1.8em;margin-bottom:10px;color:var(--lil)}h2{font-size:1.4em;margin:28px 0 14px;color:var(--text);padding-bottom:6px;border-bottom:2px solid var(--lil-l)}
+h3{font-size:1.2em;margin:22px 0 12px;color:var(--lil-d);font-weight:600}
+p{margin-bottom:14px;color:var(--text)}ul,ol{margin:0 0 16px 20px;color:var(--text)}li{margin-bottom:6px}
+.box{background:var(--card);border-radius:8px;padding:16px;margin:20px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}.box.jur{background:var(--jur);border-color:#3b82f6}
+.box-t{font-weight:700;margin-bottom:8px;display:block;color:var(--text)}
+table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--lil-d)}
+td{padding:10px 14px;border-bottom:1px solid var(--lil-l);color:var(--text)}tr:hover td{background:var(--lil-l)}
+.nav-b{display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:1px solid var(--lil-d)}
+.btn-n{padding:10px 20px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none}
+.btn-n:hover{background:var(--lil-d);color:#fff}
+.tools{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:99}
+.t-btn{background:var(--card);border:2px solid var(--lil-d);padding:10px 14px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;color:var(--text);box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.t-btn:hover{transform:translateY(-2px)}
+.n-panel{position:fixed;bottom:70px;right:20px;width:280px;background:var(--card);border:2px solid var(--lil-d);border-radius:12px;padding:16px;display:none;box-shadow:0 5px 15px rgba(0,0,0,.15);z-index:100}
+.n-item{background:var(--lil-l);padding:10px;border-radius:6px;margin-bottom:8px;font-size:.9em}
+.n-in{width:100%;padding:8px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:8px}
+.b-sm{padding:6px 12px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em}
+@media(max-width:700px){.container{padding:16px}header{flex-direction:column;align-items:flex-start;gap:10px}}
+.box img{width:100%;height:auto;display:block;margin:15px 0;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.q-card{background:var(--warn);border-left:4px solid #f59e0b;padding:16px;margin:20px 0;border-radius:0 8px 8px 0}
+.q-card strong{color:#856404}
+.cespe-tip{background:#fef3c7;border-left:4px solid #f59e0b;padding:12px;margin:15px 0;font-size:.95em}
+.mnemonic{background:linear-gradient(135deg,var(--lil-l),var(--bg-secondary));padding:12px 16px;border-radius:8px;margin:15px 0;font-weight:600;color:var(--lil-d)}
+.summary-box{background:var(--def);padding:16px;border-radius:8px;margin:20px 0}
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin:15px 0}
+.comp-item{background:var(--bg-secondary);padding:10px;border-radius:6px;font-size:.95em}
+.theory-card{background:var(--card);border:2px solid var(--lil-l);border-radius:8px;padding:16px;margin:12px 0}
+.theory-card h4{color:var(--lil);margin-bottom:8px}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="back">← Dashboard</a><div class="nav-t">Direito Administrativo 07</div></header>
+<main class="container">
+<h1>Responsabilidade Civil do Estado</h1>
+
+<h2>1. CONCEITO E EVOLUÇÃO HISTÓRICA</h2>
+<div class="box def"><span class="box-t">📘 Conceito de Responsabilidade Civil do Estado</span>
+<p><strong>Responsabilidade civil do Estado</strong> é o dever jurídico de reparar danos causados a terceiros em decorrência de sua atuação (comissiva ou omissiva), lícita ou ilícita, no exercício de suas funções.</p>
+<p><strong>Natureza:</strong> Extracontratual (na maioria dos casos), objetiva (regra geral), com fundamento no princípio da isonomia (quem sofre dano especial em prol da coletividade deve ser indenizado).</p>
+</div>
+
+<h3>🔹 Evolução das Teorias</h3>
+<table>
+<thead><tr><th>Fase Histórica</th><th>Teoria</th><th>Características</th></tr></thead>
+<tbody>
+<tr><td><strong>Até séc. XIX</strong></td><td>Teoria da Irresponsabilidade</td><td>"The King can do no wrong" → Estado não responde por danos; soberania absoluta</td></tr>
+<tr><td><strong>Séc. XIX-XX</strong></td><td>Teoria da Responsabilidade Subjetiva (Culpa Administrativa)</td><td>Estado responde apenas se houver culpa ou dolo do agente; ônus da prova cabe à vítima</td></tr>
+<tr><td><strong>Séc. XX-atual</strong></td><td>Teoria da Responsabilidade Objetiva (Risco Administrativo)</td><td>Estado responde independentemente de culpa; basta dano + nexo causal + atuação estatal</td></tr>
+</tbody>
+</table>
+
+<div class="mnemonic">🧠 MACETE: "Irresponsabilidade → Subjetiva → Objetiva" → Evolução histórica da responsabilidade estatal: do "Rei não erra" à reparação automática do dano.</div>
+
+<h2>2. RESPONSABILIDADE OBJETIVA: REGRA GERAL (ART. 37, §6º, CF/88)</h2>
+<div class="box def"><span class="box-t">📘 Texto Constitucional</span>
+<p><em>"As pessoas jurídicas de direito público e as de direito privado prestadoras de serviços públicos responderão pelos danos que seus agentes, nessa qualidade, causarem a terceiros, assegurado o direito de regresso contra o responsável nos casos de dolo ou culpa."</em> (Art. 37, §6º, CF/88)</p>
+</div>
+
+<h3>🔹 Requisitos para Configuração</h3>
+<table>
+<thead><tr><th>Requisito</th><th>Descrição</th><th>Aplicação Prática</th></tr></thead>
+<tbody>
+<tr><td><strong>Dano</strong></td><td>Lesão efetiva a direito ou interesse legítimo (patrimonial ou moral)</td><td>Dano material (perda financeira), moral (sofrimento, honra), estético, à imagem</td></tr>
+<tr><td><strong>Nexo Causal</strong></td><td>Ligação direta entre a atuação estatal e o dano sofrido</td><td>Prova de que o dano decorreu da ação/omissão do Estado ou de seus agentes</td></tr>
+<tr><td><strong>Atuação Estatal</strong></td><td>Conduta de agente público no exercício da função (ou a ela vinculada)</td><td>Inclui agentes de direito público e privado prestadores de serviço público</td></tr>
+</tbody>
+</table>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um buraco em via pública não sinalizado causa acidente e lesões a um pedestre. Há: (1) <strong>dano</strong> (lesões, despesas médicas); (2) <strong>nexo causal</strong> (acidente decorreu do buraco); (3) <strong>atuação estatal</strong> (dever de conservação da via é do Município). Configura-se a <strong>responsabilidade objetiva</strong> do ente público, independentemente de culpa.</p>
+</div>
+
+<h3>🔹 Teoria do Risco Administrativo (Fundamento da Responsabilidade Objetiva)</h3>
+<div class="theory-card">
+<h4>📌 Conceito</h4>
+<p>Quem exerce atividade que gera risco para a coletividade deve arcar com os danos decorrentes, independentemente de culpa. O Estado, ao exercer o poder de império, cria riscos especiais que justificam a reparação automática do dano.</p>
+<h4>📌 Características</h4>
+<ul>
+<li><strong>Não exige culpa ou dolo:</strong> Basta dano + nexo causal + atuação estatal</li>
+<li><strong>Admite excludentes:</strong> Caso fortuito, força maior, culpa exclusiva da vítima ou de terceiro</li>
+<li><strong>Ônus da prova:</strong> Cabe à vítima provar dano e nexo causal; ao Estado, provar excludente</li>
+</ul>
+<h4>📌 Ponto CESPE</h4>
+<p>✅ "Risco administrativo ≠ risco integral" → O risco administrativo admite excludentes; o risco integral não.</p>
+</div>
+
+<h2>3. RESPONSABILIDADE SUBJETIVA: EXCEÇÕES</h2>
+<div class="box def"><span class="box-t">📘 Quando Aplica</span>
+<p>A responsabilidade subjetiva (que exige culpa ou dolo) aplica-se apenas em hipóteses excepcionais, expressamente previstas em lei ou reconhecidas pela jurisprudência.</p>
+</div>
+
+<h3>🔹 Hipóteses de Responsabilidade Subjetiva</h3>
+<table>
+<thead><tr><th>Hipótese</th><th>Fundamento</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Atos legislativos</strong></td><td>Imunidade parlamentar + separação de Poderes</td><td>Lei inconstitucional que cause dano: só há responsabilidade se houver dolo ou culpa grave do legislador</td></tr>
+<tr><td><strong>Atos jurisdicionais</strong></td><td>Independência do Judiciário + coisa julgada</td><td>Decisão judicial que cause dano: só há responsabilidade se houver dolo ou culpa grave do magistrado</td></tr>
+<tr><td><strong>Atos de agentes não estatais</strong></td><td>Ausência de vínculo funcional</td><td>Dano causado por particular em colaboração com o Estado: responsabilidade subjetiva</td></tr>
+<tr><td><strong>Leis de efeitos concretos</strong></td><td>Exceção doutrinária/jurisprudencial</td><td>Lei que atinge destinatários determinados: pode gerar responsabilidade objetiva se causar dano especial</td></tr>
+</tbody>
+</table>
+
+<div class="cespe-tip">💡 DICA CESPE: Questões que afirmam "o Estado responde subjetivamente por atos administrativos" → ERRADO. A regra é a <strong>responsabilidade objetiva</strong> para atos administrativos; a subjetiva é exceção para atos legislativos e jurisdicionais.</div>
+
+<h2>4. TEORIA DO RISCO INTEGRAL: EXCEÇÃO À EXCEÇÃO</h2>
+<div class="box def"><span class="box-t">📘 Conceito</span>
+<p><strong>Risco integral</strong> é modalidade de responsabilidade objetiva <strong>sem excludentes</strong>: o Estado responde pelo dano independentemente de culpa, caso fortuito, força maior ou culpa da vítima.</p>
+</div>
+
+<h3>🔹 Hipóteses de Aplicação do Risco Integral</h3>
+<table>
+<thead><tr><th>Hipótese</th><th>Fundamento Legal/Jurisprudencial</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Dano nuclear</strong></td><td>Lei 6.453/1977 (responsabilidade objetiva e integral do operador nuclear)</td><td>Acidente em usina nuclear: operador responde integralmente, sem excludentes</td></tr>
+<tr><td><strong>Dano ambiental</strong></td><td>Art. 225, §3º, CF + Lei 6.938/1981 (responsabilidade objetiva e solidária)</td><td>Vazamento de óleo: poluidor responde integralmente, independentemente de culpa</td></tr>
+<tr><td><strong>Atividade de risco extremo</strong></td><td>Jurisprudência do STF/STJ (ex: transporte de explosivos, produtos tóxicos)</td><td>Acidente com caminhão de explosivos: transportadora responde integralmente</td></tr>
+<tr><td><strong>Dano por agente de serviço público em situação de vulnerabilidade</strong></td><td>Jurisprudência (ex: presidiários, internados em hospitais psiquiátricos)</td><td>Morte de presidiário por outro detento: Estado responde integralmente</td></tr>
+</tbody>
+</table>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "a responsabilidade do Estado é sempre de risco administrativo" → ERRADO. A regra é o risco administrativo, mas há hipóteses de <strong>risco integral</strong> (dano nuclear, ambiental, atividades de risco extremo) em que não se admitem excludentes.</p>
+</div>
+
+<h2>5. RESPONSABILIDADE POR OMISSÃO</h2>
+<div class="box def"><span class="box-t">📘 Conceito</span>
+<p>O Estado responde por danos decorrentes de sua <strong>omissão</strong> quando tinha o dever jurídico de agir para evitar o dano e não o fez, configurando culpa do serviço (<em>faute du service</em>).</p>
+</div>
+
+<h3>🔹 Requisitos Específicos para Responsabilidade por Omissão</h3>
+<ol>
+<li><strong>Dever jurídico de agir:</strong> O Estado tinha obrigação legal de prevenir o dano (ex: fiscalização, policiamento, conservação de via).</li>
+<li><strong>Possibilidade concreta de agir:</strong> O Estado tinha meios e condições para evitar o dano.</li>
+<li><strong>Nexo causal:</strong> O dano decorreu diretamente da omissão estatal.</li>
+<li><strong>Dano:</strong> Lesão efetiva a direito ou interesse legítimo.</li>
+</ol>
+
+<h3>🔹 Natureza da Responsabilidade por Omissão</h3>
+<p>Há divergência doutrinária e jurisprudencial:</p>
+<ul>
+<li><strong>Corrente majoritária (STF/STJ):</strong> Responsabilidade <strong>subjetiva</strong> por omissão → exige culpa do serviço (falta, falha ou insuficiência do serviço público).</li>
+<li><strong>Corrente minoritária:</strong> Responsabilidade <strong>objetiva</strong> por omissão → basta dano + nexo causal + dever de agir.</li>
+</ul>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um presídio apresenta superlotação crônica e falta de vigilância adequada. Um detento é assassinado por outro. O Estado tinha <strong>dever jurídico de agir</strong> (garantir integridade dos presos) e <strong>possibilidade concreta</strong> (recursos para fiscalização). Configurada a <strong>culpa do serviço</strong>, há responsabilidade estatal, ainda que subjetiva.</p>
+</div>
+
+<h2>6. EXCLUDENTES DE RESPONSABILIDADE</h2>
+<div class="box def"><span class="box-t">📘 Conceito</span>
+<p>São fatos que rompem o nexo causal entre a atuação estatal e o dano, afastando a responsabilidade do Estado (na teoria do risco administrativo).</p>
+</div>
+
+<h3>🔹 Excludentes Admitidas (Risco Administrativo)</h3>
+<table>
+<thead><tr><th>Excludente</th><th>Descrição</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Caso fortuito</strong></td><td>Fato imprevisível e inevitável, alheio à vontade das partes</td><td>Raio que atinge veículo oficial e causa acidente</td></tr>
+<tr><td><strong>Força maior</strong></td><td>Fato externo, imprevisível e irresistível (ex: fenômeno natural)</td><td>Enchente que destrói obra pública em construção</td></tr>
+<tr><td><strong>Culpa exclusiva da vítima</strong></td><td>Conduta dolosa ou culposa da vítima que causa o dano</td><td>Pedestre que atravessa a via em local proibido e é atropelado</td></tr>
+<tr><td><strong>Culpa exclusiva de terceiro</strong></td><td>Conduta dolosa ou culposa de terceiro alheio ao Estado</td><td>Motorista particular que colide com veículo oficial por imprudência</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Excludentes NÃO Admitidas (Risco Integral)</h3>
+<p>Na teoria do risco integral, <strong>nenhuma excludente é admitida</strong>. O Estado responde pelo dano independentemente de caso fortuito, força maior ou culpa da vítima/terceiro.</p>
+
+<div class="cespe-tip">💡 DICA CESPE: Questões que afirmam "culpa concorrente da vítima exclui a responsabilidade do Estado" → ERRADO. Na culpa concorrente, a indenização é <strong>reduzida proporcionalmente</strong>, não excluída.</div>
+
+<h2>7. DIREITO DE REGRESSO (ART. 37, §6º, CF/88)</h2>
+<div class="box def"><span class="box-t">📘 Conceito</span>
+<p><strong>Direito de regresso</strong> é a prerrogativa do Estado de cobrar do agente público causador do dano o valor indenizado à vítima, quando houver <strong>dolo ou culpa</strong> do agente.</p>
+</div>
+
+<h3>🔹 Requisitos para Exercício do Direito de Regresso</h3>
+<ol>
+<li><strong>Responsabilidade civil do Estado configurada:</strong> O Estado já indenizou a vítima.</li>
+<li><strong>Dolo ou culpa do agente:</strong> Conduta intencional ou negligente do servidor.</li>
+<li><strong>Nexo causal:</strong> Ligação entre a conduta do agente e o dano indenizado.</li>
+<li><strong>Processo administrativo ou judicial:</strong> O regresso deve ser apurado em procedimento com ampla defesa.</li>
+</ol>
+
+<h3>🔹 Natureza da Responsabilidade do Agente</h3>
+<p>A responsabilidade do agente público no regresso é <strong>subjetiva</strong>: exige dolo ou culpa. Não há responsabilidade objetiva do servidor.</p>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um policial, em serviço, atira contra um suspeito e atinge um transeunte inocente. O Estado indeniza a vítima (responsabilidade objetiva). Posteriormente, apura-se que o policial agiu com <strong>imprudência</strong> (culpa). O Estado pode exercer o <strong>direito de regresso</strong> contra o servidor, cobrando o valor indenizado.</p>
+</div>
+
+<h2>8. PRESCRIÇÃO DA AÇÃO DE INDENIZAÇÃO</h2>
+<h3>🔹 Prazos Aplicáveis</h3>
+<table>
+<thead><tr><th>Hipótese</th><th>Prazo</th><th>Fundamento</th></tr></thead>
+<tbody>
+<tr><td><strong>Contra a Fazenda Pública</strong></td><td>5 anos (Decreto 20.910/1932)</td><td>Lei especial que regula prescrição contra o Poder Público</td></tr>
+<tr><td><strong>Contra particulares prestadores de serviço público</strong></td><td>3 anos (Código Civil, Art. 206, §3º, V)</td><td>Regra geral do Código Civil para responsabilidade civil</td></tr>
+<tr><td><strong>Direito de regresso do Estado contra o agente</strong></td><td>5 anos (Decreto 20.910/1932)</td><td>Aplica-se o mesmo prazo da ação principal contra a Fazenda</td></tr>
+</tbody>
+</table>
+
+<div class="cespe-tip">💡 DICA CESPE: Questões que afirmam "a prescrição da ação contra o Estado é de 3 anos" → ERRADO. Contra a Fazenda Pública, o prazo é de <strong>5 anos</strong> (Decreto 20.910/1932), salvo disposição legal em contrário.</div>
+
+<h2>🎯 O QUE MAIS CAI NO CESPE (RANKING DE FREQUÊNCIA)</h2>
+<ol>
+<li><strong>Responsabilidade objetiva (Art. 37, §6º, CF):</strong> Requisitos (dano + nexo causal + atuação estatal); não exige culpa do Estado.</li>
+<li><strong>Risco administrativo vs. risco integral:</strong> Diferença conceitual; excludentes admitidas (risco administrativo) vs. não admitidas (risco integral).</li>
+<li><strong>Responsabilidade por omissão:</strong> Requisitos específicos (dever de agir + possibilidade concreta + nexo causal); natureza subjetiva (corrente majoritária).</li>
+<li><strong>Direito de regresso:</strong> Requisitos (dolo/culpa do agente + Estado já indenizou); natureza subjetiva da responsabilidade do servidor.</li>
+<li><strong>Excludentes de responsabilidade:</strong> Caso fortuito, força maior, culpa exclusiva da vítima/terceiro; culpa concorrente reduz a indenização, não exclui.</li>
+<li><strong>Responsabilidade por atos legislativos/jurisdicionais:</strong> Regra: responsabilidade subjetiva (exige dolo/culpa grave); exceção: leis de efeitos concretos.</li>
+<li><strong>Prazo prescricional:</strong> 5 anos contra a Fazenda Pública (Decreto 20.910/1932).</li>
+<li><strong>Responsabilidade de concessionárias/prestadoras de serviço público:</strong> Objetiva, nos mesmos termos do Estado (Art. 37, §6º, CF).</li>
+</ol>
+
+<h2>⚖️ JURISPRUDÊNCIA RELEVANTE (STF/STJ sobre Responsabilidade Civil do Estado)</h2>
+<div class="box jur">
+<strong>STF - RE 385.943/SP (2009)</strong><br>
+Tese: A responsabilidade civil do Estado por danos causados por agentes públicos é objetiva, nos termos do art. 37, §6º, da CF/88, independentemente de culpa ou dolo, bastando a comprovação do dano e do nexo causal.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre responsabilidade objetiva devem mencionar que não se exige culpa do Estado, apenas dano + nexo causal + atuação estatal.
+</div>
+<div class="box jur">
+<strong>STJ - REsp 816.209/RS (2014)</strong><br>
+Tese: A responsabilidade do Estado por omissão é subjetiva, exigindo a comprovação de culpa do serviço (falta, falha ou insuficiência do serviço público), na linha da teoria da faute du service.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre responsabilidade por omissão devem mencionar a exigência de culpa do serviço, na corrente majoritária.
+</div>
+<div class="box jur">
+<strong>STF - RE 518.894/SP (2011)</strong><br>
+Tese: O direito de regresso do Estado contra o agente público exige a comprovação de dolo ou culpa do servidor, sendo a responsabilidade deste de natureza subjetiva.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre direito de regresso devem mencionar que a responsabilidade do agente é subjetiva, exigindo dolo ou culpa.
+</div>
+<div class="box jur">
+<strong>STJ - REsp 435.266/SP (2004)</strong><br>
+Tese: A culpa concorrente da vítima não exclui a responsabilidade do Estado, mas reduz proporcionalmente o valor da indenização, na medida da participação de cada parte no evento danoso.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre excludentes devem mencionar que culpa concorrente reduz a indenização, não a exclui.
+</div>
+<div class="box jur">
+<strong>STF - RE 1.089.955/RJ (2019)</strong><br>
+Tese: A responsabilidade civil por danos ambientais é objetiva e solidária, nos termos do art. 225, §3º, da CF/88 e da Lei 6.938/1981, aplicando-se a teoria do risco integral, sem admissão de excludentes.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre dano ambiental devem mencionar a responsabilidade objetiva e integral, sem excludentes.
+</div>
+<div class="box jur">
+<strong>STJ - REsp 1.087.862/AM (2010)</strong><br>
+Tese: A responsabilidade do Estado por danos causados a presidiários é objetiva, aplicando-se a teoria do risco integral, em razão da situação de vulnerabilidade e da guarda estatal.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre responsabilidade por danos a presidiários devem mencionar a aplicação do risco integral.
+</div>
+<div class="box jur">
+<strong>STF - ADI 4.717/DF (2011)</strong><br>
+Tese: A transparência ativa e o planejamento orçamentário são instrumentos indissociáveis de accountability. O cidadão tem direito de acesso a metas, resultados e indicadores de desempenho, reforçando o controle social sobre a administração pública.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre transparência e controle social devem mencionar a LAI e o direito de acesso à informação.
+</div>
+
+<h2>📝 QUESTÕES CESPE COMENTADAS</h2>
+<div class="q-card">
+<strong>(CESPE/CEBRASPE – TCDF – Analista Administrativo – 2021)</strong><br>
+Julgue: A responsabilidade civil do Estado por danos causados por seus agentes é objetiva, nos termos do art. 37, §6º, da Constituição Federal, independendo de culpa ou dolo, bastando a comprovação do dano e do nexo causal.
+<p><strong>Comentário:</strong> CORRETO. Essa é a literalidade do art. 37, §6º, da CF/88. A responsabilidade objetiva não exige culpa do Estado; basta dano + nexo causal + atuação estatal.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANEEL – 2022)</strong><br>
+Julgue: A responsabilidade do Estado por omissão é sempre objetiva, aplicando-se a teoria do risco administrativo, independentemente de culpa do serviço.
+<p><strong>Comentário:</strong> ERRADO. A responsabilidade por omissão, na corrente majoritária do STF/STJ, é <strong>subjetiva</strong>, exigindo a comprovação de culpa do serviço (falta, falha ou insuficiência do serviço público). A objetividade é regra para ações comissivas, não para omissivas.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – MAPA – 2023)</strong><br>
+Julgue: O direito de regresso do Estado contra o agente público causador do dano exige a comprovação de dolo ou culpa do servidor, sendo a responsabilidade deste de natureza subjetiva.
+<p><strong>Comentário:</strong> CORRETO. Essa é a aplicação do art. 37, §6º, da CF/88 e da jurisprudência do STF. O Estado responde objetivamente perante a vítima, mas, para exercer o regresso contra o agente, deve provar dolo ou culpa deste.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – IBAMA – 2023)</strong><br>
+Julgue: A culpa concorrente da vítima exclui a responsabilidade civil do Estado, afastando o dever de indenizar.
+<p><strong>Comentário:</strong> ERRADO. A culpa concorrente <strong>não exclui</strong> a responsabilidade do Estado, mas <strong>reduz proporcionalmente</strong> o valor da indenização, na medida da participação de cada parte no evento danoso (STJ, REsp 435.266/SP).</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANVISA – 2022)</strong><br>
+Julgue: A responsabilidade civil por danos ambientais é objetiva e solidária, aplicando-se a teoria do risco integral, sem admissão de excludentes como caso fortuito ou força maior.
+<p><strong>Comentário:</strong> CORRETO. Essa é a aplicação do art. 225, §3º, da CF/88 e da Lei 6.938/1981. No dano ambiental, aplica-se o risco integral, não se admitindo excludentes de responsabilidade.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – Sefaz/RS – 2022)</strong><br>
+Julgue: O prazo prescricional para a ação de indenização contra a Fazenda Pública é de cinco anos, nos termos do Decreto 20.910/1932.
+<p><strong>Comentário:</strong> CORRETO. Essa é a regra especial para prescrição contra o Poder Público. O prazo de 3 anos do Código Civil aplica-se apenas a ações contra particulares prestadores de serviço público.</p>
+</div>
+
+<h2>📋 CHECKLIST DE REVISÃO RÁPIDA</h2>
+<div class="summary-box">
+<strong>Domine</strong><br><br>
+□ Responsabilidade objetiva (Art. 37, §6º, CF): dano + nexo causal + atuação estatal; não exige culpa do Estado<br>
+□ Risco administrativo (regra) vs. risco integral (exceção): excludentes admitidas vs. não admitidas<br>
+□ Responsabilidade por omissão: dever de agir + possibilidade concreta + nexo causal; natureza subjetiva (corrente majoritária)<br>
+□ Direito de regresso: Estado indeniza vítima → cobra do agente com dolo/culpa; responsabilidade subjetiva do servidor<br>
+□ Excludentes: caso fortuito, força maior, culpa exclusiva da vítima/terceiro; culpa concorrente reduz indenização<br>
+□ Atos legislativos/jurisdicionais: responsabilidade subjetiva (exige dolo/culpa grave); exceção: leis de efeitos concretos<br>
+□ Prazo prescricional: 5 anos contra a Fazenda Pública (Decreto 20.910/1932)<br>
+□ Concessionárias/prestadoras de serviço público: responsabilidade objetiva, nos mesmos termos do Estado<br>
+□ Jurisprudência: STF/STJ sobre risco administrativo, omissão, regresso, dano ambiental, presidiários<br>
+□ Dano ambiental: responsabilidade objetiva e solidária, risco integral, sem excludentes
+</div>
+
+<div class="nav-b">
+<a href="administrativo-06.html" class="btn-n">← Anterior</a>
+<a href="administrativo-08.html" class="btn-n">Próximo →</a>
+</div>
+</main>
+
+
+<div class="n-panel" id="nP">
+<div style="display:flex;justify-content:space-between;margin-bottom:10px"><strong>Notas de Administrativo</strong><button onclick="tN()" style="background:none;border:none;cursor:pointer">✕</button></div>
+<div id="nL" style="max-height:180px;overflow-y:auto;margin-bottom:10px"></div>
+<form onsubmit="aN(event)"><input type="text" class="n-in" id="nI" placeholder="Anotação sobre Responsabilidade Civil..." required><button type="submit" class="b-sm">💾 Salvar</button></form>
+</div>
+
+<script>
+const SK='adm-resp-07';let hM=false;
+function webS(){const s=window.getSelection().toString();window.open(`https://duckduckgo.com/?q=${encodeURIComponent(s||'Responsabilidade civil do Estado objetiva subjetiva risco CESPE TCDF')}`,'_blank')}
+function tN(){const p=document.getElementById('nP');p.style.display=p.style.display==='none'?'block':'none';if(p.style.display==='block')lN()}
+function lN(){const n=JSON.parse(localStorage.getItem(SK)||'[]');document.getElementById('nL').innerHTML=n.length?n.map((x,i)=>`<div class="n-item">${x.text}<br><small style="cursor:pointer;color:#666" onclick="dN(${i})">remover</small></div>`).join(''):'<p style="font-size:.9em;color:#666">Sem notas.</p>'}
+function aN(e){e.preventDefault();const i=document.getElementById('nI'),n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:i.value,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));i.value='';lN()}
+function dN(i){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.splice(i,1);localStorage.setItem(SK,JSON.stringify(n));lN()}
+function tH(){hM=!hM;document.body.style.cursor=hM?'text':'auto';document.querySelectorAll('.t-btn')[2].textContent=hM?'✅ ON':'✏️ Destaque';hM?document.addEventListener('mouseup',hS):document.removeEventListener('mouseup',hS)}
+function hS(){const s=window.getSelection();if(s.toString().length>10){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:`🔍 "${s.toString().substring(0,40)}..." - ${prompt('Nota:','')||'-'}`,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));alert('✅ Destaque salvo!');s.removeAllRanges()}}
+document.addEventListener('DOMContentLoaded',lN);
+</script>
+</body>
+</html>

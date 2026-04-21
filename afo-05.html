@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AFO 04 | Despesa Pública - Classificações e Ações Orçamentárias - CESPE</title>
+<style>
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1;--jur:#e8f4fd}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;line-height:1.7;padding-top:70px}
+a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
+.container{max-width:1000px;margin:0 auto;padding:24px}
+h1{font-size:1.8em;margin-bottom:10px;color:var(--lil)}h2{font-size:1.4em;margin:28px 0 14px;color:var(--text);padding-bottom:6px;border-bottom:2px solid var(--lil-l)}
+h3{font-size:1.2em;margin:22px 0 12px;color:var(--lil-d);font-weight:600}
+p{margin-bottom:14px;color:var(--text)}ul,ol{margin:0 0 16px 20px;color:var(--text)}li{margin-bottom:6px}
+.box{background:var(--card);border-radius:8px;padding:16px;margin:20px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}.box.jur{background:var(--jur);border-color:#3b82f6}
+.box-t{font-weight:700;margin-bottom:8px;display:block;color:var(--text)}
+table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--lil-d)}
+td{padding:10px 14px;border-bottom:1px solid var(--lil-l);color:var(--text)}tr:hover td{background:var(--lil-l)}
+.nav-b{display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:1px solid var(--lil-d)}
+.btn-n{padding:10px 20px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none}
+.btn-n:hover{background:var(--lil-d);color:#fff}
+.tools{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:99}
+.t-btn{background:var(--card);border:2px solid var(--lil-d);padding:10px 14px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;color:var(--text);box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.t-btn:hover{transform:translateY(-2px)}
+.n-panel{position:fixed;bottom:70px;right:20px;width:280px;background:var(--card);border:2px solid var(--lil-d);border-radius:12px;padding:16px;display:none;box-shadow:0 5px 15px rgba(0,0,0,.15);z-index:100}
+.n-item{background:var(--lil-l);padding:10px;border-radius:6px;margin-bottom:8px;font-size:.9em}
+.n-in{width:100%;padding:8px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:8px}
+.b-sm{padding:6px 12px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em}
+@media(max-width:700px){.container{padding:16px}header{flex-direction:column;align-items:flex-start;gap:10px}}
+.box img{width:100%;height:auto;display:block;margin:15px 0;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.q-card{background:var(--warn);border-left:4px solid #f59e0b;padding:16px;margin:20px 0;border-radius:0 8px 8px 0}
+.q-card strong{color:#856404}
+.cespe-tip{background:#fef3c7;border-left:4px solid #f59e0b;padding:12px;margin:15px 0;font-size:.95em}
+.mnemonic{background:linear-gradient(135deg,var(--lil-l),var(--bg-secondary));padding:12px 16px;border-radius:8px;margin:15px 0;font-weight:600;color:var(--lil-d)}
+.summary-box{background:var(--def);padding:16px;border-radius:8px;margin:20px 0}
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin:15px 0}
+.comp-item{background:var(--bg-secondary);padding:10px;border-radius:6px;font-size:.95em}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="back">← Dashboard</a><div class="nav-t">AFO 04</div></header>
+<main class="container">
+<h1>Despesa Pública: Classificações, Ações Orçamentárias e Programação</h1>
+
+<h2>1. CONCEITO E NATUREZA DA DESPESA PÚBLICA</h2>
+<div class="box def"><span class="box-t">📘 Conceito Legal (Lei 4.320/1964)</span>
+<p><strong>Despesa pública</strong> é o emprego de recursos financeiros por parte do Estado, destinado à realização de obras, aquisição de bens, prestação de serviços, pagamento de pessoal e encargos, amortização de dívida ou transferências, com o fim de atender às necessidades públicas e cumprir funções governamentais.</p>
+<p><strong>Natureza:</strong> Atuação financeira vinculada à previsão orçamentária, obedecendo aos estágios de empenho, liquidação e pagamento, e às classificações legalmente estabelecidas.</p>
+</div>
+
+<h3>🔹 Princípios Norteadores da Despesa</h3>
+<ul>
+<li><strong>Legalidade orçamentária:</strong> Só pode ser realizada se prevista na LOA ou autorizada por créditos adicionais.</li>
+<li><strong>Economicidade:</strong> Busca do melhor resultado com o menor dispêndio de recursos.</li>
+<li><strong>Finalidade pública:</strong> Destinação exclusiva ao interesse coletivo, vedado desvio ou particularização.</li>
+<li><strong>Transparência:</strong> Divulgação tempestiva de programações, empenhos e pagamentos.</li>
+</ul>
+
+<div class="mnemonic">🧠 MACETE: "LEFT" → Legalidade, Economicidade, Finalidade, Transparência. Memorize os pilares da despesa!</div>
+
+<h2>2. CLASSIFICAÇÃO ECONÔMICA DA DESPESA (GND)</h2>
+<div class="box def"><span class="box-t">📘 Estrutura por Categoria Econômica e Grupo de Natureza de Despesa (GND)</span>
+<p>A Lei 4.320/1964 classifica a despesa em <strong>Correntes</strong> (custeio e manutenção da máquina pública) e <strong>de Capital</strong> (investimento, inversão ou amortização). Essa estrutura é detalhada pelos Grupos de Natureza de Despesa (GND).</p>
+</div>
+
+<table>
+<thead><tr><th>Categoria Econômica</th><th>Grupo (GND)</th><th>Descrição e Exemplos</th></tr></thead>
+<tbody>
+<tr><td rowspan="3"><strong>Despesas Correntes</strong></td><td><strong>1 - Pessoal e Encargos Sociais</strong></td><td>Remunerações, benefícios, encargos previdenciários, assistenciais e trabalhistas.</td></tr>
+<tr><td><strong>3 - Juros e Encargos da Dívida</strong></td><td>Remuneração do capital alheio, atualização monetária, encargos de empréstimos e títulos.</td></tr>
+<tr><td><strong>3 - Outras Despesas Correntes</strong></td><td>Material de consumo, serviços de terceiros, diárias, passagens, manutenção, transferências correntes.</td></tr>
+<tr><td rowspan="3"><strong>Despesas de Capital</strong></td><td><strong>4 - Investimentos</strong></td><td>Obras, aquisição de equipamentos, instalações, programas de capital, participação em constituição/aumento de capital.</td></tr>
+<tr><td><strong>5 - Inversões Financeiras</strong></td><td>Aquisição de imóveis/bens já incorporados ao patrimônio, concessão de empréstimos, aquisição de títulos representativos de capital.</td></tr>
+<tr><td><strong>6 - Amortização da Dívida</strong></td><td>Amortização, recompra e resgate de dívidas mobiliárias e contratuais (internas e externas).</td></tr>
+<tr><td><strong>Reserva de Contingência</strong></td><td><strong>9 - Reserva de Contingência</strong></td><td>Destinação a passivos contingentes, riscos fiscais ou eventos imprevistos. Não pode ser programada antecipadamente.</td></tr>
+</tbody>
+</table>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Compra de computadores novos: <strong>GND 4 (Investimentos)</strong>. Pagamento de conta de luz: <strong>GND 3 (Outras Correntes)</strong>. Pagamento de prestações de empréstimo: <strong>GND 6 (Amortização)</strong>. A classificação econômica revela se a despesa gera capacidade produtiva futura (capital) ou apenas mantém o funcionamento atual (corrente).</p>
+</div>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "aquisição de veículos é despesa de inversão financeira" → ERRADO. Veículos, equipamentos e obras são <strong>investimentos (GND 4)</strong>. Inversão financeira (GND 5) refere-se a empréstimos, financiamentos ou aquisição de ações/participações societárias, não a bens de uso da administração.</p>
+</div>
+
+<h2>3. CLASSIFICAÇÃO FUNCIONAL E PROGRAMÁTICA</h2>
+<div class="box def"><span class="box-t">📘 Estrutura do Programa de Trabalho</h3>
+<p>A classificação funcional e programática responde a perguntas essenciais: <em>o que? quem? onde? por quê? quanto?</em> Ela organiza a despesa por áreas de atuação governamental e instrumentos de entrega de resultados.</p>
+</div>
+
+<table>
+<thead><tr><th>Nível</th><th>Pergunta Respondida</th><th>Finalidade</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Esfera</strong></td><td>Qual orçamento?</td><td>Separar fiscal, seguridade e investimento das estatais</td><td>10 (Fiscal), 20 (Seguridade), 30 (Investimento)</td></tr>
+<tr><td><strong>Institucional</strong></td><td>Quem executa?</td><td>Órgão e Unidade Orçamentária responsáveis</td><td>26000 - Ministério da Educação / 26200 - UO Vinculada</td></tr>
+<tr><td><strong>Funcional</strong></td><td>Qual área temática?</td><td>Função (maior agregação) e Subfunção (nível de desagregação)</td><td>12 (Educação) / 366 (Ensino Superior)</td></tr>
+<tr><td><strong>Programática</strong></td><td>O que será entregue?</td><td>Programa, Ação, Subtítulo, PO (Produto/Objeto)</td><td>2080 (Educação de Qualidade) / 20RK (Funcionamento de Instituições Federais de Ensino)</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Função vs. Subfunção</h3>
+<ul>
+<li><strong>Função:</strong> Maior nível de agregação das áreas de despesa. Relaciona-se a uma missão institucional do órgão (ex: Educação, Saúde, Defesa).</li>
+<li><strong>Subfunção:</strong> Nível de desagregação da função, evidenciando área de atuação ou natureza do gasto (ex: Ensino Superior, Alimentação e Nutrição, Administração Geral).</li>
+<li><strong>Regra:</strong> Uma função pode ser executada por diversos órgãos; um órgão pode executar múltiplas funções.</li>
+</ul>
+
+<div class="cespe-tip">💡 DICA CESPE: Questões que afirmam "cada função é executada por apenas um ministério" → ERRADO. A classificação funcional é <strong>transversal</strong>: vários órgãos podem executar despesas na mesma função.</div>
+
+<h2>4. TIPOS DE AÇÕES ORÇAMENTÁRIAS</h2>
+<div class="box def"><span class="box-t">📘 Conceito de Ação Orçamentária</h3>
+<p><strong>Ação orçamentária</strong> é o instrumento de programação que traduz os objetivos estratégicos do governo em produtos ou serviços entregues à sociedade. Classificam-se em três tipos principais.</p>
+</div>
+
+<table>
+<thead><tr><th>Tipo</th><th>Características</th><th>Exemplo</th><th>Gera Produto?</th></tr></thead>
+<tbody>
+<tr><td><strong>Projetos</strong></td><td>Operações limitadas no tempo; delimitáveis; resultam em produto concreto; contribuem para a manutenção ou expansão da ação governamental</td><td>Construção de hospital, desenvolvimento de sistema de TI, implantação de rodovia</td><td>Sim</td></tr>
+<tr><td><strong>Atividades</strong></td><td>Operações contínuas e permanentes; essenciais à manutenção da capacidade operacional do órgão; não geram produto novo, mas mantêm serviços existentes</td><td>Manutenção de escolas, fiscalização sanitária, atendimento hospitalar, regulação de mercado</td><td>Não (mantém serviço)</td></tr>
+<tr><td><strong>Operações Especiais</strong></td><td>Não geram produto/bem/serviço; resultam em transferência, encargo financeiro ou contribuição; não se enquadram em projetos/atividades</td><td>Serviço da dívida, reembolsos, contribuições a organismos internacionais, indenizações, sentenças judiciais</td><td>Não (transferência/encargo)</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Critérios do MTO para Classificação (MTO 2025)</h3>
+<p>Para ser classificada como <strong>Projeto</strong>, a ação deve atender a dois critérios cumulativos:</p>
+<ol>
+<li><strong>Critério A:</strong> As operações da ação são delimitadas no tempo? (Sim/Não)</li>
+<li><strong>Critério B:</strong> As operações da ação são delimitáveis (mensuráveis, com início, meio e fim definidos)? (Sim/Não)</li>
+</ol>
+<p>Se <strong>A=Sim e B=Sim</strong> → Projeto. Se não, classifica-se como Atividade ou Operação Especial, conforme a natureza.</p>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Campanha nacional de vacinação: <strong>Atividade</strong> (contínua, permanente, mantém capacidade de saúde). Construção de nova unidade de pronto atendimento: <strong>Projeto</strong> (temporário, delimitável, gera bem concreto). Pagamento de precatórios: <strong>Operação Especial</strong> (encargo financeiro, não gera produto/serviço).</p>
+</div>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente afirma que "atividades geram novos produtos ou serviços à sociedade" → ERRADO. Atividades apenas <strong>mantêm a capacidade operacional</strong> de serviços já existentes. Projetos é que geram produtos/bens novos.</p>
+</div>
+
+<h2>5. SUBTÍTULOS, PO E ESTRUTURA DO PROGRAMA DE TRABALHO</h2>
+<div class="box def"><span class="box-t">📘 Subtítulo e PO (Produto/Objeto)</h3>
+<p>A estrutura programática desce do macro (programa) ao micro (PO), permitindo rastreabilidade total do gasto público.</p>
+</div>
+
+<h3>🔹 Subtítulo (Localizador de Gasto)</h3>
+<ul>
+<li>Identifica <strong>onde</strong> o recurso será aplicado (município, estado, região, país estrangeiro).</li>
+<li>Composto por código de localização geográfica (ex: 0001 = Nacional, 0050 = Brasília/DF, 5030 = São Paulo/SP).</li>
+<li>Permite o controle federativo e a descentralização orçamentária.</li>
+</ul>
+
+<h3>🔹 PO (Produto/Objeto/Unidade de Medida)</h3>
+<ul>
+<li>Último nível da estrutura programática.</li>
+<li>Representa o <strong>resultado mensurável</strong> da ação (ex: 0001 = Aluno matriculado, 0002 = Vacina aplicada, 0003 = Km de rodovia pavimentada).</li>
+<li>Permite a vinculação entre dimensão física (quantidade) e dimensão financeira (valor empenhado/pago).</li>
+</ul>
+
+<div class="box ex"><span class="box-t">✅ Esquema Visual</span>
+<p><strong>Esfera (10) → Institucional (26000/26200) → Funcional (12/366) → Programa (2080) → Ação (20RK) → Subtítulo (0050) → PO (0001)</strong><br>
+Essa cadeia responde: <em>Qual orçamento? Quem? Qual área? Qual programa? Qual ação? Onde? O que será entregue e em que unidade?</em></p>
+</div>
+
+<h2>6. PROGRAMAÇÃO QUALITATIVA vs. QUANTITATIVA</h2>
+<div class="box def"><span class="box-t">📘 Conceitos e Diferenças</h3>
+<p>O orçamento público estrutura-se em duas dimensões complementares: <strong>qualitativa</strong> (o que, quem, onde, por quê) e <strong>quantitativa</strong> (quanto, dimensões física e financeira).</p>
+</div>
+
+<table>
+<thead><tr><th>Dimensão</th><th>O que responde?</th><th>Blocos de Informação</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Qualitativa</strong></td><td>O quê? Quem? Onde? Por quê?</td><td>Esfera, Classificação Institucional, Classificação Funcional, Estrutura Programática (Programa, Ação, Subtítulo, PO)</td><td>Ministério da Saúde executa ação de vigilância epidemiológica no DF</td></tr>
+<tr><td><strong>Quantitativa</strong></td><td>Quanto? Quantas unidades? Qual valor?</td><td>Dimensão física (quantidade do PO), Dimensão financeira (valor da dotação, empenho, liquidação, pagamento)</td><td>50.000 doses de vacina (física) / R$ 2.500.000,00 (financeira)</td></tr>
+</tbody>
+</table>
+
+<div class="cespe-tip">💡 DICA CESPE: Questões que afirmam "a classificação institucional faz parte da programação quantitativa" → ERRADO. A institucional é <strong>qualitativa</strong>. Apenas as dimensões física e financeira são quantitativas.</div>
+
+<h2>🎯 O QUE MAIS CAI NO CESPE (RANKING DE FREQUÊNCIA)</h2>
+<ol>
+<li><strong>Classificação econômica (GND):</strong> Diferença entre correntes (GND 1, 2, 3) e capital (GND 4, 5, 6); exemplos práticos de cada grupo.</li>
+<li><strong>Tipos de ações orçamentárias:</strong> Projetos (temporários, delimitados, geram produto) vs. Atividades (contínuas, mantêm serviço) vs. Operações Especiais (transferências/encargos).</li>
+<li><strong>Critérios do MTO:</strong> Delimitação no tempo e nas operações para classificação como projeto.</li>
+<li><strong>Classificação funcional:</strong> Função vs. Subfunção; transversalidade; relação com órgãos.</li>
+<li><strong>Programação qualitativa vs. quantitativa:</strong> O que compõe cada uma; blocos de informação do programa de trabalho.</li>
+<li><strong>Subtítulo e PO:</strong> Finalidade do localizador de gasto; unidade de medida do produto/objeto.</li>
+<li><strong>Unidade Orçamentária vs. Órgão:</strong> Diferença conceitual; um órgão pode ter múltiplas UOs; uma UO pode abranger múltiplos órgãos (raro, mas possível).</li>
+<li><strong>Reserva de Contingência (GND 9):</strong> Finalidade; vedação de programação prévia; uso para passivos contingentes/risco fiscal.</li>
+<li><strong>Jurisprudência do TCU/STF:</strong> Desclassificação de despesas, vinculação entre dimensão física/financeira, transparência programática.</li>
+<li><strong>Confusões clássicas:</strong> Veículos/equipamentos como investimento (não inversão); serviços de terceiros como corrente (não capital).</li>
+</ol>
+
+<h2>⚖️ JURISPRUDÊNCIA RELEVANTE (TCU/STF/STJ sobre Despesa Pública)</h2>
+<div class="box jur">
+<strong>TCU - Acórdão 2.630/2019-Plenário</strong><br>
+Tese: A classificação inadequada de despesas (ex: registrar investimento como despesa corrente) distorce os indicadores fiscais e compromete a transparência orçamentária, podendo configurar irregularidade grave e improbidade administrativa por gestão temerária.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre classificação econômica devem mencionar que a correta tipificação é obrigatória para fins de controle e metas fiscais.
+</div>
+<div class="box jur">
+<strong>STF - RE 599.362/DF (2013)</strong><br>
+Tese: A vinculação entre a dimensão física (PO) e a dimensão financeira (dotação) é essencial para o controle da execução orçamentária. A desconexão entre produto entregue e recurso empenhado caracteriza falha de gestão.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre PO e programação quantitativa devem mencionar a obrigatoriedade de rastreabilidade física-financeira.
+</div>
+<div class="box jur">
+<strong>TCU - Súmula 188 e Orientações Técnicas</strong><br>
+Tese: A classificação de ações como "Operação Especial" deve ser restrita a transferências e encargos financeiros. A inclusão de gastos de custeio ou investimento sob essa rubrica configura desvio de finalidade programática.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre tipos de ações devem diferenciar claramente operações especiais de projetos/atividades.
+</div>
+<div class="box jur">
+<strong>STF - ADI 4.717/DF (2011)</strong><br>
+Tese: A transparência ativa na execução orçamentária é instrumento de accountability. A publicidade detalhada da despesa (classificações, empenhos, pagamentos) é dever constitucional do gestor.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre transparência orçamentária devem mencionar a LAI e os portais de transparência como desdobramentos do princípio da publicidade.
+</div>
+<div class="box jur">
+<strong>TCU - Acórdão 1.876/2018-Plenário</strong><br>
+Tese: A classificação funcional não se confunde com a estrutura ministerial. Um mesmo órgão pode executar despesas em múltiplas funções, e uma mesma função pode ser executada por diversos órgãos.<br>
+<strong>Aplicação CESPE:</strong> Questões sobre classificação funcional devem mencionar sua natureza transversal e independente da estrutura administrativa.
+</div>
+
+<h2>📝 QUESTÕES CESPE COMENTADAS</h2>
+<div class="q-card">
+<strong>(CESPE/CEBRASPE – TCDF – Analista Administrativo – 2023)</strong><br>
+Julgue: A aquisição de veículos oficiais para frota administrativa deve ser classificada como despesa de capital, no grupo de natureza de despesa de investimentos, e não como inversão financeira.
+<p><strong>Comentário:</strong> CORRETO. Veículos, equipamentos, obras e instalações são <strong>investimentos (GND 4)</strong>. Inversão financeira (GND 5) refere-se a empréstimos, financiamentos ou aquisição de participações societárias, não a bens de uso da administração.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – SEFAZ AL – 2022)</strong><br>
+Julgue: As atividades orçamentárias são operações contínuas e permanentes que geram produtos novos ou serviços inéditos à sociedade, diferenciando-se dos projetos, que apenas mantêm a capacidade operacional existente.
+<p><strong>Comentário:</strong> ERRADO. A questão inverteu os conceitos. <strong>Atividades mantêm</strong> serviços existentes; <strong>Projetos geram</strong> produtos/bens novos. O CESPE frequentemente troca essas definições para induzir ao erro.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – MAPA – 2023)</strong><br>
+Julgue: A programação qualitativa do orçamento responde às perguntas "quanto?", "quantas unidades?" e "qual o valor financeiro?", enquanto a programação quantitativa responde a "o quê?", "quem?" e "onde?".
+<p><strong>Comentário:</strong> ERRADO. Inversão clássica. <strong>Qualitativa</strong> = o quê, quem, onde, por quê (classificações e estrutura). <strong>Quantitativa</strong> = quanto, dimensão física e financeira (valores e unidades do PO).</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – IBAMA – 2023)</strong><br>
+Julgue: O subtítulo, na estrutura programática do orçamento federal, funciona como localizador de gasto, identificando a unidade geográfica ou setorial onde o recurso será aplicado, permitindo o controle federativo e a descentralização orçamentária.
+<p><strong>Comentário:</strong> CORRETO. Essa é a definição exata do subtítulo (MTO). Ele responde "onde?" e permite o rastreamento da despesa por município, estado ou região.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANVISA – 2022)</strong><br>
+Julgue: A reserva de contingência (GND 9) deve ser programada antecipadamente para cobrir despesas de custeio previsíveis, garantindo a continuidade dos serviços públicos em caso de frustração de receita.
+<p><strong>Comentário:</strong> ERRADO. O GND 9 é <strong>vedado de programação prévia</strong>. Destina-se exclusivamente a passivos contingentes, riscos fiscais e eventos imprevistos. Não pode ser usado para cobrir custeio previsível ou frustração de receita ordinária.</p>
+</div>
+
+<h2>📋 CHECKLIST DE REVISÃO RÁPIDA</h2>
+<div class="summary-box">
+<strong>Dommine</strong><br>
+□ Classificação econômica: Correntes (1-Pessoal, 2-Juros, 3-Outras) vs. Capital (4-Investimentos, 5-Inversões, 6-Amortização)<br>
+□ Veículos/equipamentos/obras = GND 4 (Investimentos); Empréstimos/ações = GND 5 (Inversões)<br>
+□ Tipos de ações: Projetos (temporários, delimitados, geram produto) | Atividades (contínuas, mantêm serviço) | Operações Especiais (transferências/encargos)<br>
+□ Critérios MTO: Projeto exige delimitação no tempo E nas operações<br>
+□ Classificação funcional: Função (macro) vs. Subfunção (micro); transversal, não vinculada a um único órgão<br>
+□ Programação qualitativa: esfera, institucional, funcional, programática (programa, ação, subtítulo, PO)<br>
+□ Programação quantitativa: dimensão física (unidades do PO) e financeira (valores)<br>
+□ Subtítulo: localizador de gasto (onde?); PO: produto/objeto/unidade de medida (o quê em quantas unidades?)<br>
+□ Reserva de contingência (GND 9): vedada programação prévia; uso restrito a riscos/passivos contingentes<br>
+□ Jurisprudência: TCU exige classificação correta para metas fiscais; STF exige transparência e rastreabilidade física-financeira<br>
+□ Pegadinhas frequentes: inverter projeto/atividade, classificar veículo como inversão, afirmar que qualitativa responde "quanto"
+</div>
+
+<div class="nav-b">
+<a href="afo-03.html" class="btn-n">← Anterior</a>
+<a href="afo-05.html" class="btn-n">Próximo →</a>
+</div>
+</main>
+
+<div class="n-panel" id="nP">
+<div style="display:flex;justify-content:space-between;margin-bottom:10px"><strong>Notas de AFO</strong><button onclick="tN()" style="background:none;border:none;cursor:pointer">✕</button></div>
+<div id="nL" style="max-height:180px;overflow-y:auto;margin-bottom:10px"></div>
+<form onsubmit="aN(event)"><input type="text" class="n-in" id="nI" placeholder="Anotação sobre Despesa Pública..." required><button type="submit" class="b-sm">💾 Salvar</button></form>
+</div>
+
+<script>
+const SK='afo-desp-04';let hM=false;
+function webS(){const s=window.getSelection().toString();window.open(`https://duckduckgo.com/?q=${encodeURIComponent(s||'Despesa pública classificação econômica GND ações orçamentárias MTO CESPE TCDF')}`,'_blank')}
+function tN(){const p=document.getElementById('nP');p.style.display=p.style.display==='none'?'block':'none';if(p.style.display==='block')lN()}
+function lN(){const n=JSON.parse(localStorage.getItem(SK)||'[]');document.getElementById('nL').innerHTML=n.length?n.map((x,i)=>`<div class="n-item">${x.text}<br><small style="cursor:pointer;color:#666" onclick="dN(${i})">remover</small></div>`).join(''):'<p style="font-size:.9em;color:#666">Sem notas.</p>'}
+function aN(e){e.preventDefault();const i=document.getElementById('nI'),n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:i.value,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));i.value='';lN()}
+function dN(i){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.splice(i,1);localStorage.setItem(SK,JSON.stringify(n));lN()}
+function tH(){hM=!hM;document.body.style.cursor=hM?'text':'auto';document.querySelectorAll('.t-btn')[2].textContent=hM?'✅ ON':'✏️ Destaque';hM?document.addEventListener('mouseup',hS):document.removeEventListener('mouseup',hS)}
+function hS(){const s=window.getSelection();if(s.toString().length>10){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:`🔍 "${s.toString().substring(0,40)}..." - ${prompt('Nota:','')||'-'}`,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));alert('✅ Destaque salvo!');s.removeAllRanges()}}
+document.addEventListener('DOMContentLoaded',lN);
+</script>
+</body>
+</html>

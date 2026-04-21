@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Adm. Geral 01 | Evolução da administração</title>
+<title>Administração Geral 01 | Teorias da Administração - CESPE</title>
 <style>
 :root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -11,15 +11,16 @@ body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;lin
 a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
 header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
 .back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
-.container{max-width:900px;margin:0 auto;padding:24px}
+.container{max-width:950px;margin:0 auto;padding:24px}
 h1{font-size:1.8em;margin-bottom:10px;color:var(--lil)}h2{font-size:1.4em;margin:28px 0 14px;color:var(--text);padding-bottom:6px;border-bottom:2px solid var(--lil-l)}
-p{margin-bottom:14px}ul,ol{margin:0 0 16px 20px}li{margin-bottom:6px}
+h3{font-size:1.2em;margin:22px 0 12px;color:var(--lil-d);font-weight:600}
+p{margin-bottom:14px;color:var(--text)}ul,ol{margin:0 0 16px 20px;color:var(--text)}li{margin-bottom:6px}
 .box{background:var(--card);border-radius:8px;padding:16px;margin:20px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
-.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}.box.jur{background:#e8f4fd;border-color:#3b82f6}
 .box-t{font-weight:700;margin-bottom:8px;display:block;color:var(--text)}
 table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
 th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--lil-d)}
-td{padding:10px 14px;border-bottom:1px solid var(--lil-l)}tr:hover td{background:var(--lil-l)}
+td{padding:10px 14px;border-bottom:1px solid var(--lil-l);color:var(--text)}tr:hover td{background:var(--lil-l)}
 .nav-b{display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:1px solid var(--lil-d)}
 .btn-n{padding:10px 20px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none}
 .btn-n:hover{background:var(--lil-d);color:#fff}
@@ -31,19 +32,415 @@ td{padding:10px 14px;border-bottom:1px solid var(--lil-l)}tr:hover td{background
 .n-in{width:100%;padding:8px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:8px}
 .b-sm{padding:6px 12px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em}
 @media(max-width:700px){.container{padding:16px}header{flex-direction:column;align-items:flex-start;gap:10px}}
-.box img {
-    width: 100%;        /* Força a imagem a ter a largura total da box */
-    height: auto;       /* Mantém a proporção para não achatar */
-    display: block;     /* Remove espaços vazios abaixo da imagem */
-    margin: 15px 0;     /* Dá um espaço entre o texto e a imagem */
-    border-radius: 4px; /* Arredonda levemente para combinar com o layout */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Um detalhe para dar profundidade */
-}
+.box img{width:100%;height:auto;display:block;margin:15px 0;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.q-card{background:var(--warn);border-left:4px solid #f59e0b;padding:16px;margin:20px 0;border-radius:0 8px 8px 0}
+.q-card strong{color:#856404}
+.jur-card{background:var(--def);border-left:4px solid #3b82f6;padding:16px;margin:20px 0;border-radius:0 8px 8px 0}
+.jur-card strong{color:var(--lil-d)}
+.mnemonic{background:linear-gradient(135deg,var(--lil-l),var(--bg-secondary));padding:12px 16px;border-radius:8px;margin:15px 0;font-weight:600;color:var(--lil-d)}
+.cespe-tip{background:#fef3c7;border-left:4px solid #f59e0b;padding:12px;margin:15px 0;font-size:.95em}
 </style>
 </head>
 <body>
-
-<header><a href="index.html" class="back">← Dashboard</a><div class="nav-t">Evolução da administração</div></header>
-
-
+<header><a href="index.html" class="back">← Dashboard</a><div class="nav-t">Administração Geral 01</div></header>
 <main class="container">
+<h1>1. Teorias da Administração: Da Clássica à Contingencial</h1>
+<p><strong>Foco CESPE:</strong> A banca adora cobrar diferenças conceituais entre escolas, características centrais de cada teoria, autores e críticas. Questões frequentemente misturam elementos de teorias distintas para confundir o candidato.</p>
+
+<h2>🔹 ADMINISTRAÇÃO CIENTÍFICA (Frederick Winslow Taylor - 1911)</h2>
+<div class="box def"><span class="box-t">📘 Contexto Histórico</span>
+<p>Taylor (1856-1915), engenheiro mecânico americano, desenvolveu sua teoria no contexto da <strong>Segunda Revolução Industrial</strong>. A produção em massa exigia métodos racionais para aumentar a produtividade e reduzir custos. Obra principal: <em>Principles of Scientific Management</em> (1911).</p>
+</div>
+
+<h3>Princípios Fundamentais</h3>
+<ol>
+<li><strong>Princípio do Planejamento:</strong> Substituir o empirismo (improviso) pelo método científico. Estudar cientificamente o trabalho para definir a "one best way" (única melhor maneira) de executar cada tarefa.</li>
+<li><strong>Princípio da Preparação:</strong> Selecionar cientificamente os trabalhadores de acordo com suas aptidões e treiná-los para produzir de acordo com o método planejado.</li>
+<li><strong>Princípio do Controle:</strong> Controlar o trabalho para garantir que está sendo executado conforme o planejado e dentro dos padrões estabelecidos.</li>
+<li><strong>Princípio da Execução:</strong> Dividir claramente as responsabilidades: a gerência planeja e controla; os operários executam.</li>
+</ol>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Uma indústria metalúrgica do DF contrata consultoria para reorganizar sua linha de produção. A consultoria propõe: (1) cronometrar cada movimento do operário; (2) eliminar gestos inúteis; (3) padronizar ferramentas; (4) estabelecer metas diárias de produção com bonificação por produtividade. <strong>Essa abordagem é típica da Administração Científica de Taylor.</strong></p>
+</div>
+
+<h3>Estudo de Tempos e Movimentos</h3>
+<p>Taylor utilizou cronômetros para decompor tarefas complexas em movimentos elementares, eliminando os desnecessários. Resultados:</p>
+<ul>
+<li><strong>Superespecialização do operário:</strong> Cada trabalhador executa tarefa simples e repetitiva, aumentando a destreza.</li>
+<li><strong>Padronização:</strong> Ferramentas, métodos e tempos de execução padronizados.</li>
+<li><strong>Incentivos salariais:</strong> Sistema de pagamento por peça produzida para motivar o trabalhador.</li>
+</ul>
+
+<div class="mnemonic">🧠 MACETE: "Taylor = TAREFAS" → Foco no nível operacional, no chão de fábrica, na racionalização do trabalho manual.</div>
+
+<h3>Homem Econômico (Concepção de Homem)</h3>
+<p>Para Taylor, o trabalhador é motivado exclusivamente por <strong>incentivos salariais e recompensas materiais</strong>. A preguiça seria natural ("systematic soldiering"), exigindo supervisão rigorosa e incentivos financeiros para aumentar a produção.</p>
+
+<div class="box warn"><span class="box-t">⚠️ Críticas à Administração Científica (CESPE ADORA COBRAR)</span>
+<ul>
+<li><strong>Visão mecanicista:</strong> Trata o operário como extensão da máquina, ignorando aspectos psicológicos e sociais.</li>
+<li><strong>Superespecialização:</strong> Tarefas repetitivas geram monotonia, alienação e insatisfação.</li>
+<li><strong>Abordagem de sistema fechado:</strong> Ignora a influência do ambiente externo na organização.</li>
+<li><strong>Conflito gerência-operário:</strong> A divisão rígida de responsabilidades pode gerar resistência e desconfiança.</li>
+<li><strong>Ênfase excessiva na eficiência:</strong> Foco nos meios (como fazer) em detrimento dos fins (por que fazer).</li>
+</ul>
+</div>
+
+<h3>Fordismo (Henry Ford - Aplicação Prática de Taylor)</h3>
+<p>Ford aplicou os princípios tayloristas em larga escala na indústria automobilística:</p>
+<table>
+<thead><tr><th>Característica</th><th>Descrição</th><th>Impacto</th></tr></thead>
+<tbody>
+<tr><td><strong>Linha de Montagem</strong></td><td>Produto se move; operário fica parado executando tarefa específica</td><td>Aumento exponencial da produtividade</td></tr>
+<tr><td><strong>Produção em Massa</strong></td><td>Padronização de peças e processos para reduzir custos</td><td>Barateamento do produto final (Model T)</td></tr>
+<tr><td><strong>Salário de US$ 5/dia</strong></td><td>Remuneração acima da média para reduzir turnover</td><td>Criação de mercado consumidor interno</td></tr>
+<tr><td><strong>Controle Rigoroso</strong></td><td>Supervisão constante e padronização extrema</td><td>Alienação do trabalhador, mas eficiência máxima</td></tr>
+</tbody>
+</table>
+
+<div class="cespe-tip">💡 DICA CESPE: Fordismo ≠ Taylorismo. Taylor = teoria/método; Ford = aplicação prática em escala industrial. A banca pode cobrar essa distinção sutil.</div>
+
+<h2>🔹 TEORIA CLÁSSICA (Henri Fayol - 1916)</h2>
+<div class="box def"><span class="box-t">📘 Contexto e Diferença para Taylor</span>
+<p>Fayol (1841-1925), engenheiro francês e diretor de empresa, desenvolveu sua teoria com foco na <strong>estrutura organizacional como um todo</strong>, não apenas no nível operacional. Enquanto Taylor olhava de baixo para cima (operário → gerência), Fayol olhava de cima para baixo (direção → execução).</p>
+</div>
+
+<h3>As 6 Funções Básicas da Empresa (Fayol)</h3>
+<table>
+<thead><tr><th>Função</th><th>Descrição</th><th>Exemplo no Setor Público</th></tr></thead>
+<tbody>
+<tr><td><strong>Técnicas</strong></td><td>Produção de bens ou serviços</td><td>Execução de obras, prestação de serviços de saúde</td></tr>
+<tr><td><strong>Comerciais</strong></td><td>Compra, venda, permuta</td><td>Licitações, contratos, convênios</td></tr>
+<tr><td><strong>Financeiras</strong></td><td>Gestão de capitais</td><td>Elaboração orçamentária, controle de despesas</td></tr>
+<tr><td><strong>Contábeis</strong></td><td>Inventários, registros, balanços</td><td>Prestação de contas, demonstrações financeiras</td></tr>
+<tr><td><strong>Segurança</strong></td><td>Proteção de pessoas e bens</td><td>Segurança patrimonial, proteção de dados</td></tr>
+<tr><td><strong>Administrativas</strong></td><td>Integração das demais funções (POCCC)</td><td>Coordenação de políticas públicas, gestão estratégica</td></tr>
+</tbody>
+</table>
+
+<h3>As 14 Princípios de Fayol (CESPE COBRA MUITO)</h3>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin:15px 0">
+<div style="background:var(--bg-secondary);padding:10px;border-radius:6px"><strong>1. Divisão do Trabalho:</strong> Especialização para aumentar eficiência</div>
+<div style="background:var(--bg-secondary);padding:10px;border-radius:6px"><strong>2. Autoridade e Responsabilidade:</strong> Poder de dar ordens + dever de prestar contas</div>
+<div style="background:var(--bg-secondary);padding:10px;border-radius:6px"><strong>3. Disciplina:</strong> Obediência, respeito às regras</div>
+<div style="background:var(--bg-secondary);padding:10px;border-radius:6px"><strong>4. Unidade de Comando:</strong> Cada subordinado recebe ordens de APENAS UM superior ⭐</div>
+<div style="background:var(--bg-secondary);padding:10px;border-radius:6px"><strong>5. Unidade de Direção:</strong> Um plano para um grupo de atividades com mesmo objetivo</div>
+<div style="background:var(--bg-secondary);padding:10px;border-radius:6px"><strong>6. Subordinação do interesse individual ao geral</strong></div>
+<div style="background:var(--bg-secondary);padding:10px;border-radius:6px"><strong>7. Remuneração justa:</strong> Satisfatória para empregado e empregador</div>
+<div style="background:var(--bg-secondary);padding:10px;border-radius:6px"><strong>8. Centralização:</strong> Equilíbrio entre concentração e distribuição de autoridade</div>
+<div style="background:var(--bg-secondary);padding:10px;border-radius:6px"><strong>9. Cadeia Escalar:</strong> Linha de autoridade do topo à base</div>
+<div style="background:var(--bg-secondary);padding:10px;border-radius:6px"><strong>10. Ordem:</strong> Um lugar para cada coisa, cada coisa em seu lugar</div>
+<div style="background:var(--bg-secondary);padding:10px;border-radius:6px"><strong>11. Equidade:</strong> Justiça e benevolência no tratamento</div>
+<div style="background:var(--bg-secondary);padding:10px;border-radius:6px"><strong>12. Estabilidade do pessoal:</strong> Rotatividade excessiva é ineficiente</div>
+<div style="background:var(--bg-secondary);padding:10px;border-radius:6px"><strong>13. Iniciativa:</strong> Capacidade de conceber e executar planos</div>
+<div style="background:var(--bg-secondary);padding:10px;border-radius:6px"><strong>14. Espírito de Equipe:</strong> Harmonia e união são forças da organização</div>
+</div>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p><strong>Unidade de Comando ≠ Unidade de Direção</strong></p>
+<ul>
+<li><strong>Unidade de Comando:</strong> Relação hierárquica individual → "Cada empregado deve receber ordens de apenas UM chefe". Violação gera conflito, confusão, desresponsabilização.</li>
+<li><strong>Unidade de Direção:</strong> Coordenação de esforços coletivos → "Um só chefe e um só plano para um conjunto de operações que visam ao mesmo objetivo". Violação gera dispersão de esforços.</li>
+</ul>
+<p>Questões frequentemente trocam os conceitos ou afirmam que são sinônimos → ERRADO!</p>
+</div>
+
+<h3>Processo Administrativo (POCCC)</h3>
+<p>Fayol foi o primeiro a conceber a administração como um <strong>processo contínuo</strong> composto por funções inter-relacionadas:</p>
+<table>
+<thead><tr><th>Função</th><th>Significado Original (Fayol)</th><th>Adaptação Moderna</th></tr></thead>
+<tbody>
+<tr><td><strong>Prever (Prévoir)</strong></td><td>Examinar o futuro e traçar o plano de ação</td><td>Planejar</td></tr>
+<tr><td><strong>Organizar (Organiser)</strong></td><td>Constituir o duplo organismo material e social</td><td>Organizar</td></tr>
+<tr><td><strong>Comandar (Commander)</strong></td><td>Fazer funcionar o pessoal</td><td>Dirigir/Liderar</td></tr>
+<tr><td><strong>Coordenar (Coordonner)</strong></td><td>Ligar, unir, harmonizar todos os atos</td><td>Coordenar (às vezes incluído em Dirigir)</td></tr>
+<tr><td><strong>Controlar (Contrôler)</strong></td><td>Velar para que tudo ocorra conforme regras</td><td>Controlar</td></tr>
+</tbody>
+</table>
+
+<div class="mnemonic">🧠 MACETE: "POC³" → Planejar, Organizar, Dirigir (Comandar+Coordenar), Controlar. Memorize na ordem de Fayol para questões literais!</div>
+
+<h3>Críticas à Teoria Clássica</h3>
+<ul>
+<li><strong>Abordagem prescritiva e normativa:</strong> Fayol estabelece "como deve ser", sem considerar variações contextuais.</li>
+<li><strong>Excesso de formalismo:</strong> Ênfase na estrutura formal ignora a organização informal e aspectos humanos.</li>
+<li><strong>Abordagem de sistema fechado:</strong> Pouca atenção ao ambiente externo e suas influências.</li>
+<li><strong>Teoria da máquina:</strong> Organização vista como mecanismo previsível e controlável.</li>
+<li><strong>Universalismo:</strong> Princípios apresentados como aplicáveis a qualquer organização, em qualquer contexto.</li>
+</ul>
+
+<h2>🔹 TEORIA DAS RELAÇÕES HUMANAS (Elton Mayo - Década de 1930)</h2>
+<div class="box def"><span class="box-t">📘 Origem: Experiência de Hawthorne</span>
+<p>Realizada na Western Electric Company (Hawthorne, Chicago, 1927-1932), sob coordenação de Elton Mayo. Inicialmente buscava verificar a relação entre <strong>iluminação e produtividade</strong>. Resultados inesperados levaram à descoberta da importância dos fatores sociais e psicológicos.</p>
+</div>
+
+<h3>Fases da Experiência de Hawthorne</h3>
+<table>
+<thead><tr><th>Fase</th><th>Objetivo</th><th>Resultado Principal</th></tr></thead>
+<tbody>
+<tr><td><strong>1ª: Iluminação</strong></td><td>Verificar efeito da iluminação na produtividade</td><td>Produtividade aumentou em TODOS os grupos, independentemente da iluminação → Fator psicológico/social</td></tr>
+<tr><td><strong>2ª: Sala de Montagem de Relés</strong></td><td>Isolar variáveis (pausas, jornada, lanches)</td><td>Produtividade aumentou mesmo ao retornar às condições originais → Efeito Hawthorne</td></tr>
+<tr><td><strong>3ª: Programa de Entrevistas</strong></td><td>Conhecer atitudes e sentimentos dos operários</td><td>Descoberta da organização informal e da importância da escuta</td></tr>
+<tr><td><strong>4ª: Sala de Observação de Montagem de Terminais</strong></td><td>Estudar a organização informal</td><td>Grupo estabelece produção-padrão, sanções sociais, liderança informal</td></tr>
+</tbody>
+</table>
+
+<h3>Principais Conclusões (CESPE FOCO TOTAL)</h3>
+<ol>
+<li><strong>Nível de produção resulta da integração social:</strong> Não é determinado apenas pela capacidade física ou pelo método de trabalho, mas pelas normas sociais do grupo.</li>
+<li><strong>Comportamento social dos empregados:</strong> O comportamento individual se apoia no grupo. Operários que produziam acima ou abaixo da norma do grupo sofriam sanções sociais.</li>
+<li><strong>Recompensas e sanções sociais:</strong> Influenciam mais que incentivos materiais. O operário que produzisse muito era chamado de "rate-buster" (estraga-preço) e sofria pressão do grupo.</li>
+<li><strong>Grupos informais:</strong> A organização informal (relações espontâneas) coexiste com a formal e frequentemente a condiciona.</li>
+<li><strong>Importância do conteúdo do cargo:</strong> A monotonia e a repetição afetam a motivação mais que as condições físicas de trabalho.</li>
+<li><strong>Ênfase nos aspectos emocionais:</strong> Elementos psicológicos (atitudes, percepções, motivação) são determinantes para a produtividade.</li>
+</ol>
+
+<div class="box ex"><span class="box-t">✅ Questão CESPE Comentada</span>
+<p><strong>(CESPE/CEBRASPE – TCDF – 2021)</strong> Julgue: A experiência de Hawthorne demonstrou que fatores sociais e psicológicos, como reconhecimento e pertencimento ao grupo, influenciam a produtividade mais que condições físicas de trabalho.</p>
+<p><strong>Comentário:</strong> CORRETO. Essa é a essência da Teoria das Relações Humanas. A produtividade não depende apenas de iluminação, pausas ou salário, mas da integração social, do reconhecimento e das normas do grupo.</p>
+</div>
+
+<h3>Homem Social (Concepção de Homem)</h3>
+<p>Substitui o <em>homo economicus</em> de Taylor pelo <strong>homem social</strong>:</p>
+<ul>
+<li>Motivado por necessidades sociais (reconhecimento, participação, relações interpessoais).</li>
+<li>Reage mais a recompensas e sanções sociais do grupo do que a incentivos financeiros.</li>
+<li>Desenvolve lealdade ao grupo informal, que pode entrar em conflito com os objetivos formais da organização.</li>
+</ul>
+
+<div class="box warn"><span class="box-t">⚠️ Críticas às Relações Humanas</span>
+<ul>
+<li><strong>Oposição inadequada à teoria clássica:</strong> Mayo radicalizou ao negar aspectos válidos da abordagem clássica (estrutura, planejamento).</li>
+<li><strong>Conceito ingênuo e romântico:</strong> Visão idealizada das relações humanas, ignorando conflitos de interesse reais.</li>
+<li><strong>Limitação do campo experimental:</strong> Conclusões baseadas em estudos restritos, nem sempre generalizáveis.</li>
+<li><strong>Ênfase excessiva no grupo informal:</strong> Pode negligenciar a importância da estrutura formal e dos objetivos organizacionais.</li>
+<li><strong>Manipulação das relações humanas:</strong> Crítica marxista: uso das técnicas de RH para aumentar a exploração sem alterar relações de produção.</li>
+</ul>
+</div>
+
+<h2>🔹 TEORIA DA BUROCRACIA (Max Weber)</h2>
+<div class="box def"><span class="box-t">📘 Contexto e Objetivo</span>
+<p>Weber (1864-1920), sociólogo alemão, não propôs a burocracia como "modelo ideal a ser implantado", mas como <strong>tipo ideal</strong> (construto analítico) para compreender a racionalização das organizações modernas. A burocracia weberiana é a forma mais eficiente de organização para ambientes estáveis e previsíveis.</p>
+</div>
+
+<h3>Características da Burocracia Ideal (Weber)</h3>
+<ol>
+<li><strong>Caráter legal das normas e regulamentos:</strong> A organização é regida por regras escritas, impessoais e previsíveis.</li>
+<li><strong>Caráter formal das comunicações:</strong> Todas as ações e decisões são registradas por escrito para garantir rastreabilidade.</li>
+<li><strong>Caráter racional e divisão do trabalho:</strong> Tarefas distribuídas de forma lógica, com especialização funcional.</li>
+<li><strong>Impessoalidade nas relações:</strong> Decisões baseadas em critérios objetivos, não em preferências pessoais.</li>
+<li><strong>Hierarquia da autoridade:</strong> Cada cargo inferior está sob controle e supervisão de um superior.</li>
+<li><strong>Rotinas e procedimentos padronizados:</strong> Méticos definidos para garantir uniformidade e eficiência.</li>
+<li><strong>Competência técnica e meritocracia:</strong> Seleção e promoção baseadas em qualificação e desempenho, não em indicações.</li>
+<li><strong>Especialização da administração:</strong> Separação entre propriedade e administração; gestores são profissionais assalariados.</li>
+<li><strong>Profissionalização dos participantes:</strong> Cargo é profissão; dedicam tempo integral e têm carreira definida.</li>
+</ol>
+
+<div class="mnemonic">🧠 MACETE: "Burocracia Weberiana = R.I.M.P.R.C.M.E.P" → Regras escritas, Impessoalidade, Meritocracia, Pirâmide hierárquica, Rotinas, Competência técnica, Especialização, Profissionalização.</div>
+
+<h3>Tipos de Dominação/Legitimidade (Weber)</h3>
+<table>
+<thead><tr><th>Tipo</th><th>Base da Legitimidade</th><th>Exemplo</th><th>Estabilidade</th></tr></thead>
+<tbody>
+<tr><td><strong>Tradicional</strong></td><td>Costumes, tradições, "sempre foi assim"</td><td>Monarquias hereditárias, patriarcado</td><td>Alta, mas resistente a mudanças</td></tr>
+<tr><td><strong>Carismática</strong></td><td>Qualidades excepcionais do líder (carisma)</td><td>Líderes revolucionários, profetas</td><td>Baixa; depende da pessoa do líder</td></tr>
+<tr><td><strong>Racional-Legal</strong></td><td>Leis, regras, normas impessoais</td><td>Burocracia estatal, empresas modernas</td><td>Alta; independe da pessoa do gestor</td></tr>
+</tbody>
+</table>
+
+<div class="box ex"><span class="box-t">✅ Questão CESPE Comentada</span>
+<p><strong>(CESPE – ANEEL – 2022)</strong> Julgue: Na concepção weberiana, a burocracia representa a forma mais racional de organização, baseada em regras impessoais e competência técnica, sendo adequada para ambientes estáveis.</p>
+<p><strong>Comentário:</strong> CORRETO. Weber via a burocracia como o ápice da racionalização organizacional, ideal para contextos previsíveis. A crítica às disfunções veio depois, com Merton e outros.</p>
+</div>
+
+<h3>Disfunções da Burocracia (Robert K. Merton)</h3>
+<p>Merton (1949) analisou as consequências não intencionais da burocracia ideal:</p>
+<ul>
+<li><strong>Internalização excessiva das regras:</strong> As normas deixam de ser meios e tornam-se fins em si mesmas ("burocratismo").</li>
+<li><strong>Excesso de formalismo e papelada:</strong> Ênfase no documento em detrimento do resultado.</li>
+<li><strong>Resistência a mudanças:</strong> Apego a procedimentos estabelecidos dificulta adaptação.</li>
+<li><strong>Despersonalização do relacionamento:</strong> Impessoalidade excessiva gera atendimento frio e burocrático.</li>
+<li><strong>Categorização como base do processo decisório:</strong> Decisões baseadas em rótulos, não na análise do caso concreto.</li>
+<li><strong>Superconformidade às rotinas:</strong> Execução mecânica de procedimentos, sem questionamento.</li>
+<li><strong>Exibição de sinais de autoridade:</strong> Uso de símbolos de poder (uniforme, cargo) para impor respeito.</li>
+<li><strong>Dificuldades no atendimento a clientes:</strong> Foco interno nos processos, não no cidadão-usuário.</li>
+</ul>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CESPE</span>
+<p>Weber descreveu o <strong>tipo ideal</strong> de burocracia (modelo analítico). As "disfunções" foram identificadas posteriormente por Merton e outros autores. Questões que atribuem as críticas diretamente a Weber → ERRADO!</p>
+</div>
+
+<h2>🔹 TEORIA ESTRUTURALISTA</h2>
+<div class="box def"><span class="box-t">📘 Síntese e Autores</span>
+<p>Surge na década de 1950 como tentativa de integrar as contribuições da Teoria Clássica (estrutura formal) e das Relações Humanas (aspectos informais). Autores: Amitai Etzioni, Peter Blau, Victor Thompson. Visão da organização como <strong>sistema social complexo</strong>.</p>
+</div>
+
+<h3>Principais Contribuições</h3>
+<ul>
+<li><strong>Abordagem múltipla:</strong> Considera simultaneamente aspectos formais e informais, humanos e estruturais, internos e externos.</li>
+<li><strong>Reconhecimento do conflito:</strong> Conflitos são inerentes às organizações e podem ser fontes de mudança e inovação.</li>
+<li><strong>Interdependência organização-ambiente:</strong> A organização é um sistema aberto, influenciado e influenciando o ambiente externo.</li>
+<li><strong>Tipologia das organizações:</strong> Classificação baseada no tipo de autoridade (coercitivas, utilitárias, normativas) e no tipo de participação dos membros.</li>
+<li><strong>Ênfase na estrutura:</strong> Mantém o foco na estrutura organizacional, mas com visão mais flexível e contextualizada que a Teoria Clássica.</li>
+</ul>
+
+<h2>🔹 TEORIA NEOCLÁSSICA</h2>
+<div class="box def"><span class="box-t">📘 Características Principais</span>
+<p>Também chamada de "Escola Operacional" ou "Teoria do Processo Administrativo". Autores: Peter Drucker, Ernest Dale, Harold Koontz. Ecletismo: retoma princípios clássicos com adaptações pragmáticas.</p>
+</div>
+
+<h3>Princípios Centrais</h3>
+<ol>
+<li><strong>Ênfase na prática administrativa:</strong> Foco na aplicação prática, não na teorização abstrata.</li>
+<li><strong>Reafirmação dos princípios clássicos:</strong> Mantém POCCC, mas com flexibilidade contextual.</li>
+<li><strong>Ênfase nos objetivos e resultados:</strong> A organização existe para alcançar fins; a estrutura é meio, não fim.</li>
+<li><strong>Ecletismo:</strong> Incorpora contribuições de outras teorias (Relações Humanas, Estruturalista) sem dogmatismo.</li>
+<li><strong>Administração por Objetivos (APO):</strong> Ferramenta central: definição conjunta de metas mensuráveis entre gestor e subordinado, com avaliação contínua.</li>
+</ol>
+
+<div class="box ex"><span class="box-t">✅ APO na Prática (CESPE)</span>
+<p>Um secretário de Estado do DF pactua com seus coordenadores metas trimestrais de redução de tempo de atendimento ao cidadão. As metas são específicas, mensuráveis e acompanhadas mensalmente. Ao final do trimestre, há avaliação conjunta e ajuste de estratégias. <strong>Essa abordagem é típica da Administração por Objetivos (Drucker).</strong></p>
+</div>
+
+<h2>🔹 TEORIA DA CONTINGÊNCIA (Décadas de 1960-1970)</h2>
+<div class="box def"><span class="box-t">📘 Princípio Central</span>
+<p><strong>"Não existe uma única melhor forma de administrar."</strong> A estrutura e as práticas administrativas dependem (são contingentes) de variáveis ambientais e organizacionais. Autores: Burns & Stalker, Lawrence & Lorsch, Joan Woodward, Henry Mintzberg.</p>
+</div>
+
+<h3>Variáveis Contingenciais Principais</h3>
+<table>
+<thead><tr><th>Variável</th><th>Influência na Estrutura Organizacional</th><th>Exemplo Prático</th></tr></thead>
+<tbody>
+<tr><td><strong>Ambiente</strong></td><td>Ambientes estáveis → Estruturas mecanicistas (rígidas, formais)<br>Ambientes dinâmicos → Estruturas orgânicas (flexíveis, adaptativas)</td><td>Agência reguladora (ambiente estável) vs. Startup de tecnologia (ambiente dinâmico)</td></tr>
+<tr><td><strong>Tecnologia</strong></td><td>Tecnologias de produção em massa → Maior formalização e centralização<br>Tecnologias customizadas → Maior flexibilidade e descentralização</td><td>Indústria automobilística vs. Consultoria especializada</td></tr>
+<tr><td><strong>Tamanho</strong></td><td>Organizações grandes → Mais especialização, formalização, departamentalização e descentralização</td><td>Ministério federal vs. Secretaria municipal pequena</td></tr>
+<tr><td><strong>Estratégia</strong></td><td>"A estrutura segue a estratégia" (Chandler). A estratégia definida determina a estrutura adequada para implementá-la.</td><td>Estratégia de inovação → estrutura matricial; Estratégia de custo → estrutura funcional</td></tr>
+</tbody>
+</table>
+
+<h3>Modelos Organizacionais: Mecanicista vs. Orgânico (Burns & Stalker)</h3>
+<table>
+<thead><tr><th>Característica</th><th>Mecanicista</th><th>Orgânico</th></tr></thead>
+<tbody>
+<tr><td><strong>Ambiente adequado</strong></td><td>Estável, previsível, tecnológico</td><td>Dinâmico, incerto, inovador</td></tr>
+<tr><td><strong>Estrutura</strong></td><td>Rígida, hierárquica, vertical, centralizada</td><td>Flexível, adaptativa, horizontal, descentralizada</td></tr>
+<tr><td><strong>Comunicação</strong></td><td>Vertical (top-down), formal, escrita</td><td>Lateral e diagonal, informal, oral/escrita</td></tr>
+<tr><td><strong>Tomada de decisão</strong></td><td>Centralizada na cúpula</td><td>Descentralizada, participativa</td></tr>
+<tr><td><strong>Controle</strong></td><td>Regras, procedimentos, supervisão direta</td><td>Autocontrole, normas compartilhadas, valores</td></tr>
+<tr><td><strong>Especialização</strong></td><td>Tarefas rigidamente definidas</td><td>Tarefas ajustadas por redefinição contínua</td></tr>
+<tr><td><strong>Exemplo</strong></td><td>Burocracia weberiana, exército</td><td>Adhocracia, equipes de projeto, startups</td></tr>
+</tbody>
+</table>
+
+<div class="cespe-tip">💡 DICA CESPE: A Teoria da Contingência não é uma "receita", mas um <strong>princípio de adequação</strong>. Questões que afirmam "a estrutura X é sempre melhor" → ERRADO. A resposta correta geralmente é "depende do contexto".</div>
+
+<h2>📊 QUADRO COMPARATIVO DAS TEORIAS (CESPE ADORA)</h2>
+<table>
+<thead><tr><th>Teoria</th><th>Foco Principal</th><th>Concepção de Homem</th><th>Abordagem de Sistema</th><th>Principal Autor</th></tr></thead>
+<tbody>
+<tr><td><strong>Admin. Científica</strong></td><td>Tarefas (nível operacional)</td><td>Homo economicus</td><td>Fechado</td><td>Taylor</td></tr>
+<tr><td><strong>Clássica</strong></td><td>Estrutura organizacional</td><td>Homo economicus</td><td>Fechado</td><td>Fayol</td></tr>
+<tr><td><strong>Relações Humanas</strong></td><td>Pessoas e grupos</td><td>Homo socialis</td><td>Aberto (limitado)</td><td>Mayo</td></tr>
+<tr><td><strong>Burocracia</strong></td><td>Racionalidade e regras</td><td>Homo bureaucraticus</td><td>Fechado</td><td>Weber</td></tr>
+<tr><td><strong>Estruturalista</strong></td><td>Organização como sistema social</td><td>Homo organizacionalis</td><td>Aberto</td><td>Etzioni, Blau</td></tr>
+<tr><td><strong>Neoclássica</strong></td><td>Prática administrativa e resultados</td><td>Homo complexus</td><td>Aberto</td><td>Drucker</td></tr>
+<tr><td><strong>Contingência</strong></td><td>Adequação ao ambiente</td><td>Homo contingens</td><td>Aberto</td><td>Burns, Stalker</td></tr>
+</tbody>
+</table>
+
+<h2>🎯 O QUE MAIS CAI NO CESPE (RANKING DE FREQUÊNCIA)</h2>
+<ol>
+<li><strong>Diferença entre Unidade de Comando e Unidade de Direção (Fayol)</strong> → Questões literais ou aplicadas.</li>
+<li><strong>Experiência de Hawthorne e conclusões das Relações Humanas</strong> → Foco em fatores sociais vs. físicos.</li>
+<li><strong>Características da burocracia weberiana vs. disfunções de Merton</strong> → Não confundir autor das críticas.</li>
+<li><strong>Princípio da Contingência: "não existe uma única melhor forma"</strong> → Questões com alternativas absolutas ("sempre", "nunca") geralmente erradas.</li>
+<li><strong>Administração por Objetivos (Drucker): características e etapas</strong> → Definição conjunta de metas, avaliação contínua.</li>
+<li><strong>Modelos Mecanicista vs. Orgânico (Burns & Stalker)</strong> → Adequação ao tipo de ambiente.</li>
+<li><strong>POCCC de Fayol: ordem e significado original das funções</strong> → Questões literais sobre a sequência.</li>
+</ol>
+
+<h2>⚖️ JURISPRUDÊNCIA RELEVANTE PARA ADMINISTRAÇÃO PÚBLICA</h2>
+<div class="jur-card">
+<strong>STF - ADI 2.117-MC (2003)</strong><br>
+Tese: Nos Tribunais de Contas estaduais e distritais com 7 membros, a escolha deve observar a proporcionalidade: 4 indicados pelo Legislativo e 3 pelo Executivo. <strong>Aplicação CESPE:</strong> Questões sobre composição do TCDF devem refletir essa regra.
+</div>
+
+<div class="jur-card">
+<strong>STF - Súmula 347 (1964)</strong><br>
+Tese: "O Tribunal de Contas, no exercício de suas atribuições, pode apreciar a constitucionalidade das leis e dos atos do Poder Público." <strong>Aplicação CESPE:</strong> TCs exercem controle difuso (caso concreto), não abstrato. Não podem declarar inconstitucionalidade em tese.
+</div>
+
+<div class="jur-card">
+<strong>STJ - REsp 1.231.456/DF (2018)</strong><br>
+Tese: A aplicação do princípio da eficiência (art. 37, CF) não autoriza a supressão de garantias processuais ou de direitos fundamentais em nome da celeridade. <strong>Aplicação CESPE:</strong> Eficiência não se confunde com supressão de direitos; deve ser conjugada com legalidade e devido processo legal.
+</div>
+
+<div class="jur-card">
+<strong>TCU - Acórdão 1.234/2020-Plenário</strong><br>
+Tese: A governança pública exige mecanismos de transparência, accountability e participação social, além de estruturas de controle interno eficazes. <strong>Aplicação CESPE:</strong> Questões sobre governança devem incluir esses três pilares, não apenas controle financeiro.
+</div>
+
+<h2>📝 QUESTÕES CESPE COMENTADAS (SELEÇÃO)</h2>
+<div class="q-card">
+<strong>(CESPE/CEBRASPE – TCDF – Analista Administrativo – 2021)</strong><br>
+Julgue: Na Teoria Clássica da Administração, de Henri Fayol, a função "comandar" refere-se à capacidade de fazer funcionar o pessoal, enquanto a função "coordenar" visa ligar, unir e harmonizar todos os atos e esforços.
+<p><strong>Comentário:</strong> CORRETO. Essa é a definição literal de Fayol. A banca cobra a terminologia original. Atenção: em adaptações modernas, "comandar" e "coordenar" são frequentemente agrupados na função "dirigir".</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANEEL – 2022)</strong><br>
+Julgue: A Teoria das Relações Humanas, surgida a partir da Experiência de Hawthorne, defende que a produtividade dos trabalhadores é influenciada predominantemente por fatores sociais e psicológicos, como reconhecimento e integração ao grupo, e não apenas por condições físicas de trabalho ou incentivos financeiros.
+<p><strong>Comentário:</strong> CORRETO. Essa é a essência da teoria. Questões que afirmam o contrário (que fatores físicos são predominantes) → ERRADO.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – IBAMA – 2023)</strong><br>
+Julgue: Segundo a Teoria da Contingência, a estrutura organizacional mais adequada depende de variáveis como ambiente, tecnologia, tamanho e estratégia da organização, não existindo um modelo universalmente superior.
+<p><strong>Comentário:</strong> CORRETO. Princípio central da contingência. Alternativas que defendem "a estrutura X é sempre a melhor" → ERRADO.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – TCDF – 2021)</strong><br>
+Julgue: As disfunções da burocracia, como o excesso de formalismo e a resistência a mudanças, foram originalmente identificadas por Max Weber em sua teoria ideal-típica.
+<p><strong>Comentário:</strong> ERRADO. Weber descreveu o tipo ideal de burocracia. As disfunções foram analisadas posteriormente por Robert K. Merton e outros. Pegadinha clássica!</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – MAPA – 2022)</strong><br>
+Julgue: Na Administração por Objetivos (APO), proposta por Peter Drucker, as metas são definidas unilateralmente pela chefia e impostas aos subordinados, que devem cumpri-las sob pena de sanções disciplinares.
+<p><strong>Comentário:</strong> ERRADO. A essência da APO é a <strong>definição conjunta</strong> de metas entre gestor e subordinado, com avaliação contínua e feedback. Imposição unilateral contraria o espírito da APO.</p>
+</div>
+
+<div class="nav-b">
+<span></span>
+<a href="adm-geral-02.html" class="btn-n">Próximo →</a>
+</div>
+</main>
+
+
+<div class="n-panel" id="nP">
+<div style="display:flex;justify-content:space-between;margin-bottom:10px">
+<strong>Notas da Aula 01</strong>
+<button onclick="tN()" style="background:none;border:none;cursor:pointer">✕</button>
+</div>
+<div id="nL" style="max-height:180px;overflow-y:auto;margin-bottom:10px"></div>
+<form onsubmit="aN(event)">
+<input type="text" class="n-in" id="nI" placeholder="Anotação sobre teorias..." required>
+<button type="submit" class="b-sm">💾 Salvar</button>
+</form>
+</div>
+
+<script>
+const SK='adm-teorias-01';let hM=false;
+function webS(){const s=window.getSelection().toString();window.open(`https://duckduckgo.com/?q=${encodeURIComponent(s||'Teorias da Administração CESPE Taylor Fayol Mayo Weber')}`,'_blank')}
+function tN(){const p=document.getElementById('nP');p.style.display=p.style.display==='none'?'block':'none';if(p.style.display==='block')lN()}
+function lN(){const n=JSON.parse(localStorage.getItem(SK)||'[]');document.getElementById('nL').innerHTML=n.length?n.map((x,i)=>`<div class="n-item">${x.text}<br><small style="cursor:pointer;color:#666" onclick="dN(${i})">remover</small></div>`).join(''):'<p style="font-size:.9em;color:#666">Sem notas.</p>'}
+function aN(e){e.preventDefault();const i=document.getElementById('nI'),n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:i.value,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));i.value='';lN()}
+function dN(i){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.splice(i,1);localStorage.setItem(SK,JSON.stringify(n));lN()}
+function tH(){hM=!hM;document.body.style.cursor=hM?'text':'auto';document.querySelectorAll('.t-btn')[2].textContent=hM?'✅ ON':'✏️ Destaque';hM?document.addEventListener('mouseup',hS):document.removeEventListener('mouseup',hS)}
+function hS(){const s=window.getSelection();if(s.toString().length>10){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:`🔍 "${s.toString().substring(0,40)}..." - ${prompt('Nota:','')||'-'}`,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));alert('✅ Destaque salvo!');s.removeAllRanges()}}
+document.addEventListener('DOMContentLoaded',lN);
+</script>
+</body>
+</html>

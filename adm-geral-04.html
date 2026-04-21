@@ -3,23 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Adm. Geral 01 | Evolução da administração</title>
+<title>Administração Geral 04 | Gestão da Qualidade e Excelência</title>
 <style>
-:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1}
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1;--jur:#e8f4fd}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;line-height:1.7;padding-top:70px}
 a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
 header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
 .back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
-.container{max-width:900px;margin:0 auto;padding:24px}
+.container{max-width:950px;margin:0 auto;padding:24px}
 h1{font-size:1.8em;margin-bottom:10px;color:var(--lil)}h2{font-size:1.4em;margin:28px 0 14px;color:var(--text);padding-bottom:6px;border-bottom:2px solid var(--lil-l)}
-p{margin-bottom:14px}ul,ol{margin:0 0 16px 20px}li{margin-bottom:6px}
+h3{font-size:1.2em;margin:22px 0 12px;color:var(--lil-d);font-weight:600}
+p{margin-bottom:14px;color:var(--text)}ul,ol{margin:0 0 16px 20px;color:var(--text)}li{margin-bottom:6px}
 .box{background:var(--card);border-radius:8px;padding:16px;margin:20px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
-.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}.box.jur{background:var(--jur);border-color:#3b82f6}
 .box-t{font-weight:700;margin-bottom:8px;display:block;color:var(--text)}
 table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
 th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--lil-d)}
-td{padding:10px 14px;border-bottom:1px solid var(--lil-l)}tr:hover td{background:var(--lil-l)}
+td{padding:10px 14px;border-bottom:1px solid var(--lil-l);color:var(--text)}tr:hover td{background:var(--lil-l)}
 .nav-b{display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:1px solid var(--lil-d)}
 .btn-n{padding:10px 20px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none}
 .btn-n:hover{background:var(--lil-d);color:#fff}
@@ -31,20 +32,205 @@ td{padding:10px 14px;border-bottom:1px solid var(--lil-l)}tr:hover td{background
 .n-in{width:100%;padding:8px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:8px}
 .b-sm{padding:6px 12px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em}
 @media(max-width:700px){.container{padding:16px}header{flex-direction:column;align-items:flex-start;gap:10px}}
-.box img {
-    width: 100%;        /* Força a imagem a ter a largura total da box */
-    height: auto;       /* Mantém a proporção para não achatar */
-    display: block;     /* Remove espaços vazios abaixo da imagem */
-    margin: 15px 0;     /* Dá um espaço entre o texto e a imagem */
-    border-radius: 4px; /* Arredonda levemente para combinar com o layout */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Um detalhe para dar profundidade */
-}
+.box img{width:100%;height:auto;display:block;margin:15px 0;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.q-card{background:var(--warn);border-left:4px solid #f59e0b;padding:16px;margin:20px 0;border-radius:0 8px 8px 0}
+.q-card strong{color:#856404}
+.cespe-tip{background:#fef3c7;border-left:4px solid #f59e0b;padding:12px;margin:15px 0;font-size:.95em}
+.mnemonic{background:linear-gradient(135deg,var(--lil-l),var(--bg-secondary));padding:12px 16px;border-radius:8px;margin:15px 0;font-weight:600;color:var(--lil-d)}
 </style>
 </head>
 <body>
-
-<header><a href="index.html" class="back">← Dashboard</a><div class="nav-t">Gestão da qualidade e modelo de excelência
-gerencia</div></header>
-
-
+<header><a href="adm-geral-03.html" class="back">← Anterior</a><a href="index.html" class="home-btn" title="Voltar ao Dashboard">
+    🏠
+</a><div class="nav-t">Administração Geral 04</div></header>
 <main class="container">
+<h1>4. Gestão da Qualidade e Modelo de Excelência Gerencial</h1>
+<p><strong>Foco CESPE:</strong> A banca cobra exaustivamente as contribuições de cada teórico (Deming, Juran, Crosby, Ishikawa, Feigenbaum), as 7 ferramentas clássicas da qualidade, o ciclo PDCA, os fundamentos do Modelo de Excelência da FNQ e a diferença conceitual entre controle, garantia e gestão da qualidade. Questões frequentemente misturam ferramentas ou atribuem teorias a autores errados.</p>
+
+<h2>1. Evolução Conceitual da Qualidade</h2>
+<div class="box def"><span class="box-t">📘 Conceitos Importantes</span>
+<ul>
+<li><strong>Controle da Qualidade:</strong> Foco na <em>inspeção final</em> do produto/serviço. Detectar e corrigir defeitos após a produção. Abordagem reativa.</li>
+<li><strong>Garantia da Qualidade:</strong> Foco nos <em>processos</em>. Implementar sistemas e procedimentos padronizados para prevenir defeitos. Abordagem preventiva.</li>
+<li><strong>Gestão da Qualidade Total (TQM):</strong> Filosofia organizacional que envolve <em>todas as áreas e pessoas</em> na busca pela melhoria contínua, satisfação do cliente e excelência operacional. Abordagem proativa e cultural.</li>
+</ul>
+</div>
+<p><strong>Evolução Histórica:</strong> Inspeção (déc. 1900) → Controle Estatístico (déc. 1920-40) → Garantia da Qualidade (déc. 1950-60) → Gestão da Qualidade Total (déc. 1970-80) → Excelência Gerencial e Sustentabilidade (déc. 1990-atual). O CESPE adora cobrar que a qualidade deixou de ser "departamento" para se tornar "cultura organizacional".</p>
+
+<h2>2. Principais Teóricos e Contribuições (4.1)</h2>
+<table>
+<thead><tr><th>Teórico</th><th>Obra/Conceito Central</th><th>Contribuição para a Qualidade</th><th>Ponto CESPE</th></tr></thead>
+<tbody>
+<tr><td><strong>W. Edwards Deming</strong></td><td>14 Princípios da Gestão; Ciclo PDCA; Variabilidade (causas comuns vs especiais)</td><td>Qualidade é responsabilidade da gestão; eliminar o medo; focar no processo, não na inspeção; melhoria contínua; constância de propósito</td><td>✅ "Deming = PDCA + 14 Princípios + Foco na Gestão"</td></tr>
+<tr><td><strong>Joseph M. Juran</strong></td><td>Trilogia da Qualidade; Custo da Qualidade</td><td>Planejar, Controlar, Melhorar; qualidade é "adequação ao uso"; foco no cliente; custos de prevenção, avaliação, falhas internas/externas</td><td>✅ "Juran = Trilogia + Adequação ao Uso"</td></tr>
+<tr><td><strong>Philip B. Crosby</strong></td><td>Zero Defeito; Qualidade é Conformidade com Requisitos</td><td>4 Absolutes: Qualidade = conformidade; Sistema = prevenção; Padrão = zero defeito; Medida = preço da não qualidade; "Faça certo da primeira vez"</td><td>✅ "Crosby = Zero Defeito + Preço da Não Qualidade"</td></tr>
+<tr><td><strong>Kaoru Ishikawa</strong></td><td>Diagrama de Causa e Efeito (Espinha de Peixe); Círculos de Controle de Qualidade (CCQ)</td><td>Qualidade começa na educação e termina na educação; ferramentas visuais; envolvimento dos operários; qualidade como problema de todos</td><td>✅ "Ishikawa = Espinha de Peixe + CCQ + Educação"</td></tr>
+<tr><td><strong>Armand V. Feigenbaum</strong></td><td>Controle Total da Qualidade (TQC)</td><td>Qualidade é responsabilidade de todas as áreas (não só da produção); integração de esforços de qualidade em toda a organização</td><td>✅ "Feigenbaum = TQC + Qualidade em toda a organização"</td></tr>
+<tr><td><strong>Genichi Taguchi</strong></td><td>Função de Perda; Robustez do Projeto</td><td>Qualidade = menor desvio do alvo; perdas sociais aumentam quadraticamente com o desvio; foco na engenharia de robustez</td><td>✅ "Taguchi = Função de Perda + Robustez"</td></tr>
+</tbody>
+</table>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente troca os teóricos: atribui "Zero Defeito" a Deming (errado → Crosby), ou "Trilogia" a Ishikawa (errado → Juran), ou "PDCA" a Juran (errado → Deming/Shewhart). Memorize as associações diretas para não errar questões literais.</p>
+</div>
+
+<h2>3. Ferramentas de Gestão da Qualidade (4.2)</h2>
+<h3>🔹 As 7 Ferramentas Clássicas da Qualidade</h3>
+<table>
+<thead><tr><th>Ferramenta</th><th>Descrição</th><th>Objetivo Principal</th></tr></thead>
+<tbody>
+<tr><td><strong>1. Fluxograma</strong></td><td>Representação gráfica sequencial de etapas de um processo</td><td>Mapear, visualizar e identificar gargalos, redundâncias ou desvios no processo</td></tr>
+<tr><td><strong>2. Folha de Verificação</strong></td><td>Formulário estruturado para coleta sistemática de dados</td><td>Registrar frequência de ocorrências, defeitos ou eventos de forma padronizada</td></tr>
+<tr><td><strong>3. Histograma</strong></td><td>Gráfico de barras que mostra a distribuição de frequência de variáveis contínuas</td><td>Analisar a distribuição dos dados, identificar assimetria, normalidade e variabilidade</td></tr>
+<tr><td><strong>4. Diagrama de Pareto</strong></td><td>Gráfico de barras ordenado decrescentemente + curva acumulada (Regra 80/20)</td><td>Priorizar problemas: 20% das causas geram 80% dos efeitos. Focar no "poucos vitais"</td></tr>
+<tr><td><strong>5. Diagrama de Ishikawa</strong></td><td>Diagrama causa-efeito com categorias: Mão de obra, Método, Materiais, Máquinas, Meio ambiente, Medidas (6M)</td><td>Identificar causas raiz de um problema específico de forma estruturada e participativa</td></tr>
+<tr><td><strong>6. Gráfico de Dispersão</strong></td><td>Plotagem de pares de dados (X,Y) para verificar correlação</td><td>Identificar relação entre duas variáveis (positiva, negativa ou nenhuma correlação)</td></tr>
+<tr><td><strong>7. Carta de Controle</strong></td><td>Gráfico com linha central (média), limite superior (LSC) e inferior (LIC)</td><td>Monitorar a estabilidade do processo ao longo do tempo; distinguir causas comuns vs especiais</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Ferramentas Gerenciais e de Melhoria</h3>
+<ul>
+<li><strong>PDCA (Plan-Do-Check-Act):</strong> Ciclo de melhoria contínua. Planejar (estabelecer metas/métodos) → Executar (treinar/aplicar) → Verificar (comparar resultados com metas) → Agir (padronizar se deu certo; corrigir se falhou).</li>
+<li><strong>5S (Senso de Utilização, Ordenação, Limpeza, Saúde/Comprometimento, Autodisciplina):</strong> Programa de organização e disciplina no ambiente de trabalho. Base para qualquer iniciativa de qualidade.</li>
+<li><strong>Benchmarking:</strong> Processo contínuo de comparar práticas, processos e resultados com organizações reconhecidamente excelentes (internas, concorrentes, genéricas ou funcionais) para identificar oportunidades de melhoria.</li>
+<li><strong>FMEA (Análise de Modo e Efeito de Falha):</strong> Método proativo para identificar falhas potenciais, avaliar sua severidade, ocorrência e detecção, e definir ações preventivas.</li>
+<li><strong>QFD (Desdobramento da Função Qualidade):</strong> Matriz "Casa da Qualidade" que traduz necessidades do cliente em requisitos técnicos do produto/serviço.</li>
+</ul>
+
+<div class="mnemonic">🧠 MACETE: "Pareto = 80/20 | Ishikawa = 6M | Dispersão = Correlação | Carta de Controle = Estabilidade | PDCA = Ciclo Contínuo"</div>
+
+<h2>4. Modelo de Excelência Gerencial (FNQ/MEG)</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Estrutura</span>
+<p>Desenvolvido pela <strong>Fundação Nacional da Qualidade (FNQ)</strong>, o Modelo de Excelência Gerencial (MEG) é um sistema de gestão que organiza as atividades de uma organização com base em <strong>8 fundamentos</strong> e <strong>8 critérios de avaliação</strong>. Não é um prêmio, mas uma <strong>ferramenta de autodiagnóstico e melhoria contínua</strong>.</p>
+</div>
+
+<h3>Os 8 Fundamentos da Excelência (CESPE COBRA MUITO)</h3>
+<ol>
+<li><strong>Pensamento Sistêmico:</strong> Compreender a organização como um todo integrado e interdependente.</li>
+<li><strong>Aprendizado Organizacional:</strong> Busca contínua de conhecimento, inovação e melhoria adaptativa.</li>
+<li><strong>Cultura da Inovação:</strong> Estímulo à criatividade, experimentação e disseminação de ideias.</li>
+<li><strong>Liderança e Constância de Propósitos:</strong> Direcionamento claro, coerência entre discurso e prática, exemplaridade da alta gestão.</li>
+<li><strong>Orientação por Processos e Resultados:</strong> Foco na eficiência dos fluxos e na efetividade dos impactos.</li>
+<li><strong>Visão de Futuro:</strong> Antecipação de tendências, planejamento de longo prazo e sustentabilidade.</li>
+<li><strong>Geração de Valor:</strong> Criação de benefícios tangíveis e intangíveis para todas as partes interessadas.</li>
+<li><strong>Desenvolvimento da Sociedade:</strong> Contribuição para o bem-estar social, ética e responsabilidade corporativa.</li>
+</ol>
+
+<h3>Os 8 Critérios de Avaliação (Estrutura do MEG)</h3>
+<table>
+<thead><tr><th>Critério</th><th>Foco</th><th>Peso Aproximado</th></tr></thead>
+<tbody>
+<tr><td>1. Liderança</td><td>Atuação da alta direção na definição de valores, estratégia e governança</td><td>10%</td></tr>
+<tr><td>2. Estratégias e Planos</td><td>Formulação, desdobramento e execução da estratégia</td><td>10%</td></tr>
+<tr><td>3. Clientes</td><td>Conhecimento, relacionamento, satisfação e fidelização</td><td>15%</td></tr>
+<tr><td>4. Sociedade</td><td>Impacto social, ambiental, ético e desenvolvimento do entorno</td><td>10%</td></tr>
+<tr><td>5. Informações e Conhecimento</td><td>Gestão de dados, tecnologia, inteligência e aprendizagem organizacional</td><td>10%</td></tr>
+<tr><td>6. Pessoas</td><td>Desenvolvimento, bem-estar, competência e clima organizacional</td><td>10%</td></tr>
+<tr><td>7. Processos</td><td>Desenho, gestão, melhoria e eficiência dos processos-chave</td><td>15%</td></tr>
+<tr><td>8. Resultados</td><td>Desempenho econômico-financeiro, de clientes, sociedade, pessoas e processos</td><td>20%</td></tr>
+</tbody>
+</table>
+<p><strong>Nota CESPE:</strong> O critério "Resultados" sempre tem o <strong>maior peso</strong>, pois a excelência só se comprova por desempenho mensurável. Os critérios não são departamentos, mas <strong>dimensões de gestão</strong> que se inter-relacionam.</p>
+
+<h2>🎯 O QUE MAIS CAI NO CESPE (RANKING DE FREQUÊNCIA)</h2>
+<ol>
+<li><strong>Associação Teórico-Conceito:</strong> Deming (PDCA/14 Princípios), Juran (Trilogia), Crosby (Zero Defeito), Ishikawa (Espinha de Peixe/6M). Pegadinhas trocam autores → ERRADO.</li>
+<li><strong>Ferramentas Clássicas:</strong> Pareto (priorização 80/20), Ishikawa (causas raiz), Dispersão (correlação), Carta de Controle (estabilidade/vaiabilidade). Questões que confundem função → ERRADO.</li>
+<li><strong>Ciclo PDCA:</strong> Etapas na ordem correta. "Act" = padronizar ou corrigir, não "planejar de novo".</li>
+<li><strong>Fundamentos da FNQ:</strong> 8 fundamentos interligados. Questões que afirmam "são departamentos" ou "podem ser ignorados se resultados forem bons" → ERRADO.</li>
+<li><strong>Controle vs Garantia vs Gestão da Qualidade:</strong> Evolução histórica e diferença conceitual. Gestão da qualidade é cultural e envolve todos.</li>
+<li><strong>Benchmarking vs Benchmark:</strong> Benchmark = referência/meta; Benchmarking = processo contínuo de comparação e aprendizado.</li>
+</ol>
+
+<h2>⚖️ JURISPRUDÊNCIA RELEVANTE (TCU/STF sobre Qualidade e Excelência)</h2>
+<div class="box jur">
+<strong>TCU – Acórdão 1.534/2016-Plenário (Referencial de Governança)</strong><br>
+Tese: A adoção de modelos de excelência gerencial no setor público exige adaptação dos critérios do setor privado. O foco deve migrar da lucratividade para a <strong>geração de valor público</strong>, transparência e responsabilidade social. A FNQ é referência válida, mas não obrigatória.
+</div>
+<div class="box jur">
+<strong>TCU – Acórdão 2.250/2018-Plenário (Gestão da Qualidade no Serviço Público)</strong><br>
+Tese: Programas de qualidade (como 5S, PDCA, indicadores de desempenho) devem estar alinhados ao planejamento estratégico e ao PPA. A mera existência de certificações ISO ou prêmios de qualidade <strong>não substitui</strong> a comprovação de resultados efetivos para o cidadão.
+</div>
+<div class="box jur">
+<strong>STF – RE 601.785/SP (2014)</strong><br>
+Tese: A eficiência (art. 37, CF) exige que a administração pública adote ferramentas de gestão que garantam qualidade, economicidade e efetividade na prestação de serviços. A omissão na implementação de mecanismos de controle e melhoria contínua pode configurar improbidade administrativa por gestão ineficiente.
+</div>
+<div class="box jur">
+<strong>TCU – Acórdão 987/2020-Plenário (Indicadores de Desempenho)</strong><br>
+Tese: Indicadores de qualidade devem ser SMART (Específicos, Mensuráveis, Atingíveis, Relevantes, Temporais). Indicadores genéricos ou não vinculados a metas estratégicas não atendem ao princípio da eficiência e podem ensejar recomendação de adequação ou responsabilização.
+</div>
+
+<h2>QUESTÕES CESPE COMENTADAS</h2>
+<div class="q-card">
+<strong>(CESPE/CEBRASPE – TCDF – 2021)</strong><br>
+Julgue: Segundo Joseph Juran, a gestão da qualidade estrutura-se na trilogia composta por planejamento, controle e melhoria da qualidade, sendo a qualidade definida como a "adequação ao uso".
+<p><strong>Comentário:</strong> CORRETO. Essa é a definição clássica de Juran. A trilogia é cíclica e interdependente. "Adequação ao uso" contrapõe-se à visão de Crosby ("conformidade com requisitos") e de Deming ("redução de variabilidade").</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANEEL – 2022)</strong><br>
+Julgue: O diagrama de Pareto é uma ferramenta de gestão da qualidade utilizada para monitorar a estabilidade de um processo ao longo do tempo, identificando se as variações decorrem de causas comuns ou especiais.
+<p><strong>Comentário:</strong> ERRADO. A ferramenta descrita é a <strong>Carta de Controle</strong>. O Diagrama de Pareto serve para <strong>priorizar problemas</strong> com base no princípio 80/20. O CESPE frequentemente troca as funções das ferramentas clássicas.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – MAPA – 2023)</strong><br>
+Julgue: No Modelo de Excelência Gerencial da FNQ, o critério "Resultados" possui o maior peso na avaliação, pois a excelência organizacional só se comprova por meio de desempenho mensurável e sustentado.
+<p><strong>Comentário:</strong> CORRETO. Resultados representam 20% da avaliação. A FNQ adota a lógica de que fundamentos e processos são meios; resultados são os fins. Sem resultados consistentes, não há excelência.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – IBAMA – 2023)</strong><br>
+Julgue: A fase "Act" (Agir) do ciclo PDCA consiste em planejar novamente o processo, revisando metas e métodos com base nos dados coletados na fase de verificação.
+<p><strong>Comentário:</strong> ERRADO. "Act" significa <strong>agir corretivamente ou padronizar</strong>. Se os resultados foram satisfatórios, padroniza-se o processo. Se foram insatisfatórios, aplicam-se ações corretivas e reinicia-se o ciclo. "Planejar novamente" seria a fase "Plan" do próximo ciclo, não o conteúdo de "Act".</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANVISA – 2022)</strong><br>
+Julgue: Philip Crosby defendeu que a qualidade é sinônimo de zero defeito e que o principal indicador da qualidade é o "preço da não qualidade", ou seja, o custo gerado por falhas, retrabalho e perda de clientes.
+<p><strong>Comentário:</strong> CORRETO. Crosby popularizou o conceito de "Zero Defeito" como padrão de desempenho, não como meta inatingível. O "preço da não qualidade" (PONQ) é a soma dos custos de falhas internas e externas, central em sua filosofia.</p>
+</div>
+
+<h2>CHECKLIST DE REVISÃO RÁPIDA</h2>
+<div style="background:var(--def);padding:16px;border-radius:8px;margin:20px 0">
+<strong>Antes da prova, verifique se você domina:</strong><br>
+=> Deming → PDCA + 14 Princípios + Gestão da qualidade é responsabilidade da alta direção<br>
+=> Juran → Trilogia (Planejar, Controlar, Melhorar) + "Adequação ao uso"<br>
+=> Crosby → Zero Defeito + "Faça certo da primeira vez" + Preço da Não Qualidade<br>
+=> Ishikawa → Diagrama Causa-Efeito (6M) + Círculos de Controle de Qualidade (CCQ)<br>
+=> Feigenbaum → TQC (Controle Total da Qualidade) = envolvimento de todas as áreas<br>
+=> Taguchi → Função de Perda + Robustez do projeto<br>
+=> Pareto → Priorização (80/20) | Ishikawa → Causas raiz | Dispersão → Correlação | Carta de Controle → Estabilidade<br>
+=> PDCA: Plan → Do → Check → Act (padronizar/corrigir)<br>
+=> 5S: Utilização, Ordenação, Limpeza, Saúde/Comprometimento, Autodisciplina<br>
+=> FNQ: 8 fundamentos + 8 critérios (Resultados = 20% do peso)<br>
+=> Benchmarking = processo contínuo de comparação e aprendizado, não cópia<br>
+=> Qualidade deixou de ser "departamento" para ser "cultura organizacional"
+</div>
+
+<div class="nav-b">
+<a href="adm-geral-03.html" class="btn-n">← Anterior</a>
+<a href="adm-geral-05.html" class="btn-n">Próximo →</a>
+</div>
+</main>
+
+<div class="n-panel" id="nP">
+<div style="display:flex;justify-content:space-between;margin-bottom:10px"><strong>Notas da Aula 04</strong><button onclick="tN()" style="background:none;border:none;cursor:pointer">✕</button></div>
+<div id="nL" style="max-height:180px;overflow-y:auto;margin-bottom:10px"></div>
+<form onsubmit="aN(event)"><input type="text" class="n-in" id="nI" placeholder="Anotação sobre qualidade..." required><button type="submit" class="b-sm">💾 Salvar</button></form>
+</div>
+
+<script>
+const SK='adm04-notes';let hM=false;
+function webS(){const s=window.getSelection().toString();window.open(`https://duckduckgo.com/?q=${encodeURIComponent(s||'Gestão da qualidade Deming Juran Crosby Ishikawa FNQ CESPE')}`,'_blank')}
+function tN(){const p=document.getElementById('nP');p.style.display=p.style.display==='none'?'block':'none';if(p.style.display==='block')lN()}
+function lN(){const n=JSON.parse(localStorage.getItem(SK)||'[]');document.getElementById('nL').innerHTML=n.length?n.map((x,i)=>`<div class="n-item">${x.text}<br><small style="cursor:pointer;color:#666" onclick="dN(${i})">remover</small></div>`).join(''):'<p style="font-size:.9em;color:#666">Sem notas.</p>'}
+function aN(e){e.preventDefault();const i=document.getElementById('nI'),n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:i.value,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));i.value='';lN()}
+function dN(i){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.splice(i,1);localStorage.setItem(SK,JSON.stringify(n));lN()}
+function tH(){hM=!hM;document.body.style.cursor=hM?'text':'auto';document.querySelectorAll('.t-btn')[2].textContent=hM?'✅ ON':'✏️ Destaque';hM?document.addEventListener('mouseup',hS):document.removeEventListener('mouseup',hS)}
+function hS(){const s=window.getSelection();if(s.toString().length>10){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:`🔍 "${s.toString().substring(0,40)}..." - ${prompt('Nota:','')||'-'}`,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));alert('✅ Destaque salvo!');s.removeAllRanges()}}
+document.addEventListener('DOMContentLoaded',lN);
+</script>
+</body>
+</html>

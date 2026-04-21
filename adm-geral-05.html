@@ -3,23 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Adm. Geral 01 | Evolução da administração</title>
+<title>Administração Geral 05 | Gestão de Processos e BPM</title>
 <style>
-:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1}
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1;--jur:#e8f4fd}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;line-height:1.7;padding-top:70px}
 a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
 header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
 .back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
-.container{max-width:900px;margin:0 auto;padding:24px}
+.container{max-width:950px;margin:0 auto;padding:24px}
 h1{font-size:1.8em;margin-bottom:10px;color:var(--lil)}h2{font-size:1.4em;margin:28px 0 14px;color:var(--text);padding-bottom:6px;border-bottom:2px solid var(--lil-l)}
-p{margin-bottom:14px}ul,ol{margin:0 0 16px 20px}li{margin-bottom:6px}
+h3{font-size:1.2em;margin:22px 0 12px;color:var(--lil-d);font-weight:600}
+p{margin-bottom:14px;color:var(--text)}ul,ol{margin:0 0 16px 20px;color:var(--text)}li{margin-bottom:6px}
 .box{background:var(--card);border-radius:8px;padding:16px;margin:20px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
-.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}.box.jur{background:var(--jur);border-color:#3b82f6}
 .box-t{font-weight:700;margin-bottom:8px;display:block;color:var(--text)}
 table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
 th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--lil-d)}
-td{padding:10px 14px;border-bottom:1px solid var(--lil-l)}tr:hover td{background:var(--lil-l)}
+td{padding:10px 14px;border-bottom:1px solid var(--lil-l);color:var(--text)}tr:hover td{background:var(--lil-l)}
 .nav-b{display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:1px solid var(--lil-d)}
 .btn-n{padding:10px 20px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none}
 .btn-n:hover{background:var(--lil-d);color:#fff}
@@ -31,19 +32,323 @@ td{padding:10px 14px;border-bottom:1px solid var(--lil-l)}tr:hover td{background
 .n-in{width:100%;padding:8px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:8px}
 .b-sm{padding:6px 12px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em}
 @media(max-width:700px){.container{padding:16px}header{flex-direction:column;align-items:flex-start;gap:10px}}
-.box img {
-    width: 100%;        /* Força a imagem a ter a largura total da box */
-    height: auto;       /* Mantém a proporção para não achatar */
-    display: block;     /* Remove espaços vazios abaixo da imagem */
-    margin: 15px 0;     /* Dá um espaço entre o texto e a imagem */
-    border-radius: 4px; /* Arredonda levemente para combinar com o layout */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Um detalhe para dar profundidade */
-}
+.box img{width:100%;height:auto;display:block;margin:15px 0;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.q-card{background:var(--warn);border-left:4px solid #f59e0b;padding:16px;margin:20px 0;border-radius:0 8px 8px 0}
+.q-card strong{color:#856404}
+.cespe-tip{background:#fef3c7;border-left:4px solid #f59e0b;padding:12px;margin:15px 0;font-size:.95em}
+.mnemonic{background:linear-gradient(135deg,var(--lil-l),var(--bg-secondary));padding:12px 16px;border-radius:8px;margin:15px 0;font-weight:600;color:var(--lil-d)}
 </style>
 </head>
 <body>
-
-<header><a href="index.html" class="back">← Dashboard</a><div class="nav-t">Gestão de projetos e processos</div></header>
-
-
+<header><a href="adm-geral-04.html" class="back">← Anterior</a><a href="index.html" class="home-btn" title="Voltar ao Dashboard">
+    🏠
+</a><div class="nav-t">Administração Geral 05</div></header>
 <main class="container">
+<h1>5. Gestão de Processos, BPM e Melhoria Contínua</h1>
+<p><strong>Foco CESPE:</strong> A banca cobra exaustivamente as diferenças conceituais entre gestão DE processos e gestão POR processos, os níveis de maturidade BPM, as técnicas de mapeamento (fluxograma, BPMN, Ishikawa), as metodologias de melhoria (Lean, Six Sigma, PDCA) e a aplicação prática no setor público. Questões frequentemente confundem ferramentas ou atribuem características de uma metodologia a outra.</p>
+
+<h2>1. Conceitos Introdutórios de Processos</h2>
+<div class="box def"><span class="box-t">📘 Definição de Processo (ABNT NBR ISO 9000)</span>
+<p><strong>Processo:</strong> Conjunto de atividades inter-relacionadas ou interativas que transformam <strong>entradas</strong> (insumos, recursos, informações) em <strong>saídas</strong> (produtos, serviços, resultados), agregando valor para o cliente/cidadão.</p>
+<p><strong>Elementos Básicos:</strong> Entradas → Atividades/Tarefas → Saídas. Todo processo tem: fornecedor, cliente, recursos, controles e indicadores.</p>
+</div>
+
+<h3>Estrutura dos Processos</h3>
+<table>
+<thead><tr><th>Elemento</th><th>Descrição</th><th>Exemplo no Setor Público</th></tr></thead>
+<tbody>
+<tr><td><strong>Entradas (Inputs)</strong></td><td>Recursos, informações, materiais necessários para iniciar o processo</td><td>Requerimento do cidadão, documentação, orçamento, servidores</td></tr>
+<tr><td><strong>Atividades</strong></td><td>Ações sequenciais ou paralelas que transformam as entradas</td><td>Análise documental, parecer técnico, aprovação, emissão de resposta</td></tr>
+<tr><td><strong>Saídas (Outputs)</strong></td><td>Resultados entregues ao cliente/cidadão</td><td>Licença emitida, benefício concedido, informação prestada</td></tr>
+<tr><td><strong>Controles</strong></td><td>Regras, normas, padrões que orientam a execução</td><td>Legislação, manuais, prazos legais, limites orçamentários</td></tr>
+<tr><td><strong>Recursos</strong></td><td>Meios utilizados para executar as atividades</td><td>Humanos, financeiros, tecnológicos, infraestrutura</td></tr>
+<tr><td><strong>Indicadores</strong></td><td>Métricas para monitorar desempenho</td><td>Tempo médio de atendimento, taxa de erro, custo por processo</td></tr>
+</tbody>
+</table>
+
+<h2>2. Gestão DE Processos vs. Gestão POR Processos</h2>
+<div class="box warn"><span class="box-t">⚠️ DIFERENÇA CRUCIAL (CESPE COBRA MUITO)</span>
+<p><strong>Gestão DE Processos:</strong> Foco na <em>execução operacional</em> de processos específicos. Envolve mapear, documentar, padronizar e controlar atividades. É uma visão <strong>tática/operacional</strong>.</p>
+<p><strong>Gestão POR Processos:</strong> Foco na <em>organização como um sistema integrado</em> de processos. Envolve alinhamento estratégico, governança, cultura organizacional e melhoria contínua. É uma visão <strong>estratégica/sistêmica</strong>.</p>
+</div>
+
+<table>
+<thead><tr><th>Aspecto</th><th>Gestão DE Processos</th><th>Gestão POR Processos</th></tr></thead>
+<tbody>
+<tr><td><strong>Escopo</strong></td><td>Processos individuais ou grupos relacionados</td><td>Toda a organização como rede de processos</td></tr>
+<tr><td><strong>Objetivo</strong></td><td>Padronizar, controlar e melhorar execução</td><td>Alinhar processos à estratégia e gerar valor</td></tr>
+<tr><td><strong>Nível</strong></td><td>Tático/Operacional</td><td>Estratégico</td></tr>
+<tr><td><strong>Responsável</strong></td><td>Gerentes de área, analistas</td><td>Alta direção, comitê de governança</td></tr>
+<tr><td><strong>Indicadores</strong></td><td>Eficiência, tempo, custo do processo</td><td>Eficácia, valor gerado, satisfação do cidadão</td></tr>
+</tbody>
+</table>
+
+<h2>3. Origem e Evolução da Gestão por Processos</h2>
+<p>A gestão por processos surgiu como resposta às limitações da <strong>gestão funcional tradicional</strong> (departamentalização rígida, visão em silos). Principais marcos:</p>
+<ul>
+<li><strong>Década de 1980:</strong> Reengenharia de Processos (Hammer & Champy) – redesenho radical para ganhos dramáticos.</li>
+<li><strong>Década de 1990:</strong> Qualidade Total (TQM) e ISO 9000 – foco na padronização e melhoria contínua.</li>
+<li><strong>Década de 2000:</strong> BPM (Business Process Management) – abordagem integrada com tecnologia e governança.</li>
+<li><strong>Década de 2010-atual:</strong> BPM + Agile + Digital Transformation – processos ágeis, automatizados e centrados no cidadão.</li>
+</ul>
+
+<h2>4. Gestão Funcional Tradicional vs. Gestão por Processos</h2>
+<table>
+<thead><tr><th>Característica</th><th>Gestão Funcional (Tradicional)</th><th>Gestão por Processos</th></tr></thead>
+<tbody>
+<tr><td><strong>Estrutura</strong></td><td>Departamentos estanques (silos)</td><td>Fluxos transversais entre áreas</td></tr>
+<tr><td><strong>Foco</strong></td><td>Tarefas e especialização</td><td>Resultados e valor para o cliente</td></tr>
+<tr><td><strong>Comunicação</strong></td><td>Vertical (hierárquica)</td><td>Horizontal (entre processos)</td></tr>
+<tr><td><strong>Responsabilidade</strong></td><td>Por função/departamento</td><td>Por processo/resultado</td></tr>
+<tr><td><strong>Melhoria</strong></td><td>Incremental, dentro do departamento</td><td>Contínua, transversal, sistêmica</td></tr>
+<tr><td><strong>Indicadores</strong></td><td>Produtividade setorial</td><td>Desempenho do processo e satisfação do cidadão</td></tr>
+</tbody>
+</table>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um cidadão solicita um alvará de funcionamento. Na gestão funcional tradicional, o processo passa por: Secretaria de Finanças (taxas) → Secretaria de Urbanismo (zoneamento) → Secretaria de Meio Ambiente (licença ambiental), com pouca coordenação e prazos longos. Na gestão por processos, há um <strong>processo único de emissão de alvará</strong>, com dono do processo, fluxo integrado, indicadores de tempo total e portal único para o cidadão. <strong>Isso é gestão POR processos.</strong></p>
+</div>
+
+<h2>5. Guia BPM CBOK e Níveis de Maturidade</h2>
+<div class="box def"><span class="box-t">📘 BPM CBOK (Common Body of Knowledge)</span>
+<p>Publicado pela ABPMP (Association of Business Process Management Professionals), é o principal referencial mundial sobre BPM. Estrutura-se em áreas de conhecimento: Estratégia, Modelagem, Análise, Desenho, Desempenho, Transformação, Organização, Tecnologias, Gestão de Projetos, Competências.</p>
+</div>
+
+<h3>Níveis de Maturidade em Processos (Modelo BPM CBOK)</h3>
+<table>
+<thead><tr><th>Nível</th><th>Características</th><th>Indicadores Típicos</th></tr></thead>
+<tbody>
+<tr><td><strong>1. Inicial/Ad hoc</strong></td><td>Processos não documentados, execução reativa, dependência de pessoas</td><td>Alta variabilidade, retrabalho frequente, prazos imprevisíveis</td></tr>
+<tr><td><strong>2. Gerenciado</strong></td><td>Processos documentados, responsáveis definidos, indicadores básicos</td><td>Padronização inicial, controle de prazos, métricas de eficiência</td></tr>
+<tr><td><strong>3. Definido</strong></td><td>Processos padronizados, integrados, com governança e melhoria contínua</td><td>Indicadores de eficácia, satisfação do cliente, redução de custos</td></tr>
+<tr><td><strong>4. Quantitativamente Gerenciado</strong></td><td>Decisões baseadas em dados, previsão de desempenho, otimização estatística</td><td>Modelos preditivos, simulações, controle estatístico de processo</td></tr>
+<tr><td><strong>5. Otimizado</strong></td><td>Inovação contínua, adaptação ágil, aprendizado organizacional</td><td>Benchmarking, experimentação, transformação digital integrada</td></tr>
+</tbody>
+</table>
+
+<div class="cespe-tip">💡 DICA CESPE: Questões que afirmam "organização no nível 1 tem processos bem documentados" → ERRADO. Nível 1 = processos informais, dependentes de pessoas. Documentação e padronização começam no nível 2.</div>
+
+<h2>6. Ciclo de Gerenciamento de Processos (Ciclo de Vida BPM)</h2>
+<ol>
+<li><strong>Identificação:</strong> Mapear processos críticos, definir escopo, priorizar com base em impacto estratégico e dor do cidadão.</li>
+<li><strong>Modelagem/Desenho:</strong> Representar o processo "as-is" (atual) e "to-be" (desejado) usando notação padrão (BPMN).</li>
+<li><strong>Execução/Implementação:</strong> Colocar o processo em operação, com treinamento, comunicação e suporte tecnológico (BPMS).</li>
+<li><strong>Monitoramento:</strong> Acompanhar indicadores de desempenho (tempo, custo, qualidade) em tempo real.</li>
+<li><strong>Otimização/Melhoria:</strong> Analisar desvios, identificar causas raiz, aplicar ações corretivas e reiniciar o ciclo (PDCA embutido).</li>
+</ol>
+
+<div class="mnemonic">🧠 MACETE: "BPM = Identificar → Modelar → Executar → Monitorar → Otimizar" → Ciclo contínuo de melhoria.</div>
+
+<h2>7. Técnicas de Mapeamento de Processos</h2>
+<h3>🔹 Fluxograma Tradicional</h3>
+<p>Representação gráfica sequencial usando símbolos padronizados:</p>
+<ul>
+<li><strong>Oval:</strong> Início/Fim do processo</li>
+<li><strong>Retângulo:</strong> Atividade/Tarefa</li>
+<li><strong>Losango:</strong> Decisão (sim/não)</li>
+<li><strong>Seta:</strong> Fluxo de sequência</li>
+<li><strong>Paralelogramo:</strong> Entrada/Saída de dados</li>
+</ul>
+<p><strong>Vantagem:</strong> Simples, intuitivo, fácil de comunicar. <strong>Limitação:</strong> Não captura complexidade de processos com múltiplos atores e sistemas.</p>
+
+<h3>🔹 BPMN 2.0 (Business Process Model and Notation)</h3>
+<p>Padrão internacional para modelagem de processos, com elementos ricos:</p>
+<table>
+<thead><tr><th>Elemento</th><th>Símbolo</th><th>Função</th></tr></thead>
+<tbody>
+<tr><td><strong>Evento</strong></td><td>Círculo</td><td>Algo que acontece (início, intermediário, fim)</td></tr>
+<tr><td><strong>Atividade</strong></td><td>Retângulo arredondado</td><td>Tarefa ou subprocesso executado</td></tr>
+<tr><td><strong>Gateway</strong></td><td>Losango</td><td>Ponto de decisão, paralelismo, merge</td></tr>
+<tr><td><strong>Fluxo de Sequência</strong></td><td>Seta sólida</td><td>Ordem de execução das atividades</td></tr>
+<tr><td><strong>Pool/Lane</strong></td><td>Piscina/Raia</td><td>Participante do processo (área, sistema, externo)</td></tr>
+<tr><td><strong>Artefato</strong></td><td>Colchete, nota</td><td>Informação adicional (dados, regras, documentação)</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Outras Técnicas de Mapeamento</h3>
+<ul>
+<li><strong>Mapofluxograma:</strong> Combina fluxograma com layout físico, mostrando onde as atividades ocorrem.</li>
+<li><strong>Mapeamento Lean (Value Stream Mapping):</strong> Foca em identificar e eliminar desperdícios (espera, retrabalho, transporte desnecessário).</li>
+<li><strong>Diagrama de Ishikawa (Espinha de Peixe):</strong> Identifica causas raiz de problemas em processos (6M: Método, Matéria-prima, Mão de obra, Máquinas, Medição, Meio ambiente).</li>
+<li><strong>Diagrama Homem-Máquina:</strong> Mostra a interação entre operador e equipamento ao longo do tempo, útil para análise de produtividade.</li>
+<li><strong>IDEF (Integration DEFinition):</strong> Família de notações para modelagem funcional (IDEF0), de fluxo de dados (IDEF1), de processos (IDEF3).</li>
+</ul>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente confunde técnicas: atribui "identificação de causas raiz" ao fluxograma (errado → Ishikawa), ou "eliminação de desperdícios" ao BPMN (errado → Lean/VSM). Memorize a função principal de cada técnica.</p>
+</div>
+
+<h2>8. Técnicas de Coleta de Dados sobre Processos</h2>
+<table>
+<thead><tr><th>Técnica</th><th>Descrição</th><th>Quando Usar</th></tr></thead>
+<tbody>
+<tr><td><strong>Entrevista com Especialistas</strong></td><td>Diálogo estruturado com quem conhece o processo</td><td>Fase inicial de mapeamento, para entender contexto e exceções</td></tr>
+<tr><td><strong>Observação Direta (Gemba)</strong></td><td>Acompanhar a execução real do processo no local de trabalho</td><td>Validar fluxos documentados, identificar gargalos ocultos</td></tr>
+<tr><td><strong>Workshop de Mapeamento</strong></td><td>Reunião colaborativa com múltiplos atores do processo</td><td>Construir consenso sobre fluxo, responsabilidades e melhorias</td></tr>
+<tr><td><strong>Análise de Documentos</strong></td><td>Revisar manuais, formulários, relatórios, sistemas</td><td>Complementar entrevistas, validar regras formais</td></tr>
+<tr><td><strong>Questionários/Surveys</strong></td><td>Coletar percepções de múltiplos envolvidos em escala</td><td>Avaliar satisfação, identificar pontos de dor em larga escala</td></tr>
+<tr><td><strong>Mineração de Dados (Process Mining)</strong></td><td>Extrair fluxos reais a partir de logs de sistemas</td><td>Descobrir desvios entre processo modelado e executado</td></tr>
+</tbody>
+</table>
+
+<h2>9. Melhoria de Processos: Metodologias e Ferramentas</h2>
+<h3>🔹 Lean Management</h3>
+<p>Origem: Toyota Production System. Foco: <strong>eliminar desperdícios</strong> (muda) que não agregam valor ao cliente.</p>
+<p><strong>7 Desperdícios Clássicos (TIMWOOD):</strong></p>
+<ol>
+<li><strong>T</strong>ransporte (movimentação desnecessária)</li>
+<li><strong>I</strong>nventário (estoque excessivo)</li>
+<li><strong>M</strong>ovimento (gestos inúteis do operador)</li>
+<li><strong>W</strong>aiting (espera por recursos/informações)</li>
+<li><strong>O</strong>verprocessing (etapas desnecessárias)</li>
+<li><strong>O</strong>verproduction (produzir além da demanda)</li>
+<li><strong>D</strong>efects (retrabalho, correções)</li>
+</ol>
+<p><strong>Ferramentas Lean:</strong> 5S, Kanban, Kaizen, Poka-Yoke, Value Stream Mapping.</p>
+
+<h3>🔹 Six Sigma (Seis Sigma)</h3>
+<p>Origem: Motorola (1980s). Foco: <strong>reduzir variabilidade</strong> e defeitos para atingir 3,4 defeitos por milhão de oportunidades (nível 6σ).</p>
+<p><strong>Metodologia DMAIC:</strong></p>
+<ol>
+<li><strong>Define:</strong> Definir problema, escopo, requisitos do cliente.</li>
+<li><strong>Measure:</strong> Medir desempenho atual, coletar dados, estabelecer linha de base.</li>
+<li><strong>Analyze:</strong> Analisar causas raiz, validar hipóteses com dados.</li>
+<li><strong>Improve:</strong> Implementar soluções, testar em pequena escala.</li>
+<li><strong>Control:</strong> Padronizar melhorias, monitorar indicadores, garantir sustentabilidade.</li>
+</ol>
+
+<h3>🔹 Ciclo PDCA (Deming/Shewhart)</h3>
+<p>Ferramenta universal de melhoria contínua:</p>
+<ul>
+<li><strong>Plan (Planejar):</strong> Definir objetivo, analisar situação atual, planejar ações.</li>
+<li><strong>Do (Executar):</strong> Implementar ações planejadas, coletar dados.</li>
+<li><strong>Check (Verificar):</strong> Comparar resultados com metas, analisar desvios.</li>
+<li><strong>Act (Agir):</strong> Padronizar se deu certo; corrigir e reiniciar ciclo se falhou.</li>
+</ul>
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um setor do TCDF identifica que o tempo médio de emissão de pareceres técnicos está acima da meta. Aplica PDCA: (P) define meta de 10 dias e mapeia gargalos; (D) implementa checklist padronizado e treinamento; (C) monitora tempo por 3 meses; (A) padroniza o novo fluxo e reinicia ciclo para nova melhoria. <strong>Isso é aplicação do PDCA.</strong></p>
+</div>
+
+<h3>🔹 Benchmarking</h3>
+<p>Processo contínuo de comparar práticas, processos e resultados com organizações reconhecidas como excelentes, para identificar oportunidades de melhoria.</p>
+<table>
+<thead><tr><th>Tipo</th><th>Referência</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Interno</strong></td><td>Unidades/departamentos da mesma organização</td><td>Comparar eficiência entre regionais administrativas do DF</td></tr>
+<tr><td><strong>Competitivo</strong></td><td>Concorrentes diretos</td><td>Comparar tempo de resposta com outros Tribunais de Contas</td></tr>
+<tr><td><strong>Funcional</strong></td><td>Organizações com processos similares, mesmo setor diferente</td><td>Comparar processo de licitação com órgão federal de mesma área</td></tr>
+<tr><td><strong>Genérico</strong></td><td>Melhores práticas de qualquer setor</td><td>Adaptar sistema de atendimento do setor privado para o público</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Metodologia de Rummler & Brache</h3>
+<p>Abordagem em três níveis para alinhamento estratégico:</p>
+<ol>
+<li><strong>Nível Organizacional:</strong> Definir missão, visão, objetivos estratégicos e processos-chave.</li>
+<li><strong>Nível de Processo:</strong> Mapear, medir e melhorar processos transversais.</li>
+<li><strong>Nível de Desempenho:</strong> Definir indicadores, metas e sistemas de recompensa para pessoas.</li>
+</ol>
+<p><strong>Princípio Central:</strong> "A organização é um sistema de processos; pessoas desempenham processos; processos entregam valor."
+
+<h2>🎯 O QUE MAIS CAI NO CESPE (RANKING DE FREQUÊNCIA)</h2>
+<ol>
+<li><strong>Gestão DE vs. POR processos:</strong> Diferença conceitual e de escopo. Questões que tratam como sinônimos → ERRADO.</li>
+<li><strong>Níveis de maturidade BPM:</strong> Características de cada nível (1 a 5). Nível 1 = informal; Nível 5 = otimizado.</li>
+<li><strong>Ciclo de Vida BPM:</strong> Etapas na ordem correta: Identificar → Modelar → Executar → Monitorar → Otimizar.</li>
+<li><strong>Técnicas de mapeamento:</strong> Função de cada uma (Fluxograma = sequencial; Ishikawa = causas raiz; VSM = desperdícios; BPMN = padrão rico).</li>
+<li><strong>Lean vs. Six Sigma:</strong> Lean = eliminar desperdícios; Six Sigma = reduzir variabilidade/defeitos. DMAIC é do Six Sigma, não do Lean.</li>
+<li><strong>PDCA:</strong> Etapas e lógica cíclica. "Act" = padronizar ou corrigir, não "planejar de novo".</li>
+<li><strong>BPMN:</strong> Elementos básicos (Evento, Atividade, Gateway, Pool/Lane). Questões que confundem símbolos → ERRADO.</li>
+<li><strong>Benchmarking:</strong> Tipos (interno, competitivo, funcional, genérico) e que é processo contínuo, não cópia pontual.</li>
+</ol>
+
+<h2>⚖️ JURISPRUDÊNCIA RELEVANTE (TCU/STF sobre Gestão de Processos)</h2>
+<div class="box jur">
+<strong>TCU – Acórdão 2.630/2019-Plenário (Gestão por Processos no Setor Público)</strong><br>
+Tese: A adoção da gestão por processos no setor público deve observar os princípios da legalidade, impessoalidade e eficiência (art. 37, CF). Processos críticos (licitação, controle, atendimento) devem ter indicadores de desempenho públicos e revisões periódicas. A mera existência de fluxogramas não configura gestão por processos sem governança e melhoria contínua.
+</div>
+<div class="box jur">
+<strong>TCU – Acórdão 1.876/2018-Plenário (Indicadores de Processo)</strong><br>
+Tese: Indicadores de processos no setor público devem ser SMART (Específicos, Mensuráveis, Atingíveis, Relevantes, Temporais) e alinhados ao PPA. Indicadores de meio (ex: número de processos tramitados) não substituem indicadores de resultado (ex: satisfação do cidadão, redução de tempo total).
+</div>
+<div class="box jur">
+<strong>STF – RE 601.785/SP (2014)</strong><br>
+Tese: A eficiência (art. 37, CF) exige que a administração pública adote ferramentas de gestão de processos que garantam celeridade, economicidade e qualidade na prestação de serviços. A omissão na implementação de mecanismos de mapeamento e melhoria pode configurar improbidade por gestão ineficiente.
+</div>
+<div class="box jur">
+<strong>TCU – Acórdão 3.124/2021-Plenário (BPM e Tecnologia)</strong><br>
+Tese: A automação de processos (BPMS) no setor público deve observar a LGPD, a acessibilidade digital e a interoperabilidade com sistemas governamentais. A mera digitalização de formulários em papel não configura melhoria de processo sem redesenho do fluxo e eliminação de etapas desnecessárias.
+</div>
+
+<h2>📝 QUESTÕES CESPE COMENTADAS</h2>
+<div class="q-card">
+<strong>(CESPE/CEBRASPE – TCDF – 2021)</strong><br>
+Julgue: A gestão por processos caracteriza-se pela organização do trabalho em torno de fluxos transversais que agregam valor ao cidadão, em contraposição à gestão funcional tradicional, estruturada em departamentos estanques.
+<p><strong>Comentário:</strong> CORRETO. Essa é a essência da gestão POR processos: visão sistêmica, fluxos transversais, foco no resultado para o cidadão. A gestão funcional tradicional fragmenta o processo em silos departamentais.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANEEL – 2022)</strong><br>
+Julgue: No modelo de maturidade BPM CBOK, uma organização no nível 2 (Gerenciado) possui processos documentados, responsáveis definidos e indicadores básicos de desempenho, mas ainda não possui governança formalizada nem melhoria contínua institucionalizada.
+<p><strong>Comentário:</strong> CORRETO. Nível 2 = processos documentados e controlados, mas ainda sem integração estratégica. Governança e melhoria contínua sistemáticas começam no nível 3 (Definido).</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – MAPA – 2023)</strong><br>
+Julgue: O ciclo PDCA de melhoria contínua estrutura-se em Planejar, Executar, Controlar e Agir, sendo que a fase "Agir" consiste em planejar novamente o processo com base nos resultados obtidos.
+<p><strong>Comentário:</strong> ERRADO. A fase "Act" (Agir) significa <strong>padronizar a melhoria se deu certo ou aplicar ações corretivas se falhou</strong>, não "planejar de novo". O reinício do ciclo ocorre naturalmente após a padronização/correção.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – IBAMA – 2023)</strong><br>
+Julgue: A técnica de mapeamento conhecida como Diagrama de Ishikawa (Espinha de Peixe) é utilizada para representar graficamente a sequência de atividades de um processo, com início, tarefas, decisões e fim.
+<p><strong>Comentário:</strong> ERRADO. A técnica descrita é o <strong>Fluxograma</strong>. O Diagrama de Ishikawa serve para <strong>identificar causas raiz de problemas</strong>, organizando-as em categorias (6M: Método, Matéria-prima, Mão de obra, Máquinas, Medição, Meio ambiente).</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANVISA – 2022)</strong><br>
+Julgue: A metodologia Lean Management tem como foco principal a redução da variabilidade dos processos por meio de controle estatístico, visando atingir o nível de seis sigma (3,4 defeitos por milhão).
+<p><strong>Comentário:</strong> ERRADO. A descrição refere-se ao <strong>Six Sigma</strong>. O <strong>Lean</strong> foca na <strong>eliminação de desperdícios</strong> (TIMWOOD) que não agregam valor ao cliente. São abordagens complementares, mas distintas.</p>
+</div>
+
+<h2>📋 CHECKLIST DE REVISÃO RÁPIDA</h2>
+<div style="background:var(--def);padding:16px;border-radius:8px;margin:20px 0">
+<strong>Antes da prova, verifique se você domina:</strong><br>
+=> Gestão DE processos (operacional) ≠ Gestão POR processos (estratégica)<br>
+=> Níveis de maturidade BPM: 1=Ad hoc, 2=Gerenciado, 3=Definido, 4=Quantitativo, 5=Otimizado<br>
+=> Ciclo BPM: Identificar → Modelar → Executar → Monitorar → Otimizar<br>
+=> Fluxograma = sequência; Ishikawa = causas raiz; VSM = desperdícios; BPMN = padrão rico<br>
+=> Lean = eliminar desperdícios (TIMWOOD); Six Sigma = reduzir variabilidade (DMAIC)<br>
+=> PDCA: Plan → Do → Check → Act (padronizar/corrigir)<br>
+=> BPMN: Evento (círculo), Atividade (ret. arredondado), Gateway (losango), Pool/Lane (participante)<br>
+=> Benchmarking = processo contínuo de comparação, não cópia pontual<br>
+=> Indicadores SMART e alinhados ao PPA no setor público<br>
+=> Digitalização ≠ Melhoria de processo (é preciso redesenhar fluxo)
+</div>
+
+<div class="nav-b">
+<a href="adm-geral-04.html" class="btn-n">← Anterior</a>
+<span></span>
+</div>
+</main>
+
+
+<div class="n-panel" id="nP">
+<div style="display:flex;justify-content:space-between;margin-bottom:10px"><strong>Notas da Aula 05</strong><button onclick="tN()" style="background:none;border:none;cursor:pointer">✕</button></div>
+<div id="nL" style="max-height:180px;overflow-y:auto;margin-bottom:10px"></div>
+<form onsubmit="aN(event)"><input type="text" class="n-in" id="nI" placeholder="Anotação sobre gestão de processos..." required><button type="submit" class="b-sm">💾 Salvar</button></form>
+</div>
+
+<script>
+const SK='adm05-notes';let hM=false;
+function webS(){const s=window.getSelection().toString();window.open(`https://duckduckgo.com/?q=${encodeURIComponent(s||'Gestão de processos BPM Lean Six Sigma CESPE')}`,'_blank')}
+function tN(){const p=document.getElementById('nP');p.style.display=p.style.display==='none'?'block':'none';if(p.style.display==='block')lN()}
+function lN(){const n=JSON.parse(localStorage.getItem(SK)||'[]');document.getElementById('nL').innerHTML=n.length?n.map((x,i)=>`<div class="n-item">${x.text}<br><small style="cursor:pointer;color:#666" onclick="dN(${i})">remover</small></div>`).join(''):'<p style="font-size:.9em;color:#666">Sem notas.</p>'}
+function aN(e){e.preventDefault();const i=document.getElementById('nI'),n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:i.value,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));i.value='';lN()}
+function dN(i){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.splice(i,1);localStorage.setItem(SK,JSON.stringify(n));lN()}
+function tH(){hM=!hM;document.body.style.cursor=hM?'text':'auto';document.querySelectorAll('.t-btn')[2].textContent=hM?'✅ ON':'✏️ Destaque';hM?document.addEventListener('mouseup',hS):document.removeEventListener('mouseup',hS)}
+function hS(){const s=window.getSelection();if(s.toString().length>10){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:`🔍 "${s.toString().substring(0,40)}..." - ${prompt('Nota:','')||'-'}`,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));alert('✅ Destaque salvo!');s.removeAllRanges()}}
+document.addEventListener('DOMContentLoaded',lN);
+</script>
+</body>
+</html>

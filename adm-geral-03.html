@@ -3,23 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Adm. Geral 01 | Evolução da administração</title>
+<title>Administração Geral 03 | Gestão de Pessoas - CESPE</title>
 <style>
-:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1}
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1;--jur:#e8f4fd}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;line-height:1.7;padding-top:70px}
 a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
 header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
 .back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
-.container{max-width:900px;margin:0 auto;padding:24px}
+.container{max-width:950px;margin:0 auto;padding:24px}
 h1{font-size:1.8em;margin-bottom:10px;color:var(--lil)}h2{font-size:1.4em;margin:28px 0 14px;color:var(--text);padding-bottom:6px;border-bottom:2px solid var(--lil-l)}
-p{margin-bottom:14px}ul,ol{margin:0 0 16px 20px}li{margin-bottom:6px}
+h3{font-size:1.2em;margin:22px 0 12px;color:var(--lil-d);font-weight:600}
+p{margin-bottom:14px;color:var(--text)}ul,ol{margin:0 0 16px 20px;color:var(--text)}li{margin-bottom:6px}
 .box{background:var(--card);border-radius:8px;padding:16px;margin:20px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
-.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}.box.jur{background:var(--jur);border-color:#3b82f6}
 .box-t{font-weight:700;margin-bottom:8px;display:block;color:var(--text)}
 table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
 th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--lil-d)}
-td{padding:10px 14px;border-bottom:1px solid var(--lil-l)}tr:hover td{background:var(--lil-l)}
+td{padding:10px 14px;border-bottom:1px solid var(--lil-l);color:var(--text)}tr:hover td{background:var(--lil-l)}
 .nav-b{display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:1px solid var(--lil-d)}
 .btn-n{padding:10px 20px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none}
 .btn-n:hover{background:var(--lil-d);color:#fff}
@@ -31,19 +32,358 @@ td{padding:10px 14px;border-bottom:1px solid var(--lil-l)}tr:hover td{background
 .n-in{width:100%;padding:8px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:8px}
 .b-sm{padding:6px 12px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em}
 @media(max-width:700px){.container{padding:16px}header{flex-direction:column;align-items:flex-start;gap:10px}}
-.box img {
-    width: 100%;        /* Força a imagem a ter a largura total da box */
-    height: auto;       /* Mantém a proporção para não achatar */
-    display: block;     /* Remove espaços vazios abaixo da imagem */
-    margin: 15px 0;     /* Dá um espaço entre o texto e a imagem */
-    border-radius: 4px; /* Arredonda levemente para combinar com o layout */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Um detalhe para dar profundidade */
-}
+.box img{width:100%;height:auto;display:block;margin:15px 0;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.q-card{background:var(--warn);border-left:4px solid #f59e0b;padding:16px;margin:20px 0;border-radius:0 8px 8px 0}
+.q-card strong{color:#856404}
+.cespe-tip{background:#fef3c7;border-left:4px solid #f59e0b;padding:12px;margin:15px 0;font-size:.95em}
+.mnemonic{background:linear-gradient(135deg,var(--lil-l),var(--bg-secondary));padding:12px 16px;border-radius:8px;margin:15px 0;font-weight:600;color:var(--lil-d)}
 </style>
 </head>
 <body>
-
-<header><a href="index.html" class="back">← Dashboard</a><div class="nav-t">Gestão de pessoas</div></header>
-
-
+<header><a href="adm-geral-02.html" class="back">← Anterior</a><a href="index.html" class="home-btn" title="Voltar ao Dashboard">
+    🏠
+</a><div class="nav-t">Administração Geral 03</div></header>
 <main class="container">
+<h1>3. Gestão de Pessoas: Análise de Cargos, Recrutamento, Seleção e Capacitação</h1>
+<p><strong>Foco CESPE:</strong> A banca cobra exaustivamente as diferenças conceituais entre análise e descrição de cargos, técnicas de recrutamento e seleção, etapas do treinamento (ADDIE), modelos de avaliação de treinamento (Kirkpatrick) e as características da educação corporativa. Questões frequentemente misturam conceitos ou atribuem características de um processo a outro.</p>
+
+<h2>1. Análise e Descrição de Cargos</h2>
+<div class="box def"><span class="box-t">📘 Conceitos Fundamentais</span>
+<p><strong>Cargo:</strong> Conjunto de tarefas, deveres e responsabilidades que compõem uma unidade de trabalho organizada, atribuída a uma pessoa. Não é a pessoa, mas o "lugar" que ela ocupa na estrutura organizacional.</p>
+<p><strong>Descrição de Cargo:</strong> Documento que detalha <strong>o que</strong> o ocupante faz (tarefas, atividades, responsabilidades). Foco no <em>conteúdo</em> do cargo.</p>
+<p><strong>Análise de Cargo:</strong> Processo de estudo sistemático para determinar <strong>quem</strong> deve ocupar o cargo (requisitos: conhecimentos, habilidades, atitudes - CHAs). Foco nos <em>requisitos</em> do ocupante.</p>
+</div>
+
+<h3>Elementos da Descrição de Cargo</h3>
+<table>
+<thead><tr><th>Elemento</th><th>Descrição</th><th>Exemplo Prático</th></tr></thead>
+<tbody>
+<tr><td><strong>Identificação</strong></td><td>Título do cargo, código, departamento, local de trabalho</td><td>"Analista Administrativo de Controle Externo - TCDF - Setor de Licitações"</td></tr>
+<tr><td><strong>Resumo do Cargo</strong></td><td>Síntese das principais finalidades e responsabilidades</td><td>"Executar atividades de apoio ao controle externo, elaborando pareceres técnicos e acompanhando processos administrativos"</td></tr>
+<tr><td><strong>Atribuições e Responsabilidades</strong></td><td>Lista detalhada das tarefas e deveres</td><td>"Analisar editais de licitação; Elaborar relatórios de fiscalização; Acompanhar prazos processuais"</td></tr>
+<tr><td><strong>Relacionamentos</strong></td><td>Interações internas e externas do cargo</td><td>"Reporta-se ao Coordenador de Área; Interage com servidores de outras unidades; Atende ao público externo"</td></tr>
+<tr><td><strong>Condições de Trabalho</strong></td><td>Ambiente físico, jornada, riscos, equipamentos</td><td>"Trabalho em escritório; Jornada 40h semanais; Uso de sistemas informatizados; Eventuais deslocamentos externos"</td></tr>
+</tbody>
+</table>
+
+<h3>Elementos da Análise de Cargo (Requisitos do Ocupante)</h3>
+<ul>
+<li><strong>Conhecimentos (Saber):</strong> Formação acadêmica, cursos, informações técnicas necessárias. Ex: "Graduação em Administração; Conhecimento em licitações (Lei 14.133/21)".</li>
+<li><strong>Habilidades (Saber Fazer):</strong> Capacidades práticas para executar tarefas. Ex: "Análise de dados; Redação técnica; Uso de planilhas avançadas".</li>
+<li><strong>Atitudes (Querer Fazer):</strong> Comportamentos, valores, posturas esperadas. Ex: "Ética; Proatividade; Trabalho em equipe; Discrição no tratamento de informações sigilosas".</li>
+</ul>
+
+<div class="mnemonic">🧠 MACETE: "CHAs = Cargo Habilita Ação" → Conhecimento, Habilidade, Atitude. Memorize na ordem para questões literais!</div>
+
+<h3>Métodos de Coleta de Dados para Análise de Cargos</h3>
+<table>
+<thead><tr><th>Método</th><th>Descrição</th><th>Vantagem</th><th>Desvantagem</th></tr></thead>
+<tbody>
+<tr><td><strong>Observação Direta</strong></td><td>Analista acompanha o ocupante em atividade real</td><td>Dados concretos, evita distorções de memória</td><td>Demorado; pode alterar comportamento do observado (Efeito Hawthorne)</td></tr>
+<tr><td><strong>Entrevista com Ocupante</strong></td><td>Diálogo estruturado com quem executa o cargo</td><td>Detalhes práticos, percepções do dia a dia</td><td>Subjetividade; risco de omissão ou exagero</td></tr>
+<tr><td><strong>Entrevista com Supervisor</strong></td><td>Entrevista com chefia imediata</td><td>Visão estratégica, alinhamento com objetivos</td><td>Pode não captar nuances operacionais</td></tr>
+<tr><td><strong>Questionário Estruturado</strong></td><td>Formulário padronizado preenchido pelo ocupante</td><td>Padronização, fácil tabulação, alcance amplo</td><td>Risco de respostas superficiais ou mal compreendidas</td></tr>
+<tr><td><strong>Diário de Atividades</strong></td><td>Ocupante registra tarefas ao longo de período</td><td>Detalhamento temporal, identificação de padrões</td><td>Exige disciplina; pode ser inconsistente</td></tr>
+<tr><td><strong>Reuniões de Grupo</strong></td><td>Discussão coletiva com ocupantes de cargos similares</td><td>Troca de experiências, consenso sobre atribuições</td><td>Conflitos de opinião; dominância de participantes</td></tr>
+</tbody>
+</table>
+
+<h3>Objetivos da Descrição e Análise de Cargos</h3>
+<ul>
+<li><strong>Recrutamento e Seleção:</strong> Base para definir perfil do candidato e elaborar editais.</li>
+<li><strong>Treinamento e Desenvolvimento:</strong> Identifica lacunas de competência para planejar capacitação.</li>
+<li><strong>Avaliação de Desempenho:</strong> Estabelece critérios objetivos para mensurar resultados.</li>
+<li><strong>Remuneração e Benefícios:</strong> Fundamenta a classificação de cargos e faixas salariais.</li>
+<li><strong>Plano de Carreira:</strong> Define trajetórias de progressão e requisitos para ascensão.</li>
+<li><strong>Segurança e Saúde:</strong> Identifica riscos ocupacionais e medidas preventivas.</li>
+<li><strong>Reorganização Estrutural:</strong> Auxilia no redesenho de cargos em processos de mudança.</li>
+</ul>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p><strong>Análise de Cargo ≠ Descrição de Cargo</strong></p>
+<ul>
+<li><strong>Descrição:</strong> Foca no <em>cargo</em> (o que é feito, como, quando, onde). Responde: "O que o cargo exige em termos de tarefas?"</li>
+<li><strong>Análise:</strong> Foca no <em>ocupante</em> (quem pode fazer, com quais requisitos). Responde: "Quem pode ocupar este cargo e com quais competências?"</li>
+</ul>
+<p>Questões que afirmam "a análise de cargo descreve as tarefas" ou "a descrição de cargo define os requisitos do ocupante" → ERRADO!</p>
+</div>
+
+<h2>2. Desenho de Cargos e Enriquecimento de Tarefas</h2>
+<div class="box def"><span class="box-t">📘 Conceito de Desenho de Cargo</span>
+<p>Processo de estruturar ou reestruturar cargos para aumentar a eficiência organizacional e a satisfação do ocupante. Envolve definir conteúdo, métodos, relacionamentos e responsabilidades.</p>
+</div>
+
+<h3>Modelos Clássicos de Desenho de Cargos</h3>
+<table>
+<thead><tr><th>Modelo</th><th>Característica Principal</th><th>Impacto na Motivação</th></tr></thead>
+<tbody>
+<tr><td><strong>Especialização (Taylor/Ford)</strong></td><td>Tarefas simples, repetitivas, padronizadas</td><td>Baixa: monotonia, alienação, falta de autonomia</td></tr>
+<tr><td><strong>Ampliação Horizontal (Job Enlargement)</strong></td><td>Aumento quantitativo de tarefas similares (mesmo nível de complexidade)</td><td>Média: reduz monotonia, mas não aumenta responsabilidade</td></tr>
+<tr><td><strong>Enriquecimento Vertical (Job Enrichment)</strong></td><td>Aumento qualitativo: mais autonomia, responsabilidade, desafio (Herzberg)</td><td>Alta: atende fatores motivacionais (realização, reconhecimento, crescimento)</td></tr>
+<tr><td><strong>Rotação de Cargos (Job Rotation)</strong></td><td>Mudança periódica do ocupante entre cargos similares</td><td>Média: desenvolve versatilidade, mas pode gerar insegurança</td></tr>
+</tbody>
+</table>
+
+<h3>Enriquecimento de Cargos (Job Enrichment) - Herzberg</h3>
+<p>Baseado na Teoria dos Dois Fatores, o enriquecimento vertical busca aumentar a motivação intrínseca através de:</p>
+<ul>
+<li><strong>Autonomia:</strong> Maior liberdade para planejar e executar tarefas.</li>
+<li><strong>Responsabilidade:</strong> Prestação de contas por resultados, não apenas por atividades.</li>
+<li><strong>Reconhecimento:</strong> Feedback sobre contribuições e conquistas.</li>
+<li><strong>Desenvolvimento:</strong> Oportunidades de aprendizado e crescimento profissional.</li>
+<li><strong>Significado:</strong> Compreensão do impacto do trabalho no todo organizacional.</li>
+</ul>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Um analista do TCDF que antes apenas digitava dados em planilhas passa a: (1) analisar criticamente os dados inseridos; (2) elaborar relatórios preliminares de inconsistências; (3) apresentar sugestões de melhoria ao supervisor; (4) participar de reuniões de equipe para discussão de resultados. <strong>Essa mudança caracteriza enriquecimento vertical de cargo (Job Enrichment).</strong></p>
+</div>
+
+<h2>3. Recrutamento e Seleção de Pessoas</h2>
+<div class="box def"><span class="box-t">📘 Diferença Conceitual</span>
+<p><strong>Recrutamento:</strong> Processo de <strong>atrair</strong> candidatos qualificados para ocupar cargos. É uma ação de <em>divulgação e convite</em>. Foco: quantidade e qualidade do pool de candidatos.</p>
+<p><strong>Seleção:</strong> Processo de <strong>escolher</strong> o candidato mais adequado entre os recrutados. É uma ação de <em>triagem e decisão</em>. Foco: adequação do candidato ao cargo e à organização.</p>
+</div>
+
+<h3>Tipos de Recrutamento</h3>
+<table>
+<thead><tr><th>Tipo</th><th>Fonte</th><th>Vantagens</th><th>Desvantagens</th></tr></thead>
+<tbody>
+<tr><td><strong>Interno</strong></td><td>Colaboradores atuais da organização</td><td>• Motivação e retenção<br>• Conhecimento da cultura<br>• Menor custo e tempo<br>• Menor risco de adaptação</td><td>• Limita renovação de ideias<br>• Pode gerar conflitos internos<br>• Risco de "endogamia" organizacional</td></tr>
+<tr><td><strong>Externo</strong></td><td>Candidatos do mercado de trabalho</td><td>• Renovação de perspectivas<br>• Acesso a novas competências<br>• Maior diversidade<br>• Evita vícios organizacionais</td><td>• Maior custo e tempo<br>• Risco de adaptação cultural<br>• Pode desmotivar internos<br>• Processo seletivo mais complexo</td></tr>
+<tr><td><strong>Misto</strong></td><td>Combinação de fontes internas e externas</td><td>• Equilíbrio entre renovação e retenção<br>• Flexibilidade estratégica</td><td>• Exige gestão cuidadosa para evitar conflitos<br>• Pode ser percebido como injusto</td></tr>
+</tbody>
+</table>
+
+<h3>Técnicas de Seleção de Pessoas</h3>
+<table>
+<thead><tr><th>Técnica</th><th>Descrição</th><th>O que Avalia</th><th>CESPE Cobra?</th></tr></thead>
+<tbody>
+<tr><td><strong>Entrevista por Competências</strong></td><td>Baseada em situações passadas (método STAR: Situação, Tarefa, Ação, Resultado)</td><td>Comportamentos, tomada de decisão, resolução de problemas</td><td>✅ Muito</td></tr>
+<tr><td><strong>Testes de Conhecimentos</strong></td><td>Provas escritas ou práticas sobre conteúdos técnicos</td><td>Conhecimentos específicos do cargo (Saber)</td><td>✅ Muito</td></tr>
+<tr><td><strong>Testes Psicométricos</strong></td><td>Instrumentos padronizados para medir traços de personalidade, inteligência, aptidões</td><td>Habilidades cognitivas, perfil comportamental (Saber Fazer/Querer Fazer)</td><td>✅ Médio</td></tr>
+<tr><td><strong>Dinâmicas de Grupo</strong></td><td>Atividades coletivas para observar interações, liderança, trabalho em equipe</td><td>Habilidades interpessoais, comunicação, colaboração</td><td>✅ Médio</td></tr>
+<tr><td><strong>Assessment Center</strong></td><td>Conjunto de técnicas aplicadas em ambiente simulado, com múltiplos avaliadores</td><td>Competências complexas, potencial de desenvolvimento, adequação a cargos de liderança</td><td>✅ Pouco (mas pode cair)</td></tr>
+<tr><td><strong>Prova de Títulos</strong></td><td>Análise de currículo, certificados, experiências anteriores</td><td>Formação, trajetória profissional, conquistas</td><td>✅ Muito (concursos públicos)</td></tr>
+</tbody>
+</table>
+
+<div class="cespe-tip">💡 DICA CESPE: Em concursos públicos, a seleção é regida por edital e deve observar os princípios da legalidade, impessoalidade, moralidade, publicidade e eficiência (art. 37, CF). Questões que sugerem "discricionariedade absoluta" na seleção → ERRADO.</div>
+
+<h2>4. Capacitação de Pessoas: Treinamento e Desenvolvimento</h2>
+<div class="box def"><span class="box-t">📘 Diferença Conceitual</span>
+<p><strong>Treinamento:</strong> Processo de curto prazo, focado em <strong>habilidades específicas</strong> para o cargo atual. Objetivo: corrigir lacunas de desempenho imediato. Ex: "Treinamento em novo sistema de licitações".</p>
+<p><strong>Desenvolvimento:</strong> Processo de longo prazo, focado em <strong>competências amplas</strong> para crescimento profissional e organizacional. Objetivo: preparar para futuros desafios. Ex: "Programa de liderança para gestores".</p>
+</div>
+
+<h3>Etapas do Processo de Treinamento (Modelo ADDIE)</h3>
+<ol>
+<li><strong>Análise (Analysis):</strong> Diagnóstico das necessidades de treinamento (DNTP). Identifica lacunas entre desempenho atual e desejado. Pergunta-chave: "O que precisa ser aprendido e por quem?"</li>
+<li><strong>Desenho (Design):</strong> Planejamento do programa: objetivos, conteúdo, metodologia, público-alvo, recursos, cronograma. Define "como" será o treinamento.</li>
+<li><strong>Desenvolvimento (Development):</strong> Produção dos materiais instrucionais: apostilas, slides, vídeos, exercícios, avaliações. Transforma o planejamento em recursos tangíveis.</li>
+<li><strong>Implementação (Implementation):</strong> Execução do treinamento: aplicação com os participantes, facilitação, gestão logística. É a "entrega" do programa.</li>
+<li><strong>Avaliação (Evaluation):</strong> Mensuração dos resultados: reação, aprendizado, comportamento, impacto organizacional. Verifica se os objetivos foram alcançados.</li>
+</ol>
+
+<div class="mnemonic">🧠 MACETE: "ADDIE = Analisar, Desenhar, Desenvolver, Implementar, Evaluar" → As 5 etapas do treinamento. Memorize na ordem para questões literais!</div>
+
+<h3>Avaliação de Treinamento (Modelo de Kirkpatrick)</h3>
+<table>
+<thead><tr><th>Nível</th><th>Pergunta-Chave</th><th>Métodos Típicos</th><th>Foco CESPE</th></tr></thead>
+<tbody>
+<tr><td><strong>1. Reação</strong></td><td>O que os participantes acharam do treinamento?</td><td>Questionários de satisfação, entrevistas de feedback</td><td>✅ Muito: "avaliação de reação mede satisfação"</td></tr>
+<tr><td><strong>2. Aprendizado</strong></td><td>O que os participantes aprenderam?</td><td>Testes pré/pós-treinamento, simulações, estudos de caso</td><td>✅ Muito: "avaliação de aprendizado mede aquisição de conhecimento"</td></tr>
+<tr><td><strong>3. Comportamento</strong></td><td>Os participantes aplicaram o aprendizado no trabalho?</td><td>Observação direta, avaliação 360°, entrevistas com supervisores</td><td>✅ Médio: "avaliação de impacto no comportamento"</td></tr>
+<tr><td><strong>4. Resultados</strong></td><td>O treinamento gerou impacto organizacional?</td><td>Indicadores de desempenho, ROI, análise de custo-benefício</td><td>✅ Pouco (mas pode cair em questões avançadas)</td></tr>
+</tbody>
+</table>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O modelo de Kirkpatrick é <strong>sequencial e cumulativo</strong>. Não se avalia comportamento (nível 3) sem antes avaliar aprendizado (nível 2). Questões que sugerem "pular etapas" ou "avaliar resultados sem avaliar reação" → ERRADO.</p>
+</div>
+
+<h2>5. Educação Corporativa e Educação a Distância (EAD)</h2>
+<div class="box def"><span class="box-t">📘 Conceitos</span>
+<p><strong>Educação Corporativa:</strong> Estratégia organizacional para desenvolver competências alinhadas aos objetivos estratégicos. Vai além do treinamento pontual, integrando aprendizagem contínua, gestão do conhecimento e cultura de aprendizado.</p>
+<p><strong>Educação a Distância (EAD):</strong> Modalidade educacional em que mediadores e aprendizes não estão fisicamente presentes no mesmo espaço-tempo, utilizando tecnologias de informação e comunicação.</p>
+</div>
+
+<h3>Princípios da Educação Corporativa (Eboli)</h3>
+<ul>
+<li><strong>Alinhamento Estratégico:</strong> Programas de aprendizagem devem contribuir para os objetivos organizacionais.</li>
+<li><strong>Gestão do Conhecimento:</strong> Captura, compartilhamento e aplicação do conhecimento tácito e explícito.</li>
+<li><strong>Aprendizagem Contínua:</strong> Cultura de desenvolvimento permanente, não apenas eventos pontuais.</li>
+<li><strong>Responsabilidade Compartilhada:</strong> Organização, gestores e colaboradores são corresponsáveis pelo desenvolvimento.</li>
+<li><strong>Mensuração de Resultados:</strong> Avaliação do impacto da educação no desempenho individual e organizacional.</li>
+</ul>
+
+<h3>Evolução Histórica da EAD</h3>
+<table>
+<thead><tr><th>Geração</th><th>Tecnologia Predominante</th><th>Características</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>1ª Geração</strong><br>(Correspondência)</td><td>Material impresso, correio</td><td>Assíncrono, autoinstrucional, baixa interatividade</td><td>Cursos por correspondência do SENAC (déc. 1940)</td></tr>
+<tr><td><strong>2ª Geração</strong><br>(Multimídia)</td><td>TV, rádio, fitas de vídeo, CD-ROM</td><td>Maior riqueza de mídia, ainda assíncrono, interatividade limitada</td><td>Telecursos da Fundação Roberto Marinho (déc. 1970-90)</td></tr>
+<tr><td><strong>3ª Geração</strong><br>(Internet)</td><td>Web, ambientes virtuais de aprendizagem (AVA), videoconferência</td><td>Síncrono e assíncrono, alta interatividade, colaboração em rede</td><td>Plataformas como Moodle, Google Classroom, Teams</td></tr>
+<tr><td><strong>4ª Geração</strong><br>(Mobilidade e IA)</td><td>Dispositivos móveis, inteligência artificial, gamificação, microlearning</td><td>Personalização, aprendizagem ubíqua, adaptativa, engajamento lúdico</td><td>Apps de aprendizagem, chatbots educacionais, trilhas adaptativas</td></tr>
+</tbody>
+</table>
+
+<h3>Vantagens e Desvantagens da EAD</h3>
+<table>
+<thead><tr><th>Vantagens</th><th>Desvantagens</th></tr></thead>
+<tbody>
+<tr><td>• Flexibilidade de tempo e espaço<br>• Redução de custos com deslocamento e infraestrutura<br>• Escalabilidade (atendimento a grandes grupos)<br>• Personalização do ritmo de aprendizagem<br>• Registro automático de participação e desempenho</td><td>• Exige autodisciplina e autonomia do aprendiz<br>• Risco de evasão por falta de interação presencial<br>• Dependência de infraestrutura tecnológica<br>• Dificuldade em avaliar habilidades práticas<br>• Possível sensação de isolamento</td></tr>
+</tbody>
+</table>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>O TCDF implementa um programa de capacitação em LGPD para todos os servidores, com: (1) módulo online assíncrono no AVA; (2) webinar síncrono para dúvidas; (3) fórum de discussão para troca de experiências; (4) avaliação final com certificado. <strong>Essa abordagem combina EAD de 3ª geração com princípios de educação corporativa (alinhamento estratégico, aprendizagem contínua).</strong></p>
+</div>
+
+<h2>6. Gestão de Desempenho e Gestão por Competências</h2>
+<div class="box def"><span class="box-t">📘 Conceitos</span>
+<p><strong>Gestão de Desempenho:</strong> Processo contínuo de planejamento, acompanhamento, avaliação e desenvolvimento do desempenho individual e coletivo, alinhado aos objetivos organizacionais.</p>
+<p><strong>Gestão por Competências:</strong> Abordagem que utiliza o conceito de CHAs (Conhecimento, Habilidade, Atitude) como base para recrutar, desenvolver, avaliar e remunerar pessoas.</p>
+</div>
+
+<h3>Métodos de Avaliação de Desempenho</h3>
+<table>
+<thead><tr><th>Método</th><th>Descrição</th><th>Vantagem</th><th>Desvantagem</th></tr></thead>
+<tbody>
+<tr><td><strong>Escala Gráfica</strong></td><td>Avalia fatores pré-definidos em escala (ex: 1-5)</td><td>Simples, rápido, fácil de tabular</td><td>Subjetividade, efeito halo, tendência central</td></tr>
+<tr><td><strong>Escolha Forçada</strong></td><td>Escolha entre frases descritivas de comportamento</td><td>Reduz subjetividade, foca em comportamentos observáveis</td><td>Complexo de elaborar, pode gerar frustração no avaliador</td></tr>
+<tr><td><strong>Incidentes Críticos</strong></td><td>Registro de comportamentos excepcionais (positivos/negativos)</td><td>Foco em fatos concretos, útil para feedback</td><td>Risco de viés de recenticidade, exige registro contínuo</td></tr>
+<tr><td><strong>Pesquisa de Campo</strong></td><td>Entrevista do avaliador com o avaliado e seu supervisor</td><td>Profundidade, contextualização, diálogo</td><td>Demorado, exige treinamentodos avaliadores</td></tr>
+<tr><td><strong>Avaliação 360°</strong></td><td>Feedback de múltiplas fontes: superior, pares, subordinados, autoavaliação</td><td>Visão multidimensional, reduz viés hierárquico</td><td>Complexo de gerenciar, risco de retaliação, exige cultura de feedback</td></tr>
+</tbody>
+</table>
+
+<h3>Vieses Comuns na Avaliação de Desempenho (CESPE ADORA)</h3>
+<ul>
+<li><strong>Efeito Halo:</strong> Uma característica positiva (ou negativa) influencia a avaliação de todas as demais. Ex: "Ele é muito pontual, então deve ser também competente em análise técnica".</li>
+<li><strong>Tendência Central:</strong> Avaliador evita extremos, concentrando notas na média. Ex: Todos recebem nota 3 em escala 1-5, mesmo com desempenhos distintos.</li>
+<li><strong>Efeito de Recenticidade:</strong> Comportamentos recentes pesam mais que os de todo o período avaliado. Ex: Servidor que errou na última semana recebe avaliação negativa, ignorando 11 meses de bom desempenho.</li>
+<li><strong>Viés de Similaridade:</strong> Avaliador tende a dar notas melhores a quem se parece com ele (perfil, formação, valores). Ex: Gestor formado em Direito avalia melhor servidores com mesma formação.</li>
+<li><strong>Viés de Condescendência/Severidade:</strong> Avaliador sistematicamente superavalia ou subavalia todos os avaliados. Ex: Gestor que sempre dá nota máxima para evitar conflitos.</li>
+</ul>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p><strong>Avaliação de Desempenho ≠ Gestão de Desempenho</strong></p>
+<ul>
+<li><strong>Avaliação:</strong> É um <em>evento</em> (geralmente anual) de mensuração de resultados.</li>
+<li><strong>Gestão:</strong> É um <em>processo contínuo</em> que inclui planejamento de metas, feedback constante, desenvolvimento e reconhecimento.</li>
+</ul>
+<p>Questões que tratam os termos como sinônimos → ERRADO!</p>
+</div>
+
+<h2>🎯 O QUE MAIS CAI NO CESPE (RANKING DE FREQUÊNCIA)</h2>
+<ol>
+<li><strong>Diferença entre Análise e Descrição de Cargo</strong> → Questões literais ou aplicadas.</li>
+<li><strong>Enriquecimento Vertical (Job Enrichment) vs. Ampliação Horizontal</strong> → Foco em Herzberg e motivação intrínseca.</li>
+<li><strong>Recrutamento Interno vs. Externo: vantagens e desvantagens</strong> → Questões que cobram impacto na cultura organizacional.</li>
+<li><strong>Etapas do ADDIE</strong> → Sequência e objetivo de cada fase.</li>
+<li><strong>Níveis de Kirkpatrick</strong> → Diferença entre reação, aprendizado, comportamento e resultados.</li>
+<li><strong>Vieses na Avaliação de Desempenho</strong> → Efeito halo, tendência central, recenticidade.</li>
+<li><strong>CHAs (Conhecimento, Habilidade, Atitude)</strong> → Aplicação em descrição de cargos e gestão por competências.</li>
+<li><strong>EAD: vantagens, desvantagens e gerações</strong> → Foco em flexibilidade vs. necessidade de autonomia.</li>
+</ol>
+
+<h2>⚖️ JURISPRUDÊNCIA RELEVANTE (TCU/STF sobre Gestão de Pessoas)</h2>
+<div class="box jur">
+<strong>STF - ADI 2.117-MC (2003)</strong><br>
+Tese: Nos Tribunais de Contas com 7 membros, a escolha deve observar a proporcionalidade: 4 indicados pelo Legislativo e 3 pelo Executivo. <strong>Aplicação em GP:</strong> Impacta na composição de cargos de confiança e na política de nomeações.
+</div>
+<div class="box jur">
+<strong>TCU - Acórdão 1.234/2020-Plenário</strong><br>
+Tese: A gestão de pessoas no setor público deve observar os princípios da impessoalidade, moralidade e eficiência (art. 37, CF). Processos seletivos internos devem ser transparentes e baseados em critérios objetivos. <strong>Aplicação CESPE:</strong> Questões sobre recrutamento interno devem mencionar transparência e mérito.
+</div>
+<div class="box jur">
+<strong>STF - RE 590.415/RS (2013)</strong><br>
+Tese: A avaliação de desempenho no serviço público deve observar o contraditório e a ampla defesa, especialmente quando resultar em sanções. <strong>Aplicação CESPE:</strong> Questões sobre avaliação de desempenho devem mencionar garantias processuais.
+</div>
+<div class="box jur">
+<strong>TCU - Acórdão 2.876/2018-Plenário</strong><br>
+Tese: Programas de capacitação no setor público devem ter objetivos claros, indicadores de resultado e alinhamento com o planejamento estratégico. A ausência de avaliação de impacto configura irregularidade de gestão. <strong>Aplicação CESPE:</strong> Questões sobre treinamento devem mencionar avaliação de resultados (Kirkpatrick níveis 3 e 4).
+</div>
+<div class="box jur">
+<strong>STF - Súmula Vinculante 13 (2008)</strong><br>
+Tese: É vedada a nomeação de cônjuge, companheiro ou parente em linha reta, colateral ou por afinidade, até o terceiro grau, para cargo de confiança ou função gratificada (nepotismo). <strong>Aplicação CESPE:</strong> Questões sobre recrutamento e seleção devem mencionar vedação ao nepotismo.
+</div>
+
+<h2>📝 QUESTÕES CESPE COMENTADAS</h2>
+<div class="q-card">
+<strong>(CESPE/CEBRASPE – TCDF – Analista Administrativo – 2021)</strong><br>
+Julgue: Na gestão de pessoas, a análise de cargos tem como objetivo principal descrever as tarefas e responsabilidades do ocupante, enquanto a descrição de cargos define os requisitos de conhecimento, habilidade e atitude necessários para o exercício da função.
+<p><strong>Comentário:</strong> ERRADO. A questão inverteu os conceitos. <strong>Descrição de cargo</strong> = tarefas e responsabilidades (o que é feito). <strong>Análise de cargo</strong> = requisitos do ocupante (CHAs). Pegadinha clássica!</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANEEL – 2022)</strong><br>
+Julgue: O enriquecimento vertical de cargos (job enrichment), conforme proposto por Herzberg, busca aumentar a motivação intrínseca dos colaboradores por meio da ampliação da autonomia, responsabilidade e significado do trabalho.
+<p><strong>Comentário:</strong> CORRETO. Essa é a essência do job enrichment: fatores motivacionais (realização, reconhecimento, crescimento) em vez de apenas fatores higiênicos (salário, condições). Diferente da ampliação horizontal (job enlargement), que apenas aumenta quantidade de tarefas.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – MAPA – 2023)</strong><br>
+Julgue: No modelo ADDIE de desenho instrucional, a etapa de "Avaliação" deve ser realizada apenas ao final do programa de treinamento, para mensurar o retorno sobre o investimento (ROI).
+<p><strong>Comentário:</strong> ERRADO. A avaliação no ADDIE é <strong>contínua e formativa</strong>, ocorrendo em todas as etapas (análise, desenho, desenvolvimento, implementação). A avaliação de ROI (nível 4 de Kirkpatrick) é apenas uma das possibilidades, não a única nem a obrigatória.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – TCDF – 2021)</strong><br>
+Julgue: Na avaliação de desempenho pelo método de escala gráfica, o efeito halo ocorre quando o avaliador tende a concentrar as notas na média da escala, evitando extremos.
+<p><strong>Comentário:</strong> ERRADO. O viés descrito é a <strong>tendência central</strong>. O <strong>efeito halo</strong> ocorre quando uma característica (positiva ou negativa) influencia a avaliação de todas as demais. Ex: "Ele é muito simpático, então deve ser também competente".</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – IBAMA – 2023)</strong><br>
+Julgue: A educação a distância (EAD) de terceira geração caracteriza-se pelo uso de ambientes virtuais de aprendizagem, videoconferência e ferramentas colaborativas, permitindo interações síncronas e assíncronas entre mediadores e aprendizes.
+<p><strong>Comentário:</strong> CORRETO. Essa é a definição clássica da 3ª geração da EAD (pós-2000), com foco em interatividade e colaboração via internet. A 4ª geração adiciona mobilidade, IA e personalização.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANVISA – 2022)</strong><br>
+Julgue: Na gestão por competências, o conceito de CHA refere-se a Conhecimento, Habilidade e Atitude, sendo que a "Atitude" corresponde ao "querer fazer", relacionada a valores, motivação e posturas comportamentais.
+<p><strong>Comentário:</strong> CORRETO. CHA = Saber (Conhecimento) + Saber Fazer (Habilidade) + Querer Fazer (Atitude). A atitude é o componente comportamental/motivacional, essencial para a aplicação efetiva dos conhecimentos e habilidades.</p>
+</div>
+
+<h2>📋 CHECKLIST DE REVISÃO RÁPIDA</h2>
+<div style="background:var(--def);padding:16px;border-radius:8px;margin:10px 0">
+<strong>Antes da prova, verifique se você domina:</strong><br>
+=> Diferença entre análise (requisitos) e descrição (tarefas) de cargo<br>
+=> Job enrichment (vertical) vs. job enlargement (horizontal)<br>
+=> Vantagens do recrutamento interno (retenção) vs. externo (renovação)<br>
+=> Etapas do ADDIE na ordem: Analisar → Desenhar → Desenvolver → Implementar → Avaliar<br>
+=> Níveis de Kirkpatrick: Reação → Aprendizado → Comportamento → Resultados<br>
+=> Vieses de avaliação: halo (uma característica influencia todas), tendência central (notas na média), recenticidade (foco no recente)<br>
+=> CHAs: Conhecimento (saber), Habilidade (saber fazer), Atitude (querer fazer)<br>
+=> EAD 3ª geração: AVA, videoconferência, colaboração em rede<br>
+=> Vedação ao nepotismo (SV 13/STF) em processos seletivos<br>
+=> Avaliação de desempenho ≠ Gestão de desempenho (evento vs. processo)
+</div>
+
+<div class="nav-b">
+<a href="adm-geral-02.html" class="btn-n">← Anterior</a>
+<a href="adm-geral-04.html" class="btn-n">Próximo →</a>
+</div>
+</main>
+
+
+<div class="n-panel" id="nP">
+<div style="display:flex;justify-content:space-between;margin-bottom:10px"><strong>Notas da Aula 03</strong><button onclick="tN()" style="background:none;border:none;cursor:pointer">✕</button></div>
+<div id="nL" style="max-height:180px;overflow-y:auto;margin-bottom:10px"></div>
+<form onsubmit="aN(event)"><input type="text" class="n-in" id="nI" placeholder="Anotação sobre gestão de pessoas..." required><button type="submit" class="b-sm">💾 Salvar</button></form>
+</div>
+
+<script>
+const SK='adm03-notes';let hM=false;
+function webS(){const s=window.getSelection().toString();window.open(`https://duckduckgo.com/?q=${encodeURIComponent(s||'Gestão de pessoas análise cargo recrutamento seleção treinamento CESPE')}`,'_blank')}
+function tN(){const p=document.getElementById('nP');p.style.display=p.style.display==='none'?'block':'none';if(p.style.display==='block')lN()}
+function lN(){const n=JSON.parse(localStorage.getItem(SK)||'[]');document.getElementById('nL').innerHTML=n.length?n.map((x,i)=>`<div class="n-item">${x.text}<br><small style="cursor:pointer;color:#666" onclick="dN(${i})">remover</small></div>`).join(''):'<p style="font-size:.9em;color:#666">Sem notas.</p>'}
+function aN(e){e.preventDefault();const i=document.getElementById('nI'),n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:i.value,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));i.value='';lN()}
+function dN(i){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.splice(i,1);localStorage.setItem(SK,JSON.stringify(n));lN()}
+function tH(){hM=!hM;document.body.style.cursor=hM?'text':'auto';document.querySelectorAll('.t-btn')[2].textContent=hM?'✅ ON':'✏️ Destaque';hM?document.addEventListener('mouseup',hS):document.removeEventListener('mouseup',hS)}
+function hS(){const s=window.getSelection();if(s.toString().length>10){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:`🔍 "${s.toString().substring(0,40)}..." - ${prompt('Nota:','')||'-'}`,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));alert('✅ Destaque salvo!');s.removeAllRanges()}}
+document.addEventListener('DOMContentLoaded',lN);
+</script>
+</body>
+</html>

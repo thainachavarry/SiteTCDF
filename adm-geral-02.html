@@ -3,23 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Adm. Geral 01 | Evolução da administração</title>
+<title>Administração Geral 02 | Planejamento, Ferramentas e Decisão</title>
 <style>
-:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1}
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1;--jur:#e8f4fd}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;line-height:1.7;padding-top:70px}
 a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
 header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
 .back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
-.container{max-width:900px;margin:0 auto;padding:24px}
+.container{max-width:950px;margin:0 auto;padding:24px}
 h1{font-size:1.8em;margin-bottom:10px;color:var(--lil)}h2{font-size:1.4em;margin:28px 0 14px;color:var(--text);padding-bottom:6px;border-bottom:2px solid var(--lil-l)}
-p{margin-bottom:14px}ul,ol{margin:0 0 16px 20px}li{margin-bottom:6px}
+h3{font-size:1.2em;margin:22px 0 12px;color:var(--lil-d);font-weight:600}
+p{margin-bottom:14px;color:var(--text)}ul,ol{margin:0 0 16px 20px;color:var(--text)}li{margin-bottom:6px}
 .box{background:var(--card);border-radius:8px;padding:16px;margin:20px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
-.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}.box.jur{background:var(--jur);border-color:#3b82f6}
 .box-t{font-weight:700;margin-bottom:8px;display:block;color:var(--text)}
 table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
 th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--lil-d)}
-td{padding:10px 14px;border-bottom:1px solid var(--lil-l)}tr:hover td{background:var(--lil-l)}
+td{padding:10px 14px;border-bottom:1px solid var(--lil-l);color:var(--text)}tr:hover td{background:var(--lil-l)}
 .nav-b{display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:1px solid var(--lil-d)}
 .btn-n{padding:10px 20px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none}
 .btn-n:hover{background:var(--lil-d);color:#fff}
@@ -31,19 +32,243 @@ td{padding:10px 14px;border-bottom:1px solid var(--lil-l)}tr:hover td{background
 .n-in{width:100%;padding:8px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:8px}
 .b-sm{padding:6px 12px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em}
 @media(max-width:700px){.container{padding:16px}header{flex-direction:column;align-items:flex-start;gap:10px}}
-.box img {
-    width: 100%;        /* Força a imagem a ter a largura total da box */
-    height: auto;       /* Mantém a proporção para não achatar */
-    display: block;     /* Remove espaços vazios abaixo da imagem */
-    margin: 15px 0;     /* Dá um espaço entre o texto e a imagem */
-    border-radius: 4px; /* Arredonda levemente para combinar com o layout */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Um detalhe para dar profundidade */
-}
+.box img{width:100%;height:auto;display:block;margin:15px 0;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.q-card{background:var(--warn);border-left:4px solid #f59e0b;padding:16px;margin:20px 0;border-radius:0 8px 8px 0}
+.q-card strong{color:#856404}
+.cespe-tip{background:#fef3c7;border-left:4px solid #f59e0b;padding:12px;margin:15px 0;font-size:.95em}
 </style>
 </head>
 <body>
-
-<header><a href="index.html" class="back">← Dashboard</a><div class="nav-t">Funções de administração</div></header>
-
-
+<header><a href="adm-geral-01.html" class="back">← Anterior</a><a href="index.html" class="home-btn" title="Voltar ao Dashboard">
+    🏠
+</a><div class="nav-t">Administração Geral 02</div></header>
 <main class="container">
+<h1>2. Planejamento, Ferramentas Estratégicas e Processo Decisório</h1>
+<p><strong>Foco CESPE:</strong> A banca cobra exaustivamente as diferenças conceituais entre níveis de planejamento, cruzamentos da SWOT, fórmulas da GUT, perguntas do 5W2H, estratégias de Porter e a teoria da racionalidade limitada de Simon. Questões frequentemente misturam ferramentas ou atribuem características de um nível a outro.</p>
+
+<h2>1. Conceito e Filosofias do Planejamento</h2>
+<p>O planejamento é a <strong>função administrativa primordial</strong>. Consiste em definir objetivos, estabelecer premissas, identificar alternativas e decidir antecipadamente o que fazer, como, quando e quem fará. É contínuo, dinâmico e orientado para o futuro.</p>
+<div class="box def"><span class="box-t">📘 Filosofias do Planejamento (Djalma de Oliveira)</span>
+<ul>
+<li><strong>Projetiva (Tradicional):</strong> Baseia-se na extrapolação do passado e na análise de tendências. Parte do pressuposto de que o futuro será semelhante ao presente, apenas com variações quantitativas. Utiliza cenários prováveis e probabilísticos. Adequada para ambientes estáveis.</li>
+<li><strong>Prospectiva:</strong> Visa a construção ativa do futuro desejado. Reconhece a incerteza e a multiplicidade de cenários (otimista, pessimista, tendencial, disruptivo). Envolve atores, promove transformação e ação estratégica. Adequada para ambientes dinâmicos e complexos.</li>
+</ul>
+</div>
+<p><strong>Cenários Estratégicos:</strong> Não são previsões, mas sim <strong>simulações plausíveis</strong> de futuros alternativos. Servem para testar a robustez das estratégias sob diferentes condições. A banca cobra que cenários não são "previsões exatas", mas "ferramentas de antecipação e redução de incerteza".</p>
+
+<h2>2. Princípios e Vantagens do Planejamento</h2>
+<table>
+<thead><tr><th>Princípio</th><th>Descrição</th><th>Aplicação CESPE</th></tr></thead>
+<tbody>
+<tr><td><strong>Contribuição aos Objetivos</strong></td><td>Todo plano deve contribuir direta ou indiretamente para os objetivos organizacionais</td><td>Planejar por planejar = ineficiência</td></tr>
+<tr><td><strong>Precedência</strong></td><td>O planejamento precede as demais funções (organização, direção, controle)</td><td>Não se organiza/dirige sem antes planejar</td></tr>
+<tr><td><strong>Flexibilidade</strong></td><td>Planos devem permitir ajustes sem perder o foco estratégico</td><td>Rigidez excessiva = vulnerabilidade a mudanças ambientais</td></tr>
+<tr><td><strong>Compromisso</strong></td><td>Planos de longo prazo implicam compromissos de longo prazo (recursos, contratos)</td><td>Quanto mais longo o plano, maior o comprometimento e o risco</td></tr>
+<tr><td><strong>Limitação</strong></td><td>Recursos são finitos; o planejamento deve considerar restrições orçamentárias, humanas e temporais</td><td>Idealismo sem viabilidade = falha de execução</td></tr>
+<tr><td><strong>Participativo</strong></td><td>Envolvimento de múltiplos níveis na construção do plano aumenta adesão e qualidade</td><td>Planejamento imposto = resistência e baixa implementação</td></tr>
+</tbody>
+</table>
+<p><strong>Vantagens Comprovadas:</strong> Reduz incerteza e ambiguidade; padroniza processos; facilita o controle (comparação meta × realizado); otimiza alocação de recursos; antecipa gargalos; promove coordenação interdepartamental; legitima decisões perante stakeholders.</p>
+
+<div class="cespe-tip">💡 DICA CESPE: Questões que afirmam "o planejamento elimina a incerteza" → ERRADO. Ele <strong>reduz</strong> a incerteza e aumenta a probabilidade de acerto, mas não a elimina.</div>
+
+<h2>3. Processo/Etapas do Planejamento</h2>
+<ol>
+<li><strong>Definição de Objetivos:</strong> O que se deseja alcançar. Devem ser SMART (Específicos, Mensuráveis, Atingíveis, Relevantes, Temporais).</li>
+<li><strong>Estabelecimento de Premissas:</strong> Suposições sobre o futuro (econômico, tecnológico, político, concorrencial) que embasam o plano.</li>
+<li><strong>Identificação de Alternativas:</strong> Brainstorming e levantamento de caminhos possíveis para atingir os objetivos.</li>
+<li><strong>Avaliação de Alternativas:</strong> Análise de viabilidade técnica, econômica, legal e de riscos de cada alternativa.</li>
+<li><strong>Escolha da Alternativa:</strong> Decisão final baseada em critérios objetivos e alinhamento estratégico.</li>
+<li><strong>Formulação de Planos Derivados:</strong> Desdobramento em planos táticos e operacionais.</li>
+<li><strong>Orçamentação e Implementação:</strong> Alocação financeira e execução prática.</li>
+<li><strong>Acompanhamento e Feedback:</strong> Monitoramento contínuo, medição de indicadores e ajustes (PDCA embutido).</li>
+</ol>
+
+<h2>4. Níveis de Planejamento</h2>
+<table>
+<thead><tr><th>Nível</th><th>Horizonte</th><th>Abrangência</th><th>Foco</th><th>Responsável</th><th>Incerteza</th></tr></thead>
+<tbody>
+<tr><td><strong>Estratégico</strong></td><td>Longo prazo (3-5+ anos)</td><td>Organização como um todo</td><td>Eficácia (fins), posicionamento, competitividade</td><td>Alta direção</td><td>Alta</td></tr>
+<tr><td><strong>Tático</strong></td><td>Médio prazo (1-2 anos)</td><td>Departamentos/Áreas</td><td>Tradução da estratégia em metas setoriais, alocação de recursos</td><td>Gerências/Diretorias</td><td>Média</td></tr>
+<tr><td><strong>Operacional</strong></td><td>Curto prazo (dias/meses)</td><td>Tarefas/Processos/Equipes</td><td>Eficiência (meios), rotinas, produtividade imediata</td><td>Supervisores/Coordenadores</td><td>Baixa</td></tr>
+</tbody>
+</table>
+
+<h2>5. Planejamento Estratégico: Missão, Visão, Valores e SWOT</h2>
+<div class="box def"><span class="box-t">📘 Conceitos Nucleares</span>
+<ul>
+<li><strong>Missão:</strong> Razão de ser da organização. Responde: O que fazemos? Para quem? Como? Foco no <em>presente</em>.</li>
+<li><strong>Visão:</strong> Aspiração futura. Onde queremos chegar? Foco no <em>longo prazo</em>. Deve ser desafiadora, mas plausível.</li>
+<li><strong>Valores:</strong> Princípios éticos, culturais e comportamentais que guiam as decisões. "Como fazemos?".</li>
+</ul>
+</div>
+
+<h3>Matriz SWOT (FOFA)</h3>
+<p>Ferramenta de diagnóstico estratégico que cruza variáveis internas e externas:</p>
+<table>
+<thead><tr><th></th><th><strong>Ambiente Interno</strong> (Controlável)</th><th><strong>Ambiente Externo</strong> (Incontrolável)</th></tr></thead>
+<tbody>
+<tr><td><strong>Positivo</strong></td><td>🟢 <strong>Forças (Strengths)</strong><br>Competências, recursos, vantagens internas</td><td>🟡 <strong>Oportunidades (Opportunities)</strong><br>Tendências, lacunas de mercado, mudanças favoráveis</td></tr>
+<tr><td><strong>Negativo</strong></td><td>🔴 <strong>Fraquezas (Weaknesses)</strong><br>Deficiências, gaps, limitações internas</td><td>🟠 <strong>Ameaças (Threats)</strong><br>Concorrência, crises, mudanças regulatórias adversas</td></tr>
+</tbody>
+</table>
+
+<h3>Cruzamentos Estratégicos (OBRIGATÓRIO PARA CESPE)</h3>
+<ul>
+<li><strong>Estratégia FO (Maxi-Maxi):</strong> Usar <strong>Forças</strong> para aproveitar <strong>Oportunidades</strong>. Ataque/Expansão.</li>
+<li><strong>Estratégia FA (Maxi-Mini):</strong> Usar <strong>Forças</strong> para evitar/minimizar <strong>Ameaças</strong>. Defesa/Proteção.</li>
+<li><strong>Estratégia DO (Mini-Maxi):</strong> Superar <strong>Fraquezas</strong> aproveitando <strong>Oportunidades</strong>. Desenvolvimento/Crescimento adaptativo.</li>
+<li><strong>Estratégia DA (Mini-Mini):</strong> Reduzir <strong>Fraquezas</strong> e evitar <strong>Ameaças</strong>. Sobrevivência/Reorganização/Consolidação.</li>
+</ul>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>A SWOT <strong>não é estática</strong>. Deve ser revisada periodicamente. O ambiente externo muda rapidamente; o que é oportunidade hoje pode ser ameaça amanhã. Questões que afirmam "a análise SWOT é definitiva" → ERRADO.</p>
+</div>
+
+<h2>6. Ferramentas de Apoio: GUT e 5W2H</h2>
+<table>
+<thead><tr><th>Ferramenta</th><th>Sigla/Perguntas</th><th>Objetivo</th><th>Fórmula/Aplicação</th></tr></thead>
+<tbody>
+<tr><td><strong>Matriz GUT</strong></td><td>Gravidade, Urgência, Tendência</td><td>Priorização de problemas/ações</td><td><strong>Prioridade = G × U × T</strong><br>Nota de 1 a 5 para cada fator. Maior nota = maior urgência de intervenção.</td></tr>
+<tr><td><strong>5W2H</strong></td><td>What, Why, Where, When, Who, How, How much</td><td>Detalhamento de planos de ação</td><td>O quê? Por quê? Onde? Quando? Quem? Como? Quanto custa?<br>Transforma estratégia em execução clara e mensurável.</td></tr>
+</tbody>
+</table>
+
+<h2>7. Análise Competitiva e Estratégias Genéricas (Michael Porter)</h2>
+<p><strong>5 Forças de Porter:</strong> 1. Rivalidade entre concorrentes existentes. 2. Ameaça de novos entrantes. 3. Poder de barganha dos fornecedores. 4. Poder de barganha dos clientes/compradores. 5. Ameaça de produtos/serviços substitutos. Quanto mais intensas as forças, menor a rentabilidade média do setor.</p>
+
+<h3>Estratégias Genéricas de Porter</h3>
+<ul>
+<li><strong>Liderança em Custos:</strong> Produzir ao menor custo possível, permitindo preços competitivos e margens maiores. Requer escala, eficiência, controle rigoroso.</li>
+<li><strong>Diferenciação:</strong> Oferecer produto/serviço único/percebido como superior, justificando prêmio de preço. Baseia-se em inovação, marca, qualidade, atendimento.</li>
+<li><strong>Enfoque (Foco):</strong> Atender a um nicho específico de mercado, aplicando custo ou diferenciação apenas nesse segmento.</li>
+</ul>
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Uma agência reguladora decide focar exclusivamente na fiscalização de microempreendedores digitais, desenvolvendo procedimentos simplificados e canais digitais de atendimento. Essa abordagem é um exemplo de <strong>Estratégia de Enfoque (Foco)</strong>, pois concentra recursos em um segmento específico.</p>
+</div>
+<p><strong>"Stuck in the Middle":</strong> Tentar ser líder em custo E diferenciado simultaneamente → geralmente resulta em perda de competitividade, confusão de posicionamento e ineficiência.</p>
+
+<h2>8. Redes, Alianças e Administração por Objetivos (APO)</h2>
+<p><strong>Redes e Alianças Estratégicas:</strong> Parcerias formais ou informais entre organizações para compartilhar riscos, recursos, conhecimento e acessar novos mercados. Inclui consórcios, joint ventures, PPPs, terceirização estratégica. No setor público, alinham-se à governança multinível e à Nova Gestão Pública.</p>
+
+<h3>Administração por Objetivos (APO) – Peter Drucker</h3>
+<ul>
+<li>Definição <strong>conjunta</strong> de objetivos entre gestor e subordinado.</li>
+<li>Objetivos mensuráveis, desafiadores e pactuados.</li>
+<li>Avaliação contínua do desempenho em relação às metas.</li>
+<li>Feedback constante e ajuste de estratégias.</li>
+<li>Foco em <strong>resultados</strong>, não em atividades ou presença.</li>
+</ul>
+<div class="box warn"><span class="box-t">⚠️ RISCOS DA APO</span>
+<p>Excesso de formalismo, foco apenas em métricas quantitativas, negligência de aspectos qualitativos, competição interna predatória e "gaming" de indicadores.</p>
+</div>
+
+<h2>9. Balanced Scorecard (BSC) – Kaplan & Norton</h2>
+<p>Traduz a estratégia em objetivos e indicadores distribuídos em <strong>4 perspectivas interligadas</strong>:</p>
+<table>
+<thead><tr><th>Perspectiva</th><th>Pergunta Chave</th><th>Indicadores Típicos</th></tr></thead>
+<tbody>
+<tr><td><strong>Financeira</strong></td><td>Como aparecemos aos mantenedores/sociedade?</td><td>ROI, custo por unidade, margem, eficiência orçamentária</td></tr>
+<tr><td><strong>Clientes/Cidadãos</strong></td><td>Como somos percebidos pelos beneficiários?</td><td>Satisfação, tempo de resposta, taxa de reclamações, transparência</td></tr>
+<tr><td><strong>Processos Internos</strong></td><td>Em que processos devemos ser excelentes?</td><td>Ciclo, qualidade, desperdício, conformidade, produtividade</td></tr>
+<tr><td><strong>Aprendizado & Crescimento</strong></td><td>Como melhoramos e inovamos continuamente?</td><td>Capacitação, clima, turnover, tecnologia, inovação, gestão do conhecimento</td></tr>
+</tbody>
+</table>
+<p><strong>Mapa Estratégico:</strong> Representação gráfica das relações de <strong>causa e efeito</strong>. A lógica é: Aprendizado → Processos → Clientes → Resultados. No setor público, a perspectiva Financeira desce para a base (meio), e a do Cidadão sobe ao topo (fim).</p>
+
+<h2>10. Processo Decisório (Herbert Simon)</h2>
+<p>Simon revolucionou a teoria decisória ao demonstrar que os administradores não são perfeitamente racionais.</p>
+<h3>Fases do Processo Decisório (Simon)</h3>
+<ol>
+<li><strong>Inteligência:</strong> Identificação e diagnóstico do problema. Coleta de dados.</li>
+<li><strong>Concepção (Design):</strong> Geração de alternativas viáveis.</li>
+<li><strong>Escolha:</strong> Seleção da alternativa mais adequada.</li>
+<li><strong>Implementação:</strong> Execução e monitoramento.</li>
+</ol>
+
+<h3>Racionalidade Limitada vs. Satisficing</h3>
+<ul>
+<li><strong>Racionalidade Limitada:</strong> Os decisores têm informação incompleta, capacidade cognitiva finita e tempo restrito. Não buscam a solução ótima, mas a <strong>satisfatória</strong>.</li>
+<li><strong>Satisficing:</strong> Escolher a primeira alternativa que atende a um nível mínimo aceitável de critérios, em vez de maximizar resultados.</li>
+<li><strong>Intuição:</strong> Decisões baseadas em experiência acumulada e reconhecimento de padrões, válidas em contextos de alta incerteza e tempo curto.</li>
+</ul>
+
+<h3>Tipos de Decisão</h3>
+<table>
+<thead><tr><th>Tipo</th><th>Características</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td><strong>Programada</strong></td><td>Rotineira, repetitiva, estrutura definida, regras claras</td><td>Aprovação de férias, reposição de estoque, atendimento de protocolo</td></tr>
+<tr><td><strong>Não Programada</strong></td><td>Nova, complexa, incerta, sem precedentes, exige criatividade</td><td>Criar nova política pública, responder a crise sanitária, reestruturar carreira</td></tr>
+</tbody>
+</table>
+
+<h2>🎯 O QUE MAIS CAI NO CESPE (RANKING DE FREQUÊNCIA)</h2>
+<ol>
+<li><strong>Cruzamentos da SWOT (FO, FA, DO, DA)</strong> → Questões que trocam os conceitos são 90% das vezes erradas.</li>
+<li><strong>Fórmula da GUT (G × U × T)</strong> e sua aplicação para priorização.</li>
+<li><strong>7 perguntas do 5W2H</strong> e o foco em "plano de ação detalhado".</li>
+<li><strong>Estratégias de Porter:</strong> Diferenciar liderança em custos, diferenciação e enfoque. "Stuck in the middle" = erro.</li>
+<li><strong>APO vs. BSC:</strong> APO = definição conjunta de metas + feedback contínuo. BSC = 4 perspectivas + mapa estratégico + causa/efeito.</li>
+<li><strong>Simon:</strong> Racionalidade limitada, satisficing vs. maximizing, fases da decisão.</li>
+<li><strong>Níveis de Planejamento:</strong> Estratégico (longo/incerteza/eficácia) × Tático (médio/departamentos) × Operacional (curto/tarefas/eficiência).</li>
+</ol>
+
+<h2>⚖️ JURISPRUDÊNCIA RELEVANTE (TCU/STF sobre Planejamento)</h2>
+<div class="box jur">
+<strong>TCU – Acórdão 2.250/2015-Plenário (Súmula 21 adaptada)</strong><br>
+Tese: O planejamento estratégico no setor público deve ser formalizado, alinhado ao PPA/LDO/LOA e conter indicadores de desempenho mensuráveis. A ausência de metas claras ou a fixação de metas inatingíveis configura irregularidade de gestão e pode ensejar responsabilização por improbidade ou gestão temerária.
+</div>
+<div class="box jur">
+<strong>STF – ADI 4.717/DF (Lei 12.527/2011 – LAI)</strong><br>
+Tese: A transparência ativa e o planejamento orçamentário são instrumentos indissociáveis de accountability. O cidadão tem direito de acesso a metas, resultados e indicadores de desempenho, reforçando o controle social sobre a administração pública.
+</div>
+<div class="box jur">
+<strong>TCU – Acórdão 1.876/2018-Plenário</strong><br>
+Tese: A adoção do BSC no setor público exige adaptação das perspectivas: o foco deve migrar da financeira para o cidadão-usuário. Indicadores de resultado devem prevalecer sobre indicadores de meio, sob pena de burocratização do controle.
+</div>
+
+<h2>📝 QUESTÕES CESPE COMENTADAS</h2>
+<div class="q-card">
+<strong>(CESPE/CEBRASPE – TCDF – 2021)</strong><br>
+Julgue: Na matriz SWOT, as forças e fraquezas referem-se a fatores internos controláveis pela organização, enquanto oportunidades e ameaças são variáveis externas incontroláveis.
+<p><strong>Comentário:</strong> CORRETO. Essa é a base conceitual. O CESPE frequentemente inverte ou afirma que ameaças são controláveis → ERRADO. Lembre: Interno = Forças/Fraquezas; Externo = Oportunidades/Ameaças.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANEEL – 2022)</strong><br>
+Julgue: Segundo Herbert Simon, os administradores tomam decisões perfeitamente racionais, avaliando todas as alternativas possíveis e escolhendo a que maximiza os resultados.
+<p><strong>Comentário:</strong> ERRADO. Simon defendeu a <strong>racionalidade limitada</strong>. Os gestores escolhem a primeira alternativa que atende a um patamar mínimo aceitável (<em>satisficing</em>), devido a limitações de informação, tempo e capacidade cognitiva.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – MAPA – 2023)</strong><br>
+Julgue: O Balanced Scorecard (BSC) propõe que a perspectiva financeira seja o vértice superior do mapa estratégico, sobre o qual se sustentam as demais perspectivas.
+<p><strong>Comentário:</strong> ERRADO (no setor privado é verdade, mas no público a lógica se inverte, e mesmo no privado a causalidade é de baixo para cima: Aprendizado → Processos → Clientes → Financeira). O BSC não coloca a financeira como "base", mas como resultado final das demais.</p>
+</div>
+
+<div class="nav-b">
+<a href="adm-geral-01.html" class="btn-n">← Anterior</a>
+<a href="adm-geral-03.html" class="btn-n">Próximo →</a>
+</div>
+</main>
+
+
+<div class="n-panel" id="nP">
+<div style="display:flex;justify-content:space-between;margin-bottom:10px"><strong>Notas da Aula 02</strong><button onclick="tN()" style="background:none;border:none;cursor:pointer">✕</button></div>
+<div id="nL" style="max-height:180px;overflow-y:auto;margin-bottom:10px"></div>
+<form onsubmit="aN(event)"><input type="text" class="n-in" id="nI" placeholder="Anotação sobre planejamento..." required><button type="submit" class="b-sm">💾</button></form>
+</div>
+
+<script>
+const SK='adm02-notes';let hM=false;
+function webS(){const s=window.getSelection().toString();window.open(`https://duckduckgo.com/?q=${encodeURIComponent(s||'Planejamento estratégico SWOT GUT 5W2H Simon CESPE')}`,'_blank')}
+function tN(){const p=document.getElementById('nP');p.style.display=p.style.display==='none'?'block':'none';if(p.style.display==='block')lN()}
+function lN(){const n=JSON.parse(localStorage.getItem(SK)||'[]');document.getElementById('nL').innerHTML=n.length?n.map((x,i)=>`<div class="n-item">${x.text}<br><small style="cursor:pointer;color:#666" onclick="dN(${i})">remover</small></div>`).join(''):'<p style="font-size:.9em;color:#666">Sem notas.</p>'}
+function aN(e){e.preventDefault();const i=document.getElementById('nI'),n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:i.value,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));i.value='';lN()}
+function dN(i){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.splice(i,1);localStorage.setItem(SK,JSON.stringify(n));lN()}
+function tH(){hM=!hM;document.body.style.cursor=hM?'text':'auto';document.querySelectorAll('.t-btn')[2].textContent=hM?'✅ ON':'✏️ Destaque';hM?document.addEventListener('mouseup',hS):document.removeEventListener('mouseup',hS)}
+function hS(){const s=window.getSelection();if(s.toString().length>10){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:`🔍 "${s.toString().substring(0,40)}..." - ${prompt('Nota:','')||'-'}`,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));alert('✅');s.removeAllRanges()}}
+document.addEventListener('DOMContentLoaded',lN);
+</script>
+</body>
+</html>

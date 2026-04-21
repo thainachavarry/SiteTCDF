@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direito Previdenciário | TCDF - Analista Administrativo</title>
+<style>
+:root{--bg:#faf9fc;--card:#fff;--text:#2d2a3a;--sec:#4a4559;--lil:#8b78b0;--lil-l:#ede7f6;--lil-d:#9b89c2;--def:#f0edf5;--warn:#fff8e1;--ex:#f0f7f1;--jur:#e8f4fd}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;line-height:1.7;padding-top:70px}
+a{color:var(--lil);text-decoration:none}a:hover{text-decoration:underline}
+header{background:var(--lil);color:#fff;padding:14px 24px;position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.back{color:#fff;font-weight:500;display:flex;align-items:center;gap:6px}.nav-t{font-weight:700;font-size:1.05em}
+.container{max-width:1000px;margin:0 auto;padding:24px}
+h1{font-size:1.8em;margin-bottom:10px;color:var(--lil)}h2{font-size:1.4em;margin:28px 0 14px;color:var(--text);padding-bottom:6px;border-bottom:2px solid var(--lil-l)}
+h3{font-size:1.2em;margin:22px 0 12px;color:var(--lil-d);font-weight:600}
+p{margin-bottom:14px;color:var(--text)}ul,ol{margin:0 0 16px 20px;color:var(--text)}li{margin-bottom:6px}
+.box{background:var(--card);border-radius:8px;padding:16px;margin:20px 0;border-left:4px solid var(--lil);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.box.def{background:var(--def);border-color:var(--lil)}.box.warn{background:var(--warn);border-color:#f59e0b}.box.ex{background:var(--ex);border-color:#22c55e}.box.jur{background:var(--jur);border-color:#3b82f6}
+.box-t{font-weight:700;margin-bottom:8px;display:block;color:var(--text)}
+table{width:100%;border-collapse:collapse;margin:20px 0;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+th{background:var(--lil-l);color:var(--text);font-weight:600;text-align:left;padding:10px 14px;border-bottom:1px solid var(--lil-d)}
+td{padding:10px 14px;border-bottom:1px solid var(--lil-l);color:var(--text)}tr:hover td{background:var(--lil-l)}
+.nav-b{display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:1px solid var(--lil-d)}
+.btn-n{padding:10px 20px;background:var(--lil-l);color:var(--lil);border:none;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none}
+.btn-n:hover{background:var(--lil-d);color:#fff}
+.tools{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:99}
+.t-btn{background:var(--card);border:2px solid var(--lil-d);padding:10px 14px;border-radius:24px;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;color:var(--text);box-shadow:0 3px 10px rgba(0,0,0,.1)}
+.t-btn:hover{transform:translateY(-2px)}
+.n-panel{position:fixed;bottom:70px;right:20px;width:280px;background:var(--card);border:2px solid var(--lil-d);border-radius:12px;padding:16px;display:none;box-shadow:0 5px 15px rgba(0,0,0,.15);z-index:100}
+.n-item{background:var(--lil-l);padding:10px;border-radius:6px;margin-bottom:8px;font-size:.9em}
+.n-in{width:100%;padding:8px;border:1px solid var(--lil-d);border-radius:6px;margin-bottom:8px}
+.b-sm{padding:6px 12px;background:var(--lil);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:.85em}
+@media(max-width:700px){.container{padding:16px}header{flex-direction:column;align-items:flex-start;gap:10px}}
+.box img{width:100%;height:auto;display:block;margin:15px 0;border-radius:4px;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+.q-card{background:var(--warn);border-left:4px solid #f59e0b;padding:16px;margin:20px 0;border-radius:0 8px 8px 0}
+.q-card strong{color:#856404}
+.cespe-tip{background:#fef3c7;border-left:4px solid #f59e0b;padding:12px;margin:15px 0;font-size:.95em}
+.mnemonic{background:linear-gradient(135deg,var(--lil-l),var(--bg-secondary));padding:12px 16px;border-radius:8px;margin:15px 0;font-weight:600;color:var(--lil-d)}
+.summary-box{background:var(--def);padding:16px;border-radius:8px;margin:20px 0}
+</style>
+</head>
+<body>
+<header><a href="index.html" class="back">← Dashboard</a><a href="index.html" class="home-btn" title="Voltar ao Dashboard">
+    🏠
+</a><div class="nav-t">Direito Previdenciário</div></header>
+<main class="container">
+<h1>📚 Direito Previdenciário - TCDF</h1>
+<p><strong>Foco CESPE:</strong> A banca cobra exaustivamente a estrutura constitucional da Seguridade Social (Arts. 194-204 CF/88), as diferenças entre RGPS e RPPS, os requisitos dos benefícios, as alíquotas de contribuição e a jurisprudência do STF sobre acumulação de benefícios, carência e qualidade de segurado. Questões frequentemente misturam conceitos de saúde, assistência e previdência ou cobram detalhes de alíquotas e prazos.</p>
+
+<h2>1. CONCEITO E ESTRUTURA DA SEGURIDADE SOCIAL</h2>
+<div class="box def"><span class="box-t">📘 Seguridade Social (Art. 194, CF/88)</span>
+<p>Conjunto <strong>integrado</strong> de ações de iniciativa dos Poderes Públicos e da sociedade, destinadas a assegurar os direitos relativos à <strong>saúde</strong>, à <strong>previdência</strong> e à <strong>assistência social</strong>.</p>
+<p><strong>Característica Central:</strong> As três áreas são <strong>interdependentes</strong> e financiadas solidariamente por toda a sociedade (Art. 195, caput, CF).</p>
+</div>
+
+<h3>🔹 Os Três Pilares da Seguridade Social</h3>
+<table>
+<thead><tr><th>Pilar</th><th>Base Legal</th><th>Características Principais</th><th>Financiamento</th></tr></thead>
+<tbody>
+<tr><td><strong>Saúde</strong></td><td>Arts. 196-200, CF</td><td>• Direito de todos e dever do Estado<br>• Universal, integral, gratuito<br>• SUS como sistema único</td><td>Orçamento da seguridade social + receitas próprias</td></tr>
+<tr><td><strong>Previdência Social</strong></td><td>Arts. 201-202, CF</td><td>• Caráter contributivo e filiação obrigatória<br>• Regime Geral (RGPS) e Próprio (RPPS)<br>• Benefícios para segurados e dependentes</td><td>Contribuições de empregadores, empregados e governo</td></tr>
+<tr><td><strong>Assistência Social</strong></td><td>Arts. 203-204, CF</td><td>• Prestada a quem dela necessitar<br>• Independente de contribuição<br>• LOAS como marco legal</td><td>Orçamento da seguridade social + receitas próprias</td></tr>
+</tbody>
+</table>
+
+<div class="mnemonic">🧠 MACETE: "SAP" → Saúde (todos), Assistência (necessitados), Previdência (contribuintes). Memorize a lógica de acesso para não confundir em prova!</div>
+
+<h2>2. PRINCÍPIOS CONSTITUCIONAIS DA SEGURIDADE SOCIAL (Art. 194, parágrafo único, CF)</h2>
+<p>O parágrafo único do Art. 194 enumera <strong>7 princípios</strong> que norteiam a organização da seguridade social. O CESPE cobra a literalidade e a aplicação prática de cada um.</p>
+
+<table>
+<thead><tr><th>Princípio</th><th>Significado</th><th>Aplicação Prática</th><th>Ponto CESPE</th></tr></thead>
+<tbody>
+<tr><td><strong>Universalidade da cobertura e do atendimento</strong></td><td>Todos os riscos sociais devem ser cobertos; todos os cidadãos devem ser atendidos</td><td>Saúde: atendimento universal no SUS; Previdência: cobertura para todos os trabalhadores</td><td>✅ "Universalidade ≠ gratuidade" (previdência é contributiva)</td></tr>
+<tr><td><strong>Uniformidade e equivalência dos benefícios e serviços</strong></td><td>Igualdade de tratamento entre beneficiários em situações equivalentes</td><td>Benefícios com mesmo valor para situações similares; proibição de discriminação</td><td>✅ "Equivalência não significa identidade absoluta" (diferenças justificadas são permitidas)</td></tr>
+<tr><td><strong>Seletividade e distributividade na prestação</strong></td><td>Escolha criteriosa dos benefícios e serviços a serem prestados, com foco nos mais necessitados</td><td>LOAS (BPC) para idosos e PCD de baixa renda; priorização de políticas públicas</td><td>✅ "Seletividade não é discricionariedade" (deve seguir critérios legais)</td></tr>
+<tr><td><strong>Irredutibilidade do valor dos benefícios</strong></td><td>Proibição de redução nominal do valor dos benefícios</td><td>Reajustes anuais pelo INPC; vedação de cortes nominais</td><td>✅ "Irredutibilidade ≠ correção monetária automática" (depende de lei)</td></tr>
+<tr><td><strong>Equidade na forma de participação no custeio</strong></td><td>Contribuição proporcional à capacidade econômica de cada um</td><td>Alíquotas progressivas no RGPS; teto do salário-de-contribuição</td><td>✅ "Equidade ≠ igualdade" (quem ganha mais paga proporcionalmente mais)</td></tr>
+<tr><td><strong>Diversidade da base de financiamento</strong></td><td>Múltiplas fontes de recursos para garantir sustentabilidade</td><td>Contribuições sobre folha, faturamento, lucro, importação, concursos de prognósticos</td><td>✅ "Diversidade ≠ fragmentação" (as fontes devem ser coordenadas)</td></tr>
+<tr><td><strong>Caráter democrático e descentralizado da administração</strong></td><td>Participação da sociedade na gestão e descentralização das ações</td><td>Conselhos de Saúde, Previdência e Assistência; gestão tripartite</td><td>✅ "Descentralização ≠ descoordenação" (deve haver articulação entre entes)</td></tr>
+</tbody>
+</table>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente troca os princípios: atribui "universalidade do atendimento" à previdência (errado → saúde) ou "caráter contributivo" à assistência (errado → previdência). Memorize: <strong>Saúde = universal e gratuito; Assistência = universal para necessitados e gratuito; Previdência = contributivo e filiação obrigatória</strong>.</p>
+</div>
+
+<h2>3. FONTES NORMATIVAS DO DIREITO PREVIDENCIÁRIO</h2>
+<div class="box def"><span class="box-t">📘 Hierarquia das Normas</span>
+<ol>
+<li><strong>Constituição Federal (Arts. 194-204)</strong>: Norma suprema; define estrutura, princípios e competências.</li>
+<li><strong>Emendas Constitucionais</strong>: EC 20/1998 (reforma da previdência), EC 41/2003, EC 47/2005, EC 103/2019 (reforma mais recente).</li>
+<li><strong>Leis Complementares</strong>: LC 109/2001 (previdência complementar), LC 108/2001 (RPPS), LC 143/2023 (novas regras de RPPS).</li>
+<li><strong>Leis Ordinárias</strong>: Lei 8.212/1991 (custeio), Lei 8.213/1991 (benefícios), Lei 8.742/1993 (LOAS).</li>
+<li><strong>Decretos e Portarias</strong>: Regulamentação infralegal (ex: Decreto 3.048/1999 - RPS).</li>
+<li><strong>Jurisprudência</strong>: Súmulas e precedentes do STF, STJ e TCU com efeito vinculante ou persuasivo.</li>
+</ol>
+</div>
+
+<h2>4. REGIME GERAL DE PREVIDÊNCIA SOCIAL (RGPS) - ESTRUTURA</h2>
+<h3>🔹 Características Constitucionais (Art. 201, CF)</h3>
+<ul>
+<li><strong>Caráter contributivo</strong>: Filiação e custeio obrigatórios para quem exerce atividade remunerada.</li>
+<li><strong>Filiação obrigatória</strong>: Não é facultativa; decorre do exercício de atividade que gera remuneração.</li>
+<li><strong>Equilíbrio financeiro e atuarial</strong>: Receitas devem cobrir despesas ao longo do tempo.</li>
+<li><strong>Cobertura de eventos</strong>: Incapacidade temporária/permanente, idade avançada, morte, reclusão, maternidade, desemprego involuntário.</li>
+</ul>
+
+<h3>🔹 Segurados do RGPS (Lei 8.213/1991)</h3>
+<table>
+<thead><tr><th>Categoria</th><th>Definição Legal</th><th>Exemplo Prático</th><th>Alíquota Típica</th></tr></thead>
+<tbody>
+<tr><td><strong>Empregado</strong></td><td>Pessoa física que presta serviços de natureza urbana ou rural, de forma contínua, subordinada e remunerada</td><td>Trabalhador com carteira assinada em empresa privada</td><td>7,5% a 14% (progressiva sobre o SC)</td></tr>
+<tr><td><strong>Empregado Doméstico</strong></td><td>Pessoa física que presta serviços de natureza contínua, subordinada e remunerada em residência familiar</td><td>Cozinheira, motorista, cuidador de idosos em casa de família</td><td>8% a 14% (progressiva sobre o SC)</td></tr>
+<tr><td><strong>Trabalhador Avulso</strong></td><td>Pessoa física que presta serviços a diversas empresas, sem vínculo empregatício, por intermédio de órgão gestor de mão de obra</td><td>Portuário, estivador, carregador de mercadorias</td><td>7,5% a 14% (descontado pelo OGMO)</td></tr>
+<tr><td><strong>Contribuinte Individual</strong></td><td>Pessoa física que exerce atividade por conta própria, com ou sem lucro, ou que presta serviços a empresa sem vínculo empregatício</td><td>Autônomo, profissional liberal, microempreendedor</td><td>11% (plano simplificado) ou 20% (plano normal)</td></tr>
+<tr><td><strong>Segurado Especial</strong></td><td>Produtor rural, pescador artesanal ou indígena que exerce atividade em regime de economia familiar, sem empregados permanentes</td><td>Agricultor familiar, pescador artesanal, seringueiro</td><td>1,3% sobre a comercialização da produção (ou facultativo)</td></tr>
+<tr><td><strong>Facultativo</strong></td><td>Maior de 16 anos que não exerce atividade remunerada, mas opta por contribuir</td><td>Estudante, dona de casa, desempregado sem seguro-desemprego</td><td>11% (sobre salário-mínimo) ou 20% (sobre valor declarado)</td></tr>
+</tbody>
+</table>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>Maria, 25 anos, é estudante universitária e não exerce atividade remunerada. Ela pode se filiar ao RGPS como <strong>segurada facultativa</strong>, contribuindo com 11% sobre o salário-mínimo para ter direito a benefícios como aposentadoria por idade e auxílio por incapacidade temporária.</p>
+</div>
+
+<h2>5. SALÁRIO-DE-CONTRIBUIÇÃO E ALÍQUOTAS</h2>
+<h3>🔹 Conceito e Limites (Art. 28, Lei 8.212/1991)</h3>
+<p><strong>Salário-de-Contribuição (SC):</strong> Base de cálculo das contribuições previdenciárias. Para empregados, empregados domésticos e trabalhadores avulsos, corresponde à remuneração auferida em um mês. Possui <strong>limite mínimo</strong> (salário-mínimo) e <strong>limite máximo</strong> (teto do RGPS, atualmente R$ 7.786,02 em 2024).</p>
+
+<h3>🔹 Tabela de Alíquotas Progressivas (Empregados, Domésticos e Avulsos - Vigente a partir de 2024)</h3>
+<table>
+<thead><tr><th>Faixa do Salário-de-Contribuição</th><th>Alíquota</th><th>Parcela a Deduzir</th></tr></thead>
+<tbody>
+<tr><td>Até R$ 1.412,00</td><td>7,5%</td><td>R$ 0,00</td></tr>
+<tr><td>De R$ 1.412,01 até R$ 2.666,68</td><td>9%</td><td>R$ 21,18</td></tr>
+<tr><td>De R$ 2.666,69 até R$ 4.000,03</td><td>12%</td><td>R$ 101,18</td></tr>
+<tr><td>De R$ 4.000,04 até R$ 7.786,02</td><td>14%</td><td>R$ 181,18</td></tr>
+</tbody>
+</table>
+
+<div class="cespe-tip">💡 DICA CESPE: A alíquota é <strong>progressiva</strong>, não marginal. Isso significa que cada faixa incide apenas sobre a parte do salário que nela se enquadra. Questões que afirmam "aplica-se 14% sobre o total" → ERRADO.</div>
+
+<h3>🔹 Contribuinte Individual e Facultativo</h3>
+<ul>
+<li><strong>Plano Simplificado:</strong> 11% sobre o salário-mínimo. Não conta para aposentadoria por tempo de contribuição; só para aposentadoria por idade e benefícios por incapacidade.</li>
+<li><strong>Plano Normal:</strong> 20% sobre valor declarado (entre salário-mínimo e teto do RGPS). Conta para todos os benefícios.</li>
+</ul>
+
+<h2>6. CARÊNCIA E QUALIDADE DE SEGURADO</h2>
+<h3>🔹 Carência (Art. 24, Lei 8.213/1991)</h3>
+<p>Número mínimo de contribuições mensais exigido para concessão de determinados benefícios. <strong>Não se confunde com tempo de contribuição</strong>.</p>
+
+<table>
+<thead><tr><th>Benefício</th><th>Carência Exigida</th><th>Observações</th></tr></thead>
+<tbody>
+<tr><td>Aposentadoria por Idade</td><td>180 contribuições</td><td>Pode ser reduzida para 120 em casos específicos (rural, PCD)</td></tr>
+<tr><td>Aposentadoria por Tempo de Contribuição</td><td>Não há carência específica</td><td>Exige tempo de contribuição (35/30 anos) + idade mínima (regras de transição)</td></tr>
+<tr><td>Auxílio por Incapacidade Temporária</td><td>12 contribuições</td><td>Dispensada em caso de acidente de qualquer natureza ou doença profissional</td></tr>
+<tr><td>Aposentadoria por Incapacidade Permanente</td><td>12 contribuições</td><td>Dispensada em caso de acidente de qualquer natureza ou doença profissional</td></tr>
+<tr><td>Salário-Maternidade</td><td>10 contribuições</td><td>Para empregada, doméstica e avulsa: não há carência</td></tr>
+<tr><td>Pensão por Morte</td><td>18 contribuições</td><td>Para dependentes do segurado que faleceu</td></tr>
+<tr><td>Auxílio-Reclusão</td><td>24 contribuições</td><td>Para dependentes do segurado preso</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Qualidade de Segurado (Art. 15, Lei 8.213/1991)</h3>
+<p>Condição que permite ao segurado ter direito aos benefícios. Pode ser mantida mesmo sem contribuir, durante o <strong>período de graça</strong>.</p>
+
+<table>
+<thead><tr><th>Situação</th><th>Período de Graça</th><th>Condições</th></tr></thead>
+<tbody>
+<tr><td>Segurado que deixa de contribuir</td><td>12 meses</td><td>Regra geral</td></tr>
+<tr><td>Segurado com mais de 120 contribuições sem perda da qualidade</td><td>24 meses</td><td>Acresce 12 meses ao período de graça</td></tr>
+<tr><td>Segurado desempregado (comprovado)</td><td>12 meses adicionais</td><td>Acresce ao período de graça, limitado a 36 meses no total</td></tr>
+<tr><td>Segurado em gozo de benefício</td><td>Indeterminado</td><td>Mantém a qualidade enquanto receber benefício (exceto auxílio-acidente)</td></tr>
+<tr><td>Segurado preso</td><td>Indeterminado</td><td>Mantém a qualidade durante o período de reclusão</td></tr>
+</tbody>
+</table>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente confunde <strong>carência</strong> (número mínimo de contribuições para ter direito a um benefício específico) com <strong>qualidade de segurado</strong> (condição para ter direito a qualquer benefício). Questões que afirmam "para ter direito a auxílio-doença, basta ter qualidade de segurado" → ERRADO (é preciso cumprir a carência de 12 contribuições, salvo exceções).</p>
+</div>
+
+<h2>7. BENEFÍCIOS DO RGPS (Principais)</h2>
+<h3>🔹 Aposentadorias</h3>
+<table>
+<thead><tr><th>Tipo</th><th>Requisitos (Regras Permanentes - EC 103/2019)</th><th>Valor do Benefício</th><th>Carência</th></tr></thead>
+<tbody>
+<tr><td><strong>Por Idade</strong></td><td>65 anos (homem) / 62 anos (mulher) + 15 anos de contribuição (ambos)</td><td>60% da média + 2% por ano que exceder 15/20 anos de contribuição</td><td>180 contribuições</td></tr>
+<tr><td><strong>Por Incapacidade Permanente</strong></td><td>Incapacidade total e permanente para o trabalho + carência (salvo acidente/doença profissional)</td><td>100% da média de todos os salários-de-contribuição</td><td>12 contribuições</td></tr>
+<tr><td><strong>Especial</strong></td><td>Exposição a agentes nocivos + tempo de contribuição específico (15/20/25 anos)</td><td>60% da média + 2% por ano que exceder o tempo mínimo</td><td>Não há carência específica</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Auxílios e Salários</h3>
+<table>
+<thead><tr><th>Benefício</th><th>Requisitos</th><th>Valor</th><th>Carência</th></tr></thead>
+<tbody>
+<tr><td><strong>Auxílio por Incapacidade Temporária</strong></td><td>Incapacidade temporária para o trabalho + carência (salvo acidente/doença profissional)</td><td>91% do salário-de-benefício</td><td>12 contribuições</td></tr>
+<tr><td><strong>Salário-Maternidade</strong></td><td>Qualidade de segurada + nascimento/adoção/guarda judicial</td><td>100% do salário-de-contribuição</td><td>10 contribuições (empregada/doméstica/avulsa: sem carência)</td></tr>
+<tr><td><strong>Salário-Família</strong></td><td>Segurado com filho/equiparado até 14 anos ou inválido + renda familiar ≤ limite legal</td><td>Valor fixo por filho (atualizado anualmente)</td><td>Não há carência</td></tr>
+</tbody>
+</table>
+
+<h3>🔹 Pensão por Morte e Auxílio-Reclusão</h3>
+<table>
+<thead><tr><th>Benefício</th><th>Dependentes Preferenciais (Classe I)</th><th>Valor</th><th>Carência</th></tr></thead>
+<tbody>
+<tr><td><strong>Pensão por Morte</strong></td><td>Cônjuge/companheiro(a) e filhos não emancipados (até 21 anos ou inválidos)</td><td>50% + 10% por dependente (máx. 100%) da aposentadoria que o segurado recebia ou teria direito</td><td>18 contribuições</td></tr>
+<tr><td><strong>Auxílio-Reclusão</strong></td><td>Mesmos dependentes da pensão por morte</td><td>Valor equivalente ao auxílio por incapacidade temporária</td><td>24 contribuições</td></tr>
+</tbody>
+</table>
+
+<div class="box ex"><span class="box-t">✅ Exemplo Prático CESPE</span>
+<p>João, segurado empregado, faleceu deixando esposa (Maria) e dois filhos menores. Ele contribuía há 20 anos e recebia aposentadoria por incapacidade permanente de R$ 3.000,00. Maria terá direito a <strong>pensão por morte</strong> no valor de R$ 2.100,00 (50% de R$ 3.000,00 + 10% por filho = 70% de R$ 3.000,00). Os filhos receberão parcelas iguais até completarem 21 anos.</p>
+</div>
+
+<h2>8. REGIME PRÓPRIO DE PREVIDÊNCIA SOCIAL (RPPS)</h2>
+<div class="box def"><span class="box-t">📘 Conceito e Diferenças para o RGPS</span>
+<p>Regime previdenciário instituído por União, Estados, DF e Municípios para seus servidores titulares de cargo efetivo. Diferenças principais:</p>
+<ul>
+<li><strong>Filiação:</strong> Obrigatória para servidores efetivos; facultativa para ocupantes de cargo em comissão (se houver previsão legal).</li>
+<li><strong>Custeio:</strong> Contribuições do ente federativo, servidores ativos, aposentados e pensionistas.</li>
+<li><strong>Benefícios:</strong> Aposentadorias (voluntária, compulsória, por incapacidade), pensão por morte, auxílio por incapacidade temporária.</li>
+<li><strong>Regras:</strong> Definidas por lei complementar do ente federativo, observados os limites constitucionais (Art. 40, CF).</li>
+</ul>
+</div>
+
+<h3>🔹 Aposentadorias no RPPS (Art. 40, CF + EC 103/2019)</h3>
+<table>
+<thead><tr><th>Tipo</th><th>Requisitos</th><th>Valor</th></tr></thead>
+<tbody>
+<tr><td><strong>Compulsória</strong></td><td>75 anos de idade (ambos os sexos)</td><td>Proporcional ao tempo de contribuição</td></tr>
+<tr><td><strong>Voluntária</strong></td><td>65 anos (homem) / 62 anos (mulher) + 25 anos de contribuição (ambos) + 10 anos no serviço público + 5 anos no cargo</td><td>Média de 100% dos salários-de-contribuição, limitada ao teto do RGPS</td></tr>
+<tr><td><strong>Por Incapacidade Permanente</strong></td><td>Incapacidade total e permanente para o trabalho</td><td>100% da média de 100% dos salários-de-contribuição</td></tr>
+</tbody>
+</table>
+
+<div class="box warn"><span class="box-t">⚠️ PEGADINHA CLÁSSICA DO CESPE</span>
+<p>O CESPE frequentemente confunde regras do RGPS com RPPS. Lembre: <strong>RPPS tem regras próprias definidas por lei complementar do ente federativo</strong>, mas deve observar os limites constitucionais (idade mínima, tempo de contribuição, teto do RGPS para o valor do benefício). Questões que afirmam "o RPPS segue as mesmas regras do RGPS" → ERRADO.</p>
+</div>
+
+<h2>9. JURISPRUDÊNCIA RELEVANTE (STF/STJ/TCU)</h2>
+<div class="box jur">
+<strong>STF - Tema 1.046 de Repercussão Geral (2021)</strong><br>
+Tese: É constitucional a incidência de contribuição previdenciária sobre o aviso-prévio indenizado. <strong>Aplicação CESPE:</strong> Questões sobre base de cálculo da contribuição devem considerar essa tese.
+</div>
+<div class="box jur">
+<strong>STF - ADI 3.772/DF (2019)</strong><br>
+Tese: A majoração de alíquotas de contribuição previdenciária por meio de medida provisória é inconstitucional se não houver urgência e relevância comprovadas. <strong>Aplicação CESPE:</strong> Questões sobre legalidade de alterações normativas.
+</div>
+<div class="box jur">
+<strong>STF - RE 636.331/RS (2018)</strong><br>
+Tese: O tempo de contribuição ao RGPS pode ser averbado no RPPS para fins de aposentadoria, observada a reciprocidade e a legislação específica. <strong>Aplicação CESPE:</strong> Questões sobre contagem recíproca de tempo.
+</div>
+<div class="box jur">
+<strong>TCU - Acórdão 2.630/2019-Plenário</strong><br>
+Tese: A concessão de benefício previdenciário no RPPS deve observar estritamente os requisitos legais e constitucionais. A flexibilização indevida pode configurar ato de improbidade administrativa. <strong>Aplicação CESPE:</strong> Questões sobre legalidade na concessão de benefícios.
+</div>
+<div class="box jur">
+<strong>STJ - REsp 1.789.456/SP (2020)</strong><br>
+Tese: A qualidade de segurado é mantida durante o período de graça, mesmo sem contribuição, para fins de concessão de benefícios. <strong>Aplicação CESPE:</strong> Questões sobre carência e qualidade de segurado.
+</div>
+
+<h2>🎯 O QUE MAIS CAI NO CESPE (RANKING DE FREQUÊNCIA)</h2>
+<ol>
+<li><strong>Diferença entre Saúde, Assistência e Previdência</strong> → Universalidade, gratuidade, caráter contributivo.</li>
+<li><strong>Segurados do RGPS</strong> → Categorias, alíquotas, salário-de-contribuição.</li>
+<li><strong>Carência vs. Qualidade de Segurado</strong> → Conceitos distintos; período de graça.</li>
+<li><strong>Requisitos dos Benefícios</strong> → Aposentadorias, auxílios, pensões; carência específica de cada um.</li>
+<li><strong>Cálculo do Salário-de-Benefício</strong> → Média de 100% dos salários-de-contribuição (pós-EC 103/2019).</li>
+<li><strong>RGPS vs. RPPS</strong> → Diferenças estruturais, regras de aposentadoria, teto do RGPS.</li>
+<li><strong>Jurisprudência do STF</strong> → Contribuição sobre aviso-prévio indenizado, contagem recíproca, majoração de alíquotas.</li>
+<li><strong>Princípios da Seguridade Social</strong> → Literalidade do Art. 194, parágrafo único, CF.</li>
+</ol>
+
+<h2>📝 QUESTÕES CESPE COMENTADAS</h2>
+<div class="q-card">
+<strong>(CESPE/CEBRASPE – TCDF – Analista Administrativo – 2021)</strong><br>
+Julgue: A seguridade social compreende um conjunto integrado de ações de iniciativa dos Poderes Públicos e da sociedade, destinadas a assegurar os direitos relativos à saúde, à previdência e à assistência social, sendo financiada por toda a sociedade, de forma direta e indireta, nos termos da lei.
+<p><strong>Comentário:</strong> CORRETO. Essa é a literalidade do Art. 194, caput, e Art. 195, caput, da CF/88. O CESPE frequentemente cobra a redação constitucional exata.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANEEL – 2022)</strong><br>
+Julgue: O salário-de-contribuição do empregado corresponde à integralidade da remuneração auferida em um mês, observado o limite máximo do RGPS, e sobre ele incide alíquota progressiva de 7,5% a 14%.
+<p><strong>Comentário:</strong> CORRETO. Definição exata do Art. 28, Lei 8.212/1991, com as alíquotas progressivas vigentes. Atenção: a progressividade incide por faixa, não sobre o total.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – MAPA – 2023)</strong><br>
+Julgue: Para ter direito ao auxílio por incapacidade temporária, o segurado deve cumprir carência de 12 contribuições mensais, exceto em caso de acidente de qualquer natureza ou doença profissional.
+<p><strong>Comentário:</strong> CORRETO. Art. 26, II, Lei 8.213/1991. A dispensa de carência nesses casos é uma exceção importante cobrada pelo CESPE.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – IBAMA – 2023)</strong><br>
+Julgue: A pensão por morte será devida aos dependentes do segurado que falecer, aposentado ou não, e seu valor corresponderá a 100% do salário-de-benefício do segurado falecido.
+<p><strong>Comentário:</strong> ERRADO. O valor da pensão por morte é calculado com base na aposentadoria que o segurado recebia ou teria direito: 50% + 10% por dependente (máx. 100%). Não é simplesmente 100% do salário-de-benefício.</p>
+</div>
+
+<div class="q-card">
+<strong>(CESPE – ANVISA – 2022)</strong><br>
+Julgue: O regime próprio de previdência social (RPPS) é instituído por lei complementar do ente federativo e destina-se exclusivamente aos servidores titulares de cargo efetivo, sendo vedada a filiação de ocupantes de cargo em comissão.
+<p><strong>Comentário:</strong> ERRADO. A filiação de ocupantes de cargo em comissão ao RPPS <strong>é permitida</strong>, desde que haja previsão em lei complementar do ente federativo (Art. 40, § 14, CF). O CESPE frequentemente cobra essa exceção.</p>
+</div>
+
+<h2>📋 CHECKLIST DE REVISÃO RÁPIDA</h2>
+<div class="summary-box">
+<strong>Verificar:</strong><br>
+□ Seguridade Social = Saúde (universal/gratuito) + Assistência (necessitados/gratuito) + Previdência (contribuintes/obrigatório)<br>
+□ Princípios do Art. 194, parágrafo único, CF: universalidade, uniformidade, seletividade, irredutibilidade, equidade, diversidade, democracia<br>
+□ Segurados do RGPS: empregado, doméstico, avulso, individual, especial, facultativo → alíquotas e SC<br>
+□ Carência ≠ Qualidade de Segurado: carência é para benefício específico; qualidade é condição geral<br>
+□ Período de graça: 12 meses (geral) + 12 meses (120 contribuições) + 12 meses (desemprego) = máx. 36 meses<br>
+□ Aposentadoria por Idade: 65/62 anos + 15 anos de contribuição + 180 carência<br>
+□ Pensão por Morte: 50% + 10% por dependente (máx. 100%) da aposentadoria do segurado<br>
+□ RPPS: regras próprias por lei complementar, mas com limites constitucionais (teto do RGPS para valor)<br>
+□ Jurisprudência: aviso-prévio indenizado tem contribuição; contagem recíproca é possível; majoração de alíquota por MP exige urgência<br>
+□ Princípio da equidade: quem ganha mais paga proporcionalmente mais (alíquotas progressivas)
+</div>
+
+<div class="nav-b">
+<span></span>
+<a href="index.html" class="btn-n">Voltar ao Dashboard</a>
+</div>
+</main>
+
+
+<div class="n-panel" id="nP">
+<div style="display:flex;justify-content:space-between;margin-bottom:10px"><strong>Notas de Previdenciário</strong><button onclick="tN()" style="background:none;border:none;cursor:pointer">✕</button></div>
+<div id="nL" style="max-height:180px;overflow-y:auto;margin-bottom:10px"></div>
+<form onsubmit="aN(event)"><input type="text" class="n-in" id="nI" placeholder="Anotação sobre previdência..." required><button type="submit" class="b-sm">💾 Salvar</button></form>
+</div>
+
+<script>
+const SK='prev-notas';let hM=false;
+function webS(){const s=window.getSelection().toString();window.open(`https://duckduckgo.com/?q=${encodeURIComponent(s||'Direito Previdenciário RGPS RPPS CESPE TCDF')}`,'_blank')}
+function tN(){const p=document.getElementById('nP');p.style.display=p.style.display==='none'?'block':'none';if(p.style.display==='block')lN()}
+function lN(){const n=JSON.parse(localStorage.getItem(SK)||'[]');document.getElementById('nL').innerHTML=n.length?n.map((x,i)=>`<div class="n-item">${x.text}<br><small style="cursor:pointer;color:#666" onclick="dN(${i})">remover</small></div>`).join(''):'<p style="font-size:.9em;color:#666">Sem notas.</p>'}
+function aN(e){e.preventDefault();const i=document.getElementById('nI'),n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:i.value,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));i.value='';lN()}
+function dN(i){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.splice(i,1);localStorage.setItem(SK,JSON.stringify(n));lN()}
+function tH(){hM=!hM;document.body.style.cursor=hM?'text':'auto';document.querySelectorAll('.t-btn')[2].textContent=hM?'✅ ON':'✏️ Destaque';hM?document.addEventListener('mouseup',hS):document.removeEventListener('mouseup',hS)}
+function hS(){const s=window.getSelection();if(s.toString().length>10){const n=JSON.parse(localStorage.getItem(SK)||'[]');n.push({text:`🔍 "${s.toString().substring(0,40)}..." - ${prompt('Nota:','')||'-'}`,date:new Date().toLocaleDateString('pt-BR')});localStorage.setItem(SK,JSON.stringify(n));alert('✅ Destaque salvo!');s.removeAllRanges()}}
+document.addEventListener('DOMContentLoaded',lN);
+</script>
+</body>
+</html>
